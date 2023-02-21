@@ -1,0 +1,329 @@
+\subsection{谓词逻辑}
+
+我们发现命题逻辑无法表达部分与整体的关系. 
+
+\subsubsection{谓词逻辑的语法}
+
+\begin{definition}[谓词逻辑的构成]
+      \item [逻辑联词:] $\lnot, \land, \lor, \to, \leftrightarrow$
+      \item [\purple{量词符号:}] $\forall$ (\purple{forall}; 全称量词),
+        $\exists$ (\purple{exists}; 存在量词)
+      \item [变元符号:] $x, y, z, \dots$
+      \item [左右括号:] $(, )$
+      \item [\cyan{常数符号:}] 零个或多个常数符号 $a, b, c, \dots$, \teal{表达特殊的个体}
+      \item [\blue{函数符号:}] $n$-元函数符号 $f, g, h, \dots$ ($n \in \N^{+}$), \teal{表达个体上的运算}
+      \item [\red{谓词符号:}] $n$-元谓词符号 $P, Q, R, \dots$ ($n \in \N$), \teal{表达个体的性质与关系}
+    
+\end{definition}
+
+\begin{definition}[项 (Term)]
+  \begin{enumerate}
+    \item 每个变元 $x, y, z, \dots$ 都是一个项;
+    \item 每个常数符号都是一个项;
+    \item 如果 $t_{1}, t_{2}, \dots, t_{n}$ 是项,
+      且 $f$ 为一个 $n$-元函数符号, \\
+      则 $f(t_{1}, t_{2}, \dots, t_{n})$ 也是项;
+    \item 除此之外, 别无其它. 
+  \end{enumerate}
+\end{definition}
+
+\begin{definition}[公式 (Formula)]
+  \begin{itemize}
+    \item 如果 $t_{1}, \dots, t_{n}$ 是项, 且 $P$ 是一个 $n$ 元谓词符号, \\
+      则 $P(t_{1}, \dots, t_{n})$ 为公式, 称为\teal{\bf 原子公式};
+    \item 如果 $\alpha$ 与 $\beta$ 都是公式, 则 $(\lnot \alpha)$
+      与 $(\alpha \;\red{\ast}\; \beta)$ 都是公式;
+    \item 如果 $\alpha$ 是公式, 则 \red{$\forall x.\; \alpha$}
+      与 \red{$\exists x.\; \alpha$} 也是公式;
+    \item 除此之外, 别无其它. 
+  \end{itemize}
+\end{definition}
+
+举个例子: 
+
+  \begin{itemize}
+    \item 0 不是任何自然数的后继
+        \[
+          \forall x.\; \lnot (Sx = 0)
+        \]
+      \item 两个自然数相等当且仅当它们的后继相等
+        \[
+          \forall x.\; \forall y.\; (x = y \leftrightarrow Sx = Sy)
+        \]
+      \item $x$ 是素数 ($x > 1$ 且 $x$ 没有除自身和1之外的因子)
+        \[
+          \text{Prime}(x): S0 < x \land \forall y.\; \forall z.\; (y < x \land z < x) \to \lnot (y \times z = x)
+        \]
+      \item 哥德巴赫猜想 (任一大于2的偶数, 都可表示成两个素数之和)
+        \begin{align*}
+          &\forall x.\; (SS0 < 2 \land (\exists y.\; 2 \times y = x)) \to \\
+            &\quad (\exists x_{1}.\; \exists x_{2}.\; \text{Prime}(x_{1}) \land \text{Prime}(x_{2})
+              \land x_{1} + x_{2} = x)
+        \end{align*}
+  \end{itemize}
+
+
+\begin{definition}[作用域 (Scope)、约束变元 (Bind)、自由变元 (Free)]
+  \begin{enumerate}[(1)]
+    \item $\forall x.\; (P(x) \to Q(x))$
+    \item $(\forall x.\; P(x)) \to Q(x)$
+    \item $\forall x.\; \Big(P(x) \to \big(\exists y.\; R(x, y)\big)\Big)$
+    \item $\Big(\forall x.\; \forall y.\; \big(P(x, y) \land Q(y, z)\big)\Big) \land \exists x.\; P(x, y)$
+  \end{enumerate}
+\end{definition}
+
+\begin{definition}[改名 (Rename)]
+  为尽量避免重名, 可将约束变元或自由变元\red{\bf 改名}为\blue{新鲜(fresh)}变元
+\end{definition}
+
+\begin{definition}[$t$ is free for $x$ in $\alpha$]
+  \[
+    y - 1 \text{ is \blue{free for} } x \text{ in } \exists z.\; (z < x)
+  \]
+
+  \[
+    y - 1 \text{ is \red{{\it not} free for} } x \text{ in } \exists y.\; (y < x)
+  \]
+\end{definition}
+
+在公式 $\alpha$ 中, 项 $t$ 可以替换变量 $x$ 写作(\blue{$\alpha[t/x]$})
+
+\subsubsection{谓词逻辑的语义}
+
+在这里, 情况变复杂了. 我们需要考虑对象所处的数学空间来下结论. 也就是一个表达式的语义取决于: 
+
+\begin{itemize}
+  \item 对量词论域(universe)的解释, 限定个体范围
+  \item 对常数符号、函数符号、谓词符号的解释
+  \item 对\blue{自由}变元的解释 (赋值函数 $s$)
+\end{itemize}
+
+也就是这种``\blue{\bf 解释}''将公式映射到一个\red{\bf 数学结构 $\U$}上, 决定了该公式的语义. 
+
+\begin{definition}[$(\U, s) \models \alpha$]
+    $\U$ 与 $s$ 满足公式 $\alpha$:
+  \[
+    (\U, s) \models \alpha
+  \]
+  \begin{itemize}
+    \setlength{\itemsep}{6pt}
+    \item 将$\alpha$中的常数符号、函数符号、谓词符号按照结构 $\U$ 进行解释,
+    \item 将量词的论域限制在集合 $|\U|$ 上,
+    \item 将自由变元 $x$ 解释为 $s(x)$,
+    \item 这样就将公式 $\alpha$ 翻译成了某个数学领域中的命题,
+    \item 然后, 使用数学领域知识我们知道该命题成立
+  \end{itemize}
+\end{definition}
+
+例如, 
+\[
+    \alpha: \forall x.\; (x \times x \neq 1 + 1)
+  \]
+
+在$\alpha$ 在数学结构 $\U = \Q$ 中为真, 在数学结构 $\U = \R$ 中为假. 
+
+\begin{definition}[语义蕴含 (Logically Imply)]
+    令 $\Sigma$ 为一个公式集, $\alpha$ 为一个公式.  \\[8pt]
+    $\Sigma$ \red{\bf 语义蕴含} $\alpha$, 记为 $\Sigma \models \alpha$, 
+    如果\red{每个}满足$\Sigma$中\blue{所有}公式的\red{结构$\U$与赋值$s$}都满足$\alpha$. 
+    记作
+    \[
+    \set{\forall x.\; P(x)} \models P(y)
+  \]
+\end{definition}
+
+举例: 假设有
+\[
+  \alpha: \forall x \forall y \forall z ((P(x, y) \land P(y, z)) \to P(x, z))
+\]
+
+\[
+  \beta: \forall x \forall y ((P(x, y) \land P(y, x)) \to x = y)
+\]
+
+\[
+  \gamma: \forall x \exists y P(x, y) \to \exists y \forall x P(x, y)
+\]
+
+那么我们还不可以推断出$\set{\alpha, \beta} \models \gamma$, 除非我们知道$\U = \N$,  $P(x, y): x \le y$. 
+
+\begin{definition}[语义等价 (Logically Equivalent)]
+  如果 $\alpha \models \beta$ 且 $\beta \models \alpha$,
+  则称 $\alpha$ 与 $\beta$ \red{\bf 语义等价}, 记为 $\alpha \equiv \beta$. 
+\end{definition}
+
+例如: $\lnot (\forall x.\; \alpha) \equiv \exists x.\; \lnot \alpha$. 这就相当于命题逻辑中的``重言式'', 可用于公式推导. 
+
+\begin{definition}[普遍有效的 (Valid)]
+  如果 $\emptyset \models \alpha$, 则称 $\alpha$ 是\red{\bf 普遍有效的},
+  记为 $\models \alpha$. 
+\end{definition}
+
+普遍有效的公式在\red{所有可能的结构$\U$与所有可能的赋值$s$}下均为真. 
+
+下面来看几组普遍有效的公式: 
+
+\begin{theorem}(普遍有效的公式)
+  \[
+    \red{\boxed{\lnot \forall x \alpha \leftrightarrow \exists x \lnot \alpha}}
+  \]
+
+  \[
+    \red{\boxed{\lnot \exists x \alpha \leftrightarrow \forall x \lnot \alpha}}
+  \]
+
+  \[
+    \lnot (\forall x \in A.\; \alpha) \leftrightarrow \exists x \in A.\; \lnot \alpha
+  \]
+  \[
+    \forall x \forall y \alpha \leftrightarrow \forall y \forall x \alpha
+  \]
+
+  \[
+    \exists x \exists y \alpha \leftrightarrow \exists y \exists x \alpha
+  \]
+  \[
+    \forall x \alpha \land \forall x \beta
+      \leftrightarrow \forall x (\alpha \land \beta)
+  \]
+
+  \[
+    \exists x \alpha \lor \exists x \beta
+      \leftrightarrow \exists x (\alpha \lor \beta)
+  \]
+  \[
+    \forall x \alpha \to \exists x \alpha
+  \]
+
+  \[
+    \exists x \forall y \alpha \to \forall y \exists x \alpha
+  \]
+
+  \[
+    \forall x \alpha \lor \forall x \beta \to \forall x (\alpha \lor \beta)
+  \]
+
+  \[
+    \exists x (\alpha \land \beta) \to \exists x \alpha \land \exists x \beta
+  \]
+
+  对于$\beta$不含$x$: 
+  \[
+    \forall x.\; (\alpha \lor \beta) \leftrightarrow (\forall x.\; \alpha) \lor \beta
+  \]
+  \[
+    \forall x.\; (\alpha \land \beta) \leftrightarrow (\forall x.\; \alpha) \land \beta
+  \]
+
+  \[
+    \exists x.\; (\alpha \lor \beta) \leftrightarrow (\exists x.\; \alpha) \lor \beta
+  \]
+  \[
+    \exists x.\; (\alpha \land \beta) \leftrightarrow (\exists x.\; \alpha) \land \beta
+  \]
+  
+\end{theorem}
+注意这条公式不成立: 
+  $\forall y \exists x \alpha \not\to \exists x \forall y \alpha$. 我们有反例: $U = \set{a, b}$, \qquad 关系 $P(a, b), P(b, a)$, $\forall y \exists x P(y, x) \equiv T \qquad \exists x \forall y P(y, x) \equiv F$. 
+
+\subsubsection{谓词逻辑的推演}
+
+\begin{theorem}($\forall$-elim)
+  \[
+      \nd{\forall x.\; \alpha}{\alpha[t/x]}{\forall x\text{-elim}}
+    \]
+
+    where $t$ is \red{free} for $x$ in $\alpha$
+
+    
+  
+\end{theorem}
+  例子: 
+  \[
+    \forall x.\; \blue{P(x)} \vdash P(\blue{c}) \quad (c \;\text{是任意常元符号})
+  \]
+  \[
+    \forall x.\; \blue{\exists y.\; (x < y)} \vdash \exists y.\; (\blue{z} < y)
+      \quad (z \neq y \;\text{是任意变元符号})
+  \]
+  \[
+    \forall x.\; \blue{\exists y.\; (x < y)} \nvdash \exists y.\; (\red{y} < y)
+      \quad (y \;\text{is {\it not} free for } x \text{ in } \alpha)
+  \]
+
+\begin{theorem}
+  \[
+      \nd{\stackrel{[t]}{\stackrel{\vdots}{\alpha[t/x]}}}
+        {\forall x.\; \alpha}{\forall x\text{-intro}}
+    \]
+    where, $t$ is a \red{fresh} variable
+\end{theorem}
+这个定理的意思是任取 $t$, 如果能证明 $\alpha$ 对 $t$ 成立, 则 $\alpha$ 对所有 $x$ 成立. 例如: 
+\[
+  \Big\{P(t), \forall x (P(x) \to \lnot Q(x))\Big\} \vdash \lnot Q(t)
+\]
+我们可以有如下的推理: 
+\setcounter{equation}{0}
+\begin{align}
+  P(t) & \quad (\text{前提}) \label{eq:eg1-1} \\
+  \forall x.\; (P(x) \to \lnot Q(x)) & \quad \text{(前提)} \label{eq:eg1-2} \\
+  P(t) \to \lnot Q(t) & \quad (\forall\text{-elim}, (\ref{eq:eg1-2})) \label{eq:eg1-3} \\
+  \lnot Q(t) & \quad (\to\text{-elim}, (\ref{eq:eg1-1}), (\ref{eq:eg1-3})) \label{eq:eg1-4}
+\end{align}
+
+另一个例子: 
+\[
+      \Big\{\forall x.\; (P(x) \to Q(x)), \forall x.\; P(x)\Big\} \vdash \forall x.\; Q(x)
+\]
+
+\setcounter{equation}{0}
+  \begin{align}
+    \forall x.\; (P(x) \to Q(x)) & \quad (\text{前提}) \label{eq:eg2-1} \\
+    \forall x.\; P(x) & \quad (\text{前提}) \label{eq:eg2-2} \\
+    [x_{0}] & \quad (\text{引入变量}) \label{eq:eg2-3} \\
+    P(x_{0}) \to Q(x_{0}) &
+      \quad (\forall\text{-elim}, (\ref{eq:eg3-1}), (\ref{eq:eg2-3})) \label{eq:eg2-4} \\
+    P(x_{0}) & \quad (\forall\text{-elim}, (\ref{eq:eg2-2}), (\ref{eq:eg3-3})) \label{eq:eg2-5} \\
+    Q(x_{0}) & \quad (\to\text{-elim}, (\ref{eq:eg2-4}), (\ref{eq:eg3-5})) \label{eq:eg2-6} \\
+    \forall x.\; Q(x) & \quad (\forall\text{-intro}, (\ref{eq:eg2-3})-(\ref{eq:eg2-6})) \label{eq:eg2-7}
+  \end{align}
+
+\begin{theorem}[$\exists$-intro]
+  \[
+      \nd{\alpha[t/x]}{\exists x.\; \alpha}{\exists x\text{-intro}}
+    \]
+    where $t$ is \red{free} for $x$ in $\alpha$
+  
+\end{theorem}
+
+也就是说如果 $\alpha$ 对某个项 $t$ 成立, 则 $\exists x.\; \alpha$ 成立. 也就是说我们有
+$$P(\blue{c}) \vdash \exists x.\; P(x) \quad c \text{ 是任意常元符号}$$
+如果变量不是自由的, 那么就不能做这样的替换, 如下所示
+$$\teal{\forall y.\; (y = y)} \nvdash \exists x.\; \teal{\forall y.\; (x = y)}\quad (y \text{ is \red{\it not} free for } x \text{ in } \teal{\alpha})$$
+
+\begin{theorem}[$\exists$-elim]
+  \[
+      \nd{\exists x.\; \alpha \qquad [x_{0}] \qquad
+        \stackrel{\big[\alpha[x_{0}/x]\big]}{\stackrel{\vdots}{\beta}}}{\beta}{\exists\text{-elim}}
+    \]
+    where $x_{0}$ is \red{free} for $x$ in $\alpha$
+  
+\end{theorem}
+
+这句话的意思是\red{假设} $x_{0}$ 使得 $\alpha$ 成立, 如果从 $\alpha[x_{0}/x]$ 可以推导出 $\beta$, 则从 $\exists x.\; \alpha$ 可以推导出 $\beta$. 看如下的例子:
+$$
+\forall x.\; P(x) \vdash \exists x.\; P(x)
+$$
+有如下的证明: 
+
+\setcounter{equation}{0}
+  \begin{align}
+    \forall x.\; P(x) & \quad (\text{前提})
+      \label{eq:eg3-1} \\
+    [x_{0}] & \quad (\text{引入变量})
+      \label{eq:eg3-2} \\
+    P(x_{0}) & \quad (\forall\text{-elim}, (\ref{eq:eg3-1}), (\ref{eq:eg3-2}))
+      \label{eq:eg3-3} \\
+    \exists x.\; P(x) & \quad (\exists\text{-intro}, (\ref{eq:eg3-3}))
+      \label{eq:eg3-4}
+\end{align}

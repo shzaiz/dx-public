@@ -1,0 +1,159 @@
+\begin{theorem}[第一数学归纳法 (The First Mathematical Induction)]
+    设 $P(n)$ 是关于自然数的一个性质. 
+    如果
+    \begin{enumerate}
+      \item $P(0)$ 成立;
+      \item 对任意自然数 $n$, 如果 $P(n)$ 成立, 则 $P(n+1)$ 成立. 
+    \end{enumerate}
+    那么, $P(n)$ 对所有自然数 $n$ 都成立. 
+\end{theorem}
+
+翻译成形式化的方法, 也就是
+  \[
+    \nd{P(0) \qquad \forall n \in \N.\; \Big(P(n) \to P(n+1) \Big)}{
+      \forall n \in \N.\; P(n)}{\text{第一数学归纳法}}
+  \]
+
+  \[
+    \biggl(P(0) \land \forall n \in \N.\; \Big(P(n) \to P(n+1) \Big) \biggr)
+	  \to \forall n \in \N.\; P(n).
+  \]
+
+  \begin{theorem}[第二数学归纳法 (The Second Mathematical Induction)]
+    设 $Q(n)$ 是关于自然数的一个性质. 
+    如果
+    \begin{enumerate}
+      \item $Q(0)$ 成立;
+      \item 对任意自然数 $n$, 如果 $Q(0), Q(1), \dots, Q(n)$ 都成立, \\ 则 $Q(n+1)$ 成立. 
+    \end{enumerate}
+    那么, $Q(n)$ 对所有自然数 $n$ 都成立. 
+  \end{theorem}
+  同样的, 翻译成形式化的表示形式, 也就是
+  \[
+    \nd{Q(0) \;\; \forall n \in \N.\; \Big(\big(Q(0) \land \dots \land Q(n)\big) \to Q(n+1) \Big)}{
+      \forall n \in \N.\; Q(n)}{\text{第二数学归纳法}}
+  \]
+  \[
+    \biggl(Q(0) \land \forall n \in \N.\; \Big(\big(Q(0) \land \cdots \land Q(n)\big) \to Q(n+1) \Big) \biggr)
+      \to \forall n \in \N.\; Q(n).
+  \]
+
+  \begin{theorem}[数学归纳法]
+    第一数学归纳法与第二数学归纳法等价. 
+  \end{theorem}
+  第二数学归纳法也被称为\red{\bf ``强'' (Strong)} 数学归纳法, 它强在可以使用的条件更多了. 我们可以来证明这件事情. 
+
+  \begin{lemma}
+    第一数学归纳法蕴含第二数学归纳法. 
+  \end{lemma} 
+  \begin{proof}
+    要证第二类数学归纳法，也即任给一个命题  $F$  ，若满足  $F(1)$  及  $(F(1) \wedge F(2) \wedge \cdots \wedge F(n)) \Rightarrow F(n+1)$  ，则有  $\forall k \in \mathbb{N} . F(k)$  . 
+    那么，我们可以构造命题  $G(n):=F(1) \wedge F(2) \wedge \cdots \wedge F(n)$  . 
+    显然，  $G(n) \Rightarrow F(n+1)$  ，又有  $G(n) \Rightarrow G(n)$  ，则  $G(n) \Rightarrow(F(n+1) \wedge G(n))$  ，而 后者即为  $G(n+1)$  . 
+    故，命题  $G$  满足第一类数学归纳法的条件，所以  $\forall k \in \mathbb{N}$ . $G(k)$  成立. 
+    而  $G(k) \Rightarrow F(k)$  ，故  $\forall k \in \mathbb{N}$ . $F(k)$  ，也即第二类数学归纳法成立. 
+  \end{proof}
+  \begin{lemma}
+    第二数学归纳法蕴含第一数学归纳法. 
+  \end{lemma} 
+  \begin{proof}
+    要证第一类数学归纳法，也即任给一个命题  $F$  ，若满足  $F(1)$  及  $F(n) \rightarrow F(n+1)$  ，则有  $\forall k \in \mathbb{N}$ . $F(k)$  . 
+    显然，  $F$  是满足第二类数学归纳法的条件的 (因为 1 的条件比 2 强)，故根据第二类数学归纳法，  $F(k)$  对所有正整数  $k$  成立，也即第一类数学归纳法成立. 
+  \end{proof}
+
+数学归纳法的更深层次的结果是自然数的Peano公理. Peano 公理体系刻画了\red{\bf 自然数的递归结构}. 
+
+\begin{definition}[Peano Axioms]
+    自然数的Peano公理有如下几条: 
+    \begin{enumerate}
+      \item 0 是自然数;
+      \item 如果 $n$ 是自然数, 则它的后继 ${\bf S}n$ 也是自然数;
+      \item 0 不是任何自然数的后继;
+      \item 两个自然数相等当且仅当它们的后继相等;
+      \item \red{\bf 数学归纳原理:} 如果
+        \begin{enumerate}
+          \item $P(0)$ 成立;
+          \item 对任意自然数 $n$, 如果 $P(n)$ 成立, 则 $P(n+1)$ 成立. 
+        \end{enumerate}
+        那么, $P(n)$ 对所有自然数 $n$ 都成立. 
+    \end{enumerate}
+\end{definition}
+
+自然数集具有良序原理. 
+
+\begin{definition}[良序原理 (The Well-Ordering Principle)]
+    \red{自然数集}的任意\blue{非空}子集都有一个最小元. 
+\end{definition}
+
+\begin{theorem}{}
+    良序原理与(第一)数学归纳法等价. 
+\end{theorem}
+
+\begin{lemma}
+    (第一)数学归纳法蕴含良序原理. 
+  \end{lemma}
+  \begin{proof}
+      \red{By mathematical induction on the size $n$ of non-empty subsets of $\mathbb{N}$.}
+
+      \[
+        P(n): \text{All subsets of size $n$ contain a minimum.}
+      \]
+
+      Inductive Hypothesis:
+      \begin{itemize}
+        \item Basis Step: $P(1)$
+        \item\textcolor{cyan}{Inductive Hypothesis:} $P(n)$
+        \item Inductive Step: $P(n) \to P(n+1)$
+          
+            \begin{itemize}
+              \item $A' \gets A \setminus {a}$
+              \item $x \gets \min A'$
+              \item Compare $x$ with $a$
+            \end{itemize}
+          
+      \end{itemize}
+    \end{proof}
+
+    \begin{example}
+      Of the 1000 islanders,
+    it turns out that \blue{\bf 100 of them have blue eyes}
+    and \brown{\bf 900 of them have brown eyes},
+    although the islanders are not initially aware of these statistics
+    (each of them can of course only see 999 of the 1000 tribespeople). 
+
+    One day, a \purple{\bf blue-eyed foreigner} visits to the island
+    and wins the complete trust of the tribe. 
+
+    One evening, he addresses the entire tribe to thank them
+    for their hospitality. 
+
+    However, not knowing the customs,
+    the foreigner makes the mistake of mentioning eye color in his address,
+    remarking ``\teal{\bf how unusual it is to see another blue-eyed person
+    like myself in this region of the world''}. 
+
+    \violet{\bf What effect, if anything, does this {\it faux pas (失礼)} have on the tribe?}
+    \end{example}
+
+    \begin{theorem}
+      Suppose that the tribe had $n > 0$ blue-eyed people. 
+      
+      Then $n$ days after the traveller's address, all $n$ blue-eyed people commit suicide.
+    \end{theorem}
+
+    \begin{proof}
+      \item[基础步骤:] $n = 1$. \\ 
+        这个\blue{\bf 唯一的蓝眼人}的内心独白: \teal{\bf ``你直接念我身份证吧''} 
+      \item[归纳假设:] 有$n$个蓝眼人时, 前 $n-1$ 天无人自杀, 第$n$天集体自杀. 
+      \item[归纳步骤:] 考虑恰有 $n+1$ 个蓝眼人的情况.   \\
+        每个\blue{\bf 蓝眼人}都如此推理: 我看到了 $n$ 个蓝眼人, 他们应该在第 $n$ 天集体自杀. 
+         \\
+        但是, 每个蓝眼人都在等其它$n$个蓝眼人自杀, 因此, 第 $n$ 天无人自杀. 
+         \\
+        每个\blue{\bf 蓝眼人}继续推理: 一定不止 $n$ 个蓝眼人, 但是我看到的其余人都不是蓝眼. 
+         \\
+        所以, \purple{\bf ``小丑竟是我自己''}. 
+    \end{proof}
+
+    这就像是考虑 $n = 1, n = 2$ 的简单情况, 出现了类似``\purple{我知道}\teal{你知道}\cyan{我知道} $\dots$''的思维递归情形. 
+    

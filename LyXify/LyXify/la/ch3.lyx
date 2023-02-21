@@ -1,0 +1,1217 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-book
+\use_default_options true
+\begin_modules
+theorems-ams-chap-bytype
+algorithm2e
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref page
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\tr}[1]{\text{tr(#1)}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\rk}[1]{\text{rk}(#1)}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\diag}[1]{\text{diag}(#1)}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+矩阵的基本概念和运算
+\end_layout
+
+\begin_layout Section
+可逆矩阵
+\end_layout
+
+\begin_layout Section
+矩阵的初等变换和初等矩阵
+\end_layout
+
+\begin_layout Section
+矩阵的相抵和秩
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "矩阵在图形处理的应用"
+target "https://w3.ual.es/~vruiz/Docencia/Apuntes/Coding/Image/03-JPEG/index.html"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+线性代数中出现的内容
+\end_layout
+
+\begin_layout Standard
+问题的提出: 由上一章的内容, 对于n个未知数, n个变量的方程组, 我们可以使用Creamer法则判定是否存在解.
+ 但是对于解的
+\series bold
+自由度
+\series default
+有多少还是没有概念.
+ 并且, 如果我们有n个未知数, m个方程, 这样子解的自由度又是多少呢? 于是我们考虑引入矩阵的概念, 同样可以看作线性方程组的系数抽离开来得到的抽象的内容.
+ 
+\end_layout
+
+\begin_layout Subsection*
+矩阵的加法和数乘以及转置
+\end_layout
+
+\begin_layout Enumerate
+定义(略).
+ 参见AA定义3.1.1, 3.1.2
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+注意: 矩阵的提取公因式和释放公因式是对于整个矩阵的全体元素的, 因此有 
+\begin_inset Formula $|\lambda A|=\lambda^{n}|A|$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection*
+矩阵的乘法
+\end_layout
+
+\begin_layout Enumerate
+问题的提出: 我们可以运用代换法代换线性方程组的某一些元素, 描述见AA3.1.3下方的文本.
+\end_layout
+
+\begin_layout Enumerate
+定义: 见AA定义3.1.4, 并且注意只有
+\begin_inset Formula $A$
+\end_inset
+
+的列数等于
+\begin_inset Formula $B$
+\end_inset
+
+的行数的时候才可以完成乘法.
+\end_layout
+
+\begin_layout Enumerate
+性质: 没有交换律, 但是有结合律.
+ 见AA命题3.1.5.
+\end_layout
+
+\begin_layout Enumerate
+矩阵的幂:因为满足结合律因此可以定义, 参见AA命题3.1.5下方文本.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+与多项式的联系: 如果把多项式
+\begin_inset Formula $f(x)$
+\end_inset
+
+的变量
+\begin_inset Formula $x$
+\end_inset
+
+换做矩阵
+\begin_inset Formula $A$
+\end_inset
+
+, 那么知道
+\begin_inset Formula $f(A)+g(A)=(f+g)(A)$
+\end_inset
+
+, 
+\begin_inset Formula $f(A)g(A)=(fg)(A)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+下一步: 定义了乘法, 就希望有一个类似于除法的东西.
+ 也就是需要研究可逆矩阵.
+ 
+\end_layout
+
+\begin_layout Subsection*
+可逆矩阵
+\end_layout
+
+\begin_layout Enumerate
+问题的提出: 定义了乘法, 就希望有一个地位与除法相似的内容, 通常也成为``逆元''.
+ 
+\end_layout
+
+\begin_layout Enumerate
+行列式与矩阵的联系: 
+\begin_inset Formula $|AB|=|A||B|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+可逆的充分必要条件: 
+\begin_inset Formula $|A|\neq0$
+\end_inset
+
+.
+ 参见AA3.2.4, 结合此, 就可以得到
+\series bold
+伴随矩阵
+\series default
+的定义.
+\end_layout
+
+\begin_layout Enumerate
+计算可逆矩阵
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+想法1:伴随矩阵(Cramer法则)
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+定义: 见AA定义3.2.5(略)
+\end_layout
+
+\begin_layout Enumerate
+性质: 
+\begin_inset Formula $A^{*}A=AA^{*}=|A|I_{n}.$
+\end_inset
+
+(与Cramer法则等价)
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+想法2: 矩阵的初等变换(消元法)
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+定义: 三类初等矩阵: 
+\begin_inset Formula $P(i,j),$
+\end_inset
+
+
+\begin_inset Formula $P(i(c)),P(i,j(c))$
+\end_inset
+
+.
+ 见AA3.3节.
+ 
+\end_layout
+
+\begin_layout Enumerate
+作用: 左(右)边乘变换目标矩阵的行(列), P(i, j)交换i, j两行(列), P(i(c)), 把第i行(列)乘上c倍; P(i,j(c)),
+ 第j行(列)乘上c倍加到第i行(列).
+\end_layout
+
+\begin_layout Enumerate
+矩阵的秩: 因为矩阵总是可以化为形状如
+\begin_inset Formula $\begin{pmatrix}I_{r} & 0\\
+0 & 0
+\end{pmatrix}$
+\end_inset
+
+的.
+ 因此定义
+\begin_inset Formula $r$
+\end_inset
+
+是矩阵的秩.
+ (等价关系, 揭示了同样自由度的解的相互关系, 告诉我们了方程的解的自由度到底是多少).
+\end_layout
+
+\begin_layout Enumerate
+性质: 初等行列变换总是不改变矩阵的秩(因为操作都可逆).
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Subsection*
+分块矩阵及其的逆
+\end_layout
+
+\begin_layout Enumerate
+分块矩阵的基础运算
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+分块矩阵的加法(略).
+ 条件: 
+\begin_inset Formula $A$
+\end_inset
+
+与
+\begin_inset Formula $B$
+\end_inset
+
+要有
+\series bold
+相同的分块方法
+\series default
+.
+\end_layout
+
+\begin_layout Enumerate
+分块矩阵的数乘.(略)
+\end_layout
+
+\begin_layout Enumerate
+分块矩阵的转置.
+ 不仅分块矩阵的行列互换, 每个分块还要转置.
+\end_layout
+
+\begin_layout Enumerate
+分块矩阵的乘法.
+ 前提: 
+\begin_inset Formula $A$
+\end_inset
+
+的
+\series bold
+列分法
+\series default
+与
+\begin_inset Formula $B$
+\end_inset
+
+的
+\series bold
+行分法
+\series default
+要一致.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+特殊的分块矩阵
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+分块对角矩阵: 
+\begin_inset Formula $A_{s\times s}=\begin{pmatrix}A_{1}\\
+ & A_{2}\\
+ &  & \cdots\\
+ &  &  & A_{s}
+\end{pmatrix}$
+\end_inset
+
+ .
+ 如果可逆, 其逆是
+\begin_inset Formula $(A_{s\times s})^{-1}=\begin{pmatrix}A_{1}^{-1}\\
+ & A_{2}^{-1}\\
+ &  & \cdots\\
+ &  &  & A_{s}^{-1}
+\end{pmatrix}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+按行分块, 得到列向量.
+\end_layout
+
+\begin_layout Enumerate
+按列分块, 得到行向量.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+分块矩阵的初等变换
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+第一类: 
+\begin_inset Formula $\begin{pmatrix}I_{n} & 0\\
+0 & I_{m}
+\end{pmatrix}\overrightarrow{\text{交\text{换两行}}}\begin{pmatrix}0 & I_{n}\\
+I_{m} & 0
+\end{pmatrix}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Enumerate
+第二类: 
+\begin_inset Formula $\begin{pmatrix}I_{n} & 0\\
+0 & I_{m}
+\end{pmatrix}\overrightarrow{\text{某一行乘上}P}\begin{pmatrix}P & 0\\
+0 & I_{m}
+\end{pmatrix}\text{或\begin{pmatrix}I_{n}  &  0\\
+ 0  &  P 
+\end{pmatrix}.}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+第三类: 
+\begin_inset Formula $\begin{pmatrix}I_{n} & 0\\
+0 & I_{m}
+\end{pmatrix}\overrightarrow{\text{某一行乘上}P\text{加\text{到另一行}}}\begin{pmatrix}I_{n} & 0\\
+P & I_{m}
+\end{pmatrix}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+应用: 解矩阵方程.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+AX=B, 那就
+\begin_inset Formula $\begin{pmatrix}A & \brokenvert B\end{pmatrix}\rightarrow\begin{pmatrix}I & \brokenvert A^{-1}B\end{pmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+XA=B, 那就
+\begin_inset Formula $\begin{pmatrix}A\\
+B
+\end{pmatrix}\rightarrow\begin{pmatrix}I\\
+BA^{-1}
+\end{pmatrix}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection*
+矩阵的秩
+\end_layout
+
+\begin_layout Enumerate
+秩的等价定义:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+化为
+\begin_inset Formula $\begin{pmatrix}I_{r} & 0\\
+0 & 0
+\end{pmatrix}$
+\end_inset
+
+类型之后, r就是它的秩(AA定理3.4.6)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $r(A)=r$
+\end_inset
+
+当且仅当A中存在一个
+\begin_inset Formula $r$
+\end_inset
+
+阶子式不为
+\begin_inset Formula $0$
+\end_inset
+
+, 任意
+\begin_inset Formula $r+1$
+\end_inset
+
+阶子式全为
+\begin_inset Formula $0$
+\end_inset
+
+.(AA定理3.4.9)
+\end_layout
+
+\begin_layout Enumerate
+后续学习向量组后的行(列)秩, 列秩也和矩阵秩的定义是等价的.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+常见不等式: 通常情况下无法得到准确的秩
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $r(A)+r(B)=r\begin{pmatrix}A\\
+ & B
+\end{pmatrix}\leq r\begin{pmatrix}A & 0\\
+C & B
+\end{pmatrix}.$
+\end_inset
+
+(AA命题3.4.11)
+\end_layout
+
+\begin_layout Enumerate
+如果
+\begin_inset Formula $A_{m\times n},B_{n\times s},$
+\end_inset
+
+那么
+\begin_inset Formula $r(AB)+n\geq r(A)+r(B)$
+\end_inset
+
+.
+ (命题3.4.12, Sylvester不等式)
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+思路: 考虑
+\begin_inset Formula $r\begin{pmatrix}AB\\
+ & -I_{n}
+\end{pmatrix}\overset{=}{\text{等价变换}}r\begin{pmatrix}AB & A\\
+0 & -I_{n}
+\end{pmatrix}=r\begin{pmatrix}0 & A\\
+B & -I_{n}
+\end{pmatrix}=r\begin{pmatrix}A & 0\\
+-I_{n} & B
+\end{pmatrix}\geq r\begin{pmatrix}A\\
+ & B
+\end{pmatrix}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+应用: 解方程组
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+如果方程组
+\begin_inset Formula $AX=0$
+\end_inset
+
+只有零解, 那么
+\begin_inset Formula $|A|\neq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+如果有方程组
+\begin_inset Formula $A_{m\times n}X=\beta_{m\times1}$
+\end_inset
+
+, 称
+\begin_inset Formula $(A\brokenvert\beta)$
+\end_inset
+
+为
+\series bold
+增广矩阵
+\series default
+, 方程组有解当且仅当
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $r(A)=r(A\brokenvert\beta).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+如果有
+\begin_inset Formula $A_{m\times n},B_{m\times1},P_{m\times m},$
+\end_inset
+
+且
+\begin_inset Formula $P$
+\end_inset
+
+可逆, 
+\begin_inset Formula $AX=\beta$
+\end_inset
+
+与
+\begin_inset Formula $(PA)X=P\beta$
+\end_inset
+
+的解相同.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+基础问题
+\end_layout
+
+\begin_layout Subsection
+矩阵的相关运算
+\end_layout
+
+\begin_layout Problem
+设
+\begin_inset Formula $\boldsymbol{A},\boldsymbol{B}$
+\end_inset
+
+均为
+\begin_inset Formula $n$
+\end_inset
+
+阶对称矩阵, 则
+\begin_inset Formula $\boldsymbol{AB}$
+\end_inset
+
+是对称矩阵的充分必要条件是________.
+\end_layout
+
+\begin_layout Solution*
+\begin_inset Formula $\boldsymbol{AB}$
+\end_inset
+
+对称等价于
+\begin_inset Formula $(\boldsymbol{AB})'=\boldsymbol{B}'\boldsymbol{A}'=\boldsymbol{BA}$
+\end_inset
+
+, 所以要求两个矩阵是可换的.
+ 
+\end_layout
+
+\begin_layout Problem
+设
+\begin_inset Formula $\alpha,$
+\end_inset
+
+
+\begin_inset Formula $\beta$
+\end_inset
+
+是三维列向量, 如果
+\begin_inset Formula $\alpha\beta'=\begin{vmatrix}a & b & c\\
+d & e & f\\
+g & h & i
+\end{vmatrix},$
+\end_inset
+
+求
+\begin_inset Formula $\alpha'\beta=$
+\end_inset
+
+________.
+\end_layout
+
+\begin_layout Solution*
+不妨设
+\begin_inset Formula $\alpha=[x_{1},x_{2},x_{3}]',$
+\end_inset
+
+
+\begin_inset Formula $\beta=\left[y_{1},y_{2},y_{3}\right]'$
+\end_inset
+
+, 那么
+\begin_inset Formula $\alpha\beta'=\begin{pmatrix}x_{1}y_{1} & x_{1}y_{2} & x_{1}y_{3}\\
+x_{2}y_{1} & x_{2}y_{2} & x_{2}y_{3}\\
+x_{3}y_{1} & x_{3}y_{2} & x_{3}y_{3}
+\end{pmatrix}$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha'\beta=x_{1}y_{1}+x_{2}y_{2}+x_{3}y_{3}=a+e+i$
+\end_inset
+
+, 也就是这个矩阵的
+\series bold
+迹(trace)
+\series default
+.
+ 一般记作
+\begin_inset Formula $\tr A$
+\end_inset
+
+.
+ 在后面我们还可以看到这个内容再次出现.
+ 
+\end_layout
+
+\begin_layout Problem
+已知
+\begin_inset Formula $A=\begin{pmatrix}a_{1}b_{1} & a_{1}b_{2} & a_{1}b_{3}\\
+a_{2}b_{1} & a_{2}b_{2} & a_{2}b_{3}\\
+a_{3}b_{1} & a_{3}b_{2} & a_{3}b_{3}
+\end{pmatrix},$
+\end_inset
+
+证明
+\begin_inset Formula $A^{2}=\tr AA$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Solution*
+可以把它分解开成两个矩阵的乘积.
+ 然后用结合律和上一题的结论就可以知道了.
+ 
+\end_layout
+
+\begin_layout Problem
+已知
+\begin_inset Formula $A=\begin{pmatrix}\lambda\\
+1 & \lambda\\
+ & 1 & \lambda
+\end{pmatrix}$
+\end_inset
+
+, 求
+\begin_inset Formula $A^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution*
+注意到这是后续的Jordan块.
+ 实际上是求导的具体的线性变换.
+ 从这个角度来看, 我们可以先把他拆开, 然后用这样的方法: 
+\end_layout
+
+\begin_layout Solution*
+\begin_inset Formula 
+\begin{align*}
+\lambda & =\lambda I_{3}+J
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution*
+使用如下的公式: 
+\end_layout
+
+\begin_layout Solution*
+\begin_inset Formula 
+\begin{align*}
+A^{n}= & (\lambda I_{3}+J)^{n}\\
+= & \lambda^{n}I_{3}+{n \choose 1}\lambda^{n-1}J+{n \choose 2}\lambda^{n-2}J^{2}\\
+= & \begin{pmatrix}\lambda^{n}\\
+ & \lambda^{n}\\
+ &  & \lambda^{n}
+\end{pmatrix}+\begin{pmatrix} & {n \choose 1}\lambda^{n-1}\\
+ &  & {n \choose 1}\lambda^{n-1}\\
+\\
+\end{pmatrix}+\begin{pmatrix} &  & {n \choose 2}\lambda^{n-2}\\
+\\
+\\
+\end{pmatrix}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+已经知道
+\begin_inset Formula $A=\begin{pmatrix}3 & -1\\
+9 & 3
+\end{pmatrix}$
+\end_inset
+
+, 求
+\begin_inset Formula $A^{n}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Solution*
+对于这样的问题, 我们可以在一个更方便的基底下做这个操作, 也就是让它成为
+\begin_inset Formula $P=T^{-1}AT$
+\end_inset
+
+.
+ 然后进行操作就行了.
+ 
+\end_layout
+
+\begin_layout Problem
+\begin_inset CommandInset label
+LatexCommand label
+name "prob:total-inversion"
+
+\end_inset
+
+已知A, B满足n阶矩阵, 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+有
+\begin_inset Formula $AB=A-2B$
+\end_inset
+
+, 求
+\begin_inset Formula $(A+2E)^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+有
+\begin_inset Formula $B=(E+A)^{-1}(E-A)$
+\end_inset
+
+, 求
+\begin_inset Formula $(E+B)^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+有
+\begin_inset Formula $A^{2}+3A-2E=\boldsymbol{0},$
+\end_inset
+
+求
+\begin_inset Formula $(A+E)^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+那么如果有
+\begin_inset Formula $AB=A-2B$
+\end_inset
+
+, 可以求
+\begin_inset Formula $(A+3E)^{-1}$
+\end_inset
+
+吗?
+\begin_inset Newline newline
+\end_inset
+
+那么如果有
+\begin_inset Formula $A^{2}-A-2E=0$
+\end_inset
+
+, 可以求
+\begin_inset Formula $(A+3E)^{-1}$
+\end_inset
+
+吗?
+\end_layout
+
+\end_deeper
+\begin_layout Solution*
+注意到前面的三个可以用配方法加上逆矩阵去做, 它的主题思路是现通过配凑的方法干掉平方项, 再干掉一次项, 最后只留下常数项.
+ 类似于中学学习过的分离常数.
+ 只不过在下面的问题里面进行分离常数之后剩下的内容形式已经不是那么好了, 也就是得到了
+\begin_inset Formula $(A+3E)(B-1)=B-3E$
+\end_inset
+
+, 如果A和B是同一个矩阵的话形式就会简洁一些.
+ 
+\end_layout
+
+\begin_layout Problem
+如果
+\begin_inset Formula $A,B,A+B,A^{-1}+B^{-1}$
+\end_inset
+
+均为
+\begin_inset Formula $n$
+\end_inset
+
+阶可逆矩阵, 那么
+\begin_inset Formula $(A^{-1}+B^{-1})^{-1}$
+\end_inset
+
+是_____.
+ 
+\end_layout
+
+\begin_layout Solution*
+这道题实际上是
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prob:total-inversion"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+问题的一个拓展.
+ 关键是如何把这个和写成一个乘积的形式.
+ 实际上是做一个基变换.
+ 于是我们有如下的内容:
+\end_layout
+
+\begin_layout Solution*
+\begin_inset Formula 
+\begin{align*}
+(A^{-1}+B^{-1})^{-1}= & (EA^{-1}+B^{-1}E)^{-1}\\
+= & (B^{-1}BA^{-1}+B^{-1}AA^{-1})\\
+= & \left(B^{-1}(A+B)A^{-1}\right)^{-1}\\
+= & A(A+B)^{-1}B
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+设
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+为
+\begin_inset Formula $n$
+\end_inset
+
+阶非奇异矩阵, 
+\begin_inset Formula $\boldsymbol{\alpha}$
+\end_inset
+
+为
+\begin_inset Formula $n$
+\end_inset
+
+维列向量, 
+\begin_inset Formula $b$
+\end_inset
+
+为常数, 记分块矩阵
+\end_layout
+
+\begin_layout Problem
+\begin_inset Formula 
+\[
+\boldsymbol{P}=\begin{pmatrix}\boldsymbol{E} & 0\\
+-\boldsymbol{\alpha}^{T}\boldsymbol{A}^{*} & |\boldsymbol{A}|
+\end{pmatrix},\boldsymbol{Q}=\begin{pmatrix}\boldsymbol{A} & \boldsymbol{\alpha}\\
+\boldsymbol{\alpha}^{T} & b
+\end{pmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+计算并化简
+\begin_inset Formula $\boldsymbol{PQ}$
+\end_inset
+
+; 证明
+\begin_inset Formula $\boldsymbol{Q}$
+\end_inset
+
+可逆的充分必要条件为
+\begin_inset Formula $\boldsymbol{\alpha}^{T}\boldsymbol{A}^{-1}\boldsymbol{\alpha}\neq b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution*
+这个题目中出现的矩阵问题有什么更加深刻的见解吗?
+\end_layout
+
+\begin_layout Problem
+若已知n阶行列式
+\begin_inset Formula $|A|=\text{det}\begin{pmatrix}0 & 1 & 0 & \cdots & 0\\
+0 & 0 & 2 & \cdots & 0\\
+\vdots & \vdots &  &  & \vdots\\
+0 & 0 & 0 & \cdots & n-1\\
+n & 0 & 0 & 0 & 0
+\end{pmatrix},$
+\end_inset
+
+则|A|的第k行代数余子式的和是_____.
+ 
+\end_layout
+
+\begin_layout Solution*
+运用分块法和一些基础的操作即可.
+ 
+\end_layout
+
+\begin_layout Subsection
+矩阵的初等行列变换和矩阵的秩
+\end_layout
+
+\begin_layout Problem
+如果
+\series bold
+
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+
+\series default
+是
+\begin_inset Formula $m\times n$
+\end_inset
+
+ 矩阵, 
+\series bold
+
+\begin_inset Formula $\boldsymbol{B}$
+\end_inset
+
+
+\series default
+是
+\begin_inset Formula $n\times s$
+\end_inset
+
+矩阵, 证明
+\begin_inset Formula $r(\boldsymbol{AB})\leq\min(\text{rk}(\boldsymbol{A}),\text{rk}(\boldsymbol{B}))$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+证明伴随矩阵秩的公式: 
+\begin_inset Formula $\rk{\boldsymbol{A}^{*}}=\begin{cases}
+n & \rk{\boldsymbol{A}}=n\\
+1 & \rk{\boldsymbol{A}}=n-1\\
+0 & \rk{\boldsymbol{A}}<n-1
+\end{cases}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+如果
+\series bold
+
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+
+\series default
+是
+\begin_inset Formula $m\times n$
+\end_inset
+
+ 矩阵, 
+\series bold
+
+\begin_inset Formula $\boldsymbol{B}$
+\end_inset
+
+
+\series default
+是
+\begin_inset Formula $n\times s$
+\end_inset
+
+矩阵, 证明
+\begin_inset Formula $r(\boldsymbol{AB})\leq\text{rk}(\boldsymbol{B})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+如果
+\series bold
+
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+
+\series default
+是
+\begin_inset Formula $m\times n$
+\end_inset
+
+ 矩阵, 
+\series bold
+
+\begin_inset Formula $\boldsymbol{B}$
+\end_inset
+
+
+\series default
+是
+\begin_inset Formula $n\times s$
+\end_inset
+
+矩阵, 如果
+\begin_inset Formula $\boldsymbol{AB=0},$
+\end_inset
+
+证明
+\begin_inset Formula $\rk{\boldsymbol{A}}+\rk{\boldsymbol{B}}\leq n$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_body
+\end_document

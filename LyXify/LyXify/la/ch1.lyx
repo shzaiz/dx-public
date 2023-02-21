@@ -1,0 +1,207 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-book
+\use_default_options true
+\begin_modules
+algorithm2e
+theorems-ams-bytype
+\end_modules
+\maintain_unincluded_children false
+\language chinese-simplified
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\vecgp}[1]{{#1_{1},#1_{2},\cdots,#1_{n}}#1}
+{{#1_{1},#1_{2},\cdots,#1_{n}}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\F}{\mathbb{F}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\Z}{\mathbb{Z}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\R}{\mathbb{R}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+数域
+\end_layout
+
+\begin_layout Standard
+每次做不封闭的运算的时候, 我们就要拓展数的关系了, 所以给出如下定义.
+ 
+\end_layout
+
+\begin_layout Definition
+设
+\begin_inset Formula $\F$
+\end_inset
+
+是某些复数组成的集合, 其中至少含一个非零数, 且
+\begin_inset Formula $\F$
+\end_inset
+
+对于四则运算封闭, 我们称
+\begin_inset Formula $\F$
+\end_inset
+
+是一个数域.
+ 
+\end_layout
+
+\begin_layout Standard
+数域上面自然有多项式的运算.
+ 
+\end_layout
+
+\begin_layout Definition
+设
+\begin_inset Formula $\F$
+\end_inset
+
+是一个数域, 
+\begin_inset Formula $x$
+\end_inset
+
+是一个不定元, 那么
+\begin_inset Formula $a_{0}+a_{1}x+a_{2}x^{2}+\cdots+a_{n}x^{n}$
+\end_inset
+
+是以
+\begin_inset Formula $x$
+\end_inset
+
+为不定元的一元多项式.
+ 
+\end_layout
+
+\begin_layout Section
+一元多项式
+\end_layout
+
+\begin_layout Section
+辗转相除法
+\end_layout
+
+\begin_layout Section
+因式分解
+\end_layout
+
+\begin_layout Section
+不可约多项式
+\end_layout
+
+\begin_layout Section
+多元多项式
+\end_layout
+
+\begin_layout Section
+线性代数中出现的内容
+\end_layout
+
+\begin_layout Standard
+TODO
+\end_layout
+
+\begin_layout Section
+基础习题
+\end_layout
+
+\begin_layout Standard
+由于本章不作为线性代数的考试范围, 所以暂时没有总结.
+ 
+\end_layout
+
+\end_body
+\end_document

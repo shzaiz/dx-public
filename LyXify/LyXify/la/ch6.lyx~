@@ -1,0 +1,3425 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-book
+\use_default_options true
+\begin_modules
+algorithm2e
+theorems-named
+theorems-ams-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+线性函数与对偶空间
+\end_layout
+
+\begin_layout Definition
+(线性函数) 设
+\begin_inset Formula $V$
+\end_inset
+
+是
+\begin_inset Formula $\F$
+\end_inset
+
+上的线性空间, 我们称
+\begin_inset Formula $V$
+\end_inset
+
+到
+\begin_inset Formula $\F$
+\end_inset
+
+的线性映射为
+\series bold
+线性函数
+\series default
+.
+ 
+\begin_inset Formula $V$
+\end_inset
+
+上所有的线性函数的全体记为
+\begin_inset Formula $V^{*}$
+\end_inset
+
+或
+\begin_inset Formula $\Hom(V,\F)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $V^{*}$
+\end_inset
+
+也是
+\begin_inset Formula $\F$
+\end_inset
+
+上的线性空间, 称为
+\begin_inset Formula $V$
+\end_inset
+
+的
+\series bold
+对偶空间
+\series default
+.
+\end_layout
+
+\begin_layout Proposition
+对于线性映射而言, 有如下的命题成立:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+映射
+\begin_inset Formula $f:V\to\F$
+\end_inset
+
+为线性函数当且仅当对任意
+\begin_inset Formula $k,l\in\F$
+\end_inset
+
+, 
+\begin_inset Formula $\al,\bt\in V$
+\end_inset
+
+, 有
+\begin_inset Formula $f(k\al+l\bt)=kf(\al)+lf(\bt)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+若
+\begin_inset Formula $f\in V^{*}$
+\end_inset
+
+, 则
+\begin_inset Formula $f(0)=0,$
+\end_inset
+
+且对任意
+\begin_inset Formula $\al\in V,f(-\al)=-f(\al).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+若
+\begin_inset Formula $f\in V^{*},\al_{i}\in V,k_{i}\in\F,1\leq i\leq n,$
+\end_inset
+
+则
+\begin_inset Formula 
+\[
+f\left(\sum_{i=1}^{n}x_{i}a_{i}\right)=\sum_{i=1}^{n}k_{i}f(\al_{i}).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Theorem
+设
+\begin_inset Formula $\al_{1}..\al_{n}$
+\end_inset
+
+为
+\begin_inset Formula $V$
+\end_inset
+
+的一组基, 对任意
+\begin_inset Formula $(b_{1}..b_{n})\in\F^{1\times n}$
+\end_inset
+
+, 存在唯一的线性函数
+\begin_inset Formula $f\in V^{*}$
+\end_inset
+
+, 使得
+\begin_inset Formula $f(\al_{i})=b_{i},i=1,2,\cdots,n$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Definition
+设
+\begin_inset Formula $\al_{1},..,\al_{n}$
+\end_inset
+
+为
+\begin_inset Formula $V$
+\end_inset
+
+的一组基, 称
+\begin_inset Formula $\left(f(\al_{1}),f(\al_{2}),\cdots,f(\al_{n})\right)$
+\end_inset
+
+为
+\series bold
+
+\begin_inset Formula $f$
+\end_inset
+
+在基
+\begin_inset Formula $\al_{1},..,\al_{n}$
+\end_inset
+
+下的矩阵
+\series default
+.
+\end_layout
+
+\begin_layout Theorem
+映射
+\begin_inset Formula $\ys$
+\end_inset
+
+是从
+\begin_inset Formula $V^{*}$
+\end_inset
+
+到
+\begin_inset Formula $\F^{1\times n}$
+\end_inset
+
+的线性同构, 因此
+\begin_inset Formula $\dim V=\dim V^{*}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Definition
+(对偶基) 如果
+\begin_inset Formula $f_{i}(\al_{j})=\delta_{ij},1\leq i,j\leq n$
+\end_inset
+
+, 那么称
+\begin_inset Formula $f_{1},..,f_{n}$
+\end_inset
+
+为
+\begin_inset Formula $\al_{1}..\al_{n}$
+\end_inset
+
+的对偶基.
+ 相当于比较简单的一种情形.
+ 
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:dual-basis-change"
+
+\end_inset
+
+(对偶基之间的变换) 设
+\begin_inset Formula $\al_{1},..,\al_{n}$
+\end_inset
+
+与
+\begin_inset Formula $\bt_{1},..,\bt_{n}$
+\end_inset
+
+是线性空间
+\begin_inset Formula $V$
+\end_inset
+
+的两组基, 其过渡矩阵为
+\begin_inset Formula $T$
+\end_inset
+
+, 
+\begin_inset Formula $f_{1},..,f_{n}$
+\end_inset
+
+与
+\begin_inset Formula $g_{1},..,g_{n}$
+\end_inset
+
+分别是他们的对偶基, 过渡矩阵为
+\begin_inset Formula $S$
+\end_inset
+
+, 则
+\begin_inset Formula $S'T=I_{n}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Lemma
+对任意的
+\begin_inset Formula $\al\in V,\al^{**}$
+\end_inset
+
+是
+\begin_inset Formula $V^{*}$
+\end_inset
+
+上的线性函数.
+ 
+\end_layout
+
+\begin_layout Proposition
+映射
+\begin_inset Formula $\ys$
+\end_inset
+
+是线性映射, 当
+\begin_inset Formula $V$
+\end_inset
+
+是有限维的时候, 
+\begin_inset Formula $\ys$
+\end_inset
+
+是线性函数.
+ 
+\end_layout
+
+\begin_layout Section
+双线性函数
+\end_layout
+
+\begin_layout Definition
+(双线性函数) 设
+\begin_inset Formula $V$
+\end_inset
+
+是
+\begin_inset Formula $\F$
+\end_inset
+
+上的线性空间, 
+\begin_inset Formula $f(\al,\bt)$
+\end_inset
+
+是
+\begin_inset Formula $V$
+\end_inset
+
+上的一个二元函数(
+\begin_inset Formula $\forall(a,b)\in V$
+\end_inset
+
+, 唯一确定
+\begin_inset Formula $\F$
+\end_inset
+
+中的一个数, 记作
+\begin_inset Formula $f(\al,\bt)$
+\end_inset
+
+.) 如果称一个函数是
+\series bold
+双线性函数(
+\series default
+或
+\series bold
+双线性型)
+\series default
+, 如果对于任意的
+\begin_inset Formula $k,l\in\F,\al,\bt,\gamma\in V,$
+\end_inset
+
+有
+\begin_inset Formula 
+\begin{align*}
+f(k\al+l\bt,\gamma)= & kf(\al,\gamma)+lf(\bt,\gamma);\\
+f(\gamma,k\al+l\bt)= & kf(\gamma,\al)+lf(\gamma,\bt).
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(矩阵的迹与双线性函数)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset CommandInset label
+LatexCommand label
+name "ex:bin-all-form"
+
+\end_inset
+
+设
+\begin_inset Formula $V=\F^{n}$
+\end_inset
+
+, 
+\begin_inset Formula $A\in\F^{n\times n}$
+\end_inset
+
+, 定义
+\begin_inset Formula 
+\[
+f(X,Y)=X'AY,\ \forall X,Y\in V,
+\]
+
+\end_inset
+
+ 那么
+\begin_inset Formula $f(X,Y)$
+\end_inset
+
+是
+\begin_inset Formula $V$
+\end_inset
+
+上的双线性函数.
+ 
+\end_layout
+
+\begin_layout Standard
+根据例子
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "ex:bin-all-form"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+可以知道, 线性函数都可以表示成这样的类型.
+ 如果设
+\begin_inset Formula $\al_{1},..,\al_{n}$
+\end_inset
+
+是
+\begin_inset Formula $V$
+\end_inset
+
+的一组基, 对任意的
+\begin_inset Formula $\al=\sum_{i=1}^{n}x_{i}\al_{i},\bt=\sum_{j=1}^{n}y_{j}\al_{j}$
+\end_inset
+
+, 我们有
+\begin_inset Formula 
+\[
+f(\al,\bt)=f\left(\sum_{i=1}^{n}x_{i}\al_{i},\sum_{j=1}^{n}y_{j}\al_{j}\right)=\sum_{i=1}^{n}\sum_{j=1}^{n}x_{i}f(x_{i},y_{j})y_{j}=X'AY.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+称
+\begin_inset Formula $A$
+\end_inset
+
+为
+\begin_inset Formula $f(\al,\bt)$
+\end_inset
+
+在基
+\begin_inset Formula $\al_{1}..\al_{n}$
+\end_inset
+
+下的
+\series bold
+度量矩阵
+\series default
+.
+\end_layout
+
+\begin_layout Definition
+(度量矩阵) 如果将
+\begin_inset Formula $n$
+\end_inset
+
+维线性空间
+\begin_inset Formula $V$
+\end_inset
+
+的一组基为
+\begin_inset Formula $\al_{i}=\sum_{i=1}^{n}x_{i}\al_{i}$
+\end_inset
+
+, 现在希望把它换为另外一组基
+\begin_inset Formula $\bt=\sum_{j=1}^{n}y_{i}\al_{j}$
+\end_inset
+
+, 如果有双线性函数
+\begin_inset Formula $f(\al,\bt)$
+\end_inset
+
+, 那么有
+\begin_inset Formula 
+\[
+f(\al,\bt)=f\left(\sum_{i=1}^{n}x_{i}\al_{i},\sum_{j=1}^{n}y_{j}\al_{j}\right)=\sum_{i=1}^{n}\sum_{j=1}^{n}x_{i}f(\al_{i},\al_{j})y_{j}:=X'AY,
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+其中
+\begin_inset Formula $X=(x_{1},x_{2},\cdots,x_{n})',Y=(y_{1},y_{2},\cdots,y_{n})',A=(f(\al_{i},\al_{j}))\in\F^{n\times n}$
+\end_inset
+
+, 称
+\begin_inset Formula $A$
+\end_inset
+
+为
+\begin_inset Formula $f(\al,\bt)$
+\end_inset
+
+在基
+\begin_inset Formula $\al_{1}..\al_{n}$
+\end_inset
+
+下的
+\series bold
+度量矩阵
+\series default
+.
+ 
+\end_layout
+
+\begin_layout Proposition
+考虑所有的双线性函数的全体, 映射
+\begin_inset Formula $\ys:\mathbb{B}\to\F^{n\times n}$
+\end_inset
+
+是双射.
+\end_layout
+
+\begin_layout Standard
+在研究矩阵的时候可以注意到可逆的矩阵可以给我们带来很大的便利, 于是我们定义非退化(满秩)双线性函数: 
+\end_layout
+
+\begin_layout Definition
+(满秩双线性函数) 如果
+\begin_inset Formula $n$
+\end_inset
+
+维线性空间上
+\begin_inset Formula $V$
+\end_inset
+
+的双线性函数
+\begin_inset Formula $f$
+\end_inset
+
+满足: 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f(\al,\bt)=0\iff(\forall\al\in V\implies\bt=0),
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Definition
+那么
+\begin_inset Formula $f$
+\end_inset
+
+是
+\series bold
+非退化
+\series default
+或
+\series bold
+满秩
+\series default
+的.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+设
+\begin_inset Formula $f$
+\end_inset
+
+是
+\begin_inset Formula $V$
+\end_inset
+
+上的双线性函数, 
+\begin_inset Formula $\epsilon_{1},\epsilon_{2},\cdots,\epsilon_{n}$
+\end_inset
+
+是
+\begin_inset Formula $V$
+\end_inset
+
+的一组基, 
+\begin_inset Formula $f$
+\end_inset
+
+在这组基下的度量矩阵为
+\begin_inset Formula $A_{f}=(f(\epsilon_{i},\epsilon_{j})),$
+\end_inset
+
+则下列条件等价: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $f$
+\end_inset
+
+是非退化的;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A_{f}$
+\end_inset
+
+可逆;
+\end_layout
+
+\begin_layout Itemize
+若
+\begin_inset Formula $f(\al,\bt)=0$
+\end_inset
+
+, 
+\begin_inset Formula $\forall\bt\in V\implies\al=0$
+\end_inset
+
+; 
+\end_layout
+
+\begin_layout Itemize
+对于任意的非零
+\begin_inset Formula $\al\in V,$
+\end_inset
+
+存在
+\begin_inset Formula $\bt\in V$
+\end_inset
+
+, 使得
+\begin_inset Formula $f(\al,\bt)\neq0.$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+很多时候, 双线性函数并不具有对称性, 也就是说
+\begin_inset Formula $f(\al,\bt)\neq f(\bt,\al)$
+\end_inset
+
+.
+ 这样, 等于零的情形就有两个.
+ 分别是左边的等于0时和右边等于0时.
+ 于是我们给出正交补的概念: 
+\end_layout
+
+\begin_layout Definition
+(左正交补与右正交补) 对任意
+\begin_inset Formula $V$
+\end_inset
+
+的子空间
+\begin_inset Formula $W,V$
+\end_inset
+
+中的子集
+\begin_inset Formula 
+\begin{align*}
+\bu W & =\{\al\in V|f(\al,\bt)=0,\forall\bt\in W\};\\
+W\bu & =\{\al\in V|f(\bt,\al)=0,\forall\bt\in W\},
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+分别定义为
+\begin_inset Formula $W$
+\end_inset
+
+的
+\series bold
+左正交补
+\series default
+与
+\series bold
+右正交补
+\series default
+.
+ 一般情形下, 
+\begin_inset Formula $\bu W$
+\end_inset
+
+与
+\begin_inset Formula $W\bu$
+\end_inset
+
+并不相等
+\end_layout
+
+\begin_layout Lemma
+设
+\begin_inset Formula $f$
+\end_inset
+
+是
+\begin_inset Formula $n$
+\end_inset
+
+维线性空间
+\begin_inset Formula $V$
+\end_inset
+
+上的非退化双线性函数, 对于任意的
+\begin_inset Formula $\bt\in V,g_{\bt}(\al)=f(\al,\bt)$
+\end_inset
+
+为
+\begin_inset Formula $V$
+\end_inset
+
+上的线性函数, 即我们有映射
+\begin_inset Formula 
+\[
+\varphi:V\to V^{*},\bt\mapsto g_{\bt},
+\]
+
+\end_inset
+
+那么
+\begin_inset Formula $\ys$
+\end_inset
+
+是线性映射且
+\begin_inset Formula $\ker\ys=V\bu$
+\end_inset
+
+, 从而是线性同构.
+ 
+\end_layout
+
+\begin_layout Standard
+如果给定
+\begin_inset Formula $V$
+\end_inset
+
+的子空间, 
+\begin_inset Formula $W,f$
+\end_inset
+
+自然可以看做
+\begin_inset Formula $W$
+\end_inset
+
+上的双线性函数, 记作
+\begin_inset Formula $f|_{W}$
+\end_inset
+
+, 那么我们有
+\end_layout
+
+\begin_layout Lemma
+设
+\begin_inset Formula $f$
+\end_inset
+
+是
+\begin_inset Formula $n$
+\end_inset
+
+维线性空间
+\begin_inset Formula $V$
+\end_inset
+
+上的双线性函数, 对任意的
+\begin_inset Formula $V$
+\end_inset
+
+的子空间
+\begin_inset Formula $W$
+\end_inset
+
+, 如果
+\begin_inset Formula $f|_{W}$
+\end_inset
+
+非退化, 那么
+\begin_inset Formula $V=W\oplus W\bu=W\bu\oplus W.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这个引理我们可以考虑使用向量的分解式唯一的方法去证明之.
+ 
+\end_layout
+
+\begin_layout Standard
+现在我们可以研究一般的双线性函数与矩阵之间的关系, 也就是双线性函数在不同基下的度量矩阵有什么关系? 也就是如果有两组基
+\begin_inset Formula $\lj{\alpha}$
+\end_inset
+
+到
+\begin_inset Formula $\lj{\bt}$
+\end_inset
+
+之间的过渡矩阵为
+\begin_inset Formula $T=(t_{ij})$
+\end_inset
+
+, 那么
+\begin_inset Formula 
+\begin{align*}
+f(\bt_{i},\bt_{j}) & =f\left(\sum_{k=1}^{n}t_{ki}\al_{k},\sum_{l=1}^{n}t_{lj}\al_{l}\right)=\sum_{k=1}^{n}\sum_{l=1}^{n}t_{ki}f(\al_{k},\al_{l})t_{lj}\\
+ & =(t_{1i},\cdots,t_{ni})\begin{pmatrix}f(\al_{1},\al_{1}) & \cdots & f(\al_{1},\al_{n})\\
+\vdots &  & \vdots\\
+f(\al_{n},\al_{1}) & \cdots & f(\al_{n},\al_{n})
+\end{pmatrix}\begin{pmatrix}t_{1j}\\
+\vdots\\
+t_{nj}
+\end{pmatrix}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+由于定理
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:dual-basis-change"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+可以知道基变换对矩阵的影响可以表示为
+\begin_inset Formula 
+\begin{align*}
+B & =\left(T_{i}'AT_{j}\right)=\begin{pmatrix}T_{1}'AT_{1} & \cdots & T_{1}'AT_{n}\\
+\vdots &  & \vdots\\
+T_{n}'AT_{1} & \cdots & T_{n}'AT_{n}
+\end{pmatrix}\\
+ & =\begin{pmatrix}T_{1}'\\
+\vdots\\
+T_{n}'
+\end{pmatrix}(AT_{1},\cdots,AT_{n})\\
+ & =\begin{pmatrix}T_{1}'\\
+\vdots\\
+T_{n}'
+\end{pmatrix}A(T_{1},T_{2},\cdots,T_{n})\\
+ & =T'AT
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+于是我们得到了不同基下两个矩阵的关系.
+ 我们把它定义为
+\series bold
+合同
+\series default
+.
+\end_layout
+
+\begin_layout Definition
+(矩阵的合同) 称
+\begin_inset Formula $A,B\in\F^{n\times n}$
+\end_inset
+
+合同, 意味着存在可逆矩阵
+\begin_inset Formula $T\in\F^{n\times n}$
+\end_inset
+
+, 使得
+\begin_inset Formula 
+\[
+B=T^{-1}AT.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition
+矩阵的合同关系是等价关系.
+ 
+\end_layout
+
+\begin_layout Standard
+这就意味着
+\end_layout
+
+\begin_layout Theorem
+数域
+\begin_inset Formula $\F$
+\end_inset
+
+上的
+\begin_inset Formula $n$
+\end_inset
+
+维线性空间
+\begin_inset Formula $V$
+\end_inset
+
+上的双线性函数在不同基下的度量矩阵是合同的.
+ 反之, 如果
+\begin_inset Formula $A,B\in\F^{n\times n}$
+\end_inset
+
+合同, 则
+\begin_inset Formula $A,B$
+\end_inset
+
+是
+\begin_inset Formula $V$
+\end_inset
+
+上某个双线性函数在不同基下的矩阵.
+ 
+\end_layout
+
+\begin_layout Standard
+这样, 我们希望能不能对于一般的线性函数, 选择一组基, 使得其可以变换成一个容易研究的矩阵呢? 在一般的线性函数上, 好像没有特别好的性质.
+ 我们来考虑若干特殊的情形.
+ 
+\end_layout
+
+\begin_layout Standard
+首先考虑某组基下的度量矩阵是对角矩阵
+\begin_inset Formula $\Lambda$
+\end_inset
+
+, 那么它在其他的基下的度量矩阵
+\begin_inset Formula $B=T'\Lambda T$
+\end_inset
+
+, 是一个对称矩阵.
+ 由于之前的情形, 我们知道任意一个矩阵可以写成一个对称矩阵与一个反对称矩阵之和, 于是自然我们应该考虑其对应的双线性函数: 对称双线性函数与反对称双线性函数.
+ 引入如下的定义: 
+\end_layout
+
+\begin_layout Definition
+(对称双线性函数与反对称双线性函数) 称线性空间
+\begin_inset Formula $V$
+\end_inset
+
+上的双线性函数
+\begin_inset Formula $f(\al,\bt)$
+\end_inset
+
+为
+\series bold
+对称双线性函数
+\series default
+, 如果
+\begin_inset Formula 
+\[
+f(\al,\bt)=f(\bt,\al),\forall\al,\bt\in V;
+\]
+
+\end_inset
+
+称
+\begin_inset Formula $f(\al,\bt)$
+\end_inset
+
+为
+\series bold
+反对称双线性函数
+\series default
+, 如果
+\begin_inset Formula 
+\[
+f(\al,\bt)=-f(\bt,\al),\forall\al,\bt\in V.
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+这样就有一个好处, 就是他们的左正交补与右正交补是相等的.
+ 称作
+\series bold
+正交补
+\series default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+反对称双线性函数有什么性质? 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+(反对称双线性函数的标准形式) 设
+\begin_inset Formula $f(\al,\bt)$
+\end_inset
+
+是
+\begin_inset Formula $n$
+\end_inset
+
+维线性空间
+\begin_inset Formula $V$
+\end_inset
+
+上的犯规陈双线性函数, 则存在
+\begin_inset Formula $V$
+\end_inset
+
+的一组基
+\begin_inset Formula $\lj{\bt}$
+\end_inset
+
+使得
+\begin_inset Formula 
+\[
+(f(\bt_{i},\bt_{j})=\diag{S_{2},S_{2},\cdots,S_{2},0,0,\cdots,0},
+\]
+
+\end_inset
+
+其中
+\begin_inset Formula $S_{2}=\begin{pmatrix}0 & 1\\
+-1 & 0
+\end{pmatrix}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+考虑
+\begin_inset Formula $f\neq0$
+\end_inset
+
+, 即存在
+\begin_inset Formula $\bt_{1},\bt_{2}\in V$
+\end_inset
+
+使得
+\begin_inset Formula $f(\bt_{1},\bt_{2})=c\neq0,$
+\end_inset
+
+用
+\begin_inset Formula $\frac{1}{c}\bt_{2}$
+\end_inset
+
+代替
+\begin_inset Formula $\bt_{2}$
+\end_inset
+
+, 使得
+\begin_inset Formula $f(\bt_{1},\bt_{2})=1$
+\end_inset
+
+.
+ 于是
+\begin_inset Formula $W=L(\bt_{1}\bt_{2})$
+\end_inset
+
+是
+\begin_inset Formula $V$
+\end_inset
+
+的二维子空间, 并且
+\begin_inset Formula $f|_{W}$
+\end_inset
+
+非退化.
+ 自然
+\begin_inset Formula $\bt_{1},\bt_{2}$
+\end_inset
+
+线性无关, 同时也是
+\begin_inset Formula $W$
+\end_inset
+
+的一组基, 并且
+\begin_inset Formula $f|_{W}$
+\end_inset
+
+在
+\begin_inset Formula $\bt_{1},\bt_{2}$
+\end_inset
+
+下的矩阵为
+\begin_inset Formula $S_{2}$
+\end_inset
+
+.
+ 于是
+\begin_inset Formula $V=W\oplus W\bu$
+\end_inset
+
+, 
+\begin_inset Formula $f|_{W\bu}$
+\end_inset
+
+也是反对称双线性函数.
+ 利用归纳法知道存在
+\begin_inset Formula $W\bu$
+\end_inset
+
+的基
+\begin_inset Formula $\bt_{3},\cdots,\bt_{n}$
+\end_inset
+
+使得
+\begin_inset Formula $f|_{W\bu}$
+\end_inset
+
+在该组基下的度量矩阵是
+\begin_inset Formula 
+\[
+\diag{\underbrace{S_{2},\cdots,S_{2}}_{k-1\text{个}},0,\cdots,0}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+故
+\begin_inset Formula $\lj{\bt}$
+\end_inset
+
+为
+\begin_inset Formula $V$
+\end_inset
+
+的基, 且
+\begin_inset Formula 
+\[
+\left(f(\bt_{i},\bt_{j})\right)=\diag{\underbrace{S_{2},\cdots,S_{2}}_{k\text{个}},0,\cdots,0}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这就意味着反对称线性函数的矩阵的秩一定是偶数.
+ 
+\end_layout
+
+\begin_layout Section
+对称双线性函数与二次型
+\end_layout
+
+\begin_layout Standard
+下面研究对称双线性函数的标准情形.
+ 由
+\begin_inset Formula $f(\al,\bt)$
+\end_inset
+
+对称有: 
+\begin_inset Formula $f(\al+\bt,\al+\bt)=f(\al,\al)+f(\bt,\bt)+2f(\al,\bt)$
+\end_inset
+
+.
+ 如果我们记
+\begin_inset Formula $Q_{f}(\al)=(\al,\al)$
+\end_inset
+
+, 那么有
+\begin_inset Formula $f(\al,\bt)=\frac{1}{2}(Q_{f}(\al+\bt)-Q_{f}(\al)-Q_{f}(\bt)).$
+\end_inset
+
+也就是说, 
+\begin_inset Formula $f$
+\end_inset
+
+是有
+\begin_inset Formula $Q_{f}$
+\end_inset
+
+唯一定义, 
+\begin_inset Formula $Q_{f}$
+\end_inset
+
+也是由
+\begin_inset Formula $f$
+\end_inset
+
+唯一确定.
+ 于是我们定义:
+\end_layout
+
+\begin_layout Definition
+(二次型函数函数
+\begin_inset Formula $Q_{f}$
+\end_inset
+
+) 如果
+\begin_inset Formula $\F$
+\end_inset
+
+上的线性空间
+\begin_inset Formula $V$
+\end_inset
+
+到
+\begin_inset Formula $\F$
+\end_inset
+
+的映射
+\begin_inset Formula $Q$
+\end_inset
+
+满足: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+(二次齐次性) 对于任意
+\begin_inset Formula $k\in\F,\al\in V,$
+\end_inset
+
+有
+\begin_inset Formula $Q(k\al)=k^{2}Q(\al);$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f(\al,\bt)=\frac{1}{2}(Q_{f}(\al+\bt)-Q_{f}(\al)-Q_{f}(\bt))$
+\end_inset
+
+是
+\begin_inset Formula $V$
+\end_inset
+
+上的对称双线性函数.
+\end_layout
+
+\end_deeper
+\begin_layout Definition
+则称
+\begin_inset Formula $Q$
+\end_inset
+
+是
+\begin_inset Formula $V$
+\end_inset
+
+的一个
+\series bold
+二次型函数.
+ 
+\end_layout
+
+\begin_layout Standard
+并且我们可以发现
+\begin_inset Formula $V$
+\end_inset
+
+上的对称双线性函数与二次型函数存在一一对应.
+ 
+\end_layout
+
+\begin_layout Proposition
+(双线性函数与二次型函数的一一对应) 
+\begin_inset Formula $V$
+\end_inset
+
+上的双线性函数与二次型函数之间一一对应.
+ 
+\end_layout
+
+\begin_layout Standard
+这就意味着对于对称双线性函数而言, 我们就可以用带着一个变量的字母来考虑整件事情了.
+ 这时候, 如果
+\begin_inset Formula $V$
+\end_inset
+
+是
+\begin_inset Formula $n$
+\end_inset
+
+维线性空间, 选定
+\begin_inset Formula $V$
+\end_inset
+
+的一组基
+\begin_inset Formula $\lj{\eps}$
+\end_inset
+
+, 设
+\begin_inset Formula $\al,\bt$
+\end_inset
+
+的坐标分别是
+\begin_inset Formula $(x_{1},x_{2},\cdots,x_{n})',(\lj y)',A=(a_{ij}),$
+\end_inset
+
+其中
+\begin_inset Formula $a_{ij}=f(\eps_{i},\eps_{j}),$
+\end_inset
+
+那么
+\begin_inset Formula $f(\al,\bt)=X'AY,Q_{f}(\al)=X'AX.$
+\end_inset
+
+这样
+\begin_inset Formula $Q_{f}(\al)=\sum_{i=1}^{n}\sum_{j=1}^{n}a_{ij}x_{i}x_{j}$
+\end_inset
+
+是
+\begin_inset Formula $\F$
+\end_inset
+
+上的二元齐次多项式.
+ 于是我们定义
+\end_layout
+
+\begin_layout Definition
+(二元齐次多项式) 设
+\begin_inset Formula $A=(a_{ij})\in\F^{n\times n}$
+\end_inset
+
+对称, 称二次其次多项式
+\begin_inset Formula 
+\[
+f(\lj x)=\sum_{i=1}^{n}\sum_{j=1}^{n}a_{ij}x_{i}x_{j}
+\]
+
+\end_inset
+
+为
+\begin_inset Formula $\F$
+\end_inset
+
+上的一个
+\series bold
+
+\begin_inset Formula $n$
+\end_inset
+
+元二次型
+\series default
+, 简称
+\series bold
+二次型
+\series default
+.
+ 称
+\begin_inset Formula $A$
+\end_inset
+
+为
+\series bold
+二次型
+\begin_inset Formula $f(\lj x)$
+\end_inset
+
+的矩阵
+\series default
+, 也记为
+\begin_inset Formula $A_{f}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+于是我们就有了如下的研究对象: 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $V$
+\end_inset
+
+上的对称双线性函数;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $V$
+\end_inset
+
+上的二次型函数;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\F$
+\end_inset
+
+上的
+\begin_inset Formula $n$
+\end_inset
+
+元二次型;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\F$
+\end_inset
+
+上的
+\begin_inset Formula $n$
+\end_inset
+
+阶对称矩阵.
+ 
+\end_layout
+
+\begin_layout Standard
+这四个数学对象的本质是一致的, 只是解答问题的时候需要我们按需选择要用的形式.
+ 
+\end_layout
+
+\begin_layout Standard
+选择对称矩阵的一大好处就是我们可以把它对角化.
+ 
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:diagable-sym"
+
+\end_inset
+
+设
+\begin_inset Formula $V$
+\end_inset
+
+是
+\begin_inset Formula $\F$
+\end_inset
+
+上的
+\begin_inset Formula $n$
+\end_inset
+
+维线性空间, 
+\begin_inset Formula $f(\al,\bt)$
+\end_inset
+
+是
+\begin_inset Formula $V$
+\end_inset
+
+上的对称双线性函数, 则存在
+\begin_inset Formula $V$
+\end_inset
+
+的一组基, 
+\begin_inset Formula $\lj{\bt}$
+\end_inset
+
+使得
+\begin_inset Formula $(f(\bt_{i},\bt_{j}))$
+\end_inset
+
+是对角矩阵.
+ 
+\end_layout
+
+\begin_layout Proof
+若对于任意
+\begin_inset Formula $\al\in V$
+\end_inset
+
+, 有
+\begin_inset Formula $Q_{f}(\al)=f(\al,\al)=0,$
+\end_inset
+
+则这个函数恒等于0, 结论自然成立.
+ 
+\end_layout
+
+\begin_layout Proof
+如果
+\begin_inset Formula $f(\al,\al)$
+\end_inset
+
+不恒等于0, 取一个
+\begin_inset Formula $\bt_{1}\in V$
+\end_inset
+
+, 使得
+\begin_inset Formula $f(\bt_{1},\bt_{1})\neq0.$
+\end_inset
+
+于是
+\begin_inset Formula $f$
+\end_inset
+
+在
+\begin_inset Formula $V$
+\end_inset
+
+的子空间
+\begin_inset Formula $W=L(\bt_{1})$
+\end_inset
+
+上的限制是非退化的.
+ 故
+\begin_inset Formula $V=W\oplus W\bu$
+\end_inset
+
+.
+ 且
+\begin_inset Formula $f|_{W\bu}$
+\end_inset
+
+是
+\begin_inset Formula $W\bu$
+\end_inset
+
+的对称双线性函数.
+ 利用归纳法可以知道存在一组基
+\begin_inset Formula $\bt_{2},\cdots,\bt_{n}$
+\end_inset
+
+使得
+\begin_inset Formula $f|_{W\bu}$
+\end_inset
+
+在这组基下的矩阵是对角矩阵.
+ 由于
+\begin_inset Formula $\bt_{i}\in W\bu,i=2,3,\cdots,n$
+\end_inset
+
+, 意味着
+\begin_inset Formula $f(\bt_{1},\bt_{i})=0.$
+\end_inset
+
+于是
+\begin_inset Formula $f$
+\end_inset
+
+在
+\begin_inset Formula $V$
+\end_inset
+
+的矩阵
+\begin_inset Formula $\lj{\bt}$
+\end_inset
+
+为对角矩阵.
+ 
+\end_layout
+
+\begin_layout Standard
+这样一来, 给定一组基, 如果有
+\begin_inset Formula $\al=\sum_{i=1}^{n}x_{i}\bt_{i},\bt_{i}=\sum_{j=1}^{n}y_{j}\bt_{j}$
+\end_inset
+
+, 我们有
+\begin_inset Formula $f(\al,\bt)=\sum_{i=1}^{n}d_{i}x_{i}y_{i}.$
+\end_inset
+
+ 用矩阵的语言可以这样描述: 
+\end_layout
+
+\begin_layout Corollary
+设
+\begin_inset Formula $A\in\F^{n\times n}$
+\end_inset
+
+对称, 存在可逆矩阵
+\begin_inset Formula $T\in\F^{n\times n}$
+\end_inset
+
+使得
+\begin_inset Formula $T'AT$
+\end_inset
+
+为对角矩阵.
+ 
+\end_layout
+
+\begin_layout Standard
+我们还可以把上述的内容表述为二次型的情形.
+ 我们思考一下
+\series bold
+线性替换
+\series default
+.
+ 
+\end_layout
+
+\begin_layout Definition
+(线性替换) 设
+\begin_inset Formula $X=(\lj x)'$
+\end_inset
+
+与
+\begin_inset Formula $Y=(\lj y)'$
+\end_inset
+
+ 是两组变量, 
+\begin_inset Formula $T=(t_{ij})\in\F^{n\times n}$
+\end_inset
+
+.
+ 称
+\begin_inset Formula 
+\[
+\begin{cases}
+x_{1}=t_{11}y_{1}+t_{12}y_{2}+\cdots+t_{1n}y_{n} & (1)\\
+x_{2}=t_{21}y_{1}+t_{22}y_{2}+\cdots+t_{2n}y_{n} & (2)\\
+\cdots & \cdots\\
+x_{n}=t_{n1}y_{1}+t_{n2}y_{2}+\cdots+t_{nn}y_{n} & (n)
+\end{cases}\text{或}X=TY
+\]
+
+\end_inset
+
+为
+\begin_inset Formula $\lj x$
+\end_inset
+
+到
+\begin_inset Formula $\lj y$
+\end_inset
+
+的一个线性替换, 如果
+\begin_inset Formula $T$
+\end_inset
+
+可逆, 则称这个线性代换是
+\series bold
+可逆
+\series default
+的.
+ 称
+\begin_inset Formula $\F$
+\end_inset
+
+上的二次型
+\begin_inset Formula $f(\lj x)$
+\end_inset
+
+与
+\begin_inset Formula $g(\lj y)$
+\end_inset
+
+等价, 如果存在可逆线性替换
+\begin_inset Formula $X=TY$
+\end_inset
+
+使得
+\begin_inset Formula 
+\[
+f(\lj x)=g(\lj y).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+由于上述的探索, 我们发现
+\end_layout
+
+\begin_layout Lemma
+(合同变换变为标准形) 数域上的二次型
+\begin_inset Formula $f(\lj x)$
+\end_inset
+
+与
+\begin_inset Formula $g(\lj y)$
+\end_inset
+
+等价当且仅当两个二次型的度量矩阵合同.
+ 
+\end_layout
+
+\begin_layout Theorem
+(二次型的标准形.)数域
+\begin_inset Formula $\F$
+\end_inset
+
+上的二次型
+\begin_inset Formula $f(\lj x)$
+\end_inset
+
+可以经过可逆线性替换可以化为平方和的形式
+\begin_inset Formula $X=TY,|T|\neq0,$
+\end_inset
+
+使得
+\begin_inset Formula 
+\[
+f(\lj x)=d_{1}y_{1}^{2}+d_{2}y_{2}^{2}+\cdots+d_{n}y_{n}^{2}.
+\]
+
+\end_inset
+
+称等号右手边的式子称为
+\series bold
+二次型的标准形.
+
+\series default
+ 
+\end_layout
+
+\begin_layout Standard
+上面的定理告诉我们二次型的标准形是一定存在的.
+ 定理
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:diagable-sym"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+告诉了我们从双线性函数的角度求解标准形的方法.
+ 下面介绍两种更加容易操作的方法: 分别是
+\series bold
+配方法
+\series default
+和
+\series bold
+初等变换法
+\series default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+从定理
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:diagable-sym"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+导出一组可以用的解.
+ 
+\series default
+设在基
+\begin_inset Formula $\lj{\al}$
+\end_inset
+
+下, 
+\begin_inset Formula $V$
+\end_inset
+
+上的双线性函数为
+\begin_inset Formula $f(\al,\bt)=X'AY$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+(1) 如果存在
+\begin_inset Formula $i$
+\end_inset
+
+, 使得
+\begin_inset Formula $f(\al_{i},\al_{i})\neq0,$
+\end_inset
+
+那么重排基的顺序, 不妨设
+\begin_inset Formula $i=1,\bt_{1}=\al_{1}$
+\end_inset
+
+, 那么
+\begin_inset Formula $\bt_{1},\al_{2},\cdots,\al_{n}$
+\end_inset
+
+是
+\begin_inset Formula $V$
+\end_inset
+
+的一组基, 要求
+\begin_inset Formula $L(\bt_{1})\bu$
+\end_inset
+
+, 只要求一组基.
+ 也就是线性无关的
+\begin_inset Formula $\gamma_{2},\cdots,\gamma_{n}$
+\end_inset
+
+为
+\begin_inset Formula $V$
+\end_inset
+
+的一组基, 并且满足
+\begin_inset Formula $f(\bt_{1},\gamma_{i})=0,$
+\end_inset
+
+对于
+\begin_inset Formula $i=2,3,\cdots,n$
+\end_inset
+
+.
+ 待定系数, 令
+\begin_inset Formula $\gamma_{i}=\al_{i}+k_{i}\bt_{1}$
+\end_inset
+
+, 由于
+\begin_inset Formula $f(\gamma_{i},\bt_{1})=0$
+\end_inset
+
+, 根据双线性函数的性质有
+\begin_inset Formula 
+\[
+f(\al_{i},\bt_{1})+k_{i}f(\bt_{1},\bt_{1})=0,
+\]
+
+\end_inset
+
+即
+\begin_inset Formula $k_{i}=-\frac{f(\al_{i},\bt_{1})}{f(\bt_{1},\bt_{1})}.$
+\end_inset
+
+于是令
+\begin_inset Formula $\gamma_{i}=\al_{i}-\frac{f(\al_{i},\bt_{1})}{f(\bt_{1},\bt_{1})}\bt_{1}$
+\end_inset
+
+即可.
+ 可以验证并知道
+\begin_inset Formula $\gamma_{2},\cdots,\gamma_{n}$
+\end_inset
+
+为
+\begin_inset Formula $L(\bt_{1})\bu$
+\end_inset
+
+的一组基.
+ 继续对于
+\begin_inset Formula $L(\bt_{1})\bu$
+\end_inset
+
+进行类似的操作.
+ 
+\end_layout
+
+\begin_layout Standard
+(2)如果对于任意的
+\begin_inset Formula $i$
+\end_inset
+
+, 都有
+\begin_inset Formula $f(\al_{i},\al_{i})=0,$
+\end_inset
+
+由于
+\begin_inset Formula $f$
+\end_inset
+
+不恒为0, 存在
+\begin_inset Formula $f(\al_{i},\al_{j})\neq0$
+\end_inset
+
+.
+ 于是可以取
+\begin_inset Formula $\al_{1}+\al_{2},\al_{1}-\al_{2},\al_{3},\cdots,\al_{n}$
+\end_inset
+
+.
+ 这样的好处是
+\begin_inset Formula $f(\al_{1}+\al_{2},\al_{1}-\al_{2})=0$
+\end_inset
+
+.
+ 然后令
+\begin_inset Formula $\bt=\al_{1}+\al_{2}$
+\end_inset
+
+就可以转化为(1)的情形.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+用二次型的语言来描述.
+ 
+\series default
+设
+\begin_inset Formula 
+\[
+f(\lj x)=\sum_{i=1}^{n}\sum_{j=1}^{n}a_{ij}x_{i}x_{j},\quad a_{ij}=a_{ji}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(1) 若
+\begin_inset Formula $a_{ii}$
+\end_inset
+
+不全为0, 不妨设
+\begin_inset Formula $a_{11}\neq0,$
+\end_inset
+
+对于
+\begin_inset Formula $x_{1}$
+\end_inset
+
+配方得: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+f(\lj x) & =a_{11}x_{1}^{2}+2x_{1}\sum_{j=2}^{n}a_{1j}x_{j}+\sum_{i=2}^{n}\sum_{j=2}^{n}a_{ij}x_{i}x_{j}\\
+ & =a_{11}\left(x_{1}+\sum_{j=2}^{n}\frac{a_{1j}}{a_{11}}x_{j}\right)^{2}-a_{11}\left(\sum_{j=2}^{n}\frac{a_{1j}}{a_{11}}x_{j}\right)^{2}+\sum_{i=2}^{n}\sum_{j=2}^{n}a_{ij}x_{i}x_{j}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+于是做可逆线性变换
+\begin_inset Formula 
+\[
+\begin{cases}
+y_{1}=x_{1}+\sum_{j=2}^{n}\frac{a_{1j}}{a_{11}}x_{j}, & i=1\\
+y_{i}=x_{i}, & 2\leq i\leq n
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+则二次型化为了
+\begin_inset Formula 
+\[
+a_{11}y_{1}^{2}-\frac{1}{a_{11}}\left(\sum_{j=2}^{n}a_{1j}y_{j}\right)^{2}+\sum_{i=2}^{n}\sum_{j=2}^{n}a_{ij}x_{i}x_{j}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这样就变成了一个
+\begin_inset Formula $n-1$
+\end_inset
+
+个代凑的的二次型, 继续操作即可.
+ 
+\end_layout
+
+\begin_layout Standard
+(2) 若
+\begin_inset Formula $a_{11}=a_{22}=\cdots=a_{nn}=0,$
+\end_inset
+
+总存在
+\begin_inset Formula $i,j,i\neq j$
+\end_inset
+
+使得
+\begin_inset Formula $a_{ij}\neq0$
+\end_inset
+
+.
+ 不妨设
+\begin_inset Formula $a_{12}\neq0.$
+\end_inset
+
+ 做可逆线性替换
+\begin_inset Formula $x_{1}=z_{1}+z_{2},x_{2}=z_{1}-z_{2},x_{i}=z_{i},3\leq i\leq n$
+\end_inset
+
+.
+ 这样的好处是做完替换后
+\begin_inset Formula $z_{1}z_{2}$
+\end_inset
+
+的系数为0.
+ 之后就化为了情形(1)继续就可以了.
+ 
+\end_layout
+
+\begin_layout Example
+把
+\begin_inset Formula $f(x,y,z)=x^{2}+5y^{2}+5z^{2}+4xy-2xz+4yz$
+\end_inset
+
+化为标准型.
+ 
+\end_layout
+
+\begin_layout Solution*
+根据上面的内容, 有
+\begin_inset Formula 
+\begin{align*}
+f(x,y,z) & =x^{2}+5y^{2}+5z^{2}+4xy-2xz+4yz\\
+ & =x^{2}+2x(2y-z)+(2y-z)^{2}-(2y-z)^{2}\\
+ & \quad+5y^{2}+5z^{2}+4yz\\
+ & =(x+2y-z)^{2}+y^{2}+8yz+4z^{2}\\
+ & =(x+2y-z)^{2}+(y^{2}+8yz+16z^{2})-16z^{2}+4z^{2}\\
+ & =(x+2y-z)^{2}+(x+4z)^{2}-12z^{2}\\
+ & =(x+2y-z)^{2}+(x+4z)^{2}-12z^{2}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+用配方法将二次型
+\begin_inset Formula $f(x_{1},x_{2},x_{3})=2x_{1}x_{2}+2x_{1}x_{3}+2x_{2}x_{3}$
+\end_inset
+
+化为标准型.
+ 
+\end_layout
+
+\begin_layout Solution*
+先做替换
+\begin_inset Formula $x_{1}=z_{1}+z_{2},x_{2}=z_{1}-z_{2},x_{3}=z_{3},$
+\end_inset
+
+那么有
+\end_layout
+
+\begin_layout Solution*
+\begin_inset Formula 
+\begin{align*}
+f(x_{1},x_{2},x_{3}) & =2z_{1}^{2}-2z_{2}^{2}+4z_{1}z_{3}\\
+ & =2(z_{1}^{2}+2z_{1}z_{3}+z_{3}^{2})-2z_{2}-2z_{3}\\
+ & =2(z_{1}+z_{3})^{2}-2z_{2}-2z_{3},
+\end{align*}
+
+\end_inset
+
+于是令
+\begin_inset Formula $\begin{pmatrix}y_{1}\\
+y_{2}\\
+y_{3}
+\end{pmatrix}=\begin{pmatrix}1 & 0 & 1\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{pmatrix}\begin{pmatrix}z_{1}\\
+z_{2}\\
+z_{3}
+\end{pmatrix}$
+\end_inset
+
+, 就有
+\begin_inset Formula $f(x_{1},x_{2},x_{3})=2y_{1}^{2}-2y_{2}^{2}-2y_{3}^{2}.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+对于二次型做可逆线性变换的过程其实是对度量矩阵做一系列的合同变换.
+ 具体地, 对于任意的对称矩阵
+\begin_inset Formula $A$
+\end_inset
+
+, 存在可逆矩阵
+\begin_inset Formula $T$
+\end_inset
+
+使得
+\begin_inset Formula $T'AT$
+\end_inset
+
+为对角矩阵, 由于
+\begin_inset Formula $T$
+\end_inset
+
+可逆, 于是可以分解成若干个初等矩阵的乘积
+\begin_inset Formula $T=P_{1}P_{2}\cdots P_{k}.$
+\end_inset
+
+此时, 
+\begin_inset Formula $T'=P_{k}'\cdots P_{2}'P_{1}'$
+\end_inset
+
+.
+ 于是
+\begin_inset Formula 
+\[
+T'AT=P_{k}'(\cdots(P_{2}'(P_{1}'AP_{1})P_{2})\cdots)P_{k}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+所以我们可以把二次型的配方法用初等矩阵记录下来.
+ 这就是初等变换法.
+ 
+\end_layout
+
+\begin_layout Standard
+我们来看一看初等变换会对目标带来怎样的效果.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P=P(i(c))$
+\end_inset
+
+.
+ 此时, 
+\begin_inset Formula $P'AP$
+\end_inset
+
+的效果是将
+\begin_inset Formula $A$
+\end_inset
+
+的第
+\begin_inset Formula $i$
+\end_inset
+
+行乘以
+\begin_inset Formula $c$
+\end_inset
+
+, 得到
+\begin_inset Formula $P'A$
+\end_inset
+
+, 再将此矩阵的第
+\begin_inset Formula $i$
+\end_inset
+
+列乘
+\begin_inset Formula $c$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P=P(i,j)$
+\end_inset
+
+.
+ 此时, 
+\begin_inset Formula $P'AP$
+\end_inset
+
+的效果是将
+\begin_inset Formula $A$
+\end_inset
+
+的第
+\begin_inset Formula $i$
+\end_inset
+
+行与第
+\begin_inset Formula $j$
+\end_inset
+
+列互换, 然后将
+\begin_inset Formula $A$
+\end_inset
+
+的第
+\begin_inset Formula $i$
+\end_inset
+
+列与第
+\begin_inset Formula $j$
+\end_inset
+
+列互换.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P=P(i,j(k))$
+\end_inset
+
+.
+ 此时, 将
+\begin_inset Formula $A$
+\end_inset
+
+的第
+\begin_inset Formula $j$
+\end_inset
+
+行加上第
+\begin_inset Formula $i$
+\end_inset
+
+行的
+\begin_inset Formula $k$
+\end_inset
+
+倍, 再将
+\begin_inset Formula $A$
+\end_inset
+
+的第
+\begin_inset Formula $j$
+\end_inset
+
+列加上第
+\begin_inset Formula $i$
+\end_inset
+
+列的
+\begin_inset Formula $k$
+\end_inset
+
+倍.
+ 
+\end_layout
+
+\begin_layout Standard
+可以看到, 我们可以通过先做一次行变换, 再做一次列变换的方法来解决这个问题.
+ 知道把左侧的对称矩阵化为单位矩阵.
+ 这样右侧的就记录下了
+\begin_inset Formula $P'$
+\end_inset
+
+.
+ 就是说, 
+\begin_inset Formula $(A|I_{n})\to(P'AP|P')$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Example
+用初等变换法把二次型
+\begin_inset Formula $f(x_{1},x_{2},x_{3})=2x_{1}x_{2}+2x_{1}x_{3}+2x_{2}x_{3}$
+\end_inset
+
+化为标准型.
+\end_layout
+
+\begin_layout Solution*
+该二次型的矩阵为
+\begin_inset Formula $A=\begin{pmatrix}0 & 1 & 1\\
+1 & 0 & 1\\
+1 & 1 & 0
+\end{pmatrix}$
+\end_inset
+
+, 那么对
+\begin_inset Formula $(A|I_{3})$
+\end_inset
+
+进行初等变换: 
+\end_layout
+
+\begin_layout Solution*
+\begin_inset Formula 
+\begin{align*}
+\begin{pmatrix}0 & 1 & 1 & | & 1\\
+1 & 0 & 1 & | &  & 1\\
+1 & 1 & 0 & | &  &  & 1
+\end{pmatrix} & \stackrel{\text{行}}{\to}\begin{pmatrix}0 & 1 & 2 & | & 1 & 1\\
+1 & 0 & 1 & | &  & 1\\
+1 & 1 & 0 & | &  &  & 1
+\end{pmatrix}\stackrel{\text{列}}{\to}\begin{pmatrix}2 & 1 & 2 & | & 1 & 1\\
+1 & 0 & 1 & | &  & 1\\
+2 & 1 & 0 & | &  &  & 1
+\end{pmatrix}\\
+ & \stackrel{\text{行}}{\to}\begin{pmatrix}2 & 1 & 2 & | & 1 & 1 & 0\\
+0 & -1/2 & 0 & | & -1/2 & 1/2 & 0\\
+0 & 0 & 2 & | & -1 & -1 & 1
+\end{pmatrix}\stackrel{\text{列}}{\to}\begin{pmatrix}2 & 0 & 0 & | & 1 & 1 & 0\\
+0 & -1/2 & 0 & | & -1/2 & 1/2 & 0\\
+0 & 0 & 2 & | & -1 & -1 & 1
+\end{pmatrix}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution*
+由此可得.
+ 
+\end_layout
+
+\begin_layout Section
+惯性定理与正定二次型
+\end_layout
+
+\begin_layout Standard
+上一节里面我们了解了
+\begin_inset Formula $n$
+\end_inset
+
+元二次型的标准形的产生方法.
+ 例如, 
+\begin_inset Formula $\F$
+\end_inset
+
+上的
+\begin_inset Formula $n$
+\end_inset
+
+元二次型有标准型
+\begin_inset Formula $f(\lj x)=d_{1}^{2}y_{1}+d_{2}^{2}y_{2}+\cdots+d_{n}^{2}y_{n}.$
+\end_inset
+
+如果我们取全部为0的可逆线性替换, 使得
+\begin_inset Formula $y_{i}=t_{i}z_{i},$
+\end_inset
+
+可以发现二次型的标准形并不唯一.
+ 如果在
+\begin_inset Formula $\mathbb{C}$
+\end_inset
+
+里面, 我们就可以恰当地选取
+\begin_inset Formula $t_{i}$
+\end_inset
+
+使得其前面的系数全部为1.
+ 于是有定理
+\end_layout
+
+\begin_layout Theorem
+(复数域上二次型的规范形可以唯一) 
+\begin_inset Formula $n$
+\end_inset
+
+元复二次型
+\begin_inset Formula $f(\lj x)$
+\end_inset
+
+经过可逆线性变换可以化为
+\begin_inset Formula $z_{1}^{2}+z_{2}^{2}+\cdots+z_{n}^{2}.$
+\end_inset
+
+即: 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f(\lj x)=z_{1}^{2}+z_{2}^{2}+\cdots+z_{n}^{2}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Theorem
+其中右式称为二次型的
+\series bold
+规范形
+\series default
+.
+ 并且二次型的规范形是唯一的.
+ 
+\end_layout
+
+\begin_layout Standard
+用矩阵的语言叙述之, 就是任意复对称的
+\begin_inset Formula $n$
+\end_inset
+
+阶方阵
+\begin_inset Formula $A$
+\end_inset
+
+比对称与
+\begin_inset Formula $\diag{I_{r},0}.$
+\end_inset
+
+其中
+\begin_inset Formula $r=r(A).$
+\end_inset
+
+ 两个复对称的
+\begin_inset Formula $n$
+\end_inset
+
+阶方阵合同当且仅当它们的秩相等.
+ 
+\end_layout
+
+\begin_layout Standard
+实数域上的情形好像更加复杂一些.
+ 因为我们不能通过一些变换将负的系数变为正的.
+ 因此, 我们猜测经过线性替换并不能更改掉系数前面正负号的个数.
+ 事实上也确实是这样的, 这个定理被叫做``
+\series bold
+惯性定理
+\series default
+''.
+\end_layout
+
+\begin_layout Theorem
+(惯性定理) 设
+\begin_inset Formula $n$
+\end_inset
+
+元实二次型
+\begin_inset Formula $f(\lj x)=X'AX$
+\end_inset
+
+经过可逆线性替换可以化为如下所示的
+\series bold
+规范形
+\series default
+
+\begin_inset Formula 
+\[
+f(\lj x)=z_{1}^{2}+z_{2}^{2}+\cdots+z_{p}^{2}-z_{p+1}^{2}-\cdots-z_{r}^{2}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+设
+\begin_inset Formula $f(\lj x)$
+\end_inset
+
+的标准形为
+\begin_inset Formula $d_{1}y_{1}^{2}+\cdots+d_{p}y_{p}^{2}+d_{p+1}y_{p+1}^{2}+\cdots+d_{r}y_{r}^{2},$
+\end_inset
+
+其中
+\begin_inset Formula $d_{1},\cdots,d_{p}$
+\end_inset
+
+为证书, 
+\begin_inset Formula $d_{p+1},\cdots,d_{r}$
+\end_inset
+
+为负数.
+ 做线性替换
+\begin_inset Formula 
+\[
+y_{i}=\begin{cases}
+\frac{1}{\sqrt{d_{i}}}z_{i}, & 1\leq i\leq p\\
+\frac{1}{\sqrt{-d_{i}}}z_{i}, & p+1\leq i\leq r\\
+z_{i}, & r+1\leq i\leq n
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+则可得
+\begin_inset Formula 
+\[
+f(x_{1},x_{2},\cdots,x_{n})=z_{1}^{2}+z_{2}^{2}+\cdots+z_{p}^{2}-z_{p+1}^{2}-\cdots-z_{r}^{2}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+设
+\begin_inset Formula $w_{1}^{2}+w_{2}^{2}+\cdots+w_{s}^{2}-w_{s+1}^{2}-\cdots-w_{r}^{2}$
+\end_inset
+
+为
+\begin_inset Formula $f(\lj x)$
+\end_inset
+
+的另一个规范形.
+ 利用二次型与双线性函数的一一对应关系知道, 存在
+\begin_inset Formula $n$
+\end_inset
+
+维实线性空间
+\begin_inset Formula $V$
+\end_inset
+
+上的对称双线性函数
+\begin_inset Formula $f(\al,\bt)$
+\end_inset
+
+, 使得其在基
+\begin_inset Formula $\eta_{1},\eta_{2},\cdots,\eta_{n},\xi_{1},\xi_{2},\cdots,\xi_{n}$
+\end_inset
+
+下的度量矩阵分别为
+\begin_inset Formula $\diag{I_{p},I_{r-p},0}$
+\end_inset
+
+与
+\begin_inset Formula $\diag{I_{s},I_{r-s},0}$
+\end_inset
+
+.
+ 令
+\begin_inset Formula $V_{1}=L(\eta_{1},\cdots,\eta_{p}),$
+\end_inset
+
+对于任意的
+\begin_inset Formula $\al\in V_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $f(\al,\al)\geq0,$
+\end_inset
+
+并且当且仅当
+\begin_inset Formula $\al=0$
+\end_inset
+
+的时候
+\begin_inset Formula $f(\al,\al)=0.$
+\end_inset
+
+令
+\begin_inset Formula $V_{2}=L(\xi_{s+1},\cdots,\xi_{n})$
+\end_inset
+
+, 则对任意的
+\begin_inset Formula $\bt\in V_{2},f(\bt,\bt)\leq0.$
+\end_inset
+
+容易证明
+\begin_inset Formula $V_{1}\cap V_{2}=\{0\},$
+\end_inset
+
+也就是
+\begin_inset Formula $V_{1}+V_{2}$
+\end_inset
+
+是直和.
+ 因此
+\begin_inset Formula 
+\[
+p+n-s=\dim V_{1}+\dim V_{2}=\dim(V_{1}+V_{2})\leq n,
+\]
+
+\end_inset
+
+从而
+\begin_inset Formula $p\leq s,$
+\end_inset
+
+同理, 
+\begin_inset Formula $s\leq p$
+\end_inset
+
+, 于是
+\begin_inset Formula $s=p$
+\end_inset
+
+, 从而规范形唯一.
+ 
+\end_layout
+
+\begin_layout Definition
+(正负惯性指数) 在实二次型
+\begin_inset Formula $f(\lj x)$
+\end_inset
+
+的规范形中, 正平方项的个数
+\begin_inset Formula $p$
+\end_inset
+
+称为
+\begin_inset Formula $f(\lj x)$
+\end_inset
+
+的
+\series bold
+正惯性指数
+\series default
+, 负平方项的个数
+\begin_inset Formula $q=r-p$
+\end_inset
+
+称为
+\begin_inset Formula $f(\lj x)$
+\end_inset
+
+的
+\series bold
+负惯性指数
+\series default
+, 称他们的差
+\begin_inset Formula $p-q=2p-r$
+\end_inset
+
+为
+\begin_inset Formula $f(\lj x)$
+\end_inset
+
+的
+\series bold
+符号差
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+接下来我们来考虑一些比较特殊的二次型.
+ 也就是二次型
+\begin_inset Formula $X'AX$
+\end_inset
+
+的正惯性指数为
+\begin_inset Formula $n$
+\end_inset
+
+.
+ 此时, 二次型的规范形为
+\begin_inset Formula $y_{1}^{2}+y_{2}^{2}+\cdots+y_{n}^{2}.$
+\end_inset
+
+ 对于任意的
+\begin_inset Formula $y$
+\end_inset
+
+, 最后的函数值都是正的.
+ 这样一来, 我们在一些问题里面研究起来就非常方便.
+ 于是我们可以给出定义
+\series bold
+正定二次型
+\series default
+.
+ 
+\end_layout
+
+\begin_layout Definition
+(正定二次型) 称实二次型
+\begin_inset Formula $f(\lj x)=X'AX$
+\end_inset
+
+为正定二次型, 如果对任意的不全为0的实数
+\begin_inset Formula $\lj c$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+f(\lj c)>0.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+于是我们称这样的矩阵
+\begin_inset Formula $A$
+\end_inset
+
+为正定矩阵.
+ 
+\end_layout
+
+\begin_layout Standard
+于是我们可以由若干个二次型的等价条件:
+\end_layout
+
+\begin_layout Theorem
+(二次型的等价条件) 设
+\begin_inset Formula $f(\lj x)=XAX$
+\end_inset
+
+是实二次型, 则下列条件等价: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+(1) 
+\begin_inset Formula $f(\lj x)$
+\end_inset
+
+的正惯性指数为
+\begin_inset Formula $n$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+(2) 
+\begin_inset Formula $A$
+\end_inset
+
+合同与
+\begin_inset Formula $I_{n}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+(3) 
+\begin_inset Formula $A=TT'$
+\end_inset
+
+, 其中
+\begin_inset Formula $T$
+\end_inset
+
+可逆;
+\end_layout
+
+\begin_layout Itemize
+(4) 
+\begin_inset Formula $f(\lj x)$
+\end_inset
+
+是正定二次型.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+只需要证明
+\begin_inset Formula $(4)\implies(1)$
+\end_inset
+
+, 设正定二次型
+\begin_inset Formula $f(\lj x)=X'AX$
+\end_inset
+
+经过可逆变换
+\begin_inset Formula $Y=TX$
+\end_inset
+
+之后化为规范形为
+\begin_inset Formula $y_{1}^{2}+y_{2}^{2}+\cdots+y_{p}^{2}-y_{p+1}^{2}-y_{r}^{2}$
+\end_inset
+
+, 如果
+\begin_inset Formula $p<n$
+\end_inset
+
+, 则令
+\begin_inset Formula $(\lj c)'=T^{-1}(0,0,0,\cdots,1)'$
+\end_inset
+
+.
+ 这时候
+\begin_inset Formula $f(\lj c)\leq0,$
+\end_inset
+
+与正定性矛盾.
+ 于是
+\begin_inset Formula $p=n$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+由于
+\begin_inset Formula $|A|=|T'T|=|T|^{2},$
+\end_inset
+
+我们有
+\end_layout
+
+\begin_layout Proposition
+正定矩阵的行列式大于0.
+ 
+\end_layout
+
+\begin_layout Standard
+所以, 我们得到了一个必要的条件.
+ 一个问题是, 这个条件充分吗? 事实上, 这个条件并不充分.
+ 如果我们对于任意的
+\begin_inset Formula $1\leq i_{1}\leq i_{2}\leq\cdots\leq i_{m}\leq n$
+\end_inset
+
+, 当
+\begin_inset Formula $j\notin\{i_{1},\cdots,i_{m}\}$
+\end_inset
+
+的时候令
+\begin_inset Formula $x_{j}=0,$
+\end_inset
+
+那么二次型就化为了
+\begin_inset Formula $\sum_{k=1}^{m}\sum_{l=1}^{m}a_{i_{k}i_{l}}x_{i_{k}}x_{i_{l}}.$
+\end_inset
+
+ 于是得到一个新的
+\begin_inset Formula $m$
+\end_inset
+
+元二次型
+\begin_inset Formula $X_{1}'A_{1}X_{1},$
+\end_inset
+
+其中
+\begin_inset Formula 
+\[
+X_{1}=\begin{pmatrix}x_{i_{1}}\\
+\vdots\\
+x_{i_{m}}
+\end{pmatrix}\quad A_{1}=\begin{pmatrix}a_{i_{1}i_{1}} & a_{i_{1}i_{2}} & \cdots & a_{i_{1}i_{m}}\\
+a_{i_{2}i_{1}} & a_{i_{2}i_{2}} & \cdots & a_{i_{2}i_{m}}\\
+\vdots & \vdots & \ddots & \vdots\\
+a_{i_{m}i_{1}} & a_{i_{m}i_{2}} & \cdots & a_{i_{m}i_{m}}
+\end{pmatrix}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+线性代数中出现的内容
+\end_layout
+
+\begin_layout Subsection
+二次型及其标准形
+\end_layout
+
+\begin_layout Enumerate
+二次型 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+含有
+\begin_inset Formula $n$
+\end_inset
+
+个变量
+\begin_inset Formula $x_{1}..x_{n}$
+\end_inset
+
+的二次型多项式(每一项都是二次的多项式)
+\begin_inset Formula $f(x_{1}..x_{n})=\sum_{i=1}^{n}\sum_{j=1}^{n}a_{ij}x_{i}x_{j}$
+\end_inset
+
+称为
+\begin_inset Formula $n$
+\end_inset
+
+的二次型, 令
+\begin_inset Formula $\boldsymbol{x}=(x_{1}..x_{n})^{T},\boldsymbol{A}=(a_{ij}),$
+\end_inset
+
+则二次型可以用矩阵乘法表示为
+\begin_inset Formula $f(x_{1}..x_{n})=\boldsymbol{x}^{T}\boldsymbol{Ax}$
+\end_inset
+
+, 其中
+\begin_inset Formula $A$
+\end_inset
+
+是
+\begin_inset Formula $n$
+\end_inset
+
+阶实对称矩阵, 称
+\begin_inset Formula $A$
+\end_inset
+
+为二次型
+\begin_inset Formula $f(x_{1}..x_{n})$
+\end_inset
+
+的矩阵.
+ 矩阵
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+的秩
+\begin_inset Formula $\rk{\boldsymbol{A}}$
+\end_inset
+
+称为二次型
+\begin_inset Formula $f$
+\end_inset
+
+的秩, 记作
+\begin_inset Formula $\rk f$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+二次型的标准形
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+如果二次型含有变量的平方项, 所有混合项
+\begin_inset Formula $(\text{如}x_{i}x_{j},i\neq j)$
+\end_inset
+
+的系数都等于0, 也就是
+\begin_inset Formula $f(x_{1}..x_{n})=x^{T}\boldsymbol{A}x=d_{1}x_{1}^{2}+d_{2}x_{2}^{2}+\cdots+d_{n}x_{n}^{2}$
+\end_inset
+
+, 其中
+\begin_inset Formula $d_{i}$
+\end_inset
+
+都是实数.
+ 称这样的二次型为标准形.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Prop.
+ 在标准形中, 
+\series bold
+正平方项的个数
+\series default
+
+\begin_inset Formula $p$
+\end_inset
+
+称为二次型的
+\series bold
+正惯性指数
+\series default
+, 
+\series bold
+负平方项
+\series default
+的个数
+\begin_inset Formula $q$
+\end_inset
+
+称为二次型的
+\series bold
+负惯性指数
+\series default
+, 且
+\begin_inset Formula $r(f)+r(A)=p+q$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Thm.
+ 任意
+\begin_inset Formula $n$
+\end_inset
+
+元二次型
+\begin_inset Formula $x^{-1}\boldsymbol{A}x$
+\end_inset
+
+都可以通过正交变换
+\begin_inset Formula $x=\boldsymbol{C}y$
+\end_inset
+
+(
+\begin_inset Formula $C$
+\end_inset
+
+是可逆矩阵)化为标准形.
+ 也就是
+\begin_inset Formula $\boldsymbol{x}^{T}\boldsymbol{A}\boldsymbol{x}\stackrel{\boldsymbol{x}=\boldsymbol{C}\boldsymbol{y}}{\Longrightarrow}$
+\end_inset
+
+
+\begin_inset Formula $\boldsymbol{y}^{T}\boldsymbol{A}\boldsymbol{y}=d_{1}x_{1}^{2}+d_{2}x_{2}^{2}+\cdots+d_{n}x_{n}^{2}$
+\end_inset
+
+, 其中
+\begin_inset Formula $\boldsymbol{A}=\boldsymbol{C}^{T}\boldsymbol{A}\boldsymbol{C}$
+\end_inset
+
+, 特别的, 存在正交变换
+\begin_inset Formula $\boldsymbol{x}=\boldsymbol{Cy}$
+\end_inset
+
+(
+\begin_inset Formula $\boldsymbol{C}$
+\end_inset
+
+是正交矩阵)化
+\begin_inset Formula $\boldsymbol{x}^{T}\boldsymbol{Ax}$
+\end_inset
+
+为标准形.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+用配方法化二次型为标准形
+\end_layout
+
+\begin_layout Case
+二次型中含有某变量
+\begin_inset Formula $x_{i}$
+\end_inset
+
+的平方项和交叉项: 先集中
+\begin_inset Formula $x_{i}$
+\end_inset
+
+的交叉项, 然后将
+\begin_inset Formula $x_{i}^{2}$
+\end_inset
+
+配方, 化为完全平方, 用新变量代替各个平方项中的变量, 同时立刻写出它的逆变换, 也就是用新的变量表示旧的变量.
+ 一直这样做下去, 知道各个项数完全化为平方项即可.
+ 
+\end_layout
+
+\begin_layout Case
+二次型中没有平方项, 只有交叉项: 先利用平方差公式进行可逆变换的构造, 把二次型化为含平方项的二次型, 如当
+\begin_inset Formula $x_{i}x_{j}$
+\end_inset
+
+的系数
+\begin_inset Formula $a_{ij}\neq0$
+\end_inset
+
+时, 进行可逆线性变换: 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x_{i}=y_{i}-y_{j},x_{j}=y_{i}+y_{j},x_{k}=y_{k}(k\neq i,j)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+转化为情形1处理.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+正定二次型
+\end_layout
+
+\begin_layout Enumerate
+正定二次型
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Def.
+ 设二次型矩阵
+\begin_inset Formula $\boldsymbol{x}^{T}\boldsymbol{Ax}$
+\end_inset
+
+, 如果对于任意的
+\begin_inset Formula $\boldsymbol{x}\neq\boldsymbol{0}$
+\end_inset
+
+, 恒有
+\begin_inset Formula $\boldsymbol{x}^{T}\boldsymbol{Ax}>0$
+\end_inset
+
+, 则称二次型
+\begin_inset Formula $\boldsymbol{x}^{T}\boldsymbol{Ax}$
+\end_inset
+
+为正定二次型, 正定二次型的矩阵
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+称为
+\series bold
+正定矩阵
+\series default
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+二次型正定的充分必要条件
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\boldsymbol{x}^{T}\boldsymbol{Ax}$
+\end_inset
+
+的正惯性指数
+\begin_inset Formula $p=n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+ 与
+\begin_inset Formula $\boldsymbol{E}$
+\end_inset
+
+合同, 即有可逆矩阵
+\begin_inset Formula $\boldsymbol{C}$
+\end_inset
+
+, 是的
+\begin_inset Formula $\boldsymbol{C}^{T}\boldsymbol{AC}=\boldsymbol{E}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+的所有是特征值全大于0
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+的顺序主子式全大于0
+\end_layout
+
+\begin_layout Enumerate
+存在可逆矩阵
+\begin_inset Formula $\boldsymbol{C}$
+\end_inset
+
+, 使得
+\begin_inset Formula $\boldsymbol{A}=\boldsymbol{C}^{T}\boldsymbol{C}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Section
+基础习题
+\end_layout
+
+\begin_layout Problem
+将二次型
+\begin_inset Formula $2x_{1}^{2}-2x_{1}x_{2}+2x_{1}x_{3}-2x_{2}x_{3}$
+\end_inset
+
+通过正交变换化为标准形, 并且指出所用的正交变换.
+ 
+\end_layout
+
+\begin_layout Solution*
+二次型矩阵为
+\begin_inset Formula $\boldsymbol{A}=\begin{pmatrix}2 & -1 & 1\\
+-1 & 0 & -1\\
+1 & -1 & 0
+\end{pmatrix},$
+\end_inset
+
+它的特征值是
+\begin_inset Formula $3,-1,0$
+\end_inset
+
+.
+ 对应的特征向量是
+\begin_inset Formula $(2,-1,1)^{T},(0,1,1)^{T},(-1,-1,1)^{T}$
+\end_inset
+
+, 属于不同特征值的向量线性无关, 在这种情形下正交, 因此单位化, 得到正交矩阵
+\begin_inset Formula $P=\begin{pmatrix}2/\sqrt{6} & 0 & -1/\sqrt{3}\\
+-1/\sqrt{6} & 1/\sqrt{2} & -1/\sqrt{3}\\
+1/\sqrt{6} & 1/\sqrt{2} & 1/\sqrt{3}
+\end{pmatrix}$
+\end_inset
+
+, 得到的对角矩阵
+\begin_inset Formula $\begin{pmatrix}3\\
+ & -1\\
+ &  & 0
+\end{pmatrix}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Problem
+设三阶实对称矩阵
+\begin_inset Formula $\A$
+\end_inset
+
+的特征值为
+\begin_inset Formula $6,3,3$
+\end_inset
+
+, 与特征值
+\begin_inset Formula $6$
+\end_inset
+
+对应的特征向量
+\begin_inset Formula $\bs p_{1}=(1,1,1)^{T}$
+\end_inset
+
+, 求矩阵
+\begin_inset Formula $\A$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Solution*
+考虑实对称矩阵各个特征向量之间是正交的.
+ 据此可以求出
+\begin_inset Formula $\bs P$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Problem
+设
+\begin_inset Formula $\A,\B$
+\end_inset
+
+为同阶方阵, 证明: 如果
+\begin_inset Formula $\A,\B$
+\end_inset
+
+相似, 那么他们的特征多项式相等.
+ 举反例说明逆命题不成立.
+ 并且证明当
+\begin_inset Formula $\A,\B$
+\end_inset
+
+为实对称矩阵的时候, 逆命题成立.
+ 
+\end_layout
+
+\begin_layout Solution*
+注意单位矩阵和任意矩阵相乘都是可逆的.
+ 并借此提出两边的内容即可.
+ 第二问举例参考
+\begin_inset Formula $\begin{pmatrix}0 & 0\\
+0 & 0
+\end{pmatrix},\begin{pmatrix}0 & 0\\
+1 & 0
+\end{pmatrix}$
+\end_inset
+
+即可.
+ 第三问参考二者都相似与对角形.
+ 
+\end_layout
+
+\begin_layout Problem
+证明: 上三角矩阵, 下三角矩阵, 对角矩阵的特征值是它对角线上的各个元素.
+ 
+\end_layout
+
+\begin_layout Solution*
+通过特征多项式的计算可以知道.
+ 
+\end_layout
+
+\begin_layout Problem
+设二次型
+\begin_inset Formula $f(x_{1},x_{2},x_{3})=\x^{T}\A\x$
+\end_inset
+
+的秩为1, 
+\begin_inset Formula $\A$
+\end_inset
+
+中各行元素为3, 则
+\begin_inset Formula $f$
+\end_inset
+
+在正交变换
+\begin_inset Formula $\x=\bs Q\bs y$
+\end_inset
+
+下的标准形为.
+\end_layout
+
+\end_body
+\end_document

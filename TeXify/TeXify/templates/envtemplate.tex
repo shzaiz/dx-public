@@ -1,0 +1,61 @@
+\geometry{left=3.18cm,right=3.18cm,top=2.54cm,bottom=2.54cm}
+\usepackage{ amssymb }
+\usepackage{fontspec}
+\usepackage{mdframed} % Add easy frames to paragraphs
+\usepackage{lipsum} % For dummy text
+\usepackage{xcolor}
+\usepackage{xparse} % Add support for \NewDocumentEnvironment
+\definecolor{graylight}{cmyk}{.30,0,0,.67} % define color using xcolor syntax
+
+\newmdenv[ % Define mdframe settings and store as leftrule
+linecolor=graylight,
+topline=false,
+bottomline=false,
+rightline=false,
+skipabove=\topsep,
+skipbelow=\topsep
+]{leftrule}
+\NewDocumentEnvironment{eg}{O{$\Large\mathbb{E}$xample\textbf{举例:}}} 
+{\begin{leftrule}\noindent\textcolor{codegreen}{#1}\par}
+	{\end{leftrule}}
+
+\NewDocumentEnvironment{example}{O{$\Large\mathbb{E}xample$\textbf{例子:}}} 
+{\begin{leftrule}\noindent\textcolor{blue}{#1}\par}
+	{\end{leftrule}}
+
+\NewDocumentEnvironment{pas}{O{$\Large\mathbb{P}assage$\textbf{文章}}} 
+{\begin{leftrule}\noindent\textcolor{graylight}{#1}\par}
+	{\end{leftrule}}
+
+\NewDocumentEnvironment{fun}{O{$\Large\mathbb{F}un\ fact$\textbf{趣事}}} 
+{\begin{leftrule}\noindent\textcolor{pink}{#1}\par}
+  {\end{leftrule}}
+
+\NewDocumentEnvironment{bonus}{O{$\Large\mathbb{B}onus$\textbf{思考题}}} 
+{\begin{leftrule}\noindent\textcolor{red}{#1}\par}
+	{\end{leftrule}}
+	
+\NewDocumentEnvironment{tool}{O{$\Large\mathbb{T}ools$\textbf{工具}}} 
+{\begin{leftrule}\noindent\textcolor{violet}{#1}\par}
+	{\end{leftrule}}
+
+\NewDocumentEnvironment{dialogue}{O{$\Large\mathbb{D}ialogue$\textbf{对话}}} 
+{\begin{leftrule}\noindent\textcolor{cyan}{#1}\par}
+	{\end{leftrule}}
+	
+\NewDocumentEnvironment{idea}{O{$\Large\mathbb{I}dea$\textbf{启示}}} 
+{\begin{leftrule}\noindent\textcolor{brown}{#1}\par}
+	{\end{leftrule}}
+
+\usepackage{amsthm}
+\usepackage{amsmath}
+\theoremstyle{definition}
+\newtheorem{definition}{定义}[section]
+\newtheorem{axi}{公理}[section]
+\newtheorem{prob}{问题}[section]
+\newtheorem{proposition}{命题}[section]
+\newtheorem{theorem}{定理}[section]
+\newenvironment{sol}{\paragraph{解答:}}{\hfill \#}
+\newenvironment{roadmap}{\paragraph{思路:}}{\hfill \%}
+\newenvironment{remark}{\paragraph{注:}}{\hfill}
+\newtheorem{lemma}{引理}[section]

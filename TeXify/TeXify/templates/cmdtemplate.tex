@@ -1,0 +1,135 @@
+
+\usepackage{amsmath, amsfonts, latexsym, mathtools, centernot}
+\newcommand{\set}[1]{\{#1\}}
+\newcommand{\bset}[1]{\big\{#1\big\}}
+\newcommand{\Bset}[1]{\Big\{#1\Big\}}
+\newcommand{\ps}[1]{\mathcal{P}(#1)}
+\newcommand{\card}[1]{\Big\lvert #1 \Big\rvert}
+\DeclareMathOperator*{\argmin}{\arg\!\min}
+
+\newcommand{\nd}[3]{\frac{\quad#1\quad}{\quad#2\quad} \quad (#3)}
+\newcommand{\ndnoname}[2]{\frac{\quad#1\quad}{\quad#2\quad}}
+\newcommand{\fpow}[2]{#1^{\underline{#2}}}
+\newcommand{\opbold}[1]{\textbf{#1}}
+
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\newcommand{\hStatex}[0]{\vspace{5pt}}
+
+\usepackage{multirow}
+\usepackage{xmpmulti} % for displaying .gif
+
+\renewcommand{\today}{\number\year 年\number\month 月\number\day 日}
+
+
+%Typeset
+
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\subset}{\subseteq}
+\renewcommand{\backslash}{\setminus}
+\renewcommand{\bar}[1]{\overline{#1}}
+\renewcommand{\tilde}[1]{\widetilde{#1}}
+\renewcommand{\hat}[1]{\widehat{#1}}
+\newcommand{\x}[0]{\left}
+\newcommand{\y}[0]{\right}
+\newcommand{\ti}[1]{\subsubsection*{#1}}
+
+% colors
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\redoverlay}[2]{\textcolor<#2>{red}{#1}}
+\newcommand{\gray}[1]{\textcolor{gray}{#1}}
+\newcommand{\green}[1]{\textcolor{green}{#1}}
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+\newcommand{\blueoverlay}[2]{\textcolor<#2>{blue}{#1}}
+\newcommand{\teal}[1]{\textcolor{teal}{#1}}
+\newcommand{\purple}[1]{\textcolor{purple}{#1}}
+\newcommand{\cyan}[1]{\textcolor{cyan}{#1}}
+\newcommand{\brown}[1]{\textcolor{brown}{#1}}
+\newcommand{\yellow}[1]{\textcolor{yellow}{#1}}
+\newcommand{\violet}[1]{\textcolor{violet}{#1}}
+
+
+% color box
+\newcommand{\rbox}[1]{\red{\boxed{#1}}}
+\newcommand{\gbox}[1]{\green{\boxed{#1}}}
+\newcommand{\bbox}[1]{\blue{\boxed{#1}}}
+\newcommand{\pbox}[1]{\purple{\boxed{#1}}}
+
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{compstyle}{
+  backgroundcolor=\color{backcolour},
+  commentstyle=\color{codegreen},
+  keywordstyle=\color{magenta},
+  numberstyle=\tiny\color{codegray},
+  stringstyle=\color{codepurple},
+  basicstyle=\ttfamily\footnotesize,
+  breakatwhitespace=false,
+  breaklines=true,
+  captionpos=b,
+  keepspaces=true,
+  numbers=left,
+  numbersep=5pt,
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  tabsize=2
+}
+\lstset{style=compstyle}
+
+\usepackage{pifont}
+\usepackage{wasysym}
+\usepackage{ulem}
+\usepackage{tikz}
+\usepackage{savesym}
+\savesymbol{checkmark} % checkmark defined in dingbat
+\usepackage{dingbat}
+
+\newcommand{\cmark}{\green{\ding{51}}}
+\newcommand{\xmark}{\red{\ding{55}}}
+
+% see https://tex.stackexchange.com/a/109906/23098
+\usepackage{empheq}
+\newcommand*\widefbox[1]{\fbox{\hspace{2em}#1\hspace{2em}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% for fig without caption: #1: width/size; #2: fig file
+\newcommand{\fig}[2]{
+  \begin{figure}[htp]
+    \centering
+    \includegraphics[#1]{#2}
+  \end{figure}
+}
+
+% for fig with caption: #1: width/size; #2: fig file; #3: caption
+\newcommand{\figcap}[3]{
+  \begin{figure}[htp]
+    \centering
+    \includegraphics[#1]{#2}
+    \caption{#3}
+  \end{figure}
+}
+
+\newcommand{\lset}{\mathcal{L}_{\textsl{Set}}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\U}{\mathcal{U}}
+\newcommand{\dom}{\text{dom}}
+\newcommand{\ran}{\text{ran}}
+\newcommand{\fld}{\text{fld}}
+\newcommand{\cod}{\text{cod}}
+
+\DeclareRobustCommand{\stirling}{\genfrac\{\}{0pt}{}}
+\newcommand{\cnum}[1]{\blue{#1}} % \textcircled{1}
+\newcommand{\composition}[2]{\left( {#1 \choose #2} \right)}
+\newcommand{\setpartition}[2]{\left\{ #1 \atop #2 \right\}}
+\newcommand{\partition}[2]{\left| #1 \atop #2 \right|}

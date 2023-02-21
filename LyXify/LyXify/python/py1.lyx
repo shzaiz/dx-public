@@ -1,0 +1,1412 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-article
+\use_default_options true
+\begin_modules
+algorithm2e
+theorems-named
+theorems-ams-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 3cm
+\rightmargin 2cm
+\bottommargin 3cm
+\headheight 2cm
+\headsep 2cm
+\footskip 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Python程序设计
+\end_layout
+
+\begin_layout Section
+为什么要学习计算机编程
+\end_layout
+
+\begin_layout Standard
+计算机是一个笨重的工具, 在时间或空间限制下可以有效地执行许多重复的任务.
+ 到现在为止, 计算机还不能分析问题并提出解决方案.
+ 另一方面, 人类在分析和解决问题方面非常出色, 但很容易对重复的任务感到厌倦.
+ 
+\end_layout
+
+\begin_layout Standard
+人类通过利用他们的分析和解决问题的技能, 可以为可计算的问题提出算法(有限的指令, 与有限的输入一起工作, 产生输出) .
+ 然后, 计算机可以遵循这些指令并产生一个答案.
+ 
+\end_layout
+
+\begin_layout Standard
+你可以将你生活中的各种多余的任务自动化.
+ 一点点的Python可以给你的生活带来神奇的效果.
+ 甚至提高你的生产力.
+ 
+\end_layout
+
+\begin_layout Section
+程序语言的语法(Syntax)和语义(Schematics)
+\end_layout
+
+\begin_layout Standard
+我们在学习英语的时候很重要的一部分是语法: 也就是什么样的语言是可以被接受(acceptable)的.
+ 比如下面这个英文句子是没有语法错误的: 
+\end_layout
+
+\begin_layout Verbatim
+
+Fuhai Zhu said that this test is only a small test, so don't panic.
+\end_layout
+
+\begin_layout Standard
+但是这句话不同人有不同的理解方式, 这就是这句话的语义.
+ 
+\end_layout
+
+\begin_layout Itemize
+我们可以推断朱富海老师在安抚准备参加小测试学生们的情绪
+\end_layout
+
+\begin_layout Itemize
+但是南京大学数学系的同学知道这是一个有名的梗: 上学期教高等代数的朱富海老师把线上期中考叫做``小测验'', 并在同学询问考试范围的时候微笑的答道:``从小学学
+的都考.''
+\end_layout
+
+\begin_layout Quote
+简而言之(不严谨) , 现在我们有一个由一堆字符串和推导规则组成的形式系统, 语法决定了这个形式系统能生存什么样的字符串, 而至于这些字符串有什么样的含义则是语
+义的范畴.
+ 语法类似材料, 语义类似与材料组成的各种建筑物, 我们可以通过语法研究语义层面的推导, 同时也可以从语义层面捕获语法中内涵的结构, 其实语法和语义是相互区别又
+紧密联系, 即从范畴论的角度看语法和语义是伴随的(其实不同的人做数学证明可以有不同的风格: 偏语法和偏语义, 不过大部分数学家更喜欢语义风格的证明,
+ 可能因为更直观, 更容易被人脑接受~~) 
+\end_layout
+
+\begin_layout Quote
+作者: 知乎用户 链接: https://www.zhihu.com/question/31347357/answer/892133941 来源:
+ 知乎 著作权归作者所有.
+ 商业转载请联系作者获得授权, 非商业转载请注明出处.
+ 
+\end_layout
+
+\begin_layout Section
+Python代码执行可视化: 一个网站
+\end_layout
+
+\begin_layout Subsection
+Pythontutor: 代码执行可视化
+\end_layout
+
+\begin_layout Standard
+这是
+\begin_inset CommandInset href
+LatexCommand href
+name "Python代码执行可视化"
+target "https://pythontutor.com/visualize.html#mode=display"
+literal "false"
+
+\end_inset
+
+的机器, 我们可以用一个小程序来测试之.
+\end_layout
+
+\begin_layout Verbatim
+
+for i in range(10):
+\end_layout
+
+\begin_layout Verbatim
+
+    print(i**2)
+\end_layout
+
+\begin_layout Standard
+点击Visualize Execution就可以了, 你可以点击Next来继续模拟执行下一步.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename tex/FIg/vis-py.png
+	width 100col%
+	height 60col%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+需要了解的内容
+\end_layout
+
+\begin_layout Standard
+什么是Global Frame, Object? 暂时先不用管.
+ 不过你确实可以看到点击Next的时候Print output一栏一步一步的模拟了你的代码.
+ 
+\end_layout
+
+\begin_layout Section
+Python程序的语法和语义
+\end_layout
+
+\begin_layout Standard
+可以知道, 代码按照行数执行, 一次执行一行, 每一次执行计算机内部结构的状态(右侧的面板).
+ 下面我们化繁为简, 来看一看一个系统(数学意义上)能够完成任何人类完成的操作需要的最小可能的操作是什么.
+ 
+\end_layout
+
+\begin_layout Subsection
+能够写出任何程序的最小指令集
+\end_layout
+
+\begin_layout Standard
+像数学的公理体系那样, 我们自然希望得到一个最小的指令集合, 并且我们可以用来写出任何的程序.
+ 我们不妨从日常生活中找一点灵感吧.
+\end_layout
+
+\begin_layout Example
+(等红绿灯) 观察红绿灯, 
+\series bold
+如果
+\series default
+是绿灯, 那就通过这个路口; 
+\series bold
+否则
+\series default
+继续等待.
+ (遵纪守法的好公民)
+\end_layout
+
+\begin_layout Example
+(做作业) 明确今天的作业范围, 从
+\series bold
+第一题
+\series default
+开始写, 写完题目
+\series bold
+或者
+\series default
+一题目没有思路之后做
+\series bold
+下一道
+\series default
+题, 
+\series bold
+直到
+\series default
+做完所有的问题.
+\end_layout
+
+\begin_layout Example
+(排序成绩单) 获得班上同学的所有
+\series bold
+成绩单
+\series default
+, 拿一张新的白纸打好
+\series bold
+表格
+\series default
+, 
+\series bold
+每一次
+\series default
+从成绩单中选取最大的分数, 把那一行
+\series bold
+抄写到
+\series default
+新的白纸上.
+ 之后把原来那张纸上的内容划去.
+ 
+\series bold
+一直重复下去
+\series default
+, 
+\series bold
+直到
+\series default
+原来的成绩单上没有任何可以被划去的内容.
+\end_layout
+
+\begin_layout Standard
+我们需要找一些东西来具象化我们脑子中的``红绿灯的状态'', ``现在在做作业的题目编号'', 这些内容, 因此我们就希望把这些抽象出来.
+ 因此我们有了变量的概念, 也就是值存在的空间.
+ 
+\end_layout
+
+\begin_layout Standard
+把上面的三个内容转化成伪代码(不唯一)就是:
+\end_layout
+
+\begin_layout Verbatim
+
+------ GO THROUGH CONJUNCTION ------
+\end_layout
+
+\begin_layout Verbatim
+
+if traffic light's color is green:
+\end_layout
+
+\begin_layout Verbatim
+
+    go pass by
+\end_layout
+
+\begin_layout Verbatim
+
+else
+\end_layout
+
+\begin_layout Verbatim
+
+    wait
+\end_layout
+
+\begin_layout Verbatim
+
+\end_layout
+
+\begin_layout Verbatim
+
+------ DO HOMEWORK ------
+\end_layout
+
+\begin_layout Verbatim
+
+range = [a..b]
+\end_layout
+
+\begin_layout Verbatim
+
+working on problem = a
+\end_layout
+
+\begin_layout Verbatim
+
+while working on problem <= b:
+\end_layout
+
+\begin_layout Verbatim
+
+    finished this problem or can't work out
+\end_layout
+
+\begin_layout Verbatim
+
+    working on problem = working on problem+1
+\end_layout
+
+\begin_layout Verbatim
+
+\end_layout
+
+\begin_layout Verbatim
+
+------ SORT EXAM SCORE ------
+\end_layout
+
+\begin_layout Verbatim
+
+list = get the source table
+\end_layout
+
+\begin_layout Verbatim
+
+result = empty(for now)
+\end_layout
+
+\begin_layout Verbatim
+
+while list is not empty
+\end_layout
+
+\begin_layout Verbatim
+
+    k= get the max element of list
+\end_layout
+
+\begin_layout Verbatim
+
+    write k to the next line of result
+\end_layout
+
+\begin_layout Verbatim
+
+show result
+\end_layout
+
+\begin_layout Standard
+其实要是能够构造出任何程序的原材料并不复杂.
+ 无非就是变量的赋值, 判断, 跳转, 终止.
+ 也就是, 如果你能声称有一套系统可以自动化的解决这四个内容, 那么这个系统就具有机械化地做任何人类做的事情.
+ 换句话说, 你可以用这个工具创造整个世界.
+ 
+\end_layout
+
+\begin_layout Standard
+其实最早这个想法是在计算机诞生之前人们孜孜以求的问题.
+ Alan Turing 在1936年就提出了这样的设想.
+ 他就是由只一条(无限长)的纸带和一根笔(可以改纸带的内容, 并且查看纸带的内容并据此做判断), 并且有一个程序(墙上的表格), 指示下一步要往哪转移.
+ 只要能够移动读写头, 写纸带的某一个格子, 读纸带的某一个格子, 跳转, 以及终止, 这个机器就和我们人类的计算能力等价.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename tex/FIg/trm.png
+	width 60col%
+	height 60line%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+运行上面图片的程序, 左右按照我们的左右进行(规定A
+\series bold
+B
+\series default
+C右移一格是AB
+\series bold
+C
+\series default
+).
+\end_layout
+
+\begin_layout Example
+(1) 现在机器的状态是A(头部的字母), 看到的是1(放大镜的字母)
+\end_layout
+
+\begin_layout Example
+(2) 于是把当前的格子改为1, 纸带向右移动一格, 然后停机.
+\end_layout
+
+\begin_layout Example
+
+\series bold
+假设
+\series default
+当前纸带的放大镜看到的是0, 再运行一次:
+\end_layout
+
+\begin_layout Example
+状态:A 纸带状态: 0 1 1 1 
+\series bold
+0
+\series default
+ 1 1 0 0
+\end_layout
+
+\begin_layout Example
+(1)现在机器的状态是A(头部的字母), 看到的是0(放大镜的字母), 执行第一行第一列的指令
+\begin_inset Formula $1(\text{改\text{为1)}}\rightarrow(\text{向\text{右移动一格)}}B(\text{状\text{态改为B)} . }$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+状态:B 纸带状态: 0 1 1 1 1 
+\series bold
+1
+\series default
+ 1 0 0
+\end_layout
+
+\begin_layout Example
+(2)现在机器的状态是B(头部的字母), 看到的是1(放大镜的字母), 执行第二行第二列的指令
+\begin_inset Formula $1(\text{改\text{为1)}}\rightarrow(\text{向\text{右移动一格)}}B(\text{状\text{态改为B)} . }$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+状态:B 纸带状态: 0 1 1 1 1 1 
+\series bold
+1
+\series default
+ 0 0
+\end_layout
+
+\begin_layout Example
+(3)现在机器的状态是B(头部的字母), 看到的是1(放大镜的字母), 执行第二行第二列的指令
+\begin_inset Formula $1(\text{改\text{为1)}}\rightarrow(\text{向\text{右移动一格)}}B(\text{状\text{态改为B)} . }$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+状态:B 纸带状态: 0 1 1 1 1 1 1 
+\series bold
+0 
+\series default
+0
+\end_layout
+
+\begin_layout Example
+(4)现在机器的状态是B(头部的字母), 看到的是0(放大镜的字母), 执行第二行第一列的指令
+\begin_inset Formula $0(\text{改\text{为0)}}\rightarrow(\text{向\text{右移动一格)}}C(\text{状\text{态改为C)} . }$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+状态:C 纸带状态: 0 1 1 1 1 1 1 0 
+\series bold
+0
+\end_layout
+
+\begin_layout Example
+(5)现在机器的状态是C(头部的字母), 看到的是0(放大镜的字母), 执行第三行第一列的指令
+\begin_inset Formula $1(\text{改\text{为1)}}\leftarrow(\text{向\text{左移动一格)}}C(\text{状\text{态改为C)} . }$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+状态:C 纸带状态: 0 1 1 1 1 1 1 
+\series bold
+0
+\series default
+ 1
+\end_layout
+
+\begin_layout Example
+(6)现在机器的状态是C(头部的字母), 看到的是0(放大镜的字母), 执行第三行第一列的指令
+\begin_inset Formula $1(\text{改\text{为1)}}\leftarrow(\text{向\text{左移动一格)}}C(\text{状\text{态改为C)} . }$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+状态:C 纸带状态: 0 1 1 1 1 1 
+\series bold
+1
+\series default
+ 1 1
+\end_layout
+
+\begin_layout Example
+(7)现在机器的状态是C(头部的字母), 看到的是1(放大镜的字母), 执行第三行第二列的指令
+\begin_inset Formula $1(\text{改\text{为1)}}\leftarrow(\text{向\text{左移动一格)}}A(\text{状\text{态改为A)} . }$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+状态:A 纸带状态: 0 1 1 1 1 
+\series bold
+1
+\series default
+ 1 1 1
+\end_layout
+
+\begin_layout Example
+(8)现在机器的状态是A(头部的字母), 看到的是1(放大镜的字母), 执行第一行第二列的指令
+\begin_inset Formula $1(\text{改\text{为1)}}\rightarrow(\text{向\text{右边移动一格)}}\dagger(\text{停\text{机)}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+状态:A 纸带状态: 0 1 1 1 1 1 
+\series bold
+1
+\series default
+ 1 1
+\end_layout
+
+\begin_layout Standard
+下面我们来看一看为什么说可以用Python创造整个世界.
+\end_layout
+
+\begin_layout Subsection
+在这之前: 寻求网络资源
+\end_layout
+
+\begin_layout Standard
+请认真阅读并实践(无论是在脑子还是在交互器里面)文档https://docs.python.org/zh-cn/3/tutorial/introduction.htm
+l的内容.
+ 可以让你了解更多易于理解的东西.
+ 如果文章中有描述C和Pascal的句子, 忽略它就可以.
+ 
+\end_layout
+
+\begin_layout Subsection
+Python中的整个世界
+\end_layout
+
+\begin_layout Standard
+下面的内容其实不用单独记忆, 只要明确有哪些语句, 这些语句造成的效果是什么就行了.
+ 如果看到有任何的问题, 可以去搜一搜词典.
+ 
+\end_layout
+
+\begin_layout Standard
+下面会有两个术语(term), 分别是表达式(expression)和过程(procedure), 表达式可以暂且认为是形如x+12, [2]*3这样的可以进行
+计算的内容, 过程就是一系列执行的过程, 不一定要能得到值.
+ 我们用一个例子感受一下.
+\end_layout
+
+\begin_layout LyX-Code
+def InsertionSort(A):                            
+\end_layout
+
+\begin_layout LyX-Code
+    for j in range(1, len(A)):                   #Proc
+\end_layout
+
+\begin_layout LyX-Code
+        key = A[j]    #A[j],key are expr #Proc   #|
+\end_layout
+
+\begin_layout LyX-Code
+        i = j - 1     #j-1,i are an expr #v      #|
+\end_layout
+
+\begin_layout LyX-Code
+        while (i >=0) and (A[i] > key):          #|   
+\end_layout
+
+\begin_layout LyX-Code
+        #    <-expr->    <----expr----->         #|   
+\end_layout
+
+\begin_layout LyX-Code
+        #    <-----------expr----------->        #|   
+\end_layout
+
+\begin_layout LyX-Code
+            A[i+1] = A[i] #A[i]is expr   #Proc   #|
+\end_layout
+
+\begin_layout LyX-Code
+            i = i - 1     #i-1 is expr   #v      #|
+\end_layout
+
+\begin_layout LyX-Code
+        A[i+1] =    key                          #v
+\end_layout
+
+\begin_layout LyX-Code
+       <-expr->  <-expr->
+\end_layout
+
+\begin_layout Standard
+其实上面的Proc表示过程, 然后右边的是一个字符画, 表示
+\begin_inset Formula $\downarrow$
+\end_inset
+
+, <-expr->其实表示的意思是
+\begin_inset Formula $\underbrace{\texttt{example}}_{\text{expr}}$
+\end_inset
+
+这一段是表达式.
+ 
+\end_layout
+
+\begin_layout Standard
+重要的是, 把示例代码放到上面提到的可视化网站里面看一看就会很清楚, 很多概念都是不用记忆的.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+变量的定义与赋值
+\end_layout
+
+\begin_layout Definition
+(变量的赋值) 变量名=变量的值
+\end_layout
+
+\begin_layout Standard
+语义: 
+\end_layout
+
+\begin_layout Standard
+下面我们给出注解:
+\end_layout
+
+\begin_layout Itemize
+在不加修饰的情况下, 变量的名称只在当前的缩进块内有效
+\end_layout
+
+\begin_layout Itemize
+命名是用来指代对象的.
+ 这就是为什么有时候可视化工具里面Frames后面有一个箭头指着Objects.
+\end_layout
+
+\begin_layout Itemize
+如果用一个变量=另一个变量, 大多数情况是现计算出来右手边表达式的值之后给左手边的变量.
+ 有时候一些文章里面写作
+\begin_inset Formula $lhs\leftarrow rhs$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout LyX-Code
+b=114514
+\end_layout
+
+\begin_layout LyX-Code
+a=b+1 #执行完本句之后a=114515
+\end_layout
+
+\begin_layout LyX-Code
+b = b+1 # 执行完本句之后b=114515, a=114515不变
+\end_layout
+
+\begin_layout LyX-Code
+a = b+1 # 执行完本句之后a=114515, b=114516
+\end_layout
+
+\begin_layout Algorithm
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+在Python中
+\series default
+, 变量的值的类型可以是任意的.
+ 因为Python声明变量的时候没有说明类型.
+\end_layout
+
+\begin_layout LyX-Code
+a=
+\begin_inset Quotes erd
+\end_inset
+
+Fuhai Zhu teached Advanced Algebra
+\begin_inset Quotes erd
+\end_inset
+
+ # a现在是字符串
+\end_layout
+
+\begin_layout LyX-Code
+a=1 # a现在是整数
+\end_layout
+
+\begin_layout LyX-Code
+a=None # None是一个关键字, 表示什么都没有.
+\end_layout
+
+\begin_layout Itemize
+如果没有定义就使用了一个变量, 通常就会有如下的报错:
+\end_layout
+
+\begin_layout LyX-Code
+print(a+1)
+\end_layout
+
+\begin_layout LyX-Code
+      ^
+\end_layout
+
+\begin_layout LyX-Code
+Traceback (most recent call last):   File "<stdin>", line 1, in <module>
+ 
+\end_layout
+
+\begin_layout LyX-Code
+NameError: name 'n' is not defined
+\end_layout
+
+\begin_layout LyX-Code
+(命名错误: 名称'n'没有定义)
+\end_layout
+
+\begin_layout Standard
+什么是Traceback? stdin又是什么? 后面可能会注意到.
+ 
+\end_layout
+
+\begin_layout Standard
+可能经常会常用的变量类型: 数字、字符串、列表.
+ 这时候可以参看官方文档https://docs.python.org/zh-cn/3/tutorial/introduction.html来继续.
+\end_layout
+
+\begin_layout Subsubsection
+控制语句: 判断与循环
+\end_layout
+
+\begin_layout Definition
+(条件判断) 可以使用if语句进行条件判断, 一般的, 有如下的形式:
+\end_layout
+
+\begin_layout Definition
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout LyX-Code
+if 表达式1:
+\end_layout
+
+\begin_layout LyX-Code
+    过程1
+\end_layout
+
+\begin_layout LyX-Code
+elif 表达式2: # 可以有零个或者多个elif, 但是else后面不能有elif
+\end_layout
+
+\begin_layout LyX-Code
+    过程2
+\end_layout
+
+\begin_layout LyX-Code
+else:
+\end_layout
+
+\begin_layout LyX-Code
+    过程r
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+语义: 它通过逐个计算
+\series bold
+表达式
+\series default
+, 直到发现一个
+\series bold
+表达式
+\series default
+为真, 并且执行使
+\series bold
+表达式
+\series default
+为
+\series bold
+真
+\series default
+的这个
+\series bold
+过程
+\series default
+(完成后
+\series bold
+不
+\series default
+执行或计算if语句的其他部分的判断
+\series bold
+表达式
+\series default
+) .
+ 如果所有表达式都为false, 如果存在else下方语句块的过程.
+\end_layout
+
+\begin_layout Standard
+下面我们同样给出注记和例子.
+\end_layout
+
+\begin_layout Itemize
+什么是真? 什么是假? 我们会在后面探讨.
+ 首先可以认为非0数字和True是真, 0和False和None是假.
+ 
+\end_layout
+
+\begin_layout LyX-Code
+if "AK":
+\end_layout
+
+\begin_layout LyX-Code
+    print("AK") # 会输出AK, 这是怎么判断的?(后续会回答)
+\end_layout
+
+\begin_layout Itemize
+可以用逻辑运算符 and(且) or(或) not(非) 进行逻辑表达, 比如
+\end_layout
+
+\begin_layout LyX-Code
+zgw = 0
+\end_layout
+
+\begin_layout LyX-Code
+kertz = 1
+\end_layout
+
+\begin_layout LyX-Code
+ak = 1
+\end_layout
+
+\begin_layout LyX-Code
+cmo = 1
+\end_layout
+
+\begin_layout LyX-Code
+if kertz and ak and cmo :
+\end_layout
+
+\begin_layout LyX-Code
+    print(
+\begin_inset Quotes eld
+\end_inset
+
+Zixuan Yuan got full mark in CMO
+\begin_inset Quotes erd
+\end_inset
+
+)
+\end_layout
+
+\begin_layout LyX-Code
+elif zgw and ak and cmo:
+\end_layout
+
+\begin_layout LyX-Code
+    print(
+\begin_inset Quotes eld
+\end_inset
+
+zgw got full mark in CMO
+\begin_inset Quotes erd
+\end_inset
+
+)
+\end_layout
+
+\begin_layout LyX-Code
+else:
+\end_layout
+
+\begin_layout LyX-Code
+    print(
+\begin_inset Quotes eld
+\end_inset
+
+zgw is such a noob
+\begin_inset Quotes erd
+\end_inset
+
+)
+\end_layout
+
+\begin_layout LyX-Code
+# 会输出Kertz got full mark in CMO, 由于已经找到了一个表达式的值为真的
+\end_layout
+
+\begin_layout LyX-Code
+# 表达式, 所以执行完print(
+\begin_inset Quotes eld
+\end_inset
+
+Zixuan Yuan got full mark in CMO
+\begin_inset Quotes erd
+\end_inset
+
+)之后就
+\end_layout
+
+\begin_layout LyX-Code
+# 会跳转到这个语句块的尾部了.
+ 不会执行print(
+\begin_inset Quotes eld
+\end_inset
+
+zgw is such a noob
+\begin_inset Quotes erd
+\end_inset
+
+).
+\end_layout
+
+\begin_layout LyX-Code
+# (为自己菜爆的数学基础做了一个掩盖(大雾))
+\end_layout
+
+\begin_layout Itemize
+如果结构不完整, 或者在else之后还有elif, 那么就会出发形如这样的错误:
+\end_layout
+
+\begin_layout LyX-Code
+例子1.py-------------
+\end_layout
+
+\begin_layout LyX-Code
+if True:
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\begin_layout LyX-Code
+print("Err")
+\end_layout
+
+\begin_layout LyX-Code
+----
+\end_layout
+
+\begin_layout LyX-Code
+File "main.py", line 3
+\end_layout
+
+\begin_layout LyX-Code
+    print("Err")
+\end_layout
+
+\begin_layout LyX-Code
+    ^ IndentationError: expected an indented block
+\end_layout
+
+\begin_layout LyX-Code
+(缩进错误: 我预期有一个带着缩进的语句块, 但是没有)
+\end_layout
+
+\begin_layout LyX-Code
+例子2.py---------------
+\end_layout
+
+\begin_layout LyX-Code
+if False:
+\end_layout
+
+\begin_layout LyX-Code
+    print(1)
+\end_layout
+
+\begin_layout LyX-Code
+else:
+\end_layout
+
+\begin_layout LyX-Code
+    print(2)
+\end_layout
+
+\begin_layout LyX-Code
+elif True:
+\end_layout
+
+\begin_layout LyX-Code
+    print(3)
+\end_layout
+
+\begin_layout LyX-Code
+---
+\end_layout
+
+\begin_layout LyX-Code
+  File "main.py", line 5
+\end_layout
+
+\begin_layout LyX-Code
+    elif True:
+\end_layout
+
+\begin_layout LyX-Code
+    ^ SyntaxError: invalid syntax
+\end_layout
+
+\begin_layout LyX-Code
+(语法错误: 无效的语法)
+\end_layout
+
+\begin_layout Definition
+(while循环) 可以使用if语句进行条件判断, 一般的, 有如下的形式:
+\end_layout
+
+\begin_layout Definition
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout LyX-Code
+while 表达式:
+\end_layout
+
+\begin_layout LyX-Code
+    过程1
+\end_layout
+
+\begin_layout LyX-Code
+else: # 可以有, 也可以没有
+\end_layout
+
+\begin_layout LyX-Code
+    过程2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+语义: 这样反复测试表达式, 如果为真, 则执行
+\series bold
+过程1
+\series default
+；如果表达式为假(这可能是第一次测试) , 则执行else子句的
+\series bold
+过程2
+\series default
+(如果存在的话) , 然后循环终止.
+ 在
+\series bold
+过程1
+\series default
+中执行的
+\series bold
+break
+\series default
+语句会终止循环, 且不执行else子句的
+\series bold
+过程2
+\series default
+.
+ 在
+\series bold
+过程1
+\series default
+中执行的continue语句跳过
+\series bold
+过程1
+\series default
+的continue语句之后的其余部分, 然后立刻回到测试表达式语句.
+ 
+\end_layout
+
+\begin_layout Standard
+有了循环, 我们就可以解读这个东西:
+\end_layout
+
+\begin_layout LyX-Code
+def InsertionSort(A):
+\end_layout
+
+\begin_layout LyX-Code
+    j=1
+\end_layout
+
+\begin_layout LyX-Code
+    while(j<len(A)):
+\end_layout
+
+\begin_layout LyX-Code
+        key = A[j]
+\end_layout
+
+\begin_layout LyX-Code
+        i = j - 1
+\end_layout
+
+\begin_layout LyX-Code
+        while (i >=0) and (A[i] > key):
+\end_layout
+
+\begin_layout LyX-Code
+            A[i+1] = A[i]
+\end_layout
+
+\begin_layout LyX-Code
+            i = i - 1
+\end_layout
+
+\begin_layout LyX-Code
+        A[i+1] = key
+\end_layout
+
+\begin_layout LyX-Code
+        j=j+1
+\end_layout
+
+\begin_layout LyX-Code
+    return A
+\end_layout
+
+\begin_layout LyX-Code
+InsertionSort([1,1,4,5,1,4])
+\end_layout
+
+\begin_layout Standard
+这个做的事情就和排序成绩类似.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+程序的终止
+\end_layout
+
+\begin_layout Definition
+Python程序的终止可能包含有如下的情况:
+\end_layout
+
+\begin_layout Definition
+(1) 执行到了最后一条语句, 且没有下一条语句可以执行;
+\end_layout
+
+\begin_layout Definition
+(2) 程序有没有被处理的异常;
+\end_layout
+
+\begin_layout Definition
+(3) 通过语句exit(0)退出.
+ 
+\end_layout
+
+\begin_layout Standard
+因此, 我们就得到了最小的可以(理论上)执行任何与人类计算能力等价的模型
+\end_layout
+
+\begin_layout Standard
+这些内容看上去十分的平凡, 但是通过一些过程的复合, 我们就能看到更多的魔力.
+\end_layout
+
+\begin_layout Subsection
+函数: 整合相似过程
+\end_layout
+
+\begin_layout Standard
+我们可以把相似的过程写在一起, 为了简洁和可维护.
+\end_layout
+
+\begin_layout Standard
+下面, 可以阅读https://docs.python.org/zh-cn/3/tutorial/controlflow.html#defining-function
+s 的4.7, 4.8.1-4.8.6节的内容, 把所有代码是怎么执行的放在pythontutor里面模拟着看一遍.
+ 文字可以不用看, 但是代码一定要执行一遍.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+递归(Recursion)过程和栈帧(Stack Frame)
+\end_layout
+
+\begin_layout Standard
+观察下面的代码, 可能难以想象是怎么执行的:
+\end_layout
+
+\begin_layout LyX-Code
+def fib(n):
+\end_layout
+
+\begin_layout LyX-Code
+    if(n==1):
+\end_layout
+
+\begin_layout LyX-Code
+         return 1
+\end_layout
+
+\begin_layout LyX-Code
+    if(n==2):
+\end_layout
+
+\begin_layout LyX-Code
+         return 1
+\end_layout
+
+\begin_layout LyX-Code
+    else:
+\end_layout
+
+\begin_layout LyX-Code
+         return fib(n-1) + 
+\backslash
+
+\end_layout
+
+\begin_layout LyX-Code
+                fib(n-2)
+\end_layout
+
+\begin_layout LyX-Code
+fib(5)
+\end_layout
+
+\begin_layout Standard
+像这样用自己调用自己的函数调用通常叫做递归(recursion).
+ 一个关于递归的有趣定义是:
+\end_layout
+
+\begin_layout Quote
+递归的定义: 如果你没有理解什么是递归, 那么参见递归.
+ 
+\end_layout
+
+\begin_layout Standard
+事实上, 我们可以把它放在pythontutor里面执行一下, 发现如下的规则:
+\end_layout
+
+\begin_layout Itemize
+原来的程序就像是一张纸, 上面标注着当前执行到的行数;
+\end_layout
+
+\begin_layout Itemize
+每次函数调用的时候, 就会在一张新的纸片上抄下来调用的内容, 并且代换传进来的参数;
+\end_layout
+
+\begin_layout Itemize
+把这个内容放在原来纸片上面, 然后从第一行开始执行;
+\end_layout
+
+\begin_layout Itemize
+执行完的纸片扔掉.
+\end_layout
+
+\begin_layout Standard
+看上去就像是:
+\end_layout
+
+\begin_layout Itemize
+你在晚自习上看课外书(执行原来的函数) 
+\end_layout
+
+\begin_layout Itemize
+老师来了, 让你写作业(函数调用) 
+\end_layout
+
+\begin_layout Itemize
+你把作业叠放在课外书上, 开始做作业 (执行函数)
+\end_layout
+
+\begin_layout Itemize
+做完作业之后你把作业扔了继续看课外书(回到原来的函数)
+\end_layout
+
+\begin_layout Standard
+像羽毛球球桶那样, 只能从一个方向插入, 弹出的内容的东西叫做``
+\series bold
+栈(stack)
+\series default
+'', 由于这些内容通常都是一些数据, 由此我们用术语
+\series bold
+数据结构
+\series default
+(data structure)来描述.
+ 能被取出来的那个元素是
+\series bold
+栈顶(top of the stack)
+\series default
+, 在这个可视化工具里面用蓝色标示出来了.
+ 
+\end_layout
+
+\begin_layout Standard
+Traceback就是出错之后, Python顺着栈一层一层找的结果.
+ Trace是跟踪, back是返回, 意思可能就是说堆栈的
+\series bold
+回溯(traceback)
+\series default
+.
+\end_layout
+
+\end_body
+\end_document

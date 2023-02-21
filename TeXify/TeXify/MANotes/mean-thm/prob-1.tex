@@ -1,0 +1,607 @@
+\subsection{习题}
+
+\ti{构造辅助函数证明}
+
+%%%%%
+
+\begin{prob}
+
+    (断点效应) 设函数  $f(x), \varphi(x)$  二阶可导, 当  $x>0$  时  $f^{\prime \prime}(x)>\varphi^{\prime \prime}(x)$ , 且  $f(0)=\varphi(0) ,  f^{\prime}(0)=\varphi^{\prime}(0)$ , 试证：当  $x>0$  时,  $f(x)>\varphi(x)$ .
+
+\end{prob}
+可以视作不等式和函数, 并且构造函数补充证明之. 
+\begin{proof}
+    设  $F(x)=f(x)-\varphi(x)$ . 当  $x>0$  时,
+则
+$$
+F^{\prime}(x)=f^{\prime}(x)-\varphi^{\prime}(x) \text {. }
+$$
+由于
+$$
+F^{\prime \prime}(x)=f^{\prime \prime}(x)-\varphi^{\prime \prime}(x)>0,
+$$
+可知  $F^{\prime}(x)$  当  $x>0$  时单调增加.
+又由于  $F^{\prime}(0)=f^{\prime}(0)-\varphi^{\prime}(0)=0$ ,
+所以当  $x>0$  时, 有
+$$
+F^{\prime}(x)>F^{\prime}(0)=0 .
+$$
+因此,  $F(x)$  在  $x>0$  时也单调增加. 由于  $F(0)=f(0)-\varphi(0)=0$ , 故当  $x>0$  时有  $F(x)>F(0)=0$ , 即
+$$
+f(x)>\varphi(x) .
+$$
+\end{proof}
+
+
+\ti{作为恒等式代换/沟通}
+
+\begin{prob}%P224 22 
+    设$f(x)$为$[0,+ \infty)$上的凸函数,$f(0)=0$,证明:$f(x)/x$为$(0,+\infty)$上的单调递增函数.     
+\end{prob} 
+
+\begin{proof}
+    $$\left(\frac{f(x)}{x}\right)^{\prime}=\frac{f^{\prime}(x) x-f(x)}{x^{2}}=\frac{f^{\prime}(x) x-[f(x)-f(0)]}{x^{2}}   (x>0)$$
+      由 Lagrange 中值定理得  $f(x)-f(0)=f^{\prime}(\xi) x, 0<\xi<x$ , 根据  $f^{\prime}(x)$  的单调性可证得.
+\end{proof}
+
+
+\ti{一些无穷区间上的问题}
+
+下面考虑几个涉及无穷区间的问题. 
+
+有一种做法是构造映射函数把它塞到一个有界区间里面, 不会改变其连续性. 
+
+\begin{prob}
+    (无界区间上的 Rolle 定理) 设  $f$  于  $[a,+\infty)$  上连续, 于  $(a,+\infty)$  上可微, 且  $f(+\infty)=   f(a)$ , 证明: 存在  $\xi \in(a,+\infty)$ , 使得  $f^{\prime}(\xi)=0$ .
+\end{prob}
+
+\begin{proof}
+    我们可以仿照证明$\R$是和$[0,1]$的基数相同的思路, 对区间做合理的映射. 
+
+    不妨设辅助函数: 
+    $$
+    g(t)=\left\{\begin{matrix} 
+        f\left({\displaystyle 1\over t+a-1}\right)&, t\in (0,1] \\  
+        f(a)&, t=0
+      \end{matrix}\right. 
+    $$
+
+    这样, $g(t)$在$[0,1]$上连续, 在$(0,1)$上可导. 并且$g(0)=g(a)=g(1)$, 因此存在$\xi\in(0,1)$, 使得
+    $$
+    f'\left({1\over \xi_0} +a-1\right) {-1\over xi_0}=0.
+    $$
+
+    由于$-1/\xi_0\neq 0$, $f'\left({1\over \xi_0} +a-1\right)=0$. 因此可以取$\xi=1/(\xi_0+a-1)$. 
+
+\end{proof}
+
+
+\begin{remark}
+    把无穷的区间塞到一个$(0,1)$区间是很常见的一种策略. 这也说明了$[0,1]$和$\R$的基数是相同的. 
+\end{remark}
+
+%%%
+或者可以使用极限的定义. 
+
+%%%%%
+
+\begin{prob} 
+
+    设  $f(x)$  在  $(a,+\infty)$  上有有界的导函数, 用 Lagrange 中值定理证明：
+$$
+\lim _{x \rightarrow+\infty} \frac{f(x)}{x \ln x}=0
+$$
+
+\end{prob} 
+
+\begin{proof}
+    设  $\left|f^{\prime}(x)\right|<M, \forall x \in(a,+\infty)$ , 任取定  $x_{0}>a$ , 则对  $\forall x>x_{0}$ , 由 Lagrange 中 值定理.  $\exists \xi_{x} \in\left(x_{0}, x\right)$,s . t.
+
+$$
+f(x)-f\left(x_{0}\right)=f^{\prime}\left(\xi_{x}\right)\left(x-x_{0}\right),
+$$
+因  $\left|f^{\prime}\left(\xi_{x}\right)\right|<M$ , 故对  $\forall x>\max \left\{1, x_{0}\right\}$ , 有
+$$
+\frac{-M\left(x-x_{0}\right)}{x \ln x}<\frac{f(x)-f\left(x_{0}\right)}{x \ln x}<\frac{M\left(x-x_{0}\right)}{x \ln x} .
+$$
+而  $\lim _{x \rightarrow+\infty} \frac{-M\left(x-x_{0}\right)}{x \ln x}=0=\lim _{x \rightarrow+\infty} \frac{M\left(x-x_{0}\right)}{x \ln x}$ . 由两边夹定理知
+$$
+\lim _{x \rightarrow+\infty} \frac{f(x)-f\left(x_{0}\right)}{x \ln x}=0,
+$$
+因此  $\lim _{x \rightarrow+\infty} \frac{f(x)}{x \ln x}=\lim _{x \rightarrow+\infty}\left[\frac{f(x)-f\left(x_{0}\right)}{x \ln x}+\frac{f\left(x_{0}\right)}{x \ln x}\right]=0+0=0$ .
+\end{proof}
+
+
+
+
+%%%
+
+\begin{prob} 
+    已知 $ f(x)$  在  $(-\infty,+\infty)$  内可导, 且  $\lim _{x \rightarrow \infty}$ $f^{\prime}(x)=\mathrm{e}, \lim _{x \rightarrow \infty}\left(\frac{x+c}{x-c}\right)^{x}=\lim _{x \rightarrow \infty}[f(x)-   f(x-1)]$ , 求  $c$  的值.
+    
+\end{prob} 
+
+\begin{sol}
+    由第一个式子, 可以得到: 
+    $$
+    \lim_{x \rightarrow \infty}\left(\frac{x+c}{x-c}\right)^{x} \stackrel{1^{\infty}}{=} \lim _{x \rightarrow \infty} e^{\frac{c}{x-c} \cdot x}=e^{2 c}
+    $$ 
+
+    由第二个式子, 可以得到: 
+    $$
+    \lim_{x \rightarrow \infty}(\underbrace{f(x)-f(x-1)}_{\text{选择}[x-1,x]\subseteq \R}) \frac{{{\exists \zeta \in(x-1, x)}\over {~}}}{\text { s.t. }} f^{\prime}(\xi) \cdot 1 .=\lim _{\xi \rightarrow \infty} f^{\prime \prime}(\xi)=e
+    $$
+    
+    因此得到$c=1/2$. 
+ 
+\end{sol} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+同样的, 由如下结论: 
+$$
+\text {若 } f \text { 在 }[a,+\infty) \text { 上可微, 且 } \lim _{x \rightarrow+\infty} f^{\prime}(x)=A \text {, 那么 } \lim _{x \rightarrow+\infty}(f(x+1)-f(x)) =A\text {. }
+$$
+
+\ti{多次应用定理得出结论}
+
+\begin{prob}
+    设函数  $f(x)$ : (1)在闭区间  $\left[x_{0}, x_{n}\right]$  上有定义且有  $n-1$  阶的连续导数  $f^{(n-1)}(x)$ ;(2)  在区间  $\left(x_{0}, x_{n}\right)$  内有  $n$  阶导数  $f^{(n)}(x)$ ;(3)  下列等式成立:
+    $$
+    f\left(x_{0}\right)=f\left(x_{1}\right)=\cdots=f\left(x_{n}\right) \quad\left(x_{0}<x_{1}<\cdots<x_{n}\right) .
+    $$
+    证明: 在区间  $\left(x_{0}, x_{n}\right)$  内最少存在一点  $\xi$ , 使
+    $$
+    f^{(n)}(\xi)=0
+    $$
+\end{prob}
+
+
+\begin{roadmap}
+    这道题一共需要使用$(n-1)+(n-2)+\cdots+1$次Rolle中值定理即可证明. 
+\end{roadmap}
+
+%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\ti{应用有限增量的形式反解极限}
+
+
+%%%%%%%%%%%%%%%
+
+\begin{prob}
+    证明: 若  $x \geqslant 0$ , 则
+   $$
+   \sqrt{x+1}-\sqrt{x}=\frac{1}{2 \sqrt{x+\theta(x)}},
+   $$
+   其中  $\frac{1}{4} \leq \theta(x) \leq \frac{1}{2}$ , 并且  $\lim _{x \rightarrow 0} \theta(x)=\frac{1}{4}, \lim _{x \rightarrow+\infty} \theta(x)=\frac{1}{2}$ .
+\end{prob}
+\begin{sol}
+    
+\end{sol}
+
+%%%%%%%%%%%%
+
+\begin{prob}
+    已知$f(x)$具有一阶导数, $f(0)=0, f'(0)=1$, 又知道$f''(0)=2$, 求$\lim_{x\to 0} {f(x)-x\over x^2}.$
+\end{prob}
+
+尝试:
+\begin{align*}
+    \lim _{x \rightarrow 0} \frac{f(x)-x}{x^{2}} &=\lim _{x \rightarrow 0} \frac{(f(x)-x)-(f(0)-0)}{(x-0)} \frac{1}{x} \\
+    &=\lim _{x \rightarrow 0} \frac{f^{\prime}(\xi)-1}{x} \\
+    &=\lim _{x \rightarrow 0} \frac{\left(f^{\prime}(\xi)-1\right)-\left(f^{\prime}(1)-1\right)}{x^{2}}\neq 2
+\end{align*}
+
+\begin{sol}
+    考虑对$f(x)$在$x=0$处的Taylor展开, 带Peano余项. 因此我们就有: 
+    $$
+    f(x)=f(0)+f'(0)x+f''(0)x^2/2! + o(x^2)
+    $$
+    带入原式, 我们有: 
+    \begin{align*}
+        \lim_{x\to 0} {f(0)+f'(0)x+{f''(0)x^2\over 2} -x \over x^2}&=\lim_{x\to 0} {{f''(0)x^2\over 2}  \over x^2}\\
+        &={f''(0)\over 2} = 1. 
+    \end{align*}
+\end{sol}
+
+%%%
+
+\begin{prob}\label{lem:a0}%https://math.stackexchange.com/questions/2175922
+    函数$f$在$[a, a+h]$上连续, 在$(a, a+h)$上可导, 并且$f''(a)\neq 0$, 根据Lagrange定理, 有
+    $$
+    f(a+h)-f(a)=hf'(a+\theta x), 0\leq \theta \leq 1
+    $$
+    求证$\lim_{h\to 0} \theta = 1/2$.
+
+\end{prob}
+
+\begin{proof}
+    把$f(x)$在$x=a$处泰勒展开, 我们有:
+    $$
+    f(x)=f(a) + f'(a)(x-a) + {f''(a)\over 2!}(x-a)^2+o((x-a)^2)
+    $$
+    整理, 并和条件$f(a+h)-f(a)=hf'(a+\theta x), 0\leq \theta \leq 1$比较, 有: 
+    $$
+    \theta {f'(a+\theta h)-f'(a) \over \theta h} = {f''(a)\over 2}+o(1(h))
+    $$
+    两边同时取关于$h\to 0$的极限, 有: 
+    $$
+    \theta f''(a) = {f''(a)\over 2}
+    $$
+    由于$f''(a)\neq 0$, $\theta = 1/2$. 
+\end{proof}
+
+%%%%%
+
+\begin{prob}\label{lem:a1}%习题集(二)老版本P38
+    设$f(x)$一阶可导, 且$f''(x_0)$存在, 证明
+    $$
+    \lim_{h=0}{f(x_0+2h)-2f(x_0+h)+f(x_0)\over h^2}=f''(x_0)
+    $$
+\end{prob}
+
+\begin{proof}
+    用带Peano余项的泰勒公式, 得
+$$
+\begin{aligned}
+f\left(x_{0}+\right.&2 h)-2 f\left(x_{0}+h\right)+f\left(x_{0}\right) \\
+=& {\left[f\left(x_{0}\right)+f^{\prime}\left(x_{0}\right) \cdot 2 h+\frac{f^{\prime \prime}\left(x_{0}\right)}{2 !}(2 h)^{2}+o\left(h^{2}\right)\right] } \\
+&-2\left[f\left(x_{0}\right)+f^{\prime}\left(x_{0}\right) \cdot h+\frac{f^{\prime \prime}\left(x_{0}\right)}{2 !} h^{2}+o\left(h^{2}\right)\right]+f\left(x_{0}\right) \\
+=& f^{\prime \prime}\left(x_{0}\right) h^{2}+o\left(h^{2}\right) . \\
+\text { 由此得 } \quad & \lim _{h \rightarrow 0} \frac{f\left(x_{0}+2 h\right)-2 f\left(x_{0}+h\right)+f\left(x_{0}\right)}{h^{2}}=f^{\prime \prime}\left(x_{0}\right) .
+\end{aligned}
+$$
+\end{proof}
+
+%%%%%%%%%
+
+\begin{prob}% 教材P201 B3
+设$f(x)$在$a$点的邻域内有连续的三阶导数, $f(a+h)=f(a)+f'(a+\theta h)h$, $0<\theta <1$, $f''(a)=0, f'''(a) \neq 0$, 证明$\lim_{h=0}=\sqrt{3}/3$.
+\end{prob}
+
+\begin{proof}
+    可以使用L' Hospital法则. 
+    因此, 把$f(x)$依照Taylor公式展开到三次, 有
+    $$
+    f(x)=f(a) + f'(a)(x-a) + {f''(a)\over 2!}(x-a)^2+{f'''(a)\over 3!}(x-a)^3+o((x-a)^3)
+    $$
+    下面尝试整理: 带入$h=0$, 知$f'(a)=0$, 然后和条件的$f(a+h)-f(a)=hf'(a+\theta x), 0\leq \theta \leq 1$对比, 我们有: 
+    $$
+    {f'''(a)\over 6}+o(1(h)) = {f'(a+2\theta h)-f'(a) \over 2\theta ^2 h^2}\theta ^2
+    $$
+
+    类似使用L'Hospital法则, 两边同时对$h\to 0$取得极限, 有
+    $$
+    {f'''(a)\over 6} = {2 \theta^2 f'''(a)}
+    $$
+    由于$f'''(a)\neq 0$得$\theta={\sqrt{3} \over 3}$. 
+
+\end{proof}
+
+%%%%%%%%%%
+
+\begin{prob}
+    设函数$f(x)$在$[0,1]$上有二阶导数, $|f(x)|\leq a, |f''(x)|\leq b, $其中$a, b$为非零常数, $c$为$(0,1)$内的任意一点, 证明: $|f'(c)|\leq 2a+{b\over 2}$.
+\end{prob}
+
+\begin{proof}
+    注意到$c$的任意性, 因此考虑再$c$处按照Laggrange余项展开的Taylor公式. 也就
+    $$
+    f(x)=f(c)+f'(c)(x-c)+{f''(\xi)(x-c)^2 \over 2}
+    $$
+    带入$x=0,$有
+    $$
+    f(0)=f(c)+f'(c)(-c)+{f''(\xi)c^2 \over 2} 
+    $$
+    带入$x=1,$有
+    $$
+    f(1)=f(c)+f'(c)(1-c)+{f''(\xi)(1-c)^2 \over 2} 
+    $$
+
+    用$f(1)-f(0)$有
+    \begin{align*}
+        f'(c) &= {f''(\xi_1)\over 2}c^2-(1-c)^2{f''(\xi_2) \over 2}+(f(0)-f(1))\\
+        |f'(c)| &= |{f''(\xi_1)\over 2}c^2-(1-c)^2{f''(\xi_2) \over 2}+(f(0)-f(1))|\\
+        &=\x|{bc^2\over 2} -bc+2a+1\y|\\
+        &\leq |{b\over 2}+2a| \\&= {b\over 2}+2a
+    \end{align*}
+    
+\end{proof}
+
+%%%%%
+
+\ti{利用Taylor定理在特等地方展开求解}
+
+%%%%%
+\begin{prob}
+    设$f''(x)>0, \lambda_1>0, \lambda_2>0$, 且$\lambda_1+\lambda_2=1$, 证明: 对任意的$x_1, x_2$, 都有
+    $$
+    f(\lambda_1x_1+\lambda_2x_2)\leq \lambda_1f(x_1)+\lambda_2f(x_2).
+    $$
+\end{prob}
+
+\begin{proof}
+    考虑对$f(x)$在$x=(x_1+x_2)/2$处进行二阶Taylor展开, 带Peano余项. 有
+    $$
+    f(x)=f\left({x_1+x_2\over 2}\right) +f'\left({x_1+x_2\over 2}\right){\left(x-{x_1+x_2\over 2}\right)}+f''\left({x_1+x_2\over 2}\right){\left(x-{x_1+x_2\over 2}\right)^2}+o((x-n)^2)
+    $$
+
+    带入$x_1$, 就有: 
+    $$
+    f(x)=f\left({x_1+x_2\over 2}\right) +f'\left({x_1+x_2\over 2}\right){\left({x_1-x_2\over 2}\right)}+f''\left({x_1+x_2\over 2}\right){\left({x_1-x_2\over 2}\right)^2}+o((x-n)^2)
+    $$
+
+    带入$x_2$, 就有
+    $$
+    f(x)=f\left({x_1+x_2\over 2}\right) +f'\left({x_1+x_2\over 2}\right){\left({x_2-x_1\over 2}\right)}+f''\left({x_1+x_2\over 2}\right){\left({x_2-x_1\over 2}\right)^2}+o((x-n)^2)
+    $$
+
+    将这两个式子第一个式子乘上$\lambda_1$, 第二个式子乘上$\lambda_2$, 并且相加, 我们有:
+
+    $$
+    \begin{aligned}
+        f(x)&=f\left({x_1+x_2\over 2}\right) +f'\left({x_1+x_2\over 2}\right){\left((\lambda_1-\lambda_2){x_1-x_2\over 2}\right)}\\&+f''\left({x_1+x_2\over 2}\right)+{1\over 2}{(\lambda_1-\lambda_2)\left({x_1-x_2\over 2}\right)^2}+o((x-n)^2)
+    \end{aligned}
+    $$
+
+    
+    这时, 在对$x=\lambda_1x_1+\lambda_2x_2$的展开. 我们有
+    $$
+    \begin{aligned}
+        f(x)&=f\left({x_1+x_2\over 2}\right) +f'\left({x_1+x_2\over 2}\right){\left((2\lambda_1 -1)x_1+(2\lambda_2 -1)\over 2\right)}\\&+{1\over 2}f''\left({x_1+x_2\over 2}\right){\left((2\lambda_1 -1)x_1+(2\lambda_2 -1)\over 2\right)^2}+o((x-n)^2)
+    \end{aligned}
+        $$
+
+    然后对应项相等即可证明. 
+
+\end{proof}
+
+
+%%%%%
+\begin{prob}% P189 4(1)(2)
+    设$f(x)$在区间$(a,+\infty)$上可导, 试用L'Hospital法则或$\epsilon-\delta$语言证明:
+
+    若$\lim_{x\to +\infty}f'(x)=0$, 则$\lim_{x\to +\infty}f'(x)/x=0$.
+
+    
+\end{prob}
+
+\begin{proof}
+    \textbf{方法I.($\epsilon-\delta$语言)} 由题意, $\forall \epsilon >0$, $\exists X, x>X$的时候, 总是有$|f'(x)|<\epsilon$.
+    也就是
+    $$
+    \left|{f(x)-f(x_0)\over x-x_0}\right|= |f'(\xi)|<{\epsilon \over 2}
+    $$
+
+    要证明$|f(x)/x-0|$, 考虑添加项数. 于是有:
+    $$
+    \begin{aligned}
+        \left|{f(x)\over x }-0\right| &= |{x-x_0\over x} {f(x)-f(x_0)\over x-0}+{f(x_0)\over x}|\\ 
+        &< \left|{f(x)-f(x_0) \over x-x_0}\right| + \left|f(x_0)\over x\right|\\ 
+        &<{\epsilon/2}+\left|f(x_0)\over x\right|
+    \end{aligned}
+    $$
+
+    只需要证明$\left|f(x_0)\over x\right|<\epsilon/2$.  发现$\exists X_2$, 当$x>X_2$的时候, $f(x_0)< |1/x|$, $1/x< \epsilon/2f(x_0)$, 意味着$|f(x_0)/\epsilon x|<\epsilon /2$. 
+
+    因此原命题得证. 
+
+    \textbf{方法II(中值定理).} 由题可知, 
+    $$
+    \lim_{x\to +\infty} f'(x)=0
+    $$
+    并且由Lagrange中值定理, $f(x)=f(x_0)+f'(\xi)(x-x_0)$. 同时除以$x$, 我们有
+    $$
+    {f(x)\over x}={f(x_0)\over x}+{f'(\xi)(x-x_0)\over x}
+    $$
+    两端同时取极限: 
+    $$
+    {f'(x)\over x} = 0
+    $$
+    因为当$x$趋近于无穷的时候, $f'(x)=0$. 
+\end{proof}
+
+
+
+%%%%%
+
+\begin{prob} % JM 1240
+    证明: 若具实系数  $a_{k}(k=0,1, \cdots, n)$  的多项式
+    $$
+    P_{n}(x)=a_{0} x^{n}+a_{1} x^{n-1}+\cdots+a_{n} \quad\left(a_{0} \neq 0\right)
+    $$
+    之一切根为实数, 则其逐次的导数  $P_{n}^{\prime}(x), P_{n}^{\prime \prime}(x), \cdots, P_{n}^{(n-1)}(x)$  也仅有实根.
+\end{prob} 
+
+
+
+\begin{proof}
+    由于多项式的唯一分解定理, 我们不妨设该多项式具有如下的形式: 
+    $$
+    P_n(x) = (x-x_0)^{m_1}(x-x_1)^{m_2}\cdots (x-x_p)^{m_p}
+    $$
+    其中, $m_1+m_2+\cdots+m_p=n$
+
+    考虑使用Rolle定理, 我们有发现存在$\xi_i, \xi_i\in (m_i, m_{i+1})(i=1,2,\cdots , p-1)$
+
+    并且这个多项式$P'_n(x)$的根恰有$(m_1-1)+(m_2-1)+\cdots + (m_p-1)+(p-1)=m_1+m_2+\cdots+m_p-1=n-1$个, 由于鸽笼原理, 我们知道多项式的一阶导的根也全为实根. 
+
+    反复运用这一结果, 我们同样可以说明$P_n^{(n-1)}(x)$也有实根. 
+
+\end{proof}
+
+\ti{使用Taylor展开的多项式求极限}
+%%%%%
+
+\begin{prob}  % Zong XT 5
+    求极限: 
+    $$
+    \lim_{n\to +\infty} \cos{a\over n\sqrt n}\cos{2a\over n\sqrt n}\cdots \cos{na\over n\sqrt n}
+    $$
+\end{prob} 
+
+这个问题中出现了多个因子连续相乘, 因此可能会思考使用$\ln$这一个操作, 化乘法为加法. 
+
+\begin{sol} 
+由于Taylor展开, 有
+$$
+\cos x = 1-{x^2\over 2!}+{x^4\over 4!}+o(x^4)
+$$ 
+且
+$$
+\ln (1+x) x-{x^2\over 2}+o(x^3)
+$$
+
+先考虑对一项进行操作: 
+
+$$
+\begin{aligned}
+    \ln \cos\x({ka\over n\sqrt{n}}\y)&=\ln\x(1-{1\over2}{k^2\alpha^2\over n^3}+o\x(1\over n^3\y)\y)\\
+    &=-{1\over 2}{k^2\alpha^2\over n^3}+o\x(1\over n^3\y)
+\end{aligned}
+$$
+
+那么多项相加就是
+
+$$
+\begin{aligned} % Zong XT 5
+    \sum_{k=1}^n\ln \cos\x({ka\over n\sqrt{n}}\y)&={-a^2\over 2n^3}\sum_{k=1}^n{k^2}+o\x(1\over n^2\y)\\ 
+    &={-a^2\over 2n^3}{n(n+1)(2n+1)\over 6}+o\x(1\over n^2\y)
+\end{aligned}
+$$
+
+因此, 当$n\to \infty$的时候, 上述式子的极限是$-a^2/6$. 
+
+因此答案是$e^{-a^2/6}$.
+
+\end{sol} 
+
+%%%%%
+
+\begin{prob} % Zong XT 5
+    设  $f(x)$  满足  $f^{\prime \prime}(x)+f^{\prime}(x) g(x)-f(x)=0$ , 其中  $g(x)$  为任一函数. 证明: 若  $f\left(x_{0}\right)=f\left(x_{1}\right)=0 \quad\left(x_{0}<x_{1}\right)$ , 则  $f$  在  $\left[x_{0}, x_{1}\right]$  上恒等于 $0$ .
+\end{prob} 
+
+\begin{proof}
+    假设函数不恒等于$0$, 这就意味着, 函数$f(x)$在$[x_0, x_1]$区间可以取到$M$和$m$. 不妨设$M$是极大值, 那么由Fermat引理有$f'(\xi)=0$. 又因为$f^{\prime \prime}(x)+f^{\prime}(x) g(x)-f(x)=0$, $f''(\xi)=f(\xi)=M>0$, 意味着这是一个极小值. 矛盾. 因此$M=0$. 同理可证$m=0$. 因此可以证明出在这个区间上恒为0. 
+\end{proof}
+
+%%%%%
+
+\begin{prob} % Xitizong 5
+    $$\text { 设 } p>0, q>0 \text {, 且 } p+q=1 \text {, 求极限 } \lim _{n \rightarrow-\infty}\left(p \mathrm{e}^{\frac{qt}{\sqrt{n p q}}}+q \mathrm{e}^{-\frac{pt}{\sqrt{npq}}}\right) \text {. }$$ 
+\end{prob} 
+
+\begin{sol}%Xiti 5
+    由于Taylor展开, 
+    $$
+    e^x=1+{x}+{x^2\over 2^2}+o\x(1\over x^2\y)
+    $$
+    带入, 对应需要展开的内容, 有
+    $$
+    \begin{aligned}
+        e^{\frac{qt}{\sqrt{n p q}}}& =1+{\frac{qt}{\sqrt{n p q}}}+{\frac{qt}{\sqrt{n p q}}^2\over 2!}+o\x(1\over \frac{qt}{\sqrt{n p q}}^2\y)\\
+        e^{-\frac{pt}{\sqrt{npq}}}& =1+{-\frac{pt}{\sqrt{npq}}}+{-\frac{pt}{\sqrt{npq}}^2\over 2!}+o\x(1\over -\frac{pt}{\sqrt{npq}}^2\y)
+    \end{aligned}
+    $$
+
+    化简, 我们有原始极限为$1$. 
+\end{sol}
+
+%%%
+
+\begin{prob} %JMN 1266
+
+    证明: 若函数  $f(x)$:(1)  在闭区间  $[a, b]$  上有二阶导数  $f^{\prime \prime}(x)$ ;(2) $f^{\prime}(a)=   f^{\prime}(b)=0$ , 则在区间  $(a, b)$  内至少存在一点  $c$ , 使得
+$$
+\left|f^{\prime \prime}(c)\right| \geqslant \frac{4}{(b-a)^{2}}|f(b)-f(a)| .
+$$
+
+\end{prob} 
+
+\begin{proof}
+    按照Taylor展开, 带入中点值: 
+    $$
+    \begin{array}{l}
+        f(x)=f(a)+f^{\prime}(a)(x-a)+\frac{f^{\prime \prime}(\xi)}{2}(x-a)^{2}, \xi_{1} \in(a, x) \\
+        f\left(\frac{a+b}{2}\right)=f(a)+f^{\prime}(a)\left(\frac{b-a}{2}\right)+\frac{f^{\prime}\left(\xi_{1}\right)}{2}\left(\frac{b-a}{2}\right)^{2} \ldots \\
+        f(x)=f(b)+f^{\prime}(b)(x-b)+\frac{f^{\prime \prime}\left(\xi_{2}\right)}{2}(x-b)^{2}, \xi_{2} \in(x, b) . \\
+        f\left(\frac{a+b}{2}\right)=f(b)+f^{\prime}(b)\left(\frac{a-b}{2}\right)+\frac{f^{\prime \prime}\left(\xi_{2}\right)}{2}\left(\frac{a-b}{2}\right)^{2} +\cdots
+        \end{array}
+    $$
+    因为两个中点值相等, 也就是
+    $$
+    f(b)-f(a)+\frac{f^{\prime \prime}\left(\xi_{2}\right)-f^{\prime \prime}\left(\xi_{1}\right)}{2} \cdot \frac{(a-b)^{2}}{4}=0 .
+    $$
+    运用不等式条件, 有
+    $$
+    \begin{array}{l}
+        \frac{4\lfloor f(b)-f(a) \mid}{(b-a)^{2}} \leqslant \frac{\left|f^{\prime \prime}\left(\xi_{2}\right)-f^{\prime \prime}\left(\xi_{1}\right)\right|}{2} \leqslant \frac{\left|f^{\prime}\left(\xi_{2}\right)\right|+\left|f^{\prime \prime}\left(\xi_{1}\right)\right|}{2} \text {. } \\
+        \leqslant f^{\prime}(\xi)(\text{取} f''(\xi)=\max(f''(\xi_1), f''(\xi_2))) \\
+    \end{array}
+    $$
+\end{proof}
+
+%%%%%
+
+\begin{prob} 
+
+    
+    证明: 若  $x \geqslant 0$ , 则
+$$
+\sqrt{x+1}-\sqrt{x}=\frac{1}{2 \sqrt{x+\theta(x)}} \text {, }
+$$
+其中  $\frac{1}{4} \leqslant \theta(x) \leqslant \frac{1}{2}$ , 并且  $\lim _{x \rightarrow 0} \theta(x)=\frac{1}{4}, \lim _{x \rightarrow+\infty} \theta(x)=\frac{1}{2}$ .
+    
+
+\end{prob} 
+
+\begin{proof} 
+ 
+    令$f(x)=\sqrt{x}$, 那么取得$a, b \in \dom(f)$. 根据Lagrange中值定理, 有
+    $$
+    \sqrt{x+1}-\sqrt{x} = {1\over {2 \sqrt{x+\theta (x)}}}
+    $$
+    注意到$0 <\theta (x) < 1$, 反解出$\theta$, 有
+    $$
+    \theta (x) = {2\sqrt{x^2+x} -2x+1 \over 4}, 
+    $$
+    容易得到结论. 
+ 
+\end{proof} 
+%%%%%
+
+\ti{函数凹凸性的证明}
+
+\begin{prob} 
+
+    证明:区间$I$上的两个单调递增的非负凸函数$f ,g$之积仍为凸函数.
+
+\end{prob} 
+
+\begin{proof}
+    考虑使用等价定义: 
+    设  $f, g$  在  $I$  上严格单调增加 (单调减少类似可证),  $f^{\prime}(x)   >0, g^{\prime}(x)>0$ . 并有  $f(x)>0, g(x)>0$ . 则  $\forall x_{1}, x_{2} \in I$ , 不妨设  $x_{2}>x_{1}$ , 有  $f\left(x_{2}\right) \geqslant f\left(x_{1}\right)+f^{\prime}\left(x_{1}\right)\left(x_{2}-x_{1}\right)$ ,
+$$
+g\left(x_{2}\right) \geqslant g\left(x_{1}\right)+g^{\prime}\left(x_{1}\right)\left(x_{2}-x_{1}\right) .
+$$
+
+因为  $(f \cdot g)^{\prime}=f^{\prime} \cdot g+f \cdot g^{\prime}$ , 所以
+
+$$
+\begin{aligned}
+f\left(x_{2}\right) g\left(x_{2}\right) \geqslant & f\left(x_{1}\right) g\left(x_{1}\right)+f^{\prime}\left(x_{1}\right) g\left(x_{1}\right)\left(x_{2}-x_{1}\right) \\
++& f\left(x_{1}\right) g^{\prime}\left(x_{1}\right)\left(x_{2}-x_{1}\right)+f^{\prime}\left(x_{1}\right) g^{\prime}\left(x_{1}\right)\left(x_{2}-x_{1}\right)^{2} \\
+\geqslant & f\left(x_{1}\right) g\left(x_{1}\right) \\
+&+\left[f^{\prime}\left(x_{1}\right) g\left(x_{1}\right)+f\left(x_{1}\right) g^{\prime}\left(x_{1}\right)\right]\left(x_{2}-x_{1}\right) .
+\end{aligned}
+$$
+
+所以, 按等价定义知,  $f \cdot g$  是凸函数.
+\end{proof}
+
+%%%%%
+
+

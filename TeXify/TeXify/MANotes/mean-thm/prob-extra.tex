@@ -1,0 +1,25 @@
+\ti{未分类}
+
+%%%
+
+这种使用两边夹的手段其实也有很多的定义的. 
+
+\begin{prob} % 教材P223打错了
+    设$f(x)$在$[a, +\infty]$上可导, 且$\lim_{x\to \infty}f(x)/x=0$, 证明: $\underline{\lim_{x\to \infty}} |f'(x)=0|$, 并构造函数, 使得 $\overline{\lim_{x\to \infty}} |f'(x)=0|$.
+
+\end{prob} 
+
+\begin{proof}
+取  $\left\{x_{n}\right\}$ , 使  $a<x_{1}<2 x_{1}<x_{2}<2 x_{2}<\cdots<x_{n}<2 x_{n}<x_{n+1}<\cdots$ , 且  $\lim _{x \rightarrow+\infty} x_{n}=   +\infty$ 
+因为  $\lim _{x \rightarrow+\infty} \frac{f(x)}{x}=0$ , 故对  $\forall \varepsilon>0$, $\exists A>0$ , 当  $x>A$  时有  $\left|\frac{f(x)}{x}\right|<\frac{\varepsilon}{4}$ , 固定  $A$, $\exists N \in \mathrm{N}$ , 当  $n>N$  时,  $x_{n}>A$ . 又  $f$  在  $(a,+\infty)$  中可导, 由 Lagrange 中值定理,  $\exists \xi_{n}(x) \in\left(x_{n}, 2 x_{n}\right)$ , s. t.
+$$
+\left|f^{\prime}\left(\xi_{n}(x)\right)\right|=\left|\frac{f\left(2 x_{n}\right)-f\left(x_{n}\right)}{x_{n}}\right| \leqslant 2\left|\frac{f\left(2 x_{n}\right)}{2 x_{n}}\right|+\left|\frac{f\left(x_{n}\right)}{x_{n}}\right|<2 \cdot \frac{\varepsilon}{4}+\frac{\varepsilon}{4}<\varepsilon .
+$$
+所以  $\lim _{n \rightarrow+\infty}\left|f^{\prime}\left(\xi_{n}(x)\right)\right|=0$ , 从而
+$$
+\lim _{x \rightarrow+\infty}\left|f^{\prime}(x)\right|=0
+$$
+构造的函数是$\sin x$. 
+\end{proof}
+
+%%%
