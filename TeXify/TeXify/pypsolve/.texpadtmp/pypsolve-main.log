@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.1.19)  21 FEB 2023 22:42
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.1.19)  22 FEB 2023 00:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1283,16 +1283,55 @@ Package mdframed Info: mdframed detected package amsthm
 
 LaTeX Font Warning: Command \Large invalid in math mode on input line 4.
 
-Package mdframed Info: mdframed works in twoside mode on input line 18.
+Package mdframed Info: mdframed works in twoside mode on input line 26.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 18.
+(mdframed)              on input line 26.
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 18.
+LaTeX Font Warning: Command \Large invalid in math mode on input line 26.
+
+[19]
+Package mdframed Info: mdframed works in twoside mode on input line 42.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 42.
+
+
+LaTeX Font Warning: Command \Large invalid in math mode on input line 42.
+
+Package mdframed Info: mdframed works in twoside mode on input line 54.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 54.
+
+LaTeX Font Warning: Command \Large invalid in math mode on input line 54.
+
+Package mdframed Info: mdframed works in twoside mode on input line 65.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 65.
+
+LaTeX Font Warning: Command \Large invalid in math mode on input line 65.
+
+[20]
+Package mdframed Info: mdframed works in twoside mode on input line 83.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 83.
+
+
+LaTeX Font Warning: Command \Large invalid in math mode on input line 83.
+
+Package mdframed Info: mdframed works in twoside mode on input line 100.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 100.
+
+LaTeX Font Warning: Command \Large invalid in math mode on input line 100.
 
 ) 
 AED: lastpage setting LastPage
-[19] (/Users/zgw/Documents/dx/TeXify/pypsolve/.texpadtmp/pypsolve-main.aux)
+[21] (/Users/zgw/Documents/dx/TeXify/pypsolve/.texpadtmp/pypsolve-main.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.41063pt have occurred.
@@ -1301,12 +1340,12 @@ Package rerunfilecheck Info: File `pypsolve-main.out' has not changed.
 (rerunfilecheck)             Checksum: B2717A9B8B3B76B30F36FE01DA21AE08;1611.
  ) 
 Here is how much of TeX's memory you used:
- 33127 strings out of 476776
- 701135 string characters out of 5805932
+ 33133 strings out of 476776
+ 701255 string characters out of 5805932
  2115991 words of memory out of 5000000
- 52624 multiletter control sequences out of 15000+600000
+ 52630 multiletter control sequences out of 15000+600000
  524782 words of font info for 125 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  98i,11n,100p,1274b,1838s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on /Users/zgw/Documents/dx/TeXify/pypsolve/.texpadtmp/pypsolve-main.pdf (19 pages).
+Output written on /Users/zgw/Documents/dx/TeXify/pypsolve/.texpadtmp/pypsolve-main.pdf (21 pages).
