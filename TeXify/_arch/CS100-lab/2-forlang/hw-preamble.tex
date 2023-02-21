@@ -1,0 +1,156 @@
+% hw-preamble.tex
+
+% geometry for A4 paper
+% See https://tex.stackexchange.com/a/119912/23098
+\geometry{
+  left=20.0mm,
+  top=20.0mm,
+  bottom=20.0mm,
+  textwidth=130mm, % main text block
+  marginparsep=5.0mm, % gutter between main text block and margin notes
+  marginparwidth=50.0mm % width of margin notes
+}
+
+% for colors
+\usepackage{xcolor} % usage: \color{red}{text}
+% predefined colors
+\newcommand{\red}[1]{\textcolor{red}{#1}} % usage: \red{text}
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+\newcommand{\teal}[1]{\textcolor{teal}{#1}}
+
+% heading
+\usepackage{sectsty}
+\setcounter{secnumdepth}{2}
+\allsectionsfont{\centering\huge\rmfamily}
+
+% for fonts
+\usepackage{fontspec}
+\newcommand{\song}{\CJKfamily{song}} 
+\newcommand{\hei}{\CJKfamily{hei}} 
+\newcommand{\kai}{\CJKfamily{kai}} 
+\newcommand{\fs}{\CJKfamily{fs}} % 仿宋
+
+% To fix the ``MakeTextLowerCase'' bug:
+% See https://github.com/Tufte-LaTeX/tufte-latex/issues/64#issuecomment-78572017
+% Set up the spacing using fontspec features
+\renewcommand\allcapsspacing[1]{{\addfontfeature{LetterSpace=15}#1}}
+\renewcommand\smallcapsspacing[1]{{\addfontfeature{LetterSpace=10}#1}}
+
+% for url
+\usepackage{hyperref}
+\hypersetup{colorlinks = true, 
+  linkcolor = teal,
+  urlcolor  = teal,
+  citecolor = blue,
+  anchorcolor = blue}
+
+\newcommand{\me}[4]{
+    \author{
+      {\bfseries Name:}\underline{#1}\hspace{2em}
+      {\bfseries Student ID:}\underline{#2}\hspace{2em}\\[10pt]
+  }
+}
+
+
+
+% for math
+\usepackage{amsmath, mathtools, amsfonts, amssymb}
+\newcommand{\set}[1]{\{#1\}}
+
+% define theorem-like environments
+\usepackage[amsmath, thmmarks]{ntheorem}
+
+\theoremstyle{break}
+\theorempreskip{2.0\topsep}
+\theorembodyfont{\song}
+\theoremseparator{}
+\newtheorem*{problem}{Problem}
+\newtheorem{ot}{Open Topics}
+
+\theorempreskip{3.0\topsep}
+\theoremheaderfont{\kai\bfseries}
+\theoremseparator{：}
+\theorempostwork{\bigskip\hrule}
+\newtheorem*{solution}{Answer}
+\theorempostwork{\bigskip\hrule}
+\newtheorem*{revision}{Revision}
+
+\theoremstyle{plain}
+\newtheorem*{cause}{Cause}
+\newtheorem*{remark}{Note}
+
+\theoremstyle{break}
+\theorempostwork{\bigskip\hrule}
+\theoremsymbol{\ensuremath{\Box}}
+\newtheorem*{proof}{证明}
+
+% \newcommand{\ot}{\blue{\bf [OT]}}
+
+% for figs
+\renewcommand\figurename{Fig}
+\renewcommand\tablename{Diag}
+
+% for fig without caption: #1: width/size; #2: fig file
+\newcommand{\fig}[2]{
+  \begin{figure}[htbp]
+    \centering
+    \includegraphics[#1]{#2}
+  \end{figure}
+}
+% for fig with caption: #1: width/size; #2: fig file; #3: caption
+\newcommand{\figcap}[3]{
+  \begin{figure}[htbp]
+    \centering
+    \includegraphics[#1]{#2}
+    \caption{#3}
+  \end{figure}
+}
+% for fig with both caption and label: #1: width/size; #2: fig file; #3: caption; #4: label
+\newcommand{\figcaplbl}[4]{
+  \begin{figure}[htbp]
+    \centering
+    \includegraphics[#1]{#2}
+    \caption{#3}
+    \label{#4}
+  \end{figure}
+}
+% for margin fig without caption: #1: width/size; #2: fig file
+\newcommand{\mfig}[2]{
+  \begin{marginfigure}
+    \centering
+    \includegraphics[#1]{#2}
+  \end{marginfigure}
+}
+% for margin fig with caption: #1: width/size; #2: fig file; #3: caption
+\newcommand{\mfigcap}[3]{
+  \begin{marginfigure}
+    \centering
+    \includegraphics[#1]{#2}
+    \caption{#3}
+  \end{marginfigure}
+}
+
+\usepackage{fancyvrb}
+
+% for algorithms
+\usepackage[]{algorithm}
+\usepackage[]{algpseudocode} % noend
+% See [Adjust the indentation whithin the algorithmicx-package when a line is broken](https://tex.stackexchange.com/a/68540/23098)
+\newcommand{\algparbox}[1]{\parbox[t]{\dimexpr\linewidth-\algorithmicindent}{#1\strut}}
+\newcommand{\hStatex}[0]{\vspace{5pt}}
+\makeatletter
+\newlength{\trianglerightwidth}
+\settowidth{\trianglerightwidth}{$\triangleright$~}
+\algnewcommand{\LineComment}[1]{\Statex \hskip\ALG@thistlm \(\triangleright\) #1}
+\algnewcommand{\LineCommentCont}[1]{\Statex \hskip\ALG@thistlm%
+  \parbox[t]{\dimexpr\linewidth-\ALG@thistlm}{\hangindent=\trianglerightwidth \hangafter=1 \strut$\triangleright$ #1\strut}}
+\makeatother
+
+% for footnote/marginnote
+% see https://tex.stackexchange.com/a/133265/23098
+\usepackage{tikz}
+\newcommand{\circled}[1]{%
+  \tikz[baseline=(char.base)]
+  \node [draw, circle, inner sep = 0.5pt, font = \tiny, minimum size = 8pt] (char) {#1};
+}
+\renewcommand\thefootnote{\protect\circled{\arabic{footnote}}}

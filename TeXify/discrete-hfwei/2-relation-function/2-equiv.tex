@@ -1,0 +1,559 @@
+
+总体而言, 在这一小节中我们会给出三个定义, 5个操作, 以及7个对应的性质. 
+
+其实, 这一节的内容很大程度上和中学定义的函数类似. 但是有一个重大的区别. 从现在开始, 我们稍微忘记我们高中关于``函数''的定义, 但是留下``函数''带给我们的思考方式. 下面我们来用有序对重新解释这一切. 
+
+\subsection{三个定义}
+
+\begin{definition}[定义域 (Domain)]
+  \[
+    \text{dom}(R) = \set{a \mid \exists b.\; (a,b) \in R}
+  \]
+\end{definition}
+
+我们在函数中说``定义域''是函数中有定义的地方的横坐标构成的集合, 在这里面的$\exists b$就保证了在这个点一定被定义了, 那么我们就取出来它的$a$(横坐标). ``扫描''所有这样的有序对$(a,b)$并将满足条件的$a$取出来, 我们就完成了这样类似概念的迁移. 
+
+\begin{definition}[值域 (Range)]
+  \[
+    \text{ran}(R) = \set{b \mid \exists a.\; (a,b) \in R}
+  \]
+\end{definition}
+
+我们在函数中说``值域''是函数中所有有定义的横坐标所对应的纵坐标, 在这里面的$\exists a$就说明了有这样的点被取到, 那么我们就取出来它的$b$(横坐标). ``扫描''所有这样的有序对$(a,b)$并将满足条件的$b$取出来, 同样有类似的概念. 
+
+\begin{definition}[域 (Field)]
+  \[
+    \text{fld}(R) = \text{dom}(R) \cup \text{ran}(R)
+  \]
+\end{definition}
+
+定义域和值域并起来就是域. 这样可以让我们直观的明确了解``二元关系''之间的空间映射关系. 
+
+举个例子: 对于$R = \set{(x, y) \mid x^2 + y^2 = 1} \subseteq \R \times \R$, 它的$\dom(R) = [1, 1]$, $\ran(R) = [-1, 1]$, $\fld(R) = [-1, 1]$. 
+
+我们来看一个更抽象的. 不过别忘了本质上就是用集合的操作解决这一切问题. 
+
+\begin{theorem}
+  \[
+    \dom(R) \subseteq \bigcup \bigcup R \qquad
+    \ran(R) \subseteq \bigcup \bigcup R
+  \]
+\end{theorem}
+
+\begin{proof}
+  \red{对任意 $a$,}
+    \begin{align}
+      &a \in \dom(R) \\
+      \implies& \exists b.\; (a, b) \in R \\
+      \implies& \exists b.\; \blue{\set{\set{a}, \set{a, b}}} \in R \\
+      \implies& \exists b.\; \set{a, b} \in \bigcup R \\
+      \implies& \exists b.\; a \in \bigcup\bigcup R \\
+      \implies& a \in \bigcup\bigcup R
+    \end{align}
+\end{proof}
+
+这个例子的直观解释就是任何的定义域, 值域都会在二元组的某一个元素中``出现''. 
+
+\subsection{五种操作}
+
+\textbf{1. 逆变换. }像``反函数''的概念一样, 关系有时候也有逆变换. 
+
+\begin{definition}[逆 (Inverse)]
+  The {\it inverse} of $R$ is the \purple{relation}
+  \[
+    R^{-1} = \set{(a, b) \mid (b, a) \in R}
+  \]
+\end{definition}
+
+我们可以来看几组例子: 
+\begin{itemize}
+  \item 如果$R = \set{(x, y) \mid x = y}\subseteq \R \times \R$, $R^{-1} = R$
+  \item $R = \set{(x, y) \mid y = \sqrt{x}} \subseteq \R \times \R$, $R^{-1} = \set{(x, y) \mid y = x^{2} \land x > 0}$
+  \item $\le = \set{(x, y) \mid x \le y} \subseteq \R \times \R \qquad$, $\le^{-1} \;= \ge \;\triangleq \set{(x, y) \mid x \ge y}$
+\end{itemize}
+
+直观地, 我们自然会想到反关系的反仍然是原来的关系. 所以我们有如下定理: 
+
+\begin{theorem}
+  \[
+    (R^{-1})^{-1} = R
+  \]
+\end{theorem}
+
+\begin{proof}
+  \red{对任意 $(a, b)$,}
+  \setcounter{equation}{0}
+  \begin{align}
+    &(a, b) \in (R^{-1})^{-1} \\
+    \iff& (b, a) \in R^{-1} \\
+    \iff& (a, b) \in R
+  \end{align}
+\end{proof}
+
+既然关系也是集合定义的, 那我们自然可以证明它的交, 并, 补. 在我们做的有益的探索中, 我们会发现这个定理还是比较重要的. 
+
+\begin{theorem}[关系的逆]
+    如果$R, S$ 均为关系, 那么有
+  \[
+    (R \cup S)^{-1} = R^{-1} \cup S^{-1}
+  \]
+  \[
+    (R \cap S)^{-1} = R^{-1} \cap S^{-1}
+  \]
+  \[
+    (R \setminus S)^{-1} = R^{-1} \setminus S^{-1}
+  \]
+\end{theorem}
+
+\textbf{2. 限制. } 由于问题的定义和性质, 有时候我们可能需要对于构造的``全面''集合的状态空间进行``裁切'', 来打造更精细的集合. 这样就可以自然地引入集合的限制操作. 我们希望引入这样的记号, 使得它可以对于这个关系二元组$(a,b)$中的$a$, $b$分别加以筛选. 于是我们有定义: 
+
+\begin{definition}[左限制 (Left-Restriction)]
+  Suppose $R \subseteq X \times Y$ and $S \subseteq X$.
+  The {\it left-restriction} relation of $R$ \blue{to $S$} over $X$ and $Y$ is
+  \[
+    R|_{S} = \set{(x, y) \in R \mid \red{x \in S}}
+  \]
+\end{definition}
+
+\begin{definition}[右限制 (Right-Restriction)]
+  Suppose $R \subseteq X \times Y$ and $S \subseteq Y$.
+  The {\it right-restriction} relation of $R$ \blue{to $S$} over $X$ and $Y$ is
+  \[
+    R|^{S} = \set{(x, y) \in R \mid \red{y \in S}}
+  \]
+\end{definition}
+
+\begin{definition}[限制 (Restriction)]
+  Suppose $R \subseteq X \times X$ and $S \subseteq X$.
+  The {\it restriction} relation of $R$ \blue{to $S$} over $X$ is
+  \[
+    R|_{S} = \set{(x, y) \in R \mid \red{x \in S \land y \in S}}
+  \]
+\end{definition}
+
+哎呀! ``限制''和``左限制''的记号重复了! 但是仔细看一下他们的前提是不一样的. ``左限制''的前提是有$R \subseteq X \times X$, 而``限制''的前提是$R \subseteq X \times X$, 也就是自己集合中元素到自己集合元素的关系. 
+
+下面我们来看刚刚举的例子: 如果$R = \set{(x, y) \mid x^2 + y^2 = 1} \subseteq \R \times \R$, $R|_{\R^{+}}$的含义就是表示关系的二元组$(a,b)中$, $a$只取$\R^+$的时候满足的才被认为``满足''关系. 
+
+\begin{bonus}
+对于这样的情况, 我们能不能使用$xOy$平面表达这种关系呢? 限制在平面上的意义是什么? 
+\end{bonus}
+
+\vspace*{1pt}
+\textbf{3. 像(Image). } 想一想这种``有所对应''的感觉, 好像在高中学习函数那一节里面见过类似的, 也就是有点像函数里面$f()$做的事情.  同样的, 这里面也有类似描述这样一种``有所对应''的定义. 
+
+\begin{definition}[像 (Image)]
+  The {\it image} of $X$ \blue{under $R$} is the set
+  \[
+    R[X] = \set{\red{b \in \text{ran}(R)} \mid \exists a \in X.\; (a, b) \in R}
+  \]
+\end{definition}
+为了简化符号, 一般而言$R[a] \triangleq R[\set{a}] = \set{b \mid (a, b) \in R}$. 
+
+
+\textbf{4.逆像. } 同样的, 我们有时候可能需要顺藤摸瓜, 这就自然地导出了像也有``逆''的概念. 
+
+\begin{definition}[逆像 (Inverse Image)]
+  The {\it inverse image} of $Y$ \blue{under $R$} is the set
+  \[
+    R^{-1}[Y] = \set{\red{a \in \text{dom}(R)} \mid \exists b \in Y.\; (a, b) \in R}
+  \]
+\end{definition}
+同样为了简化记号, 我们有$R^{-1}[b] \triangleq R^{-1}[\set{b}] = \set{a \mid (a, b) \in R}$. 
+
+有了这两个操作之后, 事情就变得复杂了. 比如$R^{-1}[R[X]] $和$ X$的关系如何, $R[R^{-1}[Y]]$和$Y$的关系又如何? 经过证明, 我们给出如下的定理: 
+  
+\begin{theorem}
+  \[
+    R[X_1 \cup X_2] = R[X_1] \cup R[X_2]
+  \]
+  \[
+    R[X_1 \cap X_2] \subseteq R[X_1] \cap R[X_2]
+  \]
+  \[
+    \teal{R[X_1 \setminus X_2] \supseteq R[X_1] \setminus R[X_2]}
+  \]
+\end{theorem}
+\begin{proof}
+  \red{对任意 $(a, b)$,}
+  \setcounter{equation}{0}
+  \begin{align}
+    &(a, b) \in (R \circ S)^{-1} \\
+    \iff& (b, a) \in R \circ S \\
+    \iff& \exists c.\; (b, \blue{c}) \in S \land (\blue{c}, a) \in R \\
+    \iff& \exists c.\; (\purple{c}, b) \in S^{-1} \land (a, \purple{c}) \in R^{-1} \\
+    \iff& (a, b) \in S^{-1} \circ R^{-1}
+  \end{align}
+\end{proof}
+\begin{theorem}
+  \[
+    (R \circ S) \circ T = R \circ (S \circ T)
+  \]
+\end{theorem}
+
+\textbf{5. 复合} 像复合函数一样, 这是一种构建复杂系统的很好的一种方法. 因此我们自然给出定义: 
+\begin{definition}[复合 (Composition; $R \circ S$, $R ; S$)]
+  The {\it composition} of relations $R \subseteq X \times \blue{Y}$
+  and $S \subseteq \blue{Y} \times Z$ is the \purple{relation}
+  \[
+    R \circ S = \set{(a, c) \mid \exists b.\; (a, \blue{b}) \in S \land (\blue{b}, c) \in R}
+  \]
+\end{definition}
+
+举个例子, $R = \set{(1, 2), (3, 1)} \qquad S = \set{(1, 3), (2, 2), (2, 3)}$, 那么$R \circ S = \set{(1, 1), (2, 1)}$, $S \circ R = \set{(1, 2), (1, 3), (3, 3)}$. 因为这个和``乘法''比较相似, 有时候我们也用空心圆圈表示. $R^{(2)} \triangleq R \circ R = \set{(3, 2)}$, $ (R \circ R) \circ R =  \emptyset$. 
+
+\begin{bonus}
+  有的人习惯记号$A\circ B\circ C=A\circ (B\circ C)$, 还有的人习惯$A\circ B\circ C=(A\circ B)\circ C$. 这样做有区别吗?  
+\end{bonus}
+\begin{theorem}
+  \[
+    (R \circ S) \circ T = R \circ (S \circ T)
+  \]
+\end{theorem}
+\begin{proof}
+  \red{对任意 $(a, b)$,}
+  \setcounter{equation}{0}
+  \begin{align}
+    &(a, b) \in (R \circ S) \circ T \\
+    \iff& \exists c.\; \Big((a, c) \in T \land (c, b) \in R \circ S\Big) \\
+    \iff& \exists c.\; \Big((a, c) \in T \land \red{\big(}\exists d.\; (c, d) \in S \land (d, b) \in R\red{\big)}\Big) \\
+    \red{\iff}& \exists d.\; \exists c.\; \Big((a, c) \in T \land (c, d) \in S \land (d, b) \in R\Big) \\
+    \iff& \exists d.\; \Big(\red{\big(}\exists c.\; (a, c) \in T \land (c, d) \in S\red{\big)} \land (d, b) \in R\Big) \\
+    \iff& \exists d.\; \Big((a, d) \in S \circ T \land (d, b) \in R\Big) \\
+    \iff& (a, b) \in R \circ (S \circ T)
+  \end{align} 
+\end{proof}
+
+这就表明关系的复合满足结合律, 但是不满足交换律(和矩阵乘法很相似). 
+
+\subsection{七个性质}
+
+\textbf{1. 自反的. }
+
+\begin{definition}[自反的 (Reflexive)]
+  $R \subseteq X \times X$ is \red{\it reflexive} if
+  \[
+    \forall a \in X.\; (a, a) \in R
+  \]
+  \input{2-relation-function/figs/reflexive.tex}
+\end{definition}
+
+举几个例子: 
+\begin{itemize}
+  \item $\le \;\subseteq \R \times \R \text{ is reflexive}$
+  \item $\text{三角形上的\red{全等关系}是自反的}$
+\end{itemize}
+
+其实所有自反的关系都是这个关系的一个子集, 可以有如下的表达. 
+
+\begin{theorem}
+  \[
+    R \text{ is reflexive} \iff I \subseteq R
+  \]
+  其中
+  $$I = \set{(a, a) \in A \times A \mid a \in A}.$$
+\end{theorem}
+
+\begin{theorem}
+  \[R \text{is reflexive} \iff R^{-1}=R\]
+\end{theorem}
+
+
+\textbf{2. 反自反. }
+
+\begin{definition}[反自反 (Irreflexive)]
+  $R \subseteq X \times X$ is \red{\it irreflexive} if
+  \[
+    \forall a \in X.\; (a, a) \notin R
+  \]
+\end{definition}
+
+同样的, 我们给一些例子: 
+\begin{itemize}
+  \item $< \;\subseteq \R \times \R \text{ is irreflexive}$
+  \item $> \;\subseteq \R \times \R \text{ is irreflexive}$
+\end{itemize}
+
+\textbf{3. 对称. }
+
+\begin{definition}[对称 (Symmetric)]
+  $R \subseteq X \times X$ is \red{\it symmetric} if
+  \[
+    \forall a, b \in X.\; a R b \to b R a
+  \]
+
+  \input{2-relation-function/figs/sym.tex}
+
+  \[
+    \forall a, b \in X.\; a R b \leftrightarrow b R a
+  \]
+\end{definition}
+
+对称就意味着$R$的逆是的形式是很好的. 具体的, 有如下定义. 
+\begin{theorem}
+  $$R \text{ is symmetric} \iff R^{-1} = R$$
+\end{theorem}
+
+\textbf{4. 反对称. }
+
+\begin{definition}[反对称 (AntiSymmetric)]
+  $R \subseteq X \times X$ is \red{\it antisymmetric} if
+  \[
+    \forall a, b \in X.\; (a R b \land b R a) \to a = b
+  \]
+\end{definition}
+
+例如$>$, $|$ 都具有反对称性. 
+
+\textbf{5. 传递性}
+
+\begin{definition}[传递的 (Transitive)]
+  $R \subseteq X \times X$ is \red{\it transitive} if
+  \[
+    \forall a, b, c \in X.\; (a R b \land b R c \to a R c)
+  \]
+
+  \input{2-relation-function/figs/trans.tex}
+
+\end{definition}
+
+有了传递性, 有时候就意味着关系的封闭性. 
+\begin{theorem}
+  \[
+    R \text{ is transitive} \iff R \circ R \;\red{\subseteq}\; R
+  \]
+\end{theorem}
+\begin{proof}
+  \red{对任意 $(a, b)$,}
+  \setcounter{equation}{0}
+  \begin{align}
+    &(a, b) \in R \circ R \\
+    \implies& \exists c.\; (a, c) \in R \land (b, c) \in R \\
+    \implies& (a, b) \in R
+  \end{align}
+
+  \vspace{0.30cm}
+  
+    \red{对任意 $a, b, c$}
+    \[
+      (a, b) \in R \land (b, c) \in R
+      \implies (a, c) \in R \circ R
+      \implies (a, c) \in R
+    \]
+  
+\end{proof}
+
+传递性和上面的内容一起构成了``序关系''. 上回我们定义了``偏序关系''. 接下来看到``偏序关系''到全序关系的重要关系, 就是下面的一个内容. 
+
+
+\textbf{6. 连接性.}
+
+\begin{definition}[连接的 (Connex)]
+  $R \subseteq X \times X$ is \red{\it connex} if
+  \[
+    \forall a, b \in X.\; (a R b \lor b R a)
+  \]
+\end{definition}
+
+我们发现, 在以前我们涉及``关系''的比较重, $a>b$, $b<a$, $b=a$三种关系中, 有且只有一种关系成立. 这样我们可以抽象出``三分的''性质.  
+
+\textbf{7. 三分的.}
+
+\begin{definition}[三分的 (Trichotomous)]
+  $R \subseteq X \times X$ is \red{\it trichotomous} if
+  \[
+    \forall a, b \in X.\;
+      (\text{\red{exactly one of}}\; a R b, b R a, \;\text{or}\; a = b \text{ holds})
+  \]
+\end{definition}
+
+其实这些关系是可以刻画``求逆''的可行性和唯一性. 具体的, 有如下的定理.
+
+\begin{theorem}
+  \[
+    \teal{R \text{ is symmetric and transitive} \iff R = R^{-1} \circ R}
+  \]
+\end{theorem}
+
+\begin{proof}
+  \red{对任意 $(a, b)$,}
+  \setcounter{equation}{0}
+  \begin{align}
+    &(a, b) \in R \circ R \\[6pt]
+    \implies& \exists c.\; (a, c) \in R \land (b, c) \in R \\
+    \implies& (a, b) \in R
+  \end{align}
+\end{proof}
+
+\subsection{等价关系}
+
+很多时候, 我们在研究数学关系会发现很多相同点. 比如在模意义下, 很多数是相等的. 比如$3 \equiv 6 \bmod 3$. 他们的余数都是$0$. 这就有一个很有趣的相似关系了. 
+
+用同余的例子, 我们会发现这种``等价性''满足这样几条性质: 
+
+\begin{definition}[Equivalence Relation]
+  $R \subseteq X \times X$ is an {\it equivalence relation} on $X$ iff $R$ is
+  \begin{itemize}
+    \item reflexive: $\forall a \in X.\; a R a$
+    \item symmetric: $\forall a, b \in X.\; (a R b \leftrightarrow b R a)$
+    \item transitive: $\forall a, b, c \in X.\; (a R b \land b R c \to a R c)$
+  \end{itemize}
+\end{definition}
+
+更一般的, 我们发现各个等价关系其实把整个区间``划分''成了不同的区域, 其中每一个区域里面都有和其他地方在某些意义下完全相同的特性. 
+
+就像我们把所有属于中国的领土通过``划分''的方式形成了省, 其中每个省都有自己的地方行政机关, 他们彼此等价. 因此, 我们可以说这个是在中国领土上划分的情况下, 行政机关的等价关系. 
+
+更具体的, 划分有如下定义: 
+
+\begin{definition}[划分 (Partition)]
+  A family of sets \red{$\Pi = \set{A_{\alpha} \mid \alpha \in I}$}
+  is a \blue{\it partition} of $X$ if
+
+  \begin{enumerate}
+    \item (不空)
+      $\forall \alpha \in I.\; A_{\alpha} \neq \emptyset,\teal{(\forall \alpha \in I.\; \exists x \in X.\; x \in A_{\alpha})}$
+    \item (不漏)
+      $\bigcup_{\alpha \in I} A_{\alpha} = X, \teal{(\forall x \in X.\; \exists \alpha \in I.\; x \in A_{\alpha})}$
+    \item (不重)
+      $
+        \forall \alpha, \beta \in I.\; A_{\alpha} \cap A_{\beta} = \emptyset \lor A_{\alpha} = A_{\beta}
+        \teal{(\forall \alpha, \beta \in I.\; A_{\alpha}, \cap A_{\beta} \neq \emptyset \implies A_{\alpha} = A_{\beta})}
+      $
+  \end{enumerate}
+\end{definition}
+
+那么, 将划分的结果, 把每一类处于``等同地位的元素''拿出来看, 就可以被称作等价类了. \footnote{语言表述不清楚, 要插图} 等价类其实可以看作拉拢所有的等价关系. 正式的, 我们有如下的定义: 
+
+\begin{definition}[等价类 (Equivalence Class)]
+  The {\it equivalence class} of \blue{$a$} {\it modulo} $R$ is a set:
+  \[
+    \red{[a]_{R}} = \set{b \in X.\; a R b}
+  \]
+\end{definition}
+
+为什么等价类如此重要? 一个原因是它提供了一个抽象, 让我们方便的研究很多问题. 
+
+像整数的模运算一样, 我们在``集合''的也想有类似的运算. 因此我们有``商集''的概念. 这样我们就可以把所有相互等价的元素取用出来, 进行研究. 
+
+\begin{definition}[商集 (Quotient Set)]
+  The \red{\it quotient set} \blue{of $X$ by $R$} ($X$ modulo $R$)
+  is a \purple{set}:
+  \[
+    X/R = \set{[a]_{R} \mid a \in X}
+  \]
+\end{definition}
+
+同样的, 这样取, 只不过是用另外一种维度划分整个集合罢了. 这在直觉上看起来是对的, 下面我们来做一下证明. 
+
+\begin{theorem}
+  \[
+    X/R = \set{[a]_{R} \mid a \in X} \text{ is a partition of } X.
+  \]
+\end{theorem}
+
+\begin{proof}
+  $\forall a \in X.\; [a]_{R} \neq \emptyset$, 
+
+  $\forall a \in X.\; \exists b \in X.\; a \in [b]_{R}$.
+\end{proof}
+
+在等价关系中, 下面这个定理可以很方便的从三个不同的侧面刻画``划分'', 同时帮助我们更容易的证明某些由``划分''产生的等价性问题. 
+
+\begin{theorem}
+  \[
+      \forall a \in X, b \in X.\; [a]_{R} \cap [b]_{R} = \emptyset \lor [a]_{R} = [b]_{R}
+  \]
+\end{theorem}
+
+\begin{proof}
+  $\blue{\forall a \in X, b \in X.\; [a]_{R} \cap [b]_{R} \neq \emptyset \to [a]_{R} = [b]_{R}}$
+
+  一方面, 
+  \red{不妨设 $x \in [a]_{R} \land [b]_{R}$}
+      \setcounter{equation}{0}
+      \begin{align}
+        &x \in [a]_{R} \land [b]_{R} \\
+        \implies& aRx \land xRb \\
+        \implies& aRb
+      \end{align}
+
+  另一方面, 
+  \red{对于任意 $x$,}
+      \setcounter{equation}{0}
+      \begin{align}
+        &x \in [a]_{R} \\
+        \iff& x R a \\
+        \red{\iff}& x R b \\
+        \iff& x \in [b]_{R}
+      \end{align}
+\end{proof}
+
+
+\begin{theorem}
+  \[
+    \forall a, b \in X.\; ([a]_{R} = [b]_{R} \leftrightarrow a R b)
+  \]
+\end{theorem}
+
+这就意味着我们的划分在某种意义上也是一个等价关系! 
+
+\begin{definition}
+  $\text{If partition } \Pi \text{ of } X \implies \text{Equivalence Relation } R \subseteq X \times X$, $(a, b) \in R \iff \exists S \in \Pi.\; a \in S \land b \in S$, $R = \set{(a, b) \in X \times X \mid \exists S \in \Pi.\; a \in S \land b \in S}$
+\end{definition}
+
+\begin{theorem}
+    $R$ is an equivalence relation on  $X$.
+\end{theorem}
+
+\subsection{构造实数}
+
+\begin{definition}
+  \[
+    \sim\; \subseteq \N \times \N
+  \]
+
+  \[
+    (a, b) \sim (c, d) \iff a +_{\N} d = b +_{N} c
+  \]
+\end{definition}
+
+那么, $\mathbb{N} \times \mathbb{N}/\sim$是$\Z$. 
+
+\begin{definition}[$\mathbb{Z}$]
+  \[
+    \mathbb{Z} \triangleq \mathbb{N} \times \mathbb{N}/\sim
+  \]
+\end{definition}
+
+\begin{definition}[$+_\mathbb{Z}$]
+  \[
+    [(m_1, n_1)] +_{\mathbb{Z}} [(m_2, n_2)] = [m_1 +_{\mathbb{N}} m_2, n_1 +_{\mathbb{N}} n_2]
+  \]
+\end{definition}
+
+\begin{definition}[$\cdot_\mathbb{Z}$]
+  \begin{gather*}
+    [(m_1, n_1)] \cdot_{\mathbb{Z}} [(m_2, n_2)] \\
+    = [m_1 \cdot_{\mathbb{N}} m_2 +_{\mathbb{N}} n_1 \cdot_{\mathbb{N}} n_2,
+       m_1 \cdot_{\mathbb{N}} n_2 +_{\mathbb{N}} n_1 \cdot_{\mathbb{N}} m_2]
+  \end{gather*}
+\end{definition}
+
+\begin{definition}
+  \[
+    \sim\; \subseteq \mathbb{Z} \times (\mathbb{Z} \setminus \set{0_{\mathbb{Z}}})
+  \]
+
+  \[
+    (a, b) \sim (c, d) \iff a \cdot_{\mathbb{Z}} d = b \cdot_{\mathbb{Z}} c
+  \]
+\end{definition}
+
+\begin{definition}[$\mathbb{Q}$]
+  \[
+    \mathbb{Q} \triangleq \mathbb{Z} \times (\mathbb{Z} \setminus \set{0_{\mathbb{Z}}})/\sim
+  \]
+\end{definition}
+
+如何用有理数定义实数? 请参见《数学分析》Dedekind分割. 

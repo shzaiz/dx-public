@@ -1,0 +1,552 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-book
+\use_default_options true
+\begin_modules
+algorithm2e
+theorems-named
+theorems-ams-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Euclid空间的基本概念
+\end_layout
+
+\begin_layout Section
+标准正交基
+\end_layout
+
+\begin_layout Section
+正交矩阵与正交变换
+\end_layout
+
+\begin_layout Section
+正规变换
+\end_layout
+
+\begin_layout Section
+酉空间
+\end_layout
+
+\begin_layout Section
+线性代数中出现的内容
+\end_layout
+
+\begin_layout Subsection
+向量的内积.
+ 长度.
+ 正交性
+\end_layout
+
+\begin_layout Enumerate
+内积
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Def.
+ 设
+\begin_inset Formula $n$
+\end_inset
+
+维向量
+\begin_inset Formula $\boldsymbol{x}=\begin{pmatrix}x_{1}\\
+x_{2}\\
+\vdots\\
+x_{n}
+\end{pmatrix},\boldsymbol{y}=\begin{pmatrix}y_{1}\\
+y_{2}\\
+\vdots\\
+y_{n}
+\end{pmatrix}$
+\end_inset
+
+, 称
+\begin_inset Formula $\langle\boldsymbol{x},\boldsymbol{y}\rangle=\sum_{i=1}^{n}x_{i}y_{i}$
+\end_inset
+
+为向量的内积.
+ 用矩阵的记号就是
+\begin_inset Formula $\langle\boldsymbol{x},\boldsymbol{y}\rangle=\boldsymbol{x}^{T}\boldsymbol{y}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Prop.
+ 设
+\series bold
+
+\begin_inset Formula $\boldsymbol{x},\boldsymbol{y},\boldsymbol{z}$
+\end_inset
+
+
+\series default
+为
+\begin_inset Formula $n$
+\end_inset
+
+维向量,
+\begin_inset Formula $\lambda\in\R$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+对称性: 
+\begin_inset Formula $\langle\boldsymbol{x},\boldsymbol{y}\rangle=\langle\boldsymbol{y},\boldsymbol{x}\rangle$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+线性性: 
+\begin_inset Formula $\langle\lambda\boldsymbol{x},\boldsymbol{y}\rangle=\lambda\langle\boldsymbol{x},\boldsymbol{y}\rangle;\langle\boldsymbol{x}+\boldsymbol{y},\boldsymbol{z}\rangle=\langle\boldsymbol{x},\boldsymbol{z}\rangle+\langle\boldsymbol{y},\boldsymbol{z}\rangle$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+非负性: 当
+\begin_inset Formula $\boldsymbol{x}=\boldsymbol{0}$
+\end_inset
+
+时
+\begin_inset Formula $\langle\boldsymbol{x},\boldsymbol{x}\rangle=0$
+\end_inset
+
+, 否则
+\begin_inset Formula $\langle\boldsymbol{x},\boldsymbol{x}\rangle>0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Swartz不等式: 
+\begin_inset Formula $\langle\boldsymbol{x},\boldsymbol{y}\rangle^{2}\leq\langle\boldsymbol{x},\boldsymbol{x}\rangle\langle\boldsymbol{y},\boldsymbol{y}\rangle$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+长度, 夹角和正交
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+长度.
+ 设
+\begin_inset Formula $\boldsymbol{x}=\begin{pmatrix}x_{1}\\
+x_{2}\\
+\vdots\\
+x_{n}
+\end{pmatrix}$
+\end_inset
+
+为
+\begin_inset Formula $n$
+\end_inset
+
+维向量, 称
+\begin_inset Formula $||\boldsymbol{x}||=\sqrt{\langle\boldsymbol{x},\boldsymbol{x}\rangle}=\sqrt{\sum_{i=1}^{n}x_{i}^{2}}$
+\end_inset
+
+是x的长度(范数).
+ 当
+\begin_inset Formula $||\boldsymbol{x}||=1$
+\end_inset
+
+的时候称其为单位向量, 若
+\begin_inset Formula $\boldsymbol{x}\neq0,$
+\end_inset
+
+称
+\begin_inset Formula $\boldsymbol{x}/||\boldsymbol{x}||$
+\end_inset
+
+为单位向量, 这种操作称为把
+\series bold
+
+\begin_inset Formula $\boldsymbol{x}$
+\end_inset
+
+
+\series default
+单位化.
+ 
+\end_layout
+
+\begin_layout Enumerate
+夹角.
+ 当
+\begin_inset Formula $\boldsymbol{x}\neq0,\boldsymbol{y}\neq0$
+\end_inset
+
+时, 称
+\begin_inset Formula $\theta=\arccos\frac{\langle\boldsymbol{x},\boldsymbol{y}\rangle}{||\boldsymbol{x}||\cdot||\boldsymbol{y}||}(0\leq\theta\leq\pi)$
+\end_inset
+
+为向量
+\begin_inset Formula $\boldsymbol{x}$
+\end_inset
+
+和
+\begin_inset Formula $\boldsymbol{y}$
+\end_inset
+
+的夹角
+\end_layout
+
+\begin_layout Enumerate
+正交.
+ 当
+\begin_inset Formula $\langle\boldsymbol{x},\boldsymbol{y}\rangle=0$
+\end_inset
+
+的时候, 称
+\begin_inset Formula $\boldsymbol{x}$
+\end_inset
+
+和
+\begin_inset Formula $\boldsymbol{y}$
+\end_inset
+
+正交.
+ 零向量与任何向量正交.
+ 
+\end_layout
+
+\begin_layout Enumerate
+规范正交基: 设n维向量
+\begin_inset Formula $\boldsymbol{e}_{1}..\boldsymbol{e}_{r}$
+\end_inset
+
+是向量空间
+\begin_inset Formula $V(V\subset\R^{n})$
+\end_inset
+
+的一个基, 如果
+\begin_inset Formula $\boldsymbol{e}_{1}..\boldsymbol{e}_{r}$
+\end_inset
+
+两两正交且都是单位向量, 则称
+\begin_inset Formula $\boldsymbol{e}_{1}..\boldsymbol{e}_{r}$
+\end_inset
+
+是
+\begin_inset Formula $V$
+\end_inset
+
+的一个
+\series bold
+规范正交基
+\series default
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+长度的性质
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+非负性.
+ 当
+\begin_inset Formula $\boldsymbol{x}=0$
+\end_inset
+
+时
+\begin_inset Formula $||\boldsymbol{x}||=0$
+\end_inset
+
+, 否则
+\begin_inset Formula $||\boldsymbol{x}||>0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+齐次性
+\begin_inset Formula $||\lambda\boldsymbol{x}||=|\lambda|\cdot||\boldsymbol{x}||$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+三角不等式
+\begin_inset Formula $||\boldsymbol{x}+\boldsymbol{y}||\leq||\boldsymbol{x}||+||\boldsymbol{y}||$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+正交向量组的性质
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Th.
+ 若
+\begin_inset Formula $n$
+\end_inset
+
+维向量是
+\begin_inset Formula $\boldsymbol{a}_{1}..\boldsymbol{a}_{r}$
+\end_inset
+
+是一组两两正交的非零向量, 则
+\begin_inset Formula $\boldsymbol{a}_{1}..\boldsymbol{a}_{r}$
+\end_inset
+
+线性无关
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Schmidt正交化
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+设向量组
+\begin_inset Formula $\boldsymbol{a}_{1}..\boldsymbol{a}_{r}$
+\end_inset
+
+线性无关, 经过Schmidt正交化将其化为两两正交的向量组
+\begin_inset Formula $\boldsymbol{b}_{1}..\boldsymbol{b}_{n}$
+\end_inset
+
+, 二者是等价的.
+ Schmidt正交化的过程如下:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\boldsymbol{b}_{1}= & \boldsymbol{a}_{1}\\
+\boldsymbol{b}_{2}= & \boldsymbol{a}_{2}-\frac{\langle\boldsymbol{b}_{1},\boldsymbol{a}_{2}\rangle}{\langle\boldsymbol{b}_{1},\boldsymbol{a}_{1}\rangle}\boldsymbol{b}_{1}\\
+\vdots\\
+\boldsymbol{b}_{r}= & \boldsymbol{a}_{r}-\frac{\langle\boldsymbol{b}_{1},\boldsymbol{a}_{r}\rangle}{\langle\boldsymbol{b}_{1},\boldsymbol{a}_{1}\rangle}\boldsymbol{b}_{1}-\frac{\langle\boldsymbol{b}_{2},\boldsymbol{a}_{r}\rangle}{\langle\boldsymbol{b}_{2},\boldsymbol{a}_{2}\rangle}\boldsymbol{b}_{2}-\cdots-\frac{\langle\boldsymbol{b}_{r-1},\boldsymbol{a}_{r}\rangle}{\langle\boldsymbol{b}_{r-1},\boldsymbol{a}_{r-1}\rangle}\boldsymbol{b}_{r-1}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+正交矩阵
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Def.
+ 如果
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+是
+\begin_inset Formula $\boldsymbol{n}$
+\end_inset
+
+阶矩阵, 
+\begin_inset Formula $\boldsymbol{A}^{T}\boldsymbol{A}=\boldsymbol{E}$
+\end_inset
+
+, 也就是
+\begin_inset Formula $\boldsymbol{A}^{-1}=\boldsymbol{A}^{T}$
+\end_inset
+
+, 称
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+为正交矩阵, 
+\begin_inset Formula $\boldsymbol{P}$
+\end_inset
+
+为正交矩阵, 则线性变换
+\begin_inset Formula $\boldsymbol{y}=\boldsymbol{Px}$
+\end_inset
+
+是正交变换.
+\end_layout
+
+\begin_layout Enumerate
+Prop
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+正交 
+\begin_inset Formula $\Leftrightarrow$
+\end_inset
+
+ 
+\series bold
+
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+
+\series default
+的向量都是单位向量且两两正交
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\boldsymbol{A}$
+\end_inset
+
+正交
+\begin_inset Formula $\Leftrightarrow$
+\end_inset
+
+行向量都是单位向量且两两正交
+\end_layout
+
+\begin_layout Enumerate
+正交矩阵的行列式是
+\begin_inset Formula $1$
+\end_inset
+
+或者
+\begin_inset Formula $-1$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\boldsymbol{A},\boldsymbol{B}$
+\end_inset
+
+是正交矩阵, 那么
+\begin_inset Formula $\boldsymbol{AB}$
+\end_inset
+
+也是正交矩阵
+\end_layout
+
+\begin_layout Enumerate
+若
+\begin_inset Formula $\boldsymbol{y}=\boldsymbol{Px}$
+\end_inset
+
+是正交变换, 
+\begin_inset Formula $||\boldsymbol{y}||=||\boldsymbol{x}||$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Section
+基本习题
+\end_layout
+
+\begin_layout Problem
+TODO
+\end_layout
+
+\end_body
+\end_document

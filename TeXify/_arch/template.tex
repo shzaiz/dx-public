@@ -1,0 +1,60 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{geometry}
+\usepackage{xeCJK}
+\usepackage{CJK}                           
+\usepackage{fancyhdr}               
+\usepackage{graphicx}                 
+\usepackage{lastpage}    
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usepackage{layout}
+\usepackage{titletoc}
+\usepackage{hyperref}
+\lstset{
+	basicstyle={      
+		\color{black}
+		\fontspec{Consolas}
+	},
+	keywordstyle={
+		\color{blue}
+		\fontspec{Consolas}
+	},
+	numberstyle={
+		\color{black}
+	}
+}
+\geometry{left=3.18cm,right=3.18cm,top=2.54cm,bottom=2.54cm}
+\usepackage{ amssymb }
+\usepackage{fontspec}
+\usepackage{mdframed} % Add easy frames to paragraphs
+\usepackage{lipsum} % For dummy text
+\usepackage{xcolor}
+\usepackage{xparse} % Add support for \NewDocumentEnvironment
+\definecolor{graylight}{cmyk}{.30,0,0,.67} % define color using xcolor syntax
+
+\newmdenv[ % Define mdframe settings and store as leftrule
+linecolor=graylight,
+topline=false,
+bottomline=false,
+rightline=false,
+skipabove=\topsep,
+skipbelow=\topsep
+]{leftrule}
+\NewDocumentEnvironment{eg}{O{\textbf{举例:}}} % Define example environment
+{\begin{leftrule}\noindent\textcolor{graylight}{#1}\par}
+	{\end{leftrule}}
+
+\NewDocumentEnvironment{pas}{O{\textbf{文章}}} % Define example environment
+{\begin{leftrule}\noindent\textcolor{graylight}{#1}\par}
+	{\end{leftrule}}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\theoremstyle{definition}
+\newtheorem{definition}{定义}
+\newtheorem{axi}{公理}
+\newtheorem{idea}{启示}
+\newtheorem{prob}{问题}
+\newtheorem{proposition}{命题}
+\newtheorem{theorem}{定理}
+\newenvironment{sol}{\paragraph{解答:}}{\hfill \#}

@@ -1,0 +1,5574 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass beamer
+\begin_preamble
+\usetheme{Singapore}
+\usefonttheme[onlymath]{serif}
+% or ...
+\usepackage{ctex}
+\setbeamercovered{transparent}
+% or whatever (possibly just delete it)
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "lmodern" "default"
+\font_sans "lmss" "default"
+\font_typewriter "lmtt" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_title "线性代数复习(一)"
+\pdf_author "gwzhang"
+\pdf_subject "数学"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref section
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+线性代数复习(一) 解线性方程组
+\end_layout
+
+\begin_layout Institute
+a freshman at CUG Computer Science
+\end_layout
+
+\begin_layout Author
+AUGPath
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\R}{\mathbb{R}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+导引: 摘自Linear Algrbra and its Applications
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+This course is potentially the most interesting and worthwhile undergraduate
+ mathematics course you will complete.
+ In fact, some students have written or spoken to us after graduation and
+ said that they still use this text occasionally as a reference in their
+ careers at major corporations and engineering graduate schools.
+ The following remarks offer some practical advice and information to help
+ you master the material and enjoy the course.
+\end_layout
+
+\begin_layout Frame
+...
+\end_layout
+
+\begin_layout Frame
+In a practical sense, linear algebra is a language.
+ You must learn this language the same way you would a foreign language—with
+ daily work.
+ Material presented in one section is not easily understood unless you have
+ thoroughly studied the text and worked the exercises for the preceding
+ sections.
+ Keeping up with the course will save you lots of time and distress!
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+概览: 两条线索
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+对于
+\begin_inset Formula $\begin{cases}
+a_{11}x_{1}+a_{12}x_{2}+\cdots+a_{1n}x_{n} & =b_{1}\\
+\cdots\\
+a_{m1}x_{1}+a_{m2}x_{2}+\cdots+a_{mn}x_{n} & =b_{m}
+\end{cases}$
+\end_inset
+
+的方程组我们应该怎样处理?
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+通过
+\begin_inset Formula $n=1,n=2,\cdots,n=m$
+\end_inset
+
+的时候去枚举未知数相等情形
+\end_layout
+
+\begin_layout Itemize
+直接通过当前的情形去消元
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+第一条路线
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+考虑小的情形
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+解答: 
+\begin_inset Formula $\begin{cases}
+a_{11}x_{1}+a_{12}x_{2} & =b_{1}\\
+a_{21}x_{1}+a_{22}x_{2} & =b_{2}
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+解答: 
+\begin_inset Formula $\begin{cases}
+a_{11}x_{1}+a_{12}x_{2}+a_{13}x_{3} & =b_{1}\\
+a_{21}x_{1}+a_{22}x_{2}+a_{23}x_{3} & =b_{2}\\
+a_{31}x_{1}+a_{32}x_{2}+a_{33}x_{3} & =b_{3}
+\end{cases}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+小技巧: 可以借助上面的问题, 先把某些内容看做常数.
+ 
+\end_layout
+
+\begin_layout Itemize
+提示: 试图引入记号
+\begin_inset Formula $ad-bc=\begin{vmatrix}a & b\\
+c & d
+\end{vmatrix}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+一般的规律: 一个很好玩的递推关系:
+\begin_inset Formula 
+\[
+D_{i}=\sum_{i=1}^{n}(-1)^{1+i}a_{1i}M_{1i}.
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+展开说说?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+递推关系式太讨厌! 
+\end_layout
+
+\begin_layout Itemize
+用工具试一试.
+ (见
+\uwave on
+\color teal
+det.py
+\uwave default
+\color inherit
+)
+\end_layout
+
+\begin_layout Itemize
+发现了什么?
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+跑题: 时间复杂度
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+Q: 小于2095728218的正质数有几个?
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+于是产生了各种各样的代码.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+``我跑了好久, 可是电脑不给我答案啊!''
+\end_layout
+
+\begin_layout Itemize
+计算机1s大约能运行1e8
+\begin_inset Formula $\sim$
+\end_inset
+
+1e9次运算(可以粗略的认为走过一次简单的一行算一次运算)
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Frame
+那么刚刚的程序时间复杂度是多少? 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+少说定义, 实际跑一下看看
+\end_layout
+
+\begin_layout Itemize
+这么多东西, 谁看得懂?
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+跑题: 工具的力量
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+正常人谁都看不懂, 但是工具可以啊
+\end_layout
+
+\begin_layout Itemize
+学校开的Python课程感觉落不到实处, 但是现在就是机会
+\end_layout
+
+\begin_layout Itemize
+高考的时候如果让带电脑, 那不有手就行? (针对2022年及以前的卷子)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Wolfram Alpha, Wolfram Mathematica, MATLAB, 再也不用担心计算错误了
+\end_layout
+
+\begin_layout Itemize
+圆锥曲线的联立的那种级别的计算, 
+\begin_inset Formula $\sim1\text{s}$
+\end_inset
+
+就能出答案
+\end_layout
+
+\begin_layout Itemize
+导数题估计精确度至少是
+\begin_inset Formula $1\times10^{-5}$
+\end_inset
+
+的级别
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Python包: sympy(符号计算)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+有了玩耍的基础
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+!发现了什么?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(i_{1},i_{2},i_{3})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{1i_{1}},a_{2i_{2}},a_{3i_{3}}$
+\end_inset
+
+的符号
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+换序方法
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+换序次数
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1,2,3)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
++
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+/
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2,3,1)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
++
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1\leftrightarrow3,1\leftrightarrow2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(3,1,2)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
++
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1\leftrightarrow3,2\leftrightarrow3$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1,3,2)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2\leftrightarrow3$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2,1,3)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1\leftrightarrow2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(3,2,1)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1\leftrightarrow2,2\leftrightarrow3,1\leftrightarrow3$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+猜测: 
+\begin_inset Formula 
+\[
+|A|=\sum_{(i_{1},\cdots.i_{n})}(-1)^{\tau(i_{1},\cdots.i_{n})}a_{1i_{1}}a_{2i_{2}}\cdots a_{ni_{n}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+可以使用数学归纳法证明.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+!逆序数(inversion number)
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Def.
+ 排列(permutation)
+\end_layout
+
+\begin_layout Itemize
+Def.
+ 逆序数, 奇(odd)排列, 偶(even)排列.
+\end_layout
+
+\begin_layout Itemize
+Def.
+ 对换(swap).
+\end_layout
+
+\begin_layout Itemize
+Th.
+ 排列中任意两个元素对换, 排列改变奇偶性.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+什么样的行列式是好算的?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+全是0.
+ (Trivial case)
+\end_layout
+
+\begin_layout Itemize
+对角线上全是0.
+ 
+\end_layout
+
+\begin_layout Itemize
+上/下三角.
+\end_layout
+
+\begin_layout Itemize
+一般的
+\begin_inset Formula $\stackrel{\text{转\text{换}}}{\longrightarrow}$
+\end_inset
+
+特殊的
+\end_layout
+
+\begin_layout Itemize
+这个思想在后面学习对角化与特征值、二次型与标准形也会遇见.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+!行列式的性质
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Formula 
+\[
+|A|=\sum_{(i_{1},\cdots.i_{n})}(-1)^{\tau(i_{1},\cdots.i_{n})}a_{1i_{1}}a_{2i_{2}}\cdots a_{ni_{n}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+转置
+\end_layout
+
+\begin_layout Itemize
+互换
+\end_layout
+
+\begin_layout Itemize
+线性性
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+例子: 基本概念.
+ 多项式与行列式
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\begin{vmatrix}11 & 45 & 14\\
+19 & 19 & 81\\
+0 & 11 & 45
+\end{vmatrix}=-35945.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $D=\begin{vmatrix}a_{1}+x & a_{2} & a_{3} & a_{4}\\
+-x & x\\
+ & -x & x\\
+ &  & -x & x
+\end{vmatrix}=x^{3}\left(x+\sum_{i=1}^{4}a_{i}\right).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\begin{vmatrix}x & 0 & 0 & \cdots & 0 & a_{0}\\
+-1 & x & 0 & \cdots & 0 & a_{1}\\
+0 & -1 & x & \cdots & 0 & a_{2}\\
+ &  & \vdots & \ddots & \vdots & \vdots\\
+0 & 0 & 0 & \cdots & x & a_{n-2}\\
+0 & 0 & 0 & \cdots & -1 & x+a_{n-1}
+\end{vmatrix}=x^{n}+a_{n-1}x^{n-1}+\cdots+a_{0}.$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+例子: 多项式与行列式, 分块行列式
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\begin{vmatrix}x & 0 & 0 & \cdots & 0 & a_{0}\\
+-1 & x & 0 & \cdots & 0 & a_{1}\\
+0 & -1 & x & \cdots & 0 & a_{2}\\
+ &  & \vdots & \ddots & \vdots & \vdots\\
+0 & 0 & 0 & \cdots & x & a_{n-1}\\
+0 & 0 & 0 & \cdots & -1 & a_{n}
+\end{vmatrix}=\sum_{i=0}^{n}a_{i}x^{i}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $D=\begin{vmatrix}\mathbf{A}_{n\times n} & \mathbf{0}\\
+\mathbf{C} & \mathbf{B}_{m\times m}
+\end{vmatrix}=\mathbf{A}_{n\times n}\mathbf{B}_{m\times m}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+!展开的智慧: 关于代数余子式
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+能不能不总是第一列(行)开始展开? 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+能不能同时选择多行展开?
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula 
+\[
+D_{i}=\sum_{i=1}^{n}(-1)^{1+i}a_{1i}M_{1i}=\sum_{i=1}^{n}a_{1i}A_{1i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Def.
+ 余子式, 代数(带着符号的)余子式.
+\end_layout
+
+\begin_layout Itemize
+Prop.
+ 
+\begin_inset Formula 
+\[
+\sum_{k=1}^{n}a_{ki}A_{kj}=D\delta_{ij};\sum_{k=1}^{n}a_{ik}A_{jk}=D\delta_{ij}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+代数余子式有``操纵行列式''的感觉.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+例子: 操纵行列式
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+设4阶行列式
+\begin_inset Formula $D_{4}=\begin{vmatrix}a & b & c & d\\
+c & b & d & a\\
+d & b & c & a\\
+a & b & d & c
+\end{vmatrix}$
+\end_inset
+
+, 求
+\begin_inset Formula $A_{14}+A_{24}+A_{34}+A_{44}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+!多行展开行不行? Laplace定理
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+选定行(列), 之后抽取所有可能的不重复的列(行), 赋予符号, 相加.
+\end_layout
+
+\begin_layout Itemize
+就容易得到了
+\begin_inset Formula 
+\[
+D=\begin{vmatrix}\mathbf{A}_{n\times n} & \mathbf{0}\\
+\mathbf{C} & \mathbf{B}_{m\times m}
+\end{vmatrix}=\mathbf{A}_{n\times n}\mathbf{B}_{m\times m}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+原始的方法其实有很好的启发: 矩阵的乘法.
+ 
+\end_layout
+
+\begin_layout Itemize
+行列式的乘积公式:
+\begin_inset Formula 
+\[
+\begin{vmatrix}a_{11}.. & a_{1n}\\
+a_{n1}.. & a_{nn}
+\end{vmatrix}\times\begin{vmatrix}b_{11}.. & b_{1n}\\
+b_{n1}.. & b_{nn}
+\end{vmatrix}=\begin{vmatrix}c_{11}.. & c_{1n}\\
+c_{n1}.. & c_{nn}
+\end{vmatrix}
+\]
+
+\end_inset
+
+其中
+\begin_inset Formula $c_{ij}=\sum_{i=1}^{n}a_{ik}b_{kj}.$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+证明Cramer法则
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+引入
+\begin_inset Formula $\delta_{ij}=\begin{cases}
+1 & i=j\\
+0 & i\neq j
+\end{cases},$
+\end_inset
+
+类似中国剩余定理的思想.
+\end_layout
+
+\begin_layout Itemize
+其次线性方程组的行列式不等于0
+\begin_inset Formula $\implies$
+\end_inset
+
+只有0解.
+ 
+\end_layout
+
+\begin_layout Itemize
+由此就有了...
+\end_layout
+
+\begin_layout Itemize
+Thm1.
+ 如果线性方程组系数的行列式
+\begin_inset Formula $D\neq0$
+\end_inset
+
+, 有唯一解.
+\end_layout
+
+\begin_layout Itemize
+Thm2.
+ 如果
+\series bold
+齐次
+\series default
+线性方程组的系数行列式
+\begin_inset Formula $D\neq0$
+\end_inset
+
+, 只有零解.
+ 
+\end_layout
+
+\begin_layout Itemize
+麻烦之处: 系数矩阵等于0会怎样?不是方阵?
+\end_layout
+
+\begin_layout Itemize
+后续: 会用``秩''刻画相关的内容.
+ 
+\end_layout
+
+\begin_layout Itemize
+比较繁琐
+\end_layout
+
+\end_deeper
+\begin_layout Section
+第二条路线
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+古人的智慧
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+今有上禾三秉，中禾二秉，下禾一秉，實三十九斗；上禾二秉，中禾三秉，下禾一秉，實三十四斗；上禾一秉，中禾二秉，下禾三秉，實二十六斗。問上、中、下禾實一秉各幾何？
+ 
+\end_layout
+
+\begin_layout Plain Layout
+方程術曰，置上禾三秉，中禾二秉，下禾一秉，實三十九斗，於右方。中、左禾列如右方。以右行上禾遍乘中行而以直除。又乘其次，亦以直除。然以中行中禾不盡者遍乘左行而以直
+除。左方下禾不盡者，上為法，下為實。實即下禾之實。求中禾，以法乘中行下實，而除下禾之實。餘如中禾秉數而一，即中禾之實。求上禾亦以法乘右行下實，而除下禾、中禾之實
+。餘如上禾秉數而一，即上禾之實。實皆如法，各得一斗。–《九章算術》
+\end_layout
+
+\begin_layout Plain Layout
+https://ctext.org/library.pl?if=gb&file=58466&page=43
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+消元法: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+互换两个方程的位置
+\end_layout
+
+\begin_layout Itemize
+某一个方程乘上
+\begin_inset Formula $k$
+\end_inset
+
+倍
+\end_layout
+
+\begin_layout Itemize
+一个方程乘上
+\begin_inset Formula $k$
+\end_inset
+
+倍加到另一个上面去
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+怎么表示?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+上述的三种情形是变量代换的特殊情况.
+ 
+\end_layout
+
+\begin_layout Itemize
+变量代换: 
+\begin_inset Formula $\begin{cases}
+a_{11}x_{1}+a_{12}x_{2} & =c_{1}\\
+a_{21}x_{1}+a_{22}x_{2} & =c_{2}
+\end{cases}$
+\end_inset
+
+与 
+\begin_inset Formula $\begin{cases}
+b_{11}y_{1}+b_{12}y_{2} & =x_{1}\\
+b_{21}y_{1}+b_{22}y_{2} & =x_{2}
+\end{cases}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+得到
+\begin_inset Formula $\begin{cases}
+(a_{11}b_{11}+a_{12}b_{21})y_{1}+(a_{11}b_{12}+a_{12}b_{22})y_{2} & =c_{1}\\
+(a_{21}b_{11}+a_{22}b_{21})y_{1}+(a_{21}b_{12}+a_{22}b_{22})y_{2} & =c_{2}
+\end{cases}$
+\end_inset
+
+, 系数矩阵是
+\begin_inset Formula $\begin{pmatrix}a_{11}b_{11}+a_{12}b_{21} & a_{11}b_{12}+a_{12}b_{22}\\
+a_{21}b_{11}+a_{22}b_{21} & a_{21}b_{12}+a_{22}b_{22}
+\end{pmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula 
+\[
+\begin{pmatrix} &  &  & b_{11} & b_{12}\\
+ &  &  & b_{21} & b_{22}\\
+ &  &  & \downarrow & \downarrow\\
+a_{11} & a_{12} & \rightarrow & a_{11}b_{11}+a_{12}b_{21} & a_{11}b_{12}+a_{12}b_{22}\\
+a_{21} & a_{22} & \rightarrow & a_{21}b_{11}+a_{22}b_{21} & a_{21}b_{12}+a_{22}b_{22}
+\end{pmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+可以对线性方程组的系数进行表示
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\begin{cases}
+a_{11}x_{1}+a_{12}x_{2}+\cdots+a_{1n}x_{n}=b_{1}\\
+a_{21}x_{1}+a_{22}x_{2}+\cdots+a_{2n}x_{n}=b_{2}\\
+\ \ \ \ \ \vdots\\
+a_{m1}x_{1}+a_{m2}x_{2}+\cdots+a_{mn}x_{n}=b_{m}
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\begin{pmatrix}a_{11} &  & \cdots &  & a_{1n}\\
+\\
+\vdots &  & \ddots &  & \vdots\\
+\\
+a_{m1} &  & \cdots &  & a_{mn}
+\end{pmatrix}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+行列式为零或方程与未知量不一样多怎么办?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+代数学处理问题的方式一般是整体考虑
+\end_layout
+
+\begin_layout Itemize
+而在代数层面上, 集合的整体性质是通过其中的运算关系来展示的, 所以我们需要研究矩阵集合上的运算.
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+!矩阵及其运算
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+转换的观念
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+地图 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ 表
+\end_layout
+
+\begin_layout Itemize
+方程 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ 系数构成的表
+\end_layout
+
+\begin_layout Itemize
+坐标系
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Def.
+ 矩阵(matrix), 行(row), 列(column), 元素(element).
+ 
+\end_layout
+
+\begin_layout Itemize
+Def.
+ 方阵(square), 行(列)矩阵, 对角阵, 零矩阵, 单位阵
+\begin_inset Formula $\boldsymbol{E}$
+\end_inset
+
+(有些课本
+\begin_inset Formula $I_{n}$
+\end_inset
+
+)
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+案例: 电脑是如何对图形变换的
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+(以二维平面为例) 参看程序
+\uwave on
+\color teal
+transform.py
+\uwave default
+\color inherit
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+!矩阵的运算: 加法和数乘
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+希望它是封闭的.
+ 需要全体矩阵为
+\begin_inset Formula $M$
+\end_inset
+
+, 全体数字为
+\begin_inset Formula $F$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+这个``全体数字''的集合也要是封闭的
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+运算规律: 交换律, 结合律
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+!矩阵的运算: 与矩阵相乘
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+回到了我们一开始的变量代换的视角.
+\end_layout
+
+\begin_layout Itemize
+不满足交换律
+\begin_inset Formula $\implies$
+\end_inset
+
+左边乘, 右边乘
+\end_layout
+
+\begin_layout Itemize
+有结合律
+\begin_inset Formula $\implies$
+\end_inset
+
+可以定义幂次方
+\end_layout
+
+\begin_layout Itemize
+不满足交换律
+\begin_inset Formula $\neq$
+\end_inset
+
+所有矩阵都不可以交换.
+ 如
+\begin_inset Formula 
+\[
+AE=EA;\qquad AB=E\iff BA=E
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+有趣的问题: 什么样的矩阵是可交换的?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset CommandInset href
+LatexCommand href
+name "可交换矩阵-维基百科"
+target "https://en.wikipedia.org/wiki/Commuting_matrices"
+literal "false"
+
+\end_inset
+
+(commuting matrices):
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Two diagonalizable matrices 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ commute (
+\begin_inset Formula $AB=BA$
+\end_inset
+
+) if they are simultaneously diagonalizable (that is, there exists an invertible
+ matrix 
+\begin_inset Formula $P$
+\end_inset
+
+ such that both 
+\begin_inset Formula ${\displaystyle P^{-1}AP}$
+\end_inset
+
+ and 
+\begin_inset Formula ${\displaystyle P^{-1}BP}$
+\end_inset
+
+ are diagonal).
+ Converse is valid, provided that one of the matrices has no multiple eigenvalue
+s.
+\end_layout
+
+\begin_layout Itemize
+If A and B commute, they have a common eigenvector.
+ If A has distinct eigenvalues, and A and B commute, then A's eigenvectors
+ are B's eigenvectors.
+\end_layout
+
+\begin_layout Itemize
+The property of two matrices commuting is not transitive.
+\end_layout
+
+\begin_layout Itemize
+...
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+!与行列式的关系: 矩阵数乘与取行列式
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $k\begin{pmatrix}* & * & *\\
+* & * & *\\
+* & * & *
+\end{pmatrix}=\begin{pmatrix}k* & k* & k*\\
+k* & k* & k*\\
+k* & k* & k*
+\end{pmatrix}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula 
+\begin{align*}
+\left|k\begin{pmatrix}* & * & *\\
+* & * & *\\
+* & * & *
+\end{pmatrix}\right| & =\left|\begin{pmatrix}k* & k* & k*\\
+k* & k* & k*\\
+k* & k* & k*
+\end{pmatrix}_{n\times n}\right|\\
+ & =k^{n}\left|\begin{pmatrix}* & * & *\\
+* & * & *\\
+* & * & *
+\end{pmatrix}\right|
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+!与行列式的关系: 因子取行列式
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $|AB|=|A||B|.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+加法与减法的时候没有太好的性质
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+用矩阵的眼光看线性方程组
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\begin{cases}
+a_{11}x_{1}+a_{12}x_{2}+\cdots+a_{1n}x_{n}=b_{1}\\
+a_{21}x_{1}+a_{22}x_{2}+\cdots+a_{2n}x_{n}=b_{2}\\
+\ \ \ \ \ \vdots\\
+a_{m1}x_{1}+a_{m2}x_{2}+\cdots+a_{mn}x_{n}=b_{m}
+\end{cases},$
+\end_inset
+
+如果有
+\begin_inset Formula $A$
+\end_inset
+
+是系数矩阵
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\beta=\begin{pmatrix}\beta_{1}\\
+\vdots\\
+\beta_{n}
+\end{pmatrix}$
+\end_inset
+
+, 
+\begin_inset Formula $X=\begin{pmatrix}x_{1}\\
+\vdots\\
+x_{n}
+\end{pmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $AX=\beta$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+如果有
+\series bold
+列向量
+\series default
+, 
+\begin_inset Formula $C_{i}=\begin{pmatrix}a_{1i}\\
+\vdots\\
+a_{mi}
+\end{pmatrix}$
+\end_inset
+
+, 那么
+\begin_inset Formula $\beta=x_{1}C_{1}+x_{2}C_{2}+\cdots+x_{n}C_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+如果有行向量, 
+\begin_inset Formula $A_{i}=(a_{i1},a_{i2},\cdots,a_{in})$
+\end_inset
+
+, 第
+\begin_inset Formula $i$
+\end_inset
+
+个方程可以简单记作
+\begin_inset Formula $A_{i}X=b_{i}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+例子.
+ 矩阵乘法之一: 一个特殊的矩阵
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+这个矩阵的幂次是什么?
+\begin_inset Formula 
+\[
+\begin{pmatrix} & 1\\
+ &  & 1\\
+ &  &  & 1\\
+ &  &  &  & 1\\
+\\
+\end{pmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+会往外跑!
+\end_layout
+
+\begin_layout Itemize
+实际上这是一个特殊的Jordan块.
+ 
+\begin_inset Formula $J(0,5)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+例子: 矩阵乘法之二: 有哪些公式是保持的?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+求
+\begin_inset Formula 
+\[
+J(\lambda,5)=\begin{pmatrix}\lambda & 1\\
+ & \lambda & 1\\
+ &  & \lambda & 1\\
+ &  &  & \lambda & 1\\
+ &  &  &  & \lambda
+\end{pmatrix}^{n}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+牛顿的二项式展开式
+\end_layout
+
+\begin_layout Itemize
+完全平方式保持吗?
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+例子: 矩阵乘法之三: 作为线性变换的矩阵
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+线性? 变换?
+\end_layout
+
+\begin_layout Itemize
+Def.
+ 线性变换
+\end_layout
+
+\begin_layout Itemize
+有点抽象了, 放到空间上看看
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+平行且等距
+\end_layout
+
+\begin_layout Itemize
+参考3Blue1Brown视频《线性代数的本质》
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+高中的时候, 各路大仙吹嘘过的``仿射变换(Affine Transform)''
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+如何卡掉? (之一) 两个扁的程度不一样的椭圆摞在一起
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+求椭圆
+\begin_inset Formula $x^{2}/a^{2}+y^{2}/b^{2}=1$
+\end_inset
+
+所围成的面积.
+ 
+\end_layout
+
+\begin_layout Enumerate
+求椭圆
+\begin_inset Formula $x^{2}+2xy+5y^{2}=4$
+\end_inset
+
+所围成的面积.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+!矩阵的运算: 转置
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\left(A^{T}\right)^{T}=A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $(A+B)^{T}=A^{T}+B^{T}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $(AB)^{T}=B^{T}A^{T}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lambda A^{T}=\left(\lambda A\right)^{T}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+转置的逆和逆的转置相等吗?
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+当A为非奇异矩阵的时候,这两者相等.
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+!于是出现了初等矩阵
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Def.
+ 第一类, 第二类, 第三类初等矩阵 (以及其作用)
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+!有了乘法, 除法(逆元)呢
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+映射与逆
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $AB=E$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+所有的矩阵有逆元吗?
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+类比: 考虑自然数的情形: 
+\begin_inset Formula $6\times2=12,12\div2=6$
+\end_inset
+
+; 
+\begin_inset Formula $3\times0=0,0\div0=$
+\end_inset
+
+未定义.(没有逆)
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+例子: 关于逆
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+设
+\begin_inset Formula $A,B,A+B,A^{-1}+B^{-1}$
+\end_inset
+
+都是
+\begin_inset Formula $n$
+\end_inset
+
+阶可逆矩阵, 求
+\begin_inset Formula $\left(A^{-1}+B^{-1}\right)^{-1}$
+\end_inset
+
+等于
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\text{(A)}A^{-1}+B^{-1}\qquad\text{(B)}A+B\qquad\text{(\textbf{C})}A(A+B)^{-1}B\qquad\text{(D)}(A+B)^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+如何求可逆矩阵的逆矩阵?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+对于有的那些元素, 咋求?
+\end_layout
+
+\begin_layout Itemize
+简单! 列个方程组! 
+\begin_inset Formula 
+\[
+\begin{cases}
+a_{11}b_{1j}+a_{12}b_{2j}+\cdots+a_{1n}b_{nj} & =0\\
+\\
+a_{j1}b_{1j}+a_{j2}b_{2j}+\cdots+a_{jn}b_{nj} & =1\\
+\\
+a_{n1}b_{1j}+a_{n2}b_{2j}+\cdots+a_{nn}b_{nj} & =0
+\end{cases},
+\]
+
+\end_inset
+
+运用Cramer法则, 就有
+\begin_inset Formula 
+\[
+b_{ij}=\frac{A_{ji}}{|A|}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+引出伴随矩阵.
+ 
+\end_layout
+
+\begin_layout Itemize
+计算量相当的大.
+ 
+\end_layout
+
+\begin_layout Itemize
+矩阵可逆
+\begin_inset Formula $\iff$
+\end_inset
+
+Cramer法则.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+!伴随矩阵
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Th.
+ 矩阵
+\begin_inset Formula $A$
+\end_inset
+
+可逆
+\begin_inset Formula $\iff|A|\neq0,A^{-1}=\frac{1}{|A|}A^{*},$
+\end_inset
+
+其中
+\begin_inset Formula 
+\[
+A^{*}=\begin{pmatrix}A_{11} & A_{21} & \cdots & A_{n-1,1} & A_{n,1}\\
+A_{12} & A_{22} & \cdots & A_{n-1,2} & A_{n,2}\\
+A_{13} & A_{23} & \cdots & A_{n-1,3} & A_{n,3}\\
+\vdots & \vdots &  & \vdots & \vdots\\
+A_{1n} & A_{2n} & \cdots & A_{n-1,n} & A_{n,n}
+\end{pmatrix}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Th.
+ 
+\begin_inset Formula $AA^{*}=|A|E$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Col.
+ 
+\begin_inset Formula $|A^{*}|=|A|^{n-1}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+!逆矩阵有什么运算的性质?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $A$
+\end_inset
+
+可逆: 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(A^{-1}\right)^{-1}=A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lambda\neq0$
+\end_inset
+
+, 
+\begin_inset Formula $(\lambda A)^{-1}=\frac{1}{\lambda}A^{-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A,B$
+\end_inset
+
+同阶方阵且都可逆, 
+\begin_inset Formula $\left(AB\right)^{-1}=B^{-1}A^{-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+证明很有启发性: 
+\begin_inset Formula $(AB)(B^{-1}A^{-1})$
+\end_inset
+
+通过结合律干掉一些元素
+\end_layout
+
+\begin_layout Itemize
+推广, 如果有
+\begin_inset Formula $n$
+\end_inset
+
+个.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $A$
+\end_inset
+
+可逆, 
+\begin_inset Formula $A^{T}$
+\end_inset
+
+也可逆, 
+\begin_inset Formula $\left(A^{T}\right)^{-1}=\left(A^{-1}\right)^{T}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+证明比较有趣: 
+\begin_inset Formula $A^{T}(A^{-1})^{T}=(A^{-1}A)^{T}=E^{T}=E.$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+定义矩阵的幂次, 并且引出矩阵多项式
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $|A^{-1}|=\frac{1}{|A|}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+注意!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+注意正负号
+\end_layout
+
+\begin_layout Itemize
+注意是转置
+\end_layout
+
+\begin_layout Itemize
+注意最后乘上行列式的值分之一.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+例子: 类似分离常数的应用
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+设方阵
+\begin_inset Formula $A$
+\end_inset
+
+满足方程
+\begin_inset Formula $A^{2}-A-2E=0,$
+\end_inset
+
+证明: 
+\begin_inset Formula $A,A+2E$
+\end_inset
+
+都可逆, 并且求他们的逆矩阵.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+配方法
+\begin_inset Formula $(A+2E)^{-1}=\frac{3E-A}{4}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+已知
+\begin_inset Formula $A,B$
+\end_inset
+
+满足
+\begin_inset Formula $n$
+\end_inset
+
+阶方阵: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+有
+\begin_inset Formula $AB=A-2B$
+\end_inset
+
+, 求
+\begin_inset Formula $(A+2E)^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+有
+\begin_inset Formula $B=(E+A)^{-1}(E-A)$
+\end_inset
+
+, 求
+\begin_inset Formula $(E+B)^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+有
+\begin_inset Formula $A^{2}+3A-2E=\boldsymbol{0},$
+\end_inset
+
+求
+\begin_inset Formula $(A+E)^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+通过配凑的方法干掉平方项, 再干掉一次项, 最后只留下常数项.
+ 类似于中学学习过的分离常数.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+跑题: 分治算法: 以求逆序对为例
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+用Python写一个试试
+\end_layout
+
+\begin_layout Itemize
+两个for循环? 那么时间复杂度是
+\begin_inset Formula $\mathcal{O}(n^{2})$
+\end_inset
+
+的.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula 
+\[
+\left(n/2\right)^{2}+\left(n/2\right)^{2}\le n^{2}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+如果我们能解决小的问题, 把小的问题合并成大的问题呢?
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+归并排序(mergesort.c)
+\end_layout
+
+\begin_layout Itemize
+好处: 比较快.
+ 
+\begin_inset Formula $\log$
+\end_inset
+
+级别的(参看递归的Master Theorem, Introduction to Algorithms)
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+矩阵是不是也能用这种方法?
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+实际例子: Partition Matrix in VLSI models
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+When a matrix A appears in a mathematical model of a physical system such
+ as an electrical network, a transportation system, or a large corporation,
+ it may be natural to regard A as a partitioned matrix.
+ For instance, if a microcomputer circuit board consists mainly of three
+ VLSI (very large-scale integrated) microchips, then the matrix for the
+ circuit board might have the general form
+\begin_inset Formula 
+\[
+A=\begin{pmatrix}A_{11} & A_{12} & A_{13}\\
+A_{21} & A_{22} & A_{23}\\
+A_{31} & A_{32} & A_{33}
+\end{pmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+VLSI model
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figs/vlc-chips.png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+!分块矩阵的运算法则
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+加法: 正常加, 但是要求分块类型是相同的.
+ 
+\end_layout
+
+\begin_layout Itemize
+数乘: 正常数乘.
+\end_layout
+
+\begin_layout Itemize
+乘法(有意思的地方来了):
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+左边的列的分法要和右边的行的分法相同
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+转置(容易错)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+注意作用的``传导'', 就像链式法则一样.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Def.
+ 分块对角矩阵
+\end_layout
+
+\begin_layout Itemize
+Prop.
+ 分块对角矩阵
+\begin_inset Formula $|A|=|A_{1}||A_{2}|\cdots|A_{s}|$
+\end_inset
+
+, 但是分块上三角矩阵没有这样好的性质.
+ 
+\end_layout
+
+\begin_layout Itemize
+Prop.
+ 分块对角矩阵的逆是每一个对角元上的逆之后的矩阵
+\end_layout
+
+\begin_layout Itemize
+Note.
+ 分块上三角矩阵也没有这样的性质, 而是
+\begin_inset Formula $A=\begin{pmatrix}B & D\\
+ & C
+\end{pmatrix},A^{-1}=\begin{pmatrix}B^{-1} & -B^{-1}DC^{-1}\\
+ & C^{-1}
+\end{pmatrix}.$
+\end_inset
+
+ (很奇怪, 后面会提及)
+\end_layout
+
+\begin_layout Itemize
+Prop.
+ 分块对角矩阵的乘积是对应相乘.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+``复杂的东西总是存在简单的解释''
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Python程序是由一条条简单的语句构成的
+\end_layout
+
+\begin_layout Itemize
+汇编语言只有比较少(大部分)的指令
+\end_layout
+
+\begin_layout Itemize
+我们总是用简单的东西理解世界, 并且逐步推广
+\end_layout
+
+\begin_layout Itemize
+可逆矩阵可不可以分解为初等矩阵的乘积?
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+!矩阵的初等行列变换
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Def.
+ 矩阵的初等行(列)变换
+\end_layout
+
+\begin_layout Itemize
+可以写成矩阵相乘的形式, 赞(大大统一了形式)!
+\end_layout
+
+\begin_layout Itemize
+考察这些``被消元之后的矩阵'', 发现了什么?
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+原来可是一堆方程组
+\end_layout
+
+\begin_layout Itemize
+不妨把它们归为一类!
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+等价类与等价关系(在相抵意义下的标准型)
+\end_layout
+
+\begin_layout Itemize
+算法: 求线性方程组(Guass消元法, 低配版)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+发现: 最后总是可以消成
+\series bold
+阶梯型
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+存在吗?唯一吗?(自行阅读证明)
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+反应了这个线性方程组到底有几个是真正来干事的
+\end_layout
+
+\begin_layout Itemize
+Def.
+ 秩: 
+\begin_inset Formula $A_{n\times n},r(A)=r\iff PAQ=\begin{pmatrix}I_{r} & 0\\
+0 & 0
+\end{pmatrix}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+联系
+\begin_inset Formula $AX=B,XA=B$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+可逆矩阵可不可以分解为若干个初等矩阵的乘积?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+任意的初等行列变换都可以经过一系列初等行列变换变为标准形.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+唯一性, 存在性, 自读教科书
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+如果
+\begin_inset Formula $A$
+\end_inset
+
+
+\series bold
+可逆
+\series default
+, 我们只要通过初等行变换把
+\begin_inset Formula $A$
+\end_inset
+
+化作
+\begin_inset Formula $I_{n}$
+\end_inset
+
+.
+ 假设
+\begin_inset Formula $P_{k}...P_{1}AQ_{1}...Q_{l}=I_{n}.$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+(互逆的矩阵可交换) 
+\begin_inset Formula $\left(P_{k}...P_{1}A\right)Q_{1}...Q_{l}=I_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $Q_{l}^{-1}P_{k}...P_{1}AQ_{1}...\mathbf{Q_{l}Q_{l}^{-1}}=Q_{l}I_{n}Q_{l}^{-1}.$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $A^{-1}XA$
+\end_inset
+
+有着很好的性质, 尤其是在算幂次的时候.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+求
+\begin_inset Formula $\left(A^{-1}XA\right)^{2},\left(A^{-1}XA\right)^{3},\cdots,\left(A^{-1}XA\right)^{n}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+设
+\begin_inset Formula $A=\begin{pmatrix}1 & 1\\
+1 & 0
+\end{pmatrix},$
+\end_inset
+
+求
+\begin_inset Formula $A^{2},A^{3},A^{4},A^{5}.$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+要是能写成
+\begin_inset Formula $T^{-1}\begin{pmatrix}\lambda_{1}\\
+ & \lambda_{2}
+\end{pmatrix}T$
+\end_inset
+
+的样子就好了.
+ 
+\end_layout
+
+\begin_layout Itemize
+能不能做? 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+char-poly.py
+\end_layout
+
+\begin_layout Itemize
+(3阶矩阵前若干个有这些
+\series bold
+可以
+\series default
+(-3..3)[6493, 121916, 
+\series bold
+6481981
+\series default
+],(-1..1)[747, 3882, 
+\series bold
+15054
+\series default
+],(114,514,191)[0, 165, 
+\series bold
+19518
+\series default
+])(98%,76%,98%)
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+矩阵的
+\series bold
+相似
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+例子: 解线性方程组
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+求方程组
+\begin_inset Formula 
+\[
+\begin{cases}
+3x+2y+z=39 & (1)\\
+2x+3y+z=34 & (2)\\
+x+2y+3z=26 & (3)
+\end{cases}
+\]
+
+\end_inset
+
+的解.
+\end_layout
+
+\begin_layout Enumerate
+讨论线性方程组
+\begin_inset Formula 
+\[
+\begin{cases}
+x_{1}+3x_{2}+2x_{3}=1 & (1)\\
+2x_{1}+5x_{2}+\lambda x_{3}=3 & (2)\\
+3x_{1}+\lambda x_{2}-8x_{3}=1 & (3)
+\end{cases}
+\]
+
+\end_inset
+
+的解.(Eg3.4.13)
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+跑题: Wolfram Mathematica中的Solve[]函数
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Wolfram Language
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+== 表示相等关系, =表示赋值
+\end_layout
+
+\begin_layout Itemize
+所有的命令都是由[]
+\end_layout
+
+\begin_layout Itemize
+完全函数式
+\end_layout
+
+\begin_layout Itemize
+矩阵的乘法是
+\begin_inset Formula $a.b$
+\end_inset
+
+而不是
+\begin_inset Formula $a*b$
+\end_inset
+
+, 
+\begin_inset Formula $a*b$
+\end_inset
+
+是Hadamard乘积(每一个格子对应相乘).
+ 
+\end_layout
+
+\begin_layout Itemize
+更多的参看Help>Wolfram Documentation
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+LinearSolve[]
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+finds an 
+\begin_inset Formula $x$
+\end_inset
+
+ that solves the matrix equation 
+\begin_inset Formula $m.x==b$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+例子:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In[*]:=
+\begin_inset Formula $\texttt{LinearSolve[\{{\{{a,b}\},\{{c,d}\}}\},\{{x,y}\}]}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula 
+\[
+\texttt{Out[*]=}\left\{ \frac{dx-by}{ad-bc},\frac{cx-ay}{bc-ad}\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+例子: 求
+\begin_inset Formula $AX=B,XA=B$
+\end_inset
+
+的方法
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+求
+\begin_inset Formula $X,$
+\end_inset
+
+使得
+\begin_inset Formula $AX=B$
+\end_inset
+
+, 其中
+\begin_inset Formula $A=\begin{pmatrix}1 & 2 & 3\\
+2 & 2 & 1\\
+3 & 4 & 3
+\end{pmatrix},B=\begin{pmatrix}2 & 5\\
+3 & 1\\
+4 & 3
+\end{pmatrix}.$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Solution.
+ 
+\begin_inset Formula $X=\begin{pmatrix}3 & 2\\
+-2 & -3\\
+1 & 3
+\end{pmatrix}.$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+为什么翻译做秩(rank)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+《廣韻·入聲·質·秩》秩：
+\series bold
+積
+\series default
+也，
+\series bold
+次
+\series default
+也，
+\series bold
+常
+\series default
+也，
+\series bold
+序
+\series default
+也，書曰望秩于山川。直一切，十二。
+\end_layout
+
+\begin_layout Itemize
+《孔叢子·論書》: 孔子曰：「高山『五嶽』，定其差秩，祀所視焉。」
+\end_layout
+
+\begin_layout Itemize
+可能是暗示这是等价关系? (可能有更好的理解方式)
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+!关于秩的第二个等价定义
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+能不化简直接看吗? 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+可以! Def.
+ 秩(子式版本)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+设
+\begin_inset Formula $A_{m\times n}$
+\end_inset
+
+, 则
+\series bold
+存在
+\series default
+有一个
+\begin_inset Formula $r$
+\end_inset
+
+阶子式不为0, 且
+\series bold
+所有
+\series default
+
+\begin_inset Formula $r+1$
+\end_inset
+
+阶子式都为0
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+为什么要用这个? 定义多项式矩阵的秩的时候第一个就不灵了.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+经过初等行(列)变换, 秩不变
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Def1很容易
+\end_layout
+
+\begin_layout Itemize
+Def2怎么证?
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Def.
+ 满秩与降秩
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\begin{pmatrix}0 & 0\\
+0 & 0
+\end{pmatrix}$
+\end_inset
+
+仿佛自己失了秩.jpg
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+案例: 观察刚刚那个图形程序
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+满秩的时候是什么情形?
+\end_layout
+
+\begin_layout Itemize
+降秩呢?
+\end_layout
+
+\begin_layout Itemize
+刻画了``压了多少'', 行列式没办法处理(
+\begin_inset Formula $|A|=0$
+\end_inset
+
+)
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+!问题: 矩阵相乘对于矩阵的秩有什么影响?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+观察例子!
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+如果乘的是个零矩阵, 就降秩了.
+ 
+\end_layout
+
+\begin_layout Itemize
+有没有可能升秩呢?
+\end_layout
+
+\begin_layout Itemize
+如果两个矩阵的秩是一样的, 相乘等于什么?
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $r(AB)\leq\min\{r(A),r(B)\}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+考虑标准形: 
+\begin_inset Formula $A=\begin{pmatrix}E_{r} & 0\\
+0 & 0
+\end{pmatrix},B=\begin{pmatrix}E_{s} & 0\\
+0 & 0
+\end{pmatrix}.$
+\end_inset
+
+ 
+\begin_inset Formula $r(AB)=\min\{r(A),r(B)\}$
+\end_inset
+
+错误的证明!
+\end_layout
+
+\begin_layout Itemize
+小命题: 
+\begin_inset Formula $P$
+\end_inset
+
+可逆, 
+\begin_inset Formula $r(PA)=r(A)$
+\end_inset
+
+.
+ (可逆矩阵是一系列初等矩阵的乘积) 根据Def1.
+\end_layout
+
+\begin_layout Itemize
+根据定义: 
+\begin_inset Formula $PAQ=\begin{pmatrix}E_{r} & 0\\
+0 & 0
+\end{pmatrix},r(AB)=r(PA\mathbf{QQ^{-1}}B)=r\left(\begin{pmatrix}E_{r} & 0\\
+0 & 0
+\end{pmatrix}B'\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $r(B')=r(B)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\begin{pmatrix}E_{r} & 0\\
+0 & 0
+\end{pmatrix}B'$
+\end_inset
+
+是
+\begin_inset Formula $B'$
+\end_inset
+
+的前
+\begin_inset Formula $r$
+\end_inset
+
+行, 因此秩小于
+\begin_inset Formula $r$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+!因此说说0
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+在数的领域里面, 
+\begin_inset Formula $ab=0\implies a=0\lor b=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+矩阵里面只有
+\begin_inset Formula $r(A)=r(B)$
+\end_inset
+
+的时候才可以出现.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+不相等的时候无法推出
+\begin_inset Formula $A=0\lor B=0$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+例子: Jordan块, 伴随矩阵与秩
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+求
+\begin_inset Formula 
+\[
+\lim_{n\to\infty}\begin{pmatrix}1/2 & 1 & 1\\
+0 & 1/3 & 1\\
+0 & 0 & 1/5
+\end{pmatrix}^{n}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+设
+\begin_inset Formula $n$
+\end_inset
+
+阶矩阵
+\begin_inset Formula $A$
+\end_inset
+
+的伴随矩阵为
+\begin_inset Formula $A^{*}$
+\end_inset
+
+, 证明(各个小题没有较大的关联):
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $|A^{*}|=|A|^{n-1};$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(A^{*}\right)^{*}=|A^{n-2}|A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $r(A^{*})=\begin{cases}
+n & r(A)=n\\
+1 & r(A)=n-1\\
+0 & r(A)<n-1
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+设
+\begin_inset Formula $A$
+\end_inset
+
+为
+\begin_inset Formula $n$
+\end_inset
+
+阶方阵, 
+\begin_inset Formula $A^{*}$
+\end_inset
+
+为伴随矩阵, 并且
+\begin_inset Formula $\det A=1/3$
+\end_inset
+
+, 求
+\begin_inset Formula $\det\left(\left(\frac{1}{4}A\right)^{-1}-15A^{*}\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+例子: 反对称矩阵的秩
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+反对称矩阵有这样的性质: 
+\begin_inset Formula $A^{T}=-A$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+设
+\begin_inset Formula $a,b,c$
+\end_inset
+
+不全为0, 试着求
+\begin_inset Formula $A=\begin{pmatrix}0 & a & b\\
+-a & 0 & c\\
+-b & -c & 0
+\end{pmatrix}$
+\end_inset
+
+的秩.
+ 
+\end_layout
+
+\begin_layout Enumerate
+设
+\begin_inset Formula $A=(a_{ij})_{n\times n}$
+\end_inset
+
+是
+\begin_inset Formula $n$
+\end_inset
+
+阶反对称矩阵
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+如果
+\begin_inset Formula $n$
+\end_inset
+
+为奇数, 
+\begin_inset Formula $|A|=0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+(*)如果
+\begin_inset Formula $n$
+\end_inset
+
+为偶数, 
+\begin_inset Formula $|A|$
+\end_inset
+
+是一个以
+\begin_inset Formula $a_{ij}$
+\end_inset
+
+为多项式的平方, 如果多项式的取值限制在实数范围内, 那
+\begin_inset Formula $|A|\geq0$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+*例子(继续): 反对称矩阵的秩
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+设
+\begin_inset Formula $a,b,c$
+\end_inset
+
+不全为0, 试着求
+\begin_inset Formula $A=\begin{pmatrix}0 & a & b\\
+-a & 0 & c\\
+-b & -c & 0
+\end{pmatrix}$
+\end_inset
+
+的秩.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+一个好玩的观念如下: 
+\end_layout
+
+\begin_layout Itemize
+从分块矩阵的角度来看, 记录
+\begin_inset Formula $A=\begin{pmatrix}B & \alpha\\
+-\alpha & 0
+\end{pmatrix},B=\begin{pmatrix}0 & a\\
+-a & 0
+\end{pmatrix},\alpha=\begin{pmatrix}b\\
+c
+\end{pmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $B$
+\end_inset
+
+可逆, 有
+\begin_inset Formula $\begin{pmatrix}E_{2} & 0\\
+\alpha^{T}B^{-1} & 1
+\end{pmatrix}A\begin{pmatrix}E_{2} & -B^{-1}\\
+0 & 1
+\end{pmatrix}=\begin{pmatrix}B & 0\\
+0 & \alpha^{T}B^{-1}\alpha
+\end{pmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+注意: 反对称矩阵的逆也是反对称的
+\end_layout
+
+\begin_layout Enumerate
+然后就说明了
+\begin_inset Formula $(\alpha^{T}B^{-1}\alpha)=\alpha^{T}(B^{-1})^{T}\alpha=-\alpha^{T}B^{-1}\alpha$
+\end_inset
+
+, 因此
+\begin_inset Formula $\alpha^{T}B\alpha=0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+(*) 设
+\begin_inset Formula $B_{m\times n}$
+\end_inset
+
+是反对称矩阵, 对任意
+\begin_inset Formula $X_{m\times1}$
+\end_inset
+
+有
+\begin_inset Formula $X^{T}BX=0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+(*) 设
+\begin_inset Formula $B_{m\times n}$
+\end_inset
+
+是反对称矩阵, 对任意
+\begin_inset Formula $X_{m\times n}$
+\end_inset
+
+有
+\begin_inset Formula $X^{T}BX=0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+矩阵的
+\series bold
+合同
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+*例子: 初等变换解决秩的不等式(Sylvester不等式)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+设
+\begin_inset Formula $A_{m\times n},B_{n\times s},$
+\end_inset
+
+那么
+\begin_inset Formula 
+\[
+r(AB)\geq r(A)+r(B)-n.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+*例子: 更多关于秩的有趣性质
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $r\begin{pmatrix}A & O\\
+O & B
+\end{pmatrix}=r(A)+r(B)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $r\begin{pmatrix}A & O\\
+C & B
+\end{pmatrix}\geq r(A)+r(B)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A$
+\end_inset
+
+的子矩阵的秩
+\begin_inset Formula $r(A_{1})\leq r(A)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+!回到主题: 线性方程组的求解
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+化为阶梯型: 
+\begin_inset Formula 
+\[
+(A|\beta)\stackrel{\text{行变换}}{\implies}\begin{pmatrix}* & * & * & *| & b_{1}\\
+0 & * & * & *| & \vdots\\
+0 & 0 & * & *\\
+0 & 0 & 0 & *| & b_{r}\\
+0 & 0 & 0 & 0| & b_{r+1}\\
+0 & 0 & 0 & 0| & \vdots\\
+0 & 0 & 0 & 0| & b_{n}
+\end{pmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+判断有没有解: 
+\begin_inset Formula $b_{r+1}=0,..,b_{n}=0$
+\end_inset
+
+有解, 反之无解
+\end_layout
+
+\begin_layout Enumerate
+求
+\begin_inset Formula $AX=\beta$
+\end_inset
+
+的解
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+考虑
+\begin_inset Formula $AX=0$
+\end_inset
+
+的解(有什么好处?)
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $S=\{AX=0\}$
+\end_inset
+
+的解: 加法封闭, 数乘封闭
+\end_layout
+
+\begin_layout Enumerate
+对于那些自由的变量, 取
+\begin_inset Formula $\epsilon_{1}=(1,0,\cdots,0)^{T},\epsilon_{n}=(0,0,\cdots,1)^{T}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+得到通解
+\begin_inset Formula $X=(x_{1}..x_{n})^{T}=\sum_{i=1}^{n}x_{i}\epsilon_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+考虑
+\begin_inset Formula $AX=\beta$
+\end_inset
+
+的解(解一一对应)
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Tips: 遇见线性表示的时候
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+有时候记得用矩阵乘法的形式简化记号!
+\begin_inset Formula 
+\[
+k_{1}\eta_{1}+\cdots+k_{n}\eta_{n}=0\iff(\eta_{1}..\eta_{n})\begin{pmatrix}k_{1}\\
+\vdots\\
+k_{n}
+\end{pmatrix}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+!可是线性方程组里有时候有废物啊!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+例子: 
+\begin_inset Formula $\begin{cases}
+x+y=1 & (1)\\
+2x+2y=2 & (2)
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+什么是废物? 可以被其他人替代.
+ 
+\end_layout
+
+\begin_layout Itemize
+什么叫替代? 别人调整一下自己, 就能代替你的功能.
+\end_layout
+
+\begin_layout Itemize
+嗯?
+\end_layout
+
+\begin_layout Itemize
+Def.
+ 线性相关
+\end_layout
+
+\begin_layout Itemize
+补充一点点命题逻辑的内容
+\end_layout
+
+\begin_layout Itemize
+Takeaway Message.
+ 找到自己人生的道路, 别人无法替代或很难替代
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "韩老师与你“漫谈学习和人生规划”"
+target "https://www.bilibili.com/video/BV1RR4y1s73d/?spm_id_from=333.337.search-card.all.click&vd_source=92e33b8be0a9fcd124e9c9cb80f446f0"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "程序分析-第五章-聊聊太卷的学业生活"
+target "https://zhuanlan.zhihu.com/p/417187798"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+举个具体的例子:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+平面坐标系
+\end_layout
+
+\begin_layout Itemize
+空间坐标系
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+!极大线性无关组
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Def.
+ 极大线性无关组
+\end_layout
+
+\begin_layout Itemize
+唯一吗?
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+不唯一的, 但是数量是唯一的.
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+一种特殊的分块法
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+研究什么集合里面有没有废物? 向量的集合里面!
+\end_layout
+
+\begin_layout Itemize
+允许怎样调整? 
+\series bold
+加法
+\series default
+和
+\series bold
+数乘
+\series default
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+其实, 这是一种特殊的分块!
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+行向量
+\end_layout
+
+\begin_layout Itemize
+列向量
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+线性方程组的向量表示
+\end_layout
+
+\begin_layout Itemize
+Def.
+ 向量的个数和维数
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+!向量的线性相关性: 进一步说明
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Th1.
+ 线性相关
+\begin_inset Formula $\iff$
+\end_inset
+
+至少有一个向量可由其他的向量线性表示
+\end_layout
+
+\begin_layout Itemize
+Th2.
+ 
+\begin_inset Formula $a_{1}..a_{m}$
+\end_inset
+
+线性无关, 
+\begin_inset Formula $a_{1}..a_{m+1}$
+\end_inset
+
+线性相关
+\begin_inset Formula $\implies$
+\end_inset
+
+
+\begin_inset Formula $a_{m+1}$
+\end_inset
+
+可以由
+\begin_inset Formula $a_{1}..a_{m}$
+\end_inset
+
+唯一表示.
+ 
+\end_layout
+
+\begin_layout Itemize
+诶? 矩阵的行列变换的时候也有类似的``除去废物''的行为.
+ 
+\end_layout
+
+\begin_layout Itemize
+那么向量组的线性相关性和矩阵的秩之间有没有关系呢? 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+有! Def.
+ 行秩, 列秩.
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+!增加向量个数
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Th1.
+ 已经线性相关的向量组, 增加向量, 仍然线性相关
+\end_layout
+
+\begin_layout Itemize
+Coll1.
+ 线性无关的向量组, 减少向量个数, 仍然线性无关
+\end_layout
+
+\begin_layout Itemize
+Th2.
+ 已经线性无关的向量组, 增加向量组的维数, 那么仍然线性无关.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Section
+*线性?空间?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+*线性空间
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+总结与归纳: 线性空间的八条性质.
+\end_layout
+
+\begin_layout Itemize
+第一个比较抽象的例子!
+\end_layout
+
+\begin_layout Itemize
+为什么要抽象?
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+平面, 空间的维数还是有限的
+\end_layout
+
+\begin_layout Itemize
+有时候维数是无限的! 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+多项式空间: 无穷维的, 用向量表示很多时候不灵了
+\end_layout
+
+\begin_layout Itemize
+Def.
+ 基, 维数, 坐标
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+*子空间
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+集合的子集
+\end_layout
+
+\begin_layout Itemize
+线性空间的子空间, Eg., Def.
+ 子空间
+\end_layout
+
+\begin_layout Itemize
+维数公式(和集合的很像!)
+\end_layout
+
+\begin_layout Itemize
+Def.
+ 直和(方便很多)
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+*线性映射
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+可以不可以不去依赖基, 来阐述线性空间之间的映射呢?
+\end_layout
+
+\begin_layout Itemize
+Def.
+ 线性变换
+\begin_inset Formula $\varphi:V\to U$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+线性映射的最关键的条件是什么?
+\end_layout
+
+\begin_layout Itemize
+我们可以做
+\series bold
+基的转化
+\series default
+.
+ Def.
+ 过渡矩阵
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+为什么要研究映射?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+转化的观点
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+例子: 
+\begin_inset Formula $\text{考虑}\R^{+},\text{定义}a\oplus b=ab,k\circ a=a^{k},k\in\R,a,b\in\R^{+}.\text{现在求这个空间的维数}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+不妨使用
+\begin_inset Formula $\ln,\exp$
+\end_inset
+
+两个在这个空间下是线性的映射来看一看, 这样我们就看到了这个空间化为了
+\begin_inset Formula $\R$
+\end_inset
+
+, 因此这个空间的维数就是
+\begin_inset Formula $1$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+线性空间的同构*
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+对应过去的一种想法, 构造一一对应.
+\end_layout
+
+\begin_layout Itemize
+小故事: 山头, 架桥与学习知识
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+线性代数基本不讲
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+为什么看上去学的没什么用? 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+深度不够, 很多内容看起来不够自然
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+缺失的不止这些!
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+数域, 多项式的性质...
+\end_layout
+
+\begin_layout Itemize
+(有一部分和数论很相似, 学过[数学/信息]竞赛的同学有福了)
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+个人观点: 看一看想做什么
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+严肃认真的研究东西
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+学习
+\series bold
+高等代数
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+混
+\series default
+个毕业躺平当个码农
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+后面的内容不用听了
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+《本命年的胡思乱想》–朱富海
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+想想不由得有点沮丧：尽管面对的是大学新生，每个人都是18岁上下，然而他们中的很多人似乎已经定型了。正所谓“冰冻三尺非一日之寒”，不管是求知欲的丧失、动手能力的欠
+缺还是逻辑思维能力的匮乏，都不是一朝一夕形成的，其根源应该在中学，或许还有小学，这大概是以后我该关注的地方。
+\end_layout
+
+\begin_layout Frame
+...
+\end_layout
+
+\begin_layout Frame
+跟一些中学生接触过，有的学生受到的毒害比较深，已经不会思考了；也有一些学生，尤其是低年级学生，还具有初生牛犊的锐气，他们在课余之时学了不少大学数学内容，比如，就
+我所知，一些中学生看过我编写的《高等代数与解析几何》和《抽象代数》，甚至看了《有限群表示论》。挺想和他们保持沟通的，可惜未能实现，他们还面临着高考的压力，我不便
+于过多打扰他们，他们似乎也不想打扰我。
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Section
+*回顾解线性方程组的过程
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+!线性方程组什么时候有解?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Th1.
+ 有解的判定条件
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+无解
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $R(A)<R(A,b)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+有唯一解
+\begin_inset Formula $\iff$
+\end_inset
+
+
+\begin_inset Formula $R(A)=R(A,b)=n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+有无穷多的解
+\begin_inset Formula $\iff R(A)=R(A,b)<n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+!先看看右边等于0的情况
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula 
+\[
+AX=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Def.
+ 基础解系
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+和向量的情形很相似.
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+!那么右边不等于0的时候呢
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+非齐次线性方程组
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Prop1.
+ 两个解相减就得到了等于0的情况
+\end_layout
+
+\begin_layout Itemize
+Prop2.
+ 右边等于0的解系+右边等于A的解=右边等于A的解
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+表达: 齐次的通解+特解
+\end_layout
+
+\begin_layout Itemize
+以前的那些Ideas...
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+秩
+\end_layout
+
+\begin_layout Itemize
+线性表示
+\end_layout
+
+\begin_layout Itemize
+向量组的等价
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+*从``0''开始: 核空间
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+好像高中没有系统的讲过映射的概念
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+补充视频: 《离散数学》南京大学 魏恒峰 (ant-hengxin @ bilibili)
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Frame
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figs/ker-spaces.png
+	lyxscale 50
+	width 80page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+核空间示意
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+启示: 从基础的问题做起
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+个人经历: 停课, 复课, 与课本基础题
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+高一: 数学课本? 那么简单的东西还要看?
+\end_layout
+
+\begin_layout Itemize
+高二(上): 停课玩OI, 没有(学习)数学课本, 数学课程都是在网络上找的(和课外班)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+啥也看不懂: 符号繁杂
+\begin_inset Formula $\sum,\prod,d/dx,\int,\oplus,\mu,d,{n \choose m}$
+\end_inset
+
+; 不讲人话(显然,易得,注意到...)(境界不够)
+\end_layout
+
+\begin_layout Itemize
+没人问: 网络上, 听不懂; 现实中, 不会(学长们都忘了OI相关的数学)
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+高二(下): 宋老师(班主任): 从基础题做起, 
+\series bold
+从课后习题
+\series default
+做起
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+但是看不到课后习题背后的内涵, 甚至没有想法去看内涵
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+高三: 看数学课本, 小丑竟是我自己
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Recall.
+ 复杂的东西可以被简单的东西组合起来(不一定是线性组合)
+\end_layout
+
+\begin_layout Itemize
+线性代数(或高等代数)的学习就多了几分
+\series bold
+意义
+\end_layout
+
+\begin_layout Itemize
+不过欠下来的总是迟早要补的, 不然迟早出大麻烦(如映射, 集合, 命题逻辑).
+ 参看《离散数学》by南京大学 魏恒峰
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+原因: 高考不考.
+ 但是面对更加复杂的数学结构原来靠
+\series bold
+直觉
+\series default
+有时候就不灵了.
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+《高中数学与大学数学》–朱富海
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\size footnotesize
+从学生的学习方式看, 差异很大.
+ 很多学生都有同样的体会: 中学数学是刷题刷出来的, 或者准确地说, 中学数学给他们留下的最深（希望不是全部）的印象是刷题.
+ 学生们总有做不完的练习题, 其中很大一部分是机械性的重复.
+ 在大量的重复训练中, 学生们形成了条件反射, 会套用一些方法快速做题, 从而能有效应对考试.
+ 然而这种训练方式的后果是明显的: 
+\begin_inset Flex Alert
+status open
+
+\begin_layout Plain Layout
+
+\size footnotesize
+学生们穷于应付作业, 根本没有时间思考, 或者更严重的, 他们根本没有产生要思考的念头! 
+\end_layout
+
+\end_inset
+
+长此以往, 他们的思维能力在退化, 接受新知识的能力也在退化, 因为没有足够的重复次数, 他们学不明白新知识.
+ 这些都给学生的大学生活带来了隐患, 因为大学数学一般是刷题刷不出来的, 很多课程没有那么多习题供学生练习, 很多高年级的选修课的教材根本没有课后练习!
+ 有人说数学研究不是玩技巧的, 而是玩概念的, 很有道理.
+ 大学的很多课程都是数学家们对一些问题感兴趣, 提炼出其中共性得到一个新的概念, 围绕这个概念进行探索, 逐步建立起一个新的数学理论, 原始问题在新的理论下一步
+步获得解决.
+ 这样的课程对初学者是有一定挑战性的, 光看书已经不容易懂了, 因为他们从书上看不出或者根本不关心问题的起源和探索路径, 自然也不明白为什么要讲那些看起来不那么
+友好的数学命题.
+ 对大部分学生来说, 课前适当预习, 了解一下课程的框架, 带着问题听课效果会好一点, 否则课后复习难度较大.
+ 有的学生就反映, 复习过程有时要花费比老师讲课更长的时间.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+遗留的问题
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+基1 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ 线性映射 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ 基2
+\end_layout
+
+\begin_layout Itemize
+有时候基麻烦了, 怎么换?
+\end_layout
+
+\begin_layout Itemize
+我们还能用矩阵表示什么?
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+参考视频、文章与书籍
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+《工程高等代数》中国地质大学出版
+\end_layout
+
+\begin_layout Itemize
+《高等代数与解析几何》 朱福海等
+\end_layout
+
+\begin_layout Itemize
+《线性代数学习指导》 李尚志
+\end_layout
+
+\begin_layout Itemize
+《高等代数教学笔记》微信公众号, 数林广记, 朱福海
+\end_layout
+
+\begin_layout Itemize
+《教学感悟》 微信公众号, 数林广记, 朱福海
+\end_layout
+
+\begin_layout Itemize
+《南京大学 高等代数》bilibili zhufuhainj
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\end_body
+\end_document

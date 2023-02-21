@@ -1,0 +1,693 @@
+\selectlanguage{chinese}%
+\global\long\def\Hom{\text{Hom}}%
+
+\global\long\def\Ker{\text{Ker}}%
+
+\global\long\def\End{\text{End}}%
+
+\global\long\def\id{\text{id}}%
+
+\global\long\def\en#1{\mathscr{#1}}%
+
+\global\long\def\huat#1{\mathscr{#1}}%
+
+\global\long\def\huaa{\mathscr{A}}%
+
+\global\long\def\huab{\mathscr{B}}%
+
+\global\long\def\huac{\mathscr{C}}%
+
+
+\section{线性变换的基本概念与矩阵}
+
+\subsection{线性变换}
+
+在之前的研究中, 我们考虑了线性映射$\Hom(V,U)$表示从线性空间$V$映射线性空间$U$的映射的全体. 也就是: 
+
+\selectlanguage{chinese}%
+那么如果$V$和$U$恰好是同一个东西, 那么我们就可以记这个是\textbf{线性变换}. 用花体的字母写出: 也就是 
+\begin{lyxcode}
+\textbackslash xymatrix\{\textbackslash varphi:~\&~V\_\{/\textbackslash F\}\textbackslash ar{[}r{]}~\&~U\_\{/\textbackslash F\}\textbackslash ar{[}r{]}\textbackslash ar{[}dr{]}~\&~\textbackslash varphi\textbackslash text\{是单射\textbackslash ar{[}r{]}\}~\&~V\textbackslash simeq\textbackslash varphi(V)\textbackslash\textbackslash ~~\&~~\&~~\&~\textbackslash varphi\textbackslash text\{是满射\textbackslash ar{[}r{]}\}~\&~U\textbackslash simeq~V/\textbackslash Ker\textbackslash varphi~\}~
+\end{lyxcode}
+\[
+\Hom(V,V)\text{是线性变换:\ensuremath{\xymatrix{\mathscr{A}: & V\ar[r] & V & (\text{从}V}
+\text{到}V}自身的线性映射)}
+\]
+
+如果$V$是$\F$上的线性空间, 称$V$到其自身的线性映射$\en A$为$V$上的\textbf{线性变换}. 我们不妨把它记作$\End(V)$. 
+\begin{defn}
+设$V$是$\F$上的线性空间, 称$V$到它自身的线性映射$\huat A$为$V$上的\textbf{线性变换}, 即对于任意的$\alp,\bt\in V,k,l\in\F$,
+都有
+\[
+\huat A(k\alp+l\bt)=k\huat A\alp+l\huat A\bt.
+\]
+\end{defn}
+下面来举一些例子: 
+\begin{example}
+数乘变换: TODO
+\end{example}
+%
+\begin{example}
+平面上的旋转变换: TODO
+\end{example}
+%
+\begin{example}
+求导与积分: TODO
+\end{example}
+有了上面的例子, 我们自然要问:$\End V$是不是也是$\F$上的一个线性空间? 于是我们给出如下的验证:
+\begin{itemize}
+\item 加法: 如果$\en{AB}\in\End V,\forall\alpha\in V$, \textbf{定义}$(\en A+\en B)\alpha=\en A\alpha+\en B\alpha$.
+那么$\en A+\en B\in\End V$吗?
+\begin{itemize}
+\item $(\en A+\en B)(\alpha+\beta)\stackrel{\text{线性变换}}{======}(\en A+\en B)\alpha+(\en A+\en B)\beta\stackrel{\text{加法定义}}{======}\en A(\alpha+\beta)+\en B(\alpha+\beta)$
+\end{itemize}
+\item 数乘
+\begin{itemize}
+\item $k\in\F,\en A\in\End V$, $(k\en A)(\alp)=k(\en{\en A\alp})\in\End V$. 
+\end{itemize}
+\end{itemize}
+由此可得, End V 果然是F上的一个线性空间. 
+
+既然是一个映射, 我们自然要考虑一下它的合成有什么情形. 更一般的, 我们考虑一下如下内容: 
+\begin{itemize}
+\item 交换律: 不满足. 实际上很多情形下交换律都不是天然就有的. 即使在考虑映射的换序的时候也不是这样. 
+\item 结合律: 天然满足. 
+\item 零向量: 恒等变换$\text{id}$, 也就是$\text{id}\circ\huat A=\huat A$. 有时候也成为\textbf{单位元}. 
+\item 逆元: 有没有可逆的元素吗? $\huat B\circ\huat A=\text{id}$?
+\item 乘法与加法: $\huat A\circ(\huat B+\huat C)=\huat A\circ\huat B+\huat A\circ\huat C$,
+$(\huat B+\huat C)\circ\huat A=\huat B\circ\huat A+\huat C\circ\huat A$.
+\item 乘法与数乘: $\huat A\circ(k\huat B)=k\huat{AB}=(k\huat A)\huat B$
+\end{itemize}
+并且由此定义乘法$\huat A,\text{\ensuremath{\huat A}}^{2}=\huat A\circ\huat A,\text{\ensuremath{\huat A}}^{3}=\huat A\circ\huat A\circ\huat A,\cdots$
+这样我们就有了多项式. 定义$f(\huat A)=a_{i}\alp^{i}$. 
+\begin{prop}
+(线性变换的运算律)
+\end{prop}
+
+\subsection{与$\protect\F^{n\times n}$的等价性}
+
+以前我们知道, 线性空间实际上就是和$\F^{n\times1}$是等价的, 那么线性变换是不是可以和什么等价呢? 
+
+如果我们设$V/\F$是$n$维线性空间, $\al_{1}..\al_{2}$是$V$的一组基, $V\stackrel{\simeq}{\longrightarrow}\F^{n\times1}$. 
+\begin{lyxcode}
+\textbackslash xymatrix\{\textbackslash huat~A\textbackslash in\textbackslash End~V:~\&~\textbackslash alpha\textbackslash in~V~\&~\textbackslash huat~A\textbackslash alp\textbackslash in~V\textbackslash\textbackslash ~~\&~\textbackslash mid\textbackslash mid\textbackslash\textbackslash ~~\&~\textbackslash sum~x\_\{i\}a\_\{i\}=(\textbackslash alp\_\{1\}..\textbackslash al\_\{n\})X,~\&~X=\textbackslash begin\{pmatrix\}x\_\{1\}\textbackslash\textbackslash ~\textbackslash vdots\textbackslash\textbackslash ~x\_\{n\}~\textbackslash end\{pmatrix\}~\}~
+\end{lyxcode}
+
+\selectlanguage{chinese}%
+并且
+
+\begin{align*}
+\huat A\alp= & \alp\left(\sum_{i=1}^{n}x_{i}\al_{i}\right)\\
+= & \sum_{i=1}^{n}x_{i}\huat A\al_{i}\\
+= & \huat A\left((\alp_{1}..\alp_{n})X\right)\\
+= & (\huat A\alp_{1}..\huat A\alp_{n})X
+\end{align*}
+
+也就是$\huat A$是由$\huat A\alp_{1}..\huat A\alp_{n}$决定的. 
+
+于是我们就得到了如下的内容: 
+
+\noindent\ovalbox{\begin{minipage}[t]{1\columnwidth - 2\fboxsep - 0.8pt}%
+如果$\alp_{1}..\alp_{n}$是一$V/\F$的一组基, 也就是
+
+$\xymatrix{\End V\ni & \huat A\ar[r]^{\text{选择基底}\alp_{1}..\alp_{n}} & (\huat{A1}\alp_{1},..,\huat A\alp_{n})\ar[r] & \{\F^{n\times1}\text{中}n\text{元组}\}\ar[r] & \F^{n\times n}\\
+ & \huat A\ar[r]^{\text{选择基底}\alp_{1}..\alp_{n}} & (\huat{A1}\alp_{1},..,\huat A\alp_{n})\ar[r]^{\text{用基底}\alp_{1}..\alp_{n}\text{表示}}\ar[rr] &  & A
+}
+$
+
+也就是完成了$\End V\to\F^{n\times n}$, 也就是$\huat A\to A$的映射. %
+\end{minipage}}
+
+这就意味着我们就把线性变换和矩阵之间搭了一座桥梁, 抽象的线性变换在具体的基的映射下可以变为具体的矩阵. 这样, 在这个线性变换作用在某个向量上的时候,
+我们可以这样得到: 
+\begin{thm}
+设$\alp\in V,\huat A\in\End V$, 且$\alp_{1}..\al_{n}$是$V$的一组基, 在这组基下,
+$\huat A$的基是$A$, $\alp$的坐标是$X$, 那么$\huat A\alp$的坐标是$AX$, 也就是$\huat A\alp=(\alp_{1}..\alp_{n})AX$.
+\end{thm}
+\begin{proof}
+用形式记号的语言, 有
+
+$\huat A\alp=\huat A((\alp_{1}..\alp_{n})X)=(\huat A\alp_{1}..\huat A\alp_{n})X=((\alp_{1}..\alp_{n})A)X$,
+然后验证一下形式记号的结合律是满足的(第四章已经验证过), 就有原始式子为$(\alp_{1}..\alp_{n})(AX)$的结论. 
+\end{proof}
+这样我们就在线性变换与矩阵之间架了一座桥梁, 方便我们进一步的探讨方阵与线性变换之间的更多性质.
+
+那么我们不妨考虑设$\alp_{1}..\alp_{n}$是$V$的一组基, 那么从$\End V$到$\F^{n\times n}$的映射$\huat A\to\text{\ensuremath{\ys(}\ensuremath{\huat A})}$有什么性质?
+
+既然是线性空间上面的线性映射, 我们猜测: 
+\begin{itemize}
+\item $\ys$是单射: 考虑$\huaa\stackrel{\alp_{1}..\alp_{n}}{\longrightarrow}A$,$\huab\stackrel{\bt_{1}..\bt_{n}}{\longrightarrow}B$,
+要满足单射的条件, 就要考虑从$A=B$推出$\huaa=\huab$. 要证明右侧的式子, 根据定义, $\forall\alp,\huaa\alp=\huab\alp$.
+两边展开, 就有$\huaa(\sum_{i=1}^{n}x_{i}\al_{i})=\huab(\sum_{i=1}^{n}x_{i}\alp_{i})$,
+根据定义, 并且把求和记号转化为矩阵乘法, 看出坐标, 就有 ($\huaa\al_{1}..\huaa\al_{n})X=(\huab\al_{1}..\huab\alp_{n})X$.
+又根据已知的条件$A=B$, 就可以得到$\huaa\alp_{i}=\huab\alp_{i}(i\in[1..n])$. 就可以推断出这个结论了. 
+\item $\ys$是满射: 问题转化为$\forall A\in\F^{n\times n}$, 是否存在$\huat A\in\End V$,
+使得$\ys(\huaa)=A$. 把$A$分块形成若干的$n\times1$的列向量$A_{1}..A_{n}$, 我们自然希望有合理的对应方式.
+也就是, 我们定义$\huaa\alp=\huaa(\sum_{i=1}^{n}x_{i}\alp_{i})=\sum_{i=1}^{n}x_{i}\huaa\alp_{i}\triangleq\sum_{i=1}^{n}x_{i}\bt_{i}$.
+这样就可以方便的验证$\huaa\in\End V$, $\varphi(\huaa)=A$. 
+\item $\ys(\huat A+\huab)=\ys(\huaa)+\ys(\huab)$. 只需要转化成方阵的形式证明就行了. 
+\item $\ys(k\huaa)=k\ys(\huaa)$, 同上. 
+\end{itemize}
+从上面的内容, 我们知道了这是一个线性同构.
+
+\noindent\fbox{\begin{minipage}[t]{1\columnwidth - 2\fboxsep - 2\fboxrule}%
+预告: 代数的结构
+
+如同$\F^{n\times n}$满足结合律, 但不满足交换律. $\F[x]$及班组交换律, 又满足结合律. 然而向量的外积既不满足交换律,
+又不满足结合律, 但是它满足反交换律和Jacobi恒等式. %
+\end{minipage}}
+
+事实上, 这样的映射$\ys$还有一个比较重要的性质, 就是它保持了乘法. 
+\begin{thm}
+\label{thm:map-hold-multiply}设$\alp_{1}..\alp_{n}$$V$的一组基, 则$\End V$到$\F^{n\times n}$的映射$\huaa\to\ys(A)$是线性空间$\End V\to\F^{n\times n}$的线性同构,
+并且$\forall\huaa,\huab\in\End V,\ys(\huaa\huab)=\ys(\huaa)\ys(\huab).$
+\end{thm}
+\begin{proof}
+线性同构见上述描述. 
+
+下面证明保持乘法: 
+
+\begin{align*}
+(\huaa\huab)(\al_{1}..\al_{n})= & ((\huaa\huab)\alp_{1}..(\huaa\huab)\alp_{n})\\
+= & (\huaa(\huab\alp_{1})..\huaa(\huab\alp_{n}))\\
+= & \left(\huaa\left(\left(\alp_{1}..\alp_{n}\right)B_{1}\right)..\huaa\left(\left(\alp_{1}..\alp_{n}\right)B_{n}\right)\right)\\
+= & ((\huaa\alp_{1}..\huaa\alp_{n})B_{1}..(\huaa\alp_{1}..\huaa\alp_{n})B_{n})\\
+= & ((\huaa\alp_{1}..\huaa\alp_{n})B\\
+= & ((\alp_{1}..\alp_{n})A_{n}..(\alp_{1}..\alp_{n})A_{n})B\\
+= & ((\alp_{1}..\alp_{n})A)B\\
+= & (\alp_{1}..\alp_{n})(AB)\qquad(\text{需要验证结合律)}
+\end{align*}
+\end{proof}
+
+\section{线性变换的矩阵}
+
+从上一节的内容我们知道$\End V\stackrel[\alp_{1}..\alp_{n}]{1-1}{\longrightarrow}\F^{n\times n}$.
+这样, 我们就有了$\id\mapsto I_{n},0\mapsto0,k\id\mapsto kI_{n},$可逆变换$\huaa\mapsto\text{可逆矩阵}A$.
+在讲解矩阵的时候, 讲解了矩阵的基本方法之后, 我们阐述了可逆矩阵的概念. 在这里, 我们同样也希望找到可逆的线性变换. 
+
+在这之前, 我们还是从维数出发. 因为有限相同维数的情况下, 如果一个映射是单射, 那么就蕴含了它是满射. 也就是有如下的定理: 
+\begin{thm}
+若$\huaa\in\End V$, $\dim V=n,$下列条件等价:
+\begin{itemize}
+\item $\exists\huab,$使得$\huaa\huab=\huab\huaa=\id$
+\item $\huaa$是双射
+\end{itemize}
+那么$\huaa$是可逆的.
+\end{thm}
+接着保持乘法(定理\ref{thm:map-hold-multiply})的叙述, 我们试着举出一些例子: 
+\begin{example}
+$V=\Q(\sqrt{2})/\Q$, 考虑$\End V$, 如果满足$\{\ys\in\End V\mid\ys(\alp\bt)=\ys(\al)\ys(\bt),\forall\alp,\bt\in V\}$,
+那么$\ys$在每一点的取值可以确定吗?
+\end{example}
+%
+\begin{example}
+(推广) 若$\F\subseteq\mathbb{E},$考虑$\End\mathbb{E}/\F$, 如果$G=\{\ys\in\End\mathbb{E}/\F\mid\ys(\alp\bt)=\ys(\al)\ys(\bt),\forall\alp,\bt\in V,\ys(1)\neq0\}$,
+探索$G$有哪些好玩性质.
+\end{example}
+事实上, 这个集合中的元素满足如下的性质: 
+\begin{itemize}
+\item $\id\in G$(存在单位元)
+\item $\ys^{-1}\in G$(存在逆元)
+\item 若$\ys,\psi\in G,\ys\circ\psi\in G$.(具有封闭性)
+\end{itemize}
+这样的三条性质在以后会经常遇到. 与群这个概念有关. 
+\begin{example}
+继续考虑上述例子, 如果让$\mathbb{E}:=\F(\alp_{1}..\al_{n})$是包含$\alp_{1}..\al_{n}$的最小数域,
+其中$\alp_{1}..\al_{n}$是某多项式的根, 有映射$\varphi:\mathbb{E}\to\mathbb{E}$,
+那么集合中保持着乘法的元素就是多项式根的置换. 
+\end{example}
+这样的技巧可以把$f(x)$求根转化为数域上的问题, 并且抽象成群的问题. 最后, 我们来看几个例子: 
+\begin{itemize}
+\item $\{1..n\}$的排列到$i_{1}..i_{n}$是一一对应的双射
+\item 有线性空间$V/\F$, $\alp_{1}..\alp_{n}$是$V$的一组基, 只要基的重排唯一, 那么这个线性变换也就唯一了.
+一共有$n!$个不同的变换. 这和行列式的奇偶置换有关. 
+\end{itemize}
+线性变换在不同的基下表示的难度不同, 比如线性变换求导$\frac{d}{dx}$, 如果我们选取如下的几组基底, 看到有不同的矩阵. 
+
+\begin{align*}
+1,x,x^{2},\cdots,x^{n-1}\rightarrow & \begin{pmatrix} & 1\\
+ &  & 2\\
+ &  &  & \ddots & n-1\\
+ &  &  &  & 0
+\end{pmatrix}\\
+1,x,x^{2}/2!,\cdots,x^{n}/n!\rightarrow & \begin{pmatrix} & 1\\
+ &  & 1\\
+ &  &  & \ddots & 1\\
+ &  &  &  & 0
+\end{pmatrix}\\
+1,(x-a),(x-a)^{2},\cdots,(x-a)^{n}\rightarrow & ???
+\end{align*}
+
+注意到这些矩阵的形态和复杂程度有显著的差别. 那么一个自然的问题是有没有办法把这些基变换, 使得矩阵简单一点? 也就是
+
+\[
+\xymatrix{\huaa\ar[r]^{\alp_{1}..\alp_{n}}\ar[dr]^{\bt_{1}..\bt_{n}} & A\ar[d]^{\text{过渡矩阵}T?}\\
+ & B
+}
+\]
+
+
+\section{相似与特征值}
+
+从本节开始, 我们就要试图选取合适的基$\bt_{1},..\bt_{n}$, 使得矩阵$B$``简单''. 
+
+什么样的矩阵简单呢? 上下三角确实比较简单, 但是对角矩阵可能更简单, 因为矩阵乘法是很容易做的. 单位矩阵是更加简单的, 但是它的限制条件可能会比较强.
+所以我们的目标是尽量把矩阵化为对角的矩阵. 
+
+首先来看不同基底下两组基下矩阵的关系. 我们知道$\huaa(\al_{1}..\al_{n})=(\al_{1}..\al_{n})A,B(\al_{1}..\al_{n})=(\al_{1}..\al_{n})B$,
+并且由过渡矩阵的知识我们有$(\bt_{1}..\bt_{n})=(\al_{1}..\al_{n})T\quad(*)$, 其中$T$中的每一个元素都是一个列向量,
+不妨把$T$展开写作$(T_{1}..T_{n})$.
+
+对于({*})式子两边同时施以线性变换$\huaa$, 有
+
+\begin{align*}
+\huaa((\al_{1}..\al_{n})T)= & ((\al_{1}..\al_{n})T)B\\
+(\huaa\al_{1}..\huaa\al_{n})T= & ((\al_{1}..\al_{n})T)B\\
+((\al_{1}..\al_{n})A)T= & ((\al_{1}..\al_{n})T)B\\
+AT= & TB\\
+B= & T^{-1}AT
+\end{align*}
+
+我们称$B$和$A$\textbf{相似}. 
+\begin{defn}
+(相似)
+\end{defn}
+\begin{thm}
+如果$\huaa\in\End V/\F,\dim V/\F=n,$则$\huaa$在不同基下的矩阵是相似的. 
+\end{thm}
+这个命题意味着: 如果把$V$中的所有基在某一个线性变换$\huaa$下构成的全体看做一个集合的话, 这个集合就是彼此相似的.
+也就是我们得到了与$A$相似的矩阵的全体. 并且我们也不难验证相似是一个等价关系. 
+\begin{prop}
+\label{pro:sim-equiv}相似是一个等价关系.
+\end{prop}
+在本节的开始, 我们希望让基``简单一些''. 最简单的矩阵是对角形矩阵. 那么我们能不能想办法所有的矩阵化为对角形呢? 根据命题\ref{pro:sim-equiv}的等价关系,
+意味着$\F^{n\times n}$可以分解为\textbf{不同}的相似等价类的并. 我们就可以从单位矩阵出发, 看看和它相似的矩阵都有哪些,
+是不是构成所有的矩阵全体, 从而看一看是不是能够化为所有的矩阵全体. 
+\begin{example}
+如果单位变换$\huaa$在某一组基$\alp_{1}..\alp_{n}$下得到的矩阵是$kI_{n}$, 过渡矩阵使得其基底发生变换,
+如果变换成了$\bt_{1}..\bt_{n}$时候会发生什么?
+
+事实上, 由于相似关系, 我们有$T^{-1}(kI_{n})T=kI_{n}$, 因为单位矩阵和任何矩阵都是可换的. 这也就说明与$kI_{n}$相似的矩阵只有它本身.
+因此我们只能退而求其次寻求对角矩阵. 这是稍后要讨论的话题. 不过现在我们可以探讨一下矩阵的相似到底有哪些好玩的性质. 
+\end{example}
+\begin{prop}
+如果$A$和$B$两个矩阵相似, 那么
+\end{prop}
+\begin{itemize}
+\item $r(A)=r(B)=r$, 由此可以定义线性变换的秩$r(\huaa)=r$.
+\item $|A|=|B|$, 同样可以定义线性变换的行列式, 定义作$|\huaa|=|A|$.
+\item $\tr{\text{\ensuremath{A}}}=\tr{\text{\ensuremath{B}}}$, 也同样可以定义线性变换的迹,
+定义作$\text{tr}(\huaa)=\text{tr}(A)$.
+\item $B^{n}=T^{-1}A^{n}T$, $f(B)=T^{-1}f(A)T$. 
+\end{itemize}
+下面我们就要通过找到合适的一组基底, 让这个变换看上去简单. 如果现在有一个$A$, 我们要找到一个$B$使得$B$简单, 我们采用分步走的形式: 
+\begin{itemize}
+\item $B$可以是数量矩阵吗? 可以, 当$A$是数量矩阵的时候. 
+\item $B$可以是对角矩阵吗?
+\item $B$可以是准对角矩阵吗? 
+\end{itemize}
+对于上述第二个问题, 我们可以做出如下的推演: 若果$B$是对角矩阵, 就说明
+\[
+\huaa(\bt_{1}..\bt_{n})=(\bt_{1}..\bt_{n})\begin{pmatrix}\lambda_{1}\\
+ & \ddots\\
+ &  & \lambda_{n}
+\end{pmatrix}=(\lambda_{1}\bt_{1}..\lambda_{n}\bt_{n}).
+\]
+ 这样一来, 就要求
+\[
+\begin{cases}
+\huaa\bt_{1}= & \lambda_{1}\bt_{1}\\
+\huaa\bt_{2}= & \lambda_{2}\bt_{2}\\
+\cdots & \cdots\\
+\huaa\bt_{n}= & \lambda_{n}\bt_{n}
+\end{cases}
+\]
+
+同时成立. 也就是, 它的基元素的像恰好是它本身的常数倍, 这样一来才可以找到一组可以对角化的, 方便的矩阵. 于是我们给出特征值的定义: 
+\begin{defn}
+(特征值和特征向量)
+\end{defn}
+如何求解特征值呢? 既然我们要求$\huaa\al=\la_{0}\al$, 移项, 有$\la_{0}\al-\huaa\alp=(\la_{0}\id-\huaa)\alp=0.$
+这就意味着$\ker(\la_{0}\id-\huaa)\neq0$, 也就是$\la_{0}\id-\huaa$不是单射, 双射,
+满射. 也就是这个是不可逆的变换. 不可逆变换的行列式是0. 这样的话, 我们若取一下行列式的话, 就有$|\la_{0}\id-\huaa|=0$.
+用矩阵的语言来书写就是$|\la_{0}I_{n}-A|=0$.
+
+既然我们得到了一个变换$\la_{0}\id-\huaa$, 这时候我们来看一下这个变换核空间. 也就是$\ker(\la_{0}\id-\huaa)=\{\alp\in V|\huaa\al=\la_{0}\alp\}$,
+和上面的有一点点小小的区别是0也在这个集合里面. 我们把这个集合称为\textbf{属于$\la_{0}$的特征子空间}. 
+\begin{defn}
+\label{def:eigen-sub-space}(特征子空间)
+\end{defn}
+仔细观察这个属于$\la_{0}$的特征子空间, 稍微把行列式展开一点, 我们就会发现
+\[
+|\la_{0}\id-\huaa|=0\iff|\la_{0}I_{n}-A|=\begin{vmatrix}\la_{0}-a_{11} &  & -a_{1n}\\
+ & \ddots\\
+-a_{n1} &  & \la_{0}-a_{nn}
+\end{vmatrix}=\la_{0}^{n}+a_{n-1}\la_{0}^{n-1}+\cdots+a_{0},
+\]
+其中$a_{1}..a_{n-1}$都是确定的常数. 如果我们用动态的眼光来看这个问题, 即把$\lambda$视作一个变量的话,
+就可以记作以$\la$为变量的$n$次首一的多项式. 这个多项式被称作\textbf{特征多项式}. $f(\lambda)$的根也称为\textbf{特征根}. 
+\begin{defn}
+(特征多项式)
+\end{defn}
+%
+\begin{defn}
+(特征矩阵, 特征根)
+\end{defn}
+\begin{example}
+(平面上的旋转变换的特征值)
+\end{example}
+%
+\begin{example}
+(求导操作的特征值)
+\end{example}
+很多时候计算特征值不是一件简单的工作. 因此就需要一些技巧. 在以前学习行列式的时候有一个例题讲述的是如果$X\in\F^{n\times1},Y\in\F^{1\times n},$那么有$|I_{n}+XY|=1+YX$.
+在这里我们不妨问一问, 这个命题有什么推广?
+\begin{problem}
+如果有$A\in\F^{m\times n},B\in\F^{n\times m},AB\in\F^{m\times m},|\la I_{m}-AB|$与$|\la I_{n}-BA|$有什么关系?
+是相等吗?
+\end{problem}
+先看左边, 进行化简: 
+\[
+|\la I_{m}-AB|=|\la(I_{m}-\frac{1}{\la}AB)|=\la^{m}|I_{m}-\frac{1}{\la}AB|=\la^{m}|I_{n}-\frac{1}{\la}BA|=\la^{m}\la^{-n}|\la I_{n}-BA|.
+\]
+ 也就是我们知道了这样的一个命题: 
+\begin{prop}
+如果有$A\in\F^{m\times n},B\in\F^{n\times m},\la^{n}|\la I_{m}-AB|=\la^{m}|\la I_{n}-BA|$.
+\end{prop}
+事实上, 特征多项式在矩阵和线性变换的研究中起到了重要的作用. 将上面的结论推广, 我们有:
+\begin{thm}
+(Hamilton-Cayley) 设$A\in\F^{n\times n}$的特征多项式为
+
+\[
+f(\la)=|\la I_{n}-A|=\la^{n}+a_{n-1}\la^{n-1}+\cdots+a_{0}
+\]
+
+则$f(\la)$是$A$的\textbf{零化多项式}, 也就是$f(A)=A^{n}+a_{n-1}A^{n-1}+\cdots+a_{0}I_{n}=0$. 
+\end{thm}
+先不证明这个结论, 不妨留到后面来完成. 
+
+\section{可对角化}
+
+回顾在定义\ref{def:eigen-sub-space}中的内容, 我们这次来看一看什么时候可以对角化. 假设$\huaa$的不同特征值为$\la_{1}..\la_{k}$,
+对应的不同的特征子空间有$V_{\la_{1}}(\huaa)..V_{\la_{k}}(\huaa)$. 如果我们在上述的$k$个特征子空间里面分别寻找一些基底,
+并且我们试图把它们拼凑起来, 试图看一看和全空间的关系. 具体的, 我们需要了解:
+\begin{itemize}
+\item 合并之后是线性无关的吗?
+\item 向量的个数等于维数吗?
+\end{itemize}
+我们经常使用``直和''的观念来描述两个线性空间之和看上去像是是``不相交的''. 这时候我们对``直和''的定义(见定义\ref{direct-sum-def})进行扩展: 
+\begin{defn}
+(多个元素的直和) 设$V_{1}..V_{n}$是$V$的子空间, 那么下列条件等价:
+\begin{itemize}
+\item $\forall\alp\in V_{1}+V_{2}+\cdots+V_{n},$有唯一的分解式$\al_{1}+\al_{2}+\cdots+\al_{n}(\al_{1}\in V_{1},\al_{2}\in V_{2},\cdots,\al_{n}\in V_{n})$.
+\item 零向量的分解式是唯一的
+\item $\left(\sum_{j\neq i}V_{j}\right)\cap V_{i}=\{0\}$
+\item $\dim V_{1}+\dim V_{2}+\cdots+\dim V_{n}=\dim\left(V_{1}+V_{2}+\cdots+V_{n}\right)$
+\item $V_{1},V_{2}$的一组基合并形成$V_{1}+V_{2}$的一组基. 
+\end{itemize}
+若$V_{1},V_{2},\cdots,V_{n}$满足上述五条的任何一条, 则称$V_{1}+V_{2}+\cdots+V_{n}$是$V_{1}+V_{2}+\cdots+V_{n}$的直和,
+通常记作
+\[
+V_{1}\oplus V_{2}\oplus\cdots\oplus V_{n}.
+\]
+
+\end{defn}
+关于线性无关性, 我们发现如下命题: 
+\begin{prop}
+$V_{\la_{1}}(\huaa)+V_{\la_{2}}(\huaa)+..+V_{\la_{k}}(\huaa)$是直和. 
+\end{prop}
+\begin{proof}
+我们考虑证明零向量的分解式唯一. 
+
+假若$0=\al_{1}+\cdots+\al_{k},$能不能推出$\al_{1}=\cdots=\al_{k}=0$?
+
+两边同时作用$\huaa$上, 有
+\[
+0=\huaa\al_{1}+\cdots+\huaa\al_{k}=\la_{1}\al_{1}+\la_{2}\al_{2}+\cdots+\la_{n}\al_{n}=(\al_{1}..\al_{k})\begin{pmatrix}\la_{1}\\
+\vdots\\
+\la_{k}
+\end{pmatrix}
+\]
+
+一直作用$k-1$次, 有
+
+\begin{align*}
+0 & =\la_{1}^{2}\al_{1}+..+\la_{k}^{2}\al_{k} & =(\al_{1}..\al_{k})\begin{pmatrix}\la_{1}^{2}\\
+\vdots\\
+\la_{k}^{2}
+\end{pmatrix}\\
+0 & =\la_{1}^{3}\al_{1}+..+\la_{k}^{3}\al_{k} & =(\al_{1}..\al_{k})\begin{pmatrix}\la_{1}^{3}\\
+\vdots\\
+\la_{k}^{3}
+\end{pmatrix}\\
+\vdots & \vdots & \vdots\\
+0 & =\la_{1}^{k-1}\al_{1}+..+\la_{k}^{k-1}\al_{k} & =(\al_{1}..\al_{k})\begin{pmatrix}\la_{1}^{k-1}\\
+\vdots\\
+\la_{k}^{k-1}
+\end{pmatrix}
+\end{align*}
+
+把上述的列合并起来, 就有
+
+\[
+(0,0,\cdots,0)=(\al_{1},\al_{2},\cdots,\al_{k})\begin{pmatrix}1 & \la_{1} & \cdots & \la_{1}^{k-1}\\
+1 & \la_{2} &  & \la_{2}^{k-1}\\
+\vdots &  &  & \vdots\\
+1 & \la_{k} & \cdots & \la_{k}^{k-1}
+\end{pmatrix}
+\]
+
+由于后面的是Vandermonde行列式, 一定不为0, $(\al_{1},\al_{2},\cdots,\al_{k})$只能为0.
+于是零向量的分解式唯一. 
+\end{proof}
+到底什么时候可以对角化呢? 
+\begin{thm}
+(可对角化的判别法则) 如果$\huaa$可对角化, 那么:
+\begin{itemize}
+\item $\exists$一组基, 使得$\huaa$的矩阵为对角形. 
+\item $\huaa$有$n$个线性无关特征向量. 
+\item $V_{\la_{1}}(\huaa)\oplus V_{\la_{2}}(\huaa)\oplus..\oplus V_{\la_{n}}(\huaa)=V$. 
+\item $\dim V_{\la_{1}}(A)+\cdots+\dim V_{\la_{n}}(A)=\dim V$.
+\end{itemize}
+\end{thm}
+下面来举一个在多项式空间里面求导的一个例子. 
+\begin{example}
+考虑$\frac{d}{dx}\in\End(\F[x]_{n})$, 
+\end{example}
+%
+\begin{example}
+考虑度算子$\huat D:f(x)\mapsto x\frac{df(x)}{dx}$. 
+\end{example}
+首先考虑一个简单的情况, 也就是若$\huaa$有$n$个互不相同的特征值(也就是$\dim V_{\lambda_{i}}(\huaa)=1$),
+那么$\huaa$可对角化. 
+\begin{example}
+\label{prob:matrix-eigen-self-represent}求$A=\begin{pmatrix}0 &  &  &  & 1\\
+1 & 0\\
+ & 1 & \ddots\\
+ &  & \ddots & 0\\
+ &  &  & 1 & 0
+\end{pmatrix}$的特征值(数域在$\mathbb{C}$上).
+\end{example}
+\begin{sol*}
+求出$|\la I_{n}-A|=\begin{vmatrix}\la &  &  &  & -1\\
+-1 & \la\\
+ & -1 & \ddots\\
+ &  & \ddots & \la\\
+ &  &  & -1 & \la
+\end{vmatrix}=\la^{n}-1$, 因此它有$n$个不相同的特征根, 分别是$\omega^{k}=e^{\sqrt{-1}2\pi/n},k=0,1,..,n-1$.
+也就是可以找到一个可逆矩阵$T$, 使得$T^{-1}AT=\begin{pmatrix}1\\
+ & \omega\\
+ &  & \ddots\\
+ &  &  & \omega^{n-1}
+\end{pmatrix}$. 
+\end{sol*}
+\noindent\fbox{\begin{minipage}[t]{1\columnwidth - 2\fboxsep - 2\fboxrule}%
+实际上, 例子\ref{prob:matrix-eigen-self-represent}展示了一个有趣的事实. 如果把最后一列换为$a_{0},\cdots,a_{n-1}$,
+也就是
+\[
+B=\begin{pmatrix}0 &  &  &  & a_{0}\\
+\mathbf{1} & \mathbf{0} & \mathbf{} & \mathbf{} & a_{1}\\
+\mathbf{} & \mathbf{1} & \mathbf{\ddots} & \mathbf{} & \vdots\\
+\mathbf{} & \mathbf{} & \mathbf{\ddots} & \mathbf{0} & a_{n-2}\\
+\mathbf{} & \mathbf{} & \mathbf{} & \mathbf{1} & a_{n-1}
+\end{pmatrix}
+\]
+
+$B$的特征多项式恰好就是$|\la I_{n}-A|=\la^{n}+a_{n-1}\la^{n-1}+\cdots+a_{0}=f(\la)$.
+这样就让我们在矩阵和多项式之间搭了一个桥梁. 最早发现这样做的是Frobenius, 因此这个矩阵也称为Frobenius矩阵. 
+
+同时发现, 这个矩阵$B$也对应着一个线性方程组. 我们也可以问一问这个$BX=0$的解空间维数是多少. 注意到$r(B)\geq n-1$,
+因为它的左下角有一块的行列式已经不是0了(加粗的部分). %
+\end{minipage}}
+
+回到矩阵$A$. 我们发现$A^{2},A^{3},\cdots,A^{n-1}$都是可以对角化的. 并且有$A^{n}=I_{n}$,
+这样我们就可以把这些组成一个多项式: 
+
+\[
+a_{0}I_{n}+a_{1}A+a_{2}A^{2}+\cdots+a_{n-1}A^{n-1}=f(A)
+\]
+
+并且$f(A)$也是可以对角化的. 这就意味着
+\begin{align*}
+T^{-1}f(A)T= & T^{-1}(a_{0}I_{n}+a_{1}A+\cdots+a_{n-1}A^{n-1})T\\
+= & \begin{pmatrix}a_{0}\\
+ & \ddots\\
+ &  & a_{0}
+\end{pmatrix}+\begin{pmatrix}a_{1}\omega\\
+ & \ddots\\
+ &  & a_{1}\omega^{n-1}
+\end{pmatrix}+\cdots+\begin{pmatrix}a_{n-1}\omega\\
+ & \ddots\\
+ &  & a_{n-1}\omega^{n-1}
+\end{pmatrix}\\
+= & \begin{pmatrix}f(1)\\
+ & f(\omega)\\
+ &  & \ddots\\
+ &  &  & f(\omega^{n-1})
+\end{pmatrix}.
+\end{align*}
+这就启示我们可以把一个复杂的内容通过拆分成若干个简单的内容来进行拆解. 所以我们得到的$f(A)$的这个矩阵的特征值是$f(1)..f(\omega^{n-1})$,
+$|f(A)|=\prod_{i=1}^{n-1}f(\omega^{i})$, 同时$f(A)$特征多项式的矩阵也可以得到是$f(A)=a_{0}I_{n}+a_{1}A+\cdots+a_{n-1}A^{n-1}$.
+这样, 我们就可以轻松的求解像这样的\textbf{循环矩阵}的行列式了.
+
+\[
+C_{5}=\begin{pmatrix}a_{0} & a_{4} & a_{3} & a_{2} & a_{1}\\
+a_{1} & a_{0} & a_{4} & a_{3} & a_{2}\\
+a_{2} & a_{1} & a_{0} & a_{4} & a_{3}\\
+a_{3} & a_{2} & a_{1} & a_{0} & a_{4}\\
+a_{4} & a_{3} & a_{2} & a_{1} & a_{0}
+\end{pmatrix}
+\]
+
+现在来总结印证一下前面的内容的框架.
+
+\noindent\shadowbox{\begin{minipage}[t]{1\columnwidth - 2\fboxsep - 2\fboxrule - \shadowsize}%
+前情提要:
+
+线性变换和对应同阶方阵之间有一一对应, 有时候我们希望最后的方阵简单一点, 于是我们需要研究方阵之间的变换关系. 有时候可以把最后的方阵化为对角形,
+就如下图中的$B$一样
+
+\[
+\xymatrix{\huaa\ar[r]^{\alp_{1}..\alp_{n}}\ar[dr]^{\bt_{1}..\bt_{n}} & A\ar[d]^{\text{过渡矩阵}T?}\\
+ & B=\text{diag}(\la_{1}..\la_{n})=T^{-1}AT
+}
+\]
+这时候这个方阵的特征值就是$\la_{i}(1\leq i\leq n)$, 特征多项式可以表示为
+\[
+(\la-\la_{1})(\la-\la_{2})\cdots(\la-\la_{n}).
+\]
+
+而这就暗示了$\la\id-\huaa$可以被表示为
+\[
+(\la_{1}I_{n}-A)(\la_{2}I_{n}-A)\cdots(\la_{n}I_{n}-A)=0.
+\]
+ 因为$A,B$相似, 有
+
+\begin{align*}
+(\la_{1}I_{n}-B)(\la_{2}I_{n}-B)\cdots(\la_{n}I_{n}-B) & =0\\
+\begin{pmatrix}0\\
+ & \lambda_{2}-\la_{1}\\
+ &  & \ddots\\
+ &  &  & \ddots
+\end{pmatrix}\cdots\begin{pmatrix}0\\
+ & \ddots\\
+ &  & \ddots\\
+ &  &  & 0
+\end{pmatrix} & =0
+\end{align*}
+
+从而可以把复杂的问题简单化. %
+\end{minipage}}
+
+\selectlanguage{chinese}%
+
+\section{零化多项式 不变子空间}
+
+\section{根子空间分解}
+
+\section{Jordan标准形}
+
+\section{线性代数中出现的内容}
+
+\subsection{矩阵的相似}
+\begin{enumerate}
+\item 相似矩阵
+\begin{enumerate}
+\item Def. 设$\boldsymbol{A},\boldsymbol{B}$都是$n$阶矩阵, 若存在可逆矩阵$P$, 使得$\boldsymbol{P}^{-1}\boldsymbol{AP}=\boldsymbol{B}$,
+则称$\boldsymbol{B}$是$\boldsymbol{A}$的相似矩阵, 或者说$\boldsymbol{A}$与$\boldsymbol{B}$相似,
+$\boldsymbol{P}^{-1}\boldsymbol{AP}$称对\textbf{$\boldsymbol{A}$}进行了相似变换.$\boldsymbol{P}$称为把$\boldsymbol{A}$变成$\boldsymbol{B}$的相似变换矩阵.
+\end{enumerate}
+\item 相似矩阵的性质
+\begin{enumerate}
+\item Th. 若$n$阶矩阵$\boldsymbol{A}$与$\boldsymbol{B}$相似, 则$\boldsymbol{A}$与$\boldsymbol{B}$的特征多项式相同,
+从而$\boldsymbol{A}$与$\boldsymbol{B}$的特征值也相同. 
+\item Coll. 
+\begin{enumerate}
+\item 若$n$阶矩阵$\boldsymbol{A}$与对角矩阵$\diag{\lambda_{1}..\lambda_{n}}$相似,
+那么$\lambda_{1}..\lambda_{n}$是$\boldsymbol{A}$的$n$个特征值
+\item 若存在可逆矩阵$\boldsymbol{P}$, 是的$\boldsymbol{P}^{-1}\boldsymbol{AP}=$$\diag{\lambda_{1}..\lambda_{n}}=\boldsymbol{D}$,
+$\varphi(x)$是$m$次多项式, 那么$\boldsymbol{A}^{k}=\boldsymbol{P}^{-1}\boldsymbol{D}^{k}\boldsymbol{P},\varphi(\boldsymbol{A})=\boldsymbol{P}^{-1}\varphi(\boldsymbol{A})\boldsymbol{P}$
+\end{enumerate}
+\end{enumerate}
+\item 矩阵可对角化的条件: 
+\begin{enumerate}
+\item Th. $n$阶矩阵$\boldsymbol{A}$与对角矩阵相似的充分必要条件是$\boldsymbol{A}$有$n$个线性无关的特征向量. 
+\item Coll. 如果$n$阶矩阵的$n$个特征值互不相等, $\boldsymbol{A}$与对角矩阵相似. 
+\end{enumerate}
+\end{enumerate}
+
+\subsection{方阵的特征值与特征向量}
+\begin{enumerate}
+\item 特征值. 特征方程. 特征多项式
+\begin{enumerate}
+\item Def: 设 $\boldsymbol{A}$ 是$\boldsymbol{n}$阶方阵，如果存在数$\lambda$和非零$n$维列向量
+$\boldsymbol{x}$，使得 $\boldsymbol{A}\boldsymbol{x}=\lambda\boldsymbol{x}$
+成立，则称 $\lambda$ 是$\boldsymbol{A}$的一个\textbf{特征值}, 列向量$x$称为\textbf{属于特征值}$\lambda$的\textbf{特征向量}.
+称$|\boldsymbol{A}-\lambda\boldsymbol{E}|=0$是A的\textbf{特征方程}. $f(\lambda)=|\boldsymbol{A}-\lambda\boldsymbol{E}|$是A的\textbf{特征多项式}. 
+\item Note. 
+\begin{enumerate}
+\item 特征值问题是对方阵而言的. 
+\item 矩阵$\boldsymbol{A}$的特征值就是$|\boldsymbol{A}-\lambda\boldsymbol{E}|=0$
+的根. 齐次线性方程组$(\boldsymbol{A}-\lambda\boldsymbol{E})\boldsymbol{x}=\boldsymbol{0}$的非零解就是矩阵$\boldsymbol{A}$对于特征值的特征向量. 
+\end{enumerate}
+\end{enumerate}
+\item 常见性质
+
+设$n$阶矩阵的特征值为$\lambda_{1}\cdots\lambda_{n}$, 于是有
+\begin{enumerate}
+\item $\lambda_{1}+\lambda_{2}+\cdots+\lambda_{n}=\text{tr}(\boldsymbol{A})$
+\item $\lambda_{1}\cdots\lambda_{n}=|\boldsymbol{A}|$. 
+\end{enumerate}
+\item 特征值与特征向量的性质
+\begin{enumerate}
+\item 若$x_{1},x_{2}$都是矩阵$\boldsymbol{A}$对应于特征值$\lambda_{0}$的特征向量, 则$k_{1}x_{1}+k_{2}x_{2}$也是$\boldsymbol{A}$的对应特征值$\lambda_{0}$的特征向量.
+其中$k_{1,}k_{2}$是任意常数, $k_{1}x_{2}+k_{2}x_{2}\neq0$. 所以一个特征值有无数个特征向量与之对应,
+一个特征向量只属于一个特征值. 
+\item 若$\lambda$是矩阵A的特征值, $x$是$\boldsymbol{A}$属于特征值$\lambda$的特征向量, 那么
+\begin{enumerate}
+\item $k\lambda$ 是$k\boldsymbol{A}$的特征值($k$是任意常数)
+\item $\lambda^{m}$ 是$\boldsymbol{A}^{m}$ 的特征值. ($m$是任意常数)
+\item 当$\boldsymbol{A}$可逆的时候,$\lambda^{-1}$是$\boldsymbol{A}^{-1}$的特征值. 
+\item $\varphi(\lambda)$是$\varphi(\boldsymbol{A})$的特征值, 其中$\varphi(\lambda)=a_{0}+a_{1}\lambda+\cdots+a_{m}\lambda^{m},\varphi(\boldsymbol{A})=a_{0}\boldsymbol{E}+a_{1}\boldsymbol{A}+\cdots+a_{m}\boldsymbol{A}^{m}$并且$\varphi(\boldsymbol{A})$是关于矩阵$\boldsymbol{A}$的矩阵多项式. 
+\item 设$\lambda_{1}\cdots\lambda_{m}$是方阵$\boldsymbol{A}$的$m$个特征值,$p_{1},p_{2},\cdots,p_{m}$是依次与之对应的特征向量,
+如果$\lambda_{1},,\lambda_{m}$各不相等, 则$p_{1}..p_{m}$线性无关.
+\end{enumerate}
+\end{enumerate}
+\end{enumerate}
+
+\section{基础习题}
+\begin{problem}
+已知$\boldsymbol{A}=\begin{pmatrix}2 & 2 & 1\\
+2 & 5 & 2\\
+3 & 6 & 4
+\end{pmatrix}$, $\boldsymbol{A}^{*}$是$\boldsymbol{A}$的伴随矩阵, 求$\boldsymbol{A}^{*}$的特征值和特征向量. 
+\end{problem}
+\begin{sol*}
+第一个想法可能是先求出来伴随矩阵, 然后进行计算. 一个自然的问题是能不能找到$\boldsymbol{A}$与$\boldsymbol{A}^{*}$之间的联系呢? 
+
+根据定义$\boldsymbol{Ax}=\lambda\boldsymbol{x},$可以导出$\boldsymbol{A^{*}Ax}=\lambda\boldsymbol{A}^{*}\boldsymbol{x}=|\boldsymbol{A}|\boldsymbol{x}=\lambda\boldsymbol{A}^{*}\boldsymbol{x}$,
+于是知道$\frac{|\boldsymbol{A}|}{\lambda}\boldsymbol{x}=\boldsymbol{A}^{*}\boldsymbol{x}$,
+也就是$\boldsymbol{A}^{*}\boldsymbol{x}=\frac{|\boldsymbol{A}|}{\lambda}\boldsymbol{x}$.
+伴随矩阵的若干个特征值是$|A|/\lambda_{i}$, 特征向量和原来的矩阵特征向量相同. 
+\end{sol*}
+

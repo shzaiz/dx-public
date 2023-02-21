@@ -1,0 +1,165 @@
+\subsection{习题}
+
+
+\begin{prob} 
+证明: 
+$$
+\lim_{n\to \infty} {2^n\over n!} = 0.
+$$
+\end{prob} 
+
+\begin{sol} 
+
+    任意取$\epsilon > 0, \x|{2^n\over n!-0}\y|<\epsilon$. 也就是:
+
+    $$
+    {2^n\over n!}={\overbrace{2\cdot 2\cdots2}^{n\text{个}2}\over \underbrace{n\cdot 2\cdots 2}_{\text{一共}n\text{项数}}}\leq {2\over n}
+    $$
+
+    也就是$\lim_{n\to \infty}2/n=0$. 
+ 
+\end{sol} 
+
+%%%%%
+
+\begin{prob} 
+    证明
+    $$
+    \sum_{i=1}^n{1\over i}-\ln n 
+    $$
+    收敛. 
+\end{prob}
+
+\begin{sol} 
+ 
+    由常见的极限, 
+    $$
+    \x(1+{1\over n}\y)^n <e< \x(1+{1\over n}\y)^{n+1}
+    $$
+
+    取对数, 有$n\ln(1+1/n)<1<(n+1)\ln (1+1/n)$. 也就是$1/(n+1)<\ln(1+1/n)<1/n$. 
+
+    也就是
+    $$
+    \begin{aligned}
+        b_{n+1}-b_{n}&=\sum_{i=1}^{n+1} \frac{1}{i}-\ln (n+1)-\sum_{i=1}^{n} \frac{1}{i}-\ln (n)=\frac{1}{n+1}-\ln (n+1)+\ln n . \\
+        &=\frac{1}{n+1}-\ln \frac{n+1}{n}=\frac{1}{n+1}-\ln \left(1+\frac{1}{n}\right)<0 \qquad\text {单调递减} \\
+        \text{寻找下界}\quad &>\ln \frac{2}{1}+\ln \frac{3}{2}+\cdots+\ln \frac{n+1}{n}-\ln n \\
+        &=\ln 2-\ln \mid+\ln 3-\ln 2+\cdots+\ln (n+1)-\ln n-\ln n \\
+        &=\ln (n+1)-\ln (n)>0 . \\
+    \end{aligned}
+    $$
+    $b_n$的界在大于0且小于1, 根据单调数列收敛准则, 知道存在极限. 
+\end{sol} 
+
+\begin{remark}
+    这是欧拉常数$\gamma\approx 0.57121564490$. 在调和数列中有应用. 
+\end{remark}
+
+%%%%%
+\begin{prob} \label{thm:wqx1}
+    证明
+    $$
+    \lim_{x\to 0}{a^x-1\over x}\qquad (x>0)
+    $$. 
+\end{prob} 
+
+\begin{sol} 
+    $$
+    \begin{aligned}
+        \text{原式}&=\underset{x=\log_a{(1+t)}}{\overset{a^x-1:=t}{=\mathrel{\mkern-3mu}=\mathrel{\mkern-3mu}=\mathrel{\mkern-3mu}=\mathrel{\mkern-3mu}=}} \lim_{t \rightarrow 0} \cdot \frac{t}{\log _{a}(1+t)} \\
+        &=\lim _{t \rightarrow 0} \frac{1}{\frac{1}{t} \log _{a}(1+t)}=\lim_{t \rightarrow 0} \frac{1}{\log _{a}(1+t)^{\frac{1}{t}}}=\ln a . \\
+        \end{aligned}
+    $$
+\end{sol} 
+
+%%%%%
+\begin{prob} 
+    证明: 
+    $$
+    \lim_{x\to 0}\x({\sum_{i=1}^na_i^x\over n}\y)^{1/x} = \sqrt[n]{\prod_{i=1}^n a_i}.
+    $$
+\end{prob} 
+
+\begin{sol} 
+ 
+    注意到原始式子可以变为
+    $$
+    \exp\x(\lim_{x\to 0} {a_1^x-1\over n}+{a_1^x-1\over n}+\cdots +{a_n^x-1\over n}+\cdot{1\over x}\y)
+    $$
+
+    然后运用\ref{thm:wqx1}可以得到最后的结果是右边的式子. 
+ 
+\end{sol} 
+
+%%%%%
+
+\begin{prob} 
+    求极限:
+    $$
+    \lim_{x\to 0}{1-\cos x\sqrt{\cos (2x)}\sqrt[3]{\cos(3x)}\over x^2}
+    $$
+
+\end{prob} 
+
+\begin{sol} 
+ 
+    $$
+    \begin{aligned} 
+        &~\lim _{x\to 0}{1-\sqrt[6]{\cos^6x\cdot\cos^3(2x)\cdot\cos^2(3x)-1+1}\over x^2}\\
+        &=\lim_{x\to 0} {-{1\over 6}\left(\cos x^6\cdot \cos ^3(2x)\cdot \cos^2(3x)-1\right)\over x^2}\\
+        \text{Taylor展开到$x^2$得}&= 3.
+      \end{aligned}
+    $$
+ 
+\end{sol} 
+
+\begin{prob}
+    求极限:
+    $$
+    \lim_{x\to 1} {\prod_{i=1}^n (1-x^{1/i}) \over (1-x)^n}
+    $$
+    \end{prob}
+    
+    \begin{sol}
+        注意到每一个上面面的式子因子每一个里面都缺失了一个对应的因数. 因此不妨设$t=n!$. 
+    
+        因此有: 
+        \begin{align*}
+            {\lim_{x\to 1} {\prod_{i=1}^n (1-x^{1/i}) \over (1-x)^n}}&=\lim_{x\to 1} {\prod_{i=1}^n (1-t^{\prod_{j=1, j\neq i}^n j})  \over (1-t^{n!})^n}\\
+            &=\lim_{x\to 1}{(1+t+t^2+\cdots+t^{(n!/2)-1})(1+t+t^2+\cdots+t^{(n!/3)-1})\cdots (1+t+t^2+\cdots+t^{(n!/n)-1}) \over (1+t+t^2+\cdots+t^{(n!)-1})^{n-1}}\\
+            &={n!/2\cdot n!/3 \cdots n!/n \over (n!)^{n-1}}\\
+            &={1/n!}
+        \end{align*}
+    \end{sol}
+    
+    
+    同时注意重要恒等式: $(1-x^n)=(1+x+x^2+\cdots+x^{n-1})$, 这个内容在试题中很重要. 同样的, 有恒等式$x^m-y^m=(x-y)\sum_{i=1}^m x^{m-i}y^{i-1}$. 
+
+%%%%
+
+%%%%%
+
+\begin{prob} 
+
+    求极限: 
+    $$
+    \lim_{x\to 1} {x-x^x \over 1-x+\ln x}
+    $$
+
+\end{prob} 
+
+\begin{sol} 
+ 
+    $$
+    \begin{aligned}
+        \lim_{x\to 1} {x-x^x\over 1-x + \ln x}&= \lim_{x\to 1}{x-e^{x\ln x}} \\
+        &=\lim_{x\to 1} {-(x-1)\ln x\over 1-x+\ln x}\\
+        &=\lim_{x\to 1} {(x+1)\ln(1+(x-1))\over \ln(1+(x-1))-(x-1)}\\ 
+        &=\lim_{x\to 1} {(x-1)^2\over \ln (1+(x-1))-(x-1)}=2
+    \end{aligned}
+    $$
+ 
+\end{sol} 
+
+%%%%%

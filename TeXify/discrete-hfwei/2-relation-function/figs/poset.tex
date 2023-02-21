@@ -1,0 +1,14 @@
+\begin{tikzpicture}
+    \node (max) at (0,4) {$\set{a,b,c}$};
+    \node (a) at (-2,2) {$\set{a,b}$};
+    \node (b) at (0,2) {$\set{a,c}$};
+    \node (c) at (2,2) {$\set{a,b}$};
+    \node (d) at (-2,0) {$\set{c}$};
+    \node (e) at (0,0) {$\set{b}$};
+    \node (f) at (2,0) {$\set{a}$};
+    \node (min) at (0,-2) {$\set{}$};
+    \draw (min) -- (d) -- (a) -- (max) -- (b) -- (f)
+    (e) -- (min) -- (f) -- (c) -- (max)
+    (d) -- (b);
+    \draw[preaction={draw=white, -,line width=6pt}] (a) -- (e) -- (c);
+  \end{tikzpicture}

@@ -1,0 +1,3 @@
+\beamer@sectionintoc {1}{大学以前: 自由地探索}{2}{0}{1}
+\beamer@sectionintoc {2}{大学: 希望在专业的人员指导下继续探索}{6}{0}{2}
+\beamer@sectionintoc {3}{目标}{12}{0}{3}

@@ -1,0 +1,326 @@
+\selectlanguage{chinese}%
+\global\long\def\tr#1{\text{tr(#1)}}%
+
+\global\long\def\rk#1{\text{rk}(#1)}%
+
+\global\long\def\diag#1{\text{diag}(#1)}%
+
+
+\section{矩阵的基本概念和运算}
+
+\section{可逆矩阵}
+
+\section{矩阵的初等变换和初等矩阵}
+
+\section{矩阵的相抵和秩}
+
+\section{线性代数中出现的内容}
+
+问题的提出: 由上一章的内容, 对于n个未知数, n个变量的方程组, 我们可以使用Creamer法则判定是否存在解. 但是对于解的\textbf{自由度}有多少还是没有概念.
+并且, 如果我们有n个未知数, m个方程, 这样子解的自由度又是多少呢? 于是我们考虑引入矩阵的概念, 同样可以看作线性方程组的系数抽离开来得到的抽象的内容. 
+
+\subsection*{矩阵的加法和数乘以及转置}
+\begin{enumerate}
+\item 定义(略). 参见AA定义3.1.1, 3.1.2
+\begin{enumerate}
+\item 注意: 矩阵的提取公因式和释放公因式是对于整个矩阵的全体元素的, 因此有 $|\lambda A|=\lambda^{n}|A|$.
+\end{enumerate}
+\end{enumerate}
+
+\subsection*{矩阵的乘法}
+\begin{enumerate}
+\item 问题的提出: 我们可以运用代换法代换线性方程组的某一些元素, 描述见AA3.1.3下方的文本.
+\item 定义: 见AA定义3.1.4, 并且注意只有$A$的列数等于$B$的行数的时候才可以完成乘法.
+\item 性质: 没有交换律, 但是有结合律. 见AA命题3.1.5.
+\item 矩阵的幂:因为满足结合律因此可以定义, 参见AA命题3.1.5下方文本.
+\begin{enumerate}
+\item 与多项式的联系: 如果把多项式$f(x)$的变量$x$换做矩阵$A$, 那么知道$f(A)+g(A)=(f+g)(A)$,
+$f(A)g(A)=(fg)(A)$.
+\end{enumerate}
+\item 下一步: 定义了乘法, 就希望有一个类似于除法的东西. 也就是需要研究可逆矩阵. 
+\end{enumerate}
+
+\subsection*{可逆矩阵}
+\begin{enumerate}
+\item 问题的提出: 定义了乘法, 就希望有一个地位与除法相似的内容, 通常也成为``逆元''. 
+\item 行列式与矩阵的联系: $|AB|=|A||B|$.
+\item 可逆的充分必要条件: $|A|\neq0$. 参见AA3.2.4, 结合此, 就可以得到\textbf{伴随矩阵}的定义.
+\item 计算可逆矩阵
+\begin{enumerate}
+\item 想法1:伴随矩阵(Cramer法则)
+\begin{enumerate}
+\item 定义: 见AA定义3.2.5(略)
+\item 性质: $A^{*}A=AA^{*}=|A|I_{n}.$(与Cramer法则等价)
+\end{enumerate}
+\item 想法2: 矩阵的初等变换(消元法)
+\begin{enumerate}
+\item 定义: 三类初等矩阵: $P(i,j),$$P(i(c)),P(i,j(c))$. 见AA3.3节. 
+\item 作用: 左(右)边乘变换目标矩阵的行(列), P(i, j)交换i, j两行(列), P(i(c)), 把第i行(列)乘上c倍; P(i,j(c)),
+第j行(列)乘上c倍加到第i行(列).
+\item 矩阵的秩: 因为矩阵总是可以化为形状如$\begin{pmatrix}I_{r} & 0\\
+0 & 0
+\end{pmatrix}$的. 因此定义$r$是矩阵的秩. (等价关系, 揭示了同样自由度的解的相互关系, 告诉我们了方程的解的自由度到底是多少).
+\item 性质: 初等行列变换总是不改变矩阵的秩(因为操作都可逆).
+\end{enumerate}
+\end{enumerate}
+\end{enumerate}
+
+\subsection*{分块矩阵及其的逆}
+\begin{enumerate}
+\item 分块矩阵的基础运算
+\begin{enumerate}
+\item 分块矩阵的加法(略). 条件: $A$与$B$要有\textbf{相同的分块方法}.
+\item 分块矩阵的数乘.(略)
+\item 分块矩阵的转置. 不仅分块矩阵的行列互换, 每个分块还要转置.
+\item 分块矩阵的乘法. 前提: $A$的\textbf{列分法}与$B$的\textbf{行分法}要一致.
+\end{enumerate}
+\item 特殊的分块矩阵
+\begin{enumerate}
+\item 分块对角矩阵: $A_{s\times s}=\begin{pmatrix}A_{1}\\
+ & A_{2}\\
+ &  & \cdots\\
+ &  &  & A_{s}
+\end{pmatrix}$ . 如果可逆, 其逆是$(A_{s\times s})^{-1}=\begin{pmatrix}A_{1}^{-1}\\
+ & A_{2}^{-1}\\
+ &  & \cdots\\
+ &  &  & A_{s}^{-1}
+\end{pmatrix}$.
+\item 按行分块, 得到列向量.
+\item 按列分块, 得到行向量.
+\end{enumerate}
+\item 分块矩阵的初等变换
+\begin{enumerate}
+\item 第一类: $\begin{pmatrix}I_{n} & 0\\
+0 & I_{m}
+\end{pmatrix}\overrightarrow{\text{交\text{换两行}}}\begin{pmatrix}0 & I_{n}\\
+I_{m} & 0
+\end{pmatrix}$,
+\item 第二类: $\begin{pmatrix}I_{n} & 0\\
+0 & I_{m}
+\end{pmatrix}\overrightarrow{\text{某一行乘上}P}\begin{pmatrix}P & 0\\
+0 & I_{m}
+\end{pmatrix}\text{或\ensuremath{\begin{pmatrix}I_{n}  &  0\\
+ 0  &  P 
+\end{pmatrix}}.}$
+\item 第三类: $\begin{pmatrix}I_{n} & 0\\
+0 & I_{m}
+\end{pmatrix}\overrightarrow{\text{某一行乘上}P\text{加\text{到另一行}}}\begin{pmatrix}I_{n} & 0\\
+P & I_{m}
+\end{pmatrix}$.
+\end{enumerate}
+\item 应用: 解矩阵方程.
+\begin{enumerate}
+\item AX=B, 那就$\begin{pmatrix}A & \brokenvert B\end{pmatrix}\rightarrow\begin{pmatrix}I & \brokenvert A^{-1}B\end{pmatrix}$
+\item XA=B, 那就$\begin{pmatrix}A\\
+B
+\end{pmatrix}\rightarrow\begin{pmatrix}I\\
+BA^{-1}
+\end{pmatrix}$.
+\end{enumerate}
+\end{enumerate}
+
+\subsection*{矩阵的秩}
+\begin{enumerate}
+\item 秩的等价定义:
+\begin{enumerate}
+\item 化为$\begin{pmatrix}I_{r} & 0\\
+0 & 0
+\end{pmatrix}$类型之后, r就是它的秩(AA定理3.4.6)
+\item $r(A)=r$当且仅当A中存在一个$r$阶子式不为$0$, 任意$r+1$阶子式全为$0$.(AA定理3.4.9)
+\item 后续学习向量组后的行(列)秩, 列秩也和矩阵秩的定义是等价的. 
+\end{enumerate}
+\item 常见不等式: 通常情况下无法得到准确的秩
+\begin{enumerate}
+\item $r(A)+r(B)=r\begin{pmatrix}A\\
+ & B
+\end{pmatrix}\leq r\begin{pmatrix}A & 0\\
+C & B
+\end{pmatrix}.$(AA命题3.4.11)
+\item 如果$A_{m\times n},B_{n\times s},$那么$r(AB)+n\geq r(A)+r(B)$. (命题3.4.12,
+Sylvester不等式)
+\begin{enumerate}
+\item 思路: 考虑$r\begin{pmatrix}AB\\
+ & -I_{n}
+\end{pmatrix}\overset{=}{\text{等价变换}}r\begin{pmatrix}AB & A\\
+0 & -I_{n}
+\end{pmatrix}=r\begin{pmatrix}0 & A\\
+B & -I_{n}
+\end{pmatrix}=r\begin{pmatrix}A & 0\\
+-I_{n} & B
+\end{pmatrix}\geq r\begin{pmatrix}A\\
+ & B
+\end{pmatrix}$
+\end{enumerate}
+\end{enumerate}
+\item 应用: 解方程组
+\begin{enumerate}
+\item 如果方程组$AX=0$只有零解, 那么$|A|\neq0$.
+\item 如果有方程组$A_{m\times n}X=\beta_{m\times1}$, 称$(A\brokenvert\beta)$为\textbf{增广矩阵},
+方程组有解当且仅当$r(A)=r(A\brokenvert\beta).$
+\item 如果有$A_{m\times n},B_{m\times1},P_{m\times m},$且$P$可逆, $AX=\beta$与$(PA)X=P\beta$的解相同.
+\end{enumerate}
+\end{enumerate}
+
+\section{基础问题}
+
+\subsection{矩阵的相关运算}
+\begin{problem}
+设$\boldsymbol{A},\boldsymbol{B}$均为$n$阶对称矩阵, 则$\boldsymbol{AB}$是对称矩阵的充分必要条件是\_\_\_\_\_\_\_\_.
+\end{problem}
+
+\begin{sol*}
+$\boldsymbol{AB}$对称等价于$(\boldsymbol{AB})'=\boldsymbol{B}'\boldsymbol{A}'=\boldsymbol{BA}$,
+所以要求两个矩阵是可换的. 
+\end{sol*}
+\begin{problem}
+设$\alpha,$$\beta$是三维列向量, 如果$\alpha\beta'=\begin{vmatrix}a & b & c\\
+d & e & f\\
+g & h & i
+\end{vmatrix},$求$\alpha'\beta=$\_\_\_\_\_\_\_\_.
+\end{problem}
+
+\begin{sol*}
+不妨设$\alpha=[x_{1},x_{2},x_{3}]',$$\beta=\left[y_{1},y_{2},y_{3}\right]'$,
+那么$\alpha\beta'=\begin{pmatrix}x_{1}y_{1} & x_{1}y_{2} & x_{1}y_{3}\\
+x_{2}y_{1} & x_{2}y_{2} & x_{2}y_{3}\\
+x_{3}y_{1} & x_{3}y_{2} & x_{3}y_{3}
+\end{pmatrix}$, $\alpha'\beta=x_{1}y_{1}+x_{2}y_{2}+x_{3}y_{3}=a+e+i$, 也就是这个矩阵的\textbf{迹(trace)}.
+一般记作$\tr A$. 在后面我们还可以看到这个内容再次出现. 
+\end{sol*}
+\begin{problem}
+已知$A=\begin{pmatrix}a_{1}b_{1} & a_{1}b_{2} & a_{1}b_{3}\\
+a_{2}b_{1} & a_{2}b_{2} & a_{2}b_{3}\\
+a_{3}b_{1} & a_{3}b_{2} & a_{3}b_{3}
+\end{pmatrix},$证明$A^{2}=\tr AA$. 
+\end{problem}
+
+\begin{sol*}
+可以把它分解开成两个矩阵的乘积. 然后用结合律和上一题的结论就可以知道了. 
+\end{sol*}
+\begin{problem}
+已知$A=\begin{pmatrix}\lambda\\
+1 & \lambda\\
+ & 1 & \lambda
+\end{pmatrix}$, 求$A^{n}$.
+\end{problem}
+
+\begin{sol*}
+注意到这是后续的Jordan块. 实际上是求导的具体的线性变换. 从这个角度来看, 我们可以先把他拆开, 然后用这样的方法: 
+
+\begin{align*}
+\lambda & =\lambda I_{3}+J
+\end{align*}
+
+使用如下的公式: 
+
+\begin{align*}
+A^{n}= & (\lambda I_{3}+J)^{n}\\
+= & \lambda^{n}I_{3}+{n \choose 1}\lambda^{n-1}J+{n \choose 2}\lambda^{n-2}J^{2}\\
+= & \begin{pmatrix}\lambda^{n}\\
+ & \lambda^{n}\\
+ &  & \lambda^{n}
+\end{pmatrix}+\begin{pmatrix} & {n \choose 1}\lambda^{n-1}\\
+ &  & {n \choose 1}\lambda^{n-1}\\
+\\
+\end{pmatrix}+\begin{pmatrix} &  & {n \choose 2}\lambda^{n-2}\\
+\\
+\\
+\end{pmatrix}
+\end{align*}
+\end{sol*}
+\begin{problem}
+已经知道$A=\begin{pmatrix}3 & -1\\
+9 & 3
+\end{pmatrix}$, 求$A^{n}$. 
+\end{problem}
+
+\begin{sol*}
+对于这样的问题, 我们可以在一个更方便的基底下做这个操作, 也就是让它成为$P=T^{-1}AT$. 然后进行操作就行了. 
+\end{sol*}
+\begin{problem}
+\label{prob:total-inversion}已知A, B满足n阶矩阵, 
+\begin{itemize}
+\item 有$AB=A-2B$, 求$(A+2E)^{-1}$.
+\item 有$B=(E+A)^{-1}(E-A)$, 求$(E+B)^{-1}$.
+\item 有$A^{2}+3A-2E=\boldsymbol{0},$求$(A+E)^{-1}$.
+\end{itemize}
+那么如果有$AB=A-2B$, 可以求$(A+3E)^{-1}$吗?\\
+那么如果有$A^{2}-A-2E=0$, 可以求$(A+3E)^{-1}$吗?
+
+\end{problem}
+
+\begin{sol*}
+注意到前面的三个可以用配方法加上逆矩阵去做, 它的主题思路是现通过配凑的方法干掉平方项, 再干掉一次项, 最后只留下常数项. 类似于中学学习过的分离常数.
+只不过在下面的问题里面进行分离常数之后剩下的内容形式已经不是那么好了, 也就是得到了$(A+3E)(B-1)=B-3E$, 如果A和B是同一个矩阵的话形式就会简洁一些. 
+\end{sol*}
+\begin{problem}
+如果$A,B,A+B,A^{-1}+B^{-1}$均为$n$阶可逆矩阵, 那么$(A^{-1}+B^{-1})^{-1}$是\_\_\_\_\_. 
+\end{problem}
+
+\begin{sol*}
+这道题实际上是\ref{prob:total-inversion}问题的一个拓展. 关键是如何把这个和写成一个乘积的形式. 实际上是做一个基变换.
+于是我们有如下的内容:
+
+\begin{align*}
+(A^{-1}+B^{-1})^{-1}= & (EA^{-1}+B^{-1}E)^{-1}\\
+= & (B^{-1}BA^{-1}+B^{-1}AA^{-1})\\
+= & \left(B^{-1}(A+B)A^{-1}\right)^{-1}\\
+= & A(A+B)^{-1}B
+\end{align*}
+\end{sol*}
+\begin{problem}
+设$\boldsymbol{A}$为$n$阶非奇异矩阵, $\boldsymbol{\alpha}$为$n$维列向量, $b$为常数,
+记分块矩阵
+
+\[
+\boldsymbol{P}=\begin{pmatrix}\boldsymbol{E} & 0\\
+-\boldsymbol{\alpha}^{T}\boldsymbol{A}^{*} & |\boldsymbol{A}|
+\end{pmatrix},\boldsymbol{Q}=\begin{pmatrix}\boldsymbol{A} & \boldsymbol{\alpha}\\
+\boldsymbol{\alpha}^{T} & b
+\end{pmatrix}
+\]
+
+计算并化简$\boldsymbol{PQ}$; 证明$\boldsymbol{Q}$可逆的充分必要条件为$\boldsymbol{\alpha}^{T}\boldsymbol{A}^{-1}\boldsymbol{\alpha}\neq b$.
+\end{problem}
+
+\begin{sol*}
+这个题目中出现的矩阵问题有什么更加深刻的见解吗?
+\end{sol*}
+\begin{problem}
+若已知n阶行列式$|A|=\text{det}\begin{pmatrix}0 & 1 & 0 & \cdots & 0\\
+0 & 0 & 2 & \cdots & 0\\
+\vdots & \vdots &  &  & \vdots\\
+0 & 0 & 0 & \cdots & n-1\\
+n & 0 & 0 & 0 & 0
+\end{pmatrix},$则|A|的第k行代数余子式的和是\_\_\_\_\_. 
+\end{problem}
+
+\begin{sol*}
+运用分块法和一些基础的操作即可. 
+\end{sol*}
+
+\subsection{矩阵的初等行列变换和矩阵的秩}
+\begin{problem}
+如果\textbf{$\boldsymbol{A}$}是$m\times n$ 矩阵, \textbf{$\boldsymbol{B}$}是$n\times s$矩阵,
+证明$r(\boldsymbol{AB})\leq\min(\text{rk}(\boldsymbol{A}),\text{rk}(\boldsymbol{B}))$. 
+\end{problem}
+
+\begin{problem}
+证明伴随矩阵秩的公式: $\rk{\boldsymbol{A}^{*}}=\begin{cases}
+n & \rk{\boldsymbol{A}}=n\\
+1 & \rk{\boldsymbol{A}}=n-1\\
+0 & \rk{\boldsymbol{A}}<n-1
+\end{cases}.$
+\end{problem}
+
+\begin{problem}
+如果\textbf{$\boldsymbol{A}$}是$m\times n$ 矩阵, \textbf{$\boldsymbol{B}$}是$n\times s$矩阵,
+证明$r(\boldsymbol{AB})\leq\text{rk}(\boldsymbol{B})$.
+\end{problem}
+
+\begin{problem}
+如果\textbf{$\boldsymbol{A}$}是$m\times n$ 矩阵, \textbf{$\boldsymbol{B}$}是$n\times s$矩阵,
+如果$\boldsymbol{AB=0},$证明$\rk{\boldsymbol{A}}+\rk{\boldsymbol{B}}\leq n$. 
+\end{problem}
+
+

@@ -1,0 +1,172 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-book
+\use_default_options true
+\begin_modules
+theorems-ams-chap-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+换元法和分部积分法
+\end_layout
+
+\begin_layout Proposition
+(常见函数的积分)常见函数有以下的积分表: 
+\begin_inset Formula 
+\begin{align*}
+\int\tan x\dd x=-\ln|\cos x|+C\qquad & \int\cot x\dd x=\ln|\sin x|+C\\
+\int\sec x\dd x=\ln|\tan x+\sec x|+C\qquad & \int\csc x\dd x=\ln|\csc x-\cot x|+C\\
+\int\frac{1}{1+x^{2}}\dd x=\arctan x+C\qquad & \int\frac{1}{1-x^{2}}\dd x=\ln\left|\frac{x+1}{x-1}\right|+C\\
+\int\sqrt{1-x^{2}}\dd x=\frac{x}{2}\sqrt{1-x^{2}}+\frac{1}{2}\arcsin x+C\qquad & \int\sqrt{x^{2}\pm1}\dd x=\frac{x}{2}\sqrt{x^{2}\pm1}+\frac{1}{2}\ln|x+\sqrt{x^{2}\pm1}+C
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition
+(扩展积分表) 对于二次三项式, 我们有如下的常见积分表:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\int\frac{1}{a^{2}+x^{2}}\dd x=\frac{1}{a}\arctan\frac{x}{a}\qquad & \int\frac{1}{a^{2}-x^{2}}\dd x=\frac{1}{2a}\left|\frac{x+a}{x-a}\right|\\
+\int\frac{1}{\sqrt{}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Problem
+求解
+\begin_inset Formula $I_{n}=\int f_{n}(x)\dd x,f_{n}(x)=\frac{1}{(x^{2}+1)^{n}}$
+\end_inset
+
+以及
+\begin_inset Formula $f_{n}(x)=\sin^{n}x$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Section
+几类初等函数的积分
+\end_layout
+
+\begin_layout Problem
+已知: 在复数域上一切实系数多项式都可以分解成若干个一次因式的乘积, 证明: 一个有理真分式一定可以表示成若干个最简分式的和, 而最简真分式有且仅有如下四种:
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{A}{x-a},\frac{A}{(x-a)^{m}},\frac{Mx+N}{x^{2}+px+q}(p^{2}-4q<0),\frac{Mx+N}{(x^{2}+px+q)^{k}}(k>1,p^{2}-4q<0).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Problem
+并且将
+\begin_inset Formula $\frac{2x+2}{x^{5}-x^{4}+2x^{3}-2x^{2}+x-1}$
+\end_inset
+
+化为上述形式.
+ 
+\end_layout
+
+\end_body
+\end_document

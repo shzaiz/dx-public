@@ -1,0 +1,213 @@
+\documentclass[11pt]{beamer}
+
+\usepackage[utf8]{inputenc}
+% \usepackage[T1]{fontenc}
+%\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usefonttheme[fontset = none]{serif}
+\usepackage{ctex}
+\usetheme{EastLansing}
+
+\begin{document}
+	\author{张桄玮}
+	\title{获得真正的力量: 探索与实践}
+	\subtitle{华为``育苗''奖学金评选答辩}
+	\institute{中国地质大学(武汉)\\计算机学院}
+	\titlegraphic{\includegraphics[width=3cm]{logo.png}}
+	%\setbeamercovered{transparent}
+	%\setbeamertemplate{navigation symbols}{}
+	\AtBeginSection[]
+	{
+		\begin{frame}{主要内容}
+			\transfade%淡入淡出效果
+			\tableofcontents[sectionstyle=show/shaded,subsectionstyle=show/shaded/hide] 
+		\end{frame}
+	}
+	\begin{frame}[plain]
+		\maketitle
+	\end{frame}
+	
+	\section{大学以前: 自由地探索}
+	\begin{frame}
+		\frametitle{进入这个领域}
+		\framesubtitle{小学的时候}
+		\textbf{小学的时候}
+		\begin{itemize}
+			\item 感觉神奇
+			\item 学了点VB, 造了点简单的小游戏
+			\item 学了点PPT, 很多老师找我帮他们改一改公开课要用的PPT
+		\end{itemize} 
+	\end{frame}
+
+
+	\begin{frame}
+		\frametitle{进入这个领域}
+		\framesubtitle{初中的时候}
+		\textbf{初中的时候}
+		\begin{itemize}
+			\item 还是经常帮老师们改PPT
+			\item 因为很好玩, 继续探索
+			\item 了解了一点Java, 帮助老师制作了很多有用的小工具
+				\item 但是对于只能``拼搭积木''这样的模式感到不满足
+			\item 于是对``算法''的渴求恰如其时的出现了
+		\end{itemize} 
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{进入这个领域}
+		\framesubtitle{高中的时候}
+		\textbf{高中的时候}
+		\begin{itemize}
+			\item 进入了郑州市第一中学信息竞赛队
+			\item 了解到了广阔的算法天地
+			\item 幸运的是得到了CSP2020一等奖, NOIP2020二等奖
+			\item 迫于实力和河南省的高考压力, 回到文化课准备高考
+			\item 对计算机科学持续的热爱
+		\end{itemize} 
+	\end{frame}
+
+	\section{大学: 希望在专业的人员指导下继续探索}
+	\begin{frame}
+		\frametitle{代价: 很多的弯路}
+		\framesubtitle{和一部分无意义的时间浪费}
+		
+		\textbf{具体的代价}
+		\begin{itemize}
+			\item 知识体系较为零散
+			\item 数学方面的训练不是很足
+			\item 不能善于阅读/编写多人工程协作项目
+		\end{itemize}
+		
+		\begin{quote}
+			我们都是活生生的人, 从小就被不由自主地教导用最小的付出获得最大的得到, 经常会忘记我们究竟要的是什么. 我承认我完美主义, 但我想每个人心中都有那一份求知的渴望和对真理的向往, ``大学"的灵魂也就在于超越世俗, 超越时代的纯真和理想 -- 我们不是要讨好企业的毕业生, 而是要寻找改变世界的力量.  --- by  \texttt{ Yanyan Jiang } \textit{on ICS2020}
+		\end{quote}
+		\begin{centering}
+		最主要的理由: 要让自己变成一个真正\textbf{实力过硬}的学生.
+		\end{centering}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{期望的解决方案}
+		\framesubtitle{接受专业人员的指导}
+		\pause
+		\textbf{(I)接受专业人员的指导}
+		
+		\begin{itemize}
+			\item 来自学校课程/老师的教导
+			\item \textbf{来自社团巨佬们的指导}
+			\item 来自网络上公开课的指导
+			\item ...
+		\end{itemize}
+		
+		
+		\begin{quote}
+			将已有的知识和方法重新消化, 为大家建立好``台阶'', 在有限的时间里迅速赶上数十年来建立起的学科体系.  --- by  \texttt{ Yanyan Jiang } \textit{on Operating Systems: Design and implementation}
+		\end{quote}
+	
+	
+	\end{frame}
+
+
+
+	\begin{frame}
+		\frametitle{期望的解决方案}
+		\framesubtitle{打牢数学/计算机科学基础}
+		\textbf{(II)打牢数学/计算机科学基础}
+		
+		\begin{quote}
+			在打好基础之前就不要奢望有什么成就了. \\--- \texttt{Haonan Huang}(B站up: 數心)
+		\end{quote}
+		
+		
+		数学课程:
+		\begin{itemize}
+			\item 代数: \textbf{线性代数}$\rightarrow$\textbf{高等代数}$\rightarrow$抽象代数$\rightarrow \cdots$
+			\item 分析: \textbf{高等数学}$\rightarrow$\textbf{数学分析}$\rightarrow$实分析$\rightarrow\cdots$
+			\item \textbf{离散数学}: 很杂, 主要包括具体数学, 组合数学... (NJU离散数学公开课有一点学一点吧)
+			\item ...
+		\end{itemize} 
+		计算机科学课程:
+		\begin{itemize}
+			\item \textbf{SICP(MIT)系列}
+			\item \textbf{计算机系统基础(简化版的CSAPP)}
+			\item ...
+		\end{itemize} 
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{期望的解决方案}
+		\framesubtitle{做更多的实验}
+		\textbf{(III)做更多的实验}\\
+		目前正在进行: 
+		\begin{itemize}
+			\item \textbf{NJU问题求解(第一学期)书面作业}
+			\begin{itemize}
+				\item 进度: 论题1-4
+			\end{itemize}
+			\item \textbf{NJU计算机系统基础实验(PA)}: 在框架代码的指引下造一个NEMU, 在上面跑Super Mario 
+			\begin{itemize}
+				\item 进度: PA2.2
+			\end{itemize}
+		\end{itemize} 
+	以后可能会进行:
+	
+	\begin{itemize}
+		\item NJU操作系统实验
+		\item CSAPP实验
+		\item ...
+	\end{itemize} 
+	\end{frame}
+
+	\section{目标}
+
+	\begin{frame}
+		\frametitle{承担更多提升能力的训练}
+		\framesubtitle{让自己变成更加强大的学生}
+		
+		\begin{quote}
+			教育除了知识的记忆之外, 更本质的是能力的训练, 即所谓的training. 而但凡training就必须克服一定的难度, 否则你就是在做重复劳动, 能力也不会有改变. 如果遇到难度就选择退缩, 或者让别人来替你克服本该由你自己克服的难度, 等于是自动放弃了获得training的机会, 而这其实是大学专业教育最宝贵的部分. --- by  \texttt{ Yitong Yin }
+		\end{quote}
+		\pause
+		\begin{itemize}
+			\item 为未来的研究打下一些坚实的基础
+			\item 回馈社会
+			\begin{itemize}
+				\item 以前在B站(\color{blue}\href{https://space.bilibili.com/13246364}{AUGPath}\color{black})经常投科普性质的稿件
+				\item 但是发现知识不够系统, 无法满足自己对于高质量科普稿件的定义
+				\item 于是希望学习更多的知识
+				\item \url{shzaiz.github.io}
+			\end{itemize}
+		\end{itemize} 
+		
+		
+	\end{frame}
+	
+	\section*{致谢与参考}
+	
+	\begin{frame}
+		\frametitle{参考资料}
+		\textbf{刚刚列出的一些课程}
+		\begin{itemize}
+			\item \color{blue}\href{https://space.bilibili.com/1632276842}{Maki's Lab数学分析公开课}
+			\item \color{blue}\href{https://space.bilibili.com/509086270}{NJU 高等代数公开课}
+			\item \color{blue}\href{https://space.bilibili.com/479141149/channel/seriesdetail?sid=490582}{NJU 离散数学公开课}
+			\item \color{blue}\href{https://www.bilibili.com/video/BV1Xx41117tr/}{MIT SICP公开课}
+			\item \color{blue}\href{https://www.bilibili.com/video/BV1kE411X7S5/}{NJU 计算机系统基础}
+			
+			
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}
+		
+		$$\Huge \text{谢谢!}$$
+	\end{frame}
+	
+\end{document}
