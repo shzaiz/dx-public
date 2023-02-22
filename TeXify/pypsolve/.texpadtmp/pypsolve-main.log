@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.1.19)  21 FEB 2023 22:18
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.1.19)  22 FEB 2023 17:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -966,7 +966,134 @@ Package: empheq 2017/03/31 v2.15 Emphasizing equations
 \EQ_mathdisplay_box=\box82
 \EQ_tag_box=\box83
 \g_EQ_temprow_int=\count416
-))) (/Users/zgw/Documents/dx/TeXify/pypsolve/.texpadtmp/pypsolve-main.aux)
+))) (/usr/local/texlive/2022/texmf-dist/tex/latex/glossaries/base/glossaries.sty
+Package: glossaries 2022/11/03 v4.52 (NLCT)
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/local/texlive/2022/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks48
+\XKV@tempa@toks=\toks49
+)
+\XKV@depth=\count417
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)) (/usr/local/texlive/2022/texmf-dist/tex/latex/mfirstuc/mfirstuc.sty
+Package: mfirstuc 2022/10/14 v2.08 (NLCT)
+\@glsmfirst=\toks50
+\@glsmrest=\toks51
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/xfor/xfor.sty
+Package: xfor 2009/02/05 v1.05 (NLCT)
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/datatool/datatool-base.sty
+Package: datatool-base 2019/09/27 v2.32 (NLCT)
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/substr/substr.sty
+Package: substr 2009/10/20 v1.2 Handle substrings
+\c@su@anzahl=\count418
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/datatool/datatool-fp.sty
+Package: datatool-fp 2019/09/27 v2.32 (NLCT)
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/fp/fp.sty
+Package: fp 1995/04/02
+ `Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich (/usr/local/texlive/2022/texmf-dist/tex/latex/fp/defpattern.sty
+Package: defpattern 1994/10/12
+\actioncount=\count419
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/fp/fp-basic.sty
+Package: fp-basic 1996/05/13
+\FP@xs=\count420
+\FP@xia=\count421
+\FP@xib=\count422
+\FP@xfa=\count423
+\FP@xfb=\count424
+\FP@rega=\count425
+\FP@regb=\count426
+\FP@regs=\count427
+\FP@times=\count428
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/fp/fp-addons.sty
+Package: fp-addons 1995/03/15
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/fp/fp-snap.sty
+Package: fp-snap 1995/04/05
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/fp/fp-exp.sty
+Package: fp-exp 1995/04/03
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/fp/fp-trigo.sty
+Package: fp-trigo 1995/04/14
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/fp/fp-pas.sty
+Package: fp-pas 1994/08/29
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/fp/fp-random.sty
+Package: fp-random 1995/02/23
+\FPseed=\count429
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/fp/fp-eqn.sty
+Package: fp-eqn 1995/04/03
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/fp/fp-upn.sty
+Package: fp-upn 1996/10/21
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/fp/fp-eval.sty
+Package: fp-eval 1995/04/03
+)))
+\@dtl@toks=\toks52
+\@dtl@tmpcount=\count430
+\dtl@tmplength=\skip153
+\dtl@sortresult=\count431
+\@dtl@numgrpsepcount=\count432
+\@dtl@datatype=\count433
+\dtl@codeA=\count434
+\dtl@codeB=\count435
+\@dtl@foreach@level=\count436
+)
+\gls@level=\count437
+\@gls@tmpb=\toks53
+\gls@tmplen=\skip154
+\glskeylisttok=\toks54
+\glslabeltok=\toks55
+\glsshorttok=\toks56
+\glslongtok=\toks57
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/glossaries/styles/glossary-hypernav.sty
+Package: glossary-hypernav 2022/11/03 v4.52 (NLCT)
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/glossaries/styles/glossary-list.sty
+Package: glossary-list 2022/11/03 v4.52 (NLCT)
+\glslistdottedwidth=\skip155
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/glossaries/styles/glossary-long.sty
+Package: glossary-long 2022/11/03 v4.52 (NLCT)
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
+\LTleft=\skip156
+\LTright=\skip157
+\LTpre=\skip158
+\LTpost=\skip159
+\LTchunksize=\count438
+\LTcapwidth=\dimen335
+\LT@head=\box84
+\LT@firsthead=\box85
+\LT@foot=\box86
+\LT@lastfoot=\box87
+\LT@gbox=\box88
+\LT@cols=\count439
+\LT@rows=\count440
+\c@LT@tables=\count441
+\c@LT@chunks=\count442
+\LT@p@ftn=\toks58
+)
+\glsdescwidth=\skip160
+\glspagelistwidth=\skip161
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/glossaries/styles/glossary-super.sty
+Package: glossary-super 2022/11/03 v4.52 (NLCT)
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/supertabular/supertabular.sty
+Package: supertabular 2020/02/02 v4.1g the supertabular environment
+\c@tracingst=\count443
+\ST@wd=\dimen336
+\ST@rightskip=\skip162
+\ST@leftskip=\skip163
+\ST@parfillskip=\skip164
+\ST@pageleft=\dimen337
+\ST@headht=\dimen338
+\ST@tailht=\dimen339
+\ST@pagesofar=\dimen340
+\ST@pboxht=\dimen341
+\ST@lineht=\dimen342
+\ST@prevht=\dimen343
+\ST@toadd=\dimen344
+\ST@dimen=\dimen345
+\ST@pbox=\box89
+))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/glossaries/styles/glossary-tree.sty
+Package: glossary-tree 2022/11/03 v4.52 (NLCT)
+\glstreeindent=\skip165
+)) (/Users/zgw/Documents/dx/TeXify/pypsolve/.texpadtmp/pypsolve-main.aux)
 \openout1 = `pypsolve-main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
@@ -1083,7 +1210,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
 (lastpage)             ! on input line 43.
-\c@lstlisting=\count417
+\c@lstlisting=\count444
 Package hyperref Info: Link coloring OFF on input line 43.
 (/Users/zgw/Documents/dx/TeXify/pypsolve/.texpadtmp/pypsolve-main.out) (/Users/zgw/Documents/dx/TeXify/pypsolve/.texpadtmp/pypsolve-main.out)
 \@outlinefile=\write4
@@ -1180,99 +1307,111 @@ Package mdframed Info: mdframed detected package amsthm
 LaTeX Font Warning: Command \Large invalid in math mode on input line 100.
 
 [7]
+Overfull \hbox (69.58173pt too wide) in paragraph at lines 144--146
+[]\TU/SimSun(0)/m/n/10.53937 请 认 真 阅 读 并 实 践 \TU/lmr/m/n/10.53937 (\TU/SimSun(0)/m/n/10.53937 无 论 是 在 脑 子 还 是 在 交 互 器 \TU/lmr/m/n/10.53937 (interactive shell) \TU/SimSun(0)/m/n/10.53937 里 面\TU/lmr/m/n/10.53937 ) \TU/SimSun(0)/m/n/10.53937 文 档 \TU/lmr/m/n/10.53937 https://docs.python.org/zh-
+ []
+
 Package mdframed Info: mdframed works in twoside mode on input line 148.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 148.
 
-
 LaTeX Font Warning: Command \Large invalid in math mode on input line 148.
 
-[8]
-Overfull \hbox (20.58545pt too wide) in paragraph at lines 223--224
+[8] [9]
+Overfull \hbox (20.58545pt too wide) in paragraph at lines 226--227
 []\TU/lmtt/m/n/10.53937 Traceback (most recent call last):   File []<stdin>[], line 1, in <module>   
  []
 
 
-Overfull \hbox (59.87688pt too wide) in paragraph at lines 231--232
+Overfull \hbox (59.87688pt too wide) in paragraph at lines 234--235
 []\TU/SimSun(0)/m/n/10.53937 可 能 经 常 会 常 用 的 变 量 类 型\TU/lmr/m/n/10.53937 : \TU/SimSun(0)/m/n/10.53937 数 字、|  字 符 串、|  列 表\TU/lmr/m/n/10.53937 . \TU/SimSun(0)/m/n/10.53937 这 时 候 可 以 参 看 官 方 文 档 \TU/lmr/m/n/10.53937 https://docs.python.org/zh-
  []
 
-[9] [10] [11]
-Overfull \hbox (19.83798pt too wide) in paragraph at lines 409--412
+[10] [11]
+Overfull \hbox (19.83798pt too wide) in paragraph at lines 412--415
 []\TU/SimSun(0)/m/n/10.53937 下 面\TU/lmr/m/n/10.53937 , \TU/SimSun(0)/m/n/10.53937 可 以 阅 读 \TU/lmr/m/n/10.53937 https://docs.python.org/zh-cn/3/tutorial/controlflow.html#defining-functions
  []
 
 [12]
-Package mdframed Info: mdframed works in twoside mode on input line 477.
+Package mdframed Info: mdframed works in twoside mode on input line 480.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 477.
+(mdframed)              on input line 480.
 
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 477.
+LaTeX Font Warning: Command \Large invalid in math mode on input line 480.
+
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last box will be empty
+(mdframed)                you have to change it manually
+(mdframed)                by changing the text, the space
+(mdframed)                or something else on input line 483.
 
 [13]
-Package mdframed Info: mdframed works in twoside mode on input line 514.
+Package mdframed Info: mdframed works in twoside mode on input line 517.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 514.
+(mdframed)              on input line 517.
 
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 514.
+LaTeX Font Warning: Command \Large invalid in math mode on input line 517.
 
-Package mdframed Info: mdframed works in twoside mode on input line 520.
+Package mdframed Info: mdframed works in twoside mode on input line 523.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 520.
+(mdframed)              on input line 523.
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 520.
+LaTeX Font Warning: Command \Large invalid in math mode on input line 523.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang2.sty
 File: lstlang2.sty 2020/03/24 1.8d listings language file
-)
-Package mdframed Info: Box was splittet wrong
- starting loop to iterate the splitting point
-(mdframed)              on input line 548.
- [14]
-Package mdframed Info: mdframed works in twoside mode on input line 581.
+) [14] [15]
+Package mdframed Info: mdframed works in twoside mode on input line 584.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 581.
+(mdframed)              on input line 584.
 
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 581.
+LaTeX Font Warning: Command \Large invalid in math mode on input line 584.
 
-[15]
-Package mdframed Info: mdframed works in twoside mode on input line 621.
+Package mdframed Info: mdframed works in twoside mode on input line 624.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 621.
+(mdframed)              on input line 624.
+
+LaTeX Font Warning: Command \Large invalid in math mode on input line 624.
 
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 621.
-
-Package mdframed Info: mdframed works in twoside mode on input line 629.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 629.
-
-LaTeX Font Warning: Command \Large invalid in math mode on input line 629.
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last box will be empty
+(mdframed)                you have to change it manually
+(mdframed)                by changing the text, the space
+(mdframed)                or something else on input line 625.
 
 [16]
-Package mdframed Info: mdframed works in twoside mode on input line 651.
+Package mdframed Info: mdframed works in twoside mode on input line 632.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 651.
+(mdframed)              on input line 632.
 
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 651.
+LaTeX Font Warning: Command \Large invalid in math mode on input line 632.
 
-) [17] [18
+Package mdframed Info: mdframed works in twoside mode on input line 654.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 654.
 
-]
+LaTeX Font Warning: Command \Large invalid in math mode on input line 654.
+
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 674.
+[17]) [18]
 第二章
 (./2-prop-logic/main.tex
 Package mdframed Info: mdframed works in twoside mode on input line 4.
@@ -1283,30 +1422,113 @@ Package mdframed Info: mdframed detected package amsthm
 
 LaTeX Font Warning: Command \Large invalid in math mode on input line 4.
 
-Package mdframed Info: mdframed works in twoside mode on input line 18.
+Package mdframed Info: mdframed works in twoside mode on input line 26.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 18.
+(mdframed)              on input line 26.
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 18.
+LaTeX Font Warning: Command \Large invalid in math mode on input line 26.
 
-) 
+[19
+
+]
+Package mdframed Info: mdframed works in twoside mode on input line 42.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 42.
+
+
+LaTeX Font Warning: Command \Large invalid in math mode on input line 42.
+
+Package mdframed Info: mdframed works in twoside mode on input line 54.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 54.
+
+LaTeX Font Warning: Command \Large invalid in math mode on input line 54.
+
+Package mdframed Info: mdframed works in twoside mode on input line 65.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 65.
+
+LaTeX Font Warning: Command \Large invalid in math mode on input line 65.
+
+[20]
+Package mdframed Info: mdframed works in twoside mode on input line 83.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 83.
+
+
+LaTeX Font Warning: Command \Large invalid in math mode on input line 83.
+
+Package mdframed Info: mdframed works in twoside mode on input line 100.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 100.
+
+LaTeX Font Warning: Command \Large invalid in math mode on input line 100.
+
+Package mdframed Info: mdframed works in twoside mode on input line 117.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 117.
+
+LaTeX Font Warning: Command \Large invalid in math mode on input line 117.
+
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 123.
+[21]
+Package mdframed Info: mdframed works in twoside mode on input line 147.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 147.
+
+
+LaTeX Font Warning: Command \Large invalid in math mode on input line 147.
+
+[22]
+Package mdframed Info: mdframed works in twoside mode on input line 168.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 168.
+
+
+LaTeX Font Warning: Command \Large invalid in math mode on input line 168.
+
+Package mdframed Info: mdframed works in twoside mode on input line 174.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 174.
+
+LaTeX Font Warning: Command \Large invalid in math mode on input line 174.
+
+Package mdframed Info: mdframed works in twoside mode on input line 200.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 200.
+
+LaTeX Font Warning: Command \Large invalid in math mode on input line 200.
+
+[23]) 
 AED: lastpage setting LastPage
-[19] (/Users/zgw/Documents/dx/TeXify/pypsolve/.texpadtmp/pypsolve-main.aux)
+[24] (/Users/zgw/Documents/dx/TeXify/pypsolve/.texpadtmp/pypsolve-main.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.41063pt have occurred.
 
 Package rerunfilecheck Info: File `pypsolve-main.out' has not changed.
-(rerunfilecheck)             Checksum: B2717A9B8B3B76B30F36FE01DA21AE08;1611.
+(rerunfilecheck)             Checksum: D4C1DDF74813CEB2C5E2CCD2649298ED;1949.
  ) 
 Here is how much of TeX's memory you used:
- 33127 strings out of 476776
- 701135 string characters out of 5805932
- 2115991 words of memory out of 5000000
- 52624 multiletter control sequences out of 15000+600000
+ 37077 strings out of 476776
+ 769046 string characters out of 5805932
+ 2069991 words of memory out of 5000000
+ 56480 multiletter control sequences out of 15000+600000
  524782 words of font info for 125 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 98i,11n,100p,1274b,1838s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 98i,11n,100p,2264b,1881s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on /Users/zgw/Documents/dx/TeXify/pypsolve/.texpadtmp/pypsolve-main.pdf (19 pages).
+Output written on /Users/zgw/Documents/dx/TeXify/pypsolve/.texpadtmp/pypsolve-main.pdf (24 pages).

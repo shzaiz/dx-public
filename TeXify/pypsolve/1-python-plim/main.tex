@@ -10,7 +10,7 @@
 
 你可以将你生活中的各种多余的任务自动化. 一点点的Python可以给你的生活带来神奇的效果. 甚至提高你的生产力. 
 
-\subsection{程序设计的语法与语义}
+\subsection{程序设计的语法(grammar)与语义(schematics)}
 
 我们在学习英语的时候很重要的一部分是语法: 也就是什么样的语言是可以被接受(acceptable)的. 比如下面这个英文句子是没有语法错误的: 
 \begin{verbatim}
@@ -22,7 +22,7 @@ Fuhai Zhu said that this test is only a small test, so don't panic.
 \item 但是南京大学数学系的同学知道这是一个有名的梗: 上学期教高等代数的朱富海老师把线上期中考叫做``小测验'', 并在同学询问考试范围的时候微笑的答道:``从小学学的都考.''
 \end{itemize}
 \begin{quote}
-简而言之(不严谨) , 现在我们有一个由一堆字符串和推导规则组成的形式系统, 语法决定了这个形式系统能生存什么样的字符串, 而至于这些字符串有什么样的含义则是语义的范畴.
+简而言之(不严谨) , 现在我们有一个由一堆字符串和推导规则组成的形式系统(formal system), 语法决定了这个形式系统能生存什么样的字符串, 而至于这些字符串有什么样的含义则是语义的范畴.
 语法类似材料, 语义类似与材料组成的各种建筑物, 我们可以通过语法研究语义层面的推导, 同时也可以从语义层面捕获语法中内涵的结构,
 其实语法和语义是相互区别又紧密联系, 即从范畴论的角度看语法和语义是伴随的(其实不同的人做数学证明可以有不同的风格: 偏语法和偏语义,
 不过大部分数学家更喜欢语义风格的证明, 可能因为更直观, 更容易被人脑接受\textasciitilde\textasciitilde ) 
@@ -31,7 +31,7 @@ Fuhai Zhu said that this test is only a small test, so don't panic.
 来源: 知乎 著作权归作者所有. 商业转载请联系作者获得授权, 非商业转载请注明出处. 
 \end{quote}
 
-\subsection{Python代码执行可视化: 一个网站}
+\subsection{Python代码执行可视化(visualization): 一个网站}
 
 \begin{tool}
 这是\href{https://pythontutor.com/visualize.html\#mode=display}{Python代码执行可视化}的机器,
@@ -51,16 +51,16 @@ for i in range(10):
 \subsection{可以执行任何程序的最小指令集}
 像数学的公理体系那样, 我们自然希望得到一个最小的指令集合, 并且我们可以用来写出任何的程序. 我们不妨从日常生活中找一点灵感吧.
 \begin{example}
-(等红绿灯) 观察红绿灯, \textbf{如果}是绿灯, 那就通过这个路口; \textbf{否则}继续等待. (遵纪守法的好公民)
+(等红绿灯) 观察红绿灯, \textbf{如果(if)}是绿灯, 那就通过这个路口; \textbf{否则(else)}继续等待. (遵纪守法的好公民)
 
-(做作业) 明确今天的作业范围, 从\textbf{第一题}开始写, 写完题目\textbf{或者}一题目没有思路之后做\textbf{下一道}题,
-\textbf{直到}做完所有的问题.
+(做作业) 明确今天的作业范围, 从\textbf{第一题}开始写, 写完题目\textbf{或者(or)}一题目没有思路之后做\textbf{下一道}题,
+\textbf{直到(until)}做完所有的问题.
 
-(排序成绩单) 获得班上同学的所有\textbf{成绩单}, 拿一张新的白纸打好\textbf{表格}, \textbf{每一次}从成绩单中选取最大的分数,
+(排序成绩单) 获得班上同学的所有\textbf{成绩单}, 拿一张新的白纸打好\textbf{表格}, \textbf{每一次(for each time)}从成绩单中选取最大的分数,
 把那一行\textbf{抄写到}新的白纸上. 之后把原来那张纸上的内容划去. \textbf{一直重复下去}, \textbf{直到}原来的成绩单上没有任何可以被划去的内容.
 \end{example}
-我们需要找一些东西来具象化我们脑子中的``红绿灯的状态'', ``现在在做作业的题目编号'', 这些内容, 因此我们就希望把这些抽象出来.
-因此我们有了变量的概念, 也就是值存在的空间. 
+我们需要找一些东西来具象化我们脑子中的``红绿灯的状态(state)'', ``现在在做作业的题目编号'', 这些内容, 因此我们就希望把这些抽象出来.
+因此我们有了变量(variable)的概念, 也就是值存在的空间. 
 
 把上面的三个内容转化成伪代码(不唯一)就是:
 \begin{verbatim}
@@ -85,7 +85,7 @@ while list is not empty
     write k to the next line of result
 show result
 \end{verbatim}
-其实要是能够构造出任何程序的原材料并不复杂. 无非就是变量的赋值, 判断, 跳转, 终止. 也就是, 如果你能声称有一套系统可以自动化的解决这四个内容,
+其实要是能够构造出任何程序的原材料并不复杂. 无非就是变量的赋值(assign), 判断(judgement), 跳转(jump), 终止(terminate). 也就是, 如果你能声称有一套系统可以自动化的解决这四个内容,
 那么这个系统就具有机械化地做任何人类做的事情. 换句话说, 你可以用这个工具创造整个世界. 
 
 其实最早这个想法是在计算机诞生之前人们孜孜以求的问题. Alan Turing 在1936年就提出了这样的设想. 他就是由只一条(无限长)的纸带和一根笔(可以改纸带的内容,
@@ -141,7 +141,7 @@ show result
 \end{example}
 下面我们来看一看为什么说可以用Python创造整个世界. 在这之前, 我们先来了解一下如何获取帮助和得到通俗易懂的教程. 
 
-请认真阅读并实践(无论是在脑子还是在交互器里面)文档https://docs.python.org/zh-cn/3/tutorial/introduction.html的内容.
+请认真阅读并实践(无论是在脑子还是在交互器(interactive shell)里面)文档https://docs.python.org/zh-cn/3/tutorial/introduction.html的内容.
 可以让你了解更多易于理解的东西. 如果文章中有描述C和Pascal的句子, 忽略它就可以. 
 
 \begin{idea}
@@ -154,6 +154,9 @@ show result
 
 下面会有两个术语(term), 分别是表达式(expression)和过程(procedure), 表达式可以暂且认为是形如x+12,
 {[}2{]}{*}3这样的可以进行计算的内容, 过程就是一系列执行的过程, 不一定要能得到值. 我们用一个例子感受一下.
+
+\newpage
+
 \begin{lyxcode}
 def~InsertionSort(A):~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -296,7 +299,7 @@ else:
 \#~(为自己菜爆的数学基础做了一个掩盖(大雾))
 \end{lyxcode}
 \begin{itemize}
-\item 如果结构不完整, 或者在else之后还有elif, 那么就会出发形如这样的错误:
+\item 如果结构不完整, 或者在else之后还有elif, 那么就触发形如这样的错误:
 \end{itemize}
 \begin{lyxcode}
 例子1.py-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-
@@ -313,7 +316,7 @@ File~\textquotedbl main.py\textquotedbl ,~line~3
 
 ~~~~\textasciicircum ~IndentationError:~expected~an~indented~block
 
-(缩进错误:~我预期有一个带着缩进的语句块,~但是没有)
+(缩进(indent)错误:~我预期有一个带着缩进的语句块,~但是没有)
 
 例子2.py-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-
 
@@ -359,7 +362,7 @@ else:~\#~可以有,~也可以没有
 , 然后循环终止. 在\textbf{过程1}中执行的\textbf{break}语句会终止循环, 且不执行else子句的\textbf{过程2}.
 在\textbf{过程1}中执行的continue语句跳过\textbf{过程1}的continue语句之后的其余部分, 然后立刻回到测试表达式语句. 
 
-有了循环, 我们就可以解读这个东西:
+有了循环(loop), 我们就可以解读这个东西:
 \begin{lyxcode}
 def~InsertionSort(A):
 
@@ -410,7 +413,7 @@ Python程序的终止可能包含有如下的情况:
 的4.7, 4.8.1-4.8.6节的内容, 把所有代码是怎么执行的放在pythontutor里面模拟着看一遍. 文字可以不用看,
 但是代码一定要执行一遍. 
 
-\subsubsection{递归(Recursion)过程和栈帧(Stack Frame)}
+\subsubsection{递归(recursion)过程和栈帧(stack frame)}
 
 观察下面的代码, 可能难以想象是怎么执行的:
 \begin{lyxcode}
@@ -432,10 +435,10 @@ def~fib(n):
 
 fib(5)
 \end{lyxcode}
-像这样用自己调用自己的函数调用通常叫做递归(recursion). 一个关于递归的有趣定义是:
-\begin{quote}
+像这样用自己调用自己的函数调用通常叫做递归. 一个关于递归的有趣定义是:
+\begin{definition}
 递归的定义: 如果你没有理解什么是递归, 那么参见递归. 
-\end{quote}
+\end{definition}
 事实上, 我们可以把它放在pythontutor里面执行一下, 发现如下的规则:
 \begin{itemize}
 \item 原来的程序就像是一张纸, 上面标注着当前执行到的行数;
@@ -474,9 +477,9 @@ print(getpercent(100, 120, 135))
 \end{lstlisting}
 
 \begin{bonus}
-如何判断一个程序的行为? 为了刻画程序的行为, 我们能不能像第一节里面提到的那样, 用一个``模型''来描述它?
+如何判断一个程序的行为(behavior)? 为了刻画程序的行为, 我们能不能像第一节里面提到的那样, 用一个``模型(model)''来描述它?
 
-宏观来说, 程序就是状态机. 程序的执行就是状态的迁移. 到底有哪些状态呢?
+宏观来说, 程序就是状态机. 程序的执行就是状态的迁移(transform). 到底有哪些状态呢?
 \end{bonus}
 
 \ti{片段2. 计算钱数之和}
