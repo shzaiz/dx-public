@@ -188,7 +188,10 @@ B: 来看一看朱富海老师的文章就知道了.
 	A: 这当然不行. 可能是没有受到一些理论的熏陶, 训练时间不是很足. 
 \end{dialogue}
 
+\subsection{命题, 真值表和指派}
+
 从高中开始, 我们似乎就开始处理各种各样的命题. 下面我们加一层抽象, 这样, 我们就可以把一些繁琐的内容交给计算机完成, 并且在探索的过程中对``什么是有效的推理''有一个更深的理解. 
+
 
 \begin{definition}[命题(proposition)]
 	{\bf 命题}是可以判定真假的陈述句 (不可既真又假). 其中, 称{\bf 真(true)}与{\bf 假(false)}称为命题的{\bf 真值(truth value) }. 
@@ -204,6 +207,8 @@ B: 来看一看朱富海老师的文章就知道了.
 平行的充要条件是$\frac{l_{1}}{l_{2}}=\frac{m_{1}}{m_{2}}=\frac{n_{1}}{n_{2}}.$
 	\end{itemize}
 \end{example}
+
+
 
 \begin{definition}[命题逻辑的语言]
         命题逻辑的语言有且仅有如下的内容构成: 
@@ -240,25 +245,446 @@ B: 来看一看朱富海老师的文章就知道了.
 	为什么叫合取, 为什么叫析取? 
 \end{bonus}
 
+其实命名的关键在于描述中的``和''和``析''. 我们可以查询古汉语字典来获取他们的意思. 并且从中找到一些合理性. 
+
+下面, 不妨用Python语言为例, 来看一看这些内容是如何在语言中有所设计的. 需要注意的是, 上表格中的后两个记号并不是新的. 只是我们经常用他们, 于是就变成了一个独立的记号. 
+
+如果$p$那么$q$的意思是: 如果$p$是对的, 那么$q$一定是对的, 如果$p$是错的, 那么$q$的真假性不确定. 因此, 我们可以把$p\rightarrow q$表示为$\lnot p \lor q$--意味着要么$p$不成立, 要么当$p$成立的时候$q$是对的--命题只有对和错, 所以我们就很干净的进行了一次分类讨论. 
+
+当且仅当的表示就是``若$p$则$q$, 且若$q$则$p$''. 本质上还是命题符号之间的``非'', ``或'', ``与''之间的连接. 
+
+\begin{example}
+	命题的真假在Python中可以用布尔表达式(boolean expression)的真(true)和假(false)表示. 比如今有变量\texttt{a=True,b=False,c=True}, 那么
+	\begin{lstlisting}[language=Python]
+		a=True, b=False, c=True
+		var = a and b or not c
+		print(var)
+	\end{lstlisting}
+	打印的真值就是就是$a\land b\lor \lnot c$的真值. 
+\end{example}
+
+既然我们规定了符号, 自然要研究一下他们的运算律和运算关系. 什么是运算律? 
+
+\begin{example}
+	我们从小就开始听到运算律的相关内容了. 那么什么是运算律? 某国外网站的解释如下. 
+	
+		
+The order of operations is a rule that tells the correct sequence of steps for evaluating a math expression. We can remember the order using PEMDAS: Parentheses, Exponents, Multiplication and Division (from left to right), Addition and Subtraction (from left to right).
+
+	但是我们还听说过``交换律(commutive law)'', ``结合律(associative law)''这样的名词. 这些内容反应了我们可以如何书写, 如何计算一个表达式. 
+
+	
+\end{example}
 
 
+\begin{idea}
+	除了这些, 对于命题, 我们需要了解这些四个内容: 
+\begin{itemize}
+	\item 一个可以判定“真/假”的“东西” – 命题
+	\begin{itemize}
+		\item 魏恒峰是南京大学的教师.
+	\end{itemize}
+	\item 简单命题组成更复杂的命题 – 连接词
+	\begin{itemize}
+		\item 如果这门课是魏恒峰老师教的, 那么他一定是很受欢迎的. 
+	\end{itemize}
+	\item 深入命题的内部 – 谓词与变元
+	\begin{itemize}
+		\item 在“今天下雨了.”和“昨天下雨了”之间建立逻辑联系.
+	\end{itemize}
+	\item 体现“普遍性”与“存在性” – 量词
+	\begin{itemize}
+		\item 任何一个学生计算机科学的学生都值得学习魏恒峰老师的离散数学课. 
+	\end{itemize}
+	
+\end{itemize}
+\end{idea}
+
+      \begin{definition}[命题符号的运算规则]
+        一般地, 命题记号遵循如下的运算规则: 
+        \begin{itemize}
+            \setlength{\itemsep}{6pt}
+            \item 最外层的括号可以省略
+            \item 优先级: $\lnot$, $\land$, $\lor$, $\to$, $\leftrightarrow$
+            \item 结合性: 右结合. 例如($\alpha \land \beta \land \gamma$表示$\alpha \land (\beta \land \gamma)$,
+              $\alpha \to \beta \to \gamma$表示$\alpha \to (\beta \to \gamma$))
+          \end{itemize}
+      \end{definition}
+
+那么我们说的命题的真假是怎么界定的呢? 通常情况下, 我们需要分类讨论每一个需要讨论的命题的真假, 最后看一看根据公式表达的真假性就行了. 所以, 我们很多时候希望``假定''这些命题的真假, 来考察最终结论的真假, 并且希望从中找到一点规律. 这样做其实有一个更专业的名字叫``真值指派''. 这样我们就可以对于``这句话永远是对的''有一个更加深刻的定义. 
+
+\begin{dialogue}
+	A: 我现在知道这些条件是, 对于明天高等数学课程的一些事情. 
+	
+	B: 什么事情? 
+	
+	A: 如果明天老师讲完了《空间立体几何》, 那么他就会做一个小测试. 同时如果我如果学的非常差的话, 并且旁边还没有大佬捞我的话, 我的平时分就非常惨淡. 
+	
+	B: 那我来分析一下, 假设老师没有讲完, 那么平时分暂时还不会受到影响; 如果老师讲完了, 同时我学得不差, 平时分也不会受到影响. 如果老师讲完了, 我学得非常差, 但是有人捞, 那么平时分也不会受到影响. 但是这是违反学术诚信的, 并不能做. 所以, 只要自己学得比较好才能得到很好的平时分. 
+\end{dialogue}
+
+像上面的例子, 我们通常会对命题的一些内容的真假进行预先假定, 即: 对于命题进行真值指派. 
+
+	\begin{definition}[真值指派 ($v$)]
+        令 $S$ 为一个命题符号的集合. 
+        $S$ 上的一个{\bf 真值指派} $v$ 是一个从 $S$ 到真假值的映射
+        \[
+          v: S \to \{T, F\}.
+        \]
+    \end{definition}
+
+具体的, 我们可以``指派''命题符号中的各个变量的值, 然后映射到真或假两种情况. 
+
+我们可以借助这个想法为我们上面定义的为我们上面的逻辑连接词做一个精确的数学定义. 叫做``真值表''. 
+
+\begin{definition}[真值表]
+	表征逻辑事件输入和输出之间全部可能状态的表格. 列出命题公式真假值的表. 通常以1表示真, 0 表示假. 
+\end{definition}
+
+比如, 我们有``非''的真值表(表\ref{tab:tru-not})、``和''的真值表(表\ref{tab:tru-and})、``或''真值表(表\ref{tab:tru-or})、``若,则''真值表((表\ref{tab:tru-if-then})以及``当且仅当''的真值表(表\ref{tab:tru-iff})
+
+\begin{table}
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		$p$ & $\lnot p$ \\ 
+		\hline
+		T & F\\ 
+		F & T\\
+		\hline
+	\end{tabular}
+	\caption{``非''的真值表}
+	\label{tab:tru-not}
+\end{table}
+
+\begin{table}
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		$p$ & $q$ & $p\land q$ \\ 
+		\hline
+		T & T & T\\ 
+		T & F & F\\
+		F & T & F\\ 
+		F & F & F\\
+		\hline
+	\end{tabular}
+	\caption{``和''的真值表}
+	\label{tab:tru-and}
+\end{table}
+
+\begin{table}
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		$p$ & $q$ & $p\land q$ \\ 
+		\hline
+		T & T & T\\ 
+		T & F & T\\
+		F & T & T\\ 
+		F & F & F\\
+		\hline
+	\end{tabular}
+	\caption{``或''的真值表}
+	\label{tab:tru-or}
+\end{table}
+
+\begin{table}
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		$p$ & $q$ & $p\to  q$ \\ 
+		\hline
+		T & T & T\\ 
+		T & F & F\\
+		F & T & T\\ 
+		F & F & T\\
+		\hline
+	\end{tabular}
+	\caption{``如果, 那么''的真值表}
+	\label{tab:tru-if-then}
+\end{table}
+
+\begin{table}
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		$p$ & $q$ & $p\land q$ \\ 
+		\hline
+		T & T & T\\ 
+		T & F & F\\
+		F & T & F\\ 
+		F & F & T\\
+		\hline
+	\end{tabular}
+	\caption{``当且仅当''的真值表}
+	\label{tab:tru-iff}
+\end{table}
+
+\begin{prob}
+	人类学者埃贝尔考察一个有着许多古怪社会现象的群岛，他到访的第一个小岛上的居民分为两类，而且每人必属其中的一类:
+	\begin{itemize}
+		\item Knight: 这类人永远说真话
+		\item Knave: 这类人永远说假话
+	\end{itemize}
+	在岛上埃贝尔遇到一行三人，且称他们为 A, B, C。埃贝尔问A: “你是knight还是knave?” A回答了，但埃贝尔没听清；于是埃贝尔就问B: “他(A)说的是什么？” B告诉埃贝尔A说自己是knave。
+此时，C插话说：“别相信他(B)，他说谎！”
+我们的问题是：C是 knight 还是 knave?
+\end{prob}
+
+事实上, 我们在小学很可能通过列举的方法完成求解. 但是现在我们可以用真值表列举. 甚至可以把公式写出来进行推演! 
+
+\begin{bonus}
+	等等, 什么叫推演? 有哪些推演规律? 这些推演规律是不是可以用公式表示? 这些都是下一节要介绍的内容. 
+\end{bonus}
+
+比如一个命题的否定的否定还是原命题本身一样, 我们可以定义一些``公式''. 比如$\not \not p$与$p$等价. 首先我们定义一下什么叫``满足'', ``蕴含''或者``等价''. 
+
+\begin{definition}[满足 (Satisfy)]
+        如果 $\overline{v}(\alpha) = T$, 则称真值指派 $v$ {\bf 满足}公式 $\alpha$. 
+      \end{definition}
+
+      很多时候一些逻辑表达式看上去就是废话. 比如``如果我后天知道了考试的成绩, 那我明天就知道了''. 数学上面对这类问题有一个定义叫做``重言蕴含''. 
+
+      \begin{definition}[重言蕴含 (Tautologically Implies)]
+          设 $\Sigma$ 为一个公式集. 
+    
+          $\Sigma$ {\bf 重言蕴含}公式 $\alpha$,
+          记为 $\Sigma \models \alpha$,
+    
+          如果{每个}满足 $\Sigma$ 中{所有}公式的真值指派都满足 $\alpha$. 
+      \end{definition}
+
+      \begin{definition}[重言式/永真式 (Tautology)]
+        如果将等价词两侧的子公式各自看作表达式，则这两个逻辑表达式对于相关逻辑变量的任意赋值有相同的逻辑值. 
+        (或者: 如果 $\emptyset \models \alpha$, 则称 $\alpha$ 为{\bf 重言式},
+        记为 $\models \alpha$.)
+      \end{definition}
+
+      反之, 就是永远都不能成立的矛盾的形式. 
+      
+      \begin{definition}[矛盾式/永假式 (Contradiction)]
+        若公式 $\alpha$ 在所有真值指派下均为假, 则称 $\alpha$ 为{\bf 矛盾式}. 
+      \end{definition}
+
+      \begin{definition}[重言等价 (Tautologically Equivalent)]
+        如果 $\alpha \models \beta$ 且 $\beta \models \alpha$,
+        则称 $\alpha$ 与 $\beta$ {\bf 重言等价}, 记为 $\alpha \equiv \beta$. 
+      \end{definition}
+      
+      
+\subsection{命题逻辑的推演}
+
+在上面我们发现了有很多的``废话'', 但是, 当看上去是``废话''的东西堆多堆复杂的时候, 那么它就不是显然的. 这就需要一些推理规律来帮助我们联通看上去毫不相干的逻辑符号. 
+
+经过我们的探讨, 我们就希望把一些最基本的规律写出来: 
+
+\begin{proposition}(逻辑的运算律(1))
+如果$A,B,C$是命题, 那么以下的内容是永真式: 
+        \begin{itemize}
+            
+            \item 交换律:
+          \[
+            (A \land B) \leftrightarrow (B \land A)
+          \]
+          \[
+            (A \lor B) \leftrightarrow (B \lor A)
+          \]
+        \item 结合律:
+          \[
+            ((A \land B) \land C) \leftrightarrow (A \land (B \land C))
+          \]
+          \[
+            ((A \lor B) \lor C) \leftrightarrow (A \lor (B \lor C))
+          \]
+        \item 分配律:
+          \[
+            (A \land (B \lor C)) \leftrightarrow ((A \land B) \lor (A \land C))
+          \]
+          \[
+            (A \lor (B \land C)) \leftrightarrow ((A \lor B) \land (A \lor C))
+          \]
+        \item De Morgan律: 
+          \[
+            \lnot (A \land B) \leftrightarrow (\lnot A \lor \lnot B)
+          \]
+          \[
+            \lnot (A \lor B) \leftrightarrow (\lnot A \land \lnot B)
+          \]
+          \item 双重否定律:
+            \[
+                \lnot \lnot A \leftrightarrow A
+            \]
+            \item 排中律:
+            \[
+                A \lor (\lnot A)
+            \]
+            \item 矛盾律:
+            \[
+                \lnot (A \land \lnot A)
+            \]
+            \item 逆否命题:
+            \[
+                (A \to B) \leftrightarrow (\lnot B \to \lnot A)
+            \]
+        \end{itemize}
+        
+      \end{proposition}
+
+这些为什么有用呢? 考虑有一天你在求解一个数学问题, 其中你想把一个命题否定掉, 比如
+
+\begin{prob}
+	如果$P,Q,R$是命题, 请否定$P\to Q\land R$. 
+\end{prob}
+
+其中一个很重要的手段就是通过上面的这些重言式的替换. 就像在学习三角函数的时候使用三角恒等式替换一样. 
+
+下面我们来看一个比较有趣的逻辑代数推演的例子: 
+\begin{prob}
+	我们已经知道 Bill, Jim和Sam分别来自Boston, Chicago和 Detroit. 以下每句话半句对，半句错：
+	\begin{itemize}
+		\item Bill来自Boston($p_1$), Jim来自Chicago($p_2$).		\item Sam来自Boston($p_3$), Bill来自Chicago($p_4$).		\item Jim来自Boston($p_5$), Bill来自Detroit($p_6$).
+	\end{itemize}
+	能确定每个人究竟谁来自何处吗？
+\end{prob}
+
+\begin{sol}
+	我们可以将上述条件用以下逻辑表达式来表示:
+$$
+\red{((p_1\land \lnot p_2)\lor (\lnot p_1\land  p_2))\land ((p_3\land \lnot p_4)\lor (\lnot p_3\land  p_4))}\land ((p_5\land \lnot p_6)\lor (\lnot p_5\land  p_6))
+$$
+
+先看前两个括号(上述式子红色的部分), 以连接两个式子中间的$\land$展开(下式红色符号), 我们有
+$$
+\begin{aligned}
+	&((p_1\land \lnot p_2)\teal{\lor} (\lnot p_1\land  p_2))\red{\land} ((p_3\land \lnot p_4)\teal{\lor} (\lnot p_3 \land  p_4)) \\
+	=& (p_1\land \lnot p_2 \red{\land} p_3\land \lnot p_4) \teal{\lor} (p_1\land \lnot p_2 \red{\land} \lnot p_3\land  p_4)\teal{\lor} (\lnot p_1\land  p_2)\red{\land}\lnot p_3\land  p_4)\teal{\lor} (\lnot p_1\land  p_2\red{\land}\lnot p_3\land  p_4)
+\end{aligned}
+$$
+根据已知条件, $p_1\land p_4, p_2\land p_4, p_1 \land p_3$均为假的, 所以上述式子是
+$$
+(\lnot p_1 \land p_2 \land p_3 \land \lnot p_4)
+$$
+
+与后面的$((p_5\land \lnot p_6)\lor (\lnot p_5\land  p_6))$进行$\land$操作, 也就是有
+
+$$
+\begin{aligned}
+	&(\lnot p_1 \land p_2 \land p_3 \land \lnot p_4)((p_5\land \lnot p_6)\lor (\lnot p_5\land  p_6)) \\
+	=& (\lnot p_1 \land p_2 \land \red{p_3} \land \lnot p_4 \land\red{ p_5} \land \not p_6)\lor (\lnot p_1 \land p_2 \land p_3 \land \lnot p_4 \land \lnot  p_5 \land p_6) \\
+	=&(\lnot p_1 \land p_2 \land p_3 \land \lnot p_4 \land \lnot  p_5 \land p_6)
+\end{aligned}
+$$
+
+所以我们知道: $p_2, p_3, p_6$是对的. 
+\end{sol}
+
+事实上, 我们能这样做是因为有带入定理帮助我们. 
+
+\begin{theorem}[带入定理]
+	运用永真式代替命题的变元, 得到的命题结果与原命题等价. 
+\end{theorem}
+
+\begin{bonus}
+	缺失的证明: 为什么没有了定理的证明? 	
+	
+	一个很重要的问题是我们数学的基石是缺失的. 其实, 人类在认识世界的时候开始也是缺乏基础的, 仅仅凭借直觉来建立一些体系. 直到直觉无法完全覆盖的时候, 人类才开始探索有没有什么基础的支撑点来支持这一系列理论. 
+\end{bonus}
+
+\subsection{化简的目标: 范式}
+
+范式的意思是``规范的形式''. 那么, 这些内容化简到最后有没有一个目标呢? 其实是有的. 任何一个命题都可以写成``合取范式(CNF)''或者``析取范式(DNF)''的形式. 下面给出形如这样的式子的定义:
+
+ 
+\begin{definition}[合取范式 (Conjunctive Normal Form)]
+            我们称公式 $\alpha$ 是{\bf 合取范式}, 如果它形如
+            \[
+              \alpha = \beta_{1} \land \beta_{2} \land \dots \land \beta_{k},
+            \]
+            其中, 每个 $\beta_{i}$ 都形如
+            \[
+              \beta_{i} = \beta_{i1} \lor \beta_{i2} \lor \dots \lor \beta_{in},
+            \]
+            并且 $\beta_{ij}$ 或是一个命题符号, 或者命题符号的否定. 
+    \end{definition}
 
 
+   \begin{definition}[析取范式 (Disjunctive Normal Form)]
+            我们称公式 $\alpha$ 是{\bf 析取范式}, 如果它形如
+            \[
+              \alpha = \beta_{1} \lor \beta_{2} \lor \dots \lor \beta_{k},
+            \]
+            其中, 每个 $\beta_{i}$ 都形如
+            \[
+              \beta_{i} = \beta_{i1} \land \beta_{i2} \land \dots \land \beta_{in},
+            \]
+            并且 $\beta_{ij}$ 或是一个命题符号, 或者命题符号的否定. 
+    \end{definition}
+
+\begin{theorem}
+	每一个命题都有等价的合取范式和析取范式的形式. (Given any proposition, there exists a proposition in disjunctive normal form which is equivalent to that proposition.)
+\end{theorem}
+
+\begin{proof}
+	(Copied from \url{https://planetmath.org/everypropositionisequivalenttoapropositionindnf} ) Any two propositions are equivalent if and only if they determine the same truth function. Therefore, if one can exhibit a mapping which assigns to a given truth function 
+ a proposition in disjunctive normal form such that the truth function $f$ of this proposition is $f$, the theorem follows immediately.
+
+Let $n$ denote the number of arguments $f$ takes. Define
+$$
+V(f)=\set{X\in\set{T,F}^n,f(X)=T}
+$$
+For every $X\in \set{T,F}$, define $L_i (x) = \set{T,F}^n \to \set{T,F}$ as follows: 
+$$
+L_i (X)(Y)=  \begin{cases}
+	Y_i , X_i =T;\\
+	\lnot Y_i , X_i =F.
+\end{cases}
+$$
+Then, we claim that 
+$$
+f(Y)=\bigwedge_{x\in V(f)}\bigvee_{i=1}^nL_i(X)(Y)
+$$
+On the one hand, suppose that $f(Y)=T$ for a certain $Y\in \set{T,F}^n$, By definition of $V(f)$, we have $Y\in V(f)$. By definition of $L_i$, we have
+$$
+L_i (Y)(Y)=\begin{cases}
+	Y_i , Y_i =T\\
+	\lnot Y_i, y_i = F 
+\end{cases}
+$$
+In either case, $L_i(Y)(Y)=T$, since a conjunction equals $T$ if each term of the conjunction equals $T$, it follows that$\bigvee_{i=1}^nL_i(Y)(Y)=T$, Finally, since a disjunction equals $T$ if and only if there exists a term which equals $T$, it follows the right hand side equals equals $T$ when the left-hand side equals $T$.
+
+On the one hand, suppose that $V(Y)+F$ for a certain $Y\in\set{T,F}$. Let $X$ be any element of $V(f)$. Since $Y \notin V(f)$, there must exist an index $i$ such that $X_i\neq Y_i$. For this choice of $i$, $Y_i =\lnot X_i $, Then we have
+$$
+L_i (X)(Y)=\begin{cases}
+	\lnot X_i , X_i=T\\
+	\lnot \lnot X_i, X_i =F
+\end{cases}
+$$
+In either case,$L_i(X)(Y)=F$, Since a conjunction equals $F$ if and only if there exists a term which evaluates to $F$, it follows that $\bigvee_{i=1} ^n=F$ for all $X\in V(f)$. Since a disjunction equals 
+ if and only if each term of the conjunction equals $F$, it follows that the right hand side equals equals $F$when the left-hand side equals $F$.
+
+\end{proof}
+
+上面的只是给了我们一个正确性证明, 但是并没有告诉我们如何把一个式子化为合取范式或者析取范式. 一般的, 我们有如下的方法: 
+
+(1)用$\lnot,\land,\lor$代替$\to,\leftrightarrow$;
+
+(2)用双重否定律, 消去律去掉多余的否定连接词, 运用De Morgan律将否定连接词内移. 
+
+(3) 利用分配率, 结合律, 幂等律整理得到. 
+
+实际上, 在上面的三个人从哪里来的例子中, 我们就用到了这样的想法. 
 
 
+\begin{bonus}
+	为什么合取范式(外面$\land$里面$\lor$)和析取范式(外面$\lor$里面$\land$)这么重要? 
+\end{bonus}
 
+下面的这个回答来源于StackExchange上面的回答\cite{why-important-cnf-dnf}, 简要概括如下:
 
+逻辑公式中的变量（输入）可以以复杂的方式混在一起. 如果公式采用CNF或DNF，变量就更加分离，从而更容易看出表达式何时成立. 比如, 要检查CNF是否成立，只需逐个检查每个子句有一个是假的整个都是假的. DNF也类似: 逐个检查子句，并在找到一个为真的子句时停止, 整个句子都是真的. 
 
-
-
-
-
-
-
-
-
-
-
+很多时候真值表会带来很多的麻烦: 意味着穷举和非常麻烦的事情. 有了CNF与DNF以后, 我们不必从真值表开始枚举, 可以通过操作表达式来形式地构造标准形式. 在某些情况下可能可以更方便一些.  
 
 
 

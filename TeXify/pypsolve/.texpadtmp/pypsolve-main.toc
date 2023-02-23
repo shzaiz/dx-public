@@ -14,4 +14,8 @@
 \contentsline {chapter}{\numberline {第二章\hspace {.3em}}命题的逻辑}{19}{chapter.2}%
 \contentsline {section}{\numberline {2.1}问题的提出: 为什么要研究命题的逻辑}{19}{section.2.1}%
 \contentsline {section}{\numberline {2.2}开始行动: 符号化逻辑}{23}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}命题, 真值表和指派}{23}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}命题逻辑的推演}{28}{subsection.2.2.2}%
+\contentsline {paragraph}{解答:}{29}{paragraph*.16}%
+\contentsline {subsection}{\numberline {2.2.3}化简的目标: 范式}{30}{subsection.2.2.3}%
 \contentsfinish 
