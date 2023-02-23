@@ -1240,5 +1240,150 @@ y=h & (2)
  
 \end_layout
 
+\begin_layout Section
+曲线
+\end_layout
+
+\begin_layout Standard
+如同直线可以看做两个平面的交, 我们可以把曲线看做两个曲面的交, 也就是有如下定义: 
+\end_layout
+
+\begin_layout Definition
+(空间曲面) 如果有两个不同的曲面
+\begin_inset Formula $F(x,y,z)=0$
+\end_inset
+
+与
+\begin_inset Formula $G(x,y,z)=0$
+\end_inset
+
+, 他们的交线
+\begin_inset Formula 
+\[
+\begin{cases}
+F(x,y,z)=0\\
+G(x,y,z)=0
+\end{cases}
+\]
+
+\end_inset
+
+可以表示一个曲线.
+ 叫做空间曲线的一般方程.
+ 
+\end_layout
+
+\begin_layout Standard
+除此之外, 我们还可以用参数方程表示.
+ 
+\end_layout
+
+\begin_layout Definition
+(空间曲线的参数方程) 空间曲线还可以有参数方程, 其中参数是限定在某个范围内的.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{cases}
+x=f(t)\\
+y=f(t) & a\leq t\leq b.\\
+z=f(t)
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+很多时候, 将三维平面降维打击是很有必要的.
+ 我们可以看一看一个曲面投影在一个平面上的情形.
+ 
+\end_layout
+
+\begin_layout Standard
+如果空间曲线
+\begin_inset Formula $C$
+\end_inset
+
+有方程
+\begin_inset Formula 
+\[
+\begin{cases}
+F(x,y,z)=0\\
+G(x,y,z)=0
+\end{cases}
+\]
+
+\end_inset
+
+应该怎样求出其在
+\begin_inset Formula $xOy$
+\end_inset
+
+平面上的投影呢? 
+\end_layout
+
+\begin_layout Standard
+一个想法是过曲线
+\begin_inset Formula $C$
+\end_inset
+
+的每一点做
+\begin_inset Formula $xOy$
+\end_inset
+
+平面的垂线, 也就是相当于做一个与母线平行于
+\begin_inset Formula $z$
+\end_inset
+
+轴且通过曲线
+\begin_inset Formula $C$
+\end_inset
+
+的柱面.
+ 这个柱面与
+\begin_inset Formula $xOy$
+\end_inset
+
+平面的交线就是曲线
+\begin_inset Formula $C$
+\end_inset
+
+在
+\begin_inset Formula $xOy$
+\end_inset
+
+平面上的投影.
+ 下面来求解柱面的方程.
+ 
+\end_layout
+
+\begin_layout Standard
+将
+\begin_inset Formula $F,G$
+\end_inset
+
+联立, 并且消去变量
+\begin_inset Formula $z$
+\end_inset
+
+, 那么曲线的投影方程就是
+\begin_inset Formula 
+\[
+\begin{cases}
+H(x,y)=0\\
+z=0.
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document

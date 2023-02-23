@@ -1,0 +1,129 @@
+#\DeclareLyXModule{Theorems (tcolorbox)}
+#DescriptionBegin
+#Adds support for tcolorbox-based theorem environments
+#DescriptionEnd
+
+Format 41
+
+Preamble
+\usepackage[most]{tcolorbox}
+\tcbset{
+  theoremstyle/.style={
+    enhanced,
+    colframe=blue!50!black,
+    colback=white,
+    arc=0mm,
+    boxrule=1pt,
+    fonttitle=\bfseries\sffamily,
+    separator sign none
+  }
+}
+EndPreamble
+
+Counter theorem
+	Within         chapter
+End
+
+Counter theoremi
+	Within         chapter
+End
+
+Style Theorem
+    Category              Theorems
+    Margin                First_Dynamic
+	NextNoIndent          1    
+	LatexType             Environment
+    LatexName             theorem
+    Argument 1
+    	LabelString    "Name"
+    	Tooltip        "The name of thm"
+    	Mandatory      1
+    	LeftDelim      {
+    	RightDelim     }
+    EndArgument
+    Argument 2
+    	LabelString    "Ref"
+    	Tooltip        "The name of thm"
+    	Mandatory      1
+    	LeftDelim      {
+    	RightDelim     }
+    EndArgument
+    NextNoIndent          0
+    LabelType             Enumerate
+    LabelCounter          theorem
+    LabelString           "定理\thetheorem"
+    LabelSep              xx
+	ParIndent             MMM
+	ParSkip               0.4
+	ItemSep               0.2
+	TopSep                0.7
+	BottomSep             0.7
+	ParSep                0.3
+	Align                 Block
+	AlignPossible         Left
+	LabelType             Counter
+	LabelCounter          theorem
+    Preamble
+      \newtcbtheorem{theorem}{定理}{theoremstyle}{th}
+    EndPreamble
+    End
+    
+Style Lemma
+    CopyStyle              Theorem
+    LatexName             lemma
+    LabelString           "引理\thetheorem."
+    LabelCounter             theorem
+    Preamble
+      \newtcbtheorem{lemma}{引理}{theoremstyle}{lem}
+    EndPreamble
+    End
+    
+Style Corollary
+    CopyStyle              Theorem
+    LatexName             corollary
+    LabelString           "推论\thetheorem."
+    LabelCounter             theorem
+    Preamble
+      \newtcbtheorem{corollary}{推论}{theoremstyle}{cor}
+    EndPreamble
+    End
+
+Style Definition
+    CopyStyle              Theorem
+    LatexName             definition
+    LabelString           "定义\thetheorem."
+    LabelCounter             theorem
+    Preamble
+      \newtcbtheorem{definition}{定义}{theoremstyle}{def}
+    EndPreamble
+    End
+    
+Style Example
+    CopyStyle              Theorem
+    LatexName             example
+    LabelString           "例子\thetheorem."
+    LabelCounter             theorem
+    Preamble
+      \newtcbtheorem{example}{例子}{theoremstyle}{ex}
+    EndPreamble
+    End
+
+Style Proof
+    Category              Theorems
+    Margin                Static
+    LatexType             Environment
+    LatexName             proof
+    LabelType             None
+    NextNoIndent          0
+    ParIndent             MMMM
+    LabelString           "证明"
+    ParSkip               1.0
+    ItemSep               0.2
+    TopSep                0.5
+    BottomSep             0.5
+    ParSep                0.3
+    Preamble
+        \newenvironment{proof}{\noindent\textbf{证明.} }{\hfill \#}
+    EndPreamble
+End
+

@@ -297,5 +297,19 @@ filename "multiple/eq-geo.lyx"
 
 \end_layout
 
+\begin_layout Chapter
+无穷级数
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "multiple/inf-series.lyx"
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
