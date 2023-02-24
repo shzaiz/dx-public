@@ -302,8 +302,166 @@ I=\int_{-\pi}^{\pi}(\cos x\cos2x\cos3x+\sin x\sin2x\sin3x)\dd x.
  
 \end_layout
 
-\begin_layout Solution*
+\begin_layout Problem
+求定积分:
+\begin_inset Formula 
+\[
+I_{1}=\int_{0}^{\pi}\ln(\sin(\theta))\dd\theta,I_{2}=\int_{0}^{\pi}\ln(1+\cos\theta)\dd\theta.
+\]
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution*
+考虑拆成两半积分.
+ 
+\end_layout
+
+\begin_layout Problem
+求定积分:
+\begin_inset Formula 
+\[
+I=\int_{0}^{\pi/2}\frac{\sin^{2}x}{\sin x+\cos x}\dd x.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution*
+考虑
+\begin_inset Formula $x:=\pi/2-x$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Problem
+如果
+\begin_inset Formula $f(x)$
+\end_inset
+
+在
+\begin_inset Formula $[0,1]$
+\end_inset
+
+上连续, 证明: 
+\begin_inset Formula 
+\[
+\int_{0}^{\pi}xf(\sin x)\dd x=\frac{\pi}{2}\int_{0}^{\pi}f(\sin x)\dd x.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution*
+考虑
+\begin_inset Formula $\int_{0}^{a}f(x)\dd x=\int_{a}^{a}f(a-x)\dd x$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Problem
+计算:
+\begin_inset Formula 
+\[
+\int_{-\pi/4}^{\pi/4}\frac{\sin^{2}x}{1+e^{-x}}\dd x.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution*
+考虑
+\begin_inset Formula $\int_{-a}^{a}f(x)\dd x=\int_{0}^{a}\left(f(x)+f(-x)\right)\dd x.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+计算:
+\end_layout
+
+\begin_layout Problem
+\begin_inset Formula 
+\[
+I_{n}=\int_{0}^{1}(1-x^{2})^{n}\dd x.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution*
+考虑分部积分之后使用递推关系, 注意配凑.
+ 
+\end_layout
+
+\begin_layout Problem
+计算:
+\begin_inset Formula 
+\[
+I_{n}=\int_{0}^{1}\frac{x^{n}}{1+x}\dd x.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution*
+考虑
+\begin_inset Formula $I_{n}+I_{n-1}$
+\end_inset
+
+.
+ 如果分母差的次数为1并且为多项式, 可以考虑递推关系.
+ 
+\end_layout
+
+\begin_layout Section
+反常积分
+\end_layout
+
+\begin_layout Proposition
+反常积分
+\begin_inset Formula 
+\[
+\int_{a}^{+\infty}\frac{1}{x^{p}}\dd x
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition
+当
+\begin_inset Formula $p>1$
+\end_inset
+
+时收敛, 并且其值为
+\begin_inset Formula $a^{1-p}/\left(p-1\right)$
+\end_inset
+
+, 
+\begin_inset Formula $p\leq1$
+\end_inset
+
+时发散.
+ 
 \end_layout
 
 \end_body

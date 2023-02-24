@@ -7,8 +7,7 @@
 \textclass ctex-book
 \use_default_options true
 \begin_modules
-algorithm2e
-theorems-ams-bytype
+theorems-tcolorbox
 \end_modules
 \maintain_unincluded_children false
 \language chinese-simplified
@@ -729,17 +728,12 @@ a_{m1} & a_{m2} & \cdots & a_{mn}
 \end_layout
 
 \begin_deeper
-\begin_layout Case
+\begin_layout Itemize
 若
 \begin_inset Formula $n\neq m$
 \end_inset
 
-, 
-\end_layout
-
-\begin_deeper
-\begin_layout Case
-若
+, 若
 \begin_inset Formula $n<m$
 \end_inset
 
@@ -755,7 +749,6 @@ a_{m1} & a_{m2} & \cdots & a_{mn}
  证明如下: 
 \end_layout
 
-\begin_deeper
 \begin_layout Standard
 \begin_inset Formula 
 \[
@@ -805,8 +798,7 @@ a_{m1} & a_{m2} & \cdots & a_{mn}
 线性相关, 矛盾!
 \end_layout
 
-\end_deeper
-\begin_layout Case
+\begin_layout Itemize
 \begin_inset Formula $n<m$
 \end_inset
 
@@ -814,8 +806,7 @@ a_{m1} & a_{m2} & \cdots & a_{mn}
  
 \end_layout
 
-\end_deeper
-\begin_layout Case
+\begin_layout Itemize
 \begin_inset Formula $n=m,$
 \end_inset
 

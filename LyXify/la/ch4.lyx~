@@ -407,6 +407,27 @@ theorems-ams-bytype
  
 \end_layout
 
+\begin_layout Standard
+从线性空间的定义, 我们可以知道一些简单的性质: 
+\end_layout
+
+\begin_layout Standard
+(1) 零向量是唯一的.
+ 
+\end_layout
+
+\begin_layout Standard
+如果有
+\begin_inset Formula $0'$
+\end_inset
+
+使得
+\begin_inset Formula $\forall$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 线性空间的基与维数
 \end_layout

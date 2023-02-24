@@ -290,6 +290,16 @@ theorems-ams-chap-bytype
 
 \end_layout
 
+\begin_layout Standard
+
+\lang english
+\begin_inset FormulaMacro
+\newcommand{\eps}{\epsilon}
+\end_inset
+
+
+\end_layout
+
 \begin_layout Chapter
 多项式
 \end_layout

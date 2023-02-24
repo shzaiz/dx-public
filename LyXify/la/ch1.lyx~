@@ -8,7 +8,6 @@
 \use_default_options true
 \begin_modules
 algorithm2e
-theorems-named
 theorems-ams-bytype
 \end_modules
 \maintain_unincluded_children false

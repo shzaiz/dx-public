@@ -7,7 +7,7 @@
 \textclass ctex-book
 \use_default_options true
 \begin_modules
-theorems-ams-chap-bytype
+theorems-tcolorbox
 \end_modules
 \maintain_unincluded_children false
 \language english
@@ -603,47 +603,6 @@ x=u,y=v,z=-\frac{A}{C}u-\frac{B}{C}v-\frac{D}{C}.
  
 \end_layout
 
-\begin_layout Definition
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename figs/sphere-surface.pdf
-	width 80page%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-球面
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Standard
 若点
 \begin_inset Formula $M$
@@ -705,39 +664,6 @@ status collapsed
 
 .
  
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename figs/cylinder-surface.pdf
-	width 80page%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-柱面
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -977,39 +903,6 @@ d=\sqrt{(x-0)^{2}+(y-0)^{2}+(z-z_{1})^{2}}=\sqrt{x^{2}+y^{2}}=|y_{1}|.
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename figs/ecl-curve.pdf
-	width 80page%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-柱面
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard

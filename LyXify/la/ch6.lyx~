@@ -2929,7 +2929,253 @@ a_{i_{m}i_{1}} & a_{i_{m}i_{2}} & \cdots & a_{i_{m}i_{m}}
 
 \end_inset
 
+如果
+\begin_inset Formula $A$
+\end_inset
 
+是正定的, 容易看出
+\begin_inset Formula $X_{1}'A_{1}X_{1}$
+\end_inset
+
+也是正定的.
+ 故由上述的推论可以知道
+\begin_inset Formula $|A_{1}|>0,$
+\end_inset
+
+从而
+\begin_inset Formula $|A_{1}|$
+\end_inset
+
+即为
+\begin_inset Formula $A$
+\end_inset
+
+的子式
+\begin_inset Formula $A\begin{pmatrix}i_{1} & i_{2} & \cdots & i_{m}\\
+i_{1} & i_{2} & \cdots & i_{m}
+\end{pmatrix}$
+\end_inset
+
+.
+ 于是, 我们给出定义: 
+\end_layout
+
+\begin_layout Definition
+(主子式) 设
+\begin_inset Formula $A\in\R^{n\times n},$
+\end_inset
+
+称
+\begin_inset Formula $A$
+\end_inset
+
+的子式
+\begin_inset Formula $A\begin{pmatrix}i_{1} & i_{2} & \cdots & i_{m}\\
+i_{1} & i_{2} & \cdots & i_{m}
+\end{pmatrix}$
+\end_inset
+
+为
+\begin_inset Formula $A$
+\end_inset
+
+的一个
+\begin_inset Formula $m$
+\end_inset
+
+阶
+\series bold
+主子式
+\series default
+.
+ 特别地, 称
+\begin_inset Formula $A\begin{pmatrix}1 & 2 & \cdots & m\\
+1 & 2 & \cdots & m
+\end{pmatrix},m=1,2,\cdots,n$
+\end_inset
+
+为
+\begin_inset Formula $A$
+\end_inset
+
+的
+\series bold
+顺序主子式
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+于是我们可以了解到矩阵正定(二次型正定)的判别法则: 
+\end_layout
+
+\begin_layout Theorem
+(二次型正定的判别法) 设
+\begin_inset Formula $A\in\R^{n\times n}$
+\end_inset
+
+对称, 那么下列条件等价: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+(1) 
+\begin_inset Formula $A$
+\end_inset
+
+正定;
+\end_layout
+
+\begin_layout Itemize
+(2) 
+\begin_inset Formula $A$
+\end_inset
+
+的主子式都大于0;
+\end_layout
+
+\begin_layout Itemize
+(3) 
+\begin_inset Formula $A$
+\end_inset
+
+的顺序主子式都大于0.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+只需要证明
+\begin_inset Formula $(3)\implies(1)$
+\end_inset
+
+.
+ 考虑对于
+\begin_inset Formula $n$
+\end_inset
+
+的阶数做归纳法.
+ 当
+\begin_inset Formula $n$
+\end_inset
+
+为1阶的时候, 结论显然成立, 假设
+\begin_inset Formula $A$
+\end_inset
+
+的阶数是
+\begin_inset Formula $n-1$
+\end_inset
+
+的时候结论成立, 当
+\begin_inset Formula $A=(a_{ij})\in\R^{n\times n}$
+\end_inset
+
+时, 考虑分块矩阵:
+\begin_inset Formula 
+\[
+A=\begin{pmatrix}A_{1} & \bt\\
+\bt' & a_{nn}
+\end{pmatrix},\bt=(a_{1n},a_{2n},\cdots,a_{n-1,n})'
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+根据条件知道
+\begin_inset Formula $|A_{1}|=A\begin{pmatrix}1 & 2 & \cdots & n-1\\
+1 & 2 & \cdots & n-1
+\end{pmatrix}>0,$
+\end_inset
+
+则
+\begin_inset Formula $A_{1}$
+\end_inset
+
+可逆.
+ 下面做合同变换: 
+\begin_inset Formula 
+\[
+\begin{pmatrix}I_{n-1} & 0\\
+-\bt'A_{1}^{-1} & 1
+\end{pmatrix}\begin{pmatrix}A & \bt\\
+\bt' & a_{nn}
+\end{pmatrix}\begin{pmatrix}I_{n-1} & -\bt'A_{1}^{-1}\\
+0 & 1
+\end{pmatrix}=\begin{pmatrix}A_{1} & 0\\
+0 & c
+\end{pmatrix}.
+\]
+
+\end_inset
+
+其中
+\begin_inset Formula $c=a_{nn}-\bt'A_{1}^{-1}\bt$
+\end_inset
+
+.
+ 由于
+\begin_inset Formula $|A|=|A_{1}|c$
+\end_inset
+
+, 所以
+\begin_inset Formula $c=\frac{|A|}{|A_{1}|}>0.$
+\end_inset
+
+利用归纳假设可以知道
+\begin_inset Formula $A_{1}$
+\end_inset
+
+为正定矩阵, 因此存在
+\begin_inset Formula $n-1$
+\end_inset
+
+阶实可逆的矩阵
+\begin_inset Formula $S$
+\end_inset
+
+使得
+\begin_inset Formula $S'A_{1}S=I_{n-1},$
+\end_inset
+
+于是有
+\begin_inset Formula 
+\[
+\begin{pmatrix}S'\\
+ & \frac{1}{\sqrt{c}}
+\end{pmatrix}\begin{pmatrix}A_{1}\\
+ & c
+\end{pmatrix}\begin{pmatrix}S'\\
+ & \frac{1}{\sqrt{c}}
+\end{pmatrix}=I_{n},
+\]
+
+\end_inset
+
+因此
+\begin_inset Formula $\begin{pmatrix}A_{1}\\
+ & c
+\end{pmatrix}$
+\end_inset
+
+与
+\begin_inset Formula $I_{n}$
+\end_inset
+
+合同, 即为正定矩阵, 从而
+\begin_inset Formula $A$
+\end_inset
+
+正定.
+ 
+\end_layout
+
+\begin_layout Standard
+所以我们可以运用顺序主子式的方法来判断一个二次型正定.
+ 
 \end_layout
 
 \begin_layout Section

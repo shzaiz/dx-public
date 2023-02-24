@@ -14,8 +14,7 @@
 \use_default_options true
 \master main.lyx
 \begin_modules
-algorithm2e
-theorems-ams-chap-bytype
+theorems-tcolorbox
 \end_modules
 \maintain_unincluded_children false
 \language chinese-simplified

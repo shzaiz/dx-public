@@ -83,7 +83,27 @@ theorems-ams-bytype
 \begin_body
 
 \begin_layout Section
-基本内容
+Euclid空间的基本概念
+\end_layout
+
+\begin_layout Section
+标准正交基
+\end_layout
+
+\begin_layout Section
+正交矩阵与正交变换
+\end_layout
+
+\begin_layout Section
+正规变换
+\end_layout
+
+\begin_layout Section
+酉空间
+\end_layout
+
+\begin_layout Section
+线性代数中出现的内容
 \end_layout
 
 \begin_layout Subsection

@@ -322,9 +322,27 @@ Taylor公式
 \end_layout
 
 \begin_layout Theorem
-(Taylor公式)
+(Taylor公式) Taylor公式的两种余项展开形式: 
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+Peano形的余项: 
+\begin_inset Formula $f(x)=f(x_{0})+f'(x_{0})(x-x_{0})+\cdots+\frac{f^{(n)}(x_{0})}{n!}(x-x_{0})^{n}+o(x^{n+1})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Lagrange形的余项: 
+\begin_inset Formula $f(x)=f(x_{0})+f'(x_{0})(x-x_{0})+\cdots+\frac{f^{(n)}(\xi)}{n!}(\xi-x_{0})^{n}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset

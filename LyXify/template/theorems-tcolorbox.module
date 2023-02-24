@@ -7,6 +7,7 @@ Format 41
 
 Preamble
 \usepackage[most]{tcolorbox}
+\usepackage{fontspec}
 \tcbset{
   theoremstyle/.style={
     enhanced,
@@ -14,7 +15,7 @@ Preamble
     colback=white,
     arc=0mm,
     boxrule=1pt,
-    fonttitle=\bfseries\sffamily,
+    fonttitle=\bfseries,
     separator sign none
   }
 }
@@ -33,7 +34,7 @@ Style Theorem
     Margin                First_Dynamic
 	NextNoIndent          1    
 	LatexType             Environment
-    LatexName             theorem
+    LatexName             thm
     Argument 1
     	LabelString    "Name"
     	Tooltip        "The name of thm"
@@ -49,7 +50,6 @@ Style Theorem
     	RightDelim     }
     EndArgument
     NextNoIndent          0
-    LabelType             Enumerate
     LabelCounter          theorem
     LabelString           "定理\thetheorem"
     LabelSep              xx
@@ -64,17 +64,37 @@ Style Theorem
 	LabelType             Counter
 	LabelCounter          theorem
     Preamble
-      \newtcbtheorem{theorem}{定理}{theoremstyle}{th}
+      \newtcbtheorem[number within=chapter]{thm}{定理}{theoremstyle}{th}
     EndPreamble
     End
     
+Style Proposition
+    CopyStyle              Theorem
+    LatexName             prop
+    LabelString           "命题\thetheorem."
+    LabelCounter             theorem
+    Preamble
+      \newtcbtheorem[number within=chapter,use counter from=thm]{prop}{命题}{theoremstyle}{pro}
+    EndPreamble
+    End
+    
+Style Problem
+    CopyStyle              Theorem
+    LatexName             prob
+    LabelString           "问题."
+    LabelCounter             theorem
+    Preamble
+      \newtcbtheorem[number within=chapter]{prob}{问题}{theoremstyle}{prb}
+    EndPreamble
+    End
+
 Style Lemma
     CopyStyle              Theorem
     LatexName             lemma
     LabelString           "引理\thetheorem."
     LabelCounter             theorem
     Preamble
-      \newtcbtheorem{lemma}{引理}{theoremstyle}{lem}
+      \newtcbtheorem[number within=chapter,use counter from=thm]{lemma}{引理}{theoremstyle}{lem}
     EndPreamble
     End
     
@@ -84,7 +104,7 @@ Style Corollary
     LabelString           "推论\thetheorem."
     LabelCounter             theorem
     Preamble
-      \newtcbtheorem{corollary}{推论}{theoremstyle}{cor}
+      \newtcbtheorem[number within=chapter,use counter from=thm]{corollary}{推论}{theoremstyle}{cor}
     EndPreamble
     End
 
@@ -94,7 +114,7 @@ Style Definition
     LabelString           "定义\thetheorem."
     LabelCounter             theorem
     Preamble
-      \newtcbtheorem{definition}{定义}{theoremstyle}{def}
+      \newtcbtheorem[number within=chapter]{definition}{定义}{theoremstyle}{def}
     EndPreamble
     End
     
@@ -104,19 +124,19 @@ Style Example
     LabelString           "例子\thetheorem."
     LabelCounter             theorem
     Preamble
-      \newtcbtheorem{example}{例子}{theoremstyle}{ex}
+      \newtcbtheorem[number within=chapter]{example}{例子}{theoremstyle}{ex}
     EndPreamble
     End
 
 Style Proof
     Category              Theorems
-    Margin                Static
+    Margin                First_Dynamic
     LatexType             Environment
     LatexName             proof
-    LabelType             None
     NextNoIndent          0
     ParIndent             MMMM
-    LabelString           "证明"
+    LabelType             Counter
+    LabelString           "证明. "
     ParSkip               1.0
     ItemSep               0.2
     TopSep                0.5
@@ -127,3 +147,21 @@ Style Proof
     EndPreamble
 End
 
+Style Solution*
+    Category              Theorems
+    Margin                First_Dynamic
+    LatexType             Environment
+    LatexName             sol
+    NextNoIndent          0
+    ParIndent             MMMM
+    LabelType             Counter
+    LabelString           "解答. "
+    ParSkip               1.0
+    ItemSep               0.2
+    TopSep                0.5
+    BottomSep             0.5
+    ParSep                0.3
+    Preamble
+        \newenvironment{sol}{\noindent\textbf{解答.} }{\hfill \#}
+    EndPreamble
+End

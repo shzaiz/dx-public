@@ -9,10 +9,9 @@
 \renewcommand{\figurename}{图.} 
 \renewcommand{\proofname}{证明.} 
 \end_preamble
-\options fontset=windows
 \use_default_options true
 \begin_modules
-theorems-ams-chap-bytype
+theorems-tcolorbox
 \end_modules
 \maintain_unincluded_children false
 \language chinese-simplified
@@ -215,7 +214,7 @@ theorems-ams-chap-bytype
 
 \begin_layout Standard
 \begin_inset CommandInset include
-LatexCommand include
+LatexCommand input
 filename "single/intro.lyx"
 
 \end_inset
@@ -229,7 +228,7 @@ filename "single/intro.lyx"
 
 \begin_layout Standard
 \begin_inset CommandInset include
-LatexCommand include
+LatexCommand input
 filename "single/der-and-diff.lyx"
 
 \end_inset
@@ -243,7 +242,7 @@ filename "single/der-and-diff.lyx"
 
 \begin_layout Standard
 \begin_inset CommandInset include
-LatexCommand include
+LatexCommand input
 filename "single/indfinite-integal.lyx"
 
 \end_inset
@@ -257,7 +256,7 @@ filename "single/indfinite-integal.lyx"
 
 \begin_layout Standard
 \begin_inset CommandInset include
-LatexCommand include
+LatexCommand input
 filename "single/definite-integal.lyx"
 
 \end_inset
@@ -275,7 +274,7 @@ filename "single/definite-integal.lyx"
 
 \begin_layout Standard
 \begin_inset CommandInset include
-LatexCommand include
+LatexCommand input
 filename "multiple/vec-algebra.lyx"
 
 \end_inset
@@ -289,12 +288,16 @@ filename "multiple/vec-algebra.lyx"
 
 \begin_layout Standard
 \begin_inset CommandInset include
-LatexCommand include
+LatexCommand input
 filename "multiple/eq-geo.lyx"
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Chapter
+无穷级数
 \end_layout
 
 \end_body

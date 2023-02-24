@@ -334,7 +334,10 @@ b_{x} & b_{y} & b_{z}
 \end_inset
 
 的混合积为
-\begin_inset Formula $[\vea,\veb,\veec]=|\vea\x\veb||\veec|\cos\lr{\a\x\b,\c}$
+\begin_inset Formula $[\vea,\veb,\veec]=|\vea\x\veb||\veec|\cos\lr{\a\x\b,\c}=\begin{vmatrix}a_{x} & a_{y} & a_{z}\\
+b_{x} & b_{y} & b_{z}\\
+c_{x} & c_{y} & c_{z}
+\end{vmatrix}$
 \end_inset
 
 .
@@ -360,7 +363,7 @@ b_{x} & b_{y} & b_{z}
 \end_layout
 
 \begin_layout Enumerate
-三向量
+(共面判定)三向量
 \begin_inset Formula $\a,\b,\c$
 \end_inset
 

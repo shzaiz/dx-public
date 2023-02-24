@@ -7,7 +7,8 @@
 \textclass ctex-book
 \use_default_options true
 \begin_modules
-theorems-ams
+theorems-ams-chap-bytype
+algorithm2e
 \end_modules
 \maintain_unincluded_children false
 \language english

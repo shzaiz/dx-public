@@ -7,8 +7,7 @@
 \textclass ctex-book
 \use_default_options true
 \begin_modules
-algorithm2e
-theorems-ams-bytype
+theorems-tcolorbox
 \end_modules
 \maintain_unincluded_children false
 \language chinese-simplified
