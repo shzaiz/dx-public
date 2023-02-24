@@ -1,3 +1,8 @@
+\begin{quote}
+	“有两种推广．一种没有什么价值, 另一种则是有价值的．没什么思想、仅凭唬人的专人术语做推广是很容易做到的．颇为困难的是从若干好的素材中提取出一份精致凝练的精品．”
+	\hfill ---- Gorge Polya
+\end{quote}
+
 \section{问题的提出: 为什么要研究命题的逻辑}
 
 \begin{dialogue}
@@ -241,6 +246,12 @@ B: 来看一看朱富海老师的文章就知道了.
     \label{fig:conn}
   \end{table}
 
+\begin{dialogue}
+	A: 为什么没有常见的``任意'', ``存在''之类的量词?
+	
+	B: 因为这样就复杂了. 包括结果判定的正确性和推理的难度上. 我们下一章会详细讲讲这个. 
+\end{dialogue}
+
 \begin{bonus}
 	为什么叫合取, 为什么叫析取? 
 \end{bonus}
@@ -473,7 +484,7 @@ The order of operations is a rule that tells the correct sequence of steps for e
       \end{definition}
       
       
-\subsection{命题逻辑的推演}
+\subsection{命题逻辑的化简}
 
 在上面我们发现了有很多的``废话'', 但是, 当看上去是``废话''的东西堆多堆复杂的时候, 那么它就不是显然的. 这就需要一些推理规律来帮助我们联通看上去毫不相干的逻辑符号. 
 
@@ -684,10 +695,405 @@ In either case,$L_i(X)(Y)=F$, Since a conjunction equals $F$ if and only if ther
 
 逻辑公式中的变量（输入）可以以复杂的方式混在一起. 如果公式采用CNF或DNF，变量就更加分离，从而更容易看出表达式何时成立. 比如, 要检查CNF是否成立，只需逐个检查每个子句有一个是假的整个都是假的. DNF也类似: 逐个检查子句，并在找到一个为真的子句时停止, 整个句子都是真的. 
 
-很多时候真值表会带来很多的麻烦: 意味着穷举和非常麻烦的事情. 有了CNF与DNF以后, 我们不必从真值表开始枚举, 可以通过操作表达式来形式地构造标准形式. 在某些情况下可能可以更方便一些.  
+很多时候真值表会带来很多的麻烦: 意味着穷举和非常麻烦的事情. 有了CNF与DNF以后, 我们不必从真值表开始枚举, 可以通过操作表达式来形式地构造标准形式. 在某些情况下可能可以更方便一些.
+
+下面我们来看一看合取范式与析取范式的一些性质. 
+
+我们发现, 在合取范式中, 只要有一个条件是假的, 那么整个命题都是假的. 在析取范式中, 只要有一个条件是真的, 那么这个命题是真的. 特别地, 如果每个命题变元或其否定恰好只有一个出现过并且只出现了一次, 那么我们说这个合取范式为极小项(析取范式为极大项). 比如我们有两个变量, 那么就可以有如下的四个逻辑表达式: 
+$$
+P\land Q \qquad
+ \lnot P \land Q \qquad
+  P \land \lnot Q \qquad
+   \lnot P \land \lnot Q \qquad
+$$
+
+这样就保证了我们除了枚举输入的命题之外, 我们还可以枚举极小项, 极大项, 从两方面来观察命题的真假. 比如. 还是上面的两个命题符号的情形, 对于合取范式和析取范式, 分别有表\ref{tab:min} 以及表\ref{tab:max}的情形. 
+
+\begin{table}
+	\centering
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		P Q & $\lnot P \land \lnot Q$ & $\lnot P \land  Q$ & $P \land \lnot Q $& $ P \land  Q$\\
+		\hline
+		0 0 & 1 & 0 & 0 & 0\\
+		0 1 & 0 & 1 & 0 & 0\\
+		1 0 & 0 & 0 & 1 & 0\\
+		1 1 & 0 & 0 & 0 & 1\\
+		\hline
+	\end{tabular}
+	\label{tab:min}
+	\caption{合取范式枚举命题符号是否取反以及指派为真假的情形(极小项)}
+\end{table}
+
+\begin{table}
+	\centering
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		P Q & $\lnot P \land \lnot Q$ & $\lnot P \land  Q$ & $P \land \lnot Q $& $ P \land  Q$\\
+		\hline
+		0 0 & 0 & 1 & 1 & 1\\
+		0 1 & 1 & 0 & 1 & 1\\
+		1 0 & 1 & 1 & 0 & 1\\
+		1 1 & 1 & 1 & 1 & 0\\
+		\hline
+	\end{tabular}
+	\label{tab:max}
+	\caption{合取范式枚举命题符号是否取反以及指派为真假的情形(极大项)}
+\end{table}
+
+\begin{bonus}
+	列表有什么好处? 我们可以发现什么规律? 
+\end{bonus}
+
+我们发现每一个赋值对应一个取值为$\frac{\text{真}}{\text{假}}$的极$\frac{\text{小}}{\text{大}}$项, 每个极$\frac{\text{小}}{\text{大}}$项的$\frac{\text{真}}{\text{假}}$赋值是唯一的. 并且没有等价的两个极$\frac{\text{小}}{\text{大}}$项, 任何两个不同的极$\frac{\text{小}}{\text{大}}$项$\frac{\text{合}}{\text{析}}$取必为真, 极$\frac{\text{小}}{\text{大}}$的否定是极$\frac{\text{大}}{\text{小}}$, 所有的极$\frac{\text{小}}{\text{大}}$项的$\frac{\text{析}}{\text{合}}$取为永假公式. 
+
+\begin{dialogue}
+	A: 这个和二进制表示好像. 我们能不能有一种方法来用一个整数来表示命题? 
+	
+	B: 确实, 但是需要考虑一下命题变元的记号问题. 
+\end{dialogue}
+
+如果我们把合取范式和析取范式里面的内容都变为极小项/极大项的时候, 我们就可以得到更标准, 更易于处理的内容. 通常称为\textbf{主合(析)取范式}. 
+
+\section{命题推演的真象: 命题的推演}
+
+我们发现, 蕴含词的逻辑永真式和我们经常所做的推理有很好的联系. 具体地, 如果$\alpha \to \beta$, 那么如果$\alpha$成立, 可以\textbf{推导}出$\beta$为真. 
+
+同样的, 如果假设$\alpha$成立, 只要经过合理的推导可以\textbf{推导}出$\beta$为真, 那么这个规则就是成立的.  
 
 
+我们在推理时多半用“因为...所以...”, 那么前面的什么概念能起关键作用呢?
 
+一般而言, 逻辑推理有一系列的假设前提$A_1,A_2,\cdots,A_n$, 有一个结论$B$, 什么是正确的推理呢? 形式化地, 对前提与结论所涉及的逻辑变量任意赋值, 如果任意的$A_i$均为这真, 它们的合取式的值当然也为真, 那么$B$必为真. 
+
+形式化的, 我们就说: 这样的推理是正确的. 
+
+\begin{definition}
+	设$G_1,G_2,\cdots,G_n,H$是命题公式, 对任意指派$I$, 如果$G_1\land G_2\land \cdots\land G_n$为真, $H$也为真, 或者$G_1\land G_2\land \cdots\land G_n$为真, $H$为假, 那么称$H$是$G_1, G_2, \cdots, G_n$的逻辑结果. 或者$G_1, G_2, \cdots, G_n$共同蕴含$H$, 记做$G_1\land G_2\land \cdots\land G_n\Rightarrow H$. 
+\end{definition}
+
+
+\begin{theorem}
+	公式$H$是前提集合$\set{G_1,G_2,\cdots,G_n}$的逻辑结果当且仅当$G_1\land G_2\land \cdots\land G_n\to H$为永真的公式. 
+\end{theorem}
+
+需要注意的是, $\Rightarrow$是一个关系, 这是一个不可计算的公式. 
+
+\begin{definition}
+	设$G_1, G_2, \cdots, G_n,H$是命题公式, 如果$H$是$G_1, G_2, \cdots, G_n$的逻辑结果, 那么称$G_1, G_2, \cdots, G_n\Rightarrow H$是有效的或正确的. 否则称为无效的. 
+	
+	称$G_1, G_2, \cdots, G_n$为一组前提, $H$为结论, 如果记$\Gamma=\set{G_1,G_2,\cdots,G_3}$, 上述关系可以记作$\Gamma\Rightarrow H$. 
+\end{definition}
+
+\begin{dialogue}
+	A: 如果我有一个有效的推理, 那么结论应该是正确的吧? 
+	
+	B: 那可不一定. 举个例子: $1+1=3, 2+2=4 \Rightarrow 114+514=191$虽然形式是有效的, 但是结论确实是不对的.
+	
+	A: 确实, 很像是$\rightarrow$记号的拓展. 如果前提条件为假, 那么就不关心结论的正确性了. 
+\end{dialogue}
+
+所以这就解释了我们为什么经常使用的因为...所以...是合理的了. 比如$(p\land(p\land q))\to q$是永真的, 那么就可以有三段论这样的推理过程了. 
+
+\begin{example}
+	一个三段论的示例如下: 
+	
+	关爱学生, 好好讲课, 有真才实学的老师会被学生欢迎
+	
+	朱富海老师关爱学生, 好好讲课, 有真才实学
+	
+	朱富海老师受学生欢迎. 
+\end{example}
+
+我们经常对于知识研究一些规律. 比如在逻辑公式很长的时候, 逐个枚举是十分低效率的. 比如, 如果有200个命题符号的逻辑公式, 用计算机枚举则需要$2^200$种情况. 用Python的强大的计算器可以知道, 需要核验的情况是一个61位数.
+
+\begin{example}
+	我们可以使用\texttt{ipython}中输入\texttt{len(str(2**200))}知道它的位数. Python自带高精度计算, 因此如果直接输入\texttt{2**200}, 它就会直接把数字算出来! 
+\end{example} 
+
+既然要推理, 我们就要有推理的\textbf{定律}和推理的推理的\textbf{规则}. 正如前面说的程序语言的语法和语义类似. 
+
+经过总结归纳, 我们有如下的推理定律: 
+
+\begin{theorem}[常见的推理定律]
+	设$G,H,I,J$是任意的命题公式, 那么我们有: 
+	
+	(1) 简化规则: $I_1:G\land H\Rightarrow G$, $I_2: G\land H \Rightarrow H$.
+	
+	(2) 添加规则: $I_3:G\Rightarrow G\lor H$, $I_4: H\Rightarrow G\land H$.
+	
+	(3) $I_5: G,H\Rightarrow G\land H$.
+	
+	(4) 选言三段论: $I_6: \lnot G, G\lor H \Rightarrow H$.
+	
+	(5) 分离规则: $I_7: G,G\to H\Rightarrow H$.
+	
+	(6) 否定结论: $I_8: \lnot H, G\to H\Rightarrow \lnot G$.
+	
+	(7) 连续推理: $I_9: G\to H, H\to I\Rightarrow G\to I$.
+	
+	(8) 两难推理: $I_10: G\lor H,G\to I, H\to I\Rightarrow I$
+
+\end{theorem}
+
+一个学习的很好的方法是举一些例子. 我们可以用上面的符号翻译成具体的例子. 不用太过于拘束.  
+
+\begin{idea}
+	遇见新概念的时候, 可以应该举一些例子辅助理解, 尽可能弄懂来龙去脉. 
+\end{idea}
+
+以最后一个例子为例, 有: 
+
+\begin{example}
+	\begin{itemize}
+		\item[8] 现在发动机坏了并且没油了. 如果发动机坏了, 车子就动不了了; 如果没油了, 车子就动不了了; 我们可以得到: 车子动不了了. 
+	\end{itemize}
+\end{example}
+
+\begin{bonus}
+	为什么叫他们为基础的规则? 是不是因为他们具有某种完备性? 
+\end{bonus}
+
+
+推理规则可以使用真值表验证. 除此之外, 我们还需要推理定律: 也就是需要完成什么样的变换. 我们有三条规则.
+
+
+(1) Premise规则: 前提引用. 如果推理的时候引入了前提集合中的一个前提, 那么称为使用了P规则;
+
+(2) Transformation规则: 逻辑结果引用的规则. 在推理过程中, 如果引入推理过程中某个产生的中间结果, 那么称使用了T规则;
+
+(3) Conclusion premise规则: 附加前提规则. 在推理过程中, 如果逻辑结果为一个含有蕴含$\rightarrow$的式子, 那么把它的前提条件作为假设引入, 就是用了$CP$规则. 所有引入的假设最终必须被``{\bf 释放}'' (discharged)
+    所谓释放, 其实就是在使用假设$\alpha$作为假设的前提下推出了$\beta$, 最后要写成$\alpha \rightarrow \beta$的形式. 这就是假设的释放. 
+
+我们来推导一下$I_6$. 
+
+\begin{proof}
+	(1) 直接引入前提集合的前提, 有$\lnot G$;
+	
+	(2) 直接引入前提集合的前提, 有$G \land H$;
+	
+	(3) 使用(1),(2)的中间结果, 有$\lnot G \land (G\lor H)$;
+	
+	(4) 使用(3)的中间结果, 使用分配律,有$(\lnot G \land G)\lor (\lnot G \land H)$;
+	
+	(5) 使用(4) 的中间结果, 有$\lnot G \land H$;
+	
+	(6) 使用(5)的中间结果, 有$H$. 
+\end{proof}
+
+对于$I_9$, 我们可以先把$G$是对的引入集合, 然后最后推理得到$I$的时候, 为了说明它的正确性, 就需要使用CP规则. 
+
+\begin{bonus}
+	P规则和T规则能足够做所有的内容的推理吗?
+\end{bonus}
+
+在上面我们做的研究中, 我们会发现很多东西相当的机械化. 于是, 在有机械化的内容出现的时候, 计算机就有用了. 所以, 我们希望找到一种方法, 使得计算机可以自动地推理我们的命题. 在1965年, J.A. Robinson发现了消解原理: 它的原理是规则$I_7$. 具体的有: 
+
+\begin{definition}[消解与消解式]
+	设$G$和$H$是两个析取式, 如果$G$中有变元$P,H$中有变元$\lnot P$, 则从$G$和$H$中分别消去$P$和$\lnot P$, 并且将余下的部分析取, 构成新的表达式$W$, 这个过程称为消解. $W$为$G,H$的消解式. 
+\end{definition}
+
+我们经过消解的方法, 立即可以得到一个很有``自动化''意思的定理: 
+
+\begin{theorem}
+	如果$W$是$G,H$的消解式, 则$G\land H\Rightarrow W$. 
+\end{theorem}
+
+\section{常见的证明方法}
+
+\subsection*{著名的推理规则: 三段论}
+
+上一次我们说到了因为$(p\land (p\to q))\to q$是永真式, 因此我们有了$(p\land (p\to q))\Rightarrow q$. 三段论的内容被叫做Modus Ponens. 
+
+Modus Ponens来源于古拉丁文, 翻译成英语就是 method of putting by placing. 也就是说, 在推理的过程中, 如果$p$是真的, $p\rightarrow q$, 那么$q$是可以被接受的. 
+
+为什么呢? 因为如果有含蕴含词的永真式$(A_1\land A_2\land\cdots\land A_n)\to B$, 利用推理规则, 我们就能从前提条件$A_1\land A_2\land\cdots\land A_n$推出$B$, 以及$A_1 \rightarrow (A_2 \rightarrow ... \rightarrow (A_k\rightarrow B)$
+
+\begin{bonus}
+	蕴含记号支持结合律吗? 支持交换律吗? 
+\end{bonus}
+
+\subsection*{当且仅当的证明}
+
+在中学, 我们学习了充分条件, 必要条件, 以及四种命题. 
+
+\begin{dialogue}
+	A: 现在我知道如何否定命题``若$p$则$q$''了!
+	
+	B: 很好! 注意一下四种命题. 为什么命题和它的逆否命题真假性是一致的?  
+\end{dialogue}
+
+先对充要条件做描述: 充要条件是$(P\rightarrow Q)\land (Q\rightarrow P)\rightarrow (P\leftrightarrow Q)$
+
+比如来看下面的问题: 
+
+\begin{prob}
+	求证: $a^3=b^3$当且仅当$a=b$.
+\end{prob}
+
+充分条件很容易说明. 但是必要条件如何说明呢? 我们高中知道命题和逆否命题真假一致, 能从命题逻辑的角度说明吗? 
+
+其实很容易. $(P\rightarrow Q )\leftrightarrow (\lnot Q\rightarrow\lnot P)$是永真式就行了. 我们就有更加公理化的方法完成了证明. 
+
+\begin{prob}
+	为什么证明$a^2=b^2$当且仅当$a=b$时不行的?
+\end{prob}
+
+我们发现结论是析取式子(或), 那么我们应该如何证明? 我们考察永真式$(P\land Q)\leftrightarrow(\lnot P \land Q); (P\land Q), \lnot P \Rightarrow Q$. 为之构造一个合理的语言描述, 然后翻译成符号语言看上去是很好的一个方法. 
+
+
+\subsection*{反证法}
+
+Hardy说证明$\sqrt 2$是无理数是最漂亮的证明之一. 其中用了反证法. 不妨自己写出一个证明. 
+
+\begin{prob}
+	证明$\sqrt{ 2}$ 是无理数. 
+\end{prob}
+
+\begin{dialogue}
+	A: 我感觉好难...
+	
+	B: 那是因为高中没有学过数论! 去了解一些基本的整数的性质吧! 很多时候感觉困难只是因为前置知识没有做好. 补充上去就行了. 
+\end{dialogue}
+	
+
+反证法之所以能成立, 是因为$\lnot A \Rightarrow C$, $\lnot A \Rightarrow \lnot C$, 必然有$C\land C \Rightarrow \texttt{False}$. 根据上述的内容, $(p\to q)\land (\lnot q))\to \lnot p$, 所以化简得到$\lnot \lnot A=A$. 
+
+\begin{bonus}
+	我们应该如何否定含有量词的命题? 留到下一章节.
+\end{bonus}
+
+\subsection*{基于数学对象结构的证明方法: 数学归纳法}
+
+在分牌的时候, 我们可以使用这个小魔术: 
+
+(1) 将一副纸牌按照红黑相间的模式排好;
+
+(2) 按照传统方式洗一次牌, 分牌时两叠牌显出的两张颜色互异;
+
+(3) 你能做到将牌放在背后(自己看不见), 却能保证每次抽出两张牌, 始终是一红一黑吗?
+
+这个过程的证明可以使用数学归纳法描述. 回忆一下数学归纳法的常见过程. (1) 归纳奠基; (2) 归纳假设; (3)结论. 
+
+我们现在进行一个灵魂拷问: 
+
+\begin{bonus}
+	为什么数学归纳法在逻辑上是正确的? 
+\end{bonus}
+
+事实上, 其合理性来自证明对象结构的定义. 
+
+\begin{definition}[Peano 公理]
+    自然数的Peano公理有如下几条: 
+    \begin{enumerate}
+      \item 0 是自然数;
+      \item 如果 $n$ 是自然数, 则它的后继 ${\bf S}n$ 也是自然数;
+      \item 0 不是任何自然数的后继;
+      \item 两个自然数相等当且仅当它们的后继相等;
+    \end{enumerate}
+\end{definition}
+
+
+对于自然数的归纳正确性, 我们还需要良序原理(well-ordering principle). 可能需要很多的背景知识, 在这里仅仅给出基本的定义. 
+
+\begin{theorem}[第一数学归纳法 (The First Mathematical Induction)]
+    设 $P(n)$ 是关于自然数的一个性质. 
+    如果
+    \begin{enumerate}
+      \item $P(0)$ 成立;
+      \item 对任意自然数 $n$, 如果 $P(n)$ 成立, 则 $P(n+1)$ 成立. 
+    \end{enumerate}
+    那么, $P(n)$ 对所有自然数 $n$ 都成立. 
+\end{theorem}
+
+\begin{definition}[良序原理 (The Well-Ordering Principle)]
+    \bf{自然数集}的任意\bf{非空}子集都有一个最小元. 
+\end{definition}
+
+除了第一类数学归纳法, 其实还有更加强大的第二类数学归纳法. 并且两者之间是等价的. 
+
+\begin{theorem}[第二数学归纳法 (The Second Mathematical Induction)]
+    设 $Q(n)$ 是关于自然数的一个性质. 
+    如果
+    \begin{enumerate}
+      \item $Q(0)$ 成立;
+      \item 对任意自然数 $n$, 如果 $Q(0), Q(1), \dots, Q(n)$ 都成立, \\ 则 $Q(n+1)$ 成立. 
+    \end{enumerate}
+    那么, $Q(n)$ 对所有自然数 $n$ 都成立. 
+  \end{theorem}
+  
+他们的等价的推导, 用到了后面的量词相关的内容, 所以现在先暂时跳过. 不过, 第二类数学归纳法确实更加强大一点. 比如可以证明任何一个整数可以分解成若干个素数的乘积. 
+
+\begin{dialogue}
+	A: 数学归纳法这么好, 感觉什么整数的问题都能证明啊! 
+	
+	B: 其实没有你想象的那么简单. 《具体数学》上有关于它的论述, 但是我一时间找不到了. 
+\end{dialogue}
+
+
+最后, 我们用一个例子来结束这一节. 这是一个很烧脑的问题, 据说是由Terry Tao放在他的个人主页上的一道题. 
+
+\begin{prob}
+      Of the 1000 islanders,
+    it turns out that \blue{\bf 100 of them have blue eyes}
+    and \brown{\bf 900 of them have brown eyes},
+    although the islanders are not initially aware of these statistics
+    (each of them can of course only see 999 of the 1000 tribespeople). 
+
+    One day, a \purple{\bf blue-eyed foreigner} visits to the island
+    and wins the complete trust of the tribe. 
+
+    One evening, he addresses the entire tribe to thank them
+    for their hospitality. 
+
+    However, not knowing the customs,
+    the foreigner makes the mistake of mentioning eye color in his address,
+    remarking ``\teal{\bf how unusual it is to see another blue-eyed person
+    like myself in this region of the world''}. 
+
+    \violet{\bf What effect, if anything, does this {\it faux pas }(失礼) have on the tribe?}
+\end{prob}
+
+答案比较令人出乎意料:
+
+\begin{theorem}
+      Suppose that the tribe had $n > 0$ blue-eyed people. 
+      
+      Then $n$ days after the traveller's address, all $n$ blue-eyed people commit suicide.
+\end{theorem}
+
+\begin{proof}
+考虑采用数学归纳法: 
+\begin{itemize}
+      \item 基础步骤: $n = 1$. \\ 
+        这个\blue{\bf 唯一的蓝眼人}的内心独白: \teal{\bf ``你直接念我身份证吧''} 
+      \item 归纳假设: 有$n$个蓝眼人时, 前 $n-1$ 天无人自杀, 第$n$天集体自杀. 
+      \item 归纳步骤: 考虑恰有 $n+1$ 个蓝眼人的情况.   \\
+        每个\blue{\bf 蓝眼人}都如此推理: 我看到了 $n$ 个蓝眼人, 他们应该在第 $n$ 天集体自杀. 
+         \\
+        但是, 每个蓝眼人都在等其它$n$个蓝眼人自杀, 因此, 第 $n$ 天无人自杀. 
+         \\
+        每个\blue{\bf 蓝眼人}继续推理: 一定不止 $n$ 个蓝眼人, 但是我看到的其余人都不是蓝眼. 
+         \\
+        所以, \purple{\bf ``小丑竟是我自己''}. 
+\end{itemize}
+\end{proof}
+
+仔细考察这个例子, 考虑 $n = 1, n = 2$ 的简单情况, 出现了类似``\purple{我知道}\teal{你知道}\cyan{我知道} $\dots$''的思维递归情形. 数学归纳法帮我们挑选了其中的相邻两层, 让我们更加清楚的直面问题. 
+
+\begin{idea}
+	考虑递归问题的时候, 在非边界条件的情形下, 只用考虑连续的两层就可以了. 关注状态变化.
+\end{idea}
+
+\begin{bonus}
+	刚刚的魔术, 为什么不是关于自然数的, 也能用数学归纳法证明? 
+\end{bonus}
+
+\subsection*{一个特别的证明: 鸽巢原理}
+
+\begin{theorem}
+	如果$m$只对象放入$n$个容器，其中$m>n$，则至少有一个容器中对象个数大于$1$. 
+\end{theorem}
 
 
 

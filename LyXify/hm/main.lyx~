@@ -9,6 +9,7 @@
 \renewcommand{\figurename}{图.} 
 \renewcommand{\proofname}{证明.} 
 \end_preamble
+\options fontset=windows
 \use_default_options true
 \begin_modules
 theorems-tcolorbox
@@ -298,6 +299,16 @@ filename "multiple/eq-geo.lyx"
 
 \begin_layout Chapter
 无穷级数
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "multiple/inf-series.lyx"
+
+\end_inset
+
+
 \end_layout
 
 \end_body

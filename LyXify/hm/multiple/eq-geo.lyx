@@ -522,6 +522,194 @@ A_{2}x+B_{2}y+C_{2}z+D_{2}=0
  
 \end_layout
 
+\begin_layout Section*
+直线与平面相关的练习
+\end_layout
+
+\begin_layout Problem
+求直线
+\begin_inset Formula $L:\begin{cases}
+x+y-z-1=0 & (1)\\
+x-y+z+1=0 & (2)
+\end{cases}$
+\end_inset
+
+在
+\begin_inset Formula $\Pi:x+y+z=0$
+\end_inset
+
+上的投影.
+ 
+\end_layout
+
+\begin_layout Solution*
+考虑做过这个直线
+\begin_inset Formula $L$
+\end_inset
+
+与已知直线
+\begin_inset Formula $\Pi$
+\end_inset
+
+垂直的一个平面
+\begin_inset Formula $\Pi_{1}$
+\end_inset
+
+.
+ 下面来求这个平面.
+ 
+\end_layout
+
+\begin_layout Solution*
+
+\series bold
+方法1.
+ 
+\series default
+直线
+\begin_inset Formula $L$
+\end_inset
+
+的方向向量
+\begin_inset Formula $n_{1}$
+\end_inset
+
+和
+\begin_inset Formula $\Pi$
+\end_inset
+
+的法向量
+\begin_inset Formula $m_{1}$
+\end_inset
+
+,
+\begin_inset Formula $\Pi_{1}$
+\end_inset
+
+的法向量
+\begin_inset Formula $m_{2}$
+\end_inset
+
+.
+ 观察这三个向量之间的关系: 
+\begin_inset Formula $m_{1}\perp m_{2},n_{1}\perp m_{2}$
+\end_inset
+
+.
+ 联立求解即可.
+ 
+\end_layout
+
+\begin_layout Solution*
+
+\series bold
+方法2.
+ 
+\series default
+考虑运用直线的平面束方程.
+ 得到通过某一定直线的平面束方程之后, 让法向量和已知平面垂直, 得到
+\begin_inset Formula $\la$
+\end_inset
+
+, 就可以得到了平面方程.
+ 
+\end_layout
+
+\begin_layout Solution*
+最后让两个平面求交就行了.
+ 得到一个直线.
+ 
+\end_layout
+
+\begin_layout Problem
+已知一点
+\begin_inset Formula $A(2,1,2)$
+\end_inset
+
+, 
+\begin_inset Formula $L_{1}=\begin{cases}
+x+y+z-6=0 & (1)\\
+3x+y-z-2=0 & (2)
+\end{cases}$
+\end_inset
+
+, 点
+\begin_inset Formula $B$
+\end_inset
+
+是关于点
+\begin_inset Formula $A$
+\end_inset
+
+关于
+\begin_inset Formula $L_{1}$
+\end_inset
+
+的对称点, 求过点
+\begin_inset Formula $B$
+\end_inset
+
+并且平行于
+\begin_inset Formula $L_{1}$
+\end_inset
+
+的直线方程.
+ 
+\end_layout
+
+\begin_layout Solution*
+方法1.
+ 考虑对称的意思是垂直平分.
+ 列方程求出即可.
+ 
+\end_layout
+
+\begin_layout Solution*
+方法2.
+ 考虑过
+\begin_inset Formula $A$
+\end_inset
+
+点与已知直线垂直的平面.
+ 求平面与直线的交点, 记作
+\begin_inset Formula $AM$
+\end_inset
+
+.
+ 接下来计算
+\begin_inset Formula $OA+AM+AM$
+\end_inset
+
+的值就是这样的.
+ 
+\end_layout
+
+\begin_layout Problem
+求异面直线
+\begin_inset Formula $L_{1}:\frac{x}{1}=\frac{y}{1}=\frac{z+1}{0},L_{2}:\frac{x-1}{1}=\frac{y-1}{1}=\frac{z-1}{0}$
+\end_inset
+
+的公垂线
+\begin_inset Formula $L$
+\end_inset
+
+的方程.
+ 
+\end_layout
+
+\begin_layout Solution*
+由于题目我们可以可以使用共垂线和
+\begin_inset Formula $L$
+\end_inset
+
+以及公垂线与
+\begin_inset Formula $L_{1},L_{2}$
+\end_inset
+
+分别生成两个垂面, 并且让他们相交就行了.
+ 
+\end_layout
+
 \begin_layout Section
 曲面
 \end_layout
