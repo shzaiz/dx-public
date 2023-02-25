@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.1.19)  25 FEB 2023 15:49
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.1.19)  26 FEB 2023 00:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1501,322 +1501,353 @@ Package mdframed Info: mdframed detected package amsthm
 
 LaTeX Font Warning: Command \Large invalid in math mode on input line 174.
 
-Package mdframed Info: mdframed works in twoside mode on input line 180.
+Package mdframed Info: mdframed works in twoside mode on input line 182.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 180.
+(mdframed)              on input line 182.
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 180.
+LaTeX Font Warning: Command \Large invalid in math mode on input line 182.
 
 [23]
-Package mdframed Info: mdframed works in twoside mode on input line 209.
+Package mdframed Info: mdframed works in twoside mode on input line 213.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 209.
+(mdframed)              on input line 213.
 
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 209.
+LaTeX Font Warning: Command \Large invalid in math mode on input line 213.
 
-Package mdframed Info: mdframed works in twoside mode on input line 251.
+Package mdframed Info: mdframed works in twoside mode on input line 255.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 251.
+(mdframed)              on input line 255.
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 251.
+LaTeX Font Warning: Command \Large invalid in math mode on input line 255.
 
-Package mdframed Info: mdframed works in twoside mode on input line 257.
+Package mdframed Info: mdframed works in twoside mode on input line 261.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 257.
+(mdframed)              on input line 261.
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 257.
-
-Package mdframed Info: mdframed works in twoside mode on input line 269.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 269.
-
-LaTeX Font Warning: Command \Large invalid in math mode on input line 269.
+LaTeX Font Warning: Command \Large invalid in math mode on input line 261.
 
 [24]
-Package mdframed Info: Not enough space on this page on input line 276.
-Package mdframed Info: mdframed works in twoside mode on input line 281.
+Package mdframed Info: mdframed works in twoside mode on input line 273.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 281.
+(mdframed)              on input line 273.
 
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 281.
+LaTeX Font Warning: Command \Large invalid in math mode on input line 273.
 
-Package mdframed Info: mdframed works in twoside mode on input line 293.
+Package mdframed Info: mdframed works in twoside mode on input line 285.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 293.
+(mdframed)              on input line 285.
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 293.
+LaTeX Font Warning: Command \Large invalid in math mode on input line 285.
+
+Package mdframed Info: mdframed works in twoside mode on input line 297.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 297.
+
+LaTeX Font Warning: Command \Large invalid in math mode on input line 297.
 
 [25]
-Package mdframed Info: mdframed works in twoside mode on input line 329.
+Package mdframed Info: mdframed works in twoside mode on input line 336.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 329.
+(mdframed)              on input line 336.
 
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 329.
+LaTeX Font Warning: Command \Large invalid in math mode on input line 336.
 
 [26] [27]
-Package mdframed Info: mdframed works in twoside mode on input line 454.
+Package mdframed Info: mdframed works in twoside mode on input line 461.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 454.
+(mdframed)              on input line 461.
 
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 454.
+LaTeX Font Warning: Command \Large invalid in math mode on input line 461.
 
 [28] [29]
-Package mdframed Info: mdframed works in twoside mode on input line 607.
+Package mdframed Info: mdframed works in twoside mode on input line 623.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 607.
+(mdframed)              on input line 623.
 
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 607.
+LaTeX Font Warning: Command \Large invalid in math mode on input line 623.
 
 [30]
-Overfull \hbox (45.69359pt too wide) in paragraph at lines 647--649
+Overfull \hbox (45.69359pt too wide) in paragraph at lines 663--665
 []\TU/lmr/m/n/10.53937 (Copied from []$[][][][][] [] [] [] [][][][][][][][][][] [] [][][] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]$[]
  []
 
 [31]
-Package mdframed Info: mdframed works in twoside mode on input line 698.
+Package mdframed Info: mdframed works in twoside mode on input line 714.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 698.
+(mdframed)              on input line 714.
 
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 698.
+LaTeX Font Warning: Command \Large invalid in math mode on input line 714.
 
-Package mdframed Info: mdframed works in twoside mode on input line 752.
+Package mdframed Info: mdframed works in twoside mode on input line 768.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 752.
+(mdframed)              on input line 768.
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 752.
+LaTeX Font Warning: Command \Large invalid in math mode on input line 768.
 
-Package mdframed Info: mdframed works in twoside mode on input line 758.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 758.
-
-LaTeX Font Warning: Command \Large invalid in math mode on input line 758.
-
-Package mdframed Info: Not enough space on this page on input line 761.
 [32]
-Package mdframed Info: Not enough space on this page on input line 761.
- [33]
-Package mdframed Info: mdframed works in twoside mode on input line 796.
+Package mdframed Info: Not enough space on this page on input line 769.
+Package mdframed Info: mdframed works in twoside mode on input line 774.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 796.
+(mdframed)              on input line 774.
 
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 796.
+LaTeX Font Warning: Command \Large invalid in math mode on input line 774.
 
-Package mdframed Info: mdframed works in twoside mode on input line 806.
+[33]
+Package mdframed Info: mdframed works in twoside mode on input line 812.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 806.
+(mdframed)              on input line 812.
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 806.
 
-Package mdframed Info: mdframed works in twoside mode on input line 818.
+LaTeX Font Warning: Command \Large invalid in math mode on input line 812.
+
+Package mdframed Info: mdframed works in twoside mode on input line 822.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 818.
+(mdframed)              on input line 822.
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 818.
+LaTeX Font Warning: Command \Large invalid in math mode on input line 822.
 
-Package mdframed Info: mdframed works in twoside mode on input line 849.
+Package mdframed Info: mdframed works in twoside mode on input line 834.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 849.
+(mdframed)              on input line 834.
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 849.
+LaTeX Font Warning: Command \Large invalid in math mode on input line 834.
 
 [34]
-Package mdframed Info: Not enough space on this page on input line 850.
-Package mdframed Info: mdframed works in twoside mode on input line 855.
+Package mdframed Info: mdframed works in twoside mode on input line 865.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 855.
+(mdframed)              on input line 865.
 
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 855.
+LaTeX Font Warning: Command \Large invalid in math mode on input line 865.
 
-Package mdframed Info: mdframed works in twoside mode on input line 861.
+Package mdframed Info: mdframed works in twoside mode on input line 871.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 861.
+(mdframed)              on input line 871.
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 861.
+LaTeX Font Warning: Command \Large invalid in math mode on input line 871.
 
-Package mdframed Info: mdframed works in twoside mode on input line 894.
+Package mdframed Info: mdframed works in twoside mode on input line 877.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 894.
+(mdframed)              on input line 877.
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 894.
+LaTeX Font Warning: Command \Large invalid in math mode on input line 877.
+
+Package mdframed Info: mdframed works in twoside mode on input line 910.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 910.
+
+LaTeX Font Warning: Command \Large invalid in math mode on input line 910.
 
 [35]
-Package mdframed Info: mdframed works in twoside mode on input line 914.
+Package mdframed Info: Not enough space on this page on input line 911.
+Package mdframed Info: mdframed works in twoside mode on input line 930.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 914.
+(mdframed)              on input line 930.
 
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 914.
-
-Package mdframed Info: mdframed works in twoside mode on input line 971.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 971.
-
-LaTeX Font Warning: Command \Large invalid in math mode on input line 971.
+LaTeX Font Warning: Command \Large invalid in math mode on input line 930.
 
 [36]
-Package mdframed Info: mdframed works in twoside mode on input line 1007.
+Overfull \hbox (2.41693pt too wide) in paragraph at lines 969--970
+[]\TU/SimSun(0)/m/n/10.53937 这 里 面\TU/lmr/m/n/10.53937 , $\OML/cmm/m/it/10.53937 x$ \TU/SimSun(0)/m/n/10.53937 被 称 为 作 用 变 量 \TU/lmr/m/n/10.53937 (function variable), \TU/SimSun(0)/m/n/10.53937 一 般 将 量 词 加 在 对 应 的 谓 词 之 前\TU/lmr/m/n/10.53937 , \TU/SimSun(0)/m/n/10.53937 如 $\OMS/cmsy/m/n/10.53937 8\OML/cmm/m/it/10.53937 x:F\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 x\OT1/cmr/m/n/10.53937 )$
+ []
+
+Package mdframed Info: mdframed works in twoside mode on input line 975.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1007.
+(mdframed)              on input line 975.
 
-
-LaTeX Font Warning: Command \Large invalid in math mode on input line 1007.
-
-Package mdframed Info: mdframed works in twoside mode on input line 1015.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 1015.
-
-LaTeX Font Warning: Command \Large invalid in math mode on input line 1015.
+LaTeX Font Warning: Command \Large invalid in math mode on input line 975.
 
 [37]
-Package mdframed Info: mdframed works in twoside mode on input line 1048.
+Package mdframed Info: mdframed works in twoside mode on input line 1031.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1048.
+(mdframed)              on input line 1031.
 
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 1048.
+LaTeX Font Warning: Command \Large invalid in math mode on input line 1031.
 
-Package mdframed Info: mdframed works in twoside mode on input line 1057.
+Package mdframed Info: mdframed works in twoside mode on input line 1062.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1057.
+(mdframed)              on input line 1062.
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 1057.
-
-Package mdframed Info: mdframed works in twoside mode on input line 1075.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 1075.
-
-LaTeX Font Warning: Command \Large invalid in math mode on input line 1075.
+LaTeX Font Warning: Command \Large invalid in math mode on input line 1062.
 
 [38]
-Package mdframed Info: mdframed works in twoside mode on input line 1122.
+Package mdframed Info: mdframed works in twoside mode on input line 1078.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1122.
+(mdframed)              on input line 1078.
 
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 1122.
+LaTeX Font Warning: Command \Large invalid in math mode on input line 1078.
 
-[39]
-Package mdframed Info: mdframed works in twoside mode on input line 1179.
+Package mdframed Info: mdframed works in twoside mode on input line 1114.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1179.
+(mdframed)              on input line 1114.
 
+LaTeX Font Warning: Command \Large invalid in math mode on input line 1114.
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 1179.
-
-Package mdframed Info: mdframed works in twoside mode on input line 1183.
+[39] [40]
+Package mdframed Info: mdframed works in twoside mode on input line 1192.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1183.
+(mdframed)              on input line 1192.
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 1183.
 
-Package mdframed Info: mdframed works in twoside mode on input line 1193.
+LaTeX Font Warning: Command \Large invalid in math mode on input line 1192.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1200.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1193.
+(mdframed)              on input line 1200.
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 1193.
+LaTeX Font Warning: Command \Large invalid in math mode on input line 1200.
 
-Package mdframed Info: Not enough space on this page on input line 1194.
-[40]
-Package mdframed Info: Not enough space on this page on input line 1194.
-Package mdframed Info: mdframed works in twoside mode on input line 1223.
+Package mdframed Info: mdframed works in twoside mode on input line 1233.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1223.
+(mdframed)              on input line 1233.
 
+LaTeX Font Warning: Command \Large invalid in math mode on input line 1233.
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 1223.
-
+Package mdframed Info: Not enough space on this page on input line 1236.
 [41]
+Package mdframed Info: Not enough space on this page on input line 1236.
+Package mdframed Info: mdframed works in twoside mode on input line 1242.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1242.
+
+
+LaTeX Font Warning: Command \Large invalid in math mode on input line 1242.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1260.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1260.
+
+LaTeX Font Warning: Command \Large invalid in math mode on input line 1260.
+
+[42]
+Package mdframed Info: mdframed works in twoside mode on input line 1307.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1307.
+
+
+LaTeX Font Warning: Command \Large invalid in math mode on input line 1307.
+
+[43]
+Package mdframed Info: mdframed works in twoside mode on input line 1364.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1364.
+
+
+LaTeX Font Warning: Command \Large invalid in math mode on input line 1364.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1368.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1368.
+
+LaTeX Font Warning: Command \Large invalid in math mode on input line 1368.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1378.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1378.
+
+LaTeX Font Warning: Command \Large invalid in math mode on input line 1378.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1408.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1408.
+
+LaTeX Font Warning: Command \Large invalid in math mode on input line 1408.
+
+[44] [45]
 File: 2-prop-logic/figs/bubble-sort.png Graphic file (type bmp)
 <2-prop-logic/figs/bubble-sort.png>
- [42]
-Package mdframed Info: mdframed works in twoside mode on input line 1313.
+ [46]
+Package mdframed Info: mdframed works in twoside mode on input line 1498.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1313.
+(mdframed)              on input line 1498.
 
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 1313.
+LaTeX Font Warning: Command \Large invalid in math mode on input line 1498.
 
-Package mdframed Info: mdframed works in twoside mode on input line 1317.
+Package mdframed Info: mdframed works in twoside mode on input line 1502.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1317.
+(mdframed)              on input line 1502.
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 1317.
+LaTeX Font Warning: Command \Large invalid in math mode on input line 1502.
 
-Package mdframed Info: Box was splittet wrong
- starting loop to iterate the splitting point
-(mdframed)              on input line 1340.
-[43] (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
+[47] (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
-) [44]
-Package mdframed Info: mdframed works in twoside mode on input line 1359.
+)
+Package mdframed Info: mdframed works in twoside mode on input line 1544.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1359.
+(mdframed)              on input line 1544.
 
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 1359.
+LaTeX Font Warning: Command \Large invalid in math mode on input line 1544.
 
-) (/Users/zgw/Documents/dx/TeXify/pypsolve/.texpadtmp/pypsolve-main.bbl [45] [46
-
-]) 
+) (/Users/zgw/Documents/dx/TeXify/pypsolve/.texpadtmp/pypsolve-main.bbl [48]) 
 AED: lastpage setting LastPage
-[47] (/Users/zgw/Documents/dx/TeXify/pypsolve/.texpadtmp/pypsolve-main.aux)
+[49
+
+] (/Users/zgw/Documents/dx/TeXify/pypsolve/.texpadtmp/pypsolve-main.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.47188pt have occurred.
 
 Package rerunfilecheck Info: File `pypsolve-main.out' has not changed.
-(rerunfilecheck)             Checksum: 97782BF8B8C8CBD0D0A60BD9B77C50E8;3032.
+(rerunfilecheck)             Checksum: 8FF3D8161EE6E7008D58C165C60795CF;3151.
  ) 
 Here is how much of TeX's memory you used:
- 37317 strings out of 476776
- 778276 string characters out of 5805932
+ 37321 strings out of 476776
+ 778356 string characters out of 5805932
  2069991 words of memory out of 5000000
- 56698 multiletter control sequences out of 15000+600000
+ 56702 multiletter control sequences out of 15000+600000
  526502 words of font info for 139 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  98i,11n,100p,2264b,1881s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on /Users/zgw/Documents/dx/TeXify/pypsolve/.texpadtmp/pypsolve-main.pdf (47 pages).
+Output written on /Users/zgw/Documents/dx/TeXify/pypsolve/.texpadtmp/pypsolve-main.pdf (49 pages).

@@ -176,6 +176,8 @@ B: 来看一看朱富海老师的文章就知道了.
 
 \section{开始行动: 符号化逻辑}
 
+
+
 \begin{dialogue}
 	A: 为什么采用符号化的方法? 用自然的语言不是更方便吗? 
 	
@@ -192,6 +194,8 @@ B: 来看一看朱富海老师的文章就知道了.
 	B: 现在让你去给刚学完加减乘除的小学生讲数学分析, 能在一个下午让他写出来很好的证明吗? 
 	
 	A: 这当然不行. 可能是没有受到一些理论的熏陶, 训练时间不是很足. 
+	
+	B: 确实是这样的. 在下面的命题逻辑和谓词逻辑中, 我们会像程序设计语言那样, 关注命题逻辑和谓词逻辑的语法和语义. 
 \end{dialogue}
 
 \subsection{命题, 真值表和指派}
@@ -216,7 +220,7 @@ B: 来看一看朱富海老师的文章就知道了.
 
 
 
-\begin{definition}[命题逻辑的语言]
+\begin{definition}[命题逻辑的语法]
         命题逻辑的语言有且仅有如下的内容构成: 
         \begin{itemize}
             \item 任意多的命题符号
@@ -310,6 +314,9 @@ The order of operations is a rule that tells the correct sequence of steps for e
 	\end{itemize}
 	
 \end{itemize}
+
+现在, 我们就可以探讨更多的语义相关的内容了. 来看一看能对这个公式产生怎样的解释. 
+
 \end{idea}
 
       \begin{definition}[命题符号的运算规则]
@@ -484,6 +491,15 @@ The order of operations is a rule that tells the correct sequence of steps for e
         则称 $\alpha$ 与 $\beta$ {\bf 重言等价}, 记为 $\alpha \equiv \beta$. 
       \end{definition}
       
+     对于命题公式而言, 如果对于相同的变量输入, 外部观测的结果的真假相同, 我们就称为命题的等价. 
+     
+     \begin{definition}[命题的等价]
+     	设$G,H$是两个命题公式, $P_1,\cdots, P_n$是出现在命题$G,H$中的所有变元, 如果对于$P_1,P_2,\cdots,P_n$的$2^n$组不同的解释, $G,H$的真值结果都相同, 那么称$G$和$H$是等价的, 记作$G\Leftrightarrow H$. 
+     \end{definition}      
+     根据上面的定义, 我们可以证明: 
+     \begin{theorem}
+     	$G\Leftrightarrow H$的充分必要条件是$G\leftrightarrow H$. 
+     \end{theorem}
       
 \subsection{命题逻辑的化简}
 
@@ -923,23 +939,44 @@ $$
 
 我们发现以前学过的东西仅仅能应对很基本的内容. 比如任意, 存在无法表示. 下面我们形式化的先来说说什么是任意和存在. 这些是对于一类类似于变元的内容的性质的总体描述. 因此,  我们首先定义什么是谓词
 
-\begin{definition}[谓词]
-	在不能被拆分为更小的命题中, 可以独立存在的客体(通常是句子中的主语, 宾语)称为个体词, 描述客体的性质或客体之间的关系的部分称为谓词. 
+\begin{definition}[谓词(predicate)]
+	在不能被拆分为更小的命题中(通常叫做原子命题(automic expression)), 可以独立存在的客体(subject)(通常是句子中的主语, 宾语)称为个体词(individual), 描述客体的性质或客体之间的关系的部分称为谓词. 
 \end{definition}
 
-很多时候, 我们会泛指一些很笼统的概念, 比如``人''. 
+很多时候, 我们会泛指一些很笼统的概念, 比如``人''. 也有时候我们会举一些明确的个体, 比如``蒋炎岩老师''. 这时候我们就需要区分``个体变量''(通常是泛指)和``个体常量''(通常是特指).
+
+\begin{definition}[个体常量, 个体变量, 个体域, 全总个体域]
+	对于具体明确的个体而言, 称为个体常量(individual constant), 一般用形如$a,b,a_1,b_1$这样的小写字母表示. 个体变量(individual variable)取值范围称作个体域(或论域, individual field), 通常用字母$D$表示. 我们通常把宇宙间所有个体聚集在一起的个体域称为全总论域(universual individual field). 
+\end{definition}  
 
 \begin{definition}[$n$元命题函数]
-	设$P(x_1,x_2,\cdots,x_n$是$n$元函数, 其中
-	% TODO: Feb 25. 上一次写到这
+	设$P(x_1,x_2,\cdots,x_n)$是$n$元函数(function), 其中每一个变量可以取其可以取到的对应的值. 如果$P$的值域是$\set{0,1}$, 那么说$P(x_1 ,x_2, \cdots, x_n)$是$n$元命题函数或$n$元谓词(n-ary propositional function).  
 \end{definition}
+
+这样子, 我们就可以更加方便的定义量词(qualifier)了. 
+
+\begin{definition}[全称量词与特称量词]
+	表达全部数量关系的词语诸如``一切'',``所有'',``每一个''等称为全称量词(universal quantifier), 记作$\forall$. 如所有的$x$记作$\forall x$. 
+	
+	表达部分数量关系的词语诸如``存在'', ``有一个'', ``有一些''称为存在量词(existential quantifier). 记作$\exists$. 如有一些$x$记作$\exists x$. 
+	
+	这里面, $x$被称为作用变量(function variable), 一般将量词加在对应的谓词之前, 如$\forall x. F(x)$或$\exists x. F(x)$. 此时$F(x)$被称为全称量词和存在量词的作用域(又成为辖域, scope). 
+\end{definition}
+
+上面的内容一个很重要的地方在于引入了变元. 例如, 在函数符号和谓词符号中, 变元的引入使得我们要讨论的事情变得更加多了. 
+
+\begin{bonus}
+	你在哪里还见到过由常数引入到变量? 其实, 我们在初中的时候, 先研究了二次方程的解, 再把$x$当做一个变元, 研究所有$x$构成的二元组$(x,f(x))$的一些性质. 有兴趣学习高等代数的同学会发现在引入$\lambda-\text{矩阵}$的时候也用了这样的知识. 
+\end{bonus}
+
+这下子, 我们就可以定义谓词逻辑的构成了. 
 
 \begin{definition}[谓词逻辑的构成] 谓词逻辑由且仅有以下的几部分构成: 
 
       (1)逻辑联词: $\lnot, \land, \lor, \to, \leftrightarrow$
       
-      (2)量词符号:  $\forall$ (\bf{forall}; 全称量词),
-        $\exists$ (\bf{exists}; 存在量词)
+      (2)量词符号:  $\forall$ (forall; 全称量词),
+        $\exists$ exists; 存在量词)
       
       (3)变元符号: $x, y, z, \dots$
       
@@ -955,7 +992,7 @@ $$
 
 
 
-这些公式中一个很重要的地方在于引入了变元. 例如, 在函数符号和谓词符号中, 变元的引入使得我们要讨论的事情变得更加多了. 
+
 
 和普通公式一样, 谓词公式也是由一项一项构成的.
 
@@ -973,7 +1010,7 @@ $$
 \begin{definition}[公式 (Formula)] 谓词逻辑的公式定义如下: 
   \begin{itemize}
     \item 如果 $t_{1}, \dots, t_{n}$ 是项, 且 $P$ 是一个 $n$ 元谓词符号, \\
-      则 $P(t_{1}, \dots, t_{n})$ 为公式, 称为\teal{\bf 原子公式};
+      则 $P(t_{1}, \dots, t_{n})$ 为公式, 称为{\bf 原子公式};
     \item 如果 $\alpha$ 与 $\beta$ 都是公式, 则 $(\lnot \alpha)$
       与 $(\alpha \;\red{\ast}\; \beta)$ 都是公式;
     \item 如果 $\alpha$ 是公式, 则 \red{$\forall x.\; \alpha$}
@@ -1008,6 +1045,131 @@ $$
 
 \end{example}
 
+\begin{quote}
+有了坐标系, 辩证法进入了数学. 有了坐标系, 运动进入了数学. \\
+\hfill --Engels
+\end{quote}
+
+这里的``运动'', ``坐标系''只是变量引入数学的结果. 自然, 这让我们探索的内容更加的丰富, 同时也更加容易犯错了. 比如, 我们很多时候喜欢对变量做替换. 但是, 下面的代换显然是错的: 
+
+\begin{example}
+	``那曲市'' := ``中国最大的城市''
+	
+	``那曲市''有三个汉字
+	
+	``中国最大的城市''有三个汉字
+\end{example}
+
+因为``中国最大的城市''这个字符串有7个汉字构成. 这就警告我们要在变量代换的时候要格外小心. 那么, 变量有哪些类型呢? 
+
+在公式$\forall x. P(x,y)\lor \exists y. R(x,y)$中, 根据量词作用域的定义, $\forall x$的作用域是$P(x,y)$, 因此$x$受到了$\forall x$的约束, 从而把这个变元称作{\bf 约束变元}. 然而这个的$y$没有受到$\forall x$的约束, 所以称为{\bf 自由变元}. 
+
+\begin{definition}[约束变元与自由变元]
+	给定公式$\forall x. G$和$\exists x.G$, $G$为$\forall x$和$\exists x$的作用域, 那么$G$中的$x$出现的都是约束出现(bounded occurrence), 称变元$x$则是约束变元(bound variable), $G$中不同于$x$的其他变元出现的则是自由出现(free occurrence), 称这些变元为自由变元(free variable)
+\end{definition}
+
+\begin{dialogue}
+	A: 这就像C里面判断一个变量是不是被定义过了一样! 如果被定义过了, 自然不能乱搞, 如果没有定义过, 改个和定义过的名字不一样的, 应该也是等价的. 
+	
+	B: 对, 名字是次要的, 真正的表达的东西才是核心啊! 
+\end{dialogue}
+
+可能由于重名的原因, 我们发现同样一个字母既可以表示自由变元, 又可以表示约束变元, 这样就很不利于我们问题的分析. 为此, 我们给出变元的代换规则, 可以让每一个符号各司其职. 
+
+\begin{theorem}[变元的代换规则]
+
+对变元可以做如下的变量替换, 推理是有效的: 
+
+(1) 约束变元改名. 将量词作用域内与作用变元相同的约束变元用新的个体变元替换. 新的变元要与作用域的其他变量名符号不同. 
+
+(2) 自由变元带入. 将公式中的某个自由变元的每一处用新的个体变元或个体常量带入. 并且新变元不允许在公式中以任何约束形式出现. 
+	
+\end{theorem}
+
+上面的两条关系在带入之前和带入之后都没有改变原有命题之间的约束关系. 但是使用(2)之后, 公式的含义就发生了变化, 但是推理是成立的--比如选择常量带入进去, 那么命题就退化成了一个特化的情况了. 
+
+没有自由变量的公式有着很好的性质--他的真值表就可以确定了. 我们把这样的内容叫做闭式. 
+
+\begin{definition}[闭式]
+设$G$是任意的一个公式, 如果$G$中没有自由变元, 那么$G$被称为封闭的公式, 简称闭式. 	
+\end{definition}
+
+\begin{theorem}
+	闭式一定是命题. 
+\end{theorem}
+
+在命题逻辑中, 我们运用了真值指派的方式来了解了这个命题的真值情况, 那么这里, 我们能不能也用类似的方法``解释''一个命题逻辑的含义呢? 
+
+\section{尝试解释谓词公式}
+
+谓词公式的解释远远没有我们想象的那么简单! 在不同的数学结构中, 同一个谓词公式很可能有不同的结果! 
+
+\begin{example}
+	考虑
+	$$
+	\alpha: \forall x.(x\times x \neq 1+1), 
+	$$
+	$\alpha$ 在数学结构$\mathcal U=\Q $中是真的, 但是在数学结构$\mathcal U=\R  $中是假的. 
+\end{example}
+
+从上面的例子, 我们可以看出来, 要想解释清楚一个谓词逻辑的公式, 我们需要考虑对象所处的数学空间来下结论. 也就是一个表达式的语义大致取决于: 
+
+\begin{itemize}
+  \item 对量词论域(universe)的解释, 限定个体范围;
+  \item 对常数符号、函数符号、谓词符号的解释;
+  \item 对\blue{自由}变元的解释 (赋值函数 $s$).
+\end{itemize}
+
+也就是这种``{\bf 解释}''将公式映射到一个{\bf 数学结构 $\U$}上, 这决定了该公式的语义. 
+
+什么是解释呢? 更正式一点, 我们认为一个公式的解释由下列四部分组成: 
+
+\begin{definition}
+	谓词逻辑中的谓词公式$G$的一个解释(interpretation)$I$由以下的四部分构成: 
+	
+	(1) 非空的个体域$D$;
+	
+	(2) $G$中的每个常量符号, 指定$D$中的某个特定的元素. 
+	
+	(3) $G$中的每个$n$元函数符号, 指定的是每一个元随意选择得到的所有可能的结果的集合对应到$D$的一个函数
+	
+	(4) $G$中的每个$n$元谓词符号, 指定每一个元随意选择得到的所有可能的结果的集合到$\set{0,1}$的某个特定的谓词. 
+\end{definition}
+
+因此, 我们给出在一个特定的数学结构上``满足''的定义. 
+
+\begin{definition}[$(\U, s) \models \alpha$]
+    $\U$ 与 $s$ 满足公式 $\alpha$:
+  \[
+    (\U, s) \models \alpha
+  \]
+  \begin{itemize}
+    \setlength{\itemsep}{6pt}
+    \item 将$\alpha$中的常数符号、函数符号、谓词符号按照结构 $\U$ 进行解释,
+    \item 将量词的论域限制在集合 $|\U|$ 上,
+    \item 将自由变元 $x$ 解释为 $s(x)$,
+    \item 这样就将公式 $\alpha$ 翻译成了某个数学领域中的命题,
+    \item 然后, 使用数学领域知识我们知道该命题成立
+  \end{itemize}
+\end{definition}
+
+同样的, 我们也可以说明语义蕴含在谓词逻辑中的定义: 
+
+\begin{definition}[语义蕴含 (Logically Imply)]
+    令 $\Sigma$ 为一个公式集, $\alpha$ 为一个公式.  \\[8pt]
+    $\Sigma$ \red{\bf 语义蕴含} $\alpha$, 记为 $\Sigma \models \alpha$, 
+    如果\red{每个}满足$\Sigma$中\blue{所有}公式的\red{结构$\U$与赋值$s$}都满足$\alpha$. 
+    记作
+    \[
+    \set{\forall x.\; P(x)} \models P(y)
+  \]
+\end{definition}
+
+当然, 我们当然希望为公式能够在等价的意义下能够完成推理. 所以我们需要首先研究什么样的公式在怎样的情形下是等价的.
+
+\begin{definition}[谓词公式等价的定律]
+	% TODO: Feb 26 write here page P77
+\end{definition}
 
 
 \section{常见的证明方法}
