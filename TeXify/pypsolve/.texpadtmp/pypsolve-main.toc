@@ -10,15 +10,16 @@
 \contentsline {subsection}{\numberline {1.4.2}函数: 整合相似过程}{12}{subsection.1.4.2}%
 \contentsline {subsubsection}{递归(recursion)过程和栈帧(stack frame)}{12}{subsubsection*.5}%
 \contentsline {section}{\numberline {1.5}一些小例子}{13}{section.1.5}%
-\contentsline {chapter}{\numberline {第二章\hspace {.3em}}命题的逻辑}{19}{chapter.2}%
-\contentsline {section}{\numberline {2.1}问题的提出: 为什么要研究命题的逻辑}{19}{section.2.1}%
+\contentsline {chapter}{\numberline {第二章\hspace {.3em}}简单数理逻辑}{19}{chapter.2}%
+\contentsline {section}{\numberline {2.1}问题的提出: 为什么要研究简单的数理逻辑}{19}{section.2.1}%
 \contentsline {section}{\numberline {2.2}开始行动: 符号化逻辑}{23}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}命题, 真值表和指派}{23}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}命题逻辑的化简}{28}{subsection.2.2.2}%
 \contentsline {paragraph}{解答:}{30}{paragraph*.16}%
 \contentsline {subsection}{\numberline {2.2.3}化简的目标: 范式}{30}{subsection.2.2.3}%
 \contentsline {section}{\numberline {2.3}命题推演的真象: 命题的推演}{33}{section.2.3}%
-\contentsline {section}{\numberline {2.4}常见的证明方法}{36}{section.2.4}%
-\contentsline {section}{\numberline {2.5}重新审视算法的正确性: 从基本结构开始}{39}{section.2.5}%
-\contentsline {section}{\numberline {2.6}继续理解子过程和递归}{43}{section.2.6}%
+\contentsline {section}{\numberline {2.4}表达更丰富的内容: 谓词\nobreakspace {}部分与整体的关系}{36}{section.2.4}%
+\contentsline {section}{\numberline {2.5}常见的证明方法}{37}{section.2.5}%
+\contentsline {section}{\numberline {2.6}重新审视算法的正确性: 从基本结构开始}{41}{section.2.6}%
+\contentsline {section}{\numberline {2.7}继续理解子过程和递归}{44}{section.2.7}%
 \contentsfinish 
