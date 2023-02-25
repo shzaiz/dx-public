@@ -1095,5 +1095,195 @@ Hardy说证明$\sqrt 2$是无理数是最漂亮的证明之一. 其中用了反�
 	如果$m$只对象放入$n$个容器，其中$m>n$，则至少有一个容器中对象个数大于$1$. 
 \end{theorem}
 
+\begin{bonus}
+	为什么鸽巢原理叫做``原理''而不是``公理'', ``定理''?
+\end{bonus}
+
+% TODO: 增加鸽巢原理的证明. 
+
+% TODO: 增加Python的z3库的应用
+
+\section{重新审视算法的正确性: 从基本结构开始}
+
+\begin{prob}
+	在本节开始之前, 不妨先阅读David Harel写的书本《Algorithmics: The spirits of computing》, 之后与本节的内容进行对比. 
+\end{prob}
+
+
+我们在之前知道, 计算机解题的正确性在于正确算法的实现. 那么算法的正确性来源于什么呢? 不同于人类指令的有歧义和模糊, 机器语言应该做到的是有明确的``基本指令'', 与``控制结构''.
+
+\begin{quote}
+	(对于初学者而言, ) 精确的定义毫无意义. \hfill --蒋炎岩
+\end{quote} 
+
+无论如何, 先忘掉这些抽象的名词吧. 基本指令就可以想象成一行代码是如何进行的, 它是如何操作了计算机的内部的. 控制结构是一些描述那个当前的代码执行如何执行下一条指令的一系列规约. 也就是描述了基本算法是什么, 以及是如何被实施的. 
+
+
+生活中很多的事情都可以用一些控制结构完成. 我们来举几个例子:
+
+\subsection*{顺序结构}
+
+\begin{example}
+	吃一只蟹黄包的算法. 
+\end{example}
+
+如何确保我们的过程无误? 其实我们可以在执行完之后进行监视. 每一个guard需要看一看前面的内容是不是已经完成了即可. 
+
+如果我们不打算只吃一只, 那么我们如何控制数量呢? 
+
+\subsection*{循环}
+
+% TODO: 增加条件循环, 计数循环的文本
+一个很有趣的问题是: 如何确定循环的过程是正确的? 我们可以发现, 虽然循环的变量在变, 但是我们总是希望维系一个命题的值是真的. 由此我们引入``循环不变式''. 
+
+\begin{definition}[循环不变式]
+	循环不变量是一个逻辑表达式, 在循环执行过程终止之前它应该始终为真. 
+\end{definition}
+
+例如, 我们使用累乘的方法去循环的时候, 循环不变式可以是``存放中间结果的量的值=a$\times$ 循环变量当前的值. 
+
+类似于数学归纳法, 我们可以利用循环不变式证明循环算法证明的一个基本的方法: 
+
+\begin{theorem}[证明循环不变式的基本方法]
+(1)	Initialization. It is true prior to the first iteration of the loop.
+
+(2) Maintenance. If it is true before an iteration of the loop, it remains true before next iteration. 
+
+(3) Termination. The loop terminates, and when it terminates, the invariant -- usually along with the reason that the loop terminated--gives us a useful property that helps show that the algorithm is correct. 
+\end{theorem}
+
+下面我们为上述的两种吃蟹黄汤包的策略选定一个循环不变式. 对于策略I, 我们有在循环终止之前, 我还是没有饱的; 对于策略II, 我们的循环不变式是计数器的值=存放临时变量的值$+1$
+
+我们发现不变量对于问题求解有很大的价值. 比如下面的这个问题: 
+
+\begin{prob}
+	在世界杯足球赛的第二阶段(小组赛结束后)进行单循环比赛, 每场必须分出胜负, 赢者进下一轮, 输者回家. 16个队参加, 赛多少场决出冠军? 
+\end{prob} 
+
+答案是15场. 因为每一次循环满足不变量: 这一次的值=上一次的值-1. 由此就可以归纳了. 
+
+与之类似的问题, 
+
+\begin{prob}
+	A rectangular chocolate bar is divided into squares by horizontal and vertical grooves, in the usual way. It is to be cut into individual squares. A cut is made by choosing a piece and cutting along one of its groove. (Thus each cut splits one piece into two pieces) How many cuts are needed to completely cut the chocolate into all its squares?
+\end{prob}
+
+解答的方法也是和前面的完全一样, 他们是遵循同一个``差1''的不变量的. 这就是不变量对于问题求解的价值. 
+
+
+\subsection*{算法的条件分支}
+
+基本上, 算法用于决策的判断条件是一个命题逻辑, 根据其真假可以判别. 这时候我们在前面的一些内容就派上用场了. 
+
+上面我们已经对每一个部分所有的语义简单进行了了解, 下面, 我们把它们组合, 嵌套起来, 看一看他们能够解决什么样的问题. 
+
+\subsection*{组合起来: 列举与嵌套(nesting)}
+
+从一个很常见的问题开始: 冒泡排序. 
+
+\begin{prob}
+	用上面的语句(可以画流程图)及其列举与嵌套, 完成排序问题: 	
+	(1)输入:长度为$n$的自然数序列$S$(假设其中没有重复元素). 
+
+	(2)输出: 序列$S’$, 其元素与$S$完全一样, 但已从小到大排好序.
+\end{prob}
+
+一个可能的设计方法如图\ref{fig:bub-sor}所示. 我们可以模拟执行它. 
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.5]{2-prop-logic/figs/bubble-sort}
+	\caption{冒泡排序的一个实现方法(流程图)}
+	\label{fig:bub-sor}
+\end{figure}
+
+
+我们可以把内循环同样抽象成一个问题, 将一个（子）序列中的最大元素放到该子序列位置地址最大的地方(可以认为最后方). 那么对于它, 我们应该如何定义循环不变量? 
+
+每次$i$循环开始前，序列 $S$ 中地址最高的 $i$ 个位置(除 $i=0$ 外, 即$S[n-i]$ 到 $S[n-1]$) 包含 $S$ 中前 $i$ 个最大的元素, 且已从小到大排好序; 序列中其它位置上的元素即 $S$ 中其它 $n-i$ 个元素. 
+
+下面按照如下的三个方法归纳: 
+
+\begin{itemize}
+	\item 当$i=0$, 显然；	\item 如果当 $i=k>0$ 时上述命题成立, 即 $k$ 循环开始前,  $S$ 中最大的 $k$ 个元素已被置换到 $S[n-k]$ 到 $S[n-1]$ ; 在 $k$ 循环中，指针 $j$ 从位置$0$扫描到位置$n-k-1$, 并将此范围内最大元素置换到$S[n-k-1]$. 则当$i=k+1$时, $S$ 中最大的 $k+1$个元素被排好序, 放置在 $S[n-(k+1)]$ 到 $S[n-1]$;	\item 当 $i=n$, 算法终止, 即$n$循环(未执行)前，$n$ 个 $S$ 中的元素排好序, 并放置在 $S[0]$ 到 $S[n-1]$ 的位置上. 
+ 
+
+\end{itemize}
+
+\begin{bonus}
+	在第一章里面我么说TRM里面有一条跳转指令, 为什么现在我们没有详细介绍goto指令, 并且绝大多数语言(除了C,C++)都没有了goto呢?
+\end{bonus}
+
+\begin{pas}
+	\begin{center}
+		\large \textbf{Go To Statement Considered Harmful(Cropped)}
+	\end{center}
+	\begin{center}
+		E.W. Dijkstra\\
+		from Communications of the ACM, Vol. 11, No. 3, March 1968, pp. 147-148
+	\end{center}
+	My first remark is that, although the programmer's activity ends when he has constructed a correct program, the process taking place under control of his program is the true subject matter of his activity, for it is this process that has to accomplish the desired effect; it is this process that in its dynamic behavior has to satisfy the desired specifications. Yet, once the program has been made, the ``making'' of the corresponding process is delegated to the machine.
+	
+	My second remark is that our intellectual powers are rather geared to master static relations and that our powers to visualize processes evolving in time are relatively poorly developed. For that reason we should do (as wise programmers aware of our limitations) our utmost to shorten the conceptual gap between the static program and the dynamic process, to make the correspondence between the program (spread out in text space) and the process (spread out in time) as trivial as possible.
+	
+	......
+	
+	The unbridled use of the go to statement has an immediate consequence that it becomes terribly hard to find a meaningful set of coordinates in which to describe the process progress. Usually, people take into account as well the values of some well chosen variables, but this is out of the question because it is relative to the progress that the meaning of these values is to be understood! With the go to statement one can, of course, still describe the progress uniquely by a counter counting the number of actions performed since program start (viz. a kind of normalized clock). The difficulty is that such a coordinate, although unique, is utterly unhelpful. In such a coordinate system it becomes an extremely complicated affair to define all those points of progress where, say, n equals the number of persons in the room minus one!
+
+The go to statement as it stands is just too primitive; it is too much an invitation to make a mess of one's program. One can regard and appreciate the clauses considered as bridling its use. I do not claim that the clauses mentioned are exhaustive in the sense that they will satisfy all needs, but whatever clauses are suggested (e.g. abortion clauses) they should satisfy the requirement that a programmer independent coordinate system can be maintained to describe the process in a helpful and manageable way.
+
+......
+
+In [2] Guiseppe Jacopini seems to have proved the (logical) superfluousness of the go to statement. The exercise to translate an arbitrary flow diagram more or less mechanically into a jump-less one, however, is not to be recommended. Then the resulting flow diagram cannot be expected to be more transparent than the original one.
+
+
+	
+\end{pas}
+ \section{继续理解子过程和递归}
+
+\subsection*{子过程}
+
+在程序变的更加复杂的时候, 程序就会变得像面条一样难以驾驭. 这时候, 如果工程文件十分的大, 那么我们很可能会在这种情况下迷失. 比如写的一个C文件, 如果把所有的函数展开, 得到的一个难以阅读的文件. 可以用下面的命令得到一份. 
+
+\begin{lstlisting}[language=sh]
+	gcc your_file_name.c -S
+\end{lstlisting}
+
+之后文件夹下面就有一些.s文件了. 这是把C语言展开为了最基本的指令序列的结果. 可见, 当问题规模变得复杂的时候, 我们必须让复用重复的部分更加容易. 
+
+比如, 我们要对一个句子里面含有``money''的词语计数, 我们可以有如下的算法. 
+
+% TODO: 增加算法的图示和代码. 
+
+\begin{bonus}
+	所以, 用子过程有什么好处? 
+\end{bonus}
+
+事实上, 定义了子过程, 我们很多时候可以自己调用自己. 这对我们人类编写程序的时候是大有裨益的. 
+
+
+\subsection*{递归}
+
+在第一章我们用小纸条和老师以及作业本说明了什么是递归. 在这一节我们提供更多的例子. 
+
+
+\begin{prob}[Hanoi塔问题]
+ 
+\end{prob}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

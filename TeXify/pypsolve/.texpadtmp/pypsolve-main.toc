@@ -1,16 +1,15 @@
 \contentsline {chapter}{\numberline {第一章\hspace {.3em}}Python基础回顾}{5}{chapter.1}%
 \contentsline {section}{\numberline {1.1}问题的提出: 通过程序, 可以求解的问题}{5}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}为什么学习计算机编程}{5}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}程序设计的语法(grammar)与语义(schematics)}{5}{subsection.1.1.2}%
-\contentsline {subsection}{\numberline {1.1.3}Python代码执行可视化(visualization): 一个网站}{6}{subsection.1.1.3}%
-\contentsline {subsection}{\numberline {1.1.4}可以执行任何程序的最小指令集}{6}{subsection.1.1.4}%
-\contentsline {subsection}{\numberline {1.1.5}Python中的整个世界}{8}{subsection.1.1.5}%
+\contentsline {section}{\numberline {1.2}程序设计的语法(grammar)与语义(schematics)}{5}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Python代码执行可视化(visualization): 一个网站}{6}{section.1.3}%
+\contentsline {section}{\numberline {1.4}可以执行任何程序的最小指令集}{6}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Python中的整个世界}{8}{subsection.1.4.1}%
 \contentsline {subsubsection}{变量的定义与赋值}{9}{subsubsection*.2}%
 \contentsline {subsubsection}{控制语句: 判断与循环}{10}{subsubsection*.3}%
 \contentsline {subsubsection}{程序的终止}{12}{subsubsection*.4}%
-\contentsline {subsection}{\numberline {1.1.6}函数: 整合相似过程}{12}{subsection.1.1.6}%
+\contentsline {subsection}{\numberline {1.4.2}函数: 整合相似过程}{12}{subsection.1.4.2}%
 \contentsline {subsubsection}{递归(recursion)过程和栈帧(stack frame)}{12}{subsubsection*.5}%
-\contentsline {section}{\numberline {1.2}一些小例子}{13}{section.1.2}%
+\contentsline {section}{\numberline {1.5}一些小例子}{13}{section.1.5}%
 \contentsline {chapter}{\numberline {第二章\hspace {.3em}}命题的逻辑}{19}{chapter.2}%
 \contentsline {section}{\numberline {2.1}问题的提出: 为什么要研究命题的逻辑}{19}{section.2.1}%
 \contentsline {section}{\numberline {2.2}开始行动: 符号化逻辑}{23}{section.2.2}%
@@ -20,4 +19,6 @@
 \contentsline {subsection}{\numberline {2.2.3}化简的目标: 范式}{30}{subsection.2.2.3}%
 \contentsline {section}{\numberline {2.3}命题推演的真象: 命题的推演}{33}{section.2.3}%
 \contentsline {section}{\numberline {2.4}常见的证明方法}{36}{section.2.4}%
+\contentsline {section}{\numberline {2.5}重新审视算法的正确性: 从基本结构开始}{39}{section.2.5}%
+\contentsline {section}{\numberline {2.6}继续理解子过程和递归}{43}{section.2.6}%
 \contentsfinish 

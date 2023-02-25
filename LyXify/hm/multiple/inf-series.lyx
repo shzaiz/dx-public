@@ -339,7 +339,38 @@ S_{1}+(S_{2}-S_{1})+\cdots+(S_{n}-S_{1})+\cdots & =S_{1}+\sumi{n=2}(S_{n}-S_{n-1
 充分性.
 
 \series default
- 设右侧条件成立, 
+ 设右侧条件成立, 那么根据数列极限存在的Cauchy准则, 极限
+\begin_inset Formula $\lim_{n\to\infty}S_{n}$
+\end_inset
+
+存在, 故级数
+\begin_inset Formula $\sumi{i=1}a_{i}$
+\end_inset
+
+收敛.
+ 
+\end_layout
+
+\begin_layout Standard
+因此, 这给我们了一个很好的思路: 我们可以通过这样的定义, 转换成不等式的证明问题, 从而证明一些级数是收敛的.
+ 
+\end_layout
+
+\begin_layout Example
+证明级数
+\begin_inset Formula 
+\[
+\sumi{n=1}\frac{1}{n^{2}}
+\]
+
+\end_inset
+
+收敛.
+ 
+\end_layout
+
+\begin_layout Section
+收敛级数的性质
 \end_layout
 
 \end_body

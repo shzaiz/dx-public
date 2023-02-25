@@ -81,6 +81,4 @@ print(eval(cal_det_expr(M)).expand())
 
 
 
-
-
-# Time compleity 
+# do
