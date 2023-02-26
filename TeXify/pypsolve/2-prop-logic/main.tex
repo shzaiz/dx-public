@@ -1,5 +1,5 @@
 \begin{quote}
-	“有两种推广．一种没有什么价值, 另一种则是有价值的．没什么思想、仅凭唬人的专人术语做推广是很容易做到的．颇为困难的是从若干好的素材中提取出一份精致凝练的精品．”
+	``有两种推广．一种没有什么价值, 另一种则是有价值的．没什么思想、仅凭唬人的专人术语做推广是很容易做到的．颇为困难的是从若干好的素材中提取出一份精致凝练的精品.''
 	\hfill ---- George Polya
 \end{quote}
 
@@ -246,6 +246,16 @@ B: 来看一看朱富海老师的文章就知道了.
 	
 	B: 确实是这样的. 在下面的命题逻辑和谓词逻辑中, 我们会像程序设计语言那样, 关注命题逻辑和谓词逻辑的语法和语义. 
 \end{dialogue}
+
+\begin{idea}
+	以下是下面的内容的路线图. 
+	
+	\centering
+	
+	\includegraphics[scale=0.4]{2-prop-logic/figs/road-map}
+	
+	等价变形关注的是一个公式内部简化与变形, 推理关注的是公式与公式之间的关系. 
+\end{idea}
 
 \subsection{命题, 真值表和指派}
 
@@ -495,9 +505,13 @@ The order of operations is a rule that tells the correct sequence of steps for e
 		\item Knight: 这类人永远说真话
 		\item Knave: 这类人永远说假话
 	\end{itemize}
-	在岛上埃贝尔遇到一行三人，且称他们为 A, B, C。埃贝尔问A: “你是knight还是knave?” A回答了，但埃贝尔没听清；于是埃贝尔就问B: “他(A)说的是什么？” B告诉埃贝尔A说自己是knave。
-此时，C插话说：“别相信他(B)，他说谎！”
-我们的问题是：C是 knight 还是 knave?
+	在岛上埃贝尔遇到一行三人，且称他们为 A, B, C。
+埃贝尔问A: “你是knight还是knave?” A回答了，但埃贝尔没听清；
+于是埃贝尔就问B: “他(A)说的是什么？” B告诉埃贝尔A说自己是knave。
+
+此时，C插话说：“别相信他(B)，他说谎！”
+
+我们的问题是：C是 knight 还是 knave?
 \end{prob}
 
 事实上, 我们在小学很可能通过列举的方法完成求解. 但是现在我们可以用真值表列举. 甚至可以把公式写出来进行推演! 
@@ -549,6 +563,12 @@ The order of operations is a rule that tells the correct sequence of steps for e
      \begin{theorem}
      	$G\Leftrightarrow H$的充分必要条件是$G\leftrightarrow H$. 
      \end{theorem}
+     
+     \begin{bonus}
+     	永真式和等价有什么区别和联系? 
+     	
+     	A proposition that is always True is called a tautology. Two propositions $p$ and $q$ are logically equivalent if their truth tables are the same. Namely, $p$ and $q$ are logically equivalent if $p \leftrightarrow q$ is a tautology. If $p$ and $q$ are logically equivalent, we write $p \Leftrightarrow q$.
+     \end{bonus}
       
 \subsection{命题逻辑的化简}
 
@@ -556,7 +576,7 @@ The order of operations is a rule that tells the correct sequence of steps for e
 
 经过我们的探讨, 我们就希望把一些最基本的规律写出来: 
 
-\begin{proposition}(逻辑的运算律(1))
+\begin{proposition}(一些永真的公式)
 如果$A,B,C$是命题, 那么以下的内容是永真式: 
         \begin{itemize}
             
@@ -608,6 +628,44 @@ The order of operations is a rule that tells the correct sequence of steps for e
         
       \end{proposition}
 
+利用这些内容我们可以构造一些等价的命题: 
+
+\begin{proposition}[基本等价定律]
+	(1) 幂等律: $E_1:G\land G\Leftrightarrow G; E_2:G\lor G\Leftrightarrow G;$
+	
+	(2) 交换律: $E_3: G\an H \eqw H \an G; E_4: G\oi H \eqv H \oi G;$
+	
+	(3) 结合律: $E_5: G\an(H\an S)\eqw (G\an H)\an S; E_6: G\oi(H\oi S)\eqw (G\oi H)\oi S$
+	
+	(4) 分配律: $E_7: G\oi(H\an S) \eqw (G\oi H)\an (G\oi S); E_8: G\an (H\oi S)\eqw (G\an H)\oi (G\oi S)$
+	
+	(5) 吸收律: $E_9: G\oi (G\an H)\eqw G; E_{10}: G\an (G\oi H)\eqw G$
+	
+	(6) 同一律: $E_{11}: G\oi \texttt{False}\eqw G; E_{12}: G\an \texttt{true}\eqw G$
+	
+	(7) 零律: $E_{13}: G\oi \texttt{True}\eqw \texttt{True}; E_{14}: G\an \texttt{False}=\texttt{False}$
+	
+	(8) 双重否定律: $E_{15}: \no (\no G)\eqw G$
+	
+	(9) De Morgan律: $E_{16}: \no (G\oi H)\eqw \no G \an \no H; E_{17}: \no (G\an H)=\no G\oi \no H$
+	
+	(10) 矛盾律: $E_{18}:G\an \no G\eqw \texttt{False}$
+	
+	(11) 排中律: $E_{19}:G\oi \no G\eqw 1$
+	
+	(12) 等价式: $E_{20}:G\leftrightarrow \eqw (G\to H)\an (H\to G)$
+	
+	(13) 蕴含式: $E_{21}: G\to H\eqw \no G\oi H$
+	
+	(14) 假言易位: $E_{22}: G\to H \eqw \no H\to \no G$
+	
+	(15) 等价否定形式: $E_{23}: G\lrarr H \eqw \no G\lrarr \no H$
+	
+	(16) 归谬论: $E_{24}: (G\to H)\an (G\to \no H) \eqw \no G$
+	
+	% TODO: On Sun Feb 26, wrote here
+\end{proposition}
+
 这些为什么有用呢? 考虑有一天你在求解一个数学问题, 其中你想把一个命题否定掉, 比如
 
 \begin{prob}
@@ -620,7 +678,9 @@ The order of operations is a rule that tells the correct sequence of steps for e
 \begin{prob}
 	我们已经知道 Bill, Jim和Sam分别来自Boston, Chicago和 Detroit. 以下每句话半句对，半句错：
 	\begin{itemize}
-		\item Bill来自Boston($p_1$), Jim来自Chicago($p_2$).		\item Sam来自Boston($p_3$), Bill来自Chicago($p_4$).		\item Jim来自Boston($p_5$), Bill来自Detroit($p_6$).
+		\item Bill来自Boston($p_1$), Jim来自Chicago($p_2$).
+		\item Sam来自Boston($p_3$), Bill来自Chicago($p_4$).
+		\item Jim来自Boston($p_5$), Bill来自Detroit($p_6$).
 	\end{itemize}
 	能确定每个人究竟谁来自何处吗？
 \end{prob}
@@ -702,6 +762,16 @@ $$
 	每一个命题都有等价的合取范式和析取范式的形式. (Given any proposition, there exists a proposition in disjunctive normal form which is equivalent to that proposition.)
 \end{theorem}
 
+\begin{dialogue}
+A: 你真的想要看证明吗?
+
+B: 嗯... 有点好奇. 
+
+A: 好, 给你看看. 不过有一些集合论的内容, 我们会在后面会讲解. 
+
+\end{dialogue}
+
+
 \begin{proof}
 	(Copied from \url{https://planetmath.org/everypropositionisequivalenttoapropositionindnf} ) Any two propositions are equivalent if and only if they determine the same truth function. Therefore, if one can exhibit a mapping which assigns to a given truth function 
  a proposition in disjunctive normal form such that the truth function $f$ of this proposition is $f$, the theorem follows immediately.
@@ -741,6 +811,18 @@ In either case,$L_i(X)(Y)=F$, Since a conjunction equals $F$ if and only if ther
  if and only if each term of the conjunction equals $F$, it follows that the right hand side equals equals $F$when the left-hand side equals $F$.
 
 \end{proof}
+
+\begin{dialogue}
+
+B: 看不懂的证明还有意义吗?
+
+A: 这是一个很好的问题. 看似看不懂, 但是你在阅读的过程中会无意间记住一些话语, 那么将来你碰见相似的东西的时候, 就会感到快乐, 大多数情况下就更容易理解了. 
+
+B: 感觉我没办法一步到位诶...
+
+A: 是的, 我们认识世界也是这样的, 一步一步的向前推进. 我们可以先有一个直观的印象, 慢慢做更加详细的探讨. 		
+\end{dialogue}
+
 
 上面的只是给了我们一个正确性证明, 但是并没有告诉我们如何把一个式子化为合取范式或者析取范式. 一般的, 我们有如下的方法: 
 
@@ -976,7 +1058,7 @@ $$
 	
 	(3) 李四也是一个法外狂徒;
 	
-	(4) 王五站在张三与李四中间; (害怕极了)
+	(4) 王五站在张三与李四中间;\footnote{王五害怕极了...} 
 	
 	(5) 王五长得比张三与李四都高;
 	
@@ -1118,7 +1200,7 @@ $$
 \end{definition}
 
 \begin{dialogue}
-	A: 这就像C里面判断一个变量是不是被定义过了一样! 如果被定义过了, 自然不能乱搞, 如果没有定义过, 改个和定义过的名字不一样的, 应该也是等价的. 
+	A: 这就像C语言里面判断一个变量是不是被定义过了一样! 如果被定义过了, 自然不能乱搞, 如果没有定义过, 改个和定义过的名字不一样的, 应该也是等价的. 
 	
 	B: 对, 名字是次要的, 真正的表达的东西才是核心啊! 
 \end{dialogue}
@@ -1150,7 +1232,7 @@ $$
 在命题逻辑中, 我们运用了真值指派的方式来了解了这个命题的真值情况, 那么这里, 我们能不能也用类似的方法``解释''一个命题逻辑的含义呢? 
 
 \section{尝试解释谓词公式}
-
+\subsection{谓词公式, 解释, 等价表示}
 谓词公式的解释远远没有我们想象的那么简单! 在不同的数学结构中, 同一个谓词公式很可能有不同的结果! 
 
 \begin{example}
@@ -1216,9 +1298,41 @@ $$
 
 当然, 我们当然希望为公式能够在等价的意义下能够完成推理. 所以我们需要首先研究什么样的公式在怎样的情形下是等价的.
 
-\begin{definition}[谓词公式等价的定律]
-	% TODO: Feb 26 write here page P77
-\end{definition}
+\begin{theorem}[谓词公式等价的定律]
+	(1)改名规则: \begin{align*}E_{25}:\forall x. G(x)\eqw \forall y.G(y)\\ E_{26}:\forall x. G(x)\eqw \forall y.G(y)\end{align*}
+	
+	(2) 量词转换率/量词否定等值式: \begin{align*}E_{27}:\no \exists. G(x)\eqw \forall x. \no G(x)\\ E_{28}:\no \forall. G(x)\eqw \exists x. \no G(x)\end{align*}
+	
+	(3) 量词作用域的扩展/收缩: 
+	\begin{align*}
+		E_{29}:\forall x.(G(x)\oi S)\eqw \forall x. G(x) \oi S;\\
+		E_{30}:\forall x.(G(x)\an S)\eqw \forall x. G(x) \an S; \\
+		E_{31}:\exists x.(G(x)\oi S)\eqw \exists x. G(x) \oi S;\\
+		E_{32}:\exists x.(G(x)\an S)\eqw \exists x. G(x) \an S; 
+	\end{align*}
+	
+	(4) 量词的换序: 
+	\begin{align*}
+		E_{33}:\forall x.G(x)\oi \forall x. H(x) \eqw \forall x \forall y. (G(x)\lor H(y))\\
+		E_{34}:\exists x.G(x)\an \exists x. H(x) \eqw \exists x \exists y. (G(x)\an H(y))
+	\end{align*}
+	
+	(5) 量词分配率: 
+	\begin{align*}
+		E_{35}:\forall x.(G(x)\oi H(x))\eqw \forall x.G(x)\oi \forall x.H(x)\\
+		E_{36}:\exists x.(G(x)\an H(x))\eqw \exists x.G(x)\an \forall x.H(x)
+	\end{align*}
+	
+	(6) 对于多个量词的命题公式, 若$G(x,y)$是含有自由变量$y$的谓词公式, 那么有
+	\begin{align*}
+		E_{37}:\forall x\forall y. G(x,y)\eqw \forall y\forall x. G(x,y)\\
+		E_{38}:\exists x\exists y. G(x,y)\eqw \exists y\exists x. G(x,y)
+	\end{align*}
+\end{theorem}
+
+\section{谓词公式的标准形}
+
+仿照命题公式, 我们也想看一看, 谓词公式最后有没有一个统一的形式, 使得我们的表达和交流更加的方便. 
 
 
 \section{常见的证明方法}
@@ -1506,7 +1620,8 @@ Hardy说证明$\sqrt 2$是无理数是最漂亮的证明之一. 其中用了反�
 从一个很常见的问题开始: 冒泡排序. 
 
 \begin{prob}
-	用上面的语句(可以画流程图)及其列举与嵌套, 完成排序问题: 	
+	用上面的语句(可以画流程图)及其列举与嵌套, 完成排序问题: 
+	
 	(1)输入:长度为$n$的自然数序列$S$(假设其中没有重复元素). 
 
 	(2)输出: 序列$S’$, 其元素与$S$完全一样, 但已从小到大排好序.
@@ -1529,7 +1644,9 @@ Hardy说证明$\sqrt 2$是无理数是最漂亮的证明之一. 其中用了反�
 下面按照如下的三个方法归纳: 
 
 \begin{itemize}
-	\item 当$i=0$, 显然；	\item 如果当 $i=k>0$ 时上述命题成立, 即 $k$ 循环开始前,  $S$ 中最大的 $k$ 个元素已被置换到 $S[n-k]$ 到 $S[n-1]$ ; 在 $k$ 循环中，指针 $j$ 从位置$0$扫描到位置$n-k-1$, 并将此范围内最大元素置换到$S[n-k-1]$. 则当$i=k+1$时, $S$ 中最大的 $k+1$个元素被排好序, 放置在 $S[n-(k+1)]$ 到 $S[n-1]$;	\item 当 $i=n$, 算法终止, 即$n$循环(未执行)前，$n$ 个 $S$ 中的元素排好序, 并放置在 $S[0]$ 到 $S[n-1]$ 的位置上. 
+	\item 当$i=0$, 显然；
+	\item 如果当 $i=k>0$ 时上述命题成立, 即 $k$ 循环开始前,  $S$ 中最大的 $k$ 个元素已被置换到 $S[n-k]$ 到 $S[n-1]$ ; 在 $k$ 循环中，指针 $j$ 从位置$0$扫描到位置$n-k-1$, 并将此范围内最大元素置换到$S[n-k-1]$. 则当$i=k+1$时, $S$ 中最大的 $k+1$个元素被排好序, 放置在 $S[n-(k+1)]$ 到 $S[n-1]$;
+	\item 当 $i=n$, 算法终止, 即$n$循环(未执行)前，$n$ 个 $S$ 中的元素排好序, 并放置在 $S[0]$ 到 $S[n-1]$ 的位置上. 
  
 
 \end{itemize}
@@ -1563,7 +1680,8 @@ In [2] Guiseppe Jacopini seems to have proved the (logical) superfluousness of t
 
 	
 \end{pas}
- \section{继续理解子过程和递归}
+ 
+\section{继续理解子过程和递归}
 
 \subsection*{子过程}
 

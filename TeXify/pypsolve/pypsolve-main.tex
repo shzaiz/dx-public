@@ -38,12 +38,37 @@
 \usepackage{glossaries}
 \lstset{style=mystyle}
 
+% The equivlance between logics
+\newcommand\eqv{\Leftrightarrow}
+\newcommand\eqw{\Leftrightarrow}
+\newcommand\larr{\leftarrow}
+\newcommand\rarr{\rightarrow}
+\newcommand\lrarr{\leftrightarrow}
+\newcommand\an{\land}
+\newcommand\no{\lnot}
+\newcommand\oi{\lor}
 
 \begin{document}
-\title{问题求解课讲义}
+\title{问题求解课程讲义}
 \author{AUGPath}
 \maketitle
-\newpage
+\begin{center}
+{\bf \large 注意}
+\end{center}
+这份笔记还处于实验和编写阶段. 可能很多内容会大改, 并且正确性不能够保证, 仅做预览使用. 
+
+
+\begin{center}
+{\bf \large 来源}
+\end{center}
+
+这份讲义大部分照抄了南京大学魏恒峰老师的离散数学课件和NJU问题求解课程编写组提供的课件和补充资料. 在这里为他们辛苦的准备讲稿以及无私地开源供外校学生学习表达感谢以及敬佩!
+
+\begin{center}
+{\bf \large 查看最新版本}
+\end{center}  
+
+请参看Github的源代码仓库\url{https://github.com/shzaiz/dx-public/blob/main/TeXify/pypsolve/pypsolve-main.pdf}. 
 \tableofcontents
 \chapter{程序设计语言基础回顾}
 \input{1-python-plim/main.tex}
