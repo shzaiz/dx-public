@@ -707,5 +707,1067 @@ P_{n} & =\left(\sum_{k=1}^{i_{1}}a_{k}\right)+\left(\sum_{k=i_{1}+1}^{i_{2}}a_{k
 正项级数
 \end_layout
 
+\begin_layout Standard
+正项级数是每一项都大于0的级数, 即
+\begin_inset Formula $\sumi{i=1}a_{i}(a_{i}\geq0)$
+\end_inset
+
+, 容易知道它的部分和单增.
+ 
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+有界性准则
+\end_layout
+
+\end_inset
+
+ 正项级数
+\begin_inset Formula $\sumi{n=1}a_{n}$
+\end_inset
+
+发散的充要条件是它的部分和数列
+\begin_inset Formula $\{S_{n}\}$
+\end_inset
+
+有界.
+ 
+\end_layout
+
+\begin_layout Example
+证明级数
+\begin_inset Formula $\sumi{n=1}\frac{1}{n^{2}+n+1}$
+\end_inset
+
+收敛.
+ 
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+比较判别法
+\end_layout
+
+\end_inset
+
+设
+\begin_inset Formula $\sumi{n=1}a_{n}$
+\end_inset
+
+与
+\begin_inset Formula $\sumi{n=1}b_{n}$
+\end_inset
+
+是两个正项级数, 且
+\begin_inset Formula $a_{n}\leq b_{n}(n=1,2,\cdots)$
+\end_inset
+
+那么:
+\end_layout
+
+\begin_layout Theorem
+(1) 当级数
+\begin_inset Formula $\sumi{n=1}b_{n}$
+\end_inset
+
+收敛时, 级数
+\begin_inset Formula $\sumi{n=1}a_{n}$
+\end_inset
+
+也收敛.
+ 
+\end_layout
+
+\begin_layout Theorem
+(2)当级数
+\begin_inset Formula $\sumi{n=1}a_{n}$
+\end_inset
+
+发散时, 级数
+\begin_inset Formula $\sumi{n=1}b_{n}$
+\end_inset
+
+也发散.
+ 
+\end_layout
+
+\begin_layout Example
+判定级数
+\begin_inset Formula 
+\[
+\sui{n=1}\frac{3+\sin^{3}(n+1)}{2^{n}+n}
+\]
+
+\end_inset
+
+以及
+\begin_inset Formula 
+\[
+\sui{n=1}\frac{1}{\sqrt{n(n+1)}}
+\]
+
+\end_inset
+
+的收敛性.
+ 
+\end_layout
+
+\begin_layout Standard
+经过分析, 可以把第一个放大, 得到的仍然收敛; 第二个缩小, 得到的仍然发散.
+ 
+\end_layout
+
+\begin_layout Standard
+上面的案例描述了级数与已知的级数作比较.
+ 我们可以仿照等价无穷小的时候, 为之树立一个标准.
+ 用一般的几何级数
+\begin_inset Formula $\sumi{n=1}aq^{n-1}$
+\end_inset
+
+以及
+\begin_inset Formula $p-\text{级数}$
+\end_inset
+
+
+\begin_inset Formula $\sumi{n=1}\frac{1}{n^{p}}$
+\end_inset
+
+为标准级数比较.
+ 可以导出一系列很方便的判别法.
+ 
+\end_layout
+
+\begin_layout Standard
+下面来探讨
+\begin_inset Formula $p-\text{级数}$
+\end_inset
+
+的敛散性.
+ 
+\end_layout
+
+\begin_layout Theorem
+设
+\begin_inset Formula $p>0$
+\end_inset
+
+为常数, 那么
+\begin_inset Formula $p-\text{级数}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\sumi{n=1}\frac{1}{n^{p}}=1+\frac{1}{2^{p}}+\frac{1}{3^{p}}+\cdots+\frac{1}{n^{p}}+\cdots
+\]
+
+\end_inset
+
+当
+\begin_inset Formula $p\leq1$
+\end_inset
+
+的时候发散, 当
+\begin_inset Formula $p>1$
+\end_inset
+
+时收敛.
+ 
+\end_layout
+
+\begin_layout Proof
+当
+\begin_inset Formula $p\leq1$
+\end_inset
+
+的时候, 有
+\begin_inset Formula $\frac{1}{p}\geq\frac{1}{n}$
+\end_inset
+
+, 由比较判别法值, 此时级数发散.
+ 
+\end_layout
+
+\begin_layout Proof
+当
+\begin_inset Formula $p>1$
+\end_inset
+
+的时候, 因为当
+\begin_inset Formula $n-1\leq x\leq n$
+\end_inset
+
+的时候, 有
+\begin_inset Formula $\frac{1}{n^{p}}\leq\frac{1}{x^{p}}$
+\end_inset
+
+, 所以有
+\begin_inset Formula 
+\begin{align*}
+\frac{1}{n^{p}} & =\int_{n-1}^{n}\frac{1}{n^{p}}\leq\int_{n-1}^{n}\frac{1}{x^{p}}\\
+ & =\frac{1}{p-1}\left(\frac{1}{(n-1)^{p-1}}-\frac{1}{n^{p-1}}\right)(n=2,3,\cdots)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+考虑级数
+\begin_inset Formula $\frac{1}{p-1}\left(\frac{1}{(n-1)^{p-1}}-\frac{1}{n^{p-1}}\right)$
+\end_inset
+
+的部分和
+\begin_inset Formula $S_{n}=1-\frac{1}{(n+1)^{p+1}}$
+\end_inset
+
+.
+ 由于
+\begin_inset Formula $\lii nS_{n}=1$
+\end_inset
+
+, 根据比较判别法, 级数收敛.
+ 
+\end_layout
+
+\begin_layout Standard
+为了使用的方便, 可以给出比较判别法的极限形式.
+ 
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+比较判别法的极限形式
+\end_layout
+
+\end_inset
+
+ 设
+\begin_inset Formula $\sumi{n=1}a_{n}$
+\end_inset
+
+和
+\begin_inset Formula $\sumi{n=1}b_{n}$
+\end_inset
+
+都是正项级数, 满足
+\begin_inset Formula $\lii n\frac{a_{n}}{b_{n}}=l,b_{n}>0,$
+\end_inset
+
+那么:
+\end_layout
+
+\begin_layout Theorem
+(1)当
+\begin_inset Formula $0<l<+\infty$
+\end_inset
+
+的时候, 两个级数同时发散或收敛.
+ 
+\end_layout
+
+\begin_layout Theorem
+(2) 当
+\begin_inset Formula $l=0$
+\end_inset
+
+的时候, 若级数
+\begin_inset Formula $\sumi{n=1}b_{n}$
+\end_inset
+
+收敛, 那么级数
+\begin_inset Formula $\sumi{n=1}a_{n}$
+\end_inset
+
+收敛.
+ 
+\end_layout
+
+\begin_layout Theorem
+(3) 当
+\begin_inset Formula $l=+\infty$
+\end_inset
+
+的时候, 若级数
+\begin_inset Formula $\sumi{n=1}b_{n}$
+\end_inset
+
+发散, 那么级数
+\begin_inset Formula $\sumi{n=1}a_{n}$
+\end_inset
+
+发散.
+ 
+\end_layout
+
+\begin_layout Proof
+(1) 设
+\begin_inset Formula $0<l<+\infty$
+\end_inset
+
+的时候, 由极限的定义可以知道, 对于
+\begin_inset Formula $\eqs=\frac{l}{2}>0,$
+\end_inset
+
+存在自然数
+\begin_inset Formula $N$
+\end_inset
+
+, 当
+\begin_inset Formula $n>N$
+\end_inset
+
+的时候, 有
+\begin_inset Formula $l-\frac{l}{2}\leq\frac{a_{n}}{b_{n}}\leq l+l_{2},$
+\end_inset
+
+也就是
+\begin_inset Formula $\frac{l}{2}\leq\frac{a_{n}}{b_{n}}\leq\frac{3l}{2}$
+\end_inset
+
+, 也就是
+\begin_inset Formula $\frac{l}{2}b_{n}<a_{n}<\frac{3l}{2}b_{n}$
+\end_inset
+
+.
+ 根据比较判别法知, 两个级数同时发散或者同时收敛.
+ 
+\end_layout
+
+\begin_layout Proof
+(2)设
+\begin_inset Formula $l=0$
+\end_inset
+
+, 存在自然数
+\begin_inset Formula $N,$
+\end_inset
+
+当
+\begin_inset Formula $n>N$
+\end_inset
+
+的时候, 有
+\begin_inset Formula $\frac{a_{n}}{b_{n}}<1,a_{n}<b_{n}$
+\end_inset
+
+.
+ 利用比较判别法知道, 如果级数
+\begin_inset Formula $\sumi{n=1}b_{n}$
+\end_inset
+
+收敛, 那么
+\begin_inset Formula $\sumi{n=1}a_{n}$
+\end_inset
+
+收敛.
+ 
+\end_layout
+
+\begin_layout Proof
+(3)设
+\begin_inset Formula $l=+\infty$
+\end_inset
+
+, 存在自然数
+\begin_inset Formula $N,$
+\end_inset
+
+当
+\begin_inset Formula $n>N$
+\end_inset
+
+时, 有
+\begin_inset Formula $\frac{a_{n}}{b_{n}}>1,$
+\end_inset
+
+即
+\begin_inset Formula $a_{n}>b_{n}$
+\end_inset
+
+, 利用比较判别法知道, 如果级数
+\begin_inset Formula $\sumi{n=1}b_{n}$
+\end_inset
+
+发散, 那么
+\begin_inset Formula $\sumi{n=1}a_{n}$
+\end_inset
+
+发散.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+D'Alenbert比值判别法
+\end_layout
+
+\end_inset
+
+ 设
+\begin_inset Formula $\sumi{n=1}a_{n}$
+\end_inset
+
+是正项级数, 且
+\begin_inset Formula $\forall n,a_{n}>0,$
+\end_inset
+
+又
+\begin_inset Formula 
+\[
+\lii n\frac{a_{n+1}}{a_{n}}=r(0\leq r\leq+\infty).
+\]
+
+\end_inset
+
+当
+\begin_inset Formula $r<1$
+\end_inset
+
+时, 级数
+\begin_inset Formula $\sumi{n=1}a_{n}$
+\end_inset
+
+收敛, 当
+\begin_inset Formula $r>1$
+\end_inset
+
+时, 
+\begin_inset Formula $\sumi{n=1}a_{n}$
+\end_inset
+
+发散.
+ 
+\end_layout
+
+\begin_layout Proof
+首先设
+\begin_inset Formula $r<1.$
+\end_inset
+
+任意取一个数
+\begin_inset Formula $q$
+\end_inset
+
+, 使得
+\begin_inset Formula $r<q<1,$
+\end_inset
+
+由于
+\begin_inset Formula $\lii n\frac{a_{n+1}}{a_{n}}=r<q,$
+\end_inset
+
+故由极限的性质知, 存在正整数
+\begin_inset Formula $N,$
+\end_inset
+
+当
+\begin_inset Formula $n\geq N$
+\end_inset
+
+的时候有不等式
+\begin_inset Formula 
+\[
+\frac{a_{n+1}}{a_{n}}<q.
+\]
+
+\end_inset
+
+因此
+\begin_inset Formula $a_{N+1}<a_{N}q,a_{N+2}<a_{N+1}q,\cdots.$
+\end_inset
+
+ 由于公比小于1的等比数列, 
+\begin_inset Formula $a_{N}q+a_{N}q^{2}+\cdots$
+\end_inset
+
+是收敛的.
+ 因此原式子收敛, 从而
+\begin_inset Formula $\sumi{n=1}a_{n}$
+\end_inset
+
+收敛.
+ 
+\end_layout
+
+\begin_layout Proof
+其次设
+\begin_inset Formula $r>1$
+\end_inset
+
+或
+\begin_inset Formula $r=+\infty$
+\end_inset
+
+, 那么只要
+\begin_inset Formula $n$
+\end_inset
+
+足够大, 如
+\begin_inset Formula $n=N$
+\end_inset
+
+的时候
+\begin_inset Formula $\frac{a_{n+1}}{a_{n}}$
+\end_inset
+
+就大于1.
+ 用类似的方法就可以得到
+\begin_inset Formula 
+\[
+\frac{a_{n+1}}{a_{n}}>1(n>N),
+\]
+
+\end_inset
+
+从而有
+\begin_inset Formula $a_{n}>a_{N}>0(n>N).$
+\end_inset
+
+这里
+\begin_inset Formula $a_{N}$
+\end_inset
+
+是一个定的正数, 因此
+\begin_inset Formula $a_{n}$
+\end_inset
+
+不可能趋近于0, 所以发散.
+ 
+\end_layout
+
+\begin_layout Standard
+注意: 当
+\begin_inset Formula $p=1$
+\end_inset
+
+的时候, 这个级数有可能收敛, 也有可能发散, 例如著名的
+\begin_inset Formula $p-\text{级数}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Example
+判断级数
+\begin_inset Formula $\sumi{n=1}na^{n}$
+\end_inset
+
+的敛散性.
+ 
+\end_layout
+
+\begin_layout Solution*
+略.
+ 注意分类讨论.
+ 
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Cauchy根值判别法
+\end_layout
+
+\end_inset
+
+ 设
+\begin_inset Formula $\sumi{n=1}a_{n}$
+\end_inset
+
+是正项级数, 并且
+\begin_inset Formula $\lii n^{n}\sqrt{a_{n}}=r(0\leq r\leq+\infty),$
+\end_inset
+
+则当
+\begin_inset Formula $r<1$
+\end_inset
+
+的时候, 级数收敛; 
+\begin_inset Formula $r>1$
+\end_inset
+
+的时候, 级数发散.
+ 
+\end_layout
+
+\begin_layout Proof
+首先设
+\begin_inset Formula $r<1$
+\end_inset
+
+.
+ 任取一个数
+\begin_inset Formula $q$
+\end_inset
+
+使得
+\begin_inset Formula $r<q<1.$
+\end_inset
+
+由
+\begin_inset Formula $\lii n^{n}\sqrt{a_{n}}=r$
+\end_inset
+
+知道, 存在正整数
+\begin_inset Formula $N,$
+\end_inset
+
+当
+\begin_inset Formula $n>N$
+\end_inset
+
+的时候有
+\begin_inset Formula $^{n}\sqrt{a_{n}}<q,$
+\end_inset
+
+也就是
+\begin_inset Formula $a_{n}<q^{n}(n>N).$
+\end_inset
+
+对于等比数列
+\begin_inset Formula $\sumi{n=1}q^{n}(0<q<1)$
+\end_inset
+
+是收敛的, 由判别法知道在限制条件下级数为收敛的.
+ 
+\end_layout
+
+\begin_layout Proof
+其次设
+\begin_inset Formula $r>1,$
+\end_inset
+
+此时存在正整数
+\begin_inset Formula $N,$
+\end_inset
+
+当
+\begin_inset Formula $n>N$
+\end_inset
+
+的时候, 有
+\begin_inset Formula $^{n}\sqrt{a_{n}}>1,$
+\end_inset
+
+所以
+\begin_inset Formula $a_{n}$
+\end_inset
+
+不可能趋近于0, 不满足.
+ 
+\end_layout
+
+\begin_layout Standard
+和比值判别法一样, 当
+\begin_inset Formula $r=1$
+\end_inset
+
+的时候一样会失效.
+ 
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+积分判别法
+\end_layout
+
+\end_inset
+
+ 设函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+在
+\begin_inset Formula $[N,+\infty)$
+\end_inset
+
+上非负并且单调减少, 其中
+\begin_inset Formula $N$
+\end_inset
+
+是某个自然数, 令
+\begin_inset Formula $a_{n}=f(n)$
+\end_inset
+
+, 则级数
+\begin_inset Formula $\sui{n=1}a_{n}$
+\end_inset
+
+与反常积分
+\begin_inset Formula $\int_{N}^{+\infty}f(x)\dd x$
+\end_inset
+
+同敛散.
+ 
+\end_layout
+
+\begin_layout Proof
+因为
+\begin_inset Formula $f(x)$
+\end_inset
+
+在
+\begin_inset Formula $[N,+\infty)$
+\end_inset
+
+上单调减少, 故有
+\begin_inset Formula 
+\[
+\int_{k}^{k+1}f(x)\dd x\leq a_{k}\leq\int_{k-1}^{k}f(x)\dd x(k\geq N+1),
+\]
+
+\end_inset
+
+在上述式子里面依次取
+\begin_inset Formula $k=N+1,N+2,\cdots,n$
+\end_inset
+
+之后相加就可以得到: 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\int_{N+1}^{n+1}f(x)\dd x\leq\sum_{k=N+1}^{n}a_{k}\leq\int_{N}^{n}f(x)\dd x,
+\]
+
+\end_inset
+
+因为
+\begin_inset Formula $a_{i}\geq0,f(x)\geq0,$
+\end_inset
+
+因此级数
+\begin_inset Formula $\sumi{k=1}a_{k}$
+\end_inset
+
+与积分
+\begin_inset Formula $\int_{N}^{+\infty}f(x)\dd x$
+\end_inset
+
+要么收敛要么同时取得
+\begin_inset Formula $+\infty$
+\end_inset
+
+.
+ 令
+\begin_inset Formula $n\to+\infty$
+\end_inset
+
+, 上面的式子变为
+\begin_inset Formula 
+\[
+\int_{N+1}^{+\infty}f(x)\dd x\leq\sum_{k=N+1}^{+\infty}a_{k}\leq\int_{N}^{\infty}f(x)\dd x.
+\]
+
+\end_inset
+
+所以他们同敛散.
+\end_layout
+
+\begin_layout Section
+一般的级数
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+交错级数
+\end_layout
+
+\end_inset
+
+ 若级数正负号相间, 也就是
+\begin_inset Formula 
+\[
+a_{1}-a_{2}-a_{3}+\cdots+(-1)^{n+1}a_{n}+\cdots(a_{n}>0,n=1,2,3,\cdots).
+\]
+
+\end_inset
+
+这样的级数称为交错级数.
+ 
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Lebniz判别法
+\end_layout
+
+\end_inset
+
+ 设交错级数满足条件: 
+\end_layout
+
+\begin_layout Theorem
+(1) 
+\begin_inset Formula $a_{n}\geq a_{n+1},n=1,2,\cdots;$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+(2)
+\begin_inset Formula $\lii na_{n}=0.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+那么这个级数收敛, 且其和
+\begin_inset Formula $S\leq a_{1},$
+\end_inset
+
+其余项
+\begin_inset Formula $r_{n}$
+\end_inset
+
+的绝对值
+\begin_inset Formula 
+\[
+\left|r_{n}\right|=\left|\sumi{k=n+1}(-1)^{k+1}a_{k}\right|\leq a_{n+1}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+先证明前
+\begin_inset Formula $2n$
+\end_inset
+
+项的和
+\begin_inset Formula $S_{2n}$
+\end_inset
+
+的极限存在, 因此把
+\begin_inset Formula $S_{2n}$
+\end_inset
+
+写成两种形式: 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{align*}
+S_{2n} & =(a_{1}-a_{2})+(a_{3}-a_{4})+\cdots+(a_{2n-1}-a_{2n})\\
+S_{2n} & =a_{1}-(a_{2}-a_{3})-(a_{4}-a_{5})-\cdots-(a_{2n-2}-a_{2n-1})-a_{2n}
+\end{align*}
+
+\end_inset
+
+由于条件一可以知道, 所有括号中的差是非负的, 由第一种形式可见数列
+\begin_inset Formula $S_{2n}\leq a_{1},$
+\end_inset
+
+于是根据单调数列必有极限的准则知道, 当
+\begin_inset Formula $n$
+\end_inset
+
+无限增大的时候, 
+\begin_inset Formula $S_{2n}$
+\end_inset
+
+趋于一个极限
+\begin_inset Formula $S$
+\end_inset
+
+并且
+\begin_inset Formula $S$
+\end_inset
+
+不大于
+\begin_inset Formula $a_{1}$
+\end_inset
+
+, 也就是
+\begin_inset Formula $\lii nS_{2n}=S\leq a_{1}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+再证明前
+\begin_inset Formula $2n+1$
+\end_inset
+
+项的和
+\begin_inset Formula $S_{2n+1}$
+\end_inset
+
+的极限也是
+\begin_inset Formula $S$
+\end_inset
+
+.
+ 我们有
+\begin_inset Formula $S_{2n+1}=S_{2n}+a_{2n+1},$
+\end_inset
+
+由条件2知
+\begin_inset Formula $\lii nS_{2n+1}=\lii n(S_{2n}+a_{2n+1})=S.$
+\end_inset
+
+由于级数的前偶数项的和与前奇数项的和趋近于同一个极限
+\begin_inset Formula $S$
+\end_inset
+
+, 因此其级数的部分和当
+\begin_inset Formula $n\to\infty$
+\end_inset
+
+的时候就有极限
+\begin_inset Formula $S$
+\end_inset
+
+.
+ 这就证明了
+\begin_inset Formula $\sui{n=1}(-1)^{n-1}a_{n}$
+\end_inset
+
+收敛与和
+\begin_inset Formula $S,$
+\end_inset
+
+且
+\begin_inset Formula $S\leq a_{1},$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+最后看余项
+\begin_inset Formula $r_{n}=\pm(a_{n+1}-a_{n+2}+\cdots)$
+\end_inset
+
+, 其绝对值
+\begin_inset Formula $|r_{n}|=a_{n+1}-a_{n+2}+\cdots,$
+\end_inset
+
+上述右端也是一个交错级数, 他也满足收敛的两个条件, 所以其和小雨级数的第一项, 也就是说
+\begin_inset Formula $|r_{n}|\leq a_{n+1}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+绝对收敛
+\end_layout
+
+\end_inset
+
+假设有更加一般的级数
+\begin_inset Formula $a_{1}+a_{2}+\cdots+a_{n}+\cdots.$
+\end_inset
+
+它的各项为任意的实数, 如果
+\begin_inset Formula $\sui{n=1}a_{n}$
+\end_inset
+
+的各项的绝对值所构成的正项级数
+\begin_inset Formula $\sui{n=1}|a_{n}|$
+\end_inset
+
+收敛, 那么
+\begin_inset Formula $\sui{n=1}a_{n}$
+\end_inset
+
+绝对收敛.
+ 
+\end_layout
+
+\begin_layout Definition
+级数的收敛和绝对收敛有如下的重要的关系: 
+\end_layout
+
+\begin_layout Theorem
+如果级数
+\begin_inset Formula $\sui{n=1}|a_{n}|$
+\end_inset
+
+绝对收敛, 则级数
+\begin_inset Formula $\sui{n=1}a_{n}$
+\end_inset
+
+一定收敛.
+ 
+\end_layout
+
+\begin_layout Proof
+设
+\begin_inset Formula $|a_{n}|$
+\end_inset
+
+收敛, 根据Cauchy收敛准则, 
+\begin_inset Formula $\forall\eqs>0,\exists N,$
+\end_inset
+
+当
+\begin_inset Formula $m>n>N$
+\end_inset
+
+时, 有
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+|a_{n+1}|+|a_{n+2}|+\cdots+|a_{m}|<\eqs.
+\]
+
+\end_inset
+
+由此可得
+\begin_inset Formula $|a_{n+1}+a_{n+2}+\cdots+a_{m}\leq|a_{n+1}|+|a_{n+2}|+\cdots+|a_{m}|<\eqs.$
+\end_inset
+
+ 个根据Cauchy收敛准则, 可以知道
+\begin_inset Formula $\sui{n=1}a_{n}$
+\end_inset
+
+本身收敛.
+ 
+\end_layout
+
+\begin_layout Standard
+绝对收敛的数列有很好的性质: 
+\end_layout
+
 \end_body
 \end_document

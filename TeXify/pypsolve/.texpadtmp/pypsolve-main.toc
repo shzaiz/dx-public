@@ -12,17 +12,17 @@
 \contentsline {section}{\numberline {1.5}一些小例子}{15}{section.1.5}%
 \contentsline {chapter}{\numberline {第二章\hspace {.3em}}简单数理逻辑}{21}{chapter.2}%
 \contentsline {section}{\numberline {2.1}问题的提出: 为什么要研究简单的数理逻辑}{21}{section.2.1}%
-\contentsline {section}{\numberline {2.2}开始行动: 符号化逻辑}{26}{section.2.2}%
+\contentsline {section}{\numberline {2.2}开始行动: 符号化逻辑}{27}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}命题, 真值表和指派}{27}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}命题逻辑的化简}{33}{subsection.2.2.2}%
-\contentsline {paragraph}{解答:}{34}{paragraph*.16}%
+\contentsline {paragraph}{解答:}{35}{paragraph*.16}%
 \contentsline {subsection}{\numberline {2.2.3}化简的目标: 范式}{35}{subsection.2.2.3}%
 \contentsline {section}{\numberline {2.3}命题推演的真象: 命题的推演}{38}{section.2.3}%
 \contentsline {section}{\numberline {2.4}表达更丰富的内容: 谓词\nobreakspace {}部分与整体的关系}{41}{section.2.4}%
-\contentsline {section}{\numberline {2.5}尝试解释谓词公式}{44}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}谓词公式, 解释, 等价表示}{44}{subsection.2.5.1}%
-\contentsline {section}{\numberline {2.6}谓词公式的标准形}{46}{section.2.6}%
-\contentsline {section}{\numberline {2.7}常见的证明方法}{46}{section.2.7}%
-\contentsline {section}{\numberline {2.8}重新审视算法的正确性: 从基本结构开始}{50}{section.2.8}%
-\contentsline {section}{\numberline {2.9}继续理解子过程和递归}{54}{section.2.9}%
+\contentsline {section}{\numberline {2.5}尝试解释谓词公式}{45}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}谓词公式, 解释, 等价表示}{45}{subsection.2.5.1}%
+\contentsline {section}{\numberline {2.6}谓词公式的标准形}{47}{section.2.6}%
+\contentsline {section}{\numberline {2.7}常见的证明方法}{48}{section.2.7}%
+\contentsline {section}{\numberline {2.8}重新审视算法的正确性: 从基本结构开始}{52}{section.2.8}%
+\contentsline {section}{\numberline {2.9}继续理解子过程和递归}{56}{section.2.9}%
 \contentsfinish 

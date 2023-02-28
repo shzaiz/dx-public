@@ -582,7 +582,9 @@ def isprime(x):
 	素数(prime)有什么数学性质? 我们是用什么性质来判定性质的? 在我们下达的指令里面, 形式上和数学表达式相似吗? 
 \end{bonus}
 
-事实上, 数学上的定义是$\forall x, \not \exists p, s.t. p|x$. 我们的程序看上去并不是像数学那样简洁. 其实, 程序设计家族也有其他成员可以写起来比较优美. 
+事实上, 数学上的定义是$\forall x, \lnot \exists p, s.t. p|x$. 我们的程序看上去并不是像数学那样简洁. 其实, 程序设计家族也有其他成员可以写起来比较优美. 
+
+
 
 \begin{pas}
 	\begin{center}
@@ -590,7 +592,7 @@ def isprime(x):
 		
 	\end{center}
 	\begin{center}
-		南京大学~李樾等~~节选自《程序分析》教科书
+		南京大学~李樾(见图\ref{fig:ly})等~~节选自《程序分析》教科书
 	\end{center}
 	在IP中，指令一个一个给出，用条件、循环等来控制逻辑（指令执行的顺序），同时这些逻辑通过程序变量不断修改程序状态，最终计算出结果。我觉得，尽管IP现在都是高级语言了，但是本质上并没有脱离那种“类似汇编的，通过读取、写入等指令操作内存数据”的编程方式（我后面会提及，这是源于图灵机以及后续冯诺依曼体系结构一脉的历史选择）。国内高等教育中接触的绝大多数编程语言都是IP的，比如Java、C、C++等。
 	
@@ -715,6 +717,21 @@ fib(5)
 
 (3) \textbf{善于使用调试器.} 观察程序在哪一个地方与你预期的执行不相符. 这时候, 往往就意味着可以提问了. 
 
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.4]{1-python-plim/figs/yueli.png}
+	\caption{南京大学李樾老师设计的静态程序分析框架“太阿”}
+	\label{fig:ly}
+	
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.4]{1-python-plim/figs/zihaoyu}
+	\caption{余子豪的Github个人首页}
+	\label{fig:yzh}
+	
+\end{figure}
 \begin{pas}
 	\begin{center}
 		\large \textbf{与其说是学会提问, 倒不如说是学会不提问}
@@ -722,7 +739,7 @@ fib(5)
 	\end{center}
 	\begin{center}
 		南京大学~蒋炎岩\\
-		中国科学技术大学~余子豪\\
+		中国科学技术大学~余子豪(图\ref{fig:yzh})\\
 		节选自《PA实验手册》
 	\end{center}
 	
