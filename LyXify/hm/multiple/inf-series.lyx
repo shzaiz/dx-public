@@ -1804,6 +1804,138 @@ S=\sui{n=1}a_{n},S_{n}=\sum_{k=1}^{n}a_{k},
 \end_inset
 
 足够大, 使得
+\begin_inset Formula $a_{1}',a_{2}',\cdots,a_{n}'$
+\end_inset
+
+的各个项都出现在
+\begin_inset Formula $S_{m}=a_{1}+a_{2}+\cdots+a_{m}$
+\end_inset
+
+中, 于是有
+\begin_inset Formula $S_{n}'\leq S_{m}\leq S$
+\end_inset
+
+说明部分和数列
+\begin_inset Formula $S_{n}'$
+\end_inset
+
+有上界, 而
+\begin_inset Formula $\sumi{n=1}a_{n}$
+\end_inset
+
+是正项级数, 故
+\begin_inset Formula $\{S_{n}'\}$
+\end_inset
+
+是单调增加的.
+ 根据单调有界准则, 有
+\begin_inset Formula $\lii nS_{n}'=S'\leq S.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+下面来考虑和不变.
+ 如果把原来的级数
+\begin_inset Formula $\sui{n=1}a_{n}$
+\end_inset
+
+看做级数
+\begin_inset Formula $\sui{n=1}a_{n}'$
+\end_inset
+
+重排之后得到的级数, 那么有
+\begin_inset Formula $S_{n}\leq S$
+\end_inset
+
+, 因此
+\begin_inset Formula $S_{n}=S$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+然后我们考虑是
+\begin_inset Formula $a_{n}$
+\end_inset
+
+是一般的绝对收敛级数.
+ 令
+\begin_inset Formula $b_{n}=\frac{1}{2}(a_{n}+|a_{n}|)(n=1,2,\cdots)$
+\end_inset
+
+, 显然, 
+\begin_inset Formula $b_{i}\geq0$
+\end_inset
+
+并且
+\begin_inset Formula $b_{n}\leq|a_{n}|,$
+\end_inset
+
+而
+\begin_inset Formula $\sumi{n=1}|a_{n}|$
+\end_inset
+
+收敛, 由于正项级数的比较判别法可以知道, 级数
+\begin_inset Formula $\sui{n=1}b_{n}$
+\end_inset
+
+收敛.
+ 从而级数
+\begin_inset Formula $\sui{n=1}2b_{n}$
+\end_inset
+
+收敛.
+ 于是由于
+\begin_inset Formula $a_{n}=2b_{n}-|a_{n}|,$
+\end_inset
+
+有
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{align*}
+\sumi{n=1}a_{n} & =\sumi{n=1}(2b_{n}-|a_{n}|)\\
+ & =\sui{n=1}2b_{n}-\sui{n=1}|a_{n}|
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+若级数
+\begin_inset Formula $\sui{n=1}a_{n}$
+\end_inset
+
+重排位置后的级数为
+\begin_inset Formula $\sui{n=1}a_{n}'$
+\end_inset
+
+, 那么
+\begin_inset Formula $b_{n}$
+\end_inset
+
+进行相应的重排变成
+\begin_inset Formula $b_{n}'$
+\end_inset
+
+, 
+\begin_inset Formula $a_{n}$
+\end_inset
+
+重排变为
+\begin_inset Formula $a_{n}'$
+\end_inset
+
+.
+ y由于正项级数可以知道定理的成立.
+ 
 \end_layout
 
 \end_body

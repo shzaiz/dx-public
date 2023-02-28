@@ -1769,5 +1769,42 @@ status open
 绝对收敛的数列有很好的性质: 
 \end_layout
 
+\begin_layout Theorem
+绝对收敛的级数任意重排之后, 仍然绝对收敛并且和不变.
+ 
+\end_layout
+
+\begin_layout Proof
+首先考虑正项级数
+\begin_inset Formula $\sui{n=1}a_{n}$
+\end_inset
+
+的情形, 设
+\begin_inset Formula 
+\[
+S=\sui{n=1}a_{n},S_{n}=\sum_{k=1}^{n}a_{k},
+\]
+
+\end_inset
+
+设级数
+\begin_inset Formula $\sum_{n=1}^{\infty}a_{n}'$
+\end_inset
+
+是重排之后构成的级数, 其部分和为
+\begin_inset Formula $S_{n}'=\sum_{i=1}^{n}a_{k}'.$
+\end_inset
+
+任意固定
+\begin_inset Formula $n,$
+\end_inset
+
+取
+\begin_inset Formula $m$
+\end_inset
+
+足够大, 使得
+\end_layout
+
 \end_body
 \end_document

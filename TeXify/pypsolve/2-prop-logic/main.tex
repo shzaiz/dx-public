@@ -116,7 +116,7 @@ B: 来看一看朱富海老师的文章就知道了.
 
 \end{dialogue}
 
-	\begin{figure}
+	\begin{figure}[!htbp]
 		\centering
 		\includegraphics[scale=0.2]{2-prop-logic/figs/fhzhu}
 		\caption{南京大学朱富海老师在讲《有限群表示论》}
@@ -283,7 +283,7 @@ B: 来看一看朱富海老师的文章就知道了.
 \begin{example}
 	\begin{itemize}
 		\item (高等代数) $V$可分解为$A$的特征子空间的直和, 当且仅当$A$可以对角化. 
-		\item (高等数学) 如果一个数列的极限是 $A$ , 那么就是说$\forall n>N, \exists |\epsilon|\geq 0, \text{s.t.} |a_n-A|<\epsilon$.
+		\item (数学分析) 如果一个数列的极限是 $A$ , 那么就是说$\forall n>N, \exists |\epsilon|\geq 0, \text{s.t.} |a_n-A|<\epsilon$.
 		\item (解析几何) 两直线的方向向量$s_{1}=(l_{1},m_{1},n_{1}),s_{2}=(l_{2},m_{2},n_{2})$垂直的充要条件是$l_{1}l_{2}+m_{1}m_{2}+n_{1}n_{2}=0$;
 平行的充要条件是$\frac{l_{1}}{l_{2}}=\frac{m_{1}}{m_{2}}=\frac{n_{1}}{n_{2}}.$
 	\end{itemize}
@@ -366,7 +366,7 @@ The order of operations is a rule that tells the correct sequence of steps for e
 	
 \end{example}
 
-\begin{figure}
+\begin{figure}[!htbp]
 		\begin{center}
 			\includegraphics[scale=0.5]{2-prop-logic/figs/hfwei.png}
 		\end{center}
@@ -1102,7 +1102,7 @@ $$
 
 很多时候, 我们会泛指一些很笼统的概念, 比如``人''. 也有时候我们会举一些明确的个体, 比如``蒋炎岩老师(图\ref{fig:jyy})''. 这时候我们就需要区分``个体变量''(通常是泛指)和``个体常量''(通常是特指).
 
-\begin{figure}
+\begin{figure}[!htbp]
 		\begin{center}
 			\includegraphics[scale=0.2]{2-prop-logic/figs/jyy.jpeg}
 		\end{center}
@@ -1416,13 +1416,42 @@ $$
 
 \subsection*{Skolem范式}
 
-要想唯一, 就要牺牲一点``等价性''. 比如, 我们可以得到Skolem范式. 
+要想唯一, 就要牺牲一点``等价性''. 这个意思就是说得到一个比原来命题结果要弱一些的结果. 这样, 我们就可以得到Skolem范式. 
 
 \begin{definition}
-	设公式$$Q_1x_1. Q_2x_2. \cdots Q_nx_n. M(x_1,x_2,\cdots,x_n)$$是一个前束合取范式, 
-	
-	% TODO: 抄这里的定义
+	设公式$$Q_1x_1. Q_2x_2. \cdots Q_nx_n. M(x_1,x_2,\cdots,x_n)$$是一个前束合取范式, 按照从左往右的顺序去掉$G$中存在的量词, 若$Q_i$是存在量词, 且$i=1$, 则直接用个体常量代替$M$中的所有的$x_1$, 并且在$G$中删除$Q_1x_1$. 若$i>1,Q_1,Q_2,\cdots,Q_{i-1}$都是全称量词, 则在$G$中使用一个未使用过的函数符号, 如$f$, 并且用$f(x_1,x_2,\cdots, x_{i-1})$替换$G$中的所有的$x_i$, 然后删去$Q_ix_i$. 重复这个过程, 直到$G$中没有量词为止.
 \end{definition}
+
+\begin{example}
+	求
+	$$
+	\no (\forall x. \exists y. P(x,y)\to \exists x. (\no \forall y. Q(y,a)\to R(b,x)))
+	$$
+	的Skolem范式. 
+\end{example}
+
+\begin{sol}
+	\begin{align*}
+& \eqw\neg(\neg \forall x \exists y P(x, y) \vee \exists x(\neg \neg \forall y Q(y, a) \vee R(b, x))) \\
+&  \eqw\forall x \exists y P(x, y) \wedge \neg \exists x(\forall y Q(y, a) \vee R(b, x)) \\
+&  \eqw\forall x \exists y P(x, y) \wedge \forall x(\exists y \neg Q(y, a) \wedge \neg R(b, x)) \\
+&  \eqw\forall x(\exists y P(x, y) \wedge \exists y \neg Q(y, a) \wedge \neg R(b, x)) \\
+&  \eqw\forall x(\exists y P(x, y) \wedge \exists z \neg Q(z, a) \wedge \neg R(b, x)) \\
+&  \eqw\forall x \exists y \exists z(P(x, y) \wedge \neg Q(z, a) \wedge \neg R(b, x))
+\end{align*}
+
+现在消去存在$y$, 有
+$$
+\forall x. \exists z. (P(x,f(x))\an\no Q(z,a)\an\no R(b,x))
+$$
+
+然后消去存在$z$, 有
+
+$$
+\forall x. (P(x,f(x))\an\no Q(g(x),a)\an\no R(b,x))
+$$
+
+\end{sol}
 
 \section{常见的证明方法}
 
@@ -1639,8 +1668,15 @@ Hardy说证明$\sqrt 2$是无理数是最漂亮的证明之一. 其中用了反�
 
 我们在之前知道, 计算机解题的正确性在于正确算法的实现. 那么算法的正确性来源于什么呢? 不同于人类指令的有歧义和模糊, 机器语言应该做到的是有明确的``基本指令'', 与``控制结构''.
 
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[scale=0.4]{2-prop-logic/figs/exact-meaningless}
+	\label{fig:exact-meaningless}
+	\caption{蒋炎岩老师在操作系统课程上讲述概念的价值}
+\end{figure}
+
 \begin{quote}
-	(对于初学者而言, ) 精确的定义毫无意义. \hfill --蒋炎岩
+	(对于初学者而言, ) 精确的定义毫无意义.(见图\ref{fig:exact-meaningless}) \hfill --蒋炎岩
 \end{quote} 
 
 无论如何, 先忘掉这些抽象的名词吧. 基本指令就可以想象成一行代码是如何进行的, 它是如何操作了计算机的内部的. 控制结构是一些描述那个当前的代码执行如何执行下一条指令的一系列规约. 也就是描述了基本算法是什么, 以及是如何被实施的. 
@@ -1660,7 +1696,7 @@ Hardy说证明$\sqrt 2$是无理数是最漂亮的证明之一. 其中用了反�
 
 \subsection*{循环}
 
-% TODO: 增加条件循环, 计数循环的文本
+
 一个很有趣的问题是: 如何确定循环的过程是正确的? 我们可以发现, 虽然循环的变量在变, 但是我们总是希望维系一个命题的值是真的. 由此我们引入``循环不变式''. 
 
 \begin{definition}[循环不变式]
@@ -1718,7 +1754,7 @@ Hardy说证明$\sqrt 2$是无理数是最漂亮的证明之一. 其中用了反�
 
 一个可能的设计方法如图\ref{fig:bub-sor}所示. 我们可以模拟执行它. 
 
-\begin{figure}
+\begin{figure}[!htbp]
 	\centering
 	\includegraphics[scale=0.5]{2-prop-logic/figs/bubble-sort}
 	\caption{冒泡排序的一个实现方法(流程图)}
@@ -1764,7 +1800,7 @@ The go to statement as it stands is just too primitive; it is too much an invita
 
 ......
 
-In [2] Guiseppe Jacopini seems to have proved the (logical) superfluousness of the go to statement. The exercise to translate an arbitrary flow diagram more or less mechanically into a jump-less one, however, is not to be recommended. Then the resulting flow diagram cannot be expected to be more transparent than the original one.
+In  Guiseppe Jacopini seems to have proved the (logical) superfluousness of the go to statement. The exercise to translate an arbitrary flow diagram more or less mechanically into a jump-less one, however, is not to be recommended. Then the resulting flow diagram cannot be expected to be more transparent than the original one.
 
 
 	
@@ -1801,6 +1837,10 @@ In [2] Guiseppe Jacopini seems to have proved the (logical) superfluousness of t
 \begin{prob}[Hanoi塔问题]
  
 \end{prob}
+
+我们会在下学期来进行更多的计算的细节. 例如均摊的分析, 摊还分析等手法. 
+
+
 
 
 
