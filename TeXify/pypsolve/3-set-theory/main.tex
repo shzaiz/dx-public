@@ -7,3 +7,149 @@
 	
 	We are not speaking here of arbitrariness in any sense. Mathematics is not like a game whose tasks are determined by arbitrarily stipulated rules. Rather, it is a conceptual system possessing internal necessity that can only be so and by no means otherwise. \hfill --David Hilbert
 \end{quote}
+
+\section{简单的朴素体系}
+
+在中学的时候, 我们定义的集合是如下的一个数学对象: \red{\bf 集合}就是任何一个\blue{有明确定义的}对象的\blue{整体}. 
+
+\begin{definition}[集合]
+    我们将\red{\bf 集合}理解为任何将\blue{我们思想中那些确定而彼此独立的对象}放在一起而形成的\blue{聚合}. 
+\end{definition}
+
+这也引出了概括原则: 
+
+\begin{theorem}[概括原则]
+    对于任意性质/谓词 $P(x)$, 都存在一个集合 $X$:
+    \[
+      X = \set{x \mid P(x)}
+    \]
+\end{theorem}
+
+很多时候我们需要判别两个集合是不是相等, 那么我们有外延性原理: 
+\begin{definition}[外延性原理 (Extensionality)]
+    两个集合相等 $(A = B)$ 当且仅当它们包含相同的元素. 
+    \[
+      \forall A.\; \forall B.\;
+        \Big(\big(\forall x.\; (x \in A \leftrightarrow x \in B)\big)
+          \leftrightarrow A = B \Big)
+    \]
+\end{definition}
+
+这条公理意味着集合这个对象完全由它的元素决定. 
+
+有时候我们需要从一个集合里面抽出一部分, 也就是寻找一个集合的子集. 因此我们有如下的定义. 
+
+\begin{definition}[子集]
+    设 $A$、$B$ 是任意两个集合. 
+
+    $A \subseteq B$ 表示 $A$ 是 $B$ 的\red{子集} (subset):
+    \[
+      A \subseteq B \iff \forall x \in A.\; (x \in A \to x \in B)
+    \]
+
+    $A \subset B$ 表示 $A$ 是 $B$ 的\red{真子集} (proper subset):
+    \[
+      A \subset B \iff A \subseteq B \land A \neq B
+    \]
+\end{definition}
+
+我们还可以证明两个集合相等, 当二者互为对方的子集时候. 
+
+\begin{theorem}
+    两个集合相等当且仅当它们互为子集. 
+    \[
+      A = B \iff A \subseteq B \land B \subseteq A
+    \]
+\end{theorem}
+
+然后, 让我们来对于高中学习过的操作重新定义一下. 
+
+\begin{definition}[集合的并 (Union)]
+    \[
+      A \cup B \triangleq \set{ x \mid x \in A \lor x \in B}
+    \]
+\end{definition}
+
+\begin{definition}[集合的交 (Intersection)]
+    \[
+      A \cap B \triangleq \set{x \mid x \in A \land x \in B}
+    \]
+\end{definition}
+
+除此之外, 像命题逻辑一样, 集合也有一些运算的规律. 我们可以将它与命题逻辑一起观察, 并且发现其中的规律. 
+
+\begin{theorem}[分配律 (Distributive Law)]
+    \[
+      A \cup (B \cap C) = (A \cup B) \cap (A \cup C)
+    \]
+    \[
+      \teal{A \cap (B \cup C) = (A \cap B) \cup (A \cap C)}
+    \]
+\end{theorem}
+
+对于这样的命题, 我们同样给出证明. 
+
+\begin{proof}
+    对任意$x$,
+    \begin{align}
+        &x \in A \cup (B \cap C) \\
+        \iff & (x \in A) \lor (x \in B \land x \in C) \\
+        \red{\iff} & (x \in A \lor x \in B) \land (x \in A \lor x \in C) \\
+        \iff & (x \in A \cup B) \land (x \in A \cup C) \\
+        \iff & x \in (A \cup B) \cap (A \cup C)
+      \end{align}
+\end{proof}
+
+同样, 像命题符号一样, 集合的运算也遵循吸收率: 
+
+\begin{theorem}[吸收律 (Absorption Law)]
+    \[
+      A \cup (A \cap B) = A
+    \]
+    \[
+      \teal{A \cap (A \cup B) = A}
+    \]
+\end{theorem}
+
+\begin{proof}
+    对任意$x$,
+    \begin{align}
+        &x \in A \cup (A \cap B) \\
+        \iff & x \in A \lor (x \in A \land x \in B) \\
+        \red{\iff} & x \in A
+      \end{align}
+\end{proof}
+
+有了这个我们就可以使用这个证明一个比较重要的习题. 
+
+\begin{theorem}
+    \[
+      A \subseteq B \iff A \cup B = B \;\purple{\iff A \cap B = A}
+    \]
+  \end{theorem}
+\begin{proof}
+    
+  对任意 $x$
+    
+  \setcounter{equation}{0}
+  \begin{align}
+    &x \in B \\
+    \red{\implies} &x \in A \lor x \in B \\
+    \implies &x \in A \cup B
+  \end{align}
+\end{proof}
+
+\begin{definition}[集合的差 (Set Difference); \blue{相对补} (Relative Complement)]
+  \[
+    A \setminus B = \set{x \mid x \in A \land x \notin B}
+  \]
+\end{definition}
+
+\begin{definition}[绝对补 (Absolute Complement); \purple{$\overline{A}, A', A^{c}$}]
+  \red{设全集为$U$. }
+  \[
+    \overline{A} = U \setminus A = \set{x \in U \mid x \notin A}
+  \]
+
+  期中, 全集 $U$ (Universe) 是当前正在考虑的所有元素构成的集合. 一般均默认存在. 通常可以注意到: 不存在``包罗万象''的全集. 
+\end{definition}

@@ -24,8 +24,10 @@
 \contentsline {subsection}{\numberline {2.5.1}谓词公式, 解释, 等价表示}{45}{subsection.2.5.1}%
 \contentsline {section}{\numberline {2.6}谓词公式的标准形}{47}{section.2.6}%
 \contentsline {paragraph}{解答:}{49}{paragraph*.19}%
-\contentsline {section}{\numberline {2.7}常见的证明方法}{49}{section.2.7}%
-\contentsline {section}{\numberline {2.8}重新审视算法的正确性: 从基本结构开始}{53}{section.2.8}%
-\contentsline {section}{\numberline {2.9}继续理解子过程和递归}{58}{section.2.9}%
-\contentsline {chapter}{\numberline {第三章\hspace {.3em}}集合论}{59}{chapter.3}%
+\contentsline {section}{\numberline {2.7}谓词逻辑的推理要求}{49}{section.2.7}%
+\contentsline {section}{\numberline {2.8}常见的证明方法}{49}{section.2.8}%
+\contentsline {section}{\numberline {2.9}重新审视算法的正确性: 从基本结构开始}{53}{section.2.9}%
+\contentsline {section}{\numberline {2.10}继续理解子过程和递归}{58}{section.2.10}%
+\contentsline {chapter}{\numberline {第三章\hspace {.3em}}简单朴素集合论}{61}{chapter.3}%
+\contentsline {section}{\numberline {3.1}简单的朴素体系}{61}{section.3.1}%
 \contentsfinish 
