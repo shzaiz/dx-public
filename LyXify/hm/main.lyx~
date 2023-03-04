@@ -199,6 +199,19 @@ theorems-tcolorbox
 
 \begin_layout Standard
 \begin_inset FormulaMacro
+\newcommand{\eps}{\epsilon}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\eqs}{\epsilon}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
 \newcommand{\dd}{\mathrm{d}}
 \end_inset
 

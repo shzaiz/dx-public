@@ -1,0 +1,206 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-book
+\use_default_options true
+\begin_modules
+theorems-tcolorbox
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+\begin_inset Formula $n$
+\end_inset
+
+维欧式空间
+\end_layout
+
+\begin_layout Standard
+这部分内容参见《高等代数学习笔记》.
+ 因此从略.
+ 
+\end_layout
+
+\begin_layout Section
+多元函数的极限和连续
+\end_layout
+
+\begin_layout Standard
+像在一元的情形一样, 我们需要先定义邻域, 然后才可以方便的探讨在上面的各种性质.
+ 
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+邻域
+\end_layout
+
+\end_inset
+
+ 如果有一个点集
+\begin_inset Formula $U(P_{0},\delta)=\{P|\left\Vert PP_{0}\right\Vert <\delta\},$
+\end_inset
+
+称为
+\begin_inset Formula $P_{0}$
+\end_inset
+
+到
+\begin_inset Formula $\delta$
+\end_inset
+
+的邻域.
+ 
+\end_layout
+
+\begin_layout Standard
+特别的, 如果我们置
+\begin_inset Formula $n=2,$
+\end_inset
+
+就有
+\begin_inset Formula $\sqrt{(x-x_{0})^{2}+(y-y_{0})^{2}}<\delta$
+\end_inset
+
+.
+ 同样我们可以定义去心邻域: 
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+去心邻域
+\end_layout
+
+\end_inset
+
+ 如果有一个点集
+\begin_inset Formula $U(P_{0},\delta)=\{P|0<\left\Vert PP_{0}\right\Vert <\delta\},$
+\end_inset
+
+称为
+\begin_inset Formula $P_{0}$
+\end_inset
+
+到
+\begin_inset Formula $\delta$
+\end_inset
+
+的邻域.
+ 
+\end_layout
+
+\begin_layout Standard
+也就是把中间的点挖走了, 这样中心的内容就不用注意了.
+ 
+\end_layout
+
+\begin_layout Standard
+有时候我们还可以使用方形区域.
+ 这时候
+\begin_inset Formula $U(P_{0},\delta)=\{(x,y)||x-x_{0}<\delta,y-y_{0}<\delta\}$
+\end_inset
+
+(以二维情形为例).
+ 
+\end_layout
+
+\begin_layout Standard
+下面我们来讨论内殿, 平面上点集的一些分类以及特性.
+ 例如, 我们在数轴上定义了开闭区间, 那么这里是不是也可以定义开区间和闭区间? 对应的, 我们有对点进行的分类.
+ 也就是探讨一个点附近的邻域, 并且根据这个来进行分类.
+ 
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+区域
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
