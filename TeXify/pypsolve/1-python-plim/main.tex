@@ -759,7 +759,7 @@ fib(5)
 很多问题都可以通过查资料解答. 其中, 有一个很好的途径就是先看一看官方文档. 通常官方文档都有非常详细的解释. 
 
 
-\section{C语言简单介绍}
+\section{C语言引导}
 
 一个很好玩的事情是, C语言程序设计的基本语法比Python更加的基础. 而且C基本代码的语义的确定的掌握要花费的精力是远远小于Python的. 它更简单、包袱更少，也没有很庞大的工具链。虽然说这相当于 “把你的手脚捆起来编程”，但我们通常不需要很复杂的数据结构和代码逻辑，因此现代语言特性的好处在大部分时候并不显著。而且用 C 语言还有一些额外的好处：
 
@@ -772,21 +772,151 @@ fib(5)
 
 \end{quote}
 
+所以, 不用惊慌. 我们会来简单介绍一下. 我们会用几个例子来说明一下C语言里面, 一些规则. 但是不用试图记忆, 最好能够跟着敲一遍. 一个比较完好的编译器会在你犯错误的时候(通常情况下犯错是很正常的)给出你提示. 这时候查一查字典就可以解决大多数的情形. 
+
+\subsection{作为不太好用的计算器}
+作为计算机, 一个很重要的事情是: 如何使用计算机进行比较复杂的算术运算? 
+
+比如下面的程序可以告诉我们1+1的值, 并且输出到屏幕. 
+
+\begin{lstlisting}[language=C]
+#include <cstdio.h>
+int main(){
+	printf("%d\n", 1+1);
+	return 0;
+}
+\end{lstlisting}
+
+这里的``\texttt{\%d}''是输出的占位符, 会输出整数. d是digit的简称. 因为整数是由一位一位的数码构成的. 
+
+我们来看一看有没有什么有趣的实验: 
+
+\begin{example}
+	修改程序, 输出(1) $3-4$; (2) $5\times 6$; (3) $8\div 4$; (4)$8\div 5$的值.
+\end{example}
+
+和Python不同, C会默认地把1.6转化成整数. 这是为什么? 
+
+\begin{pas}
+(Generated from ChatGPT)
 
 
+	In the early days of computing, hardware resources were limited, and memory and processing power were at a premium. The ability to perform automatic conversions between different data types was therefore an important feature of programming languages, as it allowed programmers to work with limited resources more efficiently.
+
+Additionally, the automatic conversion of float to int likely reflects the fact that early computer hardware often did not support floating-point arithmetic natively. Floating-point arithmetic was typically implemented in software, which was slower and less efficient than the native integer arithmetic. Therefore, it was often necessary to convert floating-point values to integers in order to perform arithmetic operations more efficiently.
+
+As hardware capabilities have evolved over time, the automatic conversion of float to int in C has remained an important feature, as it provides a convenient way to work with different data types and to simplify code. However, it's still important for programmers to be aware of the potential loss of precision when converting between data types, and to use these conversions intentionally and with care.
+\end{pas}
+
+对于实数, 我们可以使用\texttt{\%f}输出. f是float的简称, 用来表示这是一个浮点数(也就是实数, 因为小数点会``浮动'').  
+
+\begin{bonus}
+	C是一个强类型的语言--也就是每一个变量都有一个一旦声明不能更改的类型. 
+
+	如果我们输出8/5.0, 用\%f和\%d输出有什么区别? 在输出的过程中你认为的类型变换的过程如何?
+\end{bonus}
+
+如果我们在程序的开头加上\texttt{\#include <math.h>}, 就可以得到更加多样的数学运算. 如: 要计算$1+{2\sqrt 2 \over 5-0.1}$, 我们就可以在\texttt{main(){}}里面替换上
+
+\begin{lstlisting}[language=c]
+	printf("%.2f\n", 1+2*sqrt(3)/(5-0.1)); 
+\end{lstlisting}
 
 
+\begin{idea}
+	理解代码的核心方法(上): 像阅读数学公式那样, 通过代换法理解一行代码. 
+	
+	举个例子, 我们在理解上面的内容的时候, 可以拆分成若干个部分, 想一想每一部分做了哪些输出. 最后整合起来就好了. 
+	
+\end{idea}
+
+\subsection{变量的引入}
+
+我们上面已经可以计算东西了, 可是还是不够劲啊! 如果我们能够从键盘读取输入就更加不错了! 那我们就需要用到\texttt{scanf}了. 
+
+输入的东西放在哪里呢? 可以放在小盒子里面. 和Python的``小盒子''不是很相同, 小盒子必须指定变量, 并且指定了之后不能修改盒子的类型. 这也是历史上的因素导致的. 
+
+我们来试一试: 比如最简单的$a+b$问题: 输入两个数, 用程序把它求和, 结果输出出来. 
+
+\begin{lstlisting}[language=c]
+#include <cstdio.h>
+int main(){
+	int a, b;
+	scanf("%d%d", &a, &b);
+	printf("%d\n", a+b);
+	return 0;
+}
+\end{lstlisting} 
+
+这时候, 代换的方法仍然起作用. 我们就可以通过交互的情况下得到输入与输出了! 
+
+回忆一下小学的时候, 我们总是被要求计算(有点无聊的)圆柱体的表面积. 如果有一个小程序可以帮助当时的我们, 输入半径和高, 自动为我们输出答案, 那样自己就很好了. 于是我们有: 
+
+\begin{lstlisting}[language=c]
+#include <stdio.h>
+#include <math.h>
+int main(){
+	const double pi = 3.14;
+	double r, h, s1, s2, s;
+	scanf("%lf%lf", &r, &h);
+	s1 = pi*r*r;
+	s2 = 2*pi*r*h;
+	s = s1*2.0 + s2;
+	printf("Area = %.3f\n", s);
+	return 0;
+}	
+\end{lstlisting}
+
+\subsection{顺序执行的程序}
+
+上面我们编写了很多行的代码, 一个问题是我们的程序是怎样被执行的? 事实上, 这点和Python区别不大--在没有控制执行的情形下都是顺序--从上到下一行一行执行的. 我们可以使用调试器来证明这一点. 
+
+\begin{tool}
+	根据观察, 有很大一部分学生甚至不知道调试器是什么! 这件事情是很糟糕的--因为这样下来很多时候就会让他们看程序``一头雾水'', 然后这就是放弃的前兆. 
+
+	所以个人认为作为一个很重要的工具--调试器在刚开始的时候就应该介绍一下. 这个工具可以帮助我们看到计算机里面到底发生了什么, 从而理解我们的输入到底在干什么. 我们可以为我们的程序打上断点(breakpoint), 然后启动调试--程序就会自动停下了, 同时把现在的状态告诉我们. 
+\end{tool}
 
 
+\ti{例子: 交换变量}
 
+我一直一来是不太赞成初学的时候使用Python的语法特性\texttt{a, b = b, a}来做交换变量的. 其原因是可能会让一部分关键的直觉和感受丢失. 比如, 如果我们在C中希望交换两个变量, 怎么办? 
 
+如果我们还想像Python那样, 看一看会得到什么: 
 
+\begin{lstlisting}	
+$ vim tmp.c
 
+#include <bits/stdc++.h>
+int main(){
+    int a = 1, b=2; 
+    a, b = b, a;
+    printf("a=%d, b=%d", a, b);
+    return 0;
+}
 
+:!gcc %.c
 
+warning: left operand of comma operator has no effect [-Wunused-val
+ue]
+    a, b = b, a;
+    ^
+tmp.cpp:4:15: warning: expression result unused [-Wunused-value]
+    a, b = b, a;
+              ^
+2 warnings generated.
+\end{lstlisting}
 
+哦, 出警报了, 我们看一看运行之后会有什么效果: 
 
+\begin{lstlisting}
+:!./a.out
+a=1, b=2
+\end{lstlisting}
 
+诶, 完全没有效果了! 我们回顾上面的警告说这句话没有任何的作用. 这样就解释了这件事. 所以我们要用更加底层的方法来完成. 
+
+我们现在有哪些工具呢? (1) 创建一个带有类型的盒子; (2) 为这个盒子装/修改东西; (3) 输入, 输出; (4) 新增一行(句)代码. 
 
 
 

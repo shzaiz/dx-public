@@ -202,5 +202,54 @@ status open
 
 \end_layout
 
+\begin_layout Section
+偏导数与全微分
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\dt}{\Delta}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+全微分
+\end_layout
+
+\end_inset
+
+ 设二元函数
+\begin_inset Formula $f(x,y)$
+\end_inset
+
+在点
+\begin_inset Formula $P_{0}(x_{0},y_{0})$
+\end_inset
+
+的某个邻域里面
+\begin_inset Formula $P_{0}=(x_{0},y_{0})$
+\end_inset
+
+的某个邻域里面有定义, 如果函数在店
+\begin_inset Formula $P_{0}$
+\end_inset
+
+处的全增量
+\begin_inset Formula $\Delta z=f(x_{0}+\Delta x,y_{0}+\dt y)-f(x_{0},y_{0})$
+\end_inset
+
+可以表示为
+\begin_inset Formula $\dt z=A\dt x+B\dt y=o(\rho)$
+\end_inset
+
+, 其中
+\end_layout
+
 \end_body
 \end_document

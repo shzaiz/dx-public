@@ -87,8 +87,213 @@ theorems-tcolorbox
 维欧式空间
 \end_layout
 
-\begin_layout Section
+\begin_layout Standard
+这部分内容参见《高等代数学习笔记》.
+ 因此从略.
+ 
+\end_layout
 
+\begin_layout Section
+多元函数的极限和连续
+\end_layout
+
+\begin_layout Standard
+像在一元的情形一样, 我们需要先定义邻域, 然后才可以方便的探讨在上面的各种性质.
+ 
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+邻域
+\end_layout
+
+\end_inset
+
+ 如果有一个点集
+\begin_inset Formula $U(P_{0},\delta)=\{P|\left\Vert PP_{0}\right\Vert <\delta\},$
+\end_inset
+
+称为
+\begin_inset Formula $P_{0}$
+\end_inset
+
+到
+\begin_inset Formula $\delta$
+\end_inset
+
+的邻域.
+ 
+\end_layout
+
+\begin_layout Standard
+特别的, 如果我们置
+\begin_inset Formula $n=2,$
+\end_inset
+
+就有
+\begin_inset Formula $\sqrt{(x-x_{0})^{2}+(y-y_{0})^{2}}<\delta$
+\end_inset
+
+.
+ 同样我们可以定义去心邻域: 
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+去心邻域
+\end_layout
+
+\end_inset
+
+ 如果有一个点集
+\begin_inset Formula $U(P_{0},\delta)=\{P|0<\left\Vert PP_{0}\right\Vert <\delta\},$
+\end_inset
+
+称为
+\begin_inset Formula $P_{0}$
+\end_inset
+
+到
+\begin_inset Formula $\delta$
+\end_inset
+
+的邻域.
+ 
+\end_layout
+
+\begin_layout Standard
+也就是把中间的点挖走了, 这样中心的内容就不用注意了.
+ 
+\end_layout
+
+\begin_layout Standard
+有时候我们还可以使用方形区域.
+ 这时候
+\begin_inset Formula $U(P_{0},\delta)=\{(x,y)||x-x_{0}<\delta,y-y_{0}<\delta\}$
+\end_inset
+
+(以二维情形为例).
+ 
+\end_layout
+
+\begin_layout Standard
+下面我们来讨论内殿, 平面上点集的一些分类以及特性.
+ 例如, 我们在数轴上定义了开闭区间, 那么这里是不是也可以定义开区间和闭区间? 对应的, 我们有对点进行的分类.
+ 也就是探讨一个点附近的邻域, 并且根据这个来进行分类.
+ 
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+区域
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+偏导数与全微分
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\dt}{\Delta}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+全微分
+\end_layout
+
+\end_inset
+
+ 设二元函数
+\begin_inset Formula $f(x,y)$
+\end_inset
+
+在点
+\begin_inset Formula $P_{0}(x_{0},y_{0})$
+\end_inset
+
+的某个邻域里面
+\begin_inset Formula $P_{0}=(x_{0},y_{0})$
+\end_inset
+
+的某个邻域里面有定义, 如果函数在店
+\begin_inset Formula $P_{0}$
+\end_inset
+
+处的全增量
+\begin_inset Formula $\Delta z=f(x_{0}+\Delta x,y_{0}+\dt y)-f(x_{0},y_{0})$
+\end_inset
+
+可以表示为
+\begin_inset Formula $\dt z=A\dt x+B\dt y+o(\rho)$
+\end_inset
+
+, 其中
+\begin_inset Formula $A,B$
+\end_inset
+
+仅仅与
+\begin_inset Formula $x_{0},y_{0}$
+\end_inset
+
+有关.
+ 而与
+\begin_inset Formula $\dt x,\dt y$
+\end_inset
+
+无关.
+ 
+\begin_inset Formula $\rho=\sqrt{\dt x^{2}+\dt y^{2}}$
+\end_inset
+
+, 则称函数在
+\begin_inset Formula $P_{0}$
+\end_inset
+
+处可微.
+ 并且称全微分的线性部分
+\begin_inset Formula $A\dt x+B\dt y$
+\end_inset
+
+为函数在
+\begin_inset Formula $P_{0}$
+\end_inset
+
+处的全微分.
+ 记作
+\begin_inset Formula $\dd z=A\dt x+B\dt y$
+\end_inset
+
+或者
+\begin_inset Formula $\dd f(x_{0},y_{0})=A\dt x+B\dt y.$
+\end_inset
+
+如果函数在每一点都可微, 那么函数在
+\begin_inset Formula $D$
+\end_inset
+
+内可微.
+ 
 \end_layout
 
 \end_body

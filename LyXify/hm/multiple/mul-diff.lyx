@@ -202,5 +202,103 @@ status open
 
 \end_layout
 
+\begin_layout Section
+偏导数与全微分
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\dt}{\Delta}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+全微分
+\end_layout
+
+\end_inset
+
+ 设二元函数
+\begin_inset Formula $f(x,y)$
+\end_inset
+
+在点
+\begin_inset Formula $P_{0}(x_{0},y_{0})$
+\end_inset
+
+的某个邻域里面
+\begin_inset Formula $P_{0}=(x_{0},y_{0})$
+\end_inset
+
+的某个邻域里面有定义, 如果函数在店
+\begin_inset Formula $P_{0}$
+\end_inset
+
+处的全增量
+\begin_inset Formula $\Delta z=f(x_{0}+\Delta x,y_{0}+\dt y)-f(x_{0},y_{0})$
+\end_inset
+
+可以表示为
+\begin_inset Formula $\dt z=A\dt x+B\dt y+o(\rho)$
+\end_inset
+
+, 其中
+\begin_inset Formula $A,B$
+\end_inset
+
+仅仅与
+\begin_inset Formula $x_{0},y_{0}$
+\end_inset
+
+有关.
+ 而与
+\begin_inset Formula $\dt x,\dt y$
+\end_inset
+
+无关.
+ 
+\begin_inset Formula $\rho=\sqrt{\dt x^{2}+\dt y^{2}}$
+\end_inset
+
+, 则称函数在
+\begin_inset Formula $P_{0}$
+\end_inset
+
+处可微.
+ 并且称全微分的线性部分
+\begin_inset Formula $A\dt x+B\dt y$
+\end_inset
+
+为函数在
+\begin_inset Formula $P_{0}$
+\end_inset
+
+处的全微分.
+ 记作
+\begin_inset Formula $\dd z=A\dt x+B\dt y$
+\end_inset
+
+或者
+\begin_inset Formula $\dd f(x_{0},y_{0})=A\dt x+B\dt y.$
+\end_inset
+
+如果函数在每一点都可微, 那么函数在
+\begin_inset Formula $D$
+\end_inset
+
+内可微.
+ 
+\end_layout
+
+\begin_layout Definition
+
+\end_layout
+
 \end_body
 \end_document

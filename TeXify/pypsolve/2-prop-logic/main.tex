@@ -929,6 +929,105 @@ $$
 
 如果我们把合取范式和析取范式里面的内容都变为极小项/极大项的时候, 我们就可以得到更标准, 更易于处理的内容. 通常称为\textbf{主合(析)取范式}. 
 
+
+% TODO: THIS Is EXERCISE EXAMPLE
+%\begin{Exercise}\label{ex:prop-logic}
+%        
+%        \Question In problem \ref{EX11-1-i}-\ref{EX11-1-iii}, determine whether the given differential equation is separable  
+%        \begin{tasks}(2)
+%            \task\label{EX11-1-i} $\frac{dy}{dx}-\sin{(x+y)}=0$     
+%            \task $\frac{dy}{dx}=4y^2-3y+1$ 
+%            \task\label{EX11-1-iii} $\frac{ds}{dt}=t\ln{(s^{2t})}+8t^2$ 
+%        \end{tasks}
+%        \Question In problem \ref{EX11-2-iv}-\ref{EX11-2-viii}, solve the equation 
+%        \begin{tasks}[resume=true](2)
+%            \task\label{EX11-2-iv} $\frac{dx}{dt}=3xt^2$
+%            \task $y^{-1}dy+ye^{\cos{x}}\sin{x}dx=0$
+%            \task $(x+xy^2)dx+ye^{\cos{x}}\sin{x}dx=0$
+%            \task\label{EX11-2-viii} $\frac{dy}{dt} = \frac{y}{t+1} + 4t^2 +  4t$, $\quad$ $y(1) = 10$
+%        \end{tasks}
+%    \end{Exercise}
+%
+%\setboolean{firstanswerofthechapter}{true}
+%    \begin{multicols}{2}
+%        \begin{Answer}[ref={EX11}]
+%            \Question 
+%            \begin{tasks}
+%                \task This is a solution of Ex 1
+%                \task This is a solution of Ex 2 
+%                \task This is a solution of Ex 3 
+%            \end{tasks} 
+%            \Question 
+%            \begin{tasks}[resume=true]
+%                \task This is a solution of Ex 4
+%                \task This is a solution of Ex 5 
+%                \task This is a solution of Ex 6 
+%                \task This is a solution of Ex 7 
+%            \end{tasks} 
+%        \end{Answer}
+%    \end{multicols}
+%    \setboolean{firstanswerofthechapter}{false}
+
+
+\begin{Exercise}\label{ex:proplogic}
+
+\Question 符号化下列命题: 
+\begin{tasks}
+	\task 虽然他的程序编写得很短小，但运行效率不高. 
+	\task 控制台打字机既可作为输入设备, 又可作为输出设备.
+	\task 如果你不多刷算法题且刷题时不讲方法， 那么面试时可能难于通过能力测试.
+	\task 若$a$和$b$是偶数, 则$a+b$是偶数.
+	\task 停机的原因在于语法错误或程序逻辑错误.
+	\task 如果公用事业费用增加或者增加基金的要求被否定, 那么, 当且仅当现有计算机设备不适用, 才需购买一台新计算机.
+	\task 1 is the factorial of 0, and $u$ is the factorial of $x+1$ if $v$ is the factorial of $x$ and $u$ is $v$ times. 
+\end{tasks}
+
+\Question 设 $P$: 数理逻辑很有趣; $Q$: 作业很难; $R$: 这门课程使人喜欢. 将下列句子符号化:
+\begin{tasks}
+\task 数理逻辑很有趣, 并且作业很难.
+\task 数理逻辑无趣, 作业也不难, 那么这门课程就不会使人喜欢.
+\task 数理逻辑很有趣, 作业也不难, 那么这门课程就会使人喜欢. 
+\task 数理逻辑无趣, 作业也不难, 而且这门课程也不使人喜欢.
+\task 数理逻辑很有趣意味着作业很难, 反之亦然.
+\task 或者数理逻辑很有趣, 或者作业很难, 并且两者恰具其一.	
+\end{tasks}
+
+\Question 构造如下命题公式真值表，并判断其类型:
+\begin{tasks}
+	\task  $((P\to Q)\an(Q\to R))\to(P\to R).$
+	\task $(P\to Q)\leftrightarrow(Q\to P).$
+	\task $(P\oi Q)\an (\no P\oi Q)\an (P\an \no Q)\an (\no P\an \no Q).$
+	\task $(P\oi Q)\oi (\no P\oi Q)\oi (P\an \no Q)\oi (\no P\an \no Q).$
+\end{tasks}
+\end{Exercise}
+\setboolean{firstanswerofthechapter}{true}
+\begin{multicols}{2}
+        \begin{Answer}[ref={ex:proplogic}]
+            \Question 
+            \begin{tasks}
+                \task 如果记$P$: 他的程序编写得很短小; $Q$: 他的程序运行效率高, 那么有$P\an \no Q$.               
+                \task 如果记$P$: 控制台打字机可以作为输入设备; $Q$: 控制台打字机可以作为输入设备, 那么有$P\an Q$.   
+                \task 如果记$P$: 刷很多的算法题; $Q$: 刷题不讲方法; $R$: 面试的时候容易通过能力测试, 那么有$P\an Q \to \no R$.
+                	\task 如果$P$: $a$是偶数; $Q: b$是偶数; $R$: 是偶数, 那么有$P\an Q \to R$.
+                	\task 如果有$P$: 出现停机; $Q$: 语法错误; $R$: 逻辑错误; 那么有$Q \oi R \to P$. 
+                	\task 如果$P$: 公用事业费用增加; $Q$: 增加基金的请求被否定; $R$:计算机设备不适用; $S$: 购买一台新的计算机, 那么有$\no (P\oi R) \to (S \leftrightarrow R).$ 
+                	\task 如果$F(x)$...
+            \end{tasks} 
+            \Question 
+            \begin{tasks}
+                \task $P\an Q.$
+                \task $\no P \an \no Q \to \no R.$
+                \task $P\an \no Q \to R.$
+                \task $\no P \an \no Q \an \no R.$
+                \task $P\leftrightarrow Q.$
+                \task $(P \an \no Q)\oi (\no P \an Q).$
+            \end{tasks} 
+            	\Question 略.
+        \end{Answer}
+\end{multicols}
+    \setboolean{firstanswerofthechapter}{false}
+
+
 \section{命题推演的真象: 命题的推演}
 
 我们发现, 蕴含词的逻辑永真式和我们经常所做的推理有很好的联系. 具体地, 如果$\alpha \to \beta$, 那么如果$\alpha$成立, 可以\textbf{推导}出$\beta$为真. 
