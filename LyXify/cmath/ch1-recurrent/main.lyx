@@ -84,6 +84,62 @@ theorems-tcolorbox-en
 A few principles
 \end_layout
 
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Addition principle
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Multiplication principle
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The two examples above is considered as fundamental.
+ An interesting thing to notice is to say why they are called ``principles''.
+ 
+\end_layout
+
+\begin_layout Section
+Solving by recurrences
+\end_layout
+
+\begin_layout Example
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+The Tower of Hanoi
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 
 \end_layout

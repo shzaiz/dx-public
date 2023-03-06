@@ -32,5 +32,8 @@
 \contentsline {section}{\numberline {2.9}重新审视算法的正确性: 从基本结构开始}{57}{section.2.9}%
 \contentsline {section}{\numberline {2.10}继续理解子过程和递归}{62}{section.2.10}%
 \contentsline {chapter}{\numberline {第三章\hspace {.3em}}简单朴素集合论}{65}{chapter.3}%
-\contentsline {section}{\numberline {3.1}简单的朴素体系}{65}{section.3.1}%
+\contentsline {section}{\numberline {3.1}简单的朴素集合论的一些定义}{65}{section.3.1}%
+\contentsline {section}{\numberline {3.2}高级集合操作}{69}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}交和并}{69}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}排列的力量}{71}{subsection.3.2.2}%
 \contentsfinish 

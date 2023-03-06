@@ -122,6 +122,86 @@ theorems-tcolorbox
 \end_layout
 
 \begin_layout Standard
+
+\lang english
+\begin_inset FormulaMacro
+\newcommand{\ikun}[1]{#1-\text{子空间}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset FormulaMacro
+\newcommand{\A}{\boldsymbol{A}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset FormulaMacro
+\newcommand{\B}{\boldsymbol{B}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset FormulaMacro
+\newcommand{\C}{\boldsymbol{C}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset FormulaMacro
+\newcommand{\E}{\boldsymbol{E}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset FormulaMacro
+\newcommand{\x}{\boldsymbol{x}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset FormulaMacro
+\newcommand{\bs}[1]{\boldsymbol{#1}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset FormulaMacro
+\newcommand{\lj}[1]{#1_{1},#1_{2},\cdots,#1_{n}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset FormulaMacro
 \newcommand{\alp}{\alpha}
 \end_inset
@@ -147,7 +227,7 @@ theorems-tcolorbox
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\C}{\mathbb{C}}
+\renewcommand{\C}{\mathbb{C}}
 \end_inset
 
 
@@ -194,86 +274,6 @@ theorems-tcolorbox
 \lang english
 \begin_inset FormulaMacro
 \newcommand{\huac}{\mathscr{C}}
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\lang english
-\begin_inset FormulaMacro
-\newcommand{\ikun}[1]{#1-\text{子空间}}
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\lang english
-\begin_inset FormulaMacro
-\newcommand{\A}{\boldsymbol{A}}
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\lang english
-\begin_inset FormulaMacro
-\newcommand{\B}{\boldsymbol{B}}
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\lang english
-\begin_inset FormulaMacro
-\renewcommand{\C}{\boldsymbol{C}}
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\lang english
-\begin_inset FormulaMacro
-\newcommand{\E}{\boldsymbol{E}}
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\lang english
-\begin_inset FormulaMacro
-\newcommand{\x}{\boldsymbol{x}}
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\lang english
-\begin_inset FormulaMacro
-\newcommand{\bs}[1]{\boldsymbol{#1}}
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\lang english
-\begin_inset FormulaMacro
-\newcommand{\lj}[1]{#1_{1},#1_{2},\cdots,#1_{n}}
 \end_inset
 
 

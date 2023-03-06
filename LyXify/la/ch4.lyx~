@@ -7,8 +7,7 @@
 \textclass ctex-book
 \use_default_options true
 \begin_modules
-algorithm2e
-theorems-ams-bytype
+theorems-tcolorbox
 \end_modules
 \maintain_unincluded_children false
 \language chinese-simplified
@@ -162,7 +161,16 @@ theorems-ams-bytype
 \end_layout
 
 \begin_layout Definition
-(线性空间的八条性质) 设
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+线性空间的八条性质
+\end_layout
+
+\end_inset
+
+ 设
 \begin_inset Formula $V$
 \end_inset
 
@@ -438,7 +446,16 @@ theorems-ams-bytype
 \end_layout
 
 \begin_layout Definition
-(线性组合) TODO
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+线性组合
+\end_layout
+
+\end_inset
+
+ TODO
 \end_layout
 
 \begin_layout Standard
@@ -446,7 +463,16 @@ theorems-ams-bytype
 \end_layout
 
 \begin_layout Example
-(有限维多项式)
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+有限维多项式
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -457,7 +483,16 @@ theorems-ams-bytype
 \end_layout
 
 \begin_layout Example
-(矩阵多项式) 如果
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+矩阵多项式
+\end_layout
+
+\end_inset
+
+ 如果
 \begin_inset Formula $A\in\F^{n\times n}$
 \end_inset
 
@@ -493,11 +528,29 @@ theorems-ams-bytype
 \end_layout
 
 \begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
 (线性相关性)
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Example
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
 (平面向量, 空间向量的线性相关和线性无关)
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -505,7 +558,16 @@ theorems-ams-bytype
 \end_layout
 
 \begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
 (极大线性无关组)
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -518,7 +580,16 @@ theorems-ams-bytype
 \end_layout
 
 \begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
 (筛选法)
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -531,7 +602,16 @@ theorems-ams-bytype
 \end_layout
 
 \begin_layout Definition
-(基与维数) 设
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+(基与维数)
+\end_layout
+
+\end_inset
+
+ 设
 \begin_inset Formula $V_{/\F}$
 \end_inset
 
@@ -581,6 +661,16 @@ theorems-ams-bytype
 \begin_inset CommandInset label
 LatexCommand label
 name "base-represent-ok"
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+相同有限维数的基等价
+\end_layout
 
 \end_inset
 
@@ -729,17 +819,12 @@ a_{m1} & a_{m2} & \cdots & a_{mn}
 \end_layout
 
 \begin_deeper
-\begin_layout Case
+\begin_layout Itemize
 若
 \begin_inset Formula $n\neq m$
 \end_inset
 
-, 
-\end_layout
-
-\begin_deeper
-\begin_layout Case
-若
+, 若
 \begin_inset Formula $n<m$
 \end_inset
 
@@ -755,7 +840,6 @@ a_{m1} & a_{m2} & \cdots & a_{mn}
  证明如下: 
 \end_layout
 
-\begin_deeper
 \begin_layout Standard
 \begin_inset Formula 
 \[
@@ -805,8 +889,7 @@ a_{m1} & a_{m2} & \cdots & a_{mn}
 线性相关, 矛盾!
 \end_layout
 
-\end_deeper
-\begin_layout Case
+\begin_layout Itemize
 \begin_inset Formula $n<m$
 \end_inset
 
@@ -814,8 +897,7 @@ a_{m1} & a_{m2} & \cdots & a_{mn}
  
 \end_layout
 
-\end_deeper
-\begin_layout Case
+\begin_layout Itemize
 \begin_inset Formula $n=m,$
 \end_inset
 
@@ -910,7 +992,16 @@ a_{nm}
 \end_layout
 
 \begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
 (坐标)
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -930,11 +1021,24 @@ noprefix "false"
 \end_layout
 
 \begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+统一线性空间基的个数唯一
+\end_layout
+
+\end_inset
+
 若
 \begin_inset Formula $\alpha_{1}..\alpha_{n}$
 \end_inset
 
-是线性空间V上的一组基, 
+是线性空间
+\begin_inset Formula $V$
+\end_inset
+
+上的一组基, 
 \begin_inset Formula $\beta_{1}..\beta_{m}$
 \end_inset
 
@@ -942,7 +1046,11 @@ noprefix "false"
 \begin_inset Formula $V$
 \end_inset
 
-上的一组基, 则m=n.
+上的一组基, 则
+\begin_inset Formula $m=n$
+\end_inset
+
+.
  
 \end_layout
 
@@ -959,7 +1067,16 @@ noprefix "false"
 \end_layout
 
 \begin_layout Definition
-(过渡矩阵) 我们可以使用右乘过渡矩阵方法完成基的变换.
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+(过渡矩阵)
+\end_layout
+
+\end_inset
+
+ 我们可以使用右乘过渡矩阵方法完成基的变换.
  设
 \begin_inset Formula $\alpha_{1}..\alpha_{n}$
 \end_inset
@@ -1027,6 +1144,15 @@ a_{n1} & .. & a_{nn}
 \end_layout
 
 \begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+过度矩阵可逆
+\end_layout
+
+\end_inset
+
 上述过渡矩阵一定可逆.
  
 \end_layout
@@ -1041,6 +1167,15 @@ a_{n1} & .. & a_{nn}
 \end_layout
 
 \begin_layout Lemma
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+线性空间的基的等价定义
+\end_layout
+
+\end_inset
+
 下列命题等价:
 \end_layout
 
@@ -1117,6 +1252,16 @@ a_{n1} & .. & a_{nn}
 \end_layout
 
 \begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+基的乘积公式
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula $\text{\ensuremath{\mathbb{F}\subseteq\mathbb{K}\subseteq\mathbb{E}}}$
 \end_inset
 
@@ -1277,7 +1422,16 @@ noprefix "false"
 \end_layout
 
 \begin_layout Definition
-(线性映射) 设
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+(线性映射)
+\end_layout
+
+\end_inset
+
+ 设
 \begin_inset Formula $V,U$
 \end_inset
 
@@ -1315,7 +1469,16 @@ noprefix "false"
 \end_layout
 
 \begin_layout Definition
-(线性同构) 记作
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+(线性同构)
+\end_layout
+
+\end_inset
+
+ 记作
 \begin_inset Formula $U\simeq V$
 \end_inset
 
@@ -1441,7 +1604,16 @@ TODO
 \end_layout
 
 \begin_layout Proposition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
 (线性同构是等价关系)
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1507,6 +1679,16 @@ name "finite-equal-dim-bij"
 
 \end_inset
 
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+有限维数的线性映射单射和满射等价
+\end_layout
+
+\end_inset
+
 考虑
 \begin_inset Formula $\varphi:V\to U$
 \end_inset
@@ -1544,6 +1726,15 @@ TODO
 \end_layout
 
 \begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+线性映射
+\end_layout
+
+\end_inset
+
 若
 \begin_inset Formula $\varphi:V\to U$
 \end_inset
@@ -1582,7 +1773,16 @@ TODO
 
 \end_deeper
 \begin_layout Example
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
 (线性方程组)
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -1789,9 +1989,18 @@ noprefix "false"
 \end_layout
 
 \begin_layout Example
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
 (一个奇怪的例子, 和Lie群有关)
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -1800,9 +2009,18 @@ noprefix "false"
 \end_layout
 
 \begin_layout Example
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
 (Lagrange插值公式)
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -1811,7 +2029,16 @@ noprefix "false"
 \end_layout
 
 \begin_layout Example
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
 (求导)
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -1830,6 +2057,16 @@ noprefix "false"
 \begin_inset CommandInset label
 LatexCommand label
 name "eg:linear-eqs-system"
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+解线性方程组
+\end_layout
 
 \end_inset
 
@@ -1894,7 +2131,16 @@ name "eg:linear-eqs-system"
 \end_layout
 
 \begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
 (映射的核与像)
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1902,6 +2148,15 @@ name "eg:linear-eqs-system"
 \end_layout
 
 \begin_layout Lemma
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+核与像是线性空间
+\end_layout
+
+\end_inset
+
 如果
 \begin_inset Formula $\varphi\in\text{Hom}(V,U)$
 \end_inset
@@ -1933,7 +2188,16 @@ name "eg:linear-eqs-system"
 \end_layout
 
 \begin_layout Definition
-若
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+子空间
+\end_layout
+
+\end_inset
+
+ 若
 \begin_inset Formula $V/\F$
 \end_inset
 
@@ -1987,6 +2251,15 @@ name "eg:linear-eqs-system"
 \end_layout
 
 \begin_layout Proposition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+子空间的等价定义
+\end_layout
+
+\end_inset
+
 设
 \begin_inset Formula $W$
 \end_inset
@@ -2037,9 +2310,18 @@ W对V中的加法和数乘封闭
 \end_layout
 
 \begin_layout Example
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
 (平面和三维空间)
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -2048,9 +2330,18 @@ W对V中的加法和数乘封闭
 \end_layout
 
 \begin_layout Example
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
 (多项式空间)
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -2059,7 +2350,16 @@ W对V中的加法和数乘封闭
 \end_layout
 
 \begin_layout Example
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
 (连续函数的空间)
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2107,6 +2407,16 @@ name "dim-sum-eq-all"
 
 \end_inset
 
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+核空间和像空间的维数之和为全空间维数
+\end_layout
+
+\end_inset
+
 若
 \begin_inset Formula $\varphi:V\to U$
 \end_inset
@@ -2115,7 +2425,11 @@ name "dim-sum-eq-all"
 \begin_inset Formula $\dim\ker\varphi_{A}+\dim\text{Im}\varphi_{A}=\dim V$
 \end_inset
 
-, 当V是有限维线性空间的时候.
+, 当
+\begin_inset Formula $V$
+\end_inset
+
+是有限维线性空间的时候.
  
 \end_layout
 
@@ -2213,7 +2527,16 @@ name "subsec:insert-and-sum"
 \end_layout
 
 \begin_layout Example
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
 (平面上子空间)
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2222,6 +2545,15 @@ name "subsec:insert-and-sum"
 \end_layout
 
 \begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+基的扩充
+\end_layout
+
+\end_inset
+
 设
 \begin_inset Formula $\dim V=n<\infty$
 \end_inset
@@ -2380,7 +2712,16 @@ noprefix "false"
 \end_layout
 
 \begin_layout Definition
-(Hom记号) 设
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+(Hom记号)
+\end_layout
+
+\end_inset
+
+ 设
 \begin_inset Formula $\varphi:V\to U,\text{Hom}(V/\F,U/\F)$
 \end_inset
 

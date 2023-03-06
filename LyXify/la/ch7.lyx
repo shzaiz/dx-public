@@ -85,7 +85,40 @@ Euclid空间的基本概念
 \end_layout
 
 \begin_layout Standard
+回顾中学的时候学过的空间直角坐标系中的空间向量, 那么我们回顾如果空间中有两点
+\begin_inset Formula $P,Q$
+\end_inset
 
+, 并且
+\begin_inset Formula $\overrightarrow{OP}=\al=(x_{1},x_{2},x_{3})',\overrightarrow{OQ}=\bt=(y_{1},y_{2},y_{3})'$
+\end_inset
+
+, 那么
+\begin_inset Formula $\overrightarrow{OP}$
+\end_inset
+
+的长度就是: 
+\begin_inset Formula 
+\[
+|OP_{1}|=\sqrt{x_{1}^{2}+y_{1}^{2}+z_{1}^{2}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+内积
+\end_layout
+
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Section

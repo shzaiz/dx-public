@@ -8,7 +8,7 @@
 	We are not speaking here of arbitrariness in any sense. Mathematics is not like a game whose tasks are determined by arbitrarily stipulated rules. Rather, it is a conceptual system possessing internal necessity that can only be so and by no means otherwise. \hfill --David Hilbert
 \end{quote}
 
-\section{简单的朴素体系}
+\section{简单的朴素集合论的一些定义}
 
 在中学的时候, 我们定义的集合是如下的一个数学对象: \red{\bf 集合}就是任何一个\blue{有明确定义的}对象的\blue{整体}. 
 
@@ -151,5 +151,265 @@
     \overline{A} = U \setminus A = \set{x \in U \mid x \notin A}
   \]
 
-  期中, 全集 $U$ (Universe) 是当前正在考虑的所有元素构成的集合. 一般均默认存在. 通常可以注意到: 不存在``包罗万象''的全集. 
+  其中, 全集 $U$ (Universe) 是当前正在考虑的所有元素构成的集合. 一般均默认存在. 通常可以注意到: 不存在``包罗万象''的全集. 
 \end{definition}
+
+
+和命题逻辑一样, 相对补和绝对补之间就像是命题符号一样, 存在一些联系. 
+
+\begin{theorem}[``相对补''与``绝对补''之间的关系]
+  \red{设全集为 $U$. }
+  \[
+    \red{\boxed{A \setminus B = A \cap \overline{B}}}
+  \]
+\end{theorem}
+
+\begin{proof}
+  对任意 $x$,
+  \setcounter{equation}{0}
+  \begin{align}
+    &x \in A \setminus B \\
+    \iff & x \in A \land x \notin B \\
+    \red{\iff} & x \in A \land (x \in U \land x \notin B) \\
+    \iff & x \in A \land x \in \overline{B} \\
+    \iff & x \in A \cap \overline{B}
+  \end{align}
+\end{proof}
+
+\begin{theorem}[德摩根律 (绝对补)]
+  \red{设全集为 $U$. }
+
+  \[
+    \overline{A \cup B} = \overline{A} \cap \overline{B}
+  \]
+  \[
+    \teal{\overline{A \cap B} = \overline{A} \cup \overline{B}}
+  \]
+\end{theorem}
+\begin{proof}
+    对任意 $x$, 
+  \setcounter{equation}{0}
+  \begin{align}
+    &x \in \overline{A \cup B} \\
+    \iff & x \in U \land \lnot (x \in A \lor x \in B) \\
+    \red{\iff} & x \in U \land x \notin A \land x \notin B \\
+    \iff & (x \in U \land x \notin A) \land (x \in U \land x \notin B) \\
+    \iff & x \in \overline{A} \land x \in \overline{B} \\
+    \iff & x \in \overline{A} \cap \overline{B}
+  \end{align}
+\end{proof}
+
+\begin{theorem}[德摩根律 (相对补)]
+  \[
+    C \setminus (A \cup B) = (C \setminus A) \cap (C \setminus B)
+  \]
+  \[
+    \teal{C \setminus (A \cap B) = (C \setminus A) \cup (C \setminus B)}
+  \]
+\end{theorem}
+
+\begin{proof}
+  \setcounter{equation}{0}
+  \begin{align}
+    &C \setminus (A \cup B) \\
+    \red{\iff} & C \cap \overline{A \cup B} \\
+    \iff & C \cap (\overline{A} \cap \overline{B}) \\
+    \iff & (C \cap \overline{A}) \cap (C \cap \overline{B}) \\
+    \iff & (C \setminus A) \cap (C \setminus B)
+  \end{align}
+\end{proof}
+
+这些命题的意义在于再证明集合相关的命题的时候, 就不需要从中抽出一个元素单独讨论了; 相反, 我们可以用集合整体的性质. 
+
+\begin{proof}
+  \setcounter{equation}{0}
+  \begin{align}
+    &C \setminus (A \cup B) \\
+    \red{\iff} & C \cap \overline{A \cup B} \\
+    \iff & C \cap (\overline{A} \cap \overline{B}) \\
+    \iff & (C \cap \overline{A}) \cap (C \cap \overline{B}) \\
+    \iff & (C \setminus A) \cap (C \setminus B)
+  \end{align}
+\end{proof}
+
+这里面有一个类似一个异或操作的运算符: 对称差. 
+
+\begin{definition}[对称差 (Symmetric Difference)]
+  \[
+    A \oplus B = (A \setminus B) \cup (B \setminus A)
+      = (A \cap \overline{B}) \cup (B \cap \overline{A})
+  \]
+\end{definition}
+
+\section{高级集合操作}
+\subsection{交和并}
+
+既然集合的对象是一组元素, 那么集合也是对象, 集合中的元素自然也可以被传进去看作运算. 由此, 我们需要定义关于集合的集合的运算. 
+
+\begin{definition}[广义并 (Arbitrary Union)]
+  设 $\mathbb{M}$ 是一组集合 (a {\it collection} of sets)
+  \[
+    \bigcup \mathbb{M} = \Bset{x \mid \red{\exists} A \in \mathbb{M}.\; x \in A}
+  \]
+\end{definition}
+
+举一些例子, 比如$\mathbb{M} = \Bset{\set{1, 2}, \set{\set{1, 2}, 3}, \set{4, 5}}$, 那么$\bigcup \mathbb{M} = \Bset{1, 2, 3, 4, 5, \red{\set{1, 2}}}$. 注意元素只被解开了一次而不是一次解包到我们认为的``基本元素''. 因为有时候``基本元素''也是用集合定义的. 我们后来会发现我们可以把整个数学基础建立到集合论的基础上. 
+
+和求和记号一样, 为了方便书写, 我们也有类似的记号: 
+  \[
+    \bigcup_{j = 1}^{n} A_j \triangleq A_1 \cup A_2 \cup \cdots \cup A_n
+  \]
+  \[
+    \bigcup_{j = 1}^{\infty} A_j \triangleq A_1 \cup A_2 \cup \cdots
+  \]
+  \[
+    \bigcup_{\blue{\alpha \in I}} A_{\alpha} \triangleq
+      \Big\{x \mid \red{\exists} \alpha \in I.\; x \in A_{\alpha}\Big\}
+  \]
+
+和广义并一样, 我们还有广义交. 定义如下: 
+\begin{definition}[广义交 (Arbitrary Intersection)]
+  设 $\mathbb{M}$ 是一组集合 (a {\it collection} of sets)
+  \[
+    \bigcap \mathbb{M} = \Bset{x \mid \red{\forall} A \in \mathbb{M}.\; x \in A}
+  \]
+\end{definition}
+
+同样的, 如果$\mathbb{M} = \Bset{\set{1, 2}, \set{\set{1, 2}, 3}, \set{4, 5}}$是全集,  $\bigcap \mathbb{M} = \emptyset$. 同样只是展开一次就行了. 注意一个有趣的情况: $\bigcap \emptyset =U$. ``包含所有元素的集合''在后面会发现会导出一个矛盾, 有时候我们也会认为这样说的结果是未定义的. 
+
+那么类似的, 我们也希望广义集合里面有没有像普通集合的一些操作. 答案是肯定的. 下面我们来探讨一些有趣的内容. 
+
+\begin{theorem}[德摩根律]
+  \[
+    X \setminus \bigcup_{\alpha \in I} A_{\alpha} = \bigcap_{\alpha \in I} (X \setminus A_{\alpha})
+  \]
+
+  \[
+    \teal{X \setminus \bigcap_{\alpha \in I} A_{\alpha} = \bigcup_{\alpha \in I} (X \setminus A_{\alpha})}
+  \]
+\end{theorem}
+
+\begin{proof}
+  对任意 $x$,
+  \setcounter{equation}{0}
+  \begin{align}
+    &x \in X \setminus \bigcup_{\alpha \in I} A_{\alpha} \\
+    \iff & x \in X \land \lnot(\exists \alpha \in I.\; x \in A_{\alpha}) \\
+    \iff & x \in X \land (\forall \alpha \in I.\; x \notin A_{\alpha}) \\
+    \red{\iff} & \forall \alpha \in I.\; (x \in X \land x \notin A_{\alpha}) \\
+    \iff & x \in \bigcap_{\alpha \in I} (X \setminus A_{\alpha})
+  \end{align}
+\end{proof}
+
+我们同样可以用这条规律来化简集合, 而不用真正在一个集合的集合里面取出来一个元素. 
+
+\begin{eg}
+  如果
+  \[
+    X_n = \set{-n, -n+1, \cdots, 0, \cdots, n-1, n}
+  \]
+  请化简: 
+  $$A = \mathbb{R} \setminus \bigcap_{n \in \mathbb{Z}^{+}} (\mathbb{R} \setminus X_n) $$
+\end{eg}
+\begin{proof}
+  \begin{align*}
+    A &= \mathbb{R} \setminus \bigcap_{n \in \mathbb{Z}^{+}} (\mathbb{R} \setminus X_n) \\
+    &= \mathbb{R} \setminus \Big(\mathbb{R} \setminus \bigcup_{n \in \mathbb{Z}^{+}} X_n \Big) \\
+    &= \mathbb{R} \setminus \Big(\mathbb{R} \setminus \mathbb{Z} \Big) \\
+    &= \mathbb{Z}
+  \end{align*}
+\end{proof}
+
+\subsection{排列的力量}
+
+在高中, 我们学习了排列组合. 如果对于集合中的元素进行``选择性缺席'', 这样就可以让我们构造出更加复杂而全面的集合了. 
+
+\begin{definition}[幂集 (Powerset)]
+  \[
+    \ps{A} = \Bset{X \mid X \subseteq A}
+  \]
+\end{definition}
+
+这个之所以强大, 是因为给定一个A, 就有如下的内容可以被生成. 
+  \[
+    A = \set{1, 2, 3}
+  \]
+  \[
+    \ps{A} = \set{\emptyset,
+      \set{1}, \set{2}, \set{3},
+      \set{1, 2}, \set{1, 3}, \set{2, 3},
+      \set{1, 2, 3}}
+  \]
+
+因为对于$|A| = n$的句子, $|\ps{A}| = 2^{n}$, 因此有时候也写做$2^{A}$或者$\set{0,1}^{A}$. 
+
+接下来看一个(看似)没啥用的定理: 
+
+\begin{theorem}
+  $$S \in \ps{X} \iff S \subseteq X$$
+\end{theorem}
+
+这个定理的作用是在$\in$和$\subseteq$之间转换, 同时脱去一层$\ps{}$记号. 
+
+\begin{eg}
+  请证明: 
+  $$\set{\emptyset, \set{\emptyset}} \in \ps{\ps{\ps{S}}}$$
+\end{eg}
+
+\begin{proof}
+  根据上面的定理, 我们有
+  $$\set{\emptyset, \set{\emptyset}} \in \ps{\ps{\ps{S}}} \iff \set{\emptyset, \set{\emptyset}} \subseteq \ps{\ps{S}}.$$
+
+  分别证明之: 
+  \begin{align*}
+    &\red{\emptyset \in \ps{\ps{S}}}\\
+    &\iff \emptyset \subseteq \ps{S}
+  \end{align*}
+
+  \begin{align*}
+    &\red{\set{\emptyset} \in \ps{\ps{S}}}\\
+    &\iff \set{\emptyset} \subseteq \ps{S}\\
+    &\iff \emptyset \in \ps{S}\\
+    &\iff \emptyset \subseteq S
+  \end{align*}
+
+\end{proof}
+
+其实幂集生成之间也有一些关系. 不妨看一看. 
+
+\begin{theorem}
+  证明: 
+  \[
+      \ps{A} \cap \ps{B} = \ps{A \cap B}
+  \]
+\end{theorem}
+
+\begin{proof}
+  对于任意 $x$,
+  \begin{align*}
+    &\textcolor{white}{\iff}\;\; x \in \ps{A} \cap \ps{B} \\
+    &\iff x \in \ps{A} \land x \in \ps{B} \\
+    &\iff x \subseteq A \land x \subseteq B \\
+    &\iff x \subseteq A \cap B \\
+    &\iff x \in \ps{A \cap B}
+  \end{align*}
+\end{proof}
+
+\begin{theorem}
+  证明: 
+  \[
+    \bigcap_{\alpha \in I} \ps{A_{\alpha}} = \ps{\bigcap_{\alpha \in I} A_{\alpha}}
+  \]
+\end{theorem}
+
+\begin{proof}
+  对于任意 $x$,
+  \begin{align*}
+    &\textcolor{white}{\iff}\;\; x \in \bigcap_{\alpha \in I} \ps{A_{\alpha}} \\
+    &\iff \forall \alpha \in I.\; x \in \ps{A_{\alpha}} \\
+    &\iff \forall \alpha \in I.\; x \subseteq A_{\alpha} \\
+    &\iff x \subseteq \bigcap_{\alpha \in I} A_{\alpha} \\
+    &\iff x \in \ps{\bigcap_{\alpha \in I} A_{\alpha}}
+  \end{align*}
+\end{proof}
+

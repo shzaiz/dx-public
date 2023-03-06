@@ -85,6 +85,22 @@ Euclid空间的基本概念
 \end_layout
 
 \begin_layout Standard
+回顾中学的时候学过的空间直角坐标系中的空间向量, 那么我们回顾如果空间中有两点
+\begin_inset Formula $P,Q$
+\end_inset
+
+, 并且
+\begin_inset Formula $\overrightarrow{OP}=\al=(\al_{1},\cdots,\al_{n})',\overrightarrow{OQ}=\bt=(\bt_{1},\cdots,\bt_{n})'$
+\end_inset
+
+, 那么两个向量之间的距离就是: 
+\begin_inset Formula 
+\[
+\sqrt{}
+\]
+
+\end_inset
+
 
 \end_layout
 

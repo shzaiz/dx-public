@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.1.19)  5 MAR 2023 22:31
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.1.19)  6 MAR 2023 08:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1569,20 +1569,19 @@ Overfull \hbox (13.62137pt too wide) in paragraph at lines 112--113
 []\TU/SimSun(0)/m/n/10.53937 请 参 看 \TU/lmr/m/n/10.53937 Github \TU/SimSun(0)/m/n/10.53937 的 源 代 码 仓 库[]$[][][][][] [] [] [] [][][][][][] [] [][][] [] [][][][][][] [] [][][][][][][][][][] [] [][][][] [] [][][][] [] [][][][][][] []
  []
 
-[2] (/Users/zgw/Documents/dx/TeXify/pypsolve/.texpadtmp/pypsolve-main.toc)
+[2] (/Users/zgw/Documents/dx/TeXify/pypsolve/.texpadtmp/pypsolve-main.toc [3
+
+])
 \tf@toc=\write5
 \openout5 = `pypsolve-main.toc'.
 
- [3
-
-]
 LaTeX Font Info:    Font shape `TU/SimSun(0)/m/sl' in size <10.53937> not available
 (Font)              Font shape `TU/SimSun(0)/m/it' tried instead on input line 114.
- [4
+ [4]
+第一章
+(./1-python-plim/main.tex [5
 
 ]
-第一章
-(./1-python-plim/main.tex [5]
 Overfull \hbox (5.07143pt too wide) in paragraph at lines 42--44
 []\TU/SimSun(0)/m/n/10.53937 作 者\TU/lmr/m/n/10.53937 : \TU/SimSun(0)/m/n/10.53937 知 乎 用 户 链 接\TU/lmr/m/n/10.53937 : https://www.zhihu.com/question/31347357/answer/892133941
  []
@@ -2367,27 +2366,45 @@ Package mdframed Info: Not enough space on this page on input line 1980.
 
 ]
 第三章
-(./3-set-theory/main.tex [65] [66]) [67] [68
+(./3-set-theory/main.tex [65] [66] [67] [68] [69]
+Package mdframed Info: mdframed works in twoside mode on input line 307.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 307.
 
-] (/Users/zgw/Documents/dx/TeXify/pypsolve/.texpadtmp/pypsolve-main.bbl [69] [70
+
+LaTeX Font Warning: Command \Large invalid in math mode on input line 307.
+
+[70]
+Package mdframed Info: mdframed works in twoside mode on input line 355.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 355.
+
+
+LaTeX Font Warning: Command \Large invalid in math mode on input line 355.
+
+[71]) [72] (/Users/zgw/Documents/dx/TeXify/pypsolve/.texpadtmp/pypsolve-main.bbl [73
+
+] [74
 
 ]) 
 AED: lastpage setting LastPage
-[71] (/Users/zgw/Documents/dx/TeXify/pypsolve/.texpadtmp/pypsolve-main.aux)
+[75] (/Users/zgw/Documents/dx/TeXify/pypsolve/.texpadtmp/pypsolve-main.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.47188pt have occurred.
 
 Package rerunfilecheck Info: File `pypsolve-main.out' has not changed.
-(rerunfilecheck)             Checksum: 79A5E90384EC95ECED6E08EFB427A5D7;4196.
+(rerunfilecheck)             Checksum: E967FF8E0A2B7BAF2D056818ED972558;4535.
  ) 
 Here is how much of TeX's memory you used:
- 39125 strings out of 476776
- 813376 string characters out of 5805932
- 2126991 words of memory out of 5000000
- 58447 multiletter control sequences out of 15000+600000
+ 39128 strings out of 476776
+ 813429 string characters out of 5805932
+ 2125991 words of memory out of 5000000
+ 58450 multiletter control sequences out of 15000+600000
  526510 words of font info for 140 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 98i,11n,100p,2264b,1741s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 98i,14n,100p,2264b,1741s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on /Users/zgw/Documents/dx/TeXify/pypsolve/.texpadtmp/pypsolve-main.pdf (71 pages).
+Output written on /Users/zgw/Documents/dx/TeXify/pypsolve/.texpadtmp/pypsolve-main.pdf (75 pages).
