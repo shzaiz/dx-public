@@ -278,6 +278,20 @@ filename "single/definite-integal.lyx"
 
 \end_layout
 
+\begin_layout Chapter
+无穷级数
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "multiple/inf-series.lyx"
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Part
 多元微积分
 \end_layout
@@ -311,13 +325,13 @@ filename "multiple/eq-geo.lyx"
 \end_layout
 
 \begin_layout Chapter
-无穷级数
+多元微积分
 \end_layout
 
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand input
-filename "multiple/inf-series.lyx"
+filename "multiple/mul-diff.lyx"
 
 \end_inset
 

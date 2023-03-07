@@ -319,6 +319,7 @@ B: 来看一看朱富海老师的文章就知道了.
         & 当且仅当 & \verb|\leftrightarrow| \\
       \hline
       \end{tabular}
+      \caption{五种常见的连接词}
     \label{fig:conn}
   \end{table}
 
@@ -370,8 +371,9 @@ The order of operations is a rule that tells the correct sequence of steps for e
 		\begin{center}
 			\includegraphics[scale=0.5]{2-prop-logic/figs/hfwei.png}
 		\end{center}
-		\label{fig:hfwei}
+		
 		\caption{南京大学魏恒峰老师}
+		\label{fig:hfwei}
 \end{figure}
 
 \begin{idea}
@@ -1000,7 +1002,6 @@ $$
 	\task $(P\oi Q)\oi (\no P\oi Q)\oi (P\an \no Q)\oi (\no P\an \no Q).$
 \end{tasks}
 \end{Exercise}
-\setboolean{firstanswerofthechapter}{true}
 \begin{multicols}{2}
         \begin{Answer}[ref={ex:proplogic}]
             \Question 
@@ -1025,8 +1026,6 @@ $$
             	\Question 略.
         \end{Answer}
 \end{multicols}
-    \setboolean{firstanswerofthechapter}{false}
-
 
 \section{命题推演的真象: 命题的推演}
 
@@ -1172,6 +1171,23 @@ $$
 	如果$W$是$G,H$的消解式, 则$G\land H\Rightarrow W$. 
 \end{theorem}
 
+\begin{Exercise}\label{ex:proplogic2}
+
+\Question 请写一个Python程序, 使得我们可以完成真值表的填写. 
+
+\Question 请写出一个Python程序, 使得我们可以把一个命题问题化为合取范式. 
+\end{Exercise}
+
+\begin{multicols}{2}
+
+	\begin{Answer}[ref={ex:proplogic2}]
+		\Question 提示: 我们可以使用Python里面的\texttt{eval}函数--可以使用字符串替换的方法进行答案. 
+		\Question 提示: 这个是非常有趣的事. 怎么识别符号? 怎么进行推理? 这些大部分可以在编译原理课上学习到. 这个是一个不容易的事情. 但是我们可以调用别人已经有的库. 上网络上很容易搜到.  
+	\end{Answer}
+	
+\end{multicols}
+
+
 \section{表达更丰富的内容: 谓词~部分与整体的关系}
 
 我们发现命题逻辑无法表达部分与整体的关系. 例如: 
@@ -1205,8 +1221,9 @@ $$
 		\begin{center}
 			\includegraphics[scale=0.2]{2-prop-logic/figs/jyy.jpeg}
 		\end{center}
-		\label{fig:jyy}
+		
 		\caption{南京大学蒋炎岩老师与他绘制的状态机}
+		\label{fig:jyy}
 	\end{figure}
 
 \begin{definition}[个体常量, 个体变量, 个体域, 全总个体域]
@@ -1787,9 +1804,11 @@ Hardy说证明$\sqrt 2$是无理数是最漂亮的证明之一. 其中用了反�
 \begin{figure}[!htbp]
 	\centering
 	\includegraphics[scale=0.4]{2-prop-logic/figs/exact-meaningless}
+	
+	\caption{蒋炎岩老师}
 	\label{fig:exact-meaningless}
-	\caption{蒋炎岩老师在操作系统课程上讲述概念的价值}
-\end{figure}
+	\end{figure}
+
 
 \begin{quote}
 	(对于初学者而言, ) 精确的定义毫无意义.(见图\ref{fig:exact-meaningless}) \hfill --蒋炎岩

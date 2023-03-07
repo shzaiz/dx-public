@@ -123,25 +123,23 @@ The two examples above is considered as fundamental.
  
 \end_layout
 
-\begin_layout Section
-Solving by recurrences
+\begin_layout Standard
+We have the following problems: 
 \end_layout
 
 \begin_layout Example
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-The Tower of Hanoi
-\end_layout
-
-\end_inset
-
-
+A seven-digit number consisting of 1,2,3,4,5,6,7, satisfying digit on the
+ number on the odd digits equals the absolute value of the difference of
+ two adjacent numbers.
+ Count how many digits satisfies the condition.
+ 
 \end_layout
 
 \begin_layout Standard
-
+Here we have the two rules: First make the make-up components, and then
+ the permutations of the numbers.
+ Another one is when solving the same problem, the rules of the enumerating
+ must be consistent.
 \end_layout
 
 \end_body

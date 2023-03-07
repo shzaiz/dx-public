@@ -118,7 +118,44 @@ status open
 
 \end_inset
 
+ 实线性空间
+\begin_inset Formula $V$
+\end_inset
+
+上的对称双线性函数
+\begin_inset Formula $(\al,\bt)$
+\end_inset
+
+为
+\begin_inset Formula $V$
+\end_inset
+
+的一个内积, 如果
+\begin_inset Formula $(\al,\bt)$
+\end_inset
+
+满足正定性, 即
+\begin_inset Formula 
+\[
+(\al,\al)\geq0,(\al,\al)=0\iff\al=0.
+\]
+
+\end_inset
+
+具有内积的实线性空间称为Euclid空间.
  
+\end_layout
+
+\begin_layout Standard
+于是我们就把二维和三维空间的情形下具有一般的实线性空间
+\begin_inset Formula $\R^{n}$
+\end_inset
+
+上有定义: 
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \begin_layout Section

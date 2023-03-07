@@ -7,8 +7,7 @@
 \textclass ctex-book
 \begin_preamble
 \usepackage{amssymb}
-\DeclareRobustCommand\nobreakspace{\leavevmode\nobreak\ }
-\renewcommand{\proofname}{解}
+%\DeclareRobustCommand\nobreakspace{\leavevmode\nobreak\ }
 \end_preamble
 \options fontset=windows
 \use_default_options true
@@ -78,7 +77,7 @@ theorems-tcolorbox
 \end_index
 \leftmargin 2cm
 \topmargin 3cm
-\rightmargin 5cm
+\rightmargin 2cm
 \bottommargin 3cm
 \secnumdepth 3
 \tocdepth 3
