@@ -11,7 +11,7 @@
 	{\end{list}}
 
 \usepackage{listings}
-
+\usetikzlibrary{automata, positioning, arrows}
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
@@ -88,6 +88,14 @@ item-indent=0pt, label-offset=2pt, column-sep={10pt}}
     {\noindent\bfseries\emph{\textcolor{cyan}{\AnswerName\ \ExerciseHeaderNB, page \pageref{\AnswerRef}}}\smallskip}}
 \setlength{\QuestionIndent}{16pt}
 
+ \tikzset{
+ ->, % makes the edges directed
+ >=stealth, % makes the arrow heads bold
+ node distance=3cm, % specifies the minimum distance between two nodes. Change if necessary.
+ every state/.style={thick, fill=gray!10}, % sets the properties for each ’state’ node
+ initial text=$ $, % sets the text that appears on the start arrow
+ }
+
 
 \begin{document}
 \title{问题求解课程讲义}
@@ -115,9 +123,9 @@ item-indent=0pt, label-offset=2pt, column-sep={10pt}}
 \input{1-python-plim/main.tex}
 \chapter{简单数理逻辑}
 \input{2-prop-logic/main.tex}
-\chapter{简单朴素集合论}
+\chapter{集合论以及二元关系}
 \input{3-set-theory/main}
-\chapter{二元关系}
+\chapter{一些简单的程序}
 \input{4-pair/main}
 
 

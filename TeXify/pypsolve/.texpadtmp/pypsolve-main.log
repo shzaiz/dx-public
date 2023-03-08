@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.1.19)  7 MAR 2023 17:23
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.1.19)  8 MAR 2023 11:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -966,7 +966,40 @@ Package: empheq 2017/03/31 v2.15 Emphasizing equations
 \EQ_mathdisplay_box=\box82
 \EQ_tag_box=\box83
 \g_EQ_temprow_int=\count416
-))) (/usr/local/texlive/2022/texmf-dist/tex/latex/glossaries/base/glossaries.sty
+))) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryautomata.code.tex
+File: tikzlibraryautomata.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.multipart.code.tex
+File: tikzlibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.multipart.code.tex
+File: pgflibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodepartlowerbox=\box84
+\pgfnodeparttwobox=\box85
+\pgfnodepartthreebox=\box86
+\pgfnodepartfourbox=\box87
+\pgfnodeparttwentybox=\box88
+\pgfnodepartnineteenbox=\box89
+\pgfnodeparteighteenbox=\box90
+\pgfnodepartseventeenbox=\box91
+\pgfnodepartsixteenbox=\box92
+\pgfnodepartfifteenbox=\box93
+\pgfnodepartfourteenbox=\box94
+\pgfnodepartthirteenbox=\box95
+\pgfnodeparttwelvebox=\box96
+\pgfnodepartelevenbox=\box97
+\pgfnodeparttenbox=\box98
+\pgfnodepartninebox=\box99
+\pgfnodeparteightbox=\box100
+\pgfnodepartsevenbox=\box101
+\pgfnodepartsixbox=\box102
+\pgfnodepartfivebox=\box103
+))) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
+File: pgflibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\arrowsize=\dimen335
+)) (/usr/local/texlive/2022/texmf-dist/tex/latex/glossaries/base/glossaries.sty
 Package: glossaries 2022/11/03 v4.52 (NLCT)
  (/usr/local/texlive/2022/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
@@ -1020,7 +1053,8 @@ Package: fp-random 1995/02/23
 \FPseed=\count429
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/fp/fp-eqn.sty
 Package: fp-eqn 1995/04/03
-) (/usr/local/texlive/2022/texmf-dist/tex/latex/fp/fp-upn.sty
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/fp/fp-upn.sty
 Package: fp-upn 1996/10/21
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/fp/fp-eval.sty
 Package: fp-eval 1995/04/03
@@ -1056,12 +1090,12 @@ Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
 \LTpre=\skip158
 \LTpost=\skip159
 \LTchunksize=\count438
-\LTcapwidth=\dimen335
-\LT@head=\box84
-\LT@firsthead=\box85
-\LT@foot=\box86
-\LT@lastfoot=\box87
-\LT@gbox=\box88
+\LTcapwidth=\dimen336
+\LT@head=\box104
+\LT@firsthead=\box105
+\LT@foot=\box106
+\LT@lastfoot=\box107
+\LT@gbox=\box108
 \LT@cols=\count439
 \LT@rows=\count440
 \c@LT@tables=\count441
@@ -1075,22 +1109,21 @@ Package: glossary-super 2022/11/03 v4.52 (NLCT)
  (/usr/local/texlive/2022/texmf-dist/tex/latex/supertabular/supertabular.sty
 Package: supertabular 2020/02/02 v4.1g the supertabular environment
 \c@tracingst=\count443
-\ST@wd=\dimen336
+\ST@wd=\dimen337
 \ST@rightskip=\skip162
 \ST@leftskip=\skip163
 \ST@parfillskip=\skip164
-\ST@pageleft=\dimen337
-\ST@headht=\dimen338
-\ST@tailht=\dimen339
-\ST@pagesofar=\dimen340
-\ST@pboxht=\dimen341
-\ST@lineht=\dimen342
-\ST@prevht=\dimen343
-\ST@toadd=\dimen344
-\ST@dimen=\dimen345
-\ST@pbox=\box89
-))
-(/usr/local/texlive/2022/texmf-dist/tex/latex/glossaries/styles/glossary-tree.sty
+\ST@pageleft=\dimen338
+\ST@headht=\dimen339
+\ST@tailht=\dimen340
+\ST@pagesofar=\dimen341
+\ST@pboxht=\dimen342
+\ST@lineht=\dimen343
+\ST@prevht=\dimen344
+\ST@toadd=\dimen345
+\ST@dimen=\dimen346
+\ST@pbox=\box109
+)) (/usr/local/texlive/2022/texmf-dist/tex/latex/glossaries/styles/glossary-tree.sty
 Package: glossary-tree 2022/11/03 v4.52 (NLCT)
 \glstreeindent=\skip165
 )) (/usr/local/texlive/2022/texmf-dist/tex/latex/mwe/mwe.sty
@@ -1119,55 +1152,35 @@ Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 \c@blind@pangramcount=\count460
 \c@blind@pangrammax=\count461
 )) (/usr/local/texlive/2022/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen346
-\WF@size=\dimen347
+\wrapoverhang=\dimen347
+\WF@size=\dimen348
 \c@WF@wrappedlines=\count462
-\WF@box=\box90
+\WF@box=\box110
 \WF@everypar=\toks59
 Package: wrapfig 2003/01/31  v 3.6
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2021/11/30 v1.9d multicolumn formatting (FMi)
 \c@tracingmulticols=\count463
-\mult@box=\box91
-\multicol@leftmargin=\dimen348
+\mult@box=\box111
+\multicol@leftmargin=\dimen349
 \c@unbalance=\count464
 \c@collectmore=\count465
 \doublecol@number=\count466
 \multicoltolerance=\count467
 \multicolpretolerance=\count468
-\full@width=\dimen349
-\page@free=\dimen350
-\premulticols=\dimen351
-\postmulticols=\dimen352
+\full@width=\dimen350
+\page@free=\dimen351
+\premulticols=\dimen352
+\postmulticols=\dimen353
 \multicolsep=\skip166
 \multicolbaselineskip=\skip167
-\partial@page=\box92
-\last@line=\box93
-\maxbalancingoverflow=\dimen353
-\mult@rightbox=\box94
-\mult@grightbox=\box95
-\mult@firstbox=\box96
-\mult@gfirstbox=\box97
-\@tempa=\box98
-\@tempa=\box99
-\@tempa=\box100
-\@tempa=\box101
-\@tempa=\box102
-\@tempa=\box103
-\@tempa=\box104
-\@tempa=\box105
-\@tempa=\box106
-\@tempa=\box107
-\@tempa=\box108
-\@tempa=\box109
-\@tempa=\box110
-\@tempa=\box111
-\@tempa=\box112
-\@tempa=\box113
-\@tempa=\box114
-\@tempa=\box115
-\@tempa=\box116
-\@tempa=\box117
+\partial@page=\box112
+\last@line=\box113
+\maxbalancingoverflow=\dimen354
+\mult@rightbox=\box114
+\mult@grightbox=\box115
+\mult@firstbox=\box116
+\mult@gfirstbox=\box117
 \@tempa=\box118
 \@tempa=\box119
 \@tempa=\box120
@@ -1184,14 +1197,34 @@ Package: multicol 2021/11/30 v1.9d multicolumn formatting (FMi)
 \@tempa=\box131
 \@tempa=\box132
 \@tempa=\box133
+\@tempa=\box134
+\@tempa=\box135
+\@tempa=\box136
+\@tempa=\box137
+\@tempa=\box138
+\@tempa=\box139
+\@tempa=\box140
+\@tempa=\box141
+\@tempa=\box142
+\@tempa=\box143
+\@tempa=\box144
+\@tempa=\box145
+\@tempa=\box146
+\@tempa=\box147
+\@tempa=\box148
+\@tempa=\box149
+\@tempa=\box150
+\@tempa=\box151
+\@tempa=\box152
+\@tempa=\box153
 \c@minrows=\count469
 \c@columnbadness=\count470
 \c@finalcolumnbadness=\count471
-\last@try=\dimen354
-\multicolovershoot=\dimen355
-\multicolundershoot=\dimen356
-\mult@nat@firstbox=\box134
-\colbreak@box=\box135
+\last@try=\dimen355
+\multicolovershoot=\dimen356
+\multicolundershoot=\dimen357
+\mult@nat@firstbox=\box154
+\colbreak@box=\box155
 \mc@col@check@num=\count472
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/chngcntr/chngcntr.sty
 Package: chngcntr 2018/04/09 v1.1a change counter resetting
@@ -1308,12 +1341,12 @@ Package: listofitems 2019/08/21 v1.63 Grab items in lists using user-specified s
 \stack@tmplength=\skip169
 \temp@stkl=\skip170
 \@stackedboxwidth=\skip171
-\@addedbox=\box136
-\@anchorbox=\box137
-\@insetbox=\box138
-\se@backgroundbox=\box139
-\stackedbox=\box140
-\@centerbox=\box141
+\@addedbox=\box156
+\@anchorbox=\box157
+\@insetbox=\box158
+\se@backgroundbox=\box159
+\stackedbox=\box160
+\@centerbox=\box161
 \c@ROWcellindex@=\count476
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/tasks/tasks.sty
 Package: tasks 2022/01/08 v1.4a lists with columns filled horizontally
@@ -1325,27 +1358,27 @@ Package: tasks 2022/01/08 v1.4a lists with columns filled horizontally
 \l__tasks_item_columns_int=\count482
 \g__tasks_env_int=\count483
 \l__tasks_start_int=\count484
-\l__tasks_item_indent_dim=\dimen357
-\l__tasks_item_default_indent_dim=\dimen358
-\l__tasks_item_width_dim=\dimen359
-\l__tasks_label_width_dim=\dimen360
-\l__tasks_label_default_width_dim=\dimen361
-\l__tasks_label_offset_dim=\dimen362
-\l__tasks_label_default_offset_dim=\dimen363
-\l__tasks_column_sep_dim=\dimen364
-\l__tasks_correction_dim=\dimen365
-\l__tasks_full_width_dim=\dimen366
+\l__tasks_item_indent_dim=\dimen358
+\l__tasks_item_default_indent_dim=\dimen359
+\l__tasks_item_width_dim=\dimen360
+\l__tasks_label_width_dim=\dimen361
+\l__tasks_label_default_width_dim=\dimen362
+\l__tasks_label_offset_dim=\dimen363
+\l__tasks_label_default_offset_dim=\dimen364
+\l__tasks_column_sep_dim=\dimen365
+\l__tasks_correction_dim=\dimen366
+\l__tasks_full_width_dim=\dimen367
 \l__tasks_after_item_skip=\skip172
 \l__tasks_custom_after_item_skip=\skip173
 \l__tasks_before_list_skip=\skip174
 \l__tasks_after_list_skip=\skip175
-\l__tasks_item_coffin=\box142
-\l__tasks_label_coffin=\box143
+\l__tasks_item_coffin=\box162
+\l__tasks_label_coffin=\box163
 \c@task=\count485
 \l__tasks_tmpa_int=\count486
 \l__tasks_tmpb_int=\count487
-\l__tasks_tmpa_coffin=\box144
-\l__tasks_tmpa_box=\box145
+\l__tasks_tmpa_coffin=\box164
+\l__tasks_tmpa_box=\box165
 
 Package xtemplate Info: Declaring object type 'tasks' taking 3 argument(s) on
 (xtemplate)             line 450.
@@ -1383,17 +1416,17 @@ Package: exercise 2014/10/20 v1.6 Exercise package (P.Pichaureau)
 \c@savedsubQuestion=\count495
 \c@savedsubsubQuestion=\count496
 \@QuestionLevel=\count497
-\@Exercisebox=\box146
-\all@Exercisebox=\box147
-\temp@Exercisebox=\box148
-\all@Answerbox=\box149
-\temp@Answerbox=\box150
+\@Exercisebox=\box166
+\all@Exercisebox=\box167
+\temp@Exercisebox=\box168
+\all@Answerbox=\box169
+\temp@Answerbox=\box170
 \ExerciseDifficulty=\count498
 \QuestionDifficulty=\count499
 \subQuestionDifficulty=\count500
 \subsubQuestionDifficulty=\count501
 \ExePartDifficulty=\count502
-\@Answerbox=\box151
+\@Answerbox=\box171
 \colonnesLevel=\count503
 \tempskipa=\skip196
 \tempskipb=\skip197
@@ -1401,82 +1434,82 @@ Package: exercise 2014/10/20 v1.6 Exercise package (P.Pichaureau)
 ) (/Users/zgw/Documents/dx/TeXify/pypsolve/.texpadtmp/pypsolve-main.aux)
 \openout1 = `pypsolve-main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
 
 Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
 (fontspec)             this).
 
 \symlegacymaths=\mathgroup8
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 92.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 92.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 92.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 92.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 92.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 92.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 92.
-LaTeX Font Info:    Redeclaring math accent \check on input line 92.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 92.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 92.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 92.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 92.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 92.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 92.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 92.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 92.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 92.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 92.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 92.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 92.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 92.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 92.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 92.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 92.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 100.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 100.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 100.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 100.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 100.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 100.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 100.
+LaTeX Font Info:    Redeclaring math accent \check on input line 100.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 100.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 100.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 100.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 100.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 100.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 100.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 100.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 100.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 100.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 100.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 100.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 100.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 100.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 100.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 100.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 100.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 92.
+(Font)              `operators' in the math version `normal' on input line 100.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 92.
+(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 100.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 92.
+(Font)              `operators' in the math version `bold' on input line 100.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 92.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 100.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 92.
+(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 100.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 92.
+(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 100.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 92.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 100.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 92.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 100.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 92.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 100.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 92.
+(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 100.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 92.
+(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 100.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 92.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 100.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 92.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 100.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1514,22 +1547,22 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 92.
+(lastpage)             ! on input line 100.
 \c@lstlisting=\count504
-Package hyperref Info: Link coloring OFF on input line 92.
+Package hyperref Info: Link coloring OFF on input line 100.
 (/Users/zgw/Documents/dx/TeXify/pypsolve/.texpadtmp/pypsolve-main.out) (/Users/zgw/Documents/dx/TeXify/pypsolve/.texpadtmp/pypsolve-main.out)
 \@outlinefile=\write4
 \openout4 = `pypsolve-main.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 96.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 104.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 96.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 104.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+wasy on input line 96.
+LaTeX Font Info:    Trying to load font information for U+wasy on input line 104.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 ) [1
@@ -1562,10 +1595,10 @@ Package fontspec Info: Font family 'FangSong(0)' created for font 'FangSong'
 
 
 LaTeX Font Warning: Font shape `U/wasy/m/n' in size <10.53937> not available
-(Font)              size <10.95> substituted on input line 112.
+(Font)              size <10.95> substituted on input line 120.
 
 
-Overfull \hbox (13.62137pt too wide) in paragraph at lines 112--113
+Overfull \hbox (13.62137pt too wide) in paragraph at lines 120--121
 []\TU/SimSun(0)/m/n/10.53937 请 参 看 \TU/lmr/m/n/10.53937 Github \TU/SimSun(0)/m/n/10.53937 的 源 代 码 仓 库[]$[][][][][] [] [] [] [][][][][][] [] [][][] [] [][][][][][] [] [][][][][][][][][][] [] [][][][] [] [][][][] [] [][][][][][] []
  []
 
@@ -1576,7 +1609,7 @@ Overfull \hbox (13.62137pt too wide) in paragraph at lines 112--113
 \openout5 = `pypsolve-main.toc'.
 
 LaTeX Font Info:    Font shape `TU/SimSun(0)/m/sl' in size <10.53937> not available
-(Font)              Font shape `TU/SimSun(0)/m/it' tried instead on input line 114.
+(Font)              Font shape `TU/SimSun(0)/m/it' tried instead on input line 122.
  [4]
 第一章
 (./1-python-plim/main.tex [5
@@ -2393,40 +2426,116 @@ Package mdframed Info: mdframed detected package amsthm
 
 LaTeX Font Warning: Command \Large invalid in math mode on input line 355.
 
-[71]) [72]
-第四章
-(./4-pair/main.tex
-Package mdframed Info: mdframed works in twoside mode on input line 10.
+[71]
+Package mdframed Info: mdframed works in twoside mode on input line 435.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 10.
+(mdframed)              on input line 435.
 
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 10.
+LaTeX Font Warning: Command \Large invalid in math mode on input line 435.
 
-) [73
+[72]
+Package mdframed Info: Not enough space on this page on input line 436.
+Package mdframed Info: mdframed works in twoside mode on input line 456.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 456.
 
-] [74
 
-] (/Users/zgw/Documents/dx/TeXify/pypsolve/.texpadtmp/pypsolve-main.bbl [75] [76
+LaTeX Font Warning: Command \Large invalid in math mode on input line 456.
+
+[73] [74]
+Package mdframed Info: mdframed works in twoside mode on input line 561.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 561.
+
+
+LaTeX Font Warning: Command \Large invalid in math mode on input line 561.
+
+[75] [76] [77] [78]
+Missing character: There is no 中 (U+4E2D) in font [lmroman10-regular]:mapping=tex-text;!
+Package mdframed Info: mdframed works in twoside mode on input line 794.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 794.
+
+LaTeX Font Warning: Command \Large invalid in math mode on input line 794.
+
+[79]
+Package mdframed Info: mdframed works in twoside mode on input line 861.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 861.
+
+
+LaTeX Font Warning: Command \Large invalid in math mode on input line 861.
+
+[80] [81] [82] [83] [84] [85]
+Package mdframed Info: mdframed works in twoside mode on input line 1244.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1244.
+
+
+LaTeX Font Warning: Command \Large invalid in math mode on input line 1244.
+
+[86]
+Package mdframed Info: mdframed works in twoside mode on input line 1270.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1270.
+
+
+LaTeX Font Warning: Command \Large invalid in math mode on input line 1270.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1289.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1289.
+
+LaTeX Font Warning: Command \Large invalid in math mode on input line 1289.
+
+[87] [88] [89] [90] [91] [92]
+Package mdframed Info: mdframed works in twoside mode on input line 1629.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1629.
+
+
+LaTeX Font Warning: Command \Large invalid in math mode on input line 1629.
+
+[93] [94]
+Underfull \hbox (badness 10000) in paragraph at lines 1754--1757
+
+ []
+
+[95]) [96]
+第四章
+(./4-pair/main.tex) [97
+
+] [98
+
+] (/Users/zgw/Documents/dx/TeXify/pypsolve/.texpadtmp/pypsolve-main.bbl [99] [100
 
 ]) 
 AED: lastpage setting LastPage
-[77] (/Users/zgw/Documents/dx/TeXify/pypsolve/.texpadtmp/pypsolve-main.aux)
+[101] (/Users/zgw/Documents/dx/TeXify/pypsolve/.texpadtmp/pypsolve-main.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.47188pt have occurred.
 
 Package rerunfilecheck Info: File `pypsolve-main.out' has not changed.
-(rerunfilecheck)             Checksum: B2836374C54FA3CB950AD823CD0A7851;4706.
+(rerunfilecheck)             Checksum: 34AB621BDD6D2D095107427F1617D225;6536.
  ) 
 Here is how much of TeX's memory you used:
- 39139 strings out of 476776
- 813630 string characters out of 5805932
+ 40463 strings out of 476776
+ 853285 string characters out of 5805932
  2125991 words of memory out of 5000000
- 58458 multiletter control sequences out of 15000+600000
- 526510 words of font info for 140 fonts, out of 8000000 for 9000
+ 59762 multiletter control sequences out of 15000+600000
+ 526518 words of font info for 141 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  98i,14n,100p,2264b,1741s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on /Users/zgw/Documents/dx/TeXify/pypsolve/.texpadtmp/pypsolve-main.pdf (77 pages).
+Output written on /Users/zgw/Documents/dx/TeXify/pypsolve/.texpadtmp/pypsolve-main.pdf (101 pages).

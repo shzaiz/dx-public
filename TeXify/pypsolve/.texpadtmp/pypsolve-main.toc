@@ -31,11 +31,30 @@
 \contentsline {section}{\numberline {2.8}常见的证明方法}{54}{section.2.8}%
 \contentsline {section}{\numberline {2.9}重新审视算法的正确性: 从基本结构开始}{58}{section.2.9}%
 \contentsline {section}{\numberline {2.10}继续理解子过程和递归}{63}{section.2.10}%
-\contentsline {chapter}{\numberline {第三章\hspace {.3em}}简单朴素集合论}{65}{chapter.3}%
+\contentsline {chapter}{\numberline {第三章\hspace {.3em}}集合论以及二元关系}{65}{chapter.3}%
 \contentsline {section}{\numberline {3.1}简单的朴素集合论的一些定义}{65}{section.3.1}%
 \contentsline {section}{\numberline {3.2}高级集合操作}{69}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}交和并}{69}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}排列的力量}{71}{subsection.3.2.2}%
 \contentsline {section}{\numberline {3.3}悖论的出现}{72}{section.3.3}%
-\contentsline {chapter}{\numberline {第四章\hspace {.3em}}二元关系}{73}{chapter.4}%
+\contentsline {section}{\numberline {3.4}二元关系: 简介}{72}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}有序对}{74}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}笛卡尔积: 一种组合方式}{75}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}用有序对定义二元关系}{76}{subsection.3.4.3}%
+\contentsline {section}{\numberline {3.5}二元关系: 等价关系和序关系}{77}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}三个定义}{77}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}五种操作}{78}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}七个性质}{81}{subsection.3.5.3}%
+\contentsline {subsection}{\numberline {3.5.4}等价关系}{83}{subsection.3.5.4}%
+\contentsline {subsection}{\numberline {3.5.5}从自然数到有理数}{85}{subsection.3.5.5}%
+\contentsline {section}{\numberline {3.6}二元关系: 函数}{86}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}函数: 作为关系的一个子集}{86}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}作为集合的函数}{88}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.6.3}特殊函数关系}{88}{subsection.3.6.3}%
+\contentsline {subsection}{\numberline {3.6.4}作为关系的函数}{90}{subsection.3.6.4}%
+\contentsline {subsubsection}{函数的限制}{90}{subsubsection*.34}%
+\contentsline {subsubsection}{像和逆像}{90}{subsubsection*.35}%
+\contentsline {subsubsection}{函数的复合}{93}{subsubsection*.36}%
+\contentsline {subsubsection}{反函数}{95}{subsubsection*.37}%
+\contentsline {chapter}{\numberline {第四章\hspace {.3em}}一些简单的程序}{97}{chapter.4}%
 \contentsfinish 
