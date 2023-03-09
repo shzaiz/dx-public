@@ -1,6 +1,6 @@
 \contentsline {chapter}{\numberline {第一章\hspace {.3em}}程序设计语言基础回顾}{5}{chapter.1}%
 \contentsline {section}{\numberline {1.1}问题的提出: 通过程序, 可以求解的问题}{5}{section.1.1}%
-\contentsline {section}{\numberline {1.2}程序设计的语法(grammar)与语义(schematics)}{5}{section.1.2}%
+\contentsline {section}{\numberline {1.2}程序设计的语法与语义}{5}{section.1.2}%
 \contentsline {section}{\numberline {1.3}Python代码执行可视化: 一个网站}{6}{section.1.3}%
 \contentsline {section}{\numberline {1.4}可以``程序化''执行命令的最小指令集}{6}{section.1.4}%
 \contentsline {subsection}{\numberline {1.4.1}Python中的整个世界}{9}{subsection.1.4.1}%
@@ -13,14 +13,14 @@
 \contentsline {section}{\numberline {1.6}C语言引导}{20}{section.1.6}%
 \contentsline {subsection}{\numberline {1.6.1}作为不太好用的计算器}{21}{subsection.1.6.1}%
 \contentsline {subsection}{\numberline {1.6.2}变量的引入}{22}{subsection.1.6.2}%
-\contentsline {subsection}{\numberline {1.6.3}顺序执行的程序}{22}{subsection.1.6.3}%
+\contentsline {subsection}{\numberline {1.6.3}顺序执行的程序}{23}{subsection.1.6.3}%
 \contentsline {chapter}{\numberline {第二章\hspace {.3em}}简单数理逻辑}{25}{chapter.2}%
 \contentsline {section}{\numberline {2.1}问题的提出: 为什么要研究简单的数理逻辑}{25}{section.2.1}%
 \contentsline {section}{\numberline {2.2}开始行动: 符号化逻辑}{31}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}命题, 真值表和指派}{31}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}命题逻辑的化简}{37}{subsection.2.2.2}%
 \contentsline {paragraph}{解答:}{39}{paragraph*.17}%
-\contentsline {subsection}{\numberline {2.2.3}化简的目标: 范式}{39}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.3}化简的``目标''之一: 范式}{39}{subsection.2.2.3}%
 \contentsline {section}{\numberline {2.3}命题推演的真象: 命题的推演}{43}{section.2.3}%
 \contentsline {section}{\numberline {2.4}表达更丰富的内容: 谓词\nobreakspace {}部分与整体的关系}{46}{section.2.4}%
 \contentsline {section}{\numberline {2.5}尝试解释谓词公式}{50}{section.2.5}%
@@ -37,24 +37,25 @@
 \contentsline {subsection}{\numberline {3.2.1}交和并}{69}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}排列的力量}{71}{subsection.3.2.2}%
 \contentsline {section}{\numberline {3.3}悖论的出现}{72}{section.3.3}%
-\contentsline {section}{\numberline {3.4}二元关系: 简介}{72}{section.3.4}%
+\contentsline {section}{\numberline {3.4}二元关系: 简介以及简单运算}{72}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}有序对}{74}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {3.4.2}笛卡尔积: 一种组合方式}{75}{subsection.3.4.2}%
 \contentsline {subsection}{\numberline {3.4.3}用有序对定义二元关系}{76}{subsection.3.4.3}%
-\contentsline {section}{\numberline {3.5}二元关系: 等价关系和序关系}{77}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}三个定义}{77}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}五种操作}{78}{subsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.5.3}七个性质}{81}{subsection.3.5.3}%
-\contentsline {subsection}{\numberline {3.5.4}等价关系}{83}{subsection.3.5.4}%
-\contentsline {subsection}{\numberline {3.5.5}从自然数到有理数}{85}{subsection.3.5.5}%
-\contentsline {section}{\numberline {3.6}二元关系: 函数}{86}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}函数: 作为关系的一个子集}{86}{subsection.3.6.1}%
-\contentsline {subsection}{\numberline {3.6.2}作为集合的函数}{88}{subsection.3.6.2}%
-\contentsline {subsection}{\numberline {3.6.3}特殊函数关系}{88}{subsection.3.6.3}%
-\contentsline {subsection}{\numberline {3.6.4}作为关系的函数}{90}{subsection.3.6.4}%
-\contentsline {subsubsection}{函数的限制}{90}{subsubsection*.34}%
-\contentsline {subsubsection}{像和逆像}{90}{subsubsection*.35}%
-\contentsline {subsubsection}{函数的复合}{93}{subsubsection*.36}%
-\contentsline {subsubsection}{反函数}{95}{subsubsection*.37}%
-\contentsline {chapter}{\numberline {第四章\hspace {.3em}}一些简单的程序}{97}{chapter.4}%
+\contentsline {subsection}{\numberline {3.4.4}关系的简单运算}{77}{subsection.3.4.4}%
+\contentsline {section}{\numberline {3.5}等价关系\nobreakspace {}--\nobreakspace {}特殊的二元关系}{83}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}从自然数到有理数}{85}{subsection.3.5.1}%
+\contentsline {section}{\numberline {3.6}相容关系\nobreakspace {}--\nobreakspace {}特殊的二元关系}{87}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}集合的覆盖}{87}{subsection.3.6.1}%
+\contentsline {section}{\numberline {3.7}函数\nobreakspace {}--\nobreakspace {}特殊的二元关系}{88}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}函数: 作为关系的一个子集}{88}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.2}作为集合的函数}{89}{subsection.3.7.2}%
+\contentsline {subsection}{\numberline {3.7.3}特殊函数关系}{90}{subsection.3.7.3}%
+\contentsline {subsection}{\numberline {3.7.4}作为关系的函数}{91}{subsection.3.7.4}%
+\contentsline {subsubsection}{函数的限制}{91}{subsubsection*.37}%
+\contentsline {subsubsection}{像和逆像}{91}{subsubsection*.38}%
+\contentsline {subsubsection}{函数的复合}{94}{subsubsection*.39}%
+\contentsline {subsubsection}{反函数}{97}{subsubsection*.40}%
+\contentsline {section}{\numberline {3.8}序关系}{98}{section.3.8}%
+\contentsline {chapter}{\numberline {第四章\hspace {.3em}}一些简单的程序}{99}{chapter.4}%
+\contentsline {section}{\numberline {4.1}那些年, 在电脑上玩过的小游戏}{99}{section.4.1}%
 \contentsfinish 

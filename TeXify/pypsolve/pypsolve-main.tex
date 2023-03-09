@@ -77,9 +77,9 @@ item-indent=0pt, label-offset=2pt, column-sep={10pt}}
 \counterwithin{Answer}{chapter}
 \renewcounter{Exercise}[chapter]
 \newcommand{\QuestionNB}{\bfseries\arabic{Question}.\ }
-\renewcommand{\ExerciseName}{练习}
+\renewcommand{\ExerciseName}{练习题}
 \renewcommand{\ExerciseHeader}{\noindent\def\stackalignment{l}% code from https://tex.stackexchange.com/a/195118/101651
-    \stackunder[0pt]{\colorbox{cyan}{\textcolor{white}{\textbf{\LARGE\ExerciseHeaderNB\;\large\ExerciseName}}}}{\textcolor{lightcyan}{\rule{\linewidth}{2pt}}}\medskip}
+    \stackunder[0pt]{\colorbox{cyan}{\textcolor{white}{\textbf{\large\ExerciseName\;\LARGE\ExerciseHeaderNB}}}}{\textcolor{lightcyan}{\rule{\linewidth}{2pt}}}\medskip}
 \renewcommand{\AnswerName}{Exercises}
 \renewcommand{\AnswerHeader}{\ifthenelse{\boolean{firstanswerofthechapter}}%
     {\bigskip\noindent\textcolor{cyan}{\textbf{CHAPTER \thechapter}}\newline\newline%
@@ -126,7 +126,7 @@ item-indent=0pt, label-offset=2pt, column-sep={10pt}}
 \chapter{集合论以及二元关系}
 \input{3-set-theory/main}
 \chapter{一些简单的程序}
-\input{4-pair/main}
+\input{4-programs/main}
 
 
 \chapter*{所有问题的解答}

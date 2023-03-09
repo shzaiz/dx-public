@@ -2808,6 +2808,15 @@ status open
 \end_layout
 
 \begin_layout Proposition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+限制映射的性质
+\end_layout
+
+\end_inset
+
 限制映射
 \begin_inset Formula $\ys|_{W}$
 \end_inset
@@ -2870,7 +2879,16 @@ status open
 \end_layout
 
 \begin_layout Definition
-(子空间的交) 设
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+(子空间的交)
+\end_layout
+
+\end_inset
+
+ 设
 \begin_inset Formula $V_{1},V_{2}$
 \end_inset
 
@@ -2902,7 +2920,16 @@ status open
 \end_layout
 
 \begin_layout Definition
-(子空间的和) 设
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+(子空间的和)
+\end_layout
+
+\end_inset
+
+ 设
 \begin_inset Formula $W_{1},W_{2}\subset V,W_{1}+W_{2}=\left\{ \alpha_{1}+\alpha_{2}|\alp_{1}\in W_{1},\alp_{2}\in W_{2}\right\} .$
 \end_inset
 
@@ -2914,7 +2941,16 @@ status open
 \end_layout
 
 \begin_layout Example
-(平面上子空间的交) 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+(平面上子空间的交)
+\end_layout
+
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Standard
@@ -2925,7 +2961,16 @@ status open
 \end_layout
 
 \begin_layout Example
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
 (两个子空间的维数和其和维数之间的关系)
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2950,7 +2995,17 @@ name "direct-sum-def"
 
 \end_inset
 
-(直和) 设
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+(直和的等价定义)
+\end_layout
+
+\end_inset
+
+ 设
 \begin_inset Formula $V_{1},V_{2}$
 \end_inset
 
@@ -3102,7 +3157,16 @@ noprefix "false"
 \end_layout
 
 \begin_layout Theorem
-(维数公式) 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+(维数公式)
+\end_layout
+
+\end_inset
+
+ 
 \begin_inset Formula $\dim(V_{1}\cap V_{2})+\dim(V_{1}+V_{2})=\dim V_{1}+\dim V_{2}$
 \end_inset
 
@@ -3118,7 +3182,16 @@ TODO
 \end_layout
 
 \begin_layout Definition
-(补子空间) 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+(补子空间)
+\end_layout
+
+\end_inset
+
+ 
 \begin_inset Formula $V_{1}$
 \end_inset
 
@@ -3318,7 +3391,16 @@ noprefix "false"
 \end_layout
 
 \begin_layout Example
-(平面上的平行线) 能不能把这些线分个类呢?
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+(平面上的平行线)
+\end_layout
+
+\end_inset
+
+ 能不能把这些线分个类呢?
 \end_layout
 
 \begin_layout Example
@@ -4059,7 +4141,16 @@ status open
 \end_layout
 
 \begin_layout Example
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
 (在数列极限中的应用)
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4070,7 +4161,16 @@ status open
 \end_layout
 
 \begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
 (等价关系)
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section

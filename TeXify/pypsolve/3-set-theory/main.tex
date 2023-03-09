@@ -425,7 +425,7 @@
 之后, 数学家们提出了ZF(ZFC)公理化集合论, 避免了这样的内容. 通过粗暴的避免了这种情况, 我们得到了一个还可以使用, 但是丧失了一部分确定性的集合. 
 
 
-\section{二元关系: 简介}
+\section{二元关系: 简介以及简单运算}
 
 我们在初中和高中的学习中学习了很多的``关系''. 比如, 比较两个数的大小, 我们引入了``大于'', ``小于''和``等于''的关系. 这样的内容我们可以进一步的抽象, 提炼出``关系''的一些共性. 
 
@@ -446,7 +446,7 @@ $$\forall a, b \in X.\; ((a, b) \in R \to (b, a) \in R)$$
 \textbf{传递性. }
 $$\forall a, b, c \in X.\; ((a, b) \in R \land (b, c) \in R \to (a, c) \in R)$$
 
-很多时候, 自反性 + 对称性 = 相容关系. 相容关系的含义其实是表明这两个关系之间有交叉.
+很多时候, 我们把自反性 + 对称性 = 相容关系. 相容关系的含义其实是表明这两个关系之间有交叉.
 
 这样, 我们就可以把关系表示成一个集合. 不严格的说, 在上面的定义中, 我们可以有这样的集合: $R = \set{(a, b) \mid |a - b| < 1}$. 
 
@@ -652,13 +652,15 @@ $$
 \end{itemize}
 
 
-\section{二元关系: 等价关系和序关系}
+\subsection{关系的简单运算}
+
+在进行之前, 我们认为对于关系的运算进行一些内容. 
 
 总体而言, 在这一小节中我们会给出三个定义, 5个操作, 以及7个对应的性质. 
 
 其实, 这一节的内容很大程度上和中学定义的函数类似. 但是有一个重大的区别. 从现在开始, 我们稍微忘记我们高中关于``函数''的定义, 但是留下``函数''带给我们的思考方式. 下面我们来用有序对重新解释这一切. 
 
-\subsection{三个定义}
+\ti{三个定义}
 
 \begin{definition}[定义域 (Domain)]
   \[
@@ -709,7 +711,7 @@ $$
 
 这个例子的直观解释就是任何的定义域, 值域都会在二元组的某一个元素中``出现''. 
 
-\subsection{五种操作}
+\ti{五种操作}
 
 \textbf{1. 逆变换. }像``反函数''的概念一样, 关系有时候也有逆变换. 
 
@@ -880,7 +882,7 @@ $$
 \end{proof}
 
 这就表明关系的复合满足结合律, 但是不满足交换律(和矩阵乘法很相似). 
-\subsection{七个性质}
+\ti{七个性质}
 
 \textbf{1. 自反的. }
 
@@ -1059,7 +1061,9 @@ $$
   \end{align*}
 \end{proof}
 
-\subsection{等价关系}
+\section{等价关系~--~特殊的二元关系}
+
+我们很多时候都在说``等价'', 一个很重要的问题是什么是等价? 我们可以运用什么样的语言去刻画它? 这一节, 我们来简单描述这样的特殊的二元关系 -- 等价关系.
 
 很多时候, 我们在研究数学关系会发现很多相同点. 比如在模意义下, 很多数是相等的. 比如$3 \equiv 6 \bmod 3$. 他们的余数都是$0$. 这就有一个很有趣的相似关系了. 
 
@@ -1097,7 +1101,7 @@ $$
   \end{enumerate}
 \end{definition}
 
-那么, 将划分的结果, 把每一类处于``等同地位的元素''拿出来看, 就可以被称作等价类了. \footnote{语言表述不清楚, 要插图} 等价类其实可以看作拉拢所有的等价关系. 正式的, 我们有如下的定义: 
+那么, 将划分的结果, 把每一类处于``等同地位的元素''拿出来看, 就可以被称作等价类了. 等价类其实可以看作拉拢所有的等价关系. 正式的, 我们有如下的定义: 
 
 \begin{definition}[等价类 (Equivalence Class)]
   The {\it equivalence class} of \blue{$a$} {\it modulo} $R$ is a set:
@@ -1182,31 +1186,54 @@ $$
 
 \subsection{从自然数到有理数}
 
+首先, 我们尝试把自然数的定义奠定在集合论的基础上. 具体的, 定义有如下的两条: 
+
+\begin{definition}[自然数的定义]
+	(1) $\varnothing\in \N $, 表示0;
+	
+	(2) 如果$n=\N $, 那么$n\cup\set{n}\in \N $, 表示$n+1$. 
+\end{definition} 
+
+下面我们来定义一个关系$\sim$, 在$\N \times \N $的集合上.  
 \begin{definition}
+定义关系在集合
   \[
     \sim\; \subseteq \N \times \N
   \]
-
+上, 其定义是: 
   \[
     (a, b) \sim (c, d) \iff a +_{\N} d = b +_{N} c
   \]
 \end{definition}
 
-那么, $\mathbb{N} \times \mathbb{N}/\sim$是$\Z$. 
+那么, $\mathbb{N} \times \mathbb{N}/\sim$是什么呢? 哪些在$\sim$环境下是什么样的情况呢? 发现, 只有负数加正数才可以化为等价类. 那么我们就可以说$[(1,3)]_\sim$这一类集合$(1,3),(2,4),\cdots$就定义为了负数$-2$. 于是相仿的, 我们就可以定义出$\Z$. 形象的可以理解为图\ref{fig:zdef}.
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.5]{3-set-theory/figs/ndef}
+	
+	\caption{整数$\Z$的定义}
+	\label{fig:zdef}
+\end{figure}
 
 \begin{definition}[$\mathbb{Z}$]
+一般地, 整数可以定义为: 
   \[
     \mathbb{Z} \triangleq \mathbb{N} \times \mathbb{N}/\sim
   \]
 \end{definition}
 
+有了整数, 我们就要为整数定义对应的加法和乘法. 分别记作$+_\Z$和$\times_\Z$. 这样就可以让这个加法和乘法不会因为牵涉了自然数变得``有问题''. 
+
 \begin{definition}[$+_\mathbb{Z}$]
+在整数范围的加法定义为: 
   \[
     [(m_1, n_1)] +_{\mathbb{Z}} [(m_2, n_2)] = [m_1 +_{\mathbb{N}} m_2, n_1 +_{\mathbb{N}} n_2]
   \]
 \end{definition}
 
 \begin{definition}[$\cdot_\mathbb{Z}$]
+在整数范围的乘法定义为: 
   \begin{gather*}
     [(m_1, n_1)] \cdot_{\mathbb{Z}} [(m_2, n_2)] \\
     = [m_1 \cdot_{\mathbb{N}} m_2 +_{\mathbb{N}} n_1 \cdot_{\mathbb{N}} n_2,
@@ -1214,15 +1241,21 @@ $$
   \end{gather*}
 \end{definition}
 
+现在我们假设我们的整数已经很好的定义了. 直接沿用其记号, 并且忘记刚刚的所有记号. 接下来我们再定义一个关系$\sim$(和刚刚的内容不一样). 这个关系是定义在$\Z\times (\Z \backslash \set{0_\Z})$上的. 
+
 \begin{definition}
+定义一个关系
   \[
     \sim\; \subseteq \mathbb{Z} \times (\mathbb{Z} \setminus \set{0_{\mathbb{Z}}})
   \]
-
+其含义是
   \[
     (a, b) \sim (c, d) \iff a \cdot_{\mathbb{Z}} d = b \cdot_{\mathbb{Z}} c
   \]
 \end{definition}
+
+那么请问$\mathbb{Z} \times (\mathbb{Z} \setminus \set{0_{\mathbb{Z}}})/\sim$ 是什么? 
+
 
 \begin{definition}[$\mathbb{Q}$]
   \[
@@ -1230,9 +1263,49 @@ $$
   \]
 \end{definition}
 
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.5]{3-set-theory/figs/qdef}
+	
+	\caption{整数$\Q$的定义}
+	\label{fig:zdef}
+\end{figure}
+
 如何用有理数定义实数? 请参见《数学分析》Dedekind分割. 
 
-\section{二元关系: 函数}
+\section{相容关系~--~特殊的二元关系}
+
+如果我们把上一节中的``传递性''去掉, 我们就得到了相容关系. 通俗的讲, 相容关系指的是``如果A和B有这个关系, 那么B和A也有这样的关系''. 也就是二者是``相互作用的''. 例如, 朋友关系. A和B是朋友, 那么B和A也是朋友; 如果A和C是朋友, 我们不一定能够推出B和C也是朋友. 于是我们给出相容关系的定义. 
+
+\begin{definition}[Compatibility relation]
+  $R \subseteq X \times X$ is an {\it compatibility relation} on $X$ iff $R$ is
+  \begin{itemize}
+    \item reflexive: $\forall a \in X.\; a R a$
+    \item symmetric: $\forall a, b \in X.\; (a R b \leftrightarrow b R a)$
+  \end{itemize}
+\end{definition}
+
+\subsection{集合的覆盖}
+
+由于我们通常是对于一个集合来做这样的``相容关系''的定义的, 于是, 我们就希望用一个具体的例子说明这个关系到底在做什么.
+
+\begin{definition}[集合的覆盖(cover)]
+	给定非空的集合$A$, 如果
+	
+	(1) $A_i \subseteq A$并且$A\neq \varnothing$, $i=1,2,3,\cdots,m $;
+	
+	(2) $\bigcup_{i=1}^m A_i = A$, 
+	
+	那么称$S$为集合$A$的一个覆盖. 
+\end{definition} 
+
+我们可以发现集合的覆盖是不唯一的, 并且我们发现任意一个覆盖, 如果我们把每一个覆盖的$A_i$与他自己做笛卡尔积, 并且最终把它并起来, 事实上就得到了原来的集合的一个相容关系. 
+
+\begin{theorem}
+	给定一个集合$A$的一个覆盖$S=\set{A_1 ,A_2 ,\cdots, A_n }$, 有$R=\set{A_1, A_2, \cdots , A_n}$, 则$R=A_1\times A_1 \cup A_2 \times A_2\cup \cdots \cup A_n \times A_n$, 那么我们说$R$是$A$上的相容关系. 
+\end{theorem}
+
+\section{函数~--~特殊的二元关系}
 
 \subsection{函数: 作为关系的一个子集}
 
@@ -1415,7 +1488,7 @@ $$\forall x \in X.\; I_{X}(x) = x.$$
 
 \begin{proof}[对角线论证 (Cantor's diagonal argument)]
 以下仅适用于可数集合 $A$. 
-  \begin{center}[]
+  \begin{center}
     \begin{tabular}{|c||c|c|c|c|c|c|}
       \hline
       $a$      & \multicolumn{6}{c|}{$f(a)$} \\ \hline
@@ -1836,4 +1909,7 @@ $$\forall x \in X.\; I_{X}(x) = x.$$
 
 那么, 我们就从集合论的角度构建了我们高中学习过的内容. 
 
+\section{序关系}
+
+我们在本章的开头介绍关系的时候就提到了``偏序''以及``全序''. 下面我们来通过一些更多的例子好好体会一下这些``序关系''带给我们的思维上的碰撞, 并且我们会重新看一看定义极限的$\epsilon-\delta$语言里面的重要关系: $<$(小于号), 为什么换成$(\leq)$(小于等于)就不行了. 并且这件事情能够让我们理解什么叫``开'', 什么叫``闭''; 同时也对于高等数学课程中空间解析几何的内容有一个更自然的想法. 
 
