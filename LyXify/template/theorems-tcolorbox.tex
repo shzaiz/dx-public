@@ -45,9 +45,8 @@ item-indent=0pt, label-offset=2pt, column-sep={10pt}}
 \renewcommand{\AnswerName}{Exercises}
 \renewcommand{\AnswerHeader}{\ifthenelse{\boolean{firstanswerofthechapter}}%
     {\bigskip\noindent\textcolor{cyan}{\textbf{CHAPTER \thesection}}\newline\newline%
-        \noindent\bfseries\emph{\textcolor{cyan}{\AnswerName\ \ExerciseHeaderNB, page %
-                \pageref{\AnswerRef}}}\smallskip}
-    {\noindent\bfseries\emph{\textcolor{cyan}{\AnswerName\ \ExerciseHeaderNB, page \pageref{\AnswerRef}}}\smallskip}}
+        \noindent\bfseries\emph{\textcolor{cyan}{\AnswerName\ \ExerciseHeaderNB}}\smallskip}
+    {\noindent\bfseries\emph{\textcolor{cyan}{\AnswerName\ \ExerciseHeaderNB}}\smallskip}}
 \setlength{\QuestionIndent}{16pt}
 EndPreamble
 
@@ -149,6 +148,36 @@ Style Exercise
 	LabelType             Counter
 	LabelCounter          theorem
     End
+    
+Style Answer
+    Category              Theorems
+    Margin                First_Dynamic
+	NextNoIndent          1    
+	LatexType             Environment
+    LatexName             Answer
+    Argument 1
+    	LabelString    "ref"
+    	Tooltip        "Which one is it?"
+    	Mandatory      1
+    	LeftDelim      [
+    	RightDelim    ]
+    EndArgument
+    NextNoIndent          0
+    LabelCounter          theorem
+    LabelString           "练习答案"
+    LabelSep              xx
+	ParIndent             MMM
+	ParSkip               0.4
+	ItemSep               0.2
+	TopSep                0.7
+	BottomSep             0.7
+	ParSep                0.3
+	Align                 Block
+	AlignPossible         Left
+	LabelType             Counter
+	LabelCounter          theorem
+    End
+
 
     
 Style Corollary
