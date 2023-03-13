@@ -80,6 +80,14 @@ theorems-tcolorbox
 
 \begin_body
 
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\lrang}[1]{\left\langle #1\right\rangle }
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Euclid空间的基本概念
 \end_layout
@@ -154,7 +162,50 @@ status open
 上有定义: 
 \end_layout
 
+\begin_layout Example
+对于任意的
+\begin_inset Formula $X,Y\in\R^{n}$
+\end_inset
+
+, 定义
+\begin_inset Formula $\left\langle X,Y\right\rangle =X'Y$
+\end_inset
+
+, 容易验证二元函数
+\begin_inset Formula $\left\langle X,Y\right\rangle $
+\end_inset
+
+是
+\begin_inset Formula $\R^{n}$
+\end_inset
+
+的内积.
+ 
+\end_layout
+
 \begin_layout Standard
+这样, 我们就有了一个很好的想法, 于是可以得到很好的结论–一般的内容公式用向量空间做到的.
+ 
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+长度, 单位化与单位向量
+\end_layout
+
+\end_inset
+
+我们称
+\begin_inset Formula $\sqrt{(\al,\al)}$
+\end_inset
+
+是长度, 记作
+\begin_inset Formula $|\al|.$
+\end_inset
+
 
 \end_layout
 

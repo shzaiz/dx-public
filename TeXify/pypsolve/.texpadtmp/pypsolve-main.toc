@@ -58,6 +58,7 @@
 \contentsline {subsubsection}{函数的复合}{94}{subsubsection*.39}%
 \contentsline {subsubsection}{反函数}{97}{subsubsection*.40}%
 \contentsline {section}{\numberline {3.8}序关系}{98}{section.3.8}%
+\contentsline {subsection}{\numberline {3.8.1}偏序关系}{98}{subsection.3.8.1}%
 \contentsline {chapter}{\numberline {第四章\hspace {.3em}}一些简单的程序}{99}{chapter.4}%
 \contentsline {section}{\numberline {4.1}那些年, 在电脑上玩过的小游戏}{99}{section.4.1}%
 \contentsfinish 

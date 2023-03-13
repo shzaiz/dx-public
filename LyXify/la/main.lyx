@@ -100,7 +100,7 @@ theorems-tcolorbox
 \begin_body
 
 \begin_layout Title
-线性代数学习笔记
+高等代数学习笔记
 \end_layout
 
 \begin_layout Chapter*
@@ -117,7 +117,12 @@ theorems-tcolorbox
 参考资料: 工程高等代数(第二版) 中国地质大学出版; 高等代数与解析几何 朱富海等.
  科学出版社; Linear Algebra and its applications.
  5th Ed.; The Essence of Linear Algebra.
- Grant Sanderson.; 工程数学线性代数同步辅导及习题全解 中国水利水电出版社; 
+ Grant Sanderson.; 工程数学线性代数同步辅导及习题全解 中国水利水电出版社;
+\end_layout
+
+\begin_layout Standard
+考试考完了, 取得了96分的好成绩, 因此可以改为高代学习笔记了吧(笑).
+ 
 \end_layout
 
 \begin_layout Standard
@@ -135,6 +140,11 @@ theorems-tcolorbox
 \lang english
 \begin_inset FormulaMacro
 \newcommand{\A}{\boldsymbol{A}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\eqs}{\epsilon}
 \end_inset
 
 
