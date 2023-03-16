@@ -1291,7 +1291,206 @@ status open
 \end_inset
 
 的一组基; (2)设
-\begin_inset Formula $\eqs_{1}=(1,0,0,0);\eqs_{2}=(0,1,0,0);\eqs_{3}=$
+\begin_inset Formula $\eqs_{1}=(1,0,0,0);\eqs_{2}=(0,1,0,0);\eqs_{3}=(0,0,1,0),\eqs_{4}=(0,0,0,1)$
+\end_inset
+
+是
+\begin_inset Formula $\F^{1\times4}$
+\end_inset
+
+的标准基底, 求
+\begin_inset Formula $\eqs_{1}\cdots\eqs_{4}$
+\end_inset
+
+到
+\begin_inset Formula $\al_{1}\cdots\al_{4}$
+\end_inset
+
+的过渡矩阵.
+ (3)求
+\begin_inset Formula $\bt=(1,2,4,8)$
+\end_inset
+
+在上述两组基下的坐标.
+\end_layout
+
+\begin_layout Enumerate
+设
+\begin_inset Formula $A\in\F^{n\times n},$
+\end_inset
+
+证明: 与
+\begin_inset Formula $A$
+\end_inset
+
+可交换的矩阵的全体是
+\begin_inset Formula $C(A)$
+\end_inset
+
+是
+\begin_inset Formula $\F^{n\times n}$
+\end_inset
+
+的一个子空间.
+ (1)求
+\begin_inset Formula $C(I_{n})$
+\end_inset
+
+;(2)设
+\begin_inset Formula $A=\diag{1,2,\cdots,n},$
+\end_inset
+
+求
+\begin_inset Formula $C(A)$
+\end_inset
+
+的维数和一组基.
+ 
+\end_layout
+
+\begin_layout Enumerate
+设
+\begin_inset Formula $\huaa,\huab$
+\end_inset
+
+是
+\begin_inset Formula $\F[x]$
+\end_inset
+
+到自身的线性映射, 其中
+\begin_inset Formula $\huaa f(x)=\frac{d}{dx}f(x),\huab f(x)=xf(x).$
+\end_inset
+
+(1) 求
+\begin_inset Formula $\huaa,\huab$
+\end_inset
+
+的核与象.
+ (2)证明
+\begin_inset Formula $\huaa\huab-\huab\huaa=\text{id}$
+\end_inset
+
+, 其中
+\begin_inset Formula $\text{id}$
+\end_inset
+
+是恒等映射.
+ 
+\end_layout
+
+\begin_layout Enumerate
+设
+\begin_inset Formula $\huaa,\huab$
+\end_inset
+
+是
+\begin_inset Formula $V$
+\end_inset
+
+到自身的线性映射, 且
+\begin_inset Formula $\huaa\huab-\huab\huaa=\text{id}$
+\end_inset
+
+, 试着证明: 对于任意的
+\begin_inset Formula $k\in\N^{*},\huaa^{k}\huab-\huab\huaa^{k}=k\huaa^{k-1}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+设
+\begin_inset Formula $V_{0},V_{1},\cdots,V_{n+1}$
+\end_inset
+
+在
+\begin_inset Formula $\F$
+\end_inset
+
+上有限维线性空间, 其中
+\begin_inset Formula $V_{0}=V_{n+1}=\{0\},$
+\end_inset
+
+线性映射
+\begin_inset Formula 
+\[
+\huaa_{i}:V_{i}\to V_{i+1},i=0,1,2,3,\cdots,n
+\]
+
+\end_inset
+
+满足
+\begin_inset Formula 
+\[
+\ker\huaa_{i+1}=\im\huaa_{i},i=0,1,\cdots,n-1.
+\]
+
+\end_inset
+
+证明
+\begin_inset Formula $\sum_{i=1}^{n}(-1)^{i}\dim V_{i}=0.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+ 没
+\begin_inset Formula $U,V,W$
+\end_inset
+
+都是在
+\begin_inset Formula $\F$
+\end_inset
+
+上的有限线性空间, 如果
+\begin_inset Formula $\huaa\in\hom(U,V),\huab\in\hom(V,U),$
+\end_inset
+
+证明
+\begin_inset Formula $\dim\im\huaa+\dim\im\huab\leq\dim\im\huaa\huab+\dim U.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+设
+\begin_inset Formula $\F^{1\times4}$
+\end_inset
+
+的两个子空间为
+\begin_inset Formula $M=\{(x_{1},x_{2},x_{3},x_{4})|2x_{1}-x_{2}+4x_{3}-3x_{4}=0,x_{1}+x_{3}-x_{4}=0\};N=\{(x_{1},x_{2},x_{3},x_{4})|3x_{1}+x_{2}+x_{3}=0,7x_{1}+7x_{3}-x_{4}=0\},$
+\end_inset
+
+ 求子空间
+\begin_inset Formula $M\cap N$
+\end_inset
+
+和
+\begin_inset Formula $M+N$
+\end_inset
+
+的维数和一组基.
+ 
+\end_layout
+
+\begin_layout Enumerate
+设
+\begin_inset Formula $\al=\sqrt{2}+\sqrt{3}$
+\end_inset
+
+, 定义映射
+\begin_inset Formula $\ys:\Q[x]\to\C,f(x)\mapsto f(\al)$
+\end_inset
+
+, 证明
+\begin_inset Formula $\ys$
+\end_inset
+
+是线性映射.
+ 并且求出
+\begin_inset Formula $\ker\ys,\im\ys.$
 \end_inset
 
 

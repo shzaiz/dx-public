@@ -143,6 +143,11 @@ theorems-tcolorbox
 \end_inset
 
 
+\begin_inset FormulaMacro
+\newcommand{\eqs}{\epsilon}
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
