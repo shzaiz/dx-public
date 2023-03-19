@@ -1925,6 +1925,10 @@ $$\forall x \in X.\; I_{X}(x) = x.$$
 
 \subsection{偏序关系}
 
+\begin{dialogue}
+	你非常熟悉的实数集上的“不大于”关系和非空集合A的幂集合上定义的“子集”关系都是次序关系，这与你长期以来的“commonsense”有差异吗？
+\end{dialogue}
+
 前面我们提到过偏序关系. 我们给出一个定义: 
 
 \begin{definition}
@@ -1937,7 +1941,12 @@ $$\forall x \in X.\; I_{X}(x) = x.$$
 
 这样的情形, 我们可以使用有向无环图(directed acyclic graph) 表示. 这样的一种可达(reachability)关系. 设$(X,\preceq)$
 
-类似于小于号, 我们可以有
+在我们日常的使用大于等于, 小于等于这样的元素的时候, 我们通常会注意到基本上这些内容都是可以取等的, 这就意味着满足这样的条件的集合中是有最大元和最小元的. 所以我们把这一关系抽象出来, 加以定义: 
+
+\begin{definition}
+	设$(A,\preceq)$是偏序集, $B$是$A$的非空子集, 如果$\exists b. (b\in B\an \forall x.(x\in B\to x\preceq b))$, 那么称$b$为$B$的最大元素(greatest element), 简称最大元. 如果$\exists b. (b\in B\an \forall x.(x\in B\to b\preceq x))$, 那么称$b$为$B$的最小元素(smallest element), 简称最小元. 
+\end{definition}
+
 
 
 

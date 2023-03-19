@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.1.19)  19 MAR 2023 13:28
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.1.19)  19 MAR 2023 18:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2531,25 +2531,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 1837--1840
  []
 
 [99]
-Package mdframed Info: mdframed works in twoside mode on input line 1935.
+Package mdframed Info: mdframed works in twoside mode on input line 1929.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1935.
+(mdframed)              on input line 1929.
 
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 1935.
+LaTeX Font Warning: Command \Large invalid in math mode on input line 1929.
 
-) [100]
+Package mdframed Info: mdframed works in twoside mode on input line 1939.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1939.
+
+LaTeX Font Warning: Command \Large invalid in math mode on input line 1939.
+
+[100]) [101] [102
+
+]
 第四章
-(./4-programs/main.tex) [101
+(./4-programs/main.tex) [103] [104
 
-] [102
-
-] (/Users/zgw/Documents/dx/TeXify/pypsolve/.texpadtmp/pypsolve-main.bbl [103] [104
+] (/Users/zgw/Documents/dx/TeXify/pypsolve/.texpadtmp/pypsolve-main.bbl [105] [106
 
 ]) 
 AED: lastpage setting LastPage
-[105] (/Users/zgw/Documents/dx/TeXify/pypsolve/.texpadtmp/pypsolve-main.aux)
+[107] (/Users/zgw/Documents/dx/TeXify/pypsolve/.texpadtmp/pypsolve-main.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.47188pt have occurred.
@@ -2561,12 +2568,12 @@ Package rerunfilecheck Info: File `pypsolve-main.out' has not changed.
 (rerunfilecheck)             Checksum: 182BA287FF3E854C5371CA1338D5E4D6;7355.
  ) 
 Here is how much of TeX's memory you used:
- 40533 strings out of 476776
- 856473 string characters out of 5805932
+ 40534 strings out of 476776
+ 856494 string characters out of 5805932
  2125991 words of memory out of 5000000
- 59828 multiletter control sequences out of 15000+600000
+ 59829 multiletter control sequences out of 15000+600000
  526518 words of font info for 141 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  98i,14n,100p,2264b,1741s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on /Users/zgw/Documents/dx/TeXify/pypsolve/.texpadtmp/pypsolve-main.pdf (105 pages).
+Output written on /Users/zgw/Documents/dx/TeXify/pypsolve/.texpadtmp/pypsolve-main.pdf (107 pages).
