@@ -1191,7 +1191,77 @@ $$
 
 \section{变得更加严谨: 形式化推理系统}
 
-XXX
+经过一些时间, 我们希望找到简化的推理与验证. 如下是若干个规则: 
+
+\begin{itemize}
+	\item Conjunction: $\dfrac{A,B}{A\an B}$;
+	\item Simplification: $\dfrac{A\an B}{A}$ and $\dfrac{A\an B}{B}$;
+	\item Addition: $\dfrac{A}{A\an B}$ and $\dfrac{B}{A\an B}$;
+	\item Disjunctive Syllogism: $\dfrac{A\an B,\no A}{B}$ and $\dfrac{A\an B,\no B}{A}$;
+	\item Modus Pones: $\dfrac{A,A\to B}{B}$;
+	\item Conditional Proof: $\dfrac{\text{From } A \text{ derive } B}{A\to B}$;
+	\item Double Negation: $\dfrac{\no \no A}{A}$;
+	\item Contradiction: $\dfrac{A\an \no A}{\text{False}}$;
+	\item Indirect proof: $\dfrac{\text{From } A, \text{derived False}}{A}$
+\end{itemize}
+
+我们只用上面的一些内容就可以得到更加复杂的推理规则: 比如我们有前提$A\to B,\no A\to A$, 尝试推出结论$B$. 我们可以用上面的推理规则这样推理: 
+$$
+\begin{array}{llll}
+A \rightarrow B & &  P  (1) \\
+\neg A \rightarrow A & & P &(2)\\
+\neg B & & P[\text { for } B]&(3) \\
+& \neg \neg A & P[\text { for } \neg A]&(4) \\
+& A & 4, \text { DN } &(5)\\
+& B & 1,5, \text { MP } &(6)\\
+& \text { False } & 3,6, \text { Contr }&(7) \\
+\neg A & & 4-7, \text { IP } &(8)\\
+A & & 2,8, \text { MP } &(9)\\
+\text { False } & & 8,9, \text { Contr }&(10)
+\end{array}
+$$
+
+\begin{dialogue}
+	A: 其实还是知道如何分类讨论就行了... 看看它的假设也是很明确的. 
+	
+	B: 确实. 我们能从这里得到哪些更多的东西呢?  
+\end{dialogue}
+
+\ti{Modus Tollens: mode that denies}
+
+$$
+\dfrac{A\to B,\no B}{A}
+$$
+$$
+\begin{array}{llll}
+A \rightarrow B & P &(1)\\
+\neg B & & P &(2)\\
+& \neg \neg A & P[\text { for } \neg \mathrm{A}] &(3)\\
+& A & 3, \mathrm{DN} &(4)\\
+& B & 1,4, \mathrm{MP} &(5)\\
+& \text { False } & 2,5, \text { Contr } &(6)\\
+\neg A & & 3-6, \mathrm{IP}&(7)
+\end{array}
+$$
+
+\ti{Proof by cases}
+
+$$
+\dfrac{A\an B,A\to C,B\to C}{C}
+$$
+
+\ti{Hypothetical Syllogism}
+
+$$
+\dfrac{A\to B,B\to C}{A\to C}
+$$
+
+\ti{Constructive Dilemma}
+
+$$
+\dfrac{A\an C,A\to C,B\to D}{C\an D}
+$$
+
 
 \section{表达更丰富的内容: 谓词~部分与整体的关系}
 
