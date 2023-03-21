@@ -1398,120 +1398,6 @@ status open
 
 \end_layout
 
-\begin_layout Enumerate
-设
-\begin_inset Formula $V_{0},V_{1},\cdots,V_{n+1}$
-\end_inset
-
-在
-\begin_inset Formula $\F$
-\end_inset
-
-上有限维线性空间, 其中
-\begin_inset Formula $V_{0}=V_{n+1}=\{0\},$
-\end_inset
-
-线性映射
-\begin_inset Formula 
-\[
-\huaa_{i}:V_{i}\to V_{i+1},i=0,1,2,3,\cdots,n
-\]
-
-\end_inset
-
-满足
-\begin_inset Formula 
-\[
-\ker\huaa_{i+1}=\im\huaa_{i},i=0,1,\cdots,n-1.
-\]
-
-\end_inset
-
-证明
-\begin_inset Formula $\sum_{i=1}^{n}(-1)^{i}\dim V_{i}=0.$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-设
-\begin_inset Formula $U,V,W$
-\end_inset
-
-都是在
-\begin_inset Formula $\F$
-\end_inset
-
-上的有限线性空间, 如果
-\begin_inset Formula $\huaa\in\hom(U,V),\huab\in\hom(V,U),$
-\end_inset
-
-证明
-\begin_inset Formula $\dim\im\huaa+\dim\im\huab\leq\dim\im\huaa\huab+\dim U.$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-设
-\begin_inset Formula $\F^{1\times4}$
-\end_inset
-
-的两个子空间为
-\begin_inset Formula $M=\{(x_{1},x_{2},x_{3},x_{4})|2x_{1}-x_{2}+4x_{3}-3x_{4}=0,x_{1}+x_{3}-x_{4}=0\};N=\{(x_{1},x_{2},x_{3},x_{4})|3x_{1}+x_{2}+x_{3}=0,7x_{1}+7x_{3}-x_{4}=0\},$
-\end_inset
-
- 求子空间
-\begin_inset Formula $M\cap N$
-\end_inset
-
-和
-\begin_inset Formula $M+N$
-\end_inset
-
-的维数和一组基.
- 
-\end_layout
-
-\begin_layout Enumerate
-设
-\begin_inset Formula $\al=\sqrt{2}+\sqrt{3}$
-\end_inset
-
-, 定义映射
-\begin_inset Formula $\ys:\Q[x]\to\C,f(x)\mapsto f(\al)$
-\end_inset
-
-, 证明
-\begin_inset Formula $\ys$
-\end_inset
-
-是线性映射.
- 并且求出
-\begin_inset Formula $\ker\ys,\im\ys.$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-设
-\begin_inset Formula $V_{1},V_{2},\cdots,V_{n}$
-\end_inset
-
-是
-\begin_inset Formula $V$
-\end_inset
-
-的真子空间, 证明
-\begin_inset Formula $\bigcup_{i=1}^{n}V_{i}\neq V.$
-\end_inset
-
-
-\end_layout
-
 \begin_layout Section
 线性同构和线性映射
 \end_layout
@@ -2276,6 +2162,124 @@ status open
 (求导)
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+请完成下列习题: 
+\end_layout
+
+\begin_layout Enumerate
+设
+\begin_inset Formula $V_{0},V_{1},\cdots,V_{n+1}$
+\end_inset
+
+在
+\begin_inset Formula $\F$
+\end_inset
+
+上有限维线性空间, 其中
+\begin_inset Formula $V_{0}=V_{n+1}=\{0\},$
+\end_inset
+
+线性映射
+\begin_inset Formula 
+\[
+\huaa_{i}:V_{i}\to V_{i+1},i=0,1,2,3,\cdots,n
+\]
+
+\end_inset
+
+满足
+\begin_inset Formula 
+\[
+\ker\huaa_{i+1}=\im\huaa_{i},i=0,1,\cdots,n-1.
+\]
+
+\end_inset
+
+证明
+\begin_inset Formula $\sum_{i=1}^{n}(-1)^{i}\dim V_{i}=0.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+设
+\begin_inset Formula $U,V,W$
+\end_inset
+
+都是在
+\begin_inset Formula $\F$
+\end_inset
+
+上的有限线性空间, 如果
+\begin_inset Formula $\huaa\in\hom(U,V),\huab\in\hom(V,U),$
+\end_inset
+
+证明
+\begin_inset Formula $\dim\im\huaa+\dim\im\huab\leq\dim\im\huaa\huab+\dim U.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+设
+\begin_inset Formula $\F^{1\times4}$
+\end_inset
+
+的两个子空间为 
+\begin_inset Formula $M=\{(x_{1},x_{2},x_{3},x_{4})|2x_{1}-x_{2}+4x_{3}-3x_{4}=0,x_{1}+x_{3}-x_{4}=0\};N=\{(x_{1},x_{2},x_{3},x_{4})|3x_{1}+x_{2}+x_{3}=0,7x_{1}+7x_{3}-x_{4}=0\},$
+\end_inset
+
+ 求子空间
+\begin_inset Formula $M\cap N$
+\end_inset
+
+和
+\begin_inset Formula $M+N$
+\end_inset
+
+的维数和一组基.
+ 
+\end_layout
+
+\begin_layout Enumerate
+设
+\begin_inset Formula $\al=\sqrt{2}+\sqrt{3}$
+\end_inset
+
+, 定义映射
+\begin_inset Formula $\ys:\Q[x]\to\C,f(x)\mapsto f(\al)$
+\end_inset
+
+, 证明
+\begin_inset Formula $\ys$
+\end_inset
+
+是线性映射.
+ 并且求出
+\begin_inset Formula $\ker\ys,\im\ys.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+设
+\begin_inset Formula $V_{1},V_{2},\cdots,V_{n}$
+\end_inset
+
+是
+\begin_inset Formula $V$
+\end_inset
+
+的真子空间, 证明
+\begin_inset Formula $\bigcup_{i=1}^{n}V_{i}\neq V.$
 \end_inset
 
 
