@@ -61,5 +61,5 @@
 \contentsline {section}{\numberline {3.8}序关系}{100}{section.3.8}%
 \contentsline {subsection}{\numberline {3.8.1}偏序关系}{100}{subsection.3.8.1}%
 \contentsline {chapter}{\numberline {第四章\hspace {.3em}}磨刀不误砍柴工[P]}{103}{chapter.4}%
-\contentsline {section}{\numberline {4.1}写代码/调试的基础设施}{103}{section.4.1}%
+\contentsline {section}{\numberline {4.1}数据与数据结构}{103}{section.4.1}%
 \contentsfinish 
