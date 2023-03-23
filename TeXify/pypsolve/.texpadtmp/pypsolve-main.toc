@@ -32,8 +32,8 @@
 \contentsline {paragraph}{解答:}{55}{paragraph*.24}%
 \contentsline {section}{\numberline {2.8}谓词逻辑的推理要求}{55}{section.2.8}%
 \contentsline {section}{\numberline {2.9}常见的证明方法}{56}{section.2.9}%
-\contentsline {section}{\numberline {2.10}重新审视算法的正确性: 从基本结构开始}{59}{section.2.10}%
-\contentsline {section}{\numberline {2.11}继续理解子过程和递归}{64}{section.2.11}%
+\contentsline {section}{\numberline {2.10}重新审视算法的正确性: 从基本结构开始}{60}{section.2.10}%
+\contentsline {section}{\numberline {2.11}继续理解子过程和递归}{65}{section.2.11}%
 \contentsline {chapter}{\numberline {第三章\hspace {.3em}}集合论以及二元关系[M]}{67}{chapter.3}%
 \contentsline {section}{\numberline {3.1}简单的朴素集合论的一些定义}{67}{section.3.1}%
 \contentsline {section}{\numberline {3.2}高级集合操作}{71}{section.3.2}%
@@ -54,12 +54,13 @@
 \contentsline {subsection}{\numberline {3.7.2}作为集合的函数}{91}{subsection.3.7.2}%
 \contentsline {subsection}{\numberline {3.7.3}特殊函数关系}{92}{subsection.3.7.3}%
 \contentsline {subsection}{\numberline {3.7.4}作为关系的函数}{93}{subsection.3.7.4}%
-\contentsline {subsubsection}{函数的限制}{93}{subsubsection*.41}%
-\contentsline {subsubsection}{像和逆像}{93}{subsubsection*.42}%
-\contentsline {subsubsection}{函数的复合}{96}{subsubsection*.43}%
-\contentsline {subsubsection}{反函数}{99}{subsubsection*.44}%
+\contentsline {subsubsection}{函数的限制}{93}{subsubsection*.42}%
+\contentsline {subsubsection}{像和逆像}{93}{subsubsection*.43}%
+\contentsline {subsubsection}{函数的复合}{96}{subsubsection*.44}%
+\contentsline {subsubsection}{反函数}{99}{subsubsection*.45}%
 \contentsline {section}{\numberline {3.8}序关系}{100}{section.3.8}%
 \contentsline {subsection}{\numberline {3.8.1}偏序关系}{100}{subsection.3.8.1}%
 \contentsline {chapter}{\numberline {第四章\hspace {.3em}}磨刀不误砍柴工[P]}{103}{chapter.4}%
 \contentsline {section}{\numberline {4.1}数据与数据结构}{103}{section.4.1}%
+\contentsline {section}{\numberline {4.2}把算法告诉计算机}{106}{section.4.2}%
 \contentsfinish 

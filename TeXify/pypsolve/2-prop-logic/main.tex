@@ -693,7 +693,6 @@ The order of operations is a rule that tells the correct sequence of steps for e
 	
 	(16) 归谬论: $E_{24}: (G\to H)\an (G\to \no H) \eqw \no G$
 	
-	% TODO: On Sun Feb 26, wrote here
 \end{proposition}
 
 这些为什么有用呢? 考虑有一天你在求解一个数学问题, 其中你想把一个命题否定掉, 比如
@@ -1659,7 +1658,7 @@ $$
 	
 \end{theorem}
 
-% TODO: write to here
+
 
 \section{常见的证明方法}
 
@@ -1863,7 +1862,62 @@ Hardy说证明$\sqrt 2$是无理数是最漂亮的证明之一. 其中用了反�
 
 % TODO: 增加鸽巢原理的证明. 
 
-% TODO: 增加Python的z3库的应用
+\ti{用z3求解数独}
+
+这里有一个数独. 
+
+\begin{lstlisting}[language=python]
+from z3 import *
+
+# First we create an Integer Variable for each cell of the Sudoku grid.
+# Each cell must contain a digit (1 to 9)
+X = [ [ Int("x_%s_%s" % (i+1, j+1)) for j in range(9) ] 
+      for i in range(9) ]
+
+# Every digit has to be placed exactly once in each row
+cells_c  = [ And(1 <= X[i][j], X[i][j] <= 9) 
+             for i in range(9) for j in range(9) ]
+
+# Every digit has to be placed exactly once in each column
+rows_c   = [ Distinct(X[i]) for i in range(9) ]
+
+cols_c   = [ Distinct([ X[i][j] for i in range(9) ]) 
+             for j in range(9) ]
+
+# Every digit has to be placed exactly once in each 3x3 subgrid
+sq_c     = [ Distinct([ X[3*i0 + i][3*j0 + j] 
+                        for i in range(3) for j in range(3) ]) 
+             for i0 in range(3) for j0 in range(3) ]
+
+sudoku_c = cells_c + rows_c + cols_c + sq_c
+
+instance = ((5,3,0,0,7,0,0,0,0),
+            (6,0,0,1,9,5,0,0,0),
+            (0,9,8,0,0,0,0,6,0),
+            (8,0,0,0,6,0,0,0,3),
+            (4,0,0,8,0,3,0,0,1),
+            (7,0,0,0,2,0,0,0,6),
+            (0,6,0,0,0,0,2,8,0),
+            (0,0,0,4,1,9,0,0,5),
+            (0,0,0,0,8,0,0,7,9))
+
+# Note that we use the number 0 to indicate blank fields. We need to convert this input to the variables managed by z3:
+
+instance_c = [ If(instance[i][j] == 0, 
+                  True, 
+                  X[i][j] == instance[i][j]) 
+               for i in range(9) for j in range(9) ]
+
+s = Solver()                                            # (1)
+s.add(sudoku_c + instance_c)                            # (2)
+if s.check() == sat:                                    # (3)
+    m = s.model()                                       # (4)
+    r = [ [ m.evaluate(X[i][j]) for j in range(9) ]     # (5)
+          for i in range(9) ]
+    print_matrix(r)                                     # (6)
+else:
+    print("failed to solve")                            # (7)
+\end{lstlisting}
 
 
 
