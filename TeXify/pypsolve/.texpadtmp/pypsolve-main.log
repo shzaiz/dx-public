@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.1.19)  23 MAR 2023 10:54
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.1.19)  26 MAR 2023 01:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2560,6 +2560,10 @@ File: 4-programs/figs/structures.png Graphic file (type bmp)
 File: 4-programs/figs/tree.png Graphic file (type bmp)
 <4-programs/figs/tree.png>
 
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
 Overfull \hbox (12.94574pt too wide) in paragraph at lines 105--106
 []\TU/SimSun(0)/m/n/10.53937 这 就 要 回 到 我 们 如 何 看 树 了\TU/lmr/m/n/10.53937 . \TU/SimSun(0)/m/n/10.53937 从 非 递 归 的 视 角 来 看\TU/lmr/m/n/10.53937 , \TU/SimSun(0)/m/n/10.53937 我 们 有 一 个  |“结 点”|  的 集 合 $\OMS/cmsy/m/n/10.53937 f\OML/cmm/m/it/10.53937 A; B; []  ; K\OMS/cmsy/m/n/10.53937 g$\TU/lmr/m/n/10.53937 ,
  []
@@ -2567,15 +2571,36 @@ Overfull \hbox (12.94574pt too wide) in paragraph at lines 105--106
 [105]
 File: 4-programs/figs/tree-sort.png Graphic file (type bmp)
 <4-programs/figs/tree-sort.png>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 File: 4-programs/figs/exptree.png Graphic file (type bmp)
 <4-programs/figs/exptree.png>
-) [106] [107] [108
 
-] (/Users/zgw/Documents/dx/TeXify/pypsolve/.texpadtmp/pypsolve-main.bbl [109] [110
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: 4-programs/figs/prog-early.png Graphic file (type bmp)
+<4-programs/figs/prog-early.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[106]
+File: 4-programs/figs/asm-example.png Graphic file (type bmp)
+<4-programs/figs/asm-example.png>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[107] [108] [109] (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+) [110]) [111] [112
+
+] (/Users/zgw/Documents/dx/TeXify/pypsolve/.texpadtmp/pypsolve-main.bbl [113] [114
 
 ]) 
 AED: lastpage setting LastPage
-[111] (/Users/zgw/Documents/dx/TeXify/pypsolve/.texpadtmp/pypsolve-main.aux)
+[115] (/Users/zgw/Documents/dx/TeXify/pypsolve/.texpadtmp/pypsolve-main.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.47188pt have occurred.
@@ -2587,12 +2612,12 @@ Package rerunfilecheck Info: File `pypsolve-main.out' has not changed.
 (rerunfilecheck)             Checksum: 112F832771CCF426386587FA09F8AFC3;7445.
  ) 
 Here is how much of TeX's memory you used:
- 40765 strings out of 476776
- 864352 string characters out of 5805932
+ 41002 strings out of 476776
+ 868903 string characters out of 5805932
  2202991 words of memory out of 5000000
- 60054 multiletter control sequences out of 15000+600000
- 526518 words of font info for 141 fonts, out of 8000000 for 9000
+ 60286 multiletter control sequences out of 15000+600000
+ 526526 words of font info for 142 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  98i,14n,100p,2264b,1893s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on /Users/zgw/Documents/dx/TeXify/pypsolve/.texpadtmp/pypsolve-main.pdf (111 pages).
+Output written on /Users/zgw/Documents/dx/TeXify/pypsolve/.texpadtmp/pypsolve-main.pdf (115 pages).
