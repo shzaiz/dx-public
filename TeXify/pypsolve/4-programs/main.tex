@@ -203,8 +203,135 @@ while (left<right){      if (data[left]!=0)          left=left+1;      else{
 
 两个人用自然语言沟通，两个人都可能在语言使用上“出错”，但人和机器沟通，“出错”的一定是人。
 
- 
+我们所谓的语言, 一般都是由句子构成的. 为了简化我们的探讨的深度, 这里我们先只考虑“形式语言”--即只有“句子”组成规则，但“句子”没有“含义”的语言. 我们可以从如下的几个方面来说明: 
+
+\begin{itemize}
+	\item 首先，必须定义“所允许的符号”-``字母表''$\Sigma$. 如我们只允许$a,b$出现在我们的语言中, 我们就可以记作$\Sigma=\set{a,b}$. 
+	\item 再规定哪些“用$a, b$构成的符号串”是语言$L$中“合法”的句子. 这些被称为生成规则. 
+	\begin{itemize}
+		\item $a$是<前缀>;
+		\item <前缀>接$a$仍然是前缀;
+		\item <前缀>接b是合法句子;
+		\item <合法句子>接b仍然是合法句子;
+		\item 任何合法句子只能通过施行上述规则有限次得到.
+	\end{itemize}
+\end{itemize}
+
+用更加正式的内容来描述我们刚刚的内容, 我们就可以写成$L = \set{w | w = aa^*bb^*}$. 这样的表达形式叫做\textbf{正则表达式(regular expression)}. (这个内容表达的意思就是至少1个$a$后面接至少1个$b$，$a,b$数量可以是任意正整数)
+
+现在, 我们可以有正则表达式来定义语言. 正则表达式的语言定义如下: 
+
+\begin{definition}[正则表达式语言的定义]
+假设字母表 $\Sigma = {a,b}$, 定义 $\Sigma$ 上的正则表达式如下：
+\begin{itemize}
+	\item 符号 $\Lambda$ 是正则表达式;
+	\item $\forall x\in \Sigma$, $x$是正则表达式;
+	\item 如果$\alpha, \beta$是正则表达式, 那么$\alpha\beta$是正则表达式;
+	\item 如果$\alpha, \beta$是正则表达式, 那么$\alpha \oi \beta$是正则表达式;
+	\item 如果$\alpha$是正则表达式, 那么$(\alpha)^*$是正则表达式;
+	\item 所有正则表达式只能通过施行上述规则有限次获得. 
+\end{itemize}
+	其中$\alpha\beta$表示把$\alpha, \beta$两个表达式并列放置; $\alpha \oi \beta$表示$\alpha, \beta$的任意一个出现; $(\alpha)^*$表示$\alpha$出现零次或者任意有限多次. 
+\end{definition}\begin{prob}
+	你能说出下列正则表达式定义的字符串集合吗？
+	\begin{itemize}
+		\item $b^*a(ab)^*$;
+		\item $a\oi b^*$;
+		\item $(a\oi b)^*$;
+		\item $bb((ba)^*bb)^*(aa^*)$.
+	\end{itemize}
+\end{prob} 
 
 
+现在有这样的一个问题: 如果让你用C语言, 输入一个规则和一系列字符串, 那么你能不能给出这个字符串``满不满足''这个规则呢? 对于这个内容的探索, 激发出了有限状态自动机(deterministic finite-state automation)的探讨. 一般来讲, 它由以下的几部分构成:
+
+\begin{itemize}
+	\item 一组状态，其中一个是起始状态（$x0$），一个或多个接受(accept)状态
+	\item 有向边上标明当前读入字符
+	\item 有向边执行的状态又状态转换函数确定: (当前状态$\times$当前字符$\to$新状态)
+	\item 当输入字符串结束时自动机停止与结束状态，则判定为accept，否则refuse.(即：$f(x_0, \text{输入串}x)=$某个结束状态)
+\end{itemize}
+
+上面问题的内容画出来就像是图\ref{figs:fsa}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.8]{4-programs/figs/fsm.png}
+	\caption{如何判定语言是不是满足规则--有限状态的自动机}
+	\label{figs:fsa}
+	
+\end{figure}
 
 
+但是随着时间的发展, 我们发现用正则表达式能定义的表达力有限，下面的语言就无法用正则表达式描述：
+
+$$L = \set{ a^nb^n | n=0,1,2,… }.$$
+
+于是我们聪明的计算机科学家们发明了\textbf{短语结构文法(phrase-structure grammar)}, 定义为四元组: $G=(V,T,S,P)$: 
+
+\begin{definition}[短语结构文法]
+短语结构文法 (phrase-structure grammar) 定义为四元组 $G = (V, T, S, P)$:
+
+\begin{itemize}
+	\item $V$是所有可用的“符号”的集合；
+	\item $T$是$V$的子集，是最终出现在句子中的“终结符”；
+	\item $S$ 是$V$中的元素，指定为“起始符”(通常就是指“句子”)；
+	\item $V-T$ 记为$N$, 是“非终结符”的集合(即不会出现在语言的句子中) ;
+	\item P 是有限个“生成式”的集合，每个生成式的形式为 $w_1\to w2$, $w_1$和$w_2$都是$V$ 中的符号串，$w_1$中至少有一个非终极符.
+\end{itemize}
+	
+\end{definition}
+
+
+确定一个句子的过程叫做``derivation''. 比如图\ref{figs:divs}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.8]{4-programs/figs/der}
+	\caption{一个句子的推导过程}
+	\label{figs:divs}
+	
+\end{figure}
+
+
+正则表达式对应着正则文法, 但是这个内容没有办法满足我们对于我们希望表达的东西的需要. 于是我们发明了``上下文无关文法''. 上下文无关文法的一个特征是所有的生成式的左侧只有一个非终结符. 一些关键词的语法定义可以参见\ref{figs:fc-defs}. 
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.8]{4-programs/figs/example-defs.png}
+	\caption{上下文无关文法定义的几个关键字}
+	\label{figs:divs}
+	
+\end{figure}
+
+相应的, 我们也有相应的Bachus-Naur范式表述这些图片. 
+
+\begin{lstlisting}
+<statement>::=<for-statement> | <assignment-statement><for-statement>::= for <for-header> do <statement> end<for-header>::=<variable> from <value> to <value> (by <value> | <empty>)
+...
+\end{lstlisting}
+
+如果大家看过Python文档比较深刻的地方, 相信这些都是老面孔了! 
+
+好了, 这就是我们计算机科学家们对于程序``语法''的意思了. 更多的内容可能就要在编译原理这门课中继续讲解了. 
+
+\begin{bonus}
+	想知道你的C编译器是如何编译你的代码的吗? 欢迎收看魏恒峰老师开讲的《编译原理》! 在\url{https://www.bilibili.com/video/BV1Bs4y187kK}这里找到今年(2023年)的录屏. 
+\end{bonus}
+
+至于``语义''是什么, 就更加难以在这里说清楚了. 随便的几个问题可能就非常的深刻. 比如: 
+
+\begin{itemize}
+	\item 对于“编程”，我们说“动态”还是“静态”是指什么？	\item 你在编程时注意过当程序“没通过”，关于“出错”的信息会在什么时候出现？	\item 当程序“成功”运行结束了，你确发现结果“肯定”是不对的，你会感到无奈吗？	\item 为什么能够“正常”运行的程序是否实现我们的预期，目前主要还是靠人？	\item 计算机究竟如何理解人编的程序的“意思”？
+\end{itemize}
+
+这就说明, 能够提供一套“规则”，使得人和机器对于用程序设计语言表述的内容（不仅是形式）有较高的共识，这远比定义文法困难。
+
+不管采用什么文法、语义，目前我们都不能让计算机直接听懂你要它干什么，那你的程序是怎么运行的呢？这就是编译器的工作了. 我们目前能做到的就只有把要写的代码写好, 在前人的心血上, 程序才能让电脑``听懂''(如图\ref{figs:do-we-want}). 之所以我们还可能用自然语言描述程序设计语言的语义，那是因为“说”的对象还是人，而不是机器。
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.8]{4-programs/figs/machine-note}
+	\caption{计算机是如何知道我们想干什么的?}
+	\label{figs:do-we-want}
+	
+\end{figure}

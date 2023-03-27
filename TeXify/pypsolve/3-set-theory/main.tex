@@ -1132,7 +1132,14 @@ $$
   \]
 \end{definition}
 
-同样的, 这样取, 只不过是用另外一种维度划分整个集合罢了. 这在直觉上看起来是对的, 下面我们来做一下证明. 
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.6]{3-set-theory/figs/quot-set}
+	\caption{商集: 一种划分方式}
+	\label{figs:qset}
+\end{figure}
+
+同样的, 这样取, 只不过是用另外一种维度划分(如图\ref{figs:qset})整个集合罢了. 这在直觉上看起来是对的, 下面我们来做一下证明. 
 
 \begin{theorem}
   \[
@@ -1939,15 +1946,125 @@ $$\forall x \in X.\; I_{X}(x) = x.$$
 	有没有一种直观的方法来表达这种情形? 或许我们可以把每个元素化作圆圈, 有这样的关系就把他们之间画一个箭头.  
 \end{bonus}
 
-这样的情形, 我们可以使用有向无环图(directed acyclic graph) 表示. 这样的一种可达(reachability)关系. 设$(X,\preceq)$
+我们发现任意的一个关系, 我们都可以这样表示. 特别的, 对于一个偏序关系而言, 我们发现: 
 
-在我们日常的使用大于等于, 小于等于这样的元素的时候, 我们通常会注意到基本上这些内容都是可以取等的, 这就意味着满足这样的条件的集合中是有最大元和最小元的. 所以我们把这一关系抽象出来, 加以定义: 
+\begin{itemize}
+	\item 每个节点都有连向自己的环(简单称为自环);
+	\item 任意的两个节点要么只有一条边相连, 要么没有边相连. 
+	\item 如果$a$到$b$有边相连, $b$到$c$有边相连, 那么$a$到$c$一定有边相连. 
+\end{itemize}
 
-\begin{definition}
+我们发现, 这样子表示还是有点麻烦了. 我们有没有办法来简化这一个事实呢? 我们其实可以按照下面的方法简化一下这个图: 
+
+\begin{itemize}
+	\item 去掉关系图的所有的自环;
+	\item 对于$\forall x\in A, \forall y\in A(x\neq y)$, 如果$x\preceq y$, 那么把$x$画在$y$的下方, 并且图中去掉这个边的箭头. 
+	\item 对于$\forall x\in A, \forall y \in A(x\neq y)$, 且$x,y$之间不存在$z\in A$使得$x\preceq x,z\preceq y$
+\end{itemize}
+
+这样的情形, 我们可以把偏序关系使用有向无环图(directed acyclic graph) 表示. 这样的一种可达(reachability)关系表示.
+
+\begin{bonus}
+	与一般的关系图相比，Hasse图简化了什么，为什么可以简化？
+\end{bonus} 
+
+\ti{偏序集中的特殊元素}
+
+在我们日常的使用大于等于, 小于等于这样的元素的时候, 我们通常会注意到基本上这些内容都是可以取等的, 这就意味着满足这样的条件的集合中是有最大元和最小元的. 更一般地, 我们需要思考这些问题: 
+
+\begin{itemize}
+	\item 极小(大)元和最小(大)元是什么关系？	\item 是否偏序集一定有极小（大）或最小(大)元？	\item 上（下）界是相对于什么定义的？	\item 是否有上(下)确界与是否有最大(小)元有什么关系？
+\end{itemize}
+
+直观上, 我们会认为定义一个偏序集的上述内容是像图\ref{figs:part-ord}这样的.
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.6]{3-set-theory/figs/part-ord}
+	\caption{我们期望的定义方式}
+	\label{figs:part-ord}
+\end{figure}
+
+于是我们给出如下的定义: 
+
+\begin{definition}[偏序集的最大,最小元]
 	设$(A,\preceq)$是偏序集, $B$是$A$的非空子集, 如果$\exists b. (b\in B\an \forall x.(x\in B\to x\preceq b))$, 那么称$b$为$B$的最大元素(greatest element), 简称最大元. 如果$\exists b. (b\in B\an \forall x.(x\in B\to b\preceq x))$, 那么称$b$为$B$的最小元素(smallest element), 简称最小元. 
 \end{definition}
 
-对于序关系, 我们可以用一种可视化的情况来写出来. 就像我们使用过的数轴, 平面一样. 这里, 我们介绍一种Hasse图的方式来可视化. 
+\begin{definition}[偏序集的上界,下界]
+	设$(A,\preceq)$是偏序集, $B$是$A$的任意的一个子集. 
+	
+	(1) 如果$\exists a.(a\in A\an \forall x.(x\in B\to x\preceq a))$, 则称$a$为$B$的上界(upper bound); 
+	
+	(2)  如果$\exists a.(a\in A\an \forall x.(x\in B\to a\preceq x))$, 则称$a$为$B$的下界(upper bound); 
+	
+\end{definition}
+
+\begin{definition}[偏序集的上, 下确界]
+	最小的上界称为上确界, 最大的下界称为下确界. 
+\end{definition}
+
+
+\begin{theorem}
+	有限偏序集一定含有极小元.
+\end{theorem}
+
+\begin{proof}
+	假设$(S,\preceq)$是偏序集, 取任意的$a_1\in S,$ 若对于任意的$t\in S$, $a_1\preceq t$, $a_1$是极小元, 否则, 必有$a_2\neq a_1,$且$a_2\preceq a_1$, 若对任意$t\in S\backslash\set{a_1}$, $a_2\preceq t$, 则$a_2$是极小元, 过程终止. 一般而言，若遇到的$a_1,a_2,\cdots, a_i$都不是极小元, 一定有$a_{i+1}$是$\set{a_1,a_2,\cdots, a_{n-1}}$. 但$S$是有限集, 这个过程一定会在某个$a_k(k=1,2,\cdots,n)$上终止, 此时$a_k$是极小元. 
+\end{proof}
+
+
+
+我们发现, 上图上任意一条路径上面的两个元素都是可以比较的. 因此我们可以探讨一下全序关系. 
+
+
+\subsection{全序关系}
+
+任何两个元素均可比的偏序称为“全序”，又称“线性序”. 刚刚我们说过的``一条路径''更加专业的叫法叫做``链(chain)''. 
+
+\begin{definition}[链]
+	设B是偏序集$(A,\preceq)$的一个子集, 假设B中任何两个元素均可比，则B构成一个链; 假设B中任何两个元素均不可比，则B构成一个反链. 
+\end{definition}
+
+我们发现所有链的集合或者所有反链的集合与集合包含关系也构成一个偏序集，因此同样也可以讨论极大/极小、最大/最小链或反链. 
+
+大约在上个世纪, Dilworth就发现了$S$可以划分为$k$个\red{元素互不相交}的链的条件: 那就是
+
+\begin{theorem}[Dilworth's Theorem]
+$S$是有限的偏序集,若$S$的元素个数最多的反链含$k$个元素, 则$S$可以划分为$k$个元素互不相交的链.
+\end{theorem} 
+
+这是一个对偶关系(阐述的链与反链的关系), 我们可以使用归纳法来证明. 
+
+\begin{itemize}
+	\item $k=1$, 则整个S是一个链;
+	\item 假设: 若偏序集中元素个数最多的反链所含的元素个数小于$k$, 则$S$可划分为不超过$k-1$条互不相交的链.
+	\item 归纳: 假设S中有含k个元素的最大反链$\set{a_1, a_2, \cdots, a_k}$. 开始令$C_i=\set{a_i}$, $C=C_1\cup C_2\cup …\cup C_k$, 若还有$a$不属于任一$C_i$, 但它至少与某个$a_i$可比（否则与反链元素个数最多为$k$矛盾）. 我们试图证明$C\cup {a}$仍可划分为$k$个链.(重组诸$C_i$). 由于$S$是有限的，反复上述过程，即可证明所需结论. 
+\end{itemize}
+
+我们来举个例子: 与整除关系相关的链与反链. 
+
+\begin{example}
+	定义$N\backslash\set{0}$上的整除关系$R: aRb$ 当且仅当：存在$t\in N\backslash\set{0}$，满足：$at=b$ (通常记为$a|b$). 那么关系$R$是偏序关系. 对偏序集 $(N\backslash\set{0}, | )$ 考虑如下的问题：
+	
+	\begin{itemize}
+		\item 是否有极大(小)元素，是什么？		\item 是否有最大(小)元素，是什么？		\item 该偏序集的链具有什么特征？		\item 该偏序集的反链具有什么特征？		\item 在集合包含关系下讨论极大/极小链.
+	\end{itemize}
+	
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

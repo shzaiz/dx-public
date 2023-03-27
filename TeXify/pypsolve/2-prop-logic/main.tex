@@ -1554,6 +1554,8 @@ $$
 	\end{align*}
 \end{theorem}
 
+注意到全称量词对于合取式子是可以分配的, 存在量词对于析取式子是可以分配的. 我们有时候是可以通过这个来简化计算. 
+
 \section{谓词公式的标准形}
 
 仿照命题公式, 我们也想看一看, 谓词公式最后有没有一个统一的形式, 使得我们的表达和交流更加的方便. 
@@ -1650,11 +1652,25 @@ $$
 \begin{theorem}
 	谓词逻辑的推理规则: 
 	
-	(1) 全称量词的消去;
+	(1) 全称量词的消去(Universal Specification);
+	\begin{itemize}
+		\item $\forall x. A(x)\Rightarrow A(y)$
+	\end{itemize}
 	
-	(2) 全称量词的引入;
+	(2) 全称量词的引入(Universal Elimiation);
+	\begin{itemize}
+		\item 如果$y$是自由的, $A(y)\Rightarrow \forall x. A(x)$
+	\end{itemize}
 	
-	(3) 特称量词的引入
+	(3) 特称量词的引入(Universal Generization):
+	\begin{itemize}
+		\item $\exists x.A(x) \Rightarrow A(c)$
+	\end{itemize}
+	
+	(4)存在量词的引入(Universal Specification): 
+	\begin{itemize}
+		\item $A(c)\Rightarrow \exists x. A(x)$
+	\end{itemize}
 	
 \end{theorem}
 

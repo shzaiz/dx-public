@@ -46,21 +46,22 @@
 \contentsline {subsection}{\numberline {3.4.3}用有序对定义二元关系}{78}{subsection.3.4.3}%
 \contentsline {subsection}{\numberline {3.4.4}关系的简单运算}{79}{subsection.3.4.4}%
 \contentsline {section}{\numberline {3.5}等价关系\nobreakspace {}--\nobreakspace {}特殊的二元关系}{85}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}从自然数到有理数}{87}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.1}从自然数到有理数}{88}{subsection.3.5.1}%
 \contentsline {section}{\numberline {3.6}相容关系\nobreakspace {}--\nobreakspace {}特殊的二元关系}{89}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}集合的覆盖}{89}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.1}集合的覆盖}{90}{subsection.3.6.1}%
 \contentsline {section}{\numberline {3.7}函数\nobreakspace {}--\nobreakspace {}特殊的二元关系}{90}{section.3.7}%
 \contentsline {subsection}{\numberline {3.7.1}函数: 作为关系的一个子集}{90}{subsection.3.7.1}%
-\contentsline {subsection}{\numberline {3.7.2}作为集合的函数}{91}{subsection.3.7.2}%
+\contentsline {subsection}{\numberline {3.7.2}作为集合的函数}{92}{subsection.3.7.2}%
 \contentsline {subsection}{\numberline {3.7.3}特殊函数关系}{92}{subsection.3.7.3}%
-\contentsline {subsection}{\numberline {3.7.4}作为关系的函数}{93}{subsection.3.7.4}%
-\contentsline {subsubsection}{函数的限制}{93}{subsubsection*.42}%
-\contentsline {subsubsection}{像和逆像}{93}{subsubsection*.43}%
-\contentsline {subsubsection}{函数的复合}{96}{subsubsection*.44}%
+\contentsline {subsection}{\numberline {3.7.4}作为关系的函数}{94}{subsection.3.7.4}%
+\contentsline {subsubsection}{函数的限制}{94}{subsubsection*.42}%
+\contentsline {subsubsection}{像和逆像}{94}{subsubsection*.43}%
+\contentsline {subsubsection}{函数的复合}{97}{subsubsection*.44}%
 \contentsline {subsubsection}{反函数}{99}{subsubsection*.45}%
-\contentsline {section}{\numberline {3.8}序关系}{100}{section.3.8}%
-\contentsline {subsection}{\numberline {3.8.1}偏序关系}{100}{subsection.3.8.1}%
-\contentsline {chapter}{\numberline {第四章\hspace {.3em}}磨刀不误砍柴工[P]}{103}{chapter.4}%
-\contentsline {section}{\numberline {4.1}数据与数据结构}{103}{section.4.1}%
-\contentsline {section}{\numberline {4.2}把算法告诉计算机}{106}{section.4.2}%
+\contentsline {section}{\numberline {3.8}序关系}{101}{section.3.8}%
+\contentsline {subsection}{\numberline {3.8.1}偏序关系}{101}{subsection.3.8.1}%
+\contentsline {subsection}{\numberline {3.8.2}全序关系}{103}{subsection.3.8.2}%
+\contentsline {chapter}{\numberline {第四章\hspace {.3em}}磨刀不误砍柴工[P]}{105}{chapter.4}%
+\contentsline {section}{\numberline {4.1}数据与数据结构}{105}{section.4.1}%
+\contentsline {section}{\numberline {4.2}把算法告诉计算机}{108}{section.4.2}%
 \contentsfinish 
