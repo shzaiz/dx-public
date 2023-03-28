@@ -236,6 +236,14 @@ theorems-tcolorbox
 
 \begin_layout Standard
 \begin_inset FormulaMacro
+\newcommand{\N}{\mathbb{N}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
 \renewcommand{\C}{\mathbb{C}}
 \end_inset
 

@@ -4720,8 +4720,76 @@ status open
 \end_inset
 
 的所有满足乘法封闭性的全体; (iii) 
+\begin_inset Formula $S_{3}:\F[x]$
+\end_inset
+
+所有满足``对任意
+\begin_inset Formula $h(x)\in W,g(x)\in\F[x],h(x)g(x)\in W$
+\end_inset
+
+条件''的子空间
+\begin_inset Formula $W$
+\end_inset
+
+的全体; (iv)
+\begin_inset Formula $S_{4}:\F[x]$
+\end_inset
+
+所有满足``存在
+\begin_inset Formula $m(x)\in W,$
+\end_inset
+
+使得
+\begin_inset Formula $W=\{m(x)g(x)|g(x)\in\F[x]\}$
+\end_inset
+
+的子空间
+\begin_inset Formula $W$
+\end_inset
+
+的全体.
+ 
 \end_layout
 
+\begin_deeper
+\begin_layout Enumerate
+举例说明存在 
+\begin_inset Formula $\F[x]$
+\end_inset
+
+的子空间
+\begin_inset Formula $W\in S_{1},W\notin S_{2};$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+举例说明存在 
+\begin_inset Formula $\F[x]$
+\end_inset
+
+的子空间
+\begin_inset Formula $W\in S_{2},W\notin S_{3};$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+讨论
+\begin_inset Formula $S_{3}$
+\end_inset
+
+和
+\begin_inset Formula $S_{4}$
+\end_inset
+
+的关系.
+ 
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Section
 线性代数中出现的内容
@@ -4768,6 +4836,10 @@ status open
 \newcommand{\lngen}[3]{#1_{1}#2_{1}+#1_{2}#2_{2}+\cdots+#1_{#3}#2_{#3}}
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
 
 \end_layout
 
