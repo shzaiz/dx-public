@@ -1,0 +1,63 @@
+\usepackage{ amssymb }
+\usepackage{mdframed} % Add easy frames to paragraphs
+\usepackage{lipsum} % For dummy text
+\usepackage{xcolor}
+\usepackage{xparse} % Add support for \NewDocumentEnvironment
+\definecolor{graylight}{cmyk}{.30,0,0,.67} % define color using xcolor syntax
+
+\newmdenv[ % Define mdframe settings and store as leftrule
+linecolor=graylight,
+topline=false,
+bottomline=false,
+rightline=false,
+skipabove=\topsep,
+skipbelow=\topsep
+]{leftrule}
+\NewDocumentEnvironment{eg}{O{$\Large\mathbb{E}$xample}} 
+{\begin{leftrule}\noindent\textcolor{codegreen}{#1}\par}
+	{\end{leftrule}}
+
+\NewDocumentEnvironment{example}{O{$\Large\mathbb{E}xample$}} 
+{\begin{leftrule}\noindent\textcolor{blue}{#1}\par}
+	{\end{leftrule}}
+
+\NewDocumentEnvironment{pas}{O{$\Large\mathbb{P}assage$}} 
+{\begin{leftrule}\noindent\textcolor{graylight}{#1}\par}
+	{\end{leftrule}}
+
+\NewDocumentEnvironment{fun}{O{$\Large\mathbb{F}un\ fact$}} 
+{\begin{leftrule}\noindent\textcolor{pink}{#1}\par}
+  {\end{leftrule}}
+
+\NewDocumentEnvironment{bonus}{O{$\Large\mathbb{B}onus$}} 
+{\begin{leftrule}\noindent\textcolor{red}{#1}\par}
+	{\end{leftrule}}
+	
+\NewDocumentEnvironment{tool}{O{$\Large\mathbb{T}ools$}} 
+{\begin{leftrule}\noindent\textcolor{violet}{#1}\par}
+	{\end{leftrule}}
+
+\NewDocumentEnvironment{dialogue}{O{$\Large\mathbb{D}ialogue$}} 
+{\begin{leftrule}\noindent\textcolor{cyan}{#1}\par}
+	{\end{leftrule}}
+	
+    \NewDocumentEnvironment{idea}{O{$\Large\mathbb{I}dea$}} 
+{\begin{leftrule}\noindent\textcolor{brown}{#1}\par}
+	{\end{leftrule}}
+	
+\NewDocumentEnvironment{hw}{O{$\Large\mathbb{I}dea}} 
+{\begin{leftrule}\noindent\textcolor{brown}{#1}\par}
+	{\end{leftrule}}
+
+\usepackage{amsthm}
+\usepackage{amsmath}
+\theoremstyle{definition}
+\newtheorem{axi}{Axiom}[section]
+\newtheorem{prob}{Problem}[section]
+\newtheorem{prop}{Proposition}[section]
+\newtheorem{thm}{Theorem}[section]
+\newenvironment{sol}{\paragraph{Solution:}}{\hfill \#}
+\newenvironment{roadmap}{\paragraph{Idea:}}{\hfill \%}
+\newenvironment{remark}{\paragraph{Remark:}}{\hfill}
+\newtheorem{lem}{Lemma}[section]
+
