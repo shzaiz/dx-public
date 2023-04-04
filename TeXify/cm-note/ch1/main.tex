@@ -11,8 +11,130 @@
 
 \end{itemize}
 
-\mkpt{Techique 1. Look at small examples} Transfer with 1, 2 and 3 disks is somehow obvious. 
+\mkpt{Technique 1. Look at small examples} 
+Transfer with 1, 2 and 3 disks is somehow obvious. 
+General patterns are easier to precieze while extreme cases are well
+understood. 
 
-\mkpt{Techique 2. Divide and conquer}
+\mkpt{Technique. Divide and conquer} We first transfer $n-1$ smallest to a
+different peg ($T_{n-1}$ times in total), then move the largest, then move the
+smallest on the idea. So there are $2T_{n-1}+1$ times. So we have 
+\[
+    T_{n} \leq 2T_{n-1}+1, \text{for }n>0. 
+\]
+We have to move the biggest one, so when moving the biggest one, we have already moved the ones at the bottom. As we have to move it up. So we have 
+\[
+    T_{n} \geq  T_{n-1}+1, \text{for} n>0.
+\]
 
+\mkpt{Recurrence Relation} 
+
+Representation: Like
+\begin{align*}
+    T_n &= 0 \\
+    T_n &= 2T_{n-1}+1 , \text{for } n>0\\
+\end{align*}
+
+is called a recursion. 
+
+Solution: a closed form for this, for example, $T_{n}=2^{n}-1$. A closed form
+involves only addition, subtraction, multiplication and division and
+exponentiation in explicit ways.
+
+\mkpt{Mathematical Induction}
+First we prove a statement when it has the smallest value(basis), then we prove
+it for $n\geq n_0$, assuming it has been proved in $[n_0, n-1]$(induction). 
+
+
+\section{Lines on a plane}
+
+\mkpt{Problem setup} What's the maxim number $L_{n}$ of regions defines by $n$ lines on the plane?  
+
+\mkpt{Observing small cases} 
+
+Observation 1: Adding a new line seems to double the region.
+
+Observation 2: adding the 3rd line, it can at most hit at least 3 regions. So
+the desired generalization is  it splits $k$ old regions if and only if it hits
+all previous regions. So the upper bound is 
+\[
+    L_{n} \leq L_{n-1}+n,n>0
+\]
+
+This is a arithmetic series, so this the answer is $S_n=n\frac{n+1}{2}$. 
+
+\mkpt{Variation problem} With lines on the plane problem: Suppose instead of
+straight lines, using zigzag lines. What's the max. number? 
+
+Observation: If we extend all the lines up, it will be like the lines on the
+plane problem. Each line will lose $n$ regions, so it will be 
+\[
+    Z_{n}= L_{2n}-2n, n \geq 0.
+\]
+\section{The Josephus problem} 
+
+\mkpt{Problem setup} Start with $n$ people $1\sim n$, eliminate every second
+remaining person till only 1 survives. We shall determine the survival number. 
+
+\mkpt{Using proper notation} Denote $J(n)$ as the final survivor's number. Note
+then $n$ is odd, we have $J(2n)=2J_n-1$. For after one round, the configuration is
+2 times and minus 1. So the $J(2n+1)=2J(n)+1.$ 
+
+\mkpt{Simplify} We note that this is closely related to power of 2's. After a
+few listing it can be shown that $J(2^{m}+l)=2l+!$. We can prove it by
+induction.  
+
+It may be also helpful to see radix 2 representations. Suppose n's binary
+representation is $n=(b_m, b_{m-1},\cdots, b_1,b_0)$. According to the previous
+ones, we have that  $J(b_m, b_{m-1},\cdots,
+b_1,b_0)=(b_{m-1},\cdots,b_1,b_0,b_m)$. That is moving one bit cyclic shift
+left! 
+
+\mkpt{Guessing in a smarter way} Assume our recurrence had something like 
+
+\begin{align*}
+    f(1) &= \alpha \\
+    f(2n) &= 2f(n)+\beta \\
+    f(2n+1) &= 2f(n)+\gamma \\
+\end{align*}
+
+We can assume the general form like $f(n)=A(n)\alpha+B (n) \beta+C(n) \gamma$.
+After writing a few, we might investigate $A(n)=2^m, B(n)=2^m-1-l, C(n)=l.$
+
+This method will work perfectly well when the function is linear. 
+
+\section{Exercises}
+
+Here are some answers to the exercises. The answer might not be always correct. 
+
+\mkpt{W 1} In this problem, the set of the horses doesn't meet well ordering
+principle, that is no linear order for a set. 
+
+\mkpt{W 2} 
+Note that splitting it in the first one and then other ones is not correct,
+for when it was set like this, it will cause big ones over small ones. This
+will lead to $T_n=2+T_{n-1}+2+T_{n-1}+2$ -- this is a wrong answer. The correct
+answer is using top $n-1$ as a group and one at last one, so hence swapping all
+Ts and 2s in the previous equation, hence getting
+$T_n=T_{n-1}+2+T_{n-1}+2+T_{n-1}$. Using techniques of inductions will get
+$3^n-1$. 
+
+\mkpt{W 3}
+From the previous question we have totally $3^n-1$ cases will be shown. We may
+find that no two configurations are the same, since each move at least one
+plate is in the different place. On the other hand, there are $3^n-1$ cases
+according to rules of multiplication. So we are done. 
+
+\mkpt{W 4}
+No. Since it has reached the highest part. 
+
+\mkpt{W 5}
+We can derive the formula for circles. That is $T(n)=T(n-1)+2n$. Calculating
+for $n=4$, we have at most 14 areas. So this is impossible.   
+
+\mkpt{W 6}
+We can deduce it firstly to $L_n$ problems. Subtracting surrounding unbounded
+regions, we have $B_n = L_n -2n$. 
+
+\mkpt{W 7}
 
