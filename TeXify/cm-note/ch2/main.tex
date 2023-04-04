@@ -63,6 +63,49 @@ then we rewrite $S_{n+1}$ in 2 ways:
 Now we can work on the last term trying to solving the closed form for it. 
 
 \mkpt{Example 2. Geometry progression} We have $S_n = \sum_{0 \leq k \leq
-n}^{}ax^k$. 
+n}^{}ax^k$. And the sum is needed. Using {\it perturbation} method we have 
+\[
+    S_n + ax^{n+1} = ax^0 + \sum_{0\leq k\leq n}^{}ax^{k+1}
+\]
 
+Factoring out an $x$, we have
+\begin{align*}
+    S_n + ax^{n+1} &= a + xS_n \\
+    \sum_{k=0}^{n} ax^k = \frac{a-ax^{n+1}}{1-x}, \qquad \text{for } x \neq 1
+\end{align*}
+
+\mkpt{Example 3. Arithmetic Geometric progression} We have the sequence 
+\[
+    S_n = \sum_{0 \leq k \leq n}^{}k 2^k
+\]
+
+Using the perturbation technique, we have 
+\[
+    S_n + (n+1)^{2n+1} = \sum_{0\leq k\leq n}^{}(k+1)2^{k+1}
+\]
+Rewrite RHS as sums, we have 
+\[
+    S_n + (n+1)^{2n+1} = \sum_{0\leq k\leq n}^{}k 2^{k+1} + 
+    \sum_{0\leq k\leq n}^{}2^{k+1}
+\]
+Hence $\sum_{0\leq k\leq n}^{}k 2^k = (n-1)2^{n+1}+2$.
+
+\section{Multiple sums}
+
+\mkpt{Notations} Stacking multiple sums in a row helps to derivate more
+complex sums. 
+
+Example: $\sum_{i=1}^{3}\sum_{j=1}^{3}a_{ij} = a_{11}+a_{12}+a_{13}+\cdots
++a_{33}$.
+
+Using the simplified Iverson's bracket, getting another way of expressing
+multiple sums: $\sum_{1\leq j,k\leq 3}^{}a_j b_k = \sum_{j,k}^{}a_jb_k[1\leq
+j\leq 3] [1\leq k\leq 3]$. 
+
+\mkpt{General distributive law} For distinct lower set index $i,j$, we have the
+following distributive law: 
+\[
+    \sum_{j\in J,k\in K}^{}a_jb_k = \big( \sum_{j\in J}^{}a_j \big) + \big(
+    \sum_{k\in K}^{}b_k \big)
+\]
 

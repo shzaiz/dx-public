@@ -1,3 +1,4 @@
+\chapter{简单数理逻辑[M]}
 \begin{quote}
 	``有两种推广．一种没有什么价值, 另一种则是有价值的．没什么思想、仅凭唬人的专人术语做推广是很容易做到的．颇为困难的是从若干好的素材中提取出一份精致凝练的精品.''
 	\hfill ---- George Polya
@@ -1190,7 +1191,9 @@ $$
 
 \section{变得更加严谨: 形式化推理系统}
 
-经过一些时间, 我们希望找到简化的推理与验证. 如下是若干个规则: 
+经过我们前面的一些探索, 我们就有资本忘记以前学过的所有的东西了. 现在, 让我们来形式化这一切--用公理和原则来进行推演. 以前的内容带来的直觉会对我们在形式系统里面操作产生引导的作用. 下面我们来看一些规则: 
+
+如下是若干个可以完成任何规则的: 其中像分数线一样的上方表示的是前提, 下方表示的是结论. 有时候我们可以把它写成一行就成了$\set{\text{前提}}\vdash \text{结论}$.  
 
 \begin{itemize}
 	\item Conjunction: $\dfrac{A,B}{A\an B}$;
@@ -1647,34 +1650,143 @@ $$
 
 \section{谓词逻辑的推理要求}
 
-相比于命题逻辑, 谓词逻辑要求的内容就多了不少了. 具体的, 我们可以把全称量词, 特称量词替换掉. 或者把它们替换掉为一个特殊的命题. 我们有如下的规则: 
+相比于命题逻辑, 谓词逻辑要求的内容就多了不少了. 具体的, 我们可以把全称量词, 特称量词替换掉. 或者把它们替换掉为一个特殊的命题. 这样我们就可以把谓词逻辑转化为谓词逻辑了. 因此, 我们有如下的简化的一节逻辑的推理原则.  
 
-\begin{theorem}
-	谓词逻辑的推理规则: 
+\begin{definition}[``任意''符号消去]
+	$\forall$-eliminating. 
+	$$
+	\forall x. \alpha \vdash \alpha[t/x]
+	$$
+	where $\alpha$ is free for $x$ in $\alpha$. 
 	
-	(1) 全称量词的消去(Universal Specification);
-	\begin{itemize}
-		\item $\forall x. A(x)\Rightarrow A(y)$
-	\end{itemize}
-	
-	(2) 全称量词的引入(Universal Elimiation);
-	\begin{itemize}
-		\item 如果$y$是自由的, $A(y)\Rightarrow \forall x. A(x)$
-	\end{itemize}
-	
-	(3) 特称量词的引入(Universal Generization):
-	\begin{itemize}
-		\item $\exists x.A(x) \Rightarrow A(c)$
-	\end{itemize}
-	
-	(4)存在量词的引入(Universal Specification): 
-	\begin{itemize}
-		\item $A(c)\Rightarrow \exists x. A(x)$
-	\end{itemize}
-	
-\end{theorem}
+	The symbol $\alpha[t/x]$ means substituting all the occurrences $t$ in $\alpha$ to $x$.
+\end{definition}
 
 
+\begin{definition}[``任意''符号的引入]
+	$\forall$-introducing.
+	\begin{align*}
+		& [t] & \text{引入变量}t\\
+		&\cdots & \text{经过一系列推理} \\
+		& \alpha[t/x] & \text{得到的表达式所有的}x\text{都是}t\\
+		& \vdash \forall x. \alpha & \text{就可以推出任意了}
+	\end{align*}
+	where $\alpha$ is free for $x$ in $\alpha$. 
+	
+	The symbol $\alpha[t/x]$ means substituting all the occurrences $t$ in $\alpha$ to $x$.
+\end{definition}
+
+下面我们来举一个例子来看看: 
+
+\begin{example}
+	$\{P(t),\forall x(P(x)\to \lnot Q(x)\} \vdash \lnot Q(t)$
+\end{example}
+
+\begin{sol}
+	\begin{align*}
+& P(t) & P\\
+& \forall x(P(x)\to \lnot Q(x)) & P\\
+& P(t)\to \lnot Q(t) & \text{Universal Specification}\\
+&\lnot Q(t) & T
+\end{align*}
+\end{sol}
+
+我们再来看一个例子: 
+\begin{example}
+	$\{\forall x(P(x)\to Q(x)),\forall x. P(x)\} \vdash \forall x. Q(x)$
+\end{example}
+
+解答如下: 
+\begin{sol}
+	\begin{align*}
+&\forall x .(P(x) \rightarrow Q(x)) & (P) \\
+&\forall x . P(x) & (P) \\
+&{\left[x_{0}\right] } & \text { (引人变量 }) \\
+&P\left(x_{0}\right) \rightarrow Q\left(x_{0}\right) & (\forall \text {-elim },(1),(3)) \\
+&P\left(x_{0}\right) & (\forall \text {-elim, },(2),(3)) \\
+&Q\left(x_{0}\right) & (\rightarrow \text {-elim },(4),(5)) \\
+&\forall x . Q(x) & (\forall \text {-intro },(3)-(6))
+\end{align*}
+\end{sol}
+
+上面我们介绍了如何把含有任意的内容干掉或者引入. 下面我们来看一下关于存在的一些例子: 
+
+\begin{definition}[存在符号的引入]$\exists$-intro: 
+$$
+{\alpha [{\color{red}t}/x]\over \exists x.\alpha }\quad (\exists x-\text{intro})
+$$
+where $t$ is free for $\alpha$. 
+	
+\end{definition}
+
+这个定理的意思是: 如果$\alpha$对于某个项成立, 那么$\exists x.\alpha$ 成立. 
+
+这里的没有被约束, 我们来举一个例子: $P({c})\vdash \exists x.P(x), c$是任意的常元符号: 这样是可以的, 但是注意下面的例子: 
+$\forall y. (y = y) \not \vdash  \exists x. \forall y. (x = y) (y\text{ is not free for x in }\alpha)$
+
+存在符号也可以消去. 第一种方式就是上面的反方向的形式. 就是
+\begin{definition}[存在符号消去]
+$\exists$-elim:
+$$
+{\exists x.\alpha\over \alpha [{\color{red}x_0}/x] }\quad (\exists x-\text{elim})
+$$
+where $t$ is free for $x$ in $\alpha$.  
+	
+\end{definition}
+
+还有一种我们以前经常用到的方法. 我们在这里来看一下, 这也是存在量词消去的一种方法. 
+
+\begin{definition}[存在量词的消去(2)]
+$\exists$-elim:
+$$
+\begin{array}{ccccr}
+&&&{\left[\alpha\left[x_{0} / x\right]\right]} & \text{引入假设} \\
+&&&\vdots & \text{经过一些推理过程}\\
+&\exists x . \alpha &\left[x_{0}\right] & \beta &\text{可以推出}\beta, \text{结合前提}\\ 
+\hline
+&&\beta &&\text{就可推出了}\\
+\end{array}(\exists -\text { elim })
+$$
+	
+\end{definition}
+
+这个内容说的是什么呢? 考虑我们在高中做题的时候, 对于存在性问题, 我们一般是假设这个存在, 经过一系列推导之后发现确实存在, 于是就说明了这个东西确实是存在的. 更加形式化的就是: 假设$x_0$使得$\alpha$成立, 如果从$\alpha[x_0/x]$可以推导出$\beta$, 那么$\alpha$从可以推导出$\beta$.
+
+我们来看个简单的例子: 
+
+\begin{example}
+$\{\forall x.(P(x)\to Q(x)),\exists x.P(x)\} \vdash \exists x. Q(x)$	
+\end{example}
+
+\begin{sol}
+	\begin{align*}
+&\forall x .(P(x) \rightarrow Q(x)) & (\text { 前提 }) \\
+&\exists x . P(x) & \text { (前提 }) \\
+&{\left[x_{0}\right] \quad\left[P\left(x_{0}\right)\right] } & (\text { 引入变量与假设 }) \\
+&P\left(x_{0}\right) \rightarrow Q\left(x_{0}\right) & (\forall \text {-elim, }(1),(3)) \\
+&Q\left(x_{0}\right) & (\rightarrow \text {-elim, }(3),(4)) \\
+&\exists x . Q(x) & (\exists \text {-intro },(5)) \\
+&\exists x . Q(x) & (\exists \text {-elim, }(2),(3)-(6))
+\end{align*}
+\end{sol}
+
+\begin{example}
+	$\{ \exists x.P(x), \forall x. \forall y. (P(x)\to Q(y) \} \vdash \forall y. Q(y)$
+\end{example}
+
+\begin{sol}
+	\begin{align*}
+&\exists x . P(x) & (\text { 前提 }) \\
+&\forall x . \forall y .(P(x) \rightarrow Q(y)) & (\text { 前提 }) \\
+&{\left[x_{0}\right] \quad\left[P\left(x_{0}\right)\right] } & (\text { 引入变量与假设 }) \\
+&\forall y .\left(P\left(x_{0}\right) \rightarrow Q(y)\right) & (\forall \text {-elim, }(2),(3)) \\
+&{\left[y_{0}\right] } & (\text { 引入变量 }) \\
+&P\left(x_{0}\right) \rightarrow Q\left(y_{0}\right) & (\forall \text {-elim, (4), (5)) } \\
+&Q\left(y_{0}\right) & (\rightarrow \text {-elim, (3),(6)) } \\
+&Q\left(y_{0}\right) & (\exists \text {-elim, (1), }(3)-(7)) \\
+&\forall y . Q(y) & (\forall \text {-intro, }(5)-(8))
+\end{align*}
+\end{sol}
 
 \section{常见的证明方法}
 
@@ -1799,7 +1911,31 @@ Hardy说证明$\sqrt 2$是无理数是最漂亮的证明之一. 其中用了反�
     那么, $Q(n)$ 对所有自然数 $n$ 都成立. 
   \end{theorem}
   
-他们的等价的推导, 用到了后面的量词相关的内容, 所以现在先暂时跳过. 不过, 第二类数学归纳法确实更加强大一点. 比如可以证明任何一个整数可以分解成若干个素数的乘积. 
+我们可以来证明这两者是互相蕴含的. 当然这个证明的关键是性质选取的任意性. 我们可以用这个来让它对我们有利. 
+
+\begin{theorem}[数学归纳法]
+    第一数学归纳法与第二数学归纳法等价. 
+  \end{theorem}
+  第二数学归纳法也被称为\red{\bf ``强'' (Strong)} 数学归纳法, 它强在可以使用的条件更多了. 我们可以来证明这件事情. 
+
+  \begin{lemma}
+    第一数学归纳法蕴含第二数学归纳法. 
+  \end{lemma} 
+  \begin{proof}
+    要证第二类数学归纳法，也即任给一个命题  $F$  ，若满足  $F(1)$  及  $(F(1) \wedge F(2) \wedge \cdots \wedge F(n)) \Rightarrow F(n+1)$  ，则有  $\forall k \in \mathbb{N} . F(k)$  . 
+    那么，我们可以构造命题  $G(n):=F(1) \wedge F(2) \wedge \cdots \wedge F(n)$  . 
+    显然，  $G(n) \Rightarrow F(n+1)$  ，又有  $G(n) \Rightarrow G(n)$  ，则  $G(n) \Rightarrow(F(n+1) \wedge G(n))$  ，而 后者即为  $G(n+1)$  . 
+    故，命题  $G$  满足第一类数学归纳法的条件，所以  $\forall k \in \mathbb{N}$ . $G(k)$  成立. 
+    而  $G(k) \Rightarrow F(k)$  ，故  $\forall k \in \mathbb{N}$ . $F(k)$  ，也即第二类数学归纳法成立. 
+  \end{proof}
+  \begin{lemma}
+    第二数学归纳法蕴含第一数学归纳法. 
+  \end{lemma} 
+  \begin{proof}
+    要证第一类数学归纳法，也即任给一个命题  $F$  ，若满足  $F(1)$  及  $F(n) \rightarrow F(n+1)$  ，则有  $\forall k \in \mathbb{N}$ . $F(k)$  . 
+    显然，  $F$  是满足第二类数学归纳法的条件的 (因为 1 的条件比 2 强)，故根据第二类数学归纳法，  $F(k)$  对所有正整数  $k$  成立，也即第一类数学归纳法成立. 
+  \end{proof}
+	
 
 \begin{dialogue}
 	A: 数学归纳法这么好, 感觉什么整数的问题都能证明啊! 
