@@ -1,0 +1,71 @@
+\chapter{The motivation}
+
+\section{Some problems at large scale}
+
+\begin{itemize}
+    \item Proofs in large scale.
+    \item Stability of the huge programs.
+    \item Correctness of huge programs. 
+\end{itemize}
+
+The aim is to know if our code is correct. 
+
+\section{Source of Knowledge}
+
+\mkpt{Knowledge source}
+\begin{itemize}
+    \item authority
+    \item induction of reasoning: using testcases, 
+    \item deductive: building proofs for already known knowledge
+\end{itemize}
+
+To fully make it useful, we should use deductive reasoning. 
+
+\mkpt{Type systems is crucial to verifying} A compiler can make deductive reasoning. 
+This may make programs sound(they won't go wrong). The complete means it can't
+be wrong. 
+
+\mkpt{The software crisis} As software grow bigger in size, we find that humans
+cannot well control the all the programs underlying the code, especially when
+collaborating with others. 
+
+\mkpt{Formal methods}
+
+\mkpt{Degree of formal systems} 
+
+Formal specifications: Only the definition of every object is formally used.
+Like all the manuals used in the operating systems.(Popular notation:
+Z-notation)
+
+Formal specifications and proofs about programs: Not only do we have the all
+the formal specifications, but also proofs about programs are made . 
+
+Formal specs and proofs about programs and machine checking: We have our proofs
+checked by machines in all. 
+
+\mkpt{Negation from Maths}Gödel found his first incompleteness theorem: Any arithmetic system that
+contains recursive ideas must be incomplete -- that is a there is a theorem that
+can neither be proved or disproved.
+
+\mkpt{Rice's Theorem} Every property is undecidable unless a trivial one. (e.g.
+it's true for all programs or the property of syntax is true). 
+
+Good part is proofs too detail and mechanically can be handed over to computers. 
+
+\mkpt{Some formal verification systems} TLA+(Temporary Logic Actions) is a 
+framework for programs. Coq is another one. 
+
+\section{The Coq System}
+
+\mkpt{Capability} 
+\begin{itemize}
+    \item Define computable functions and logical predicates
+    \item State mathematical theorems theorems and software specifications
+    \item Develop formal proofs of theorems interactively 
+    \item Machine check these proofs
+    \item Extract verified programs to OCaml, Haskell, Scheme. 
+\end{itemize}
+
+
+\mkpt{The way we interact} Cooperating together to generate a proof and to
+validate if the proof is true. 
