@@ -139,8 +139,9 @@
     \]
   \end{theorem}
 \begin{proof}
-    
-  对任意 $x$
+   
+  首先证明左边的部分: 
+  对任意 $x\in B$
     
   \setcounter{equation}{0}
   \begin{align*}
@@ -148,6 +149,16 @@
     \red{\implies} &x \in A \lor x \in B \\
     \implies &x \in A \cup B
   \end{align*}
+  
+  然后看另一个等价符号, 对于任意的$x\in A$:
+  \begin{align*}
+    &x \in A \\
+    \red{\implies} &x \in A \land x \in B \\
+    \implies &x \in A \cap B
+  \end{align*}
+  
+  
+  
 \end{proof}
 
 \begin{definition}[集合的差 (Set Difference); \blue{相对补} (Relative Complement)]
@@ -220,6 +231,7 @@
 \end{theorem}
 
 \begin{proof}
+  我们只来证明第二个. 第一个是同理的. 
   \setcounter{equation}{0}
   \begin{align*}
     &C \setminus (A \cup B) \\
@@ -301,7 +313,7 @@
 \end{theorem}
 
 \begin{proof}
-  对任意 $x$,
+  我们只来证明第二个. 第一个是同理的. 对任意 $x$,
   \setcounter{equation}{0}
   \begin{align*}
     &x \in X \setminus \bigcup_{\alpha \in I} A_{\alpha} \\
