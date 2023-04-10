@@ -141,4 +141,42 @@ This argument can only make sure the recurrence is true, without proving the
 basis one is correct. 
 
 \mkpt{H 8}
+We note that $Q_0 = \alpha$, $Q_1 = \beta$. Calculating for
+$Q_3=\frac{1+\beta}{\alpha}$, and $Q_4=\frac{\alpha+\beta+1}{\alpha\beta}$, and
+we find that $Q_4=\frac{1+\alpha}{\beta}$, and 
+\begin{align*}
+    Q_5&=\frac{\alpha\beta+\alpha^2+\alpha}{\alpha+\beta+1}=\alpha. \\
+    Q_6 &= \beta. \\
+\end{align*}
 
+So we end up in a loop. So the answer is: 
+\[
+    Q_n = \begin{cases}
+        \alpha & n \text{ mod 4 is 0}\\
+        \beta & n \text{ mod 4 is 1}\\
+        \frac{1}{\alpha\beta}+\frac{1}{\alpha}+\frac{1}{\beta} & n\text{ mod 4 is
+        2}\\
+            \frac{1+\alpha}{\beta}& n \text{ mod 4 is 3}
+    \end{cases}.
+\]
+
+\mkpt{HW 9} (a) We show that 
+\begin{align*}
+    x_1x_2\cdots x_{n-1} x_n &\leq \left( \frac{x_1+\cdots +x_n}{n}  \right)^n
+    \\
+    x_1x_2\cdots x_{n-1} \frac{x_1+\cdots+x_{n-1}}{n-1} &\leq \left(\frac{
+x_1+\cdots+x_{n-1}+\frac{x_1+\cdots +x_{n-1}}{n-1}}{n} \right) ^n \\ 
+\end{align*}
+
+Multiplying and making some ideas, we have 
+\[
+    x_1x_2\cdots x_{n-1}\frac{x_1+x_2+\cdots+x_{n-1}}{n-1} \leq  \frac{x_1+x_2+\cdots +x_{n-1}}{n-1}
+\]
+and $P(n-1)$ is true now.
+
+(b) We can set $x_1=\frac{y_1+\cdots+y_n}{n}$, and set $x_2=\frac{y_{n+1}+\cdots + y_{2n}}{n}$. 
+
+(c) We may use the binary representation for each number, hence we can repeat the
+case over and over again until implying all the possible $P(n)$s. 
+
+\mkpt{HW 10}

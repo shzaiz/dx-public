@@ -1941,9 +1941,7 @@ $$\forall x \in X.\; I_{X}(x) = x.$$
 
 \section{序关系}
 
-我们在本章的开头介绍关系的时候就提到了``偏序''以及``全序''. 下面我们来通过一些更多的例子好好体会一下这些``序关系''带给我们的思维上的碰撞, 并且我们会重新看一看定义极限的$\epsilon-\delta$语言里面的重要关系: $<$(小于号), 为什么换成$(\leq)$(小于等于)就不行了. 并且这件事情能够让我们理解什么叫``开'', 什么叫``闭''; 同时也对于高等数学课程中空间解析几何的内容有一个更自然的想法. 
-
-\subsection{偏序关系}
+\subsection{偏序关系与全序关系}
 
 \begin{dialogue}
 	你非常熟悉的实数集上的“不大于”关系和非空集合A的幂集合上定义的“子集”关系都是次序关系，这与你长期以来的“commonsense”有差异吗？
@@ -1952,7 +1950,13 @@ $$\forall x \in X.\; I_{X}(x) = x.$$
 前面我们提到过偏序关系. 我们给出一个定义: 
 
 \begin{definition}
-	设$R$是非空集合$A$上的关系, 如果$A$是自反的$(\forall x\in X, x \preceq x)$, 对称的$(\forall x,y \in X, x \preceq y \an y\preceq x \to x=y)$, 以及传递的$(\forall x,y,z\in X. x \preceq y \land y \preceq z \to x\preceq z)$, 就称作$R$是$A$上的偏序关系. 通常记为$\preceq$. 整个序关系可以写作$(X,\preceq)$
+	设$R$是非空集合$A$上的关系, 如果$A$是
+	
+	(1)自反的$(\forall x\in X, x \preceq x)$, 
+	
+	(2)对称的$(\forall x,y \in X, x \preceq y \an y\preceq x \to x=y)$
+	
+	(3)传递的$(\forall x,y,z\in X. x \preceq y \land y \preceq z \to x\preceq z)$, 就称作$R$是$A$上的偏序关系. 通常记为$\preceq$. 整个序关系可以写作$(X,\preceq)$
 \end{definition}
 
 \begin{bonus}
@@ -2058,9 +2062,21 @@ $$\forall x \in X.\; I_{X}(x) = x.$$
 	那么称$x$为$Y$的下界. 
 \end{definition}
 
+\begin{definition}[最小上界(least upper bound)]
+	设$(X,\preceq)$是偏序集, 对于$Y \subseteq X$, $x\in x$是$Y$的上界, 对于$Y$的所有上界$x'$, 若有$x\preceq x'$, 则称$x$是$Y$的最小上界.  
+\end{definition}
 
+\begin{definition}[最大下界(greatest upper bound)]
+	设$(X,\preceq)$是偏序集, 对于$Y \subseteq X$, $x\in x$是$Y$的下界, 对于$Y$的所有下界$x'$, 若有$x'\preceq x$, 则称$x$是$Y$的最大下界.  
+\end{definition}
 
+有些时候, 我们对于``有界''的东西十分的喜欢. 我们把任意两个元素之间都有最小上界和最大下界的这样的结构叫做``格(lattice)''.
 
+\begin{definition}[格(lattice)]
+	设$(X, \preceq)$是偏序集, 如果任意两个元素都有最小上界和最大的下界, 那么称$(X, \preceq)$为格(lattice). 
+\end{definition}
+
+我们刚刚说到的集合的(真)包含关系, 以及大于1的整数上的整除的关系来看, 上面讨论的两个例子都是格. 特殊的, 自然数上小于关系构成的内容也是格. 
 
 
 我们接下来对于一些概念加以定义. 比如, 有了$\leq$, 自然会问一问会不会定义$<$. 
@@ -2118,23 +2134,52 @@ $S$是有限的偏序集,若$S$的元素个数最多的反链含$k$个元素, �
 
 % TODO
 
-\subsection{全序关系}
+有了类似于大于号的内容, 我们很自然的就会希望思考有没有类似于大于的内容. 这其实就是一个严格偏序关系(strict partial order). 
 
-任何两个元素均可比的偏序称为“全序”，又称“线性序”. 刚刚我们说过的``一条路径''也就是上面所说的``链(chain)''. 
+\begin{definition}[严格偏序关系]
+令$\prec\subseteq X\times X$是$X$上的二元关系, 如果满足$\prec$满足下列条件, 我们说$\prec$是$X$上的偏序关系.
+ 
+	(1) $\prec$是反自反(irreflexive)的: $\forall x. \no (x\prec x)$;
+	
+	(2) $\prec$是非对称(asymmetric)的: $\forall x, y\in X. x\prec y\to \no (y\to x)$;
+	
+	(3) $\prec$是传递(transitive)的: $\forall x,y,z\in X. x\prec y \an y\prec z\to x\prec z$.
 
+\end{definition}
 
-
-
-
-
-
-
-
-
-
-
-
+这样的例子包含如我们探讨的整数上面的小于和大于; 以及集合和真包含于的关系. 
 
 
+事实上, 这个的第二个内容是不完备的, 这个内容可以通过第一条和第三条组成. 
+
+
+
+下面我们来看另一种全序关系. 全序关系可以认为是偏序关系+连接性--任意的两个元素都是可以比较的. 
+
+\begin{definition}
+	设$R$是非空集合$A$上的关系, 如果$A$是
+	
+	(1)自反的$(\forall x\in X, x \preceq x)$;
+	
+	(2)对称的$(\forall x,y \in X, x \preceq y \an y\preceq x \to x=y)$;
+	
+	(3)传递的$(\forall x,y,z\in X. x \preceq y \land y \preceq z \to x\preceq z)$, 就称作$R$是$A$上的偏序关系. 通常记为$\preceq$. 整个序关系可以写作$(X,\preceq)$;
+	
+	(4) 连接性(connex): $\forall x, y\in X. x\preceq y\an y\preceq x$. 
+\end{definition}
+
+同样的, 我们也有严格全序关系: 
+
+\begin{definition}[严格全序关系]
+令$\prec\subseteq X\times X$是$X$上的二元关系, 如果满足$\prec$满足下列条件, 我们说$\prec$是$X$上的严格全序关系.
+ 
+	(1) $\prec$是反自反(irreflexive)的: $\forall x. \no (x\prec x)$;
+	
+	(2) $\prec$是传递(transitive)的: $\forall x,y,z\in X. x\prec y \an y\prec z\to x\prec z$.
+	
+	(3) 半连接性(semi-connex): $\forall x, y\in X. \not (x=y)\to x\preceq y\an y\preceq x$. 
+\end{definition}
+
+这样子$(\R, <), (\R,>)$的内容就是这样的例子. 
 
 
