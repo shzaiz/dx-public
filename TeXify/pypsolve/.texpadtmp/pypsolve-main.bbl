@@ -1,3 +1,10 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{why-important-cnf-dnf}
+MJD (https://math.stackexchange.com/users/25554/mjd).
+\newblock For cnf and dnf why do we look at the interpretations that make the
+  formula false and true respectively?
+\newblock Mathematics Stack Exchange.
+\newblock URL:https://math.stackexchange.com/q/4227598 (version: 2021-08-18).
 
 \end{thebibliography}
