@@ -108,4 +108,49 @@ following distributive law:
     \sum_{j\in J,k\in K}^{}a_jb_k = \big( \sum_{j\in J}^{}a_j \big) + \big(
     \sum_{k\in K}^{}b_k \big)
 \]
+Another general form for this is $\sum_{j\in J}^{}\sum_{k\in
+K(j)}^{}a_{j,k}=\sum_{k \in K'}^{} \sum_{j\in J'(k)}^{}a_{j, k}$. Here, the sets
+should satisfy $[j \in J][k \in K(j)] = [k \in K'][j \in J'(k)]. $
 
+\mkpt{Example 1. Consecutive integers} We may rewrite $[1\leq j\leq n][j\leq
+k\leq n] = [1\leq j\leq k\leq n] = [1\leq k\leq n][1\leq j\leq k]$. 
+
+\mkpt{Example 2. Sum over an matrix} 
+We try to find a simplified idea of the matrix
+\[
+    \left(\begin{matrix}
+            a_1a_1& a_1a_2 & \cdots & a_1a_n \\
+            a_2a_1&a_2a_2&\cdots & a_2a_n\\
+            \vdots & \vdots & \ddots & \vdots \\
+            a_na_1 & a_na_2&\cdots & a_na_n
+    \end{matrix}\right)
+\]
+we shall find a sum $S_1 = \sum_{1\leq j\leq k\leq n}^{}a_ja_k$. 
+
+According to the associativity of the multiplication, we find that $a_j a_k= a_k
+a_j$. Hence we have $S_\Delta = \sum_{1\leq j\leq k\leq n}^{}a_ja_k =
+\sum_{1\leq k\leq j\leq n}^{}a_ka_j=\sum_{1\leq j\leq n}^{}a_ja_k=S_\nabla$.
+According to the problem above, we have $[1\leq j\leq k\leq n]+[1\leq k\leq
+j\leq n]=[1\leq j,k\leq n]+[1\leq j=k\leq n]$. We have 
+\[
+    2S_\nabla = S_\nabla + S_\Delta = \sum_{1\leq j,k\leq n}^{}a_ja_k + 
+    \sum_{1\leq j=k\leq n}^{} a_j a_k. 
+\]
+
+The first sum is $\left( \sum_{j=1}^{n}a_j \right) \left( \sum_{k-1}^{n} a_k \right) = \left( \sum_{k=1}^{n}a_k  \right)^2$, and the second sum is that $\sum_{k-1}^{n}a_k^2$. 
+
+So we have the sum 
+\[
+    \sum_{\nabla}^{} = \sum_{1\leq j\leq k\leq n}^{}a_ja_k = \frac{1}{2} \left(
+    \left( \sum_{k=1}^{n} a_k \right)^2 + \sum_{k=1}^{n}a_k^2\right).
+\]
+
+The idea is like the aligning the data and subtracting the overlapped off.
+That's a more religious form. 
+
+\mkpt{Another double sum} We try to evaluate 
+\[
+    S=\sum_{1\leq j< k\leq n}^{} (a_k-a_j)(b_k-b_j).
+\]
+
+According we have 
