@@ -42,29 +42,31 @@
 \contentsline {section}{\numberline {3.1}简单的朴素集合论的一些定义}{71}{section.3.1}%
 \contentsline {section}{\numberline {3.2}高级集合操作}{75}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}交和并}{75}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}排列的力量}{76}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.2}排列的力量}{77}{subsection.3.2.2}%
 \contentsline {section}{\numberline {3.3}悖论的出现}{78}{section.3.3}%
 \contentsline {section}{\numberline {3.4}二元关系: 简介以及简单运算}{78}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}有序对}{80}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}笛卡尔积: 一种组合方式}{80}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.2}笛卡尔积: 一种组合方式}{81}{subsection.3.4.2}%
 \contentsline {subsection}{\numberline {3.4.3}用有序对定义二元关系}{82}{subsection.3.4.3}%
-\contentsline {subsection}{\numberline {3.4.4}关系的简单运算}{82}{subsection.3.4.4}%
+\contentsline {subsection}{\numberline {3.4.4}关系的简单运算}{83}{subsection.3.4.4}%
 \contentsline {section}{\numberline {3.5}等价关系\nobreakspace {}--\nobreakspace {}特殊的二元关系}{89}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}从自然数到有理数}{91}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.1}从自然数到有理数}{92}{subsection.3.5.1}%
 \contentsline {section}{\numberline {3.6}相容关系\nobreakspace {}--\nobreakspace {}特殊的二元关系}{93}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}集合的覆盖}{93}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.1}集合的覆盖}{94}{subsection.3.6.1}%
 \contentsline {section}{\numberline {3.7}函数\nobreakspace {}--\nobreakspace {}特殊的二元关系}{94}{section.3.7}%
 \contentsline {subsection}{\numberline {3.7.1}函数: 作为关系的一个子集}{94}{subsection.3.7.1}%
-\contentsline {subsection}{\numberline {3.7.2}作为集合的函数}{95}{subsection.3.7.2}%
+\contentsline {subsection}{\numberline {3.7.2}作为集合的函数}{96}{subsection.3.7.2}%
 \contentsline {subsection}{\numberline {3.7.3}特殊函数关系}{96}{subsection.3.7.3}%
-\contentsline {subsection}{\numberline {3.7.4}作为关系的函数}{97}{subsection.3.7.4}%
-\contentsline {subsubsection}{函数的限制}{97}{subsubsection*.46}%
-\contentsline {subsubsection}{像和逆像}{97}{subsubsection*.47}%
-\contentsline {subsubsection}{函数的复合}{100}{subsubsection*.48}%
+\contentsline {subsection}{\numberline {3.7.4}作为关系的函数}{98}{subsection.3.7.4}%
+\contentsline {subsubsection}{函数的限制}{98}{subsubsection*.46}%
+\contentsline {subsubsection}{像和逆像}{98}{subsubsection*.47}%
+\contentsline {subsubsection}{函数的复合}{101}{subsubsection*.48}%
 \contentsline {subsubsection}{反函数}{103}{subsubsection*.49}%
-\contentsline {section}{\numberline {3.8}序关系}{104}{section.3.8}%
-\contentsline {subsection}{\numberline {3.8.1}偏序关系与全序关系}{104}{subsection.3.8.1}%
-\contentsline {chapter}{\numberline {第四章\hspace {.3em}}磨刀不误砍柴工[P]}{109}{chapter.4}%
-\contentsline {section}{\numberline {4.1}数据与数据结构}{109}{section.4.1}%
-\contentsline {section}{\numberline {4.2}把算法告诉计算机}{112}{section.4.2}%
+\contentsline {section}{\numberline {3.8}序关系}{105}{section.3.8}%
+\contentsline {subsection}{\numberline {3.8.1}偏序关系与全序关系}{105}{subsection.3.8.1}%
+\contentsline {subsection}{\numberline {3.8.2}良序关系}{109}{subsection.3.8.2}%
+\contentsline {chapter}{\numberline {第四章\hspace {.3em}}磨刀不误砍柴工[P]}{111}{chapter.4}%
+\contentsline {section}{\numberline {4.1}数据与数据结构}{111}{section.4.1}%
+\contentsline {section}{\numberline {4.2}把算法告诉计算机}{114}{section.4.2}%
+\contentsline {section}{\numberline {4.3}更好的工具说明算法的正确}{122}{section.4.3}%
 \contentsfinish 

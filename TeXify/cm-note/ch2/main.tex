@@ -153,4 +153,70 @@ That's a more religious form.
     S=\sum_{1\leq j< k\leq n}^{} (a_k-a_j)(b_k-b_j).
 \]
 
-According we have 
+We find that this sum satisfies summation: 
+\[
+    S=\sum_{1\leq j< k\leq n}^{} (a_k-a_j)(b_k-b_j)=\sum_{1\leq j<k\leq n}^{}(a_j-a_k)(b_j-b_k).
+\]
+
+We add $S$ to itself, with equation
+\[
+    [1\leq j<k\leq n]+[1\leq k<j\leq n]=[1\leq j,k\leq n]-[1\leq j=k\leq n].
+\]
+yields 
+\[
+    2S=\sum_{1\leq j,k\leq n}^{}(a_j-a_k)(b_j-b_k) - \sum_{1\leq j=k\leq n}^{} (a_j-a_k)(b_j-b_k)
+\]
+
+The second part is 0, so we have to evaluate the first sum.
+The first sum expand it and swapping the summation index
+we have the identity 
+\[
+    2 \sum_{1\leq j,k\leq n}^{n}a_kb_k + 2 \sum_{1\leq j,k\leq n}^{} a_jb_k
+\]
+We have sums over $j,k$, extracting $j$ out, we have 
+\[
+    2n \sum_{1\leq j\leq n}^{n}a_kb_k + 2 \left(\sum_{1\leq j\leq n}^{} a_j  \right)^2 \left( \sum_{i\leq k\leq n}^{} b_k\right)^2
+\]
+
+\mkpt{Chebyshev's monotonic inequalities } This is a special case for the 
+last case as an example, that is 
+\begin{align*}
+    \left( \sum_{i=1}^{n} a_k \right) \left( \sum_{k=1}^{n} b_k \right) 
+    &\leq n \sum_{k=1}^{n} a_k b_k \\
+\end{align*}
+if $a_1\leq a_2\leq \cdots\leq a_n$ and $b_1\leq b_2\leq \cdots\leq b_n$. 
+and vice versa. 
+
+\mkpt{Changing the index as the single sums} In the index is changed in 
+single sums, we have that 
+\[
+    \sum_{k \in K}^{}a_k = \sum_{p(k) \in k}^{} a_k,
+\]
+if $p(k)$ as the permutation of the integers. 
+
+We now generalize $k$ by $f(j)$, where $f$ is an arbitrary function: 
+\[
+    f:j\to K
+\]
+that takes an integer $j \in J$ into an integer $f(j) \in K$. In this case
+we have the replace formula:
+\[
+    \sum_{j \in J}^{}a_{f(j)} = \sum_{k \in K }^{} a_k \#f^-(k)
+\]
+where the $\#f^-(k)$ stands for number of sets in the set $f^-(k)=\{ j|f(j)=k \}$. 
+
+Proof. $\sum_{j \in J}^{}a_{f(j)} = \sum_{j \in J, k \in K}^{}a_k[f(j)=k]=
+\sum_{k \in K}^{}a_k \sum_{j \in J}^{}[f(j)=k]$. This yields the answer. 
+
+\mkpt{Example: A fraction sum} We wish to sum 
+\[
+    S_n = \sum_{1\leq j<k\leq n}^{}\frac{1}{k-j}. 
+\]
+An attempt shows that 
+\begin{align*}
+    S_n &= \sum_{j=1}^{n} \sum_{k=j}^{n}\frac{1}{k-j} \\
+        &= & \sum_{1\leq k\leq n}^{1\leq k-j<k} \text{Replacing $j$ by $k-i$} \\
+\end{align*}
+
+
+
