@@ -684,6 +684,32 @@ x+y+z-6=0 & (1)\\
  
 \end_layout
 
+\begin_layout Problem
+求异面直线
+\begin_inset Formula $L_{1}:\frac{x}{1}=\frac{y}{1}=\frac{z+1}{0},L_{2}:\frac{x-1}{1}=\frac{y-1}{1}=\frac{z-1}{0}$
+\end_inset
+
+的公垂线
+\begin_inset Formula $L$
+\end_inset
+
+的方程.
+ 
+\end_layout
+
+\begin_layout Solution*
+由于题目我们可以可以使用共垂线和
+\begin_inset Formula $L$
+\end_inset
+
+以及公垂线与
+\begin_inset Formula $L_{1},L_{2}$
+\end_inset
+
+分别生成两个垂面, 并且让他们相交就行了.
+ 
+\end_layout
+
 \begin_layout Section
 曲面
 \end_layout

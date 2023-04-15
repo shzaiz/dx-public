@@ -646,7 +646,7 @@ $$
   \[
     {R \subseteq A \times B}
   \]
-  Sepcially,{align*} if $A = B$, $R$ is called a relation \blue{on} $A$.
+  Sepcially, if $A = B$, $R$ is called a relation \blue{on} $A$.
 \end{definition}
 
 为了简化符号, 我们有时候也通过这样的方式来书写: 
@@ -855,22 +855,7 @@ $$
     \teal{R[X_1 \setminus X_2] \supseteq R[X_1] \setminus R[X_2]}
   \]
 \end{theorem}
-\begin{proof}
-  \red{对任意 $(a, b)$,}
-  \setcounter{equation}{0}
-  \begin{align*}
-    &(a, b) \in (R \circ S)^{-1} \\
-    \iff& (b, a) \in R \circ S \\
-    \iff& \exists c.\; (b, \blue{c}) \in S \land (\blue{c}, a) \in R \\
-    \iff& \exists c.\; (\purple{c}, b) \in S^{-1} \land (a, \purple{c}) \in R^{-1} \\
-    \iff& (a, b) \in S^{-1} \circ R^{-1}
-  \end{align*}
-\end{proof}
-\begin{theorem}
-  \[
-    (R \circ S) \circ T = R \circ (S \circ T)
-  \]
-\end{theorem}
+
 
 \textbf{5. 复合. } 像复合函数一样, 这是一种构建复杂系统的很好的一种方法. 因此我们自然给出定义: 
 \begin{definition}[复合 (Composition; $R \circ S$, $R ; S$)]
@@ -906,6 +891,26 @@ $$
 \end{proof}
 
 这就表明关系的复合满足结合律, 但是不满足交换律(和矩阵乘法很相似). 
+
+
+\begin{theorem}
+  \[
+    (R \circ S)^{-1} = S^{-1} \circ R^{-1} 
+  \]
+\end{theorem}
+
+\begin{proof}
+  \red{对任意 $(a, b)$,}
+  \setcounter{equation}{0}
+  \begin{align*}
+    &(a, b) \in (R \circ S)^{-1} \\
+    \iff& (b, a) \in R \circ S \\
+    \iff& \exists c.\; (b, \blue{c}) \in S \land (\blue{c}, a) \in R \\
+    \iff& \exists c.\; (\purple{c}, b) \in S^{-1} \land (a, \purple{c}) \in R^{-1} \\
+    \iff& (a, b) \in S^{-1} \circ R^{-1}
+  \end{align*}
+\end{proof}
+
 \ti{七个性质}
 
 \textbf{1. 自反的. }
@@ -1032,7 +1037,6 @@ $$
     \implies& (a, b) \in R
   \end{align*}
 
-  \vspace{0.30cm}
   
     \red{对任意 $a, b, c$}
     \[
@@ -1079,7 +1083,7 @@ $$
   \red{对任意 $(a, b)$,}
   \setcounter{equation}{0}
   \begin{align*}
-    &(a, b) \in R \circ R \\[6pt]
+    &(a, b) \in R \circ R \\
     \implies& \exists c.\; (a, c) \in R \land (b, c) \in R \\
     \implies& (a, b) \in R
   \end{align*}
