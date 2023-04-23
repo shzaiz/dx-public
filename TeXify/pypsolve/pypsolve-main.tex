@@ -1,4 +1,7 @@
 \input{../templates/template.tex}
+
+
+
 \newenvironment{lyxcode}
 	{\par\begin{list}{}{
 		\setlength{\rightmargin}{\leftmargin}
@@ -35,6 +38,7 @@
     tabsize=2
 }
 \usepackage{glossaries}
+\usepackage{xeCJK}
 \lstset{style=mystyle}
 \usepackage{mwe} % for blindtext and example-image-a in example
 \usepackage{wrapfig}
@@ -129,7 +133,7 @@ item-indent=0pt, label-offset=2pt, column-sep={10pt}}
 
 
 \chapter*{所有问题的解答}
-    
+%    
     \begin{multicols}{2}\raggedcolumns
         \shipoutAnswer
     \end{multicols}
