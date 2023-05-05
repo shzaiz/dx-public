@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.1.19)  2 MAY 2023 15:43
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.1.19)  3 MAY 2023 12:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2629,7 +2629,18 @@ LaTeX Font Warning: Command \Large invalid in math mode on input line 2133.
 LaTeX Font Info:    Trying to load font information for U+euf on input line 2416.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-)) (./4-programs/main.tex [119] [120
+)
+Package mdframed Info: mdframed works in twoside mode on input line 2422.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2422.
+
+
+LaTeX Font Warning: Command \Large invalid in math mode on input line 2422.
+
+Missing character: There is no ・ (U+30FB) in font SimSun/OT:script=hani;language=dflt;!
+Missing character: There is no ・ (U+30FB) in font SimSun/OT:script=hani;language=dflt;!
+) (./4-programs/main.tex [119] [120
 
 ]
 第四章
@@ -2742,10 +2753,10 @@ Package rerunfilecheck Info: File `pypsolve-main.out' has not changed.
 (rerunfilecheck)             Checksum: 346DDDC7504CF7B702F5F74E5BEA9B9E;8851.
  ) 
 Here is how much of TeX's memory you used:
- 41153 strings out of 476776
- 873053 string characters out of 5805932
+ 41223 strings out of 476776
+ 877655 string characters out of 5805932
  2289991 words of memory out of 5000000
- 60427 multiletter control sequences out of 15000+600000
+ 60497 multiletter control sequences out of 15000+600000
  527470 words of font info for 146 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  98i,14n,100p,2260b,1893s stack positions out of 10000i,1000n,20000p,200000b,200000s
