@@ -7,9 +7,7 @@
 \textclass ctex-book
 \use_default_options true
 \begin_modules
-algorithm2e
-theorems-named
-theorems-ams-bytype
+theorems-tcolorbox
 \end_modules
 \maintain_unincluded_children false
 \language english
@@ -5268,7 +5266,7 @@ D_{1}(\la),\frac{D_{2}(\la)}{D_{1}(\la)},\cdots,\frac{D_{r}(\la)}{D_{r-1}(\la)}.
 \end_layout
 
 \end_deeper
-\begin_layout Remark*
+\begin_layout Standard
 定义
 \begin_inset Formula $A(\la)$
 \end_inset

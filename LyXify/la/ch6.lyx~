@@ -7,9 +7,7 @@
 \textclass ctex-book
 \use_default_options true
 \begin_modules
-algorithm2e
-theorems-named
-theorems-ams-bytype
+theorems-tcolorbox
 \end_modules
 \maintain_unincluded_children false
 \language english
@@ -3362,7 +3360,7 @@ Thm.
 用配方法化二次型为标准形
 \end_layout
 
-\begin_layout Case
+\begin_layout Standard
 二次型中含有某变量
 \begin_inset Formula $x_{i}$
 \end_inset
@@ -3380,7 +3378,7 @@ Thm.
  
 \end_layout
 
-\begin_layout Case
+\begin_layout Standard
 二次型中没有平方项, 只有交叉项: 先利用平方差公式进行可逆变换的构造, 把二次型化为含平方项的二次型, 如当
 \begin_inset Formula $x_{i}x_{j}$
 \end_inset
@@ -3392,7 +3390,6 @@ Thm.
 时, 进行可逆线性变换: 
 \end_layout
 
-\begin_deeper
 \begin_layout Standard
 \begin_inset Formula 
 \[
@@ -3409,7 +3406,6 @@ x_{i}=y_{i}-y_{j},x_{j}=y_{i}+y_{j},x_{k}=y_{k}(k\neq i,j)
  
 \end_layout
 
-\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset

@@ -3346,6 +3346,10 @@ V_{1}\oplus V_{2}.
 (矩阵的分类与直和)
 \end_layout
 
+\begin_layout Exercise
+完成如下的习题: 
+\end_layout
+
 \begin_layout Section
 商空间
 \end_layout
@@ -4836,10 +4840,6 @@ status open
 \newcommand{\lngen}[3]{#1_{1}#2_{1}+#1_{2}#2_{2}+\cdots+#1_{#3}#2_{#3}}
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 
 \end_layout
 

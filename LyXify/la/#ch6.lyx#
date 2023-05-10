@@ -7,9 +7,7 @@
 \textclass ctex-book
 \use_default_options true
 \begin_modules
-algorithm2e
-theorems-named
-theorems-ams-bytype
+theorems-tcolorbox
 \end_modules
 \maintain_unincluded_children false
 \language english
@@ -362,6 +360,317 @@ name "thm:dual-basis-change"
 
 是线性函数.
  
+\end_layout
+
+\begin_layout Exercise
+完成下列练习: 
+\end_layout
+
+\begin_layout Enumerate
+设
+\begin_inset Formula $V=\F^{4\times1}$
+\end_inset
+
+上的两组基为
+\begin_inset Formula $(0,-1,0,0)',(1,-1,1,0)',(-1,0,1,-1)',(-1,-1,0,1)';(1,1,1,1)',(1,1,-1,-1)',(1,-1,1,-1)',(1,-1,-1,1)'$
+\end_inset
+
+.
+ 求双线性函数
+\begin_inset Formula $8x_{1}y_{3}+2x_{1}y_{4}+2x_{2}y_{2}+8x_{2}y_{4}$
+\end_inset
+
+在这两组基下的度量矩阵.
+ 
+\end_layout
+
+\begin_layout Enumerate
+设
+\begin_inset Formula $A\in\F^{m\times m},$
+\end_inset
+
+定义
+\begin_inset Formula $V=\F^{n\times n}$
+\end_inset
+
+上的二元函数
+\begin_inset Formula $f(X,Y)=\text{tr}(X'AY),X,Y\in V$
+\end_inset
+
+.
+ (1) 证明: 
+\begin_inset Formula $f(X,Y)$
+\end_inset
+
+是
+\begin_inset Formula $V$
+\end_inset
+
+上的双线性函数; (2) 分别求
+\begin_inset Formula $f$
+\end_inset
+
+在两组基
+\begin_inset Formula $E_{11},\cdots,E_{1n},E_{m1},\cdots,E_{mn}$
+\end_inset
+
+;
+\begin_inset Formula $E_{11},\cdots,E_{m1},E_{1n},\cdots,E_{mn}$
+\end_inset
+
+ 下的度量矩阵.
+ 
+\end_layout
+
+\begin_layout Enumerate
+设
+\begin_inset Formula $V$
+\end_inset
+
+是复线性空间, 
+\begin_inset Formula $\dim V\geq2,f(\al,\bt)$
+\end_inset
+
+是
+\begin_inset Formula $V$
+\end_inset
+
+上的对称双线性函数.
+ (1) 证明: 
+\begin_inset Formula $V$
+\end_inset
+
+中有非零向量
+\begin_inset Formula $\eta$
+\end_inset
+
+使得
+\begin_inset Formula $f(\eta,\eta)=0.$
+\end_inset
+
+ (2) 若
+\begin_inset Formula $f(\al,\bt)$
+\end_inset
+
+是非退化的, 证明: 存在线性无关的
+\begin_inset Formula $\eta,\zeta,$
+\end_inset
+
+满足
+\begin_inset Formula $f(\eta,\zeta)=1,f(\eta,\eta)=f(\zeta,\zeta)=0.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+设
+\begin_inset Formula $\begin{pmatrix}A & B\\
+B' & C
+\end{pmatrix}\in\F^{n\times n}$
+\end_inset
+
+为对称矩阵, 其中
+\begin_inset Formula $A\in\F^{r\times r}$
+\end_inset
+
+可逆, 证明: 存在
+\begin_inset Formula $P\in\F^{r\times(n-r)},C_{1}\in\F^{(n-r)\times(n-r)}$
+\end_inset
+
+使得
+\begin_inset Formula $\begin{pmatrix}I_{r} & 0\\
+P' & I_{n-r}
+\end{pmatrix}\begin{pmatrix}A & B\\
+B' & C
+\end{pmatrix}\begin{pmatrix}I_{r} & P\\
+0 & I_{n-r}
+\end{pmatrix}=\begin{pmatrix}A & 0\\
+0 & C_{1}
+\end{pmatrix}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+设
+\begin_inset Formula $f(\al,\bt)$
+\end_inset
+
+是
+\begin_inset Formula $n$
+\end_inset
+
+维线性空间上
+\begin_inset Formula $V$
+\end_inset
+
+的非退化双线性函数, 对任意
+\begin_inset Formula $\al\in V,$
+\end_inset
+
+定义
+\begin_inset Formula $V$
+\end_inset
+
+上的函数
+\begin_inset Formula $\al^{*}:\al^{*}(\bt)=f(\al,\bt),$
+\end_inset
+
+证明: (1) 
+\begin_inset Formula $\al^{*}\in V^{*},$
+\end_inset
+
+且
+\begin_inset Formula $\al\mapsto\al^{*}$
+\end_inset
+
+是
+\begin_inset Formula $V$
+\end_inset
+
+到
+\begin_inset Formula $V^{*}$
+\end_inset
+
+的同构映射.
+ (2) 设
+\begin_inset Formula $\lsvec{\eqs}$
+\end_inset
+
+为
+\begin_inset Formula $V$
+\end_inset
+
+的基, 存在
+\begin_inset Formula $V$
+\end_inset
+
+的唯一一组基, 
+\begin_inset Formula $\lsvec{\eta},$
+\end_inset
+
+使得
+\begin_inset Formula $f(\eqs_{i},\eta_{j})=\delta_{ij}1\leq i,j\leq n$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+设
+\begin_inset Formula $V$
+\end_inset
+
+是
+\begin_inset Formula $\F$
+\end_inset
+
+上的
+\begin_inset Formula $n$
+\end_inset
+
+维线性空间, 
+\begin_inset Formula $(,)$
+\end_inset
+
+是
+\begin_inset Formula $V$
+\end_inset
+
+上的非退化双线性函数, 记
+\begin_inset Formula $L=\{\huaa\in\End V|(\huaa\al,\bt)+(\al,\huaa\bt)=0,\forall\al,\bt\in V\}.$
+\end_inset
+
+(1) 若
+\begin_inset Formula $\huaa,\huab\in L,$
+\end_inset
+
+证明
+\begin_inset Formula $\huaa\huab-\huab\huaa\in L$
+\end_inset
+
+.
+ (2)当
+\begin_inset Formula $(,)$
+\end_inset
+
+为对称或者反对称的时候, 求
+\begin_inset Formula $L$
+\end_inset
+
+的维数和一组基.
+ 
+\end_layout
+
+\begin_layout Enumerate
+设
+\begin_inset Formula $V$
+\end_inset
+
+是
+\begin_inset Formula $\F$
+\end_inset
+
+上的
+\begin_inset Formula $n$
+\end_inset
+
+维线性空间, 
+\begin_inset Formula $(,)$
+\end_inset
+
+是
+\begin_inset Formula $V$
+\end_inset
+
+上的非退化双线性函数, 记
+\begin_inset Formula $G=\{\huaa\in\End V|(\huaa\al,\huaa\bt)=(\al,\bt),\forall\al,\bt\in V\}.$
+\end_inset
+
+ (1) 若
+\begin_inset Formula $\huaa\in G,$
+\end_inset
+
+证明:
+\begin_inset Formula $\huaa$
+\end_inset
+
+可逆, 
+\begin_inset Formula $|\huaa|=\pm1.$
+\end_inset
+
+(2) 若
+\begin_inset Formula $\huaa,\huab\in G$
+\end_inset
+
+, 证明
+\begin_inset Formula $\huaa^{-1},\huaa\huab\in G.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+设
+\begin_inset Formula $B(X,Y)$
+\end_inset
+
+是
+\begin_inset Formula $\F^{n\times n}$
+\end_inset
+
+上的对称双线性函数, 对于任意
+\begin_inset Formula $X,Y,Z\in\F^{n\times n}$
+\end_inset
+
+满足
+\begin_inset Formula $B(XY,Z)=B(X,YZ)$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -3162,10 +3471,20 @@ A=\begin{pmatrix}A_{1} & \bt\\
 \end_inset
 
 与
-\begin_inset Formula $ $
+\begin_inset Formula $I_{n}$
 \end_inset
 
+合同, 即为正定矩阵, 从而
+\begin_inset Formula $A$
+\end_inset
 
+正定.
+ 
+\end_layout
+
+\begin_layout Standard
+所以我们可以运用顺序主子式的方法来判断一个二次型正定.
+ 
 \end_layout
 
 \begin_layout Section
@@ -3352,7 +3671,7 @@ Thm.
 用配方法化二次型为标准形
 \end_layout
 
-\begin_layout Case
+\begin_layout Standard
 二次型中含有某变量
 \begin_inset Formula $x_{i}$
 \end_inset
@@ -3370,7 +3689,7 @@ Thm.
  
 \end_layout
 
-\begin_layout Case
+\begin_layout Standard
 二次型中没有平方项, 只有交叉项: 先利用平方差公式进行可逆变换的构造, 把二次型化为含平方项的二次型, 如当
 \begin_inset Formula $x_{i}x_{j}$
 \end_inset
@@ -3382,7 +3701,6 @@ Thm.
 时, 进行可逆线性变换: 
 \end_layout
 
-\begin_deeper
 \begin_layout Standard
 \begin_inset Formula 
 \[
@@ -3399,7 +3717,6 @@ x_{i}=y_{i}-y_{j},x_{j}=y_{i}+y_{j},x_{k}=y_{k}(k\neq i,j)
  
 \end_layout
 
-\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
