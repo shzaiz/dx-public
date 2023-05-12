@@ -667,7 +667,40 @@ B' & C
 \end_inset
 
 满足
-\begin_inset Formula $B(XY,Z)=B(X,YZ)$
+\begin_inset Formula $B(XY,Z)=B(X,YZ).$
+\end_inset
+
+证明: 存在
+\begin_inset Formula $c\in\F$
+\end_inset
+
+, 使得
+\begin_inset Formula $B(X,Y)=c\tr{XY}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+设
+\begin_inset Formula $B(X,Y)$
+\end_inset
+
+是
+\begin_inset Formula $\F^{n\times n}$
+\end_inset
+
+上的反对称双线性函数, 对任意的
+\begin_inset Formula $X,Y,Z\in\F^{n\times n}$
+\end_inset
+
+满足
+\begin_inset Formula $B(XY,Z)=B(X,YZ),$
+\end_inset
+
+证明
+\begin_inset Formula $B(X,Y)\equiv0.$
 \end_inset
 
 
@@ -2704,6 +2737,425 @@ T'AT=P_{k}'(\cdots(P_{2}'(P_{1}'AP_{1})P_{2})\cdots)P_{k}.
  
 \end_layout
 
+\begin_layout Exercise
+完成如下的习题: 
+\end_layout
+
+\begin_layout Enumerate
+设
+\begin_inset Formula $\eps_{1},\eqs_{2},\eqs_{3}$
+\end_inset
+
+为
+\begin_inset Formula $\F$
+\end_inset
+
+上的线性空间
+\begin_inset Formula $V$
+\end_inset
+
+的一组基, 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+若
+\begin_inset Formula $f\in V^{*},$
+\end_inset
+
+且
+\begin_inset Formula $f(\eqs_{1}+\eqs_{2})=1,f(\eqs_{2}+\eqs_{3})=2,f(\eqs_{1}+\eqs_{3})=3,$
+\end_inset
+
+求
+\begin_inset Formula $f(\al_{1}\eqs_{1}+\al_{2}\eqs_{2}+\al_{3}\eqs_{3});$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+求
+\begin_inset Formula $f\in V^{*},$
+\end_inset
+
+使得
+\begin_inset Formula $f(\eqs_{1}+\eqs_{3})=f(\eqs_{2}-2\eqs_{3})=0,f(\eqs_{1}+\eqs_{2})=1.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+设
+\begin_inset Formula $f_{1},f_{2},f_{3}$
+\end_inset
+
+是
+\begin_inset Formula $\eqs_{1},\eqs_{2},\eqs_{3}$
+\end_inset
+
+的对偶基, 证明: 
+\begin_inset Formula $\al_{1}=\eqs_{1}-\eqs_{3},\al_{2}=\eqs_{1}+\eqs_{2}+\eqs_{3},\al_{3}=\eqs_{2}+\eqs_{3}$
+\end_inset
+
+也是
+\begin_inset Formula $V$
+\end_inset
+
+的一组基, 并用
+\begin_inset Formula $f_{1},f_{2},f_{3}$
+\end_inset
+
+表示其一组基.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+记
+\begin_inset Formula $C[a,b]$
+\end_inset
+
+为
+\begin_inset Formula $[a,b]$
+\end_inset
+
+上连续函数的全体, 对任意
+\begin_inset Formula $f(x)\in C[a,b],$
+\end_inset
+
+令
+\begin_inset Formula $I(f)=\int_{a}^{b}f(x)dx$
+\end_inset
+
+, 证明
+\begin_inset Formula $I(f)$
+\end_inset
+
+是
+\begin_inset Formula $C[a,b]$
+\end_inset
+
+的双线性函数.
+ 
+\end_layout
+
+\begin_layout Enumerate
+设
+\begin_inset Formula $V=\F[x]_{n},$
+\end_inset
+
+对于任意
+\begin_inset Formula $f(x)\in V,$
+\end_inset
+
+定义
+\begin_inset Formula $\ys_{k}(f(x))=\begin{cases}
+f(0) & k=0\\
+\frac{1}{k^{2}}f^{(k)}(0) & k=1,2,\cdots,n-1
+\end{cases}.$
+\end_inset
+
+证明
+\begin_inset Formula $\ys_{k}$
+\end_inset
+
+是
+\begin_inset Formula $V^{*}$
+\end_inset
+
+的一组基, 并且求其对偶基.
+ 
+\end_layout
+
+\begin_layout Enumerate
+设
+\begin_inset Formula $V$
+\end_inset
+
+是
+\begin_inset Formula $\F$
+\end_inset
+
+上的
+\begin_inset Formula $n$
+\end_inset
+
+维线性空间, 
+\begin_inset Formula $f,g\in V^{*}$
+\end_inset
+
+满足
+\begin_inset Formula $\Ker f=\Ker g,$
+\end_inset
+
+证明: 存在
+\begin_inset Formula $c\in\F$
+\end_inset
+
+, 使得
+\begin_inset Formula $f=cg$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+设
+\begin_inset Formula $f$
+\end_inset
+
+是
+\begin_inset Formula $\F^{n\times n}$
+\end_inset
+
+上的线性函数, 对于任意的
+\begin_inset Formula $A,B\in\F^{n\times n}$
+\end_inset
+
+有
+\begin_inset Formula $f(AB)=f(BA)$
+\end_inset
+
+.
+ 证明: 存在
+\begin_inset Formula $c\in\F$
+\end_inset
+
+, 使得
+\begin_inset Formula $f(A)=c\text{tr}(A).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+设
+\begin_inset Formula $X$
+\end_inset
+
+是一个非空集合, 
+\begin_inset Formula $V$
+\end_inset
+
+为所有的映射
+\begin_inset Formula $f:X\to\F$
+\end_inset
+
+的全体, 自然
+\begin_inset Formula $V$
+\end_inset
+
+是
+\begin_inset Formula $\F$
+\end_inset
+
+上的线性空间.
+ 证明: 对于任意
+\begin_inset Formula $\al\in X,\ys_{\al}(f)=f(a)$
+\end_inset
+
+是
+\begin_inset Formula $V$
+\end_inset
+
+上的线性函数, 确
+\begin_inset Formula $\ys_{\al},\al\in X$
+\end_inset
+
+在
+\begin_inset Formula $V^{*}$
+\end_inset
+
+中线性无关.
+\end_layout
+
+\begin_layout Enumerate
+设
+\begin_inset Formula $\al_{1},\al_{2},\cdots.\al_{m}\in V$
+\end_inset
+
+均非0, 证明: 存在
+\begin_inset Formula $f\in V^{*}$
+\end_inset
+
+, 使得
+\begin_inset Formula $f(\al_{i})\neq0,1\leq i\leq m.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+设
+\begin_inset Formula $V$
+\end_inset
+
+是
+\begin_inset Formula $\F$
+\end_inset
+
+上的
+\begin_inset Formula $n$
+\end_inset
+
+维线性空间, 
+\begin_inset Formula $V^{*}$
+\end_inset
+
+为其对偶空间.
+ 对于
+\begin_inset Formula $f\in V^{*},\al\in V$
+\end_inset
+
+, 定义
+\begin_inset Formula $V$
+\end_inset
+
+上的变换
+\begin_inset Formula $\ys_{f,\al}(\bt)=f(\bt)\al,\forall\bt\in V.$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+证明
+\begin_inset Formula $\ys_{f,\al}\in\End V,$
+\end_inset
+
+记为
+\begin_inset Formula $f\otimes\al;$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+证明: 对于任意的
+\begin_inset Formula $\huaa\in\End V,$
+\end_inset
+
+存在
+\begin_inset Formula $f_{i}\in V^{*},$
+\end_inset
+
+
+\begin_inset Formula $\al_{i}\in V,i=1,2,\cdots,r,$
+\end_inset
+
+使得
+\begin_inset Formula $\huaa=\sum_{i=1}^{r}f_{i}\otimes\al_{i};$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+试求(2)中
+\begin_inset Formula $r$
+\end_inset
+
+的最小值.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+设
+\begin_inset Formula $V$
+\end_inset
+
+是
+\begin_inset Formula $\F$
+\end_inset
+
+上的
+\begin_inset Formula $n$
+\end_inset
+
+ 维线性空间, 
+\begin_inset Formula $\huaa\in\End V,$
+\end_inset
+
+存在
+\begin_inset Formula $f_{i}\in V^{*},$
+\end_inset
+
+定义
+\begin_inset Formula $V$
+\end_inset
+
+上的函数
+\begin_inset Formula $(\huaa^{*}f)(\al)=f(\huaa a).$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+证明
+\begin_inset Formula $\huaa^{*}\in\End V^{*}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+证明映射
+\begin_inset Formula $\huaa\mapsto\huaa^{*}$
+\end_inset
+
+是
+\begin_inset Formula $\End V$
+\end_inset
+
+到
+\begin_inset Formula $\End V^{*}$
+\end_inset
+
+的线性同构.
+ 
+\end_layout
+
+\begin_layout Enumerate
+证明
+\begin_inset Formula $(\huaa\huab)^{*}=\huab^{*}\huaa^{*};$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+若
+\begin_inset Formula $\lsvec{\eqs}$
+\end_inset
+
+是
+\begin_inset Formula $V$
+\end_inset
+
+的一组基, 
+\begin_inset Formula $\lsvec f$
+\end_inset
+
+是它的对偶基, 证明
+\begin_inset Formula $\huaa$
+\end_inset
+
+与
+\begin_inset Formula $\huaa^{*}$
+\end_inset
+
+在这两组基下互为转置.
+ 
+\end_layout
+
+\end_deeper
 \begin_layout Section
 惯性定理与正定二次型
 \end_layout
@@ -3487,6 +3939,253 @@ A=\begin{pmatrix}A_{1} & \bt\\
  
 \end_layout
 
+\begin_layout Exercise
+完成下列习题: 
+\end_layout
+
+\begin_layout Enumerate
+判断
+\begin_inset Formula $x_{1}^{2}+3x_{1}x_{2}+bx_{2}^{2}=1$
+\end_inset
+
+代表什么二次曲线, 其中
+\begin_inset Formula $b\in\R.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+用可道线性替换、配方法和矩阵初等变换三种方法将二次型
+\begin_inset Formula $-4x_{1}x_{2}-2x_{1}x_{3}+4x_{2}x_{3}$
+\end_inset
+
+化为标准形，并求它在复数域和实数域上的规范形．
+\end_layout
+
+\begin_layout Enumerate
+证明：秩为
+\begin_inset Formula $r$
+\end_inset
+
+的对称短阵可表示为
+\begin_inset Formula $r$
+\end_inset
+
+个秩为1的对称矩阵之和; 秩为
+\begin_inset Formula $2r$
+\end_inset
+
+的反对称矩阵可表示为
+\begin_inset Formula $r$
+\end_inset
+
+个秩为2个反对称矩阵之和.
+ 
+\end_layout
+
+\begin_layout Enumerate
+在
+\begin_inset Formula $\R^{n\times n}$
+\end_inset
+
+上定义对称双线性函数为
+\begin_inset Formula $f(A,B)=\text{tr}(AB),\forall A,B\in\R^{n\times n}.$
+\end_inset
+
+试着求
+\begin_inset Formula $A,B$
+\end_inset
+
+的正, 负惯性指数.
+ 
+\end_layout
+
+\begin_layout Enumerate
+设
+\begin_inset Formula $V$
+\end_inset
+
+为
+\begin_inset Formula $\F$
+\end_inset
+
+上的线性空间, 映射
+\begin_inset Formula $Q:V\to\F$
+\end_inset
+
+对任意
+\begin_inset Formula $\al,\bt\in V,k\in\F$
+\end_inset
+
+满足: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+二次齐次性: 
+\begin_inset Formula $Q(k\al)=k^{2}Q(\al);$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+平行四边形法则: 
+\begin_inset Formula $Q(\al+\bt)+Q(\al-\bt)=2(Q(\al)+Q(\bt))$
+\end_inset
+
+.
+ 并且令
+\begin_inset Formula $f(\al,\bt)=\frac{1}{2}(Q(\al+\bt)-Q(\al)-Q(\bt)),$
+\end_inset
+
+证明:
+\end_layout
+
+\begin_layout Enumerate
+若
+\begin_inset Formula $\F=\Q,$
+\end_inset
+
+则
+\begin_inset Formula $f(\al,\bt)$
+\end_inset
+
+是
+\begin_inset Formula $V$
+\end_inset
+
+上的对称双线性函数;
+\end_layout
+
+\begin_layout Enumerate
+若
+\begin_inset Formula $\F=\R$
+\end_inset
+
+, 
+\begin_inset Formula $V=\R^{n}$
+\end_inset
+
+, 
+\begin_inset Formula $Q$
+\end_inset
+
+为连续函数, 则
+\begin_inset Formula $f(\al,\bt)$
+\end_inset
+
+为
+\begin_inset Formula $V$
+\end_inset
+
+上的对称双线性函数.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+设
+\begin_inset Formula $f(\lsvec x)=l_{1}^{2}+\cdots+l_{p}^{2}-l_{p+1}^{2}-\cdots-l_{p+q}^{2},$
+\end_inset
+
+其中, 
+\begin_inset Formula $l_{i}=a_{i1}x_{1}+a_{i2}x_{2}+\cdots+a_{in}x_{n},1\leq i\leq p+q,$
+\end_inset
+
+证明: 
+\begin_inset Formula $f$
+\end_inset
+
+的正惯性指数
+\begin_inset Formula $\leq p,$
+\end_inset
+
+负惯性指数
+\begin_inset Formula $\leq q$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+证明: 一个实二次型可以完全分解成两个实系数的一次齐次多项式的乘积, 当且仅当其秩为2, 且符号差为0; 或秩为1.
+ 
+\end_layout
+
+\begin_layout Enumerate
+设
+\begin_inset Formula $A\in\R^{n\times n}$
+\end_inset
+
+对称, 证明: 存在正实数
+\begin_inset Formula $c$
+\end_inset
+
+使得任意
+\begin_inset Formula $X\in\R^{n\times1}$
+\end_inset
+
+有
+\begin_inset Formula $|X'AX|\leq cX'X.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+若上三角矩阵
+\begin_inset Formula $T$
+\end_inset
+
+的对角元都为1, 则称
+\begin_inset Formula $T$
+\end_inset
+
+为
+\series bold
+特殊上三角矩阵
+\series default
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+设
+\begin_inset Formula $A$
+\end_inset
+
+为对称矩阵, 
+\begin_inset Formula $T$
+\end_inset
+
+为特殊上三角矩阵, 又
+\begin_inset Formula $B=TAT$
+\end_inset
+
+, 证明: 
+\begin_inset Formula $A\begin{pmatrix}1 & 2 & \cdots & k\\
+1 & 2 & \cdots & k
+\end{pmatrix}=B\begin{pmatrix}1 & 2 & \cdots & k\\
+1 & 2 & \cdots & k
+\end{pmatrix},k=1,2,\cdots,n.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+设
+\begin_inset Formula $A$
+\end_inset
+
+为对称矩阵且
+\end_layout
+
+\end_deeper
 \begin_layout Section
 线性代数中出现的内容
 \end_layout
