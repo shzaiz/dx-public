@@ -215,8 +215,185 @@ Proof. $\sum_{j \in J}^{}a_{f(j)} = \sum_{j \in J, k \in K}^{}a_k[f(j)=k]=
 An attempt shows that 
 \begin{align*}
     S_n &= \sum_{j=1}^{n} \sum_{k=j}^{n}\frac{1}{k-j} \\
-        &= & \sum_{1\leq k\leq n}^{1\leq k-j<k} \text{Replacing $j$ by $k-i$} \\
+        &=  \sum_{1\leq k\leq n}^{1\leq k-j<k} &\text{Replacing $j$ by $k-i$} \\
+        &= \sum_{1\leq k\leq n}^{0\leq k\leq j-1} \frac{1}{j}\\
+        &= \sum_{0\leq k\leq n}^{}H_k.
 \end{align*}
 
+The harmonic number must be evaluated to make sure it is evaluated. 
+
+\section{Finite Calculus}
+
+\mkpt{The diff operator} By definition, the Difference operator is defined as 
+    \[
+        \Delta f(x)=f(x+1)-f(x).
+    \]
+
+\mkpt{Falling factorial power}
+
+The falling factorial power is defined as (positive int)
+\[
+    \fp{x}{m} = x(x-1)\cdots (x-m+1)
+\]
+
+The rising factorial power is defined as (positive int) 
+\[
+    \rp{x}{m}=x(x+1)\cdots (x+m-1)
+\]
+
+We have the property of 
+
+\begin{align*}
+    \Delta(\fp{x}{m}) &= \fp{x+1}{m} - \fp{x}{m} \\
+                      &= mx(x-1)(x-2)\cdots(x-m+2)\\
+                      &= m\fp{x}{m-1}
+\end{align*}
+
+And the inverse operator of $\Delta$ is $\sum$. 
+Still we have the fundamental theorem of differential. 
+\[
+    \sum_{a}^{b}g(x)\delta x = f(x)_{a}^b = f(b)-f(a).
+\]
+
+Example: calculating a falling sum. 
+\[
+    \sum_{0\leq k< n}^{}\fp{k}{m} = \frac{\fp{k}{m+1}}{m+1} |_0^n = 
+    \frac{\fp{n}{m+1}}{m+1} 
+\]
+and it's easy to analoog to the integrate formula. 
+
+\mkpt{The conversion between ordinary powers and falling powers} We observe the following fact: 
+\[
+    k^2=\fp{k}{3}/3 + \fp{k}2/2
+\]
+and the fact that 
+\[
+    k^3=\fp{k}{3}+3\fp{k}{2}+\fp{k}{1}
+\]
+The general method of converting can be found at the chapter 
+Stirling numbers. 
+
+The falling/rising sum also satisfies binomial theorem. 
+\[
+    \fp{(a+b)}{m} =\sum_{i=1}^{n}{n\choose i} \fp{a}{i} \fp{b}{m-i},
+\]
+and 
+\[ 
+    \rp{(a+b)}{m} =\sum_{i=1}^{n}{n\choose i} \rp{a}{i} \rp{b}{m-i},
+\]
+\mkpt{Generalization fp and rp to neg int} We observe as the degree decrease
+ the division are made in the context. 
+ hence we define 
+\[
+    \fp{x}{-1}=\frac{1}{x+1}
+\]
+and so on. In general, $\fp{f}{-m}=\frac{1}{(x+1)(x+2)\cdots(x+m}$, for $m>0.$
+
+And we can also define real or even complex valued values here, omitted. 
+
+\mkpt{Properties about fp and rp} 
+Law 1. $\fp{x}{m+n}=\fp{x}{m}\fp{(x-m)}{n}$. 
+
+Law 2. The $\Delta \fp{x}{m}=m\fp{x}{m-1}$, forall $m$. 
+
+Law 3. The summation 
+\[
+    \sum_{a}^{b} \fp{x}{m} \delta x = 
+    \begin{cases}
+        \frac{\fp{x}{m+1}}{m+1} | _a ^ b & \text{if } x \neq 1 \\
+        H_x|_a^b & \text{if} m=-1
+    \end{cases}
+\]
+This is similar to the derivative formula for $1/x$. 
+
+Law 4. $\Delta 2^x=2^x$. We can see that $f(x+1)-f(x)=f(x)$ hence getting 
+$f(x+1)=2f(x)$. 
+
+Now have a look at the ways of manipulation: 
+
+Compared to calculus, there's no such thing as chain rule, but we still have
+
+Rule 1. $\Delta cf=c\Delta  f$. This can be proved by extracting the constant
+around the function $f$. 
+
+Rule 2. $\Delta (f+g)=\Delta f+\Delta g$. This can also be proved via 
+a similar technique. 
+
+Rule 3. $\Delta fg = f\Delta g+g\Delta f$. This can be proved with the 
+technique of adding and subtracting the terms: 
+\begin{align*}
+   \Delta (u(x)v(x)) &= u(x+1)v(x+1)-u(x)v(x) \\
+   &= u(x+1)v(x+1)-u(x)v(x+1)+u(x)v(x+1)-u(x)v(x) \\
+   &= u(x)\Delta v(x)+v(x+1)-\Delta u(x) \\
+\end{align*}
+
+Making the shifting operator $E$ into this formula will simplify it a lot
+namely defined as 
+\[
+    Ef(x)=f(x+1).
+\]
+this will lead to $\Delta (uv)=u\Delta v +Ev\Delta u$
+
+Rule 4. Summation by parts: $\sum u\Delta v=uv-\sum v\Delta u$. This rule is
+similar to the one by integrating by parts. 
+
+Example. Do summation to $x 2^x \delta x$. 
+\begin{align*}
+    \sum x 2^x \delta x &= x 2^x-\sum 2^{x+1} \delta x \\
+                        &= x 2^x - 2^{x+1} +C
+\end{align*}
+We may get the result by attaching limits.
+
+Another example: find $\sum xH_x\delta x$. 
+\begin{align*}
+    \sum xH_x \delta x &= {\fp x 2\over 2} \fp x {-1} \delta x \\
+                       &= {\fp x 2 \over 2} H_x - \frac{1}{2} \sum \fp x 1 
+                       \delta x \\
+                       &= {\fp x 2 \over 2} H_x - {\fp x 2 \over 4}+C.
+\end{align*}
+
+\section{Infinite series} 
+
+We cannot manipulate things with the restriction of infinite sums. 
+Here, associativity and exchanging things may not be true. However, we 
+can observe the following sequence: 
+
+\mkpt{Good summation sequences}
+There's a general sum $\sum_{k \in K}^{}a_k$ as $K$ can be infinite. 
+We assume that all the $a_k\geq 0$
+, if there's a bounding constant $A$ s.t. $\sum_{k\in F}a_k\leq A$ holds
+for all finite subsets $F \subset K$, we define then $\sum_{k\in K}a_k$
+to be the least such $A$. If there's no bounding constant, we say 
+the result is $\infty$.
+
+This implies that $\sum_{k\geq 0}a_k=\lim_{n\to \infty} \sum_{k=0}^{n}a_k$,
+for example, 
+\[
+    \sum_{k\geq 0}^{}x^k = \lim_{n \to \infty} {1-x^{n+1}\over 1-x}
+    =
+    \begin{cases}
+        {1\over 1-x}, & 0\leq x< 1;\\
+        \infty, &x\geq 1.
+    \end{cases}
+\]
+\mkpt{Simplified definition on infinite sums}
+Let $K$ be any set, and let $a_k$ be a real-valued term defined for each 
+$k\in K$, any real number $x$ can be written as the difference of its 
+positive and negative parts, that is: $x=x^+-x^-$. Hence, we can come up 
+with ideas like converges and converges absolutely and so on. More in the 
+Calculus book. 
+
+\section{Exercises}
+
+\mkpt{W 1} This means $0$. For the lower bound is larger than upper bound.
+
+\mkpt{W 2} We do this by splitting the cases: 
+
+If $x=0$, that is simply 0. If $x>0$, it will become $x$; otherwise, it 
+will become $-x$. 
+
+To sum up, this is equivalent to absolute value. Namely $|x|$. 
+
+\mkpt{W 3} (a) We have $\sum_{k=1}^{}$
 
 

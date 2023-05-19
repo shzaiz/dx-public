@@ -407,6 +407,7 @@ INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsopn.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsopn.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsopn.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsmath.sty
 INPUT ./cm-main.aux
 INPUT cm-main.aux
 INPUT cm-main.aux
