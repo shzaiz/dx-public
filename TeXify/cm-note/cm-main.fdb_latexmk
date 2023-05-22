@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1684467327 "cm-main.tex" "cm-main.pdf" "cm-main" 1684467328 0
+["pdflatex"] 1684489048 "cm-main.tex" "cm-main.pdf" "cm-main" 1684489049 0
   "../templates/envtemplate-en.tex" 1680355729 2056 1c89be440b7920e0612ef77910b1a6c6 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -46,6 +46,7 @@
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1248133631 32716 08e384dc442464e7285e891af9f45947 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1248133631 37944 359e864bd06cde3b1cf57bb20757fb06 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb" 1248133631 24287 6b803fa9eb1ddff9112e00519b09dd9e ""
+  "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1248133631 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb" 1215737283 138258 6525c253f16cededa14c7fd0da7f67b2 ""
   "/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2022/texmf-dist/tex/generic/atbegshi/atbegshi.sty" 1575674566 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
@@ -94,8 +95,8 @@
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1674112868 7877722 993537a0fe6f32513e9377889d59239a ""
   "/usr/local/texlive/2022/texmf.cnf" 1673697009 641 ec8ca8dde6abac0c242ddf1975d9482b ""
   "ch1/main.tex" 1681201615 6415 3e343bbbeab784249987497f12c64426 ""
-  "ch2/main.tex" 1684467325 13073 8cfa492c370e4066250b7ace4c9d4ac1 ""
-  "cm-main.aux" 1684467328 1484 fdcb55a11a81e47922ad79d969002f3b "pdflatex"
+  "ch2/main.tex" 1684489047 15659 77bc67a7d44360df6bfb49ffbf9b072c ""
+  "cm-main.aux" 1684489049 1484 e5acfe6e425109d6662de3aa3c708d6f "pdflatex"
   "cm-main.tex" 1684460445 367 aa07d0f8af441f450192922ae4abf031 ""
   (generated)
   "cm-main.aux"

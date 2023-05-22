@@ -394,6 +394,85 @@ will become $-x$.
 
 To sum up, this is equivalent to absolute value. Namely $|x|$. 
 
-\mkpt{W 3} (a) We have $\sum_{k=1}^{}$
+\mkpt{W 3} The first one is 
+\[
+    a_1 + a_2+a_3+a_4+a_5
+\]
+while the second one is
+\[
+    a_{1^2}+a_{\sqrt{2}^2}+a_{\sqrt{3}^2}+a_{\sqrt{4}^2}+a_{\sqrt{5}^2}. 
+\]
+
+\mkpt{W 4} (a) We have $\sum[1\leq i<j<k\leq 4]=\sum[1\leq k\leq 4][k>j][j>i]=\sum_{k=1}^{4}\sum_{j=k}^{4}\sum_{i=j}^{4} a_{ijk}$. 
+
+(b) We have $\sum_{i=1}^{4} \sum_{j=1}^{4} \sum_{j=1}^{4} a_{ijk}.$ This 
+is pretty similar to the determination in double integral and triple 
+integral. 
+
+\mkpt{W 5} The change of variable is wrong, for $i$ and $j$ represents 
+different meaning. The change of variables must be fresh. That is it's 
+not able to be collision to the existing value. 
+
+\mkpt{W 6} The value of that is $n-j+1$, as a counting problem. 
+
+\mkpt{W 7} We have the fact that $\rp x m = x(x+1)\cdots (x+m-1)$, and that 
+$\rp x {m-1} = x(x+1)\cdots (x+m-2)$. So the answer is 
+\[
+    (x+m-2) \rp x {m-1}
+\]
+
+\mkpt{W 8} According to the definition, we have that the answer is 0. 
+For whatever we do the answer must be 0. 
+
+\mkpt{W 9} We define that $\rp x {-n}$ according to the division rule that 
+\[
+    \rp x {-1} = {1\over x-1}, 
+\]
+and more generally, we have 
+\[
+    \rp x {-m} = {1\over (x-1)(x-2)\cdots (x-m)}.  
+\]
+\mkpt{W 10} If we swap this, getting 
+\[
+    \Delta (uv) = u\Delta v + Ev\Delta u
+\]
+and have 
+\[
+    \Delta (vu) = v\Delta u + Eu\Delta v
+\]
+subtracting both, we have 
+\begin{align*}
+    \Delta (uv)-\Delta (vu) &= u\Delta v +Ev\Delta u - (v\Delta u + Eu\Delta v) \\
+                            &= (u-Eu)\Delta v +(Ev - v)\Delta u\\
+                            &= (u(x)-u(x+1))(v(x+1)-v(x))+(v(x+1)-v(x))
+                            (u(x+1)-u(x))\\
+                            &= 0
+\end{align*}
+and the derivation is symmetric, although. 
+
+\mkpt{B 11} We first note this by setting $n = 3$, and we have 
+\[
+    a_1b_0-a_0b_0+a_2b_1-a_1b_1+a_3b_2-a_2b_2,
+\]
+that is 
+\begin{align*}
+    \sum_{0\leq k\leq n}^{} (a_{k+1}-a_k)b_k &= 
+    -\sum_{0\leq k<n}^{}a_{k+1} (b_{k+1}-b_k)-\sum_{0\leq k<n}^{} a_{k+1}b_k
+    -\sum_{0\leq k<n}^{} a_kb_k\\
+    &= -\sum_{0\leq k<n}^{}a_{k+1}(b_{k+1}-b_k) - 
+      \sum_{0\leq k<n}^{} b_k (a_{k+1} + a_k)\\
+    &=  -\sum_{0\leq k<n}^{}a_{k+1}(b_{k+1}-b_k) + (a_n b_n - a_0b_0). 
+\end{align*}
+
+\mkpt{B 12} A permutation of integer means that $p(k)$ and all integers 
+are bijection. That is: Consider $\mathbb R \to \mathbb R$, $x\mapsto x+(-1)^kc$, the result is 
+unique. Substituting back, we have that: if $k$ is odd, we have $k=f(x)-c$; 
+if $ k$ is even, we have $k=f(x)+c$. We can find that these are identical
+and is able to make a bijection, hence there's a permutation on every
+integer. 
+
+
+
+
 
 
