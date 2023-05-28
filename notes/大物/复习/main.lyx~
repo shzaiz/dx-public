@@ -1,0 +1,7198 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-article
+\begin_preamble
+% 如果没有这一句命令，XeTeX会出错，原因参见
+% http://bbs.ctex.org/viewthread.php?tid=60547
+\DeclareRobustCommand\nobreakspace{\leavevmode\nobreak\ }
+\usepackage{tikz}
+\usepackage[pdf]{pstricks}
+\usepackage{circuitikz}
+\end_preamble
+\options UTF8
+\use_default_options true
+\begin_modules
+theorems-bytype
+\end_modules
+\maintain_unincluded_children false
+\language chinese-simplified
+\language_package none
+\inputencoding utf8-plain
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
+\graphics default
+\default_output_format pdf4
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_title "大学物理C1回顾(2023春)"
+\pdf_author "张桄玮"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 3
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref page
+\pdf_pdfusetitle true
+\papersize a4paper
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle headings
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+大学物理C1: 复习与回顾
+\end_layout
+
+\begin_layout Author
+AUGPath
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\dd}{\mathrm{d}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\bs}[1]{\boldsymbol{#1}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\vec}[1]{\overrightarrow{#1}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\w}{\omega}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\bt}{\beta}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\red}[1]{{\color{red}#1}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\eqs}{\epsilon}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\ef}{\frac{1}{4\pi\eqs_{0}}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand{
+\backslash
+incfig}[1]{
+\backslash
+begin{center}
+\backslash
+includegraphics[width=.4
+\backslash
+textwidth]{figs/#1.eps}
+\backslash
+end{center}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand{
+\backslash
+incfigw}[1]{
+\backslash
+begin{center}
+\backslash
+includegraphics[width=.8
+\backslash
+textwidth]{figs/#1.eps}
+\backslash
+end{center}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+写在前面
+\end_layout
+
+\begin_layout Standard
+本文试图通过一些例子完成本学期大学物理知识体系的构建.
+ 正如Warrior和众多大学教师一直建议的那样, 学习整理的过程永远要比结果更重要, 更值得享受.
+ 
+\end_layout
+
+\begin_layout Quote
+Yeats有一句名言：“教育不是注满一桶水, 而是点燃一把火.
+ ”他说得既对也错.
+ 你必 须“给桶注一点水”, 这本书当然可以帮助你完成这部分的教育.
+ 毕竟, 当你去 Google 面试 时, 他们会问你一个关于如何使用信号量的技巧问题, 确切地知道信号量是什么感觉真好,  对吧?
+\end_layout
+
+\begin_layout Quote
+但是, Yeats的更主要的观点显然是正确的：教育的真正要义是让你对某些事情感兴趣, 这不仅仅是搞明白课上学习的东西, 得个好成绩.
+ 更重要的是课后可以独立了解这个主题的更多东西.
+ 正如我们的父亲（作者的父亲 Vedat Arpaci）曾说过的, “在课堂以外学习.
+ ”
+\end_layout
+
+\begin_layout Quote
+我们编写本书的目的是激发你对操作系统的兴趣.
+ 这就可以让你能自行了解有关操作系统的更多知识, 进而 可以与你的教授讨论, 甚至参与该领域相关的那些令人兴奋的研究.
+ 这是一个伟大的 领域: 这里有充满了激动人心和精妙的想法, 它们以深刻而重要的方式塑造了计算历史.
+ 虽然我们知道这 团火不会为你们所有人点燃, 但我们希望这能对许多人, 甚至是少数人有所帮助.
+ 因为一旦这团火 被点燃, 那你就真正有能力做出伟大的事情.
+ 因此, 教育过程的真正意义在于：一往无前, 学习更 多的新的和引人入胜, 美妙绝伦的知识, 通过学习不断成熟, 最重要的是, 找到能为你点燃那团火的人.
+  – 《Operating Systems: Three Easy Pieces》
+\end_layout
+
+\begin_layout Part
+核心内容回顾
+\end_layout
+
+\begin_layout Section
+运动学
+\end_layout
+
+\begin_layout Description
+一.
+ 运动与坐标系的选取.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+1.
+ 矢量与微积分的观点
+\end_layout
+
+\begin_layout Description
+2.
+ 描述运动的三个物理量
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+(1) 微分关系
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\mathbf{r} & =x_{i}\mathbf{i}+y_{j}\mathbf{j}+z_{k}\mathbf{k}\\
+\mathbf{v} & =v_{i}\mathbf{i}+v_{j}\mathbf{j}+v_{k}\mathbf{k}\\
+\mathbf{a} & =a_{i}\mathbf{i}+a_{j}\mathbf{j}+a_{k}\mathbf{k}
+\end{align*}
+
+\end_inset
+
+以及有微分关系
+\begin_inset Formula $\mathbf{v}=\frac{\dd\bs r}{\dd\bs t},\bs a=\frac{\dd\bs v}{\dd\bs t}$
+\end_inset
+
+, 
+\end_layout
+
+\begin_layout Description
+(a)推论: 求
+\begin_inset Formula $\bs{v,t}$
+\end_inset
+
+对于
+\begin_inset Formula $\bs x$
+\end_inset
+
+的关系: 使用关系
+\begin_inset Formula $\frac{\dd\bs r}{\dd\bs x}\frac{\dd\bs x}{\dd\bs t}.$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+(2) 积分关系
+\begin_inset Formula 
+\begin{align*}
+\dd\bs r & =\bs v\dd t,\vec r=\vec{r_{0}}+\int_{0}^{t}\vec v\dd t\\
+\dd\bs v & =\bs a\dd t,\vec v=\vec{a_{0}}+\int_{0}^{t}\vec a\dd t
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+3.
+ 坐标系的选取: 
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+(1) 直角坐标
+\end_layout
+
+\begin_layout Description
+(2) 自然坐标
+\end_layout
+
+\begin_layout Description
+(3) 极坐标
+\end_layout
+
+\end_deeper
+\begin_layout Description
+4.
+ 圆周运动
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+(1) 描述圆周运动的物理量: 角速度
+\begin_inset Formula $\omega$
+\end_inset
+
+, 角加速度
+\begin_inset Formula $\beta$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+(a) 之间关系: 
+\begin_inset Formula $\omega=\frac{\dd\theta}{\dd t},\beta=\frac{\dd\omega}{\dd t};\theta=\theta_{0}+\int_{0}^{t}\omega\dd t,\omega=\omega_{0}+\int_{0}^{t}\beta\dd t.$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+(2) 自然坐标系中的加速度: 
+\begin_inset Formula $\vec a=\vec{a_{n}}+\vec{a_{t}}.$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+(a) 
+\begin_inset Formula $a_{n}:$
+\end_inset
+
+法向分量, 指向圆心
+\begin_inset Formula $a_{n}=\frac{v^{2}}{R}=\omega^{2}R$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+(b) 
+\begin_inset Formula $a_{t}:$
+\end_inset
+
+切向分量, 沿轨迹方向 
+\begin_inset Formula $a_{t}=\frac{\dd v}{\dd t}=R\frac{\dd\omega}{\dd t}=R\beta.$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Description
+二.
+ Newton运动定律及其延伸
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+1.
+ Newton第二定律: 
+\begin_inset Formula $\vec F=\frac{\dd(m\vec v)}{\dd t},\vec F=m\vec a;$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+2.
+ 动量与冲量
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+定义.
+ 
+\begin_inset Formula $\vec F\dd t=\dd(m\vec v),\dd\vec I=\dd\vec P,\vec I=\Delta\vec P$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+质点动量定理.
+ 
+\begin_inset Formula $\int_{t_{1}}^{t_{2}}\vec F\dd t=m\vec{v_{2}}-m\vec{v_{1}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+质点系动量定理.
+ 
+\begin_inset Formula $\int_{t_{1}}^{t_{2}}\left(\sum_{i}\vec{F_{i_{\text{外}}}}\right)\dd t=\sum_{i}m_{i}\vec{v_{i}}_{2}-\sum_{i}m_{i}\vec{v_{i}}_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+动量守恒定律.
+ 当
+\begin_inset Formula $\sum_{i}\vec{F_{i_{\text{外}}}}=0,\sum_{i}m_{i}v_{i}$
+\end_inset
+
+守恒.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Description
+3.
+ 
+\uwave on
+\color teal
+角动量
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+定义.
+ 
+\begin_inset Formula $\vec L=\vec r\times m\vec v$
+\end_inset
+
+.
+ 其中
+\begin_inset Formula $r$
+\end_inset
+
+是从原点当前点的位置矢量.
+ 
+\end_layout
+
+\begin_layout Description
+角动量守恒定律: 有心力(受力指向圆心, 外力矩为0)
+\end_layout
+
+\end_deeper
+\begin_layout Description
+4.
+ 功: 
+\begin_inset Formula $A=\int_{\vec{r_{1}}}^{\vec{r_{2}}}\vec F\cdot\dd\vec r$
+\end_inset
+
+, 可以分坐标系求和.
+ 
+\end_layout
+
+\begin_layout Description
+5.
+ 保守力场中
+\begin_inset Formula $P$
+\end_inset
+
+点的势能: 
+\begin_inset Formula $E_{p}(P)=\int_{(P)}^{(\text{零势能点)}}\vec{F_{\text{保守}}}\cdot\dd\vec r$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+6.
+ 质点的动能定理: 
+\begin_inset Formula $A_{\text{外}}+A_{\text{内}}=\Delta\left(\sum_{i}E_{k_{i}}\right)=\sum_{i}\frac{1}{2}m_{i}v_{i_{2}}^{2}-\sum_{i}\frac{1}{2}m_{i}v_{i_{1}}^{2}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+7.
+ 功能原理: 
+\begin_inset Formula $A_{\text{外}}+A_{\text{非保守内}}=\Delta\left(\sum_{i}E_{i}\right),E=E_{k}+E_{P}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+机械能守恒定律: 当只有保守力做功的时候, 
+\begin_inset Formula $\sum_{i}E_{i}$
+\end_inset
+
+守恒.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Description
+三.
+ 刚体的定轴转动
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+1.
+ 运动的描述
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+描述: 圆周运动
+\end_layout
+
+\begin_layout Description
+刚体定轴转动定律: 
+\begin_inset Formula $M=J\beta,J=\sum_{i}m_{i}r_{i}^{2}=\int_{M}r^{2}\dd m$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Description
+2.
+ 
+\uwave on
+\color teal
+刚体定轴转动的动能定理
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+描述: 
+\begin_inset Formula $A=\Delta E_{k},A=\int_{\theta_{1}}^{\theta_{2}}M\dd\theta,E_{k}=\frac{1}{2}J\omega^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+机械能守恒定律: 当只有保守力做功, 
+\begin_inset Formula $\sum_{i}E_{i}$
+\end_inset
+
+守恒.
+ 写作
+\begin_inset Formula 
+\[
+E=E_{k}+E_{p}=\left(\frac{1}{2}mv^{2}+\red{\frac{1}{2}J\omega^{2}}\right)+\left(mgh+\red{mgh_{\text{重心}}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+3.
+ 
+\uwave on
+\color teal
+角动量
+\uwave default
+\color inherit
+: 
+\begin_inset Formula $L=J\omega$
+\end_inset
+
+, 方向垂直于转动平面.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+角动量守恒.
+ 当合外力矩为0, 
+\begin_inset Formula $L=J\omega$
+\end_inset
+
+守恒
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Description
+四.
+ 相对论
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+1.
+ 基本理论
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+(a) 相对性原理
+\end_layout
+
+\begin_layout Description
+(b) 光速不变性
+\end_layout
+
+\end_deeper
+\begin_layout Description
+2.
+ 时间/地点相同的变换
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+变换因子 
+\begin_inset Formula 
+\[
+\gamma=\frac{1}{\sqrt{1-\frac{u^{2}}{c^{2}}}}\geq1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+3.
+ 
+\uwave on
+\color teal
+Lorentz变换
+\uwave default
+\color inherit
+: 相对于
+\begin_inset Formula $x-x'$
+\end_inset
+
+方向的时空间隔变换:
+\begin_inset Formula 
+\begin{align*}
+\Delta x=\gamma(\Delta x'+u\Delta t') & ,\Delta x'=\gamma(\Delta x-u\Delta t)\\
+\Delta t=\gamma\left(\Delta t'+\frac{u\Delta x'}{c^{2}}\right) & ,\Delta t'=\gamma\left(\Delta t'-\frac{u\Delta x'}{c^{2}}\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+4.
+ 
+\uwave on
+\color teal
+相对论的动力学关系
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+(a) 运动的质量.
+ 
+\begin_inset Formula $m=\gamma m_{0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+(b) 相对论动量.
+ 
+\begin_inset Formula $p=\gamma m_{0}u$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+(c) 相对论动能.
+ 
+\begin_inset Formula $E_{k}=E-E_{0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+(d) 动能, 静止能量: 
+\begin_inset Formula $E=\gamma m_{0}c^{2},E_{0}=m_{0}c^{2}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+电磁学
+\end_layout
+
+\begin_layout Description
+一.
+ 真空中的静电场
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+1.
+ 点电荷模型
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+a.
+ 库伦定律: 
+\begin_inset Formula $\vec f=\frac{1}{4\pi\epsilon_{0}}\frac{q_{1}q_{2}}{r^{2}}\vec{e_{r}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+b.
+ 点电荷形成的电场: 
+\begin_inset Formula $\vec E=\ef\frac{q}{r^{2}}\vec{e_{r}}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+2.
+ 电场叠加原理: 
+\begin_inset Formula 
+\[
+\vec E=\sum_{i}\vec{E_{i}}=\sum_{i}\ef\frac{q_{i}}{r_{i}^{2}}\vec{e_{r_{i}}}=\int_{Q}\dd\vec E=\int_{Q}\ef\frac{\dd q}{r^{2}}\vec{e_{r}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+a.
+ 模型电场
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+长直导线.
+ 
+\begin_inset Formula $\vec E=\frac{1}{2\pi\eqs_{0}}\frac{\lambda}{r}\vec{e_{i}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+大平面.
+ 
+\begin_inset Formula $\vec E=\frac{\sigma}{2\eqs_{0}}\vec{e_{n}}.$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+b.
+ Gauss定理
+\begin_inset Formula $\oint_{S}\vec E\cdot\dd\vec S=\frac{1}{\eqs_{0}}\sum_{i}q_{i\text{内}},\phi_{c}=\int_{S}\vec E\cdot\dd\vec S.$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+应用: 
+\uwave on
+\color teal
+用Gauss定理求对称性电场分布: 
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+球体: 
+\begin_inset Formula $E4\pi r^{2}=q_{in}/\eqs_{0}\implies E=\frac{q_{in}}{\eqs_{0}4\pi r^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+圆柱体: 
+\begin_inset Formula $E2\pi rh=q_{in}/\eqs_{0}\implies E=\frac{q_{in}}{\eqs_{0}2\pi rh}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+平面: 
+\begin_inset Formula $E2S_{\text{底}}=q_{in}/\eqs_{0}\implies E=\frac{q_{in}}{\eqs_{0}2S_{\text{底}}}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Description
+3.
+ 电势能与电场力做的功
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+a.
+ 电场力做的功
+\begin_inset Formula $W_{a}-W_{b}=q_{0}(V_{a}-V_{b})=q_{0}\int_{(a)}^{(b)}\vec E\cdot\dd\vec r$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+b.
+ 电势 
+\begin_inset Formula $V_{P}(P)=\int_{(P)}^{(\text{零势点)}}\vec E\cdot\dd\vec r$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+c.
+ 点电荷的电势 
+\begin_inset Formula $V_{\text{点电荷}}=\ef\frac{q}{r}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+d.
+ 电势的叠加 
+\begin_inset Formula 
+\[
+V_{\text{点电荷系}}=\sum_{i}V_{i}=\sum_{i}\ef\frac{q_{i}}{r_{i}}=\int_{Q}\dd V=\int_{Q}\ef\frac{\dd q}{r}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Description
+二.
+ 导体和电介质
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+1.
+ 导体的静电平衡条件
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+最终形态: 
+\begin_inset Formula $E_{\text{内}}=0,E_{\text{外表面}}=\frac{\sigma}{\eqs_{0}}.$
+\end_inset
+
+导体是等势体, 其内无净电荷导体存在时静电场的分布
+\end_layout
+
+\end_deeper
+\begin_layout Description
+2.
+ 电介质
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+(a) 场强分布: 
+\begin_inset Formula $\vec E=\vec{E_{0}}/\eqs_{r}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+(b) 电偶极矩: 
+\begin_inset Formula $\vec p=q\vec l$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+(c) 极化强度: 
+\begin_inset Formula $\vec P=n\vec p$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+3.
+ 
+\begin_inset Formula $\vec D$
+\end_inset
+
+的Gauss定理
+\begin_inset Formula $\oint_{S}\vec E\cdot\dd\vec S=\frac{1}{\eqs_{0}}\sum\left(q_{0\text{内}}+q_{\text{内}}^{'}\right),$
+\end_inset
+
+意味着
+\begin_inset Formula 
+\[
+\oint_{S}\vec D\cdot\dd\vec S=\sum q_{0\text{内}},D=\eqs_{0}\eqs_{e}\vec E.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+应用: 
+\uwave on
+\color teal
+用Gauss定理求对称性电场分布: 
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+球体: 
+\begin_inset Formula $D4\pi r^{2}=q_{in}\implies E=\frac{q_{in}}{\eqs_{0}\eqs_{r}4\pi r^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+圆柱体: 
+\begin_inset Formula $D2\pi rh=q_{in}\implies E=\frac{q_{in}}{\eqs_{0}\eqs_{r}2\pi rh}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+平面: 
+\begin_inset Formula $D2S_{\text{底}}=q_{in}\implies E=\frac{q_{in}}{\eqs_{0}\eqs_{r}2S_{\text{底}}}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Description
+4.
+ 电容 
+\begin_inset Formula $C=Q/U$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+三类电容器的电容
+\end_layout
+
+\end_deeper
+\begin_layout Description
+5.
+ 电场能量: 
+\begin_inset Formula 
+\[
+W_{e}=\frac{QU}{2}=\frac{CU^{2}}{2}=\frac{Q^{2}}{2C}=\red{\int_{\Omega}\frac{1}{2}DE\dd V}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+三.
+ 磁场
+\begin_inset FormulaMacro
+\newcommand{\mf}[1]{\frac{\mu_{0}I}{#1}}
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+1.
+ 磁场的Biot-Savart定律: 
+\begin_inset Formula 
+\[
+\vec B=\int_{I}\dd\vec B=\int_{I}\mf{4\pi}\frac{\dd l\times\vec{e_{r}}}{r^{2}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+2.
+ 磁场的叠加: 
+\begin_inset Formula $B=\sum_{i}\vec{B_{i}.}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+模型磁场: 
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+直线 
+\begin_inset Formula $B=\mf{4\pi r}(\cos\theta_{2}-\cos\theta_{1})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+圆弧 
+\begin_inset Formula $B=\mf{2r}\frac{\phi}{2\pi}$
+\end_inset
+
+, 方向与电流方向成右手螺旋的关系.
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Description
+3.
+ 磁场的Gauss定理和环路定理
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+Gauss定理 
+\begin_inset Formula $\oint_{S}\vec B\cdot\dd\vec S=0.$
+\end_inset
+
+(无源)
+\end_layout
+
+\begin_layout Description
+环路定理 
+\begin_inset Formula $\oint_{L}\vec B\cdot\dd\vec l=\mu_{0}\sum I_{\text{内}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+应用: 用环路定理求对称性磁场的分布
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+无限长直线.
+ 
+\begin_inset Formula $B=\mf{2\pi r}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+螺线管.
+ 
+\begin_inset Formula $B=n\mu_{o}I$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+螺线环.
+ 
+\begin_inset Formula $B=\frac{N\mu_{0}I}{2\pi r}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Description
+四.
+ 磁力
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+1.
+ Lorentz力 
+\begin_inset Formula $\vec{F_{m}}=q\vec v\times\vec B$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+a.
+ 螺旋运动, 
+\begin_inset Formula $R=\frac{mv_{\perp}}{qB},h=\frac{2\pi mv_{//}}{qB}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+2.
+ Ampere力 
+\begin_inset Formula $\vec F=\int_{L}\dd\vec F=\int_{L}I\dd\vec l\times\vec B,\dd\vec F=nS\dd lq\vec v\times\vec B=I\dd\vec l\times\vec B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+3.
+ 磁矩: 
+\begin_inset Formula $p_{m}=IS\vec{e_{n}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+4.
+ 磁力矩: 
+\begin_inset Formula $\vec M=\vec{p_{m}}\times\vec B$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Description
+五.
+ 电磁感应
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+1.
+ 电磁感应定律: 
+\begin_inset Formula $\eqs=-\frac{\dd\phi_{m}}{\dd t},\phi_{m}=\int_{S}\vec B\cdot\dd\vec S$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+2.
+ 动生电动势: 
+\begin_inset Formula $\eqs=\int_{L}(\vec v\times\vec B)\cdot\dd\vec l$
+\end_inset
+
+, 其中非静电力是
+\begin_inset Formula $\vec f=\vec v\times\vec B.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+3.
+ 感生电动势: 
+\begin_inset Formula $\eqs=-\frac{\dd\phi_{m}}{\dd t}=\int_{S}\frac{\partial\vec B}{\partial t}\dd\vec S$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+特例.
+ 非静电力
+\begin_inset Formula $E_{i}$
+\end_inset
+
+圆柱形均匀磁场的变化激发
+\begin_inset Formula $E_{i}2\pi r=\frac{\dd B}{\dd t}S$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Description
+六.
+ 位移电流与传导电流
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+1.
+ 位移电流与传导电流均有磁效应
+\begin_inset Formula 
+\[
+\oint_{L}\vec B\cdot\dd\vec l=\mu_{0}\sum(I_{0}+I_{d})_{\text{内}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+2.
+ 位移电流源自变化的电场
+\begin_inset Formula $I_{d}=\frac{\dd\phi_{D}}{\dd t}=\eqs_{0}\frac{\dd E}{\dd t}S$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+特例: 圆柱形均匀电场变化激发磁场
+\begin_inset Formula $B2\pi r=\mu_{0}I_{d\text{内}}.$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+常见问题类型
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\qst}{\underline{~~~~~~~~~}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+运动学中的常见问题
+\end_layout
+
+\begin_layout Subsection*
+单个变量的替代, 积分求解
+\end_layout
+
+\begin_layout Description
+1.
+ 选取: 选取任意的状态, 将要得到的表达为一个关于任意的量.
+ 
+\end_layout
+
+\begin_layout Description
+2.
+ 计算: 积分的上下限应当选取从初态到末态.
+ 
+\end_layout
+
+\begin_layout Example
+匀加速直线运动的加速度为
+\begin_inset Formula $a$
+\end_inset
+
+, 试着推导
+\begin_inset Formula $a-x$
+\end_inset
+
+之间的关系.
+ 
+\end_layout
+
+\begin_layout Example
+答案: 
+\begin_inset Formula $v=\sqrt{2ax}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+分析: 
+\begin_inset Formula $a=\frac{\dd v}{\dd x}\frac{\dd x}{\dd t}=\frac{\dd v}{\dd x}v,$
+\end_inset
+
+于是
+\begin_inset Formula $a\dd x=v\dd v.$
+\end_inset
+
+两边同时积分可以得到.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+在离水面高为
+\begin_inset Formula $h$
+\end_inset
+
+的岸边, 有人用绳拉船靠岸, 船在离岸
+\begin_inset Formula $x$
+\end_inset
+
+m处, 当人以
+\begin_inset Formula $v_{0}$
+\end_inset
+
+m/s恒定的速率收绳时, 试求船的速度、 加速度的大小.
+ 
+\end_layout
+
+\begin_layout Example
+答案: 
+\begin_inset Formula $v=\frac{v(tv-L)}{\sqrt{(L-tv)^{2}-h^{2}}},a=-\frac{h^{2}v^{2}}{\left((L-tv)^{2}-h^{2}\right)^{3/2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+分析: 注意到关系式
+\begin_inset Formula $x(t)=\sqrt{(L-tv)^{2}-h^{2}}$
+\end_inset
+
+, 求两次导数即可.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(2-2)在一个加速度为
+\begin_inset Formula $a$
+\end_inset
+
+向上运动的电梯里, 悬挂一个劲度系数
+\begin_inset Formula $k$
+\end_inset
+
+的弹簧（质量不计）, 其下悬挂质量为
+\begin_inset Formula $M$
+\end_inset
+
+的物块, 物块相 对电梯静止, 当电梯加速度突然变为零, 电梯内的观察 者看到物块的最大速度为
+\begin_inset Formula $\qst$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Example
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{circuitikz} 
+\backslash
+tikzstyle{every node}=[font=
+\backslash
+LARGE] 
+\backslash
+draw [, line width=0.5pt ] (2.25,11.75) rectangle (5.5,7.5); 
+\backslash
+draw [line width=0.5pt](4,11.75) to[L ] (4,10.25); 
+\backslash
+draw [, line width=0.5pt ] (3.75,10.25) rectangle (4.25,9.75); 
+\backslash
+draw [ line width=0.5pt, -Stealth] (6,10) -- (6,11.5); 
+\backslash
+node [font=
+\backslash
+LARGE] at (6.5,10.5) {}; 
+\backslash
+draw [ line width=0.5pt, -Stealth] (6,10) -- (6,11.5); 
+\backslash
+draw [ line width=0.5pt, -Stealth] (6,10) -- (6,11.5); 
+\backslash
+end{circuitikz}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+答案: 
+\begin_inset Formula $a\sqrt{m/k}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+分析: 设
+\series bold
+弹簧的伸长量为
+\series default
+
+\begin_inset Formula $x_{0}$
+\end_inset
+
+, 选择向上为正方向, 于是起始时刻受力分析: 
+\begin_inset Formula $F_{\text{弹}}-mg=ma$
+\end_inset
+
+, 意味着
+\begin_inset Formula $k\Delta x-mg=ma\implies\Delta x=\frac{m(a+g)}{k}.$
+\end_inset
+
+根据机械能守恒, 
+\begin_inset Formula $\frac{1}{2}k(\Delta x)^{2}=\frac{1}{2}mv^{2}+mg\Delta x$
+\end_inset
+
+.
+ 因此
+\begin_inset Formula $v_{max}=\sqrt{\frac{m}{k}}a.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(2-9)光滑的水平桌面上放置一固定的圆环带, 半径为
+\begin_inset Formula $R$
+\end_inset
+
+, 一 物体贴着环带的内侧运动, 如图所示, 物体与环带间的滑动 摩擦系数为
+\begin_inset Formula $\mu$
+\end_inset
+
+, 设物体在某一时刻经A点时的速率为 
+\begin_inset Formula $v_{0}$
+\end_inset
+
+, 求 此后
+\begin_inset Formula $t$
+\end_inset
+
+ 时间物体的速率以及从
+\begin_inset Formula $A$
+\end_inset
+
+点开始所经过的路程.
+\end_layout
+
+\begin_layout Example
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{circuitikz} 
+\backslash
+tikzstyle{every node}=[font=
+\backslash
+LARGE] 
+\backslash
+draw (5.5,8) circle (2.75cm); 
+\backslash
+draw (5.5,8) circle (2.75cm); 
+\backslash
+draw (5.5,8) circle (2.5cm); 
+\backslash
+draw (7.25,10) rectangle (7.5,9.75); 
+\backslash
+draw [ -Stealth] (5.5,8) -- (8,8); 
+\backslash
+draw [ -Stealth] (5.5,8) -- (8,8); 
+\backslash
+end{circuitikz}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+答案: 
+\begin_inset Formula $s=\frac{R}{\mu_{k}}\ln\frac{R+v_{0}\mu_{k}t}{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+分析: 对于任意的一个时刻, 沿着切向分析, 有
+\begin_inset Formula $F_{t}=f=\mu F_{N},$
+\end_inset
+
+沿着法向分析, 有
+\begin_inset Formula $F_{n}=\frac{mv^{2}}{R}.$
+\end_inset
+
+z直到
+\begin_inset Formula $a_{t}=\frac{\mu v^{2}}{R}.$
+\end_inset
+
+展开, 有
+\begin_inset Formula $\frac{\dd v}{\dd t}=\frac{mv^{2}}{R},$
+\end_inset
+
+得到方程式
+\begin_inset Formula $\frac{\dd v}{v^{2}}=\frac{v^{2}}{R}\dd t$
+\end_inset
+
+, 两边同时对初始状态和末了状态积分, 有
+\begin_inset Formula 
+\[
+\int_{v_{0}}^{v_{\text{末}}}\frac{\dd v}{v^{2}}=\int_{0}^{t}\frac{v^{2}}{R}\dd t
+\]
+
+\end_inset
+
+解得
+\begin_inset Formula 
+\[
+v_{\text{末}}=\frac{1}{\frac{\mu}{R}t+\frac{1}{v_{0}}}.
+\]
+
+\end_inset
+
+然后把
+\begin_inset Formula $v$
+\end_inset
+
+展开为
+\begin_inset Formula $\dd s/\dd t$
+\end_inset
+
+, 对两边同时做定积分就可以求出路程
+\begin_inset Formula $s=\frac{R}{\mu_{k}}\ln\frac{R+v_{0}\mu_{k}t}{R}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(2-15)一个初速度
+\begin_inset Formula $v_{0}$
+\end_inset
+
+从地面上竖直向上抛出质量为
+\begin_inset Formula $m$
+\end_inset
+
+的小球, 小球除了受重力外, 还受到一个大小为
+\begin_inset Formula $\alpha mv^{2}$
+\end_inset
+
+的粘滞阻力(
+\begin_inset Formula $\alpha$
+\end_inset
+
+是常数, 
+\begin_inset Formula $v$
+\end_inset
+
+是小球的运动速率).
+ 求小球回到地面的时候的速率.
+ 
+\end_layout
+
+\begin_layout Example
+答案: 
+\begin_inset Formula $v_{1}=\frac{v_{0}\sqrt{g}}{\sqrt{\alpha v_{0}^{2}+g}}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+分析: 如果一心想着一下子求出来, 就会陷入困境.
+ 我们把这个问题转化为求上升和下降两段路程的问题, 最后让他们相等即可.
+ 
+\end_layout
+
+\begin_layout Example
+以向上为正方向, 上升过程中, 有
+\begin_inset Formula $-ma_{1}=-mg-f.$
+\end_inset
+
+因为
+\begin_inset Formula $a=\frac{\dd v}{\dd x}\frac{\dd x}{\dd t}=v\frac{\dd v}{\dd x},$
+\end_inset
+
+原式变为
+\begin_inset Formula 
+\[
+\frac{v}{g+\alpha v^{2}}\dd v=\dd x
+\]
+
+\end_inset
+
+两边同时积分, 有
+\begin_inset Formula $\int_{v_{0}}^{0}\frac{v}{g+\alpha v^{2}}\dd v=\int_{0}^{h}\dd x$
+\end_inset
+
+, 解得
+\begin_inset Formula 
+\[
+h_{1}=-\frac{1}{2a}\left(\ln\frac{g}{g+\alpha v_{0}^{2}}\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+另外一方面, 考虑下来的时候, 进行受力分析, 
+\begin_inset Formula $-mg+f=-ma_{2}.$
+\end_inset
+
+ 同理, 有
+\begin_inset Formula 
+\[
+h_{2}=-\frac{1}{2a}\left(\ln\frac{g-\alpha v_{m}}{g}\right).
+\]
+
+\end_inset
+
+因为
+\begin_inset Formula $h_{1}=h_{2},$
+\end_inset
+
+解答得
+\begin_inset Formula $v_{m}=\frac{v_{0}\sqrt{g}}{\sqrt{\alpha v_{0}^{2}+g}}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(3-13)有一运送砂子的皮带以恒定的速率
+\begin_inset Formula $v$
+\end_inset
+
+水平运动, 砂子经一静止 的漏斗垂直落到皮带上, 忽略机件各部位的摩擦及皮带另一端的其 它影响, 试问：(1) 若每秒有质量为
+\begin_inset Formula $M'=\dd M/\dd t$
+\end_inset
+
+的砂子落到皮带上,  要维持皮带以恒定速率
+\begin_inset Formula $v$
+\end_inset
+
+运动, 需要多大的功率? (2)若
+\begin_inset Formula $M'=100$
+\end_inset
+
+kg/s, 
+\begin_inset Formula $v=0.5$
+\end_inset
+
+m/s, 水平牵引力多大? 所需功率多大? 
+\end_layout
+
+\begin_layout Example
+答案: 
+\begin_inset Formula $P=v^{2}M',50$
+\end_inset
+
+N,
+\begin_inset Formula $25$
+\end_inset
+
+W.
+\end_layout
+
+\begin_layout Example
+分析: 对于任意时刻分析, 设有
+\begin_inset Formula $\dd m$
+\end_inset
+
+这样大的沙子落入传送并且获得速度, 那么
+\begin_inset Formula $\dd I=\dd m\cdot v.$
+\end_inset
+
+根据
+\begin_inset Formula $F=\frac{\dd I}{\dd t}=v\frac{\dd m}{\dd t},$
+\end_inset
+
+那么
+\begin_inset Formula $P=Fv=v^{2}\frac{\dd m}{\dd t}.$
+\end_inset
+
+第二问带入数据即可.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(4-14) 质量
+\begin_inset Formula $m$
+\end_inset
+
+的匀质链条, 置于桌面, 链条与桌面的摩擦系数为
+\begin_inset Formula $\mu$
+\end_inset
+
+,  下垂端的长度为
+\begin_inset Formula $a$
+\end_inset
+
+, 在重力作用下, 由静止开始下落, 求链条完全 滑离桌面时重力、摩擦力的功.
+ 
+\end_layout
+
+\begin_layout Example
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{circuitikz} 
+\backslash
+tikzstyle{every node}=[font=
+\backslash
+small] 
+\backslash
+draw (2.5,9.25) rectangle (7,9); 
+\backslash
+draw (3.25,9) to[short] (3.25,7); 
+\backslash
+draw (5.5,9) to[short] (5.5,7); 
+\backslash
+draw (4.75,9.5) ellipse (0.5cm and 0.25cm) ; 
+\backslash
+draw (5.25,9.5) ellipse (0.5cm and 0.25cm) ; 
+\backslash
+draw (4.25,9.5) ellipse (0.5cm and 0.25cm); 
+\backslash
+draw (6,9.5) ellipse (0.5cm and 0.25cm) ; 
+\backslash
+draw (6.5,9.5) ellipse (0.5cm and 0.25cm) ; 
+\backslash
+draw (7,9.5) ellipse (0.5cm and 0.25cm); 
+\backslash
+draw (7.25,9.25) ellipse (0.25cm and 0.5cm); 
+\backslash
+draw (7.25,8.75) ellipse (0.25cm and 0.5cm); 
+\backslash
+draw (7.25,8.25) ellipse (0.25cm and 0.5cm) ; 
+\backslash
+end{circuitikz}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+答案: 
+\begin_inset Formula $-\frac{\mu mg}{2l}(l-a)^{2}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Example
+分析(
+\begin_inset Formula $\frown$
+\end_inset
+
+): 假设任意时刻, 掉下去的部分是
+\begin_inset Formula $x$
+\end_inset
+
+, 还没有掉下去的部分是
+\begin_inset Formula $l-x$
+\end_inset
+
+.
+ 考虑之后很小的一段位移, 
+\begin_inset Formula $\dd A_{\text{重力}}=\frac{x}{l}m\cdot\frac{\dd x}{2}.$
+\end_inset
+
+ 这时候对于
+\begin_inset Formula $0\to x$
+\end_inset
+
+积分, 有
+\begin_inset Formula $\int A_{\text{重力}}=\int_{0}^{a}\frac{x}{l}m\cdot\frac{\dd x}{2}=-\frac{\mu mg}{2l}(l-a)^{2}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+刚体的定轴转动综合问题
+\end_layout
+
+\begin_layout Description
+1.
+ 刚体与Newton第二定律的对应关系: 
+\begin_inset Formula $J\to M,\beta\to a,\text{合外力矩}\to F,\omega\to v$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+刚体的定轴转动定律.
+ 
+\begin_inset Formula $M=J\beta$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+刚体的定轴转动的动能.
+ 
+\begin_inset Formula $E_{k}=\frac{1}{2}J\omega^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+守恒条件: 没有非保守外力做功
+\end_layout
+
+\end_deeper
+\begin_layout Description
+刚体的定轴转动角动量.
+ 
+\begin_inset Formula $L=J\omega$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+守恒条件: 有心力或合外力矩为0.
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Description
+2.
+ 刚体的能量
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+力矩: 
+\begin_inset Formula $\vec M=\vec F\times\vec R$
+\end_inset
+
+, 其中
+\begin_inset Formula $\vec R$
+\end_inset
+
+是从转动原点指向现在的点的向量.
+\end_layout
+
+\begin_layout Description
+刚体的定轴转动的动能.
+ 
+\begin_inset Formula $E_{k}=\frac{1}{2}J\omega^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+动能定理: 外力矩的功=刚体定轴转动动能的增量, 即
+\begin_inset Formula $A_{\text{外}}=\frac{1}{2}J\omega_{2}^{2}-\frac{1}{2}J\omega_{1}^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+刚体的重力势能: 
+\begin_inset Formula $E_{P}=mgh_{c}$
+\end_inset
+
+, 其中
+\begin_inset Formula $h_{c}$
+\end_inset
+
+是重心的高度.
+ 
+\end_layout
+
+\begin_layout Description
+机械能: 在重力场中, 包含定轴转动的系统, 机械能包含
+\series bold
+刚体的重力势能
+\series default
+和
+\series bold
+定轴转动功能
+\series default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Description
+3.
+ 刚体的动量
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+角动量 
+\begin_inset Formula $\vec L=J\vec{\omega},$
+\end_inset
+
+方向沿
+\begin_inset Formula $z$
+\end_inset
+
+轴.
+ 
+\end_layout
+
+\begin_layout Description
+角动量定理 外力矩的冲量=角动量的增量, 即
+\begin_inset Formula $\int_{t_{1}}^{t_{2}}M_{\text{外}z}\dd t=\Delta L_{z}=J\omega_{2}-J\omega_{1}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+角动量守恒 定轴转动的刚体外力矩为0, 刚体关于定轴的角动量守恒
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+(1) 不受外力;
+\end_layout
+
+\begin_layout Description
+(2) 外力作用穿过轴线;
+\end_layout
+
+\begin_layout Description
+(3) 外力与作用轴平行.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Description
+4.
+ 圆周运动切向与法向的关系
+\end_layout
+
+\begin_layout Standard
+下面是一些关于滑轮与连接体的问题.
+ 
+\end_layout
+
+\begin_layout Example
+(5-3)求
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $B$
+\end_inset
+
+两定滑轮的角加速度
+\begin_inset Formula $\bt_{A},\bt_{B}$
+\end_inset
+
+, 已知定滑轮半径
+\begin_inset Formula $R$
+\end_inset
+
+, 拉力
+\begin_inset Formula $F=Mg$
+\end_inset
+
+与重物的质量相同.
+ 
+\end_layout
+
+\begin_layout Example
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+incfig{prob53}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+答案: 
+\begin_inset Formula $\bt_{A}>\bt_{B}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+分析: 对于
+\begin_inset Formula $A$
+\end_inset
+
+图, 对物体进行受力分析, 
+\begin_inset Formula $Mg-T=ma_{t}$
+\end_inset
+
+.
+ 对于滑轮分析, 
+\begin_inset Formula $TR=J\beta.$
+\end_inset
+
+但是对于右图, 
+\begin_inset Formula $MgR=J\beta.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(5-9)如图, 滑块 
+\begin_inset Formula $A$
+\end_inset
+
+, 重物 
+\begin_inset Formula $B$
+\end_inset
+
+ 和滑轮
+\begin_inset Formula $C$
+\end_inset
+
+ 的 质量分别
+\begin_inset Formula $m_{A},m_{B},m_{C}.$
+\end_inset
+
+ 滑轮半径为
+\begin_inset Formula $R$
+\end_inset
+
+.
+\begin_inset Formula $A$
+\end_inset
+
+与 桌面之间,滑轮与轴承间均无摩擦, 绳质 量可不计, 绳与滑轮间无相对滑动．求 滑块 
+\begin_inset Formula $A$
+\end_inset
+
+的加速度及滑轮两边绳中的张力.
+ (提示: 
+\begin_inset Formula $J_{C}=m_{c}R^{2}/2$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Example
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{circuitikz} 
+\backslash
+tikzstyle{every node}=[font=
+\backslash
+LARGE]  
+\backslash
+draw [](2,20.5) to[short] (5.75,20.5); 
+\backslash
+draw [](2,20.5) to[short] (2,19.25); 
+\backslash
+draw (1.75,20.5) circle (0.25cm); 
+\backslash
+draw [short] (1.5,20.5) -- (1.5,19.25); 
+\backslash
+draw [short] (1.75,20.75) -- (4,20.75); 
+\backslash
+draw (1.25,19.25) rectangle (1.75,18.75); 
+\backslash
+draw (4,21) rectangle (4.5,20.5); 
+\backslash
+node [font=
+\backslash
+LARGE] at (1.5,19) {A}; 
+\backslash
+node [font=
+\backslash
+LARGE] at (4.25,20.75) {B}; 
+\backslash
+draw (4,21) rectangle (4.5,20.5); 
+\backslash
+end{circuitikz}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+答案: 
+\begin_inset Formula $a=\frac{m_{B}g}{m_{A}+m_{B}+m_{C}/2},T_{A}=m_{A}a,T_{B}=m_{B}(g-a).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+分析: 选取重物下落后的方向为正方向.
+ 假设水平段中绳子的受力是
+\begin_inset Formula $T_{A},$
+\end_inset
+
+竖直段的受力为
+\begin_inset Formula $T_{B}.$
+\end_inset
+
+加速度为
+\begin_inset Formula $a$
+\end_inset
+
+.
+ 
+\uwave on
+\color orange
+(注意这里一根绳子上的力是不等的, 但是绳子会传达加速度相等的消息)
+\uwave default
+\color inherit
+ 对物体
+\begin_inset Formula $A$
+\end_inset
+
+: 
+\begin_inset Formula $m_{A}a=T_{A}\quad(1)$
+\end_inset
+
+; 对物体
+\begin_inset Formula $B:m_{B}a=mg-T_{B}\quad(2)$
+\end_inset
+
+.
+ 由于滑轮与两端绳子接触, 因此依据Newton第三定律, 合外力矩为
+\begin_inset Formula $(T_{B}-T_{A})R,$
+\end_inset
+
+因此根据刚体的定轴转动定律, 就有
+\begin_inset Formula $(T_{A}-T_{B})R=J\beta\quad(3).$
+\end_inset
+
+ 又因为
+\begin_inset Formula $\bt$
+\end_inset
+
+与
+\begin_inset Formula $a$
+\end_inset
+
+的关系, 有
+\begin_inset Formula $a=r\bt\quad(4)$
+\end_inset
+
+.联立上述的式子, 解得到答案.
+ 
+\end_layout
+
+\begin_layout Example
+解答上述方程的提示: 首先方程的切入口是(4), 然后分理处变量
+\begin_inset Formula $a$
+\end_inset
+
+即可.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(5-13) 质量分别为 
+\begin_inset Formula $m$
+\end_inset
+
+ 和 
+\begin_inset Formula $2m$
+\end_inset
+
+, 半径分别为 
+\begin_inset Formula $r$
+\end_inset
+
+ 和
+\begin_inset Formula $2r$
+\end_inset
+
+的两个均匀圆盘,同 轴地粘在一起, 可以绕通过盘心且垂直盘面的水平光滑固定轴转 动, 对转轴的转动惯量为 
+\begin_inset Formula $9mr^{2}/2$
+\end_inset
+
+, 大小圆盘边缘都绕有绳子, 绳 子下端都挂一质量为 
+\begin_inset Formula $m$
+\end_inset
+
+ 的重物, 如图.
+ 求盘的角加速度的大小.
+\end_layout
+
+\begin_layout Example
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{circuitikz}[scale=0.5]  
+\backslash
+draw (4.5,15.5) circle (2.5cm); 
+\backslash
+draw (4.5,15.5) circle (1.25cm); 
+\backslash
+draw [short] (2,15.5) -- (2,11.5); 
+\backslash
+draw [short] (5.75,15.75) -- (5.75,11.5); 
+\backslash
+draw (1.75,11.5) rectangle (2.5,10.75); 
+\backslash
+draw (5.5,11.5) rectangle (6.25,10.75); 
+\backslash
+node at (2,11) {$m$}; 
+\backslash
+node  at (5.75,11) {$m$}; 
+\backslash
+draw (4.5,15.5) to[short] (5.75,15.5); 
+\backslash
+node  at (5,15.5) {$r$}; 
+\backslash
+node  at (4,14.5) {$2r$}; 
+\backslash
+draw (4.5,15.5) to[short] (4.5,13); 
+\backslash
+node at (4,16) {$m$}; 
+\backslash
+node at (5.25,17) {$2m$}; 
+\backslash
+draw (4.5,15.5) to[short] (4.5,13); 
+\backslash
+end{circuitikz}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+答案: 
+\begin_inset Formula $\frac{2g}{19r}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+分析: 可以对每一个圆盘分别分析, 把沿重物下坠的方向记为正方向, 设两段绳子的拉力分别为
+\begin_inset Formula $T_{1},T_{2}.$
+\end_inset
+
+对应的加速度分别为
+\begin_inset Formula $a_{1},a_{2}$
+\end_inset
+
+,于是有:
+\begin_inset Formula 
+\begin{align*}
+mg-T_{1} & =ma_{1}\\
+T_{2}-mg & =ma_{2}\\
+-T_{2}r+T_{1}2r & =J\beta\\
+a_{1} & =\beta2r\\
+a_{2} & =\beta r
+\end{align*}
+
+\end_inset
+
+联立求解即可.
+ 
+\end_layout
+
+\begin_layout Example
+另外一种方法是使用整体法.
+ 由于
+\begin_inset Formula $M_{\text{总}}=J\beta,$
+\end_inset
+
+那么有
+\begin_inset Formula 
+\[
+mg\cdot2r-mgr=\left(m(2r)^{2}+mr^{2}+\frac{9}{2}mr^{2}\right)\bt.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+同样可以得到答案.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(5-10) 用力 
+\begin_inset Formula $F$
+\end_inset
+
+ 将一粗糙平面紧压在轮上, 平面与轮 间滑动摩擦系数 
+\begin_inset Formula $\mu$
+\end_inset
+
+,轮的初角速度 
+\begin_inset Formula $\omega_{0}$
+\end_inset
+
+,问: 转过多 少角度及经过多长时间轮即停止转动? 轮半径 
+\begin_inset Formula $R$
+\end_inset
+
+,  质量
+\begin_inset Formula $m$
+\end_inset
+
+分布均匀；忽略轴质量且力 
+\begin_inset Formula $F$
+\end_inset
+
+ 均匀.
+ 
+\end_layout
+
+\begin_layout Example
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{circuitikz}[scale=0.5] 
+\backslash
+tikzstyle{every node}=[font=
+\backslash
+LARGE] 
+\backslash
+draw (7.25,16) ellipse (1.25cm and 2.25cm) ; 
+\backslash
+draw (7.25,16.25) rectangle (11.75,16); 
+\backslash
+draw [ fill={rgb,255:red,0; green,0; blue,0} ] (7.25,16.25) rectangle (11.75,16);
+ 
+\backslash
+draw (3,19.25) rectangle (5.5,13); 
+\backslash
+draw [ fill={rgb,255:red,0; green,0; blue,0} ] (3,19.25) rectangle (3.25,13);
+ 
+\backslash
+node [font=
+\backslash
+LARGE] at (4,18) {$
+\backslash
+mu$}; 
+\backslash
+draw [ fill={rgb,255:red,0; green,0; blue,0} ] (3,19.25) rectangle (3.25,13);
+ 
+\backslash
+end{circuitikz}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+答案: 
+\begin_inset Formula $\Delta\theta=\frac{3mR\omega_{0}^{2}}{8\mu F},\Delta t=\frac{3mR\omega_{0}}{4\mu F}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+分析: 这个问题我们希望使用刚体定轴转动的动能定理(
+\begin_inset Formula $\frac{1}{2}J\omega_{2}^{2}-\frac{1}{2}J\omega_{1}^{2}=A_{\text{外}}\stackrel{\text{恒定外力矩}}{\implies}M\theta$
+\end_inset
+
+)和动量定理(
+\begin_inset Formula $J\omega_{2}-J\omega_{1}=p_{\text{外}}\stackrel{\text{恒定外力矩}}{\implies}Mt$
+\end_inset
+
+)求解, 但是发现关键的问题在于求解外力矩.
+ 
+\end_layout
+
+\begin_layout Example
+选取若干个同心小圆环.
+ 因为小圆环上面的
+\begin_inset Formula $r$
+\end_inset
+
+都是一样的, 因此量就好算了很多.
+ 注意到
+\begin_inset Formula $\dd F=\frac{2\pi r}{\pi r^{2}}\dd rF,\dd f=\mu\dd F=\mu\frac{r}{R}F,\dd M=\dd f\dd r=2\mu\left(\frac{r}{R}\right)^{2}F\dd r.$
+\end_inset
+
+从
+\begin_inset Formula $0\sim R$
+\end_inset
+
+积分, 有
+\begin_inset Formula $M=\frac{2\mu RF}{3}.$
+\end_inset
+
+ 于是可以用动能定理
+\begin_inset Formula $M\Delta\theta=J\omega_{0}^{2}/2,$
+\end_inset
+
+以及角动量定理
+\begin_inset Formula $M\Delta t=J\omega_{0}$
+\end_inset
+
+求出答案.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(5-14) 质量为 
+\begin_inset Formula $m$
+\end_inset
+
+, 长为 
+\begin_inset Formula $L$
+\end_inset
+
+的匀质木棒可绕 
+\begin_inset Formula $O$
+\end_inset
+
+ 轴自 由转动,开始木棒铅直悬挂, 现在有一只质量为 
+\begin_inset Formula $m$
+\end_inset
+
+ 的小猴以水平速度 抓住棒的一端 (如图),  求：(1) 小猴与棒开始摆动的角速度；(2) 小猴与 棒摆到最大高度时, 棒与铅直方向的夹角.
+ (此时的转动惯量是
+\begin_inset Formula $1/3mL^{2}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Example
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{circuitikz} 
+\backslash
+tikzstyle{every node}=[font=
+\backslash
+footnotesize] 
+\backslash
+draw [short] (5.25,18.75) -- (6.25,18.75); 
+\backslash
+draw [short] (5.25,18.75) -- (5.5,18.25); 
+\backslash
+draw [short] (5.5,18.25) -- (6,18.25); 
+\backslash
+draw [short] (6,18.25) -- (6.25,18.75); 
+\backslash
+draw [short] (5.75,18.25) -- (5.75,15.5); 
+\backslash
+draw [short] (5.75,18.25) -- (5.75,15.75); 
+\backslash
+draw [dashed] (5.75,18.25) -- (4,16); 
+\backslash
+draw (7,15.5) ellipse (0.75cm and 0.25cm) ; 
+\backslash
+draw [-Stealth, dashed] (8,16) -- (6.25,16); 
+\backslash
+node [font=
+\backslash
+footnotesize] at (6,16.75) {$L$}; 
+\backslash
+node [font=
+\backslash
+footnotesize] at (6,16.25) {$m$}; 
+\backslash
+node [font=
+\backslash
+footnotesize] at (6,18) {$O$}; 
+\backslash
+node [font=
+\backslash
+footnotesize] at (7,15.5) {$m$}; 
+\backslash
+node [font=
+\backslash
+footnotesize] at (6.5,15) {Monkey}; 
+\backslash
+node [font=
+\backslash
+footnotesize] at (5.5,17.75) {$
+\backslash
+theta$}; 
+\backslash
+draw [-Stealth, dashed] (8,16) -- (6.25,16); 
+\backslash
+end{circuitikz}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+答案: 
+\begin_inset Formula $\omega=3v_{0}/4L,\theta=\cos^{-1}\left(1-\frac{v_{0}^{2}}{4gL}\right).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+分析: 对于(1), 可以使用角动量守恒
+\begin_inset Formula 
+\[
+mvL=\left(mL^{2}+\frac{1}{3}mL^{2}\right)\omega
+\]
+
+\end_inset
+
+就可以求得.
+ 对于(2), 考虑机械能守恒, 就有
+\begin_inset Formula 
+\[
+\frac{1}{2}\left(\frac{1}{3}mR^{2}+mR^{2}\right)\omega^{2}=\left(\frac{1}{2}mgL(1-\cos\theta)\right)+mgL(1-\cos\theta).
+\]
+
+\end_inset
+
+注意刚体是要看重心移动的距离.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(5-15) 质量
+\begin_inset Formula $m$
+\end_inset
+
+, 、长 
+\begin_inset Formula $l$
+\end_inset
+
+ 的匀质杆, 以 
+\begin_inset Formula $O$
+\end_inset
+
+ 点为轴, 静止 从与竖直方向成 角处自由下摆, 到竖直位置 时与光滑桌面上的静止物块
+\begin_inset Formula $m$
+\end_inset
+
+(视为质点) 发生弹 性碰撞, 求(1) 棒开始转动时的角加速度
+\begin_inset Formula $\bt$
+\end_inset
+
+; (2) 棒 转到竖直位置碰撞前的角速度
+\begin_inset Formula $\omega_{1}$
+\end_inset
+
+.
+ 及棒中央点 
+\begin_inset Formula $C$
+\end_inset
+
+的速率
+\begin_inset Formula $v_{c_{1}}$
+\end_inset
+
+; (3) 碰撞后杆的角速度
+\begin_inset Formula $\omega_{2}$
+\end_inset
+
+和物块的线速率
+\begin_inset Formula $v_{2}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+答案: 
+\begin_inset Formula $\bt=3g\sin\theta_{0}/2l;\omega_{1}=\sqrt{\frac{3g(1-\cos\theta_{0})}{l}};v_{c_{1}}=\frac{1}{2}\sqrt{3gl(1-\cos\theta_{0})};v_{2}=\frac{1}{2}\sqrt{3gl(1-\cos\theta_{0})};\omega_{2}=-\frac{1}{2}\sqrt{\frac{3g}{l}(1-\cos\theta_{0})}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+分析: (1) 一开始, 根据转动定律, 有
+\begin_inset Formula $\frac{1}{2}mg\sin\theta_{0}=\left(\frac{1}{3}ml^{2}\right)\beta\implies\beta=3g\sin\theta_{0}/2l.$
+\end_inset
+
+ 对于(2), 根据转动机械能守恒, 有
+\begin_inset Formula $mg\frac{l}{2}(1-\cos\theta_{0})=\frac{1}{2}J\omega_{1}^{2}.$
+\end_inset
+
+由此可解答.
+ (3) 弹性碰撞中棒与物块对转轴角动量守恒, 动能守恒.
+ 于是列式子:
+\begin_inset Formula 
+\begin{align*}
+J & =\frac{1}{3}ml^{2} & \qquad(1)\\
+J\omega_{1} & =J\omega_{2}+mv_{2}l & \qquad(2)\\
+\frac{1}{2}J\omega_{1}^{2} & =\frac{1}{2}J\omega_{2}^{2}+\frac{1}{2}mv_{2}^{2} & \qquad(3)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+对于(3)的计算建议
+\begin_inset FormulaMacro
+\newcommand{\blue}[1]{{\color{blue}#1}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\green}[1]{{\color{teal}#1}}
+\end_inset
+
+: 可以对于(3)两端乘上
+\begin_inset Formula $J,$
+\end_inset
+
+然后让(2)平方, 有
+\begin_inset Formula $J^{2}\omega_{1}^{2}=\blue{J^{2}\omega_{2}^{2}+mJv_{2}^{2}}\quad(3)$
+\end_inset
+
+, 以及
+\begin_inset Formula $J^{2}\omega_{1}^{2}=\green{J^{2}\omega_{2}^{2}+m^{2}v_{2}^{2}l^{2}+2J\omega_{2}mv_{2}l}\quad(4).$
+\end_inset
+
+把(3)带入(4)中的左侧, 有
+\begin_inset Formula $\blue{J^{2}\omega_{2}^{2}+mJv_{2}^{2}}=\green{J^{2}\omega_{2}^{2}+m^{2}v_{2}^{2}l^{2}+2J\omega_{2}mv_{2}l}\quad(5)$
+\end_inset
+
+.
+ 化简(5), 就有
+\begin_inset Formula $Jv_{2}=mv_{2}l^{2}+2J\omega_{2}l\quad(6)$
+\end_inset
+
+.
+ 知道
+\begin_inset Formula $\frac{2Jl\green{\omega_{2}}}{(J-ml^{2})}=\blue{v_{2}}\quad(7),$
+\end_inset
+
+也就是得到了
+\begin_inset Formula $v_{2}$
+\end_inset
+
+与
+\begin_inset Formula $\omega_{2}$
+\end_inset
+
+的关系.
+ 带入(2), 有值为
+\begin_inset Formula $\omega_{2}=-\frac{1}{2}\omega_{1},\omega_{1}=\frac{1}{2}\omega_{1}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+狭义相对论
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+1.
+ 不同的参考系: 假设参考系
+\begin_inset Formula $S'$
+\end_inset
+
+相对与
+\begin_inset Formula $S$
+\end_inset
+
+相对于
+\begin_inset Formula $x$
+\end_inset
+
+轴正方向运动
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+事件: 发生的事情
+\end_layout
+
+\begin_layout Description
+距离差: 以某一个参考系的度量测量的距离
+\end_layout
+
+\begin_layout Description
+时间差: 以某一个参考系的度量测量的时间
+\end_layout
+
+\end_deeper
+\begin_layout Description
+2.
+ Lorentz速度变换: 在参考系
+\begin_inset Formula $S$
+\end_inset
+
+中, 有
+\begin_inset Formula $\Delta x,\Delta t$
+\end_inset
+
+, 在参考系
+\begin_inset Formula $S'$
+\end_inset
+
+中, 有
+\begin_inset Formula $\Delta x',\Delta t'$
+\end_inset
+
+, 相对运动速率为
+\begin_inset Formula $u.$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+参考系
+\begin_inset Formula $S\to S'$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\Delta x\red '=\gamma\left(\red -u\Delta t+\green{\Delta x}\right)\qquad\qquad\Delta t\red '=\gamma\left(\red -\frac{u\Delta x}{c^{2}}+\green{\Delta t}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+参考系
+\begin_inset Formula $S'\to S$
+\end_inset
+
+.
+\begin_inset Formula $\Delta x=\gamma\left(u\Delta t\red '+\green{\Delta x'}\right)\qquad\qquad\Delta t=\gamma\left(\frac{u\Delta x\red '}{c^{2}}+\green{\Delta t'}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+理解.
+ 只是在原来的内容上面做了一点修正.
+ 修正的变量需要依赖另一个和相对运动的速度.
+ 注意正负号和变换因子.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Description
+3.
+ 相对论体系下的动量和能量
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+相对论质量.
+ 
+\begin_inset Formula $m=\gamma m_{0}$
+\end_inset
+
+(速度越大的时候加速越难)
+\end_layout
+
+\begin_layout Description
+相对论动量.
+ 
+\begin_inset Formula $\vec p=m\vec v=\gamma m_{0}\vec v.$
+\end_inset
+
+ 这个表达式保证在Lorentz变换的条件下, 动量守恒在所有的惯性系中成立.
+ 
+\end_layout
+
+\begin_layout Description
+相对论动能.
+ 
+\begin_inset Formula $E_{k}=mc^{2}-m_{0}c^{2}=(\gamma-1)m_{0}c^{2}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+相对论能量.
+ 
+\begin_inset Formula $E_{\text{总}}=mc^{2},E_{\text{静}}=m_{0}c^{2},E_{\text{动}}=E_{\text{总}}-E_{\text{静}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+相对论动量能量关系.
+ 
+\begin_inset Formula $E^{2}=p^{2}c^{2}+m_{0}^{2}c^{4}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+相互作用的守恒关系.
+ 质能守恒, 动量守恒.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Example
+(6-3) 北京某日19时一工厂断电, 同日19时0分0.00026 s天津某人放了一响 礼炮, 两者的直线距离120km, 一艘飞船相对地面以0.8
+\begin_inset Formula $c$
+\end_inset
+
+从北京到天津飞 行, 问飞船上的航天员观察, 哪件事情先发生?
+\end_layout
+
+\begin_layout Example
+答案: 
+\begin_inset Formula $\Delta t=-0.0006$
+\end_inset
+
+s, 天津事件先发生.
+ 
+\end_layout
+
+\begin_layout Example
+分析: 这里面有两个时间.
+ 事件1: 工厂断电; 事件2:天津放炮.
+ 
+\begin_inset Formula $\Delta x=0.00026\text{s},\Delta s=120\text{km}$
+\end_inset
+
+.
+ 根据变换公式, 有
+\begin_inset Formula $\Delta t'=\gamma\left(\Delta t-\frac{u\Delta x}{c^{2}}\right).$
+\end_inset
+
+ 首先求出
+\begin_inset Formula $\gamma$
+\end_inset
+
+, 也就是
+\begin_inset Formula $\gamma=\frac{1}{\sqrt{1-\left(\frac{u}{c}\right)^{2}}}=5/3.$
+\end_inset
+
+ 把数据带入科学计算器, 就有答案
+\begin_inset Formula $\Delta t'=-0.191977$
+\end_inset
+
+s.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+解答下列相对论的小问题:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+(6-10)火箭静止质量100t, 当它以第二宇宙速度
+\begin_inset Formula $v=11.2\times10^{3}$
+\end_inset
+
+m/s飞 行时, 其质量增加
+\begin_inset Formula $\qst$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+(6-12) 
+\begin_inset Formula $\alpha$
+\end_inset
+
+粒子在加速器中被加速, 当其质量为静止质量的6倍其 动能是静止能量的
+\begin_inset Formula $\qst$
+\end_inset
+
+倍.
+ 
+\end_layout
+
+\begin_layout Enumerate
+(6-14) (a) 一粒子的相对论动量等于2倍非相对论动量, 求粒子速度.
+ (b) 一粒子的动能等于静能, 求粒子速度.
+ 
+\end_layout
+
+\begin_layout Enumerate
+(6-18) 一个高能质子进入磁场
+\begin_inset Formula $B$
+\end_inset
+
+发生偏转, 已知偏转半 径
+\begin_inset Formula $R$
+\end_inset
+
+.
+ 求质子的动量
+\begin_inset Formula $p$
+\end_inset
+
+和能量
+\begin_inset Formula $E_{k}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+答案: (1) 
+\begin_inset Formula $0.7\times10^{-4}$
+\end_inset
+
+kg; 
+\begin_inset Formula $5m_{0}c^{2}$
+\end_inset
+
+; 
+\begin_inset Formula $v=\frac{\sqrt{3}}{2}c,v=\frac{\sqrt{3}}{2}c$
+\end_inset
+
+;
+\begin_inset Formula $p=RBq,E=\sqrt{p^{2}c^{2}+E_{0}^{2}}$
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+分析: 对于(1), 
+\begin_inset Formula 
+\[
+\Delta m=E_{k}/c^{2}=\frac{\frac{1}{2}mv^{2}}{c^{2}}.
+\]
+
+\end_inset
+
+ 因为速度远小于光速.
+ 对于(2), 得到
+\begin_inset Formula $m=\gamma m_{0}\to\gamma=6.$
+\end_inset
+
+意味着
+\begin_inset Formula $E_{k}=(\gamma-1)m_{0}c^{2}=5m_{0}c^{2}.$
+\end_inset
+
+ 对于(3).
+ 我们有
+\begin_inset Formula $p=\gamma m_{0}v=2p_{0}=2m_{0}v\to\gamma=2.$
+\end_inset
+
+以及
+\begin_inset Formula $E_{k}=\gamma m_{0}c^{2}-m_{0}c^{2}=m_{0}c^{2}\to\gamma=2.$
+\end_inset
+
+于是可以求出
+\begin_inset Formula $v$
+\end_inset
+
+.
+ 对于(4), 我们已经知道
+\begin_inset Formula $R=\frac{p}{qB}.$
+\end_inset
+
+得到
+\begin_inset Formula $p=RBq,$
+\end_inset
+
+再根据公式求出最后的值即可.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(6-17) 在
+\begin_inset Formula $S$
+\end_inset
+
+系, 静止质量
+\begin_inset Formula $m_{0}$
+\end_inset
+
+的两个粒子, 其中一个静止, 另一个 速度大小为0.8
+\begin_inset Formula $c$
+\end_inset
+
+, 沿一条直线作对心碰撞后合成为一个粒子,  求合成粒子的静止质量
+\begin_inset Formula $M_{0}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Example
+答案: 2.31
+\begin_inset Formula $m_{0}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Example
+分析: 考虑质能守恒得到
+\begin_inset Formula $m_{0}c^{2}+\gamma_{1}m_{0}c^{2}=Mc^{2}=\gamma_{2}M_{0}c^{2}$
+\end_inset
+
+, 然后使用直线上的动量守恒得到
+\begin_inset Formula $\gamma_{1}m_{0}v_{1}=Mv_{2}=\gamma_{2}M_{0}v_{2}$
+\end_inset
+
+就可以算出答案.
+ 
+\end_layout
+
+\begin_layout Section
+电场中的常见问题
+\end_layout
+
+\begin_layout Subsection*
+叠加法
+\end_layout
+
+\begin_layout Description
+1.
+ 运用叠加法解题的一般步骤
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+选取恰当的微元.
+ 找到一小段微元, 使得这个微元上面某一个量是恒定的值.
+ 
+\end_layout
+
+\begin_layout Description
+给出微小一段上的量.
+ 如果是标量, 那么就仅有一个数值; 如果是一个矢量, 那么需要考虑是否应当分
+\begin_inset Formula $x$
+\end_inset
+
+轴和
+\begin_inset Formula $y$
+\end_inset
+
+轴进行分析.
+ 
+\end_layout
+
+\begin_layout Description
+积分运算.
+ 从初始状态积分值末了状态, 进行积分运算.
+ 
+\uwave on
+\color purple
+注意对称性分析
+\uwave default
+\color inherit
+.
+\end_layout
+
+\end_deeper
+\begin_layout Description
+2.
+ 静电场的场强求解
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+模型.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+点电荷: 
+\begin_inset Formula $\vec E=\ef\frac{Q}{r^{2}}\vec{e_{r}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+无限大直导线: 
+\begin_inset Formula $\vec E=\frac{\lambda}{2\pi\eqs_{0}r}\vec{e_{r_{\perp}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+无限大平面: 
+\begin_inset Formula $\vec E=\frac{\sigma}{2\eqs_{0}}\vec{e_{n}}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+积分变元的变换: 
+\begin_inset Formula $\lambda\stackrel[=\dd x\times]{\times\text{小面}=}{\leftarrow--\rightarrow}\sigma\stackrel[=\dd x\times]{\times\text{小面}=}{\leftarrow--\rightarrow}v$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Description
+3.
+ 静电场的电势求解
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+模型.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+点电荷.
+ 
+\begin_inset Formula $V=\ef\frac{Q}{r}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+均匀带电球面球心.
+ 
+\begin_inset Formula $V=\ef\frac{Q}{R}.$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Example
+(7(1)-4) 电量
+\begin_inset Formula $Q$
+\end_inset
+
+均匀分布在长为
+\begin_inset Formula $2L$
+\end_inset
+
+的细棒上, 在细棒的延长 线上距细棒中心
+\begin_inset Formula $O$
+\end_inset
+
+距离为
+\begin_inset Formula $x$
+\end_inset
+
+的
+\begin_inset Formula $P$
+\end_inset
+
+点处放一带电量为
+\begin_inset Formula $q(q>0)\text{的点}\text{电荷，求带电细棒对该点电荷的静电力}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+incfig{prob7-4}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+答案: 
+\begin_inset Formula $F=qE=\frac{qQ}{4\pi\eqs_{0}(x^{2}-L^{2})}.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Example
+分析: 考虑以棒子的中点为
+\begin_inset Formula $O$
+\end_inset
+
+原点, 以电荷的方向为正方向, 建立
+\begin_inset Formula $Ox$
+\end_inset
+
+坐标轴.
+ 取一个电荷元
+\begin_inset Formula $\dd q=\lambda\dd a=\frac{Q}{2L}\dd a$
+\end_inset
+
+.
+ 那么, 
+\begin_inset Formula $\dd E=\frac{\dd q}{4\pi\eqs_{0}r^{2}}=\frac{Q\dd a}{8\pi\eqs_{0}L(x-a)^{2}}.$
+\end_inset
+
+ 各个
+\begin_inset Formula $\dd\vec E$
+\end_inset
+
+的方向均向右, 同方向叠加, 大小直接总
+\begin_inset Formula $-L\to L$
+\end_inset
+
+积分即可.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(7(1)-5) 如图半径为
+\begin_inset Formula $R$
+\end_inset
+
+的半圆周上均匀分布有电荷
+\begin_inset Formula $Q$
+\end_inset
+
+, 求圆心
+\begin_inset Formula $O$
+\end_inset
+
+点的场强.
+ 另外, 如果
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+用不导电的细塑料棒弯成半径为
+\begin_inset Formula $R$
+\end_inset
+
+的圆弧, 两段空隙为
+\begin_inset Formula $d<<R,$
+\end_inset
+
+电量为
+\begin_inset Formula $Q$
+\end_inset
+
+的均匀分布在上面, 求圆心处的场强的大小和方向.
+ 
+\end_layout
+
+\begin_layout Example
+答案: 
+\begin_inset Formula $\frac{Q}{2\pi^{2}\eqs_{0}R^{2}},\frac{Q/(2\pi r-d)d}{4\pi\eqs_{0}R^{2}},$
+\end_inset
+
+方向指向缺口.
+ 
+\end_layout
+
+\begin_layout Example
+分析: 由于和弧有关, 这里选取
+\begin_inset Formula $\theta$
+\end_inset
+
+表示量的关系.
+ 选取电荷元
+\begin_inset Formula $\dd q=\lambda\dd l=\lambda R\dd\theta$
+\end_inset
+
+.
+ 考虑两段对称的弧在
+\begin_inset Formula $O$
+\end_inset
+
+点的作用.
+ 
+\begin_inset Formula $\dd E$
+\end_inset
+
+的大小是
+\begin_inset Formula $\frac{1}{4\pi\eqs_{0}}\frac{\dd q}{R^{2}}.$
+\end_inset
+
+带入, 
+\begin_inset Formula $E$
+\end_inset
+
+的大小为
+\begin_inset Formula $\frac{1}{4\pi\eqs_{0}R^{2}}\frac{Q}{\pi}\dd\theta,$
+\end_inset
+
+那么
+\begin_inset Formula $E=\int_{0}^{2\pi}\frac{Q}{4\pi^{2}\eqs_{0}R^{2}}\cos\theta\dd\theta$
+\end_inset
+
+, 方向向下.
+ 
+\end_layout
+
+\begin_layout Example
+对于另外的一问, 我们知道
+\begin_inset Formula 
+\[
+\vec{E_{O}}=\vec{E_{\text{圆}}}+\vec{E_{\text{缺口处的负电荷}}}=\vec{E_{\text{缺口处的负电荷}}}.
+\]
+
+\end_inset
+
+ 于是就可以知道
+\begin_inset Formula $\lambda=\frac{Q}{2\pi R-d},E_{O}=\frac{\lambda d}{4\pi\eqs_{0}R^{2}}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(7(1)-7) 一大平面中部有一半径为 
+\begin_inset Formula $R$
+\end_inset
+
+ 的小孔, 设平面均匀带电,面电荷 密度为 
+\begin_inset Formula $\sigma_{0}$
+\end_inset
+
+ , 求通过小孔中心并与平面垂直的直线上的场强分布.
+ 
+\end_layout
+
+\begin_layout Example
+答案: 
+\begin_inset Formula $E=\frac{x\sigma_{0}}{2\eqs_{0}\sqrt{x^{2}+R^{2}}},$
+\end_inset
+
+方向向右.
+ 
+\end_layout
+
+\begin_layout Example
+分析: 可以考虑使用叠加法进行求解.
+ 取小圆环面为微元作为
+\begin_inset Formula $\dd q$
+\end_inset
+
+, 因此就有
+\begin_inset Formula $\dd E=\frac{\dd q}{4\pi\eqs_{0}\left(x^{2}+r^{2}\right)}\frac{x}{\sqrt{x^{2}+r^{2}}}.$
+\end_inset
+
+ 这时候, 
+\uwave on
+\color purple
+可以将
+\begin_inset Formula $\dd q$
+\end_inset
+
+视作一段很小的厚度
+\uwave default
+\color inherit
+, 这样我们就可以用面密度的信息了.
+ 具体地, 有
+\begin_inset Formula $\dd q=\sigma_{0}2\pi r\dd r.$
+\end_inset
+
+ 从
+\begin_inset Formula $R$
+\end_inset
+
+到
+\begin_inset Formula $+\infty$
+\end_inset
+
+积分, 就有
+\begin_inset Formula $E=\frac{x\sigma_{0}}{2\eqs_{0}\sqrt{x^{2}+R^{2}}}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+提示: 可以把小圆环的公式正常记忆, 
+\uwave on
+\color purple
+不过加上一个要乘的
+\begin_inset Formula $\cos\theta$
+\end_inset
+
+值
+\uwave default
+\color inherit
+.
+ 也就是
+\begin_inset Formula 
+\[
+E_{\text{环}}=\frac{Q}{4\pi\eqs_{0}\green{\left(x^{2}+r^{2}\right)}}\red{\frac{x}{\sqrt{x^{2}+r^{2}}}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(7(2)-9) 一厚为
+\begin_inset Formula $a$
+\end_inset
+
+无限大的平板均匀带电, 电荷体密度为 
+\begin_inset Formula $\rho$
+\end_inset
+
+,  求平 板面垂直距离为
+\begin_inset Formula $b$
+\end_inset
+
+的
+\begin_inset Formula $P$
+\end_inset
+
+点的电场强度.
+ 
+\end_layout
+
+\begin_layout Example
+答案: 
+\begin_inset Formula $E=\frac{\rho a}{2\eqs_{0}}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+分析: 考虑一薄片.
+ 那么这个就是
+\begin_inset Formula $\dd E=\frac{\dd\sigma}{2\eqs_{0}}.$
+\end_inset
+
+ 考虑
+\begin_inset Formula $\dd V$
+\end_inset
+
+与
+\begin_inset Formula $\sigma$
+\end_inset
+
+的关系.
+ 直观上感觉, 
+\begin_inset Formula $\dd V$
+\end_inset
+
+是一个单位体含有的电荷量, 这时候如果我们乘上
+\begin_inset Formula $\dd x,$
+\end_inset
+
+就变成了面密度.
+ 因此
+\begin_inset Formula $\sigma=\rho\dd x.$
+\end_inset
+
+积分后就有答案.
+ 
+\end_layout
+
+\begin_layout Example
+体电流与面电流的转化: 考虑在厚度为
+\begin_inset Formula $\dd x$
+\end_inset
+
+的平面层切割面元
+\begin_inset Formula $\dd s$
+\end_inset
+
+的一个小的体积元
+\begin_inset Formula $\dd V$
+\end_inset
+
+, 那么这时候根据带电量是恒等的列出等式: 
+\begin_inset Formula 
+\[
+\dd q=\rho\dd v=\rho\dd x\dd s=\sigma\dd s.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(7(2)-6) 半径为R的均匀带电半圆环, 电量Q, 求圆心处的电势.
+ 
+\end_layout
+
+\begin_layout Example
+答案: 
+\begin_inset Formula $V_{O}=\frac{Q}{2\pi\eqs_{0}R}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Example
+分析: 考虑
+\begin_inset Formula 
+\begin{align*}
+\dd V_{O} & =\frac{\dd q}{4\pi\eqs_{0}r}\\
+\dd q & =\sigma\pi r\dd r
+\end{align*}
+
+\end_inset
+
+就可以得到答案.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(7(2)-12) 均匀带电圆盘半径为
+\begin_inset Formula $R$
+\end_inset
+
+, 电荷面密度为
+\begin_inset Formula $\sigma$
+\end_inset
+
+, 挖去半径
+\begin_inset Formula $R/2$
+\end_inset
+
+的 圆片, 求轴线上的电势分布, 再求轴线上的场强.
+ 
+\end_layout
+
+\begin_layout Example
+答案: 
+\begin_inset Formula $V=\frac{\sigma}{2\eqs_{0}}\left(\sqrt{R^{2}+x^{2}}-\sqrt{(R/2)^{2}+x^{2}}\right),E=E_{x}=-\frac{\dd V}{\dd x}=-\frac{\sigma x}{2\eqs_{0}}\left(\frac{1}{\sqrt{R^{2}+x^{2}}}-\frac{1}{\sqrt{(R/2)^{2}+x^{2}}}\right).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+分析: 根据先前的经验, 仍然去取半径为
+\begin_inset Formula $r$
+\end_inset
+
+, 宽为
+\begin_inset Formula $\dd r$
+\end_inset
+
+的细圆环.
+ 
+\begin_inset Formula 
+\begin{align*}
+\dd q & =\sigma2\pi r\dd r\\
+\dd V & =\frac{\dd q}{4\pi\eqs_{0}\sqrt{r^{2}+x^{2}}}
+\end{align*}
+
+\end_inset
+
+之后使用电势梯度
+\begin_inset Formula $E_{x}=-\frac{\dd V}{\dd x}$
+\end_inset
+
+对
+\begin_inset Formula $x$
+\end_inset
+
+求导就可以得到场强.
+ 
+\end_layout
+
+\begin_layout Example
+提示: 圆环轴心处的电势为
+\begin_inset Formula 
+\[
+V_{O}=\frac{Q}{4\pi\eqs_{0}\red{\sqrt{r^{2}+x^{2}}}}.
+\]
+
+\end_inset
+
+因为不涉及到矢量分解, 于是没有后面一项.
+ 
+\end_layout
+
+\begin_layout Subsection*
+关于
+\begin_inset Formula $\vec D$
+\end_inset
+
+和
+\begin_inset Formula $\vec E$
+\end_inset
+
+的Gauss定理及其使用
+\end_layout
+
+\begin_layout Description
+1.
+ 
+\begin_inset Formula $\vec E$
+\end_inset
+
+的Gauss定理: 
+\begin_inset Formula $\oint_{S}E\cdot\dd S=\frac{1}{\eqs_{0}}\sum q_{\text{内}}.$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+a.
+ 静电场中的导体: 
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+静电平衡.
+ 电荷无宏观的移动, 不随时间变化.
+ 
+\end_layout
+
+\begin_layout Description
+静电平衡的条件.
+ 电场分布: 
+\begin_inset Formula $E_{\text{内}}=0,E_{\text{表面}}\perp E_{\text{导体表面}}.$
+\end_inset
+
+ 导体内无净电荷分布
+\end_layout
+
+\end_deeper
+\begin_layout Description
+b.
+ 静电场中的电介质
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+Gauss定理.
+ 仍然适用, 但是需要加上另外感应出来的电荷, 较为麻烦.
+ 于是引入
+\begin_inset Formula $\vec D$
+\end_inset
+
+的Gauss定理.
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Description
+2.
+ 
+\begin_inset Formula $\vec D$
+\end_inset
+
+的Gauss定理: 
+\begin_inset Formula $\oint_{S}\vec D\cdot\dd S=\sum\green{q_{0\text{内}}}.$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+a.
+ 
+\begin_inset Formula $\vec D$
+\end_inset
+
+与
+\begin_inset Formula $\vec E$
+\end_inset
+
+的关系: 
+\begin_inset Formula $\vec D=\eqs_{0}\eqs_{r}\vec E.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+b.
+ 不影响电场分布的对称性条件: (1)均匀无穷介质; (2) 分界面为等势面; (3) 分界面与等势面垂直.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Description
+3.
+ 电势分析: 注意吧电势变化带来的作用当做分析的起点.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+a.
+ 接地: 电势为0.
+ 
+\end_layout
+
+\begin_layout Description
+b.
+ 两个连在一起: 电势相等
+\end_layout
+
+\begin_layout Description
+c.
+ 两个相连的无异平行板之间: 电势差相等
+\end_layout
+
+\end_deeper
+\begin_layout Example
+(7(1)-12) 点电荷 
+\begin_inset Formula $q$
+\end_inset
+
+ 位于边长为 
+\begin_inset Formula $a$
+\end_inset
+
+ 的正立方体的中心, (1)通过此立方体 的每一面的电通量各是多少? (2) 若电荷移至正方体的一个顶点上,  则通过每个面的电通量又各是多少?
+ 
+\end_layout
+
+\begin_layout Example
+答案: 
+\begin_inset Formula $\phi_{1}=\frac{q}{6\eqs_{0}},\phi_{2}=\frac{1}{24}\frac{q}{\eqs_{0}}\text{与}0.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+分析: 因为立方体 6个面电通量一样可以解答出第一问.
+ 对于第二问, 设计边长 
+\begin_inset Formula $2a$
+\end_inset
+
+ 的大立方体, 将
+\begin_inset Formula $q$
+\end_inset
+
+包围在中心, 不过该顶点的三个小面的电通量为
+\begin_inset Formula $\frac{1}{4}\cdot\frac{1}{6}\frac{q}{\eqs_{0}}.$
+\end_inset
+
+过该顶点的三个小面电通量为零 .
+ 
+\end_layout
+
+\begin_layout Example
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+incfig{prob712}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(7(2)-8) 两个截面半径分别为
+\begin_inset Formula $R_{1}$
+\end_inset
+
+、
+\begin_inset Formula $R_{2}$
+\end_inset
+
+的无限长圆柱面同轴放置, 已 知内圆柱面电荷线密度为
+\begin_inset Formula $\lambda$
+\end_inset
+
+ , 求两圆柱面间的电势差
+\begin_inset Formula $U$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Example
+答案: 
+\begin_inset Formula $\frac{\lambda}{2\pi\eqs_{0}}\ln\frac{R_{2}}{R_{1}}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+分析: 根据Gauss定理求柱面内部的场强, 然后积分即可.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(7(1)-15) 半径
+\begin_inset Formula $R$
+\end_inset
+
+的球形带电体, 电荷体密度为 
+\begin_inset Formula $\rho=Ar$
+\end_inset
+
+, 
+\begin_inset Formula $A$
+\end_inset
+
+为常数； 总电量
+\begin_inset Formula $Q$
+\end_inset
+
+, 求场强分布.
+ 
+\end_layout
+
+\begin_layout Example
+答案: 
+\begin_inset Formula $E_{\text{内}}=\frac{Ar^{2}}{4\eqs_{0}},E_{\text{外}}=\frac{Q}{4\pi\eqs_{0}r^{2}}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+分析: 同样取同心球面为Gauss面, 然后积分即可.
+ 但是这时候内部不是常量, 于是取体积元为半径
+\begin_inset Formula $r$
+\end_inset
+
+, 厚度为
+\begin_inset Formula $\dd r$
+\end_inset
+
+的同心球面层.
+ 包含的电量为
+\begin_inset Formula $\dd q=\rho4\pi r^{2}\dd r.$
+\end_inset
+
+ 
+\begin_inset Formula $Q_{\text{总}}=\int_{0}^{r}\rho\cdot4\pi r^{2}\dd r.$
+\end_inset
+
+然都带入对应的限积分即可.
+ 
+\end_layout
+
+\begin_layout Example
+注意: 这个问题同样应用了微元法, 其方法和上面总结的如出一辙, 很应该仔细体会.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(7(1)-16) 半径
+\begin_inset Formula $R$
+\end_inset
+
+的无限长圆柱形带电体, 电荷体密度为
+\begin_inset Formula $\rho=Ar^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $A$
+\end_inset
+
+为 常数；求场强分布.
+ 
+\end_layout
+
+\begin_layout Example
+答案: 
+\begin_inset Formula $E_{\text{内}}=\frac{Ar^{3}}{4\eqs_{0}};E_{\text{外}}=\frac{AR^{4}}{4\eqs_{0}r}.$
+\end_inset
+
+方向沿径向.
+ 
+\end_layout
+
+\begin_layout Example
+分析: 考虑作高为
+\begin_inset Formula $h$
+\end_inset
+
+, 半径为
+\begin_inset Formula $r$
+\end_inset
+
+圆柱面为圆柱面.
+ 仅仅有侧面有通量, 同样应用Gauss公式.
+ 这时候其内部包含的电荷量就变成了(取一小段电荷的微元)
+\begin_inset Formula $\dd q=2\pi rh\rho\dd r$
+\end_inset
+
+.
+ 然后带入Gauss公式就行了.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(8(1)-6) 不带电的导体球壳, 内有一点电荷
+\begin_inset Formula $q$
+\end_inset
+
+, 距离球心为
+\begin_inset Formula $d$
+\end_inset
+
+.
+ 用导线将球壳接地后,  再撤除地线, 求球心的电势.
+ 
+\end_layout
+
+\begin_layout Example
+答案: 
+\begin_inset Formula $V_{O}=\frac{1}{4\pi\eqs_{0}}\left(\frac{1}{d}-\frac{1}{R}\right).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+分析: 此时接地球壳
+\begin_inset Formula $V_{\text{壳}}=0.$
+\end_inset
+
+内表面带电
+\begin_inset Formula $-q$
+\end_inset
+
+, 外表面带电0, 球外电场为0.
+ 只关注球壳在中心的电势和电荷在中心处的电荷的代数和即可.
+ 
+\uwave on
+\color blue
+(接地之后, 撤掉导线为啥还是电势为0?)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(课上例题) 现在有如下所示的问题.
+ 原先, 球
+\begin_inset Formula $A$
+\end_inset
+
+带有电荷
+\begin_inset Formula $q$
+\end_inset
+
+, 球
+\begin_inset Formula $B$
+\end_inset
+
+带有电荷
+\begin_inset Formula $Q$
+\end_inset
+
+.
+ 现在将球
+\begin_inset Formula $A$
+\end_inset
+
+接地, 这时候求球各个表面的电势分布.
+ 
+\end_layout
+
+\begin_layout Example
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+incfig{probgex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+答案: 
+\begin_inset Formula $V_{A}=\frac{q'}{4\pi\eqs_{0}R_{0}}+\frac{-q'}{4\pi\eqs_{0}R_{1}}+\frac{Q+q'}{4\pi\eqs_{0}R_{2}}=0,q'=\frac{R_{0}R_{1}Q}{R_{0}R_{2}-R_{1}R_{2}-R_{0}R_{1}}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+分析: 我们发现
+\begin_inset Formula $A$
+\end_inset
+
+的电势是0.
+ 那么考虑
+\begin_inset Formula $A$
+\end_inset
+
+的电荷分布变为了
+\begin_inset Formula $q'.$
+\end_inset
+
+
+\begin_inset Formula $Q_{B\text{内表面}}=-q',Q_{B\text{外表面}}=Q+q'.$
+\end_inset
+
+ 那么列出
+\begin_inset Formula $V_{A}=0$
+\end_inset
+
+的式子:
+\begin_inset Formula $V_{A}=\frac{q'}{4\pi\eqs_{0}R_{0}}+\frac{-q'}{4\pi\eqs_{0}R_{1}}+\frac{Q+q'}{4\pi\eqs_{0}R_{2}}=0$
+\end_inset
+
+; 解之即可.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(8(1)-10) 两块大导体平板, 面积
+\begin_inset Formula $S$
+\end_inset
+
+, 带电量分别为
+\begin_inset Formula $Q_{1}$
+\end_inset
+
+、
+\begin_inset Formula $Q_{2}$
+\end_inset
+
+, 证明相对 两个面总是带等量异号电荷, 相背两个面总是带等量同号电荷,  并求各面电荷密度.
+ 
+\end_layout
+
+\begin_layout Example
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+incfig{prob810}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+答案: 
+\begin_inset Formula $\sigma_{1}=\sigma_{4}=(Q_{1}+Q_{2})/2S;Q_{2}=-Q_{3}=(Q_{1}-Q_{2})/2S.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+分析: 取贯穿两个内部的面作为Gauss面, 因为通过Gauss面的电力线条数为0.
+ 但是电荷包围的电荷是可以计算的.
+ 因此我们就可以写作
+\begin_inset Formula $\oint\vec E\cdot\dd\vec s=0=\frac{Q_{\text{内}}}{\eqs_{0}}=\frac{\sigma_{1}+\sigma_{2}}{\eqs_{0}}S_{\text{底}}$
+\end_inset
+
+, 也就是
+\begin_inset Formula $\sigma_{2}+\sigma_{3}=0.$
+\end_inset
+
+ 接着, 我们考虑场强叠加加上静电平衡条件
+\begin_inset Formula $E_{\text{内}}=0,$
+\end_inset
+
+在介质内任取一点, 得到
+\begin_inset Formula $\sigma_{1}-\sigma_{2}-\sigma_{3}-\sigma_{4}=0.$
+\end_inset
+
+ 最后, 根据电荷守恒, 就得到了
+\begin_inset Formula $\sigma_{1}+\sigma_{2}=Q_{1}/S;\sigma_{3}+\sigma_{4}=Q_{2}/S.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(8(1)-11) 三块大导体平板, 面积
+\begin_inset Formula $S$
+\end_inset
+
+, 中间一块带电
+\begin_inset Formula $Q$
+\end_inset
+
+ ,  其余条件见图.
+ (1)当
+\begin_inset Formula $ab$
+\end_inset
+
+断开的时候求各面电荷密度.
+ (2)用导线连接
+\begin_inset Formula $ab$
+\end_inset
+
+, 求各面的电荷密度.
+ 
+\end_layout
+
+\begin_layout Example
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+incfigw{prob811}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+答案: (1) 
+\begin_inset Formula $\sigma_{1,3,4,6}=Q/2S;Q_{2,5}=-Q/2S$
+\end_inset
+
+; (2) 
+\begin_inset Formula $\sigma_{1.6}=Q/2S;\sigma_{2}=-\sigma_{3}=2Q/3S;\sigma_{4}=-\sigma_{5}=Q/3S.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+分析: 对于(1)而言, 考虑选择两个类似的Gauss面, 分别贯穿
+\begin_inset Formula $A$
+\end_inset
+
+的下表面, 
+\begin_inset Formula $B$
+\end_inset
+
+的上表面; 
+\begin_inset Formula $B$
+\end_inset
+
+的下表面, 
+\begin_inset Formula $C$
+\end_inset
+
+的上表面, 这样就与上一题有类似的
+\begin_inset Formula $\sigma_{2}+\sigma_{3}=0\qquad(1);\sigma_{4}+\sigma_{5}=0\qquad(2).$
+\end_inset
+
+ 接下来运用
+\begin_inset Formula $C$
+\end_inset
+
+板的内容里面的场强之和为0的信息, 就有
+\begin_inset Formula $\sigma_{1}+\sigma_{2}+\sigma_{3}+\sigma_{4}+\sigma_{5}-\sigma_{6}=0\qquad(3)$
+\end_inset
+
+.
+ 最后用电荷守恒的式子, 就有
+\begin_inset Formula $\sigma_{3}+\sigma_{4}=0\qquad(4);\sigma_{1}+\sigma_{2}=0\qquad(5);\sigma_{5}+\sigma_{6}=0\qquad(6).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+对于(2)而言, 由于
+\begin_inset Formula $A,C$
+\end_inset
+
+之间连了线, 电荷可以自由跑动, 于是
+\begin_inset Formula $(5),(6)$
+\end_inset
+
+应当改写为
+\begin_inset Formula $\sigma_{1}+\sigma_{2}+\sigma_{5}+\sigma_{6}=0\qquad(7).$
+\end_inset
+
+ 
+\begin_inset Formula $A,C$
+\end_inset
+
+两板因为相连而等势, 选取
+\begin_inset Formula $\frac{\sigma_{3}}{\eqs_{0}}d=\frac{\sigma_{4}}{\eqs_{0}}2d\qquad(8)$
+\end_inset
+
+.
+ 联立求解即可.
+ 
+\end_layout
+
+\begin_layout Example
+对于
+\begin_inset Formula $(3),$
+\end_inset
+
+如果改写成在
+\begin_inset Formula $A$
+\end_inset
+
+板子, 
+\begin_inset Formula $B$
+\end_inset
+
+板子里面列方程, 是等效的, 这样是重复的条件(也就是线性相关的), 对我们的方程组解答没有大影响.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(8(2)-6) 平行板电容器中一半空间充满介质, 极板带电
+\begin_inset Formula $Q$
+\end_inset
+
+时, 求极板 间电场和电势差.
+\end_layout
+
+\begin_layout Example
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+incfig{prob86}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+答案: 
+\begin_inset Formula $U=E_{2}d=\frac{2Qd}{\eqs_{0}S(\eqs_{r}+1)}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+分析: 考虑因为两板之间的电势差是恒定的, 因此在介质的分界面上电荷会重新分布.
+ 考虑左侧的面密度为
+\begin_inset Formula $\sigma_{1},$
+\end_inset
+
+右侧的为
+\begin_inset Formula $\sigma_{2}.$
+\end_inset
+
+ 下面选取合适的Gauss面求场强.
+ 
+\begin_inset Formula $D_{1}=\sigma_{1},D_{2}=\sigma_{2};E_{1}=\frac{\sigma_{1}}{\eqs_{0}\eqs_{r}},E_{2}=\frac{\sigma_{2}}{\eqs_{0}}.$
+\end_inset
+
+ 电势差相等, 
+\begin_inset Formula $E_{1}d=E_{2}d$
+\end_inset
+
+, 并且
+\begin_inset Formula $\sigma_{1}+\sigma_{2}=2Q/S.$
+\end_inset
+
+ 由此可以得到
+\begin_inset Formula $E_{2}=\frac{2Q}{\eqs_{0}S(\eqs_{r}+1)}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsection*
+电容器
+\end_layout
+
+\begin_layout Description
+1.
+ 电容
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+定义: 
+\begin_inset Formula $C\equiv Q/U.$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+通常求法: 假设带电
+\begin_inset Formula $Q$
+\end_inset
+
+, 求电场, 积分求电势
+\begin_inset Formula $U$
+\end_inset
+
+, 使用定义求之.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Description
+击穿电压: 最大是沿最大场强的积分.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Description
+2.
+ 若干个特殊物体的电容: 
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+孤立导体球的电容: 
+\begin_inset Formula $C=4\pi\eqs_{0}R$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+平行板电容器的电容: 
+\begin_inset Formula $C=\frac{\eqs_{0}\eqs_{r}S}{d}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+柱形电容器的电容: 
+\begin_inset Formula $C=2\pi\eqs_{0}\eqs_{r}L\left(\ln\frac{R_{2}}{R_{1}}\right)^{-1}.$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+3.
+ 电容器的串并联
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+并联: 
+\begin_inset Formula $U$
+\end_inset
+
+相等, 
+\begin_inset Formula $C=\frac{Q_{1}+Q_{2}+\cdots+Q_{n}}{U}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+串联: 
+\begin_inset Formula $Q$
+\end_inset
+
+相等, 
+\begin_inset Formula $C=\frac{1}{C_{1}}+\frac{1}{C_{2}}+\frac{1}{C_{3}}+\cdots+\frac{1}{C_{n}}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+判别方法: 同一根导线连接, 
+\begin_inset Formula $U$
+\end_inset
+
+相等, 若干个极板连着极板, 
+\begin_inset Formula $Q$
+\end_inset
+
+相等.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Description
+4.
+ 电容器的储能: 
+\begin_inset Formula $W=\int\dd W=\int_{0}^{Q}U\dd q=\int_{0}^{Q}\frac{q}{C}\dd q=\frac{Q^{2}}{2C}.$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+另外的公式: 带入
+\begin_inset Formula $Q=CU$
+\end_inset
+
+做恒等变换, 得
+\begin_inset Formula $W=\frac{CU^{2}}{2}=\frac{QU}{2}.$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Example
+(8(2)-5) 平行板电容器中插入一介质板, 求电容.
+ 
+\end_layout
+
+\begin_layout Example
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+incfig{prob85}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+答案: 
+\begin_inset Formula $C=\frac{3\eqs_{0}\eqs_{r}S}{(2\eqs_{r}+1)d}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+分析: 假设带电, 并且面密度
+\begin_inset Formula $D=\frac{Q}{S}=\sigma,E_{0}=\frac{\sigma}{\eqs_{0}},E_{1}=\frac{\sigma}{\eqs_{0}\eqs_{r}}.$
+\end_inset
+
+
+\begin_inset Formula $U=E_{0}\frac{2d}{3}+E_{1}\frac{d}{3}.$
+\end_inset
+
+于是就可以根据
+\begin_inset Formula $C=\frac{Q}{U}$
+\end_inset
+
+得到答案.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(8(2)-9) 这里有一个液位计, 内部导体圆柱半径为
+\begin_inset Formula $r$
+\end_inset
+
+, 外面导体圆筒的半径为
+\begin_inset Formula $R$
+\end_inset
+
+, 高 为
+\begin_inset Formula $H$
+\end_inset
+
+.
+ 液体的相对介电常数为
+\begin_inset Formula $\eqs_{r}$
+\end_inset
+
+,  求电容与液位高度
+\begin_inset Formula $x$
+\end_inset
+
+的关系.
+ 
+\end_layout
+
+\begin_layout Example
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+incfig{ex829}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+答案: 
+\begin_inset Formula 
+\[
+C=\frac{\lambda_{2}(H+(\eqs_{r}-1)x)}{\frac{\lambda}{2\pi\eqs_{0}}\ln\frac{R}{r}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+分析: 设电荷线密度介质部分,真空部分分别为
+\begin_inset Formula $\lambda_{1},\ensuremath{\lambda_{2}.}$
+\end_inset
+
+ 
+\begin_inset Formula $D_{1}=\frac{\lambda_{1}}{2\pi r},D_{2}=\frac{\lambda_{2}}{2\pi r}$
+\end_inset
+
+.
+ 求出
+\begin_inset Formula $E,$
+\end_inset
+
+然后因为电势差相等, 就有
+\begin_inset Formula $\int_{r}^{R}E_{1}\dd r=\int_{r}^{R}E_{2}\dd r$
+\end_inset
+
+, 并且电荷守恒有
+\begin_inset Formula $\lambda_{1}+\lambda_{2}(H-x)=Q$
+\end_inset
+
+, 就可以解答.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(8(2)-12)平行板电容器面积为
+\begin_inset Formula $S$
+\end_inset
+
+, 间距为
+\begin_inset Formula $d$
+\end_inset
+
+, 放在方形金属盒内, 两 板距盒壁距离为
+\begin_inset Formula $a$
+\end_inset
+
+, 从两板接出的两极之间的电容是多少? 
+\end_layout
+
+\begin_layout Example
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+incfigw{ex812}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+答案: 
+\begin_inset Formula $\eqs_{0}S\left(\frac{1}{2a}+\frac{1}{d}\right).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+分析: 考虑把相等电势的电容放在一起.
+ 然后对右侧的图示做串并联分析(就像中学做电路分析一样), 就有
+\begin_inset Formula $(\text{下}+\text{上})//\text{中}.$
+\end_inset
+
+于是就可求得.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(8(2)-10) 两个电容器的电容之比
+\begin_inset Formula $C_{1}:C_{2}=1:3$
+\end_inset
+
+．把它们串联起来 接电源充电, 它们的电场能量之比 
+\begin_inset Formula $W_{1}:W_{2}=\qst$
+\end_inset
+
+；如果是并联起 来接电源充电, 则它们的电场能量之比 
+\begin_inset Formula $W_{1}:W_{2}=\qst$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Example
+答案: 3:1; 1:3.
+\end_layout
+
+\begin_layout Example
+分析: 串联, 
+\begin_inset Formula $Q$
+\end_inset
+
+相同, 因此可以用
+\begin_inset Formula $Q^{2}/2C;$
+\end_inset
+
+并联
+\begin_inset Formula $U$
+\end_inset
+
+相同, 因此可以用
+\begin_inset Formula $CU^{2}/2.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(8(2)-11) 两个电容均为C的电容器带电量分别为
+\begin_inset Formula $Q$
+\end_inset
+
+和
+\begin_inset Formula $2Q$
+\end_inset
+
+, 求并联后 极板电量和能量增量.
+ 
+\end_layout
+
+\begin_layout Example
+答案: 电量增量: 都为
+\begin_inset Formula $\left(3/2\right)Q;$
+\end_inset
+
+能量增量为
+\begin_inset Formula $-Q^{2}/4C$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Example
+分析: 先求总电量
+\begin_inset Formula $q_{1}+q_{2}=3Q.$
+\end_inset
+
+由于电压相同进行重新分配, 也就是
+\begin_inset Formula $\frac{q_{1}'}{C_{1}}=\frac{q_{2}'}{C_{2}}\implies q_{1}'=q_{2}'.$
+\end_inset
+
+根据
+\begin_inset Formula $W=\frac{Q^{2}}{2U}$
+\end_inset
+
+就可以得到值.
+ 
+\end_layout
+
+\begin_layout Subsection*
+电场的能量
+\end_layout
+
+\begin_layout Description
+1.
+ 电场的能量公式: 
+\begin_inset Formula $W=\int_{(a)}^{(b)}DE\dd V.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(综合复习题) 半径为
+\begin_inset Formula $R$
+\end_inset
+
+的导体球和内、外分别为
+\begin_inset Formula $2R$
+\end_inset
+
+、
+\begin_inset Formula $3R$
+\end_inset
+
+的导体球壳同心放 置, 其间有均匀电介质, 相对介电常数为
+\begin_inset Formula $\eqs_{r}$
+\end_inset
+
+.
+ 若给外导体球壳带电 
+\begin_inset Formula $Q$
+\end_inset
+
+, 并将内球接地, 求：(1)各表面的带电量；(2)电场分布；(3)导体 球和球壳的电势差；(4)电场的总能量
+\end_layout
+
+\begin_layout Example
+答案: 这个答案太复杂了, 问问老师到时候算出答案能不能不带入.
+ 
+\end_layout
+
+\begin_layout Example
+分析: (1) 设内球带电量为
+\begin_inset Formula $q,$
+\end_inset
+
+那么从内到外的各个电荷量为
+\begin_inset Formula $q,-q,Q+q.$
+\end_inset
+
+ (2) 先求
+\begin_inset Formula $D$
+\end_inset
+
+的大小, 再求
+\begin_inset Formula $E$
+\end_inset
+
+的大小.
+ 从内到外的各个
+\begin_inset Formula $D$
+\end_inset
+
+分别是
+\begin_inset Formula $E_{1}=0,E_{2}=\frac{q}{4\pi r^{2}},E_{3}=0,E_{4}=\frac{Q+q}{4\pi r^{2}};$
+\end_inset
+
+各个电场分别是
+\begin_inset Formula $E_{1}=0,E_{2}=\frac{q}{4\pi\eqs_{0}\eqs_{r}r^{2}},E_{3}=0,E_{4}=\frac{Q+q}{4\pi\eqs_{0}r^{2}}.$
+\end_inset
+
+(3)电势差积分即可.
+ (4) 表达式为
+\begin_inset Formula $W=\int_{0}^{\infty}\frac{1}{2}DE\green{\dd V}=\int_{R}^{2R}\frac{1}{2}D_{2}E_{2}\green{4\pi r^{2}\dd r}+\int_{3R}^{\infty}\frac{1}{2}D_{4}E_{4}\green{4\pi r^{2}\dd r}=\frac{4\pi q^{2}}{16\pi^{2}r^{4}\eqs_{0}\eqs_{r}}\cdot\frac{7R}{3}-\frac{4\pi(Q+q)^{2}}{16\pi^{2}r^{4}\eqs_{0}}\cdot\frac{27R}{3}.$
+\end_inset
+
+但是我们现在还不知道
+\begin_inset Formula $q$
+\end_inset
+
+, 根据
+\begin_inset Formula $U$
+\end_inset
+
+导体球电势为0, 可以得到方程式
+\begin_inset Formula $U=\frac{q}{4\pi\eqs_{0}\eqs_{r}}\left(\frac{1}{R}-\frac{1}{2R}\right)+\frac{Q+q}{4\pi\eqs_{0}}\frac{1}{3R}=0.$
+\end_inset
+
+于是知道
+\begin_inset Formula $q=\frac{-Q\eqs_{r}}{\eqs_{r}-3}.$
+\end_inset
+
+ 带入原方程就行了.
+ 
+\end_layout
+
+\begin_layout Section
+磁场中的常见问题
+\end_layout
+
+\begin_layout Subsection*
+恒定电流与其激发的磁场
+\end_layout
+
+\begin_layout Description
+1.
+ 电流
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+形成: 载流子的定向移动形成电流
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+传导电流.
+ 载流子在电场作用下的定向移动
+\end_layout
+
+\begin_layout Description
+运流电流.
+ 带电体的机械运动
+\end_layout
+
+\begin_layout Description
+位移电流.
+ 与电场的变化有关
+\end_layout
+
+\end_deeper
+\begin_layout Description
+强度.
+ 单位时间内通过任一截面的电量.
+ 
+\begin_inset Formula $I=\lim_{\Delta t\to0}\frac{\Delta q}{\Delta t}=\frac{\dd q}{\dd t}=neSu$
+\end_inset
+
+, 
+\begin_inset Formula $n$
+\end_inset
+
+是数密度; 
+\begin_inset Formula $S$
+\end_inset
+
+是横截面面积; 
+\begin_inset Formula $u$
+\end_inset
+
+是电子的漂移速率.
+ 
+\end_layout
+
+\begin_layout Description
+线,面上的电流状况
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+体电流的面密度.
+ 
+\begin_inset Formula $\sigma=\frac{\dd I}{\dd S_{\perp}}$
+\end_inset
+
+(A/m
+\begin_inset Formula $^{2}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Description
+面电流的线密度.
+ 
+\begin_inset Formula $j=\frac{\dd I}{dl_{\perp}}$
+\end_inset
+
+(A/m)
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Description
+2.
+ 电源和电动势
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+a.
+ 电路 
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+内电路: 外力克服静电场力做功, 将电荷从低电位转移到高电位
+\end_layout
+
+\begin_layout Description
+外电路: 电荷在电场的作用下由高电位到低电位形成电流.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Description
+b.
+ 电动势: 把单位正电荷从电源负极移动到正极, 非静电力做的功.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+方向: 外电路从高到低, 内电路从低到高.
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Description
+3.
+ 特殊运动情形下的电流
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+a.
+ 圆电流: 带电体绕定点的旋转
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+均匀带电杆子.
+ 圆面电流
+\begin_inset Formula $\dd I=\frac{\lambda\dd r}{\frac{2\pi}{\omega}}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+均匀带电圆盘.
+ 圆面电流
+\begin_inset Formula $\dd I=\frac{\sigma2\pi r\dd r}{\frac{2r}{\omega}}.$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Description
+4.
+ 磁场
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+a.
+ 特性: 运动电荷周围存在磁场, 
+\series bold
+磁场对周围运动电荷有力的作用
+\series default
+; 是物质, 客观存在;
+\series bold
+服从叠加原理
+\end_layout
+
+\begin_layout Description
+b.
+ 磁感应强度
+\begin_inset Formula $\vec B$
+\end_inset
+
+.
+ 速度为
+\begin_inset Formula $v$
+\end_inset
+
+的运动电荷
+\begin_inset Formula $q_{0}$
+\end_inset
+
+受Lorentz力
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+大小: 
+\begin_inset Formula $f_{m}=q_{0}vB\sin\theta$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+方向: 
+\begin_inset Formula $\vec{f_{m_{\text{max}}}}\times\vec v.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+单位: T
+\end_layout
+
+\end_deeper
+\begin_layout Description
+c.
+ 磁感应线.
+ 描述磁场空间分布的假想的曲线
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+关系.
+ 切线方向为
+\begin_inset Formula $\vec B$
+\end_inset
+
+的方向, 数密度为
+\begin_inset Formula $\vec B$
+\end_inset
+
+的大小: 
+\begin_inset Formula $B=\frac{\dd\varphi_{m}}{dS_{\perp}}$
+\end_inset
+
+, 又称为磁通密度.
+ 
+\end_layout
+
+\begin_layout Description
+性质.
+ (1) 无头无尾的闭合曲线; (2) 曲线方向与电流成右手螺旋; (3) 曲线与电流相互铰链.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Description
+d.
+ 曲面
+\begin_inset Formula $S$
+\end_inset
+
+的磁通量.
+ 
+\begin_inset Formula $\varphi_{m}=\int_{S}\vec B\cdot\dd\vec S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+e.
+ 磁场的Gauss定理: 
+\begin_inset Formula $\oint_{S}\vec B\cdot\dd\vec S=0.$
+\end_inset
+
+ 这表明了磁场没有原, 但是有旋.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Description
+5.
+ 常见内容的磁场极其叠加
+\begin_inset FormulaMacro
+\newcommand{\dl}{I\dd\vec l}
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+a.
+ 电流元
+\begin_inset Formula $I\dd\vec l$
+\end_inset
+
+的磁场.
+ 
+\begin_inset Formula $\dd\vec B=\frac{\mu}{4\pi}\frac{\dl\times\vec{e_{r}}}{\green{r^{2}}},$
+\end_inset
+
+其中, 
+\begin_inset Formula $\vec{e_{r}}$
+\end_inset
+
+的方向是当前的微元指向要判定的点的矢量.
+ 
+\end_layout
+
+\begin_layout Description
+b.
+ 载流直导线的磁场.
+ 
+\begin_inset Formula $\vec B=\frac{\mu_{0}I}{4\pi a}\left(\cos\theta_{1}-\cos\theta_{2}\right)\vec e$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Description
+c.
+ 圆环中心轴线距离
+\begin_inset Formula $x$
+\end_inset
+
+处上的磁场: 
+\begin_inset Formula $\frac{\mu_{0}I}{2}\frac{R}{x^{2}+R^{2}}\frac{R}{\sqrt{x^{2}+R^{2}}}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Example
+(9(1)-6) 有一闭合回路由半径为 
+\begin_inset Formula $a$
+\end_inset
+
+ 和 
+\begin_inset Formula $b$
+\end_inset
+
+ 的两个同心共面半圆连接而成,  如图其上均匀分布线密度为 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ 的电荷, 当回路以匀角速度 
+\begin_inset Formula $\omega$
+\end_inset
+
+ 绕 过 
+\begin_inset Formula $O$
+\end_inset
+
+ 点垂直于回路的轴转动时, 求圆心 
+\begin_inset Formula $O$
+\end_inset
+
+ 点处的磁感应强度.
+ 
+\end_layout
+
+\begin_layout Example
+答案: 
+\begin_inset Formula $\frac{\mu_{0}\lambda\omega}{2\pi}\left(\pi+\ln\frac{b}{a}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+分析: 分为两个部分: 圆面电流和直线电流.
+ 首先来看圆面电流: 
+\begin_inset Formula $I_{a}=\frac{q}{T}=\frac{\lambda\pi a}{2\pi/\omega}=\frac{1}{2}\lambda a\omega.$
+\end_inset
+
+ 
+\begin_inset Formula $B_{0}=\frac{\mu_{0}I_{a}}{2a}.$
+\end_inset
+
+同理可以看到另一个小圆环的情形.
+ 他们的方向竖直向外.
+ 
+\end_layout
+
+\begin_layout Example
+接下来看直线段的电流: 其上电荷元
+\begin_inset Formula $\dd q$
+\end_inset
+
+旋转形成等效的圆电流.
+ 也就是
+\begin_inset Formula $\dd I_{r}=2\frac{\dd q}{T}=2\frac{\lambda\dd r}{2\pi/\omega}=\frac{\omega}{\pi}\lambda\dd r.$
+\end_inset
+
+这个方向向外.
+ 然后我们求这一小段的
+\begin_inset Formula $\dd\vec B$
+\end_inset
+
+的大小.
+ 
+\begin_inset Formula $\dd B_{r}=\frac{\mu_{0}\dd I}{2\pi r}$
+\end_inset
+
+.
+ 积分之后就可以得到.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(课堂练习17-2) 在一半径为
+\begin_inset Formula $R$
+\end_inset
+
+的无限长半圆柱形 金属薄片中, 自上而下地有电流强度
+\begin_inset Formula $I$
+\end_inset
+
+ 通过, 如图示, 试求圆柱轴线任一点
+\begin_inset Formula $P$
+\end_inset
+
+ 处的磁感应强度.
+ 
+\end_layout
+
+\begin_layout Example
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+incfig{ring}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+答案: 沿
+\begin_inset Formula $y$
+\end_inset
+
+轴负向, 大小为
+\begin_inset Formula $-\frac{\mu_{0}I}{\pi^{2}R}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+分析: 由于这是和圆面有关的, 于是使用极(柱)坐标系考虑.
+ 于是
+\begin_inset Formula $\dd I=\frac{I\dd r}{\pi R}=\frac{IR\dd\theta}{\pi R}.$
+\end_inset
+
+ 那么电流元的磁感应强度大小为
+\begin_inset Formula $\dd B=\frac{\mu_{0}\dd I}{2\pi r}.$
+\end_inset
+
+ 从
+\begin_inset Formula $0\to2\pi$
+\end_inset
+
+积分即可.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(课堂练习17-4) 在半径为
+\begin_inset Formula $R$
+\end_inset
+
+及
+\begin_inset Formula $r$
+\end_inset
+
+ 的两圆周之间, 有总匝数为
+\begin_inset Formula $N$
+\end_inset
+
+的均匀密绕 平面螺线圈如图示, 当导线中通有电流I时,求螺线圈中心点（即两圆圆心）处的磁感应强度 .
+ 
+\end_layout
+
+\begin_layout Example
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+incfig{ex174}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+答案: 
+\begin_inset Formula $\frac{\mu_{0}NI}{2(R-r)}\ln\frac{R}{r}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+分析: 取半径为
+\begin_inset Formula $a$
+\end_inset
+
+, 宽度为
+\begin_inset Formula $\dd a$
+\end_inset
+
+的窄环, 则电流为
+\begin_inset Formula $\dd I=\frac{N}{R-r}I\dd a.$
+\end_inset
+
+那么
+\begin_inset Formula $\dd B_{\text{圆心}}=\frac{\mu_{0}\dd I}{2\pi a}.$
+\end_inset
+
+积分即可.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(9(1)-2) 电流由长直导线 1 沿半径方向经 
+\begin_inset Formula $a$
+\end_inset
+
+ 点流入 一电阻均匀分布的圆环, 再由 
+\begin_inset Formula $b$
+\end_inset
+
+ 点沿半径方 向从圆环流出, 经长直导线 2 返回电源（如 图）.
+ 已知直导线上电流强度为 
+\begin_inset Formula $I$
+\end_inset
+
+, 求圆心 
+\begin_inset Formula $O$
+\end_inset
+
+ 点的磁感应强度.
+ 
+\end_layout
+
+\begin_layout Example
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+incfig{eleprob}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+答案: 0.
+\end_layout
+
+\begin_layout Example
+分析: 首先根据结论, 在延长线上的线,在中心的磁感应强度为0.
+ 其次, 考虑圆周上的点, 我们知道结论
+\begin_inset Formula $B=\varphi\frac{\mu_{0}I}{2\pi r}.$
+\end_inset
+
+ 于是有
+\begin_inset Formula $I_{1}=\frac{I}{2\pi}(2\pi-\varphi).$
+\end_inset
+
+一个方向向里, 另一个方向向外.
+ 因此可以抵消.
+ 
+\end_layout
+
+\begin_layout Subsection*
+环路定理
+\end_layout
+
+\begin_layout Description
+1.
+ 环路定理: 
+\begin_inset Formula $\oint_{L}\vec B\cdot\dd\vec l=\mu_{0}I_{\text{内}}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+2.
+ 对环路定理的正确理解: 
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+\begin_inset Formula $L$
+\end_inset
+
+.
+ 在场中任取的一闭合路径, 任意一个绕行方向
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\dd L$
+\end_inset
+
+.
+ 
+\begin_inset Formula $L$
+\end_inset
+
+上的任意一个线元
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\vec B$
+\end_inset
+
+.
+ 线元处的磁场, 由空间所有电流共同产生
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $I_{in}$
+\end_inset
+
+.
+ 与
+\begin_inset Formula $I$
+\end_inset
+
+铰链的电流
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\sum I_{in}$
+\end_inset
+
+.
+ 代数和, 取与
+\begin_inset Formula $L$
+\end_inset
+
+方向右手螺旋的电流取证
+\end_layout
+
+\end_deeper
+\begin_layout Example
+(课上展示20-14) 求下列轴对称电流分布周围激发的磁场.
+ (1) 无限长直电流; (2) 无限长圆柱面电流; (3) 无限长圆柱体电流.
+ 
+\end_layout
+
+\begin_layout Example
+答案: (1)
+\begin_inset Formula $B=\frac{\mu_{0}I}{2\pi r};$
+\end_inset
+
+(2) 
+\begin_inset Formula $B=\begin{cases}
+0 & r<R\\
+\frac{\mu_{0}I}{2\pi r} & r>R
+\end{cases};$
+\end_inset
+
+(3)
+\begin_inset Formula $B=\begin{cases}
+\frac{\mu_{0}rI}{2\pi R^{2}} & r<R\\
+\frac{\mu_{0}I}{2\pi r} & r>R
+\end{cases}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+分析: (1) 考虑半径为
+\begin_inset Formula $r$
+\end_inset
+
+的与电流垂直的圆环路, 如图所示.
+ 那么有
+\begin_inset Formula $\mu_{0}I=B2\pi r.$
+\end_inset
+
+ (2) 考虑和上面一样的环路, 就有
+\begin_inset Formula $\mu_{0}I_{\text{内}}=B2\pi r.$
+\end_inset
+
+ (3) 考虑
+\begin_inset Formula $\mu_{0}I_{\text{内}}=B2\pi r.$
+\end_inset
+
+其中
+\begin_inset Formula $I_{\text{内}}=\frac{r^{2}I}{R^{2}}(r<R).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(课上展示20-15) 求下列面对称电流的分布.
+ (1) 无限大均匀载流平面, 电流线密度为
+\begin_inset Formula $j;$
+\end_inset
+
+(2)无限大平面层体电流(电流的线密度为
+\begin_inset Formula $\sigma$
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Example
+答案: 
+\begin_inset Formula $B=\frac{\mu_{0}j}{2},B=\frac{\mu_{0}\sigma h}{2}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+分析: 对于(1), 选取与电流方向垂直的部分, 居中放置矩形线框(如长度为
+\begin_inset Formula $l$
+\end_inset
+
+).
+ 矩形线框的两个贯穿次场面的两条线相互抵消, 剩下上下两个部分.
+ 因此, 就有
+\begin_inset Formula $B2l=\mu_{0}jl\to B=\frac{\mu_{0}j}{2}.$
+\end_inset
+
+ (2) 同样选取类似的内容, 就有
+\begin_inset Formula $B2l=\mu_{0}\sigma hl.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(课上展示20-15) 密绕螺线环如下所示, 求内部的磁场.
+ 
+\end_layout
+
+\begin_layout Example
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+incfig{ring}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+答案: 
+\begin_inset Formula $B=0,R<R_{1},R>R_{2};B=\frac{\mu_{0}NI}{2\pi r},R_{1}<R<R_{2}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+分析: 对于小于
+\begin_inset Formula $R_{1}$
+\end_inset
+
+和大于
+\begin_inset Formula $R_{2}$
+\end_inset
+
+的情形, 会发现净电流总和为0.
+ 否则, 使用圆形的线框作用, 就有
+\begin_inset Formula $B2\pi r=\mu_{0}NI.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(9(1)-7) 长载流导体直圆管, 内半径为 
+\begin_inset Formula $a$
+\end_inset
+
+, 外半径为
+\begin_inset Formula $b$
+\end_inset
+
+, 电流强度为 
+\begin_inset Formula $I$
+\end_inset
+
+,  电流沿轴线方向流动, 并且均匀分布在管壁的横截面上.
+ 空间 某点到管轴的垂直距离为
+\begin_inset Formula $r$
+\end_inset
+
+.
+ 求
+\begin_inset Formula $r<a,a<r<b,r>b$
+\end_inset
+
+等各区 间的磁感应强度.
+ 导体内部
+\begin_inset Formula $\mu\approx\mu_{0}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+答案: 分别为
+\begin_inset Formula $B_{0}=0,B_{1}=\frac{\mu_{0}I(r^{2}-a^{2})}{2\pi r(b^{2}-a^{2})},B_{2}=\frac{\mu_{0}}{2\pi r}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+磁通量的计算
+\end_layout
+
+\begin_layout Description
+1.
+ 计算方法: 一般采用微元累计的方法.
+ 
+\end_layout
+
+\begin_layout Example
+(课上演示20-16) 求(1) 密绕长直螺线管(内部为均匀磁场)的垂直于竖直截面的磁通量; (2) 无限大均匀载流平面, 电流线密度为
+\begin_inset Formula $j$
+\end_inset
+
+(均匀磁场).
+ 
+\end_layout
+
+\begin_layout Example
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+incfigw{magf1}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+答案: 
+\begin_inset Formula $\mu_{0}nIS,BS\cos\theta.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+分析: (1) 选取和上述一样的一段矩形线框, 根据Ampere环路定理得到
+\begin_inset Formula $B_{0}=\mu_{0}NI.$
+\end_inset
+
+ 由于是均匀的, 
+\begin_inset Formula $\phi_{m}=\int_{S}\vec B\cdot\dd\vec S=BS=\mu_{0}nIS.$
+\end_inset
+
+ (2) 无限大均匀载流平面选取对应的载流平面, 
+\begin_inset Formula $B=\frac{\mu_{0}j}{2},\phi_{m}=BS\cos\theta.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(课上演示20-17) 求(1) 无限长直电流外侧如图所示的区域磁通量的计算; (2) 密绕螺绕环单侧截面的磁通量的计算.
+ 
+\end_layout
+
+\begin_layout Example
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+incfigw{ms2}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+答案: 
+\begin_inset Formula $\frac{\mu_{o}Ib}{2\pi}\ln\frac{r_{0}+a}{r_{0}};\frac{N^{2}\mu_{0}Ih}{2\pi}\ln\frac{R_{2}}{R_{1}}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+分析: (1) 无限长直导线周围的磁场为
+\begin_inset Formula $B=\frac{\mu_{0}I}{2\pi r}.$
+\end_inset
+
+选取一位置为
+\begin_inset Formula $a$
+\end_inset
+
+, 宽度为
+\begin_inset Formula $\dd a$
+\end_inset
+
+的窄竖条, 就有
+\begin_inset Formula $\dd\vec S=b\dd r\vec{e_{n}}.$
+\end_inset
+
+ 
+\begin_inset Formula $\phi_{m}=\int_{S}B\dd S=\int_{r_{0}}^{r_{0}+a}\frac{\mu_{0}I}{2\pi r}.$
+\end_inset
+
+(2) 同样可以知道
+\begin_inset Formula $B2\pi r=\mu_{0}NI.$
+\end_inset
+
+同样根据定义
+\begin_inset Formula $\phi_{m}=N\varphi_{m}=N\int_{S}B\dd S=N\int_{R_{1}}^{R_{2}}\frac{N\mu_{0}I}{2\pi r}h\dd r$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(9(1)-8) 一根很长的铜导线均匀载有电流
+\begin_inset Formula $I$
+\end_inset
+
+,  在导线内部作一平面 
+\begin_inset Formula $S$
+\end_inset
+
+ , 如图示, 试计算通过 
+\begin_inset Formula $S$
+\end_inset
+
+ 平面的磁通量 (沿导线长度方向 取长为1米的一段作计算).
+ 铜的磁导率
+\begin_inset Formula $\mu\approx\mu_{0}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+incfig{ex917}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+答案: 
+\begin_inset Formula $B=\frac{\mu_{0}Ir}{2\pi R^{2}}(0<r<R);\phi_{m}=\frac{\mu_{0}}{4\pi}I.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Example
+分析: 首先求出
+\begin_inset Formula $B$
+\end_inset
+
+的大小, 方向沿环的切向, 
+\begin_inset Formula $r$
+\end_inset
+
+相同的地方
+\begin_inset Formula $B$
+\end_inset
+
+相同.
+ 取距轴
+\begin_inset Formula $r$
+\end_inset
+
+处,宽
+\begin_inset Formula $\dd r$
+\end_inset
+
+的窄条, 其上
+\begin_inset Formula $B$
+\end_inset
+
+相同, 
+\begin_inset Formula $\dd\phi_{m}=\vec B\cdot\dd\vec S=B\dd S=Bl\dd r.$
+\end_inset
+
+积分即可得到
+\begin_inset Formula $\phi_{m}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+注意: 一般问磁通量是问磁通最大的地方.
+ 
+\end_layout
+
+\begin_layout Subsection*
+磁力与磁力矩
+\end_layout
+
+\begin_layout Description
+1.
+ 带电粒子在磁场的运动
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+a.
+ Lorentz力.
+ 
+\begin_inset Formula $\vec f=q\vec v\times\vec B$
+\end_inset
+
+.
+ 大小
+\begin_inset Formula $f=qvB\sin\theta.$
+\end_inset
+
+ 方向: Lorentz力只改变速度的方向, 不改变速度的大小, Lorentz力不做功.
+ 
+\end_layout
+
+\begin_layout Description
+b.
+ 带电粒子在磁场中的运动.
+ 
+\begin_inset Formula $R=\frac{mv_{\perp}}{Bq},h=v_{//}T=\frac{2\pi mv_{//}}{Bq}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+c.
+ Hall效应: 
+\begin_inset Formula $q\frac{\Delta U_{H}}{h}=qvB\to\text{\ensuremath{\Delta H=\frac{1}{nq}\frac{IB}{b}.} }$
+\end_inset
+
+判定电势高低的时候注意是在电源的内部.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Description
+2.
+ 载流导线在磁场中的受力
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+a.
+ Ampere力: 
+\begin_inset Formula $\vec F=\dl\times\vec B.$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+3.
+ 磁力矩
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+矩形载流线圈: 载流线圈在磁场中的情形
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+插图P15
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+合力与合力矩: 合力为0, 合力矩不为0.
+ 而是
+\begin_inset Formula 
+\begin{align*}
+M & =\frac{1}{2}l_{1}F_{1}\sin\theta+\frac{1}{2}l_{1}F_{2}\sin\theta\\
+ & =Il_{1}l_{2}B\sin\theta\\
+ & =ISB\sin\theta\\
+\red{\vec M} & =\green{IS\vec{e_{n}}\times\vec B}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+磁矩.
+ 
+\begin_inset Formula $\vec{p_{m}}=IS\vec{e_{n}}$
+\end_inset
+
+, 其中
+\begin_inset Formula $e_{n}$
+\end_inset
+
+与线圈电流方向满足右手螺旋.
+ 
+\end_layout
+
+\begin_layout Description
+磁力矩.
+ 
+\begin_inset Formula $\red{\vec M}=\green{IS\vec{e_{n}}\times\vec B}=\red{\vec{p_{m}}\times\vec B}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+结果.
+ 在磁力矩的作用下, 线圈转向与磁场方向正平行.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Example
+(9(2)-6) 如图示, 一条任意形状的载流导线位于均 匀磁场中, 试证明它所受到的Ampere力等于载流 直导线
+\begin_inset Formula $ab$
+\end_inset
+
+所受到的Ampere力.
+ 
+\end_layout
+
+\begin_layout Example
+分析: 电流元的受力为
+\begin_inset Formula $\dd\vec F=\dl\times\vec B.$
+\end_inset
+
+对路径积分即可得到
+\begin_inset Formula $\vec F=I\left(\int_{a}^{b}\dd l\right)\times\vec B=I\vec{ab}\times\vec B.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(课堂例子20-2) 一圆柱形磁铁
+\begin_inset Formula $N$
+\end_inset
+
+ 极上方水平放置一半径为
+\begin_inset Formula $R$
+\end_inset
+
+ 的圆 电流
+\begin_inset Formula $I$
+\end_inset
+
+, 圆电流所在处磁场的方向处处均与竖直方向成
+\begin_inset Formula $\alpha$
+\end_inset
+
+角, 求圆 电流所受磁力.
+ 
+\end_layout
+
+\begin_layout Example
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+incfig{Bexa}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+答案: 
+\begin_inset Formula $2\pi RIB\sin\alpha$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Example
+分析: 在圆电流上去一小电流元, 在对称的时候
+\begin_inset Formula $\dd\vec F=\dl\times\dd\vec B$
+\end_inset
+
+.
+ 根据对称性分析可以知道, 
+\begin_inset Formula $\oint_{2\pi R}\dd F_{x}=0,$
+\end_inset
+
+那么
+\begin_inset Formula $F=\oint_{2\pi R}\dd F_{y}=2\pi RIB\sin\alpha.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(课堂例子20-3) 这里有一个电磁轨道炮.
+ 其形成机制是有两个相距为
+\begin_inset Formula $d$
+\end_inset
+
+的长直的导线, 导线截面半径为
+\begin_inset Formula $r_{0}.$
+\end_inset
+
+在这中间有导体棒
+\begin_inset Formula $ab$
+\end_inset
+
+可以在上面滚动.
+ 现在, 这两个长直导体棒被通入了大小为
+\begin_inset Formula $I$
+\end_inset
+
+的电流.
+ 现在问这个导体棒的受力是多少.
+ 
+\end_layout
+
+\begin_layout Example
+答案: 
+\begin_inset Formula $\frac{\mu_{0}I^{2}}{2\pi}\ln\frac{d-r_{0}}{r_{0}}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+分析: 我们知道一个半无限长的导体棒在距离
+\begin_inset Formula $r$
+\end_inset
+
+处形成的磁场大小为
+\begin_inset Formula $\frac{\mu_{0}I}{4\pi r}.$
+\end_inset
+
+考虑一小段
+\begin_inset Formula $\dd I,$
+\end_inset
+
+其中它的长度是相同的, 这样子就得到了
+\begin_inset Formula $2\int_{ab}I\dd rB=2\int_{r_{0}}^{d-r_{0}}\frac{\mu_{0}I^{2}}{4\pi r}\dd r.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(9(2)-11) 有一片半径为
+\begin_inset Formula $R$
+\end_inset
+
+, 圆心角为
+\begin_inset Formula $\theta$
+\end_inset
+
+的扇形薄板, 均匀带电, 电荷面 密度为 
+\begin_inset Formula $\sigma$
+\end_inset
+
+, 它绕过
+\begin_inset Formula $O$
+\end_inset
+
+点垂直于扇面的轴以匀角速率
+\begin_inset Formula $\omega$
+\end_inset
+
+顺 时针旋转, 旋转带电扇形薄板的磁矩大小为
+\begin_inset Formula $\qst$
+\end_inset
+
+,方向为
+\begin_inset Formula $\qst.$
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+插图9-2-11
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+答案: 
+\begin_inset Formula $\frac{1}{8}\sigma\theta\omega R^{4}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+分析: 由于是带电体的转动, 因此考虑取
+\begin_inset Formula $r$
+\end_inset
+
+处, 宽度为
+\begin_inset Formula $\dd r$
+\end_inset
+
+的细线段旋转形成的细小圆环面.
+ 因此, 对应的电流是
+\begin_inset Formula 
+\[
+\dd I=\frac{\dd q}{T}=\frac{\sigma\theta r\dd r}{2\pi/\omega}.
+\]
+
+\end_inset
+
+那么
+\begin_inset Formula $\dd p_{m}=\dd I\cdot S=\frac{\sigma\theta r}{2\pi/\omega}\dd r,$
+\end_inset
+
+总磁矩积分即可.
+ 
+\end_layout
+
+\begin_layout Section
+电磁感应中的常见问题
+\end_layout
+
+\begin_layout Subsection*
+Faraday的电磁感应定律
+\end_layout
+
+\begin_layout Description
+1.
+ Faraday电磁感应定律
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+感应电动势.
+ 
+\begin_inset Formula $\eqs=-\frac{\dd\phi_{m}}{\dd t}=\frac{\dd}{\dd t}\int_{S}\vec B\cdot\dd\vec S$
+\end_inset
+
+.
+ (负号表示和磁通量的变化方向相反 – 
+\begin_inset Formula $\eqs$
+\end_inset
+
+与
+\begin_inset Formula $L$
+\end_inset
+
+的绕行方向相反.
+ ) 其中
+\begin_inset Formula $\phi_{m}=\oint_{S}\vec B\cdot\dd\vec S>0.$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+引起磁通量变化的方式: (1)
+\begin_inset Formula $B$
+\end_inset
+
+不变, 导线运动使得
+\begin_inset Formula $S$
+\end_inset
+
+变化, 形成动生电动势; (2)
+\begin_inset Formula $S$
+\end_inset
+
+不变, 导线回路的
+\begin_inset Formula $B$
+\end_inset
+
+发生变化.
+ 感生电动势.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Description
+磁链.
+ 
+\begin_inset Formula $N$
+\end_inset
+
+匝串联的回路的总磁通
+\begin_inset Formula $\phi_{m}=\sum_{i}\phi_{mi}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Description
+2.
+ 纯电阻电路中的感应电流和感应电荷
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+感应电流.
+ 
+\begin_inset Formula $I=\frac{\eqs}{R}=-\frac{1}{R}\frac{\dd\phi_{m}}{\dd t}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+通过的电量.
+ 
+\begin_inset Formula $q=\int_{\Delta t}I\dd t=\int_{\Delta t}-\frac{1}{R}\frac{\dd\phi_{m}}{\dd t}\dd t=-\frac{1}{R}\Delta\phi_{m}.$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Example
+(课堂例子20-2) 真空中直导线通交流电, 求：与其共面的
+\begin_inset Formula $N$
+\end_inset
+
+ 匝矩形回路中的 感应电动势.
+ (1) 已知
+\begin_inset Formula $I=I_{0}\sin\omega t$
+\end_inset
+
+.
+ (2)
+\begin_inset Formula $I$
+\end_inset
+
+ 恒定, 平面线圈以匀速率
+\begin_inset Formula $v$
+\end_inset
+
+向右运动,  结果如何? 
+\end_layout
+
+\begin_layout Example
+答案: (1)
+\begin_inset Formula $\eqs=-\frac{\mu_{0}NI_{0}l\omega}{2\pi}\ln\frac{d+a}{d}\cos\omega t$
+\end_inset
+
+ (2) 
+\begin_inset Formula $\eqs=\mf{2\pi}N\frac{va}{(d+a+vt)(d+vt)}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+分析.
+ 先求
+\begin_inset Formula $B$
+\end_inset
+
+, 并且根据回路的方向按照右手螺旋的规则求
+\begin_inset Formula $\dd\varphi_{m},$
+\end_inset
+
+然后积分求磁通量
+\begin_inset Formula 
+\[
+\phi_{m}=N\int_{d}^{d+a}\mf{2\pi x}l\dd x=\mf{2\pi}Nl\ln\frac{d+a}{d},
+\]
+
+\end_inset
+
+ 最后让磁通量对时间求导即可.
+ 
+\end_layout
+
+\begin_layout Example
+对于第二问, 选取任一时刻, 然后考虑
+\begin_inset Formula 
+\[
+\phi_{m}=N\int_{d+vt}^{d+a+vt}\mf{2\pi x}l\dd x
+\]
+
+\end_inset
+
+即可.
+ 
+\end_layout
+
+\begin_layout Subsection*
+动生电动势
+\end_layout
+
+\begin_layout Description
+1.
+ 动生电动势: 
+\begin_inset Formula $\eqs=-\frac{\dd\phi_{m}}{\dd t}=-\frac{\dd}{\dd t}(BS)=-Bl\frac{\dd s}{\dd t}=-Blv$
+\end_inset
+
+, 回路
+\begin_inset Formula $L$
+\end_inset
+
+方向同
+\begin_inset Formula $B$
+\end_inset
+
+方向.
+ 
+\end_layout
+
+\begin_layout Description
+2.
+ 机制: 受到Lorentz力
+\begin_inset Formula $\vec{f_{m}}=-e\vec v\times\vec B.$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+推导.
+ 
+\begin_inset Formula $\eqs=\int(\vec v\times\vec B)\cdot\dd\vec l.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+转动公式.
+ 
+\begin_inset Formula $\eqs=\int_{(a)}^{(b)}-\omega xB\dd x=\green{-\frac{1}{2}\omega Bl^{2}.}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+推论.
+ 均匀磁场中, 任意形状导线
+\begin_inset Formula $ab$
+\end_inset
+
+绕
+\begin_inset Formula $a$
+\end_inset
+
+端转动, 
+\begin_inset Formula $\eqs=\int_{(a)}^{(b)}-\omega xB\dd x=\green{-\frac{1}{2}\omega B(\overline{ab})^{2}.}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Example
+(11-2) 在均匀磁场
+\begin_inset Formula $B$
+\end_inset
+
+中的导线
+\begin_inset Formula $oab$
+\end_inset
+
+, 形状如图示, 当其绕 
+\begin_inset Formula $o$
+\end_inset
+
+点以角速 度
+\begin_inset Formula $\omega$
+\end_inset
+
+在平面内转动, 求导线
+\begin_inset Formula $oab$
+\end_inset
+
+上的动生电动势的大小, 哪端电 势高? 已知弧
+\begin_inset Formula $ab为$
+\end_inset
+
+半径
+\begin_inset Formula $R$
+\end_inset
+
+的
+\begin_inset Formula $3/4$
+\end_inset
+
+圆弧, 且
+\begin_inset Formula $oa$
+\end_inset
+
+长度为
+\begin_inset Formula $R$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Example
+答案: 
+\begin_inset Formula $\frac{5}{2}\omega BR^{2}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+分析: 根据上述的结论, 等同于一个直杆子在运动.
+ 于是可以计算出答案.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(11-10) 导线杆
+\begin_inset Formula $ab$
+\end_inset
+
+以速率
+\begin_inset Formula $v$
+\end_inset
+
+在导线导轨
+\begin_inset Formula $adcb$
+\end_inset
+
+上平行移动, 杆
+\begin_inset Formula $ab$
+\end_inset
+
+在 
+\begin_inset Formula $t=0$
+\end_inset
+
+时, 位于导轨
+\begin_inset Formula $dc$
+\end_inset
+
+处.
+ 均匀磁场的磁感应强度为
+\begin_inset Formula $B=B_{0}\sin\omega t$
+\end_inset
+
+, 求
+\begin_inset Formula $t$
+\end_inset
+
+时刻导线回路中的感应电动势? 
+\end_layout
+
+\begin_layout Example
+答案: 
+\begin_inset Formula $-B_{0}lv(\omega t\cos\omega t+\sin\omega t).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+分析: 先求
+\begin_inset Formula $\phi_{m}.$
+\end_inset
+
+ 注意时间变量的引入, 也就是
+\begin_inset Formula $\phi_{m}=BS=vtlB_{0}\sin\omega t.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+感生电动势
+\end_layout
+
+\begin_layout Description
+1.
+ 感生电动势:
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+性质.
+ 涡旋电场 
+\end_layout
+
+\begin_layout Description
+大小.
+ 
+\begin_inset Formula $\eqs_{i}=\oint_{L}\vec{E_{i}}\cdot\dd\vec l$
+\end_inset
+
+(非静电力对单位正电荷绕导线回路做功)
+\end_layout
+
+\begin_layout Description
+方向.
+ (1)
+\begin_inset Formula $S$
+\end_inset
+
+以
+\begin_inset Formula $L$
+\end_inset
+
+为边界, 成右手螺旋关系.
+\end_layout
+
+\end_deeper
+\begin_layout Description
+2.
+ 求解感生电动势.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+使用关系
+\begin_inset Formula $\eqs_{i}=\oint_{L}\vec{E_{i}}\cdot\dd\vec l=\int_{S}-\frac{\partial\vec B}{\partial t}\cdot\dd\vec S.$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+方向: (1)
+\begin_inset Formula $S$
+\end_inset
+
+以
+\begin_inset Formula $L$
+\end_inset
+
+为边界, 成右手螺旋关系.
+ (2) 只有在
+\begin_inset Formula $\vec{E_{i}}$
+\end_inset
+
+有特殊分布的时候才可以计算出来.
+ 
+\end_layout
+
+\begin_layout Description
+对称条件: 限制在圆柱体内的均匀磁场, 磁感强度方向 平行于轴线.
+ 当磁场随时间变化时, 激发的感 生电场具有轴对称分布的特性.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Description
+添加构成封闭区域
+\end_layout
+
+\end_deeper
+\begin_layout Description
+3.
+ 与静电场的区别: 静电场有源无旋, 是保守场.
+ 而涡旋电场无源有旋, 是
+\series bold
+非保守场
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(课上演示-20(3)-3) 右图的时变磁场激发的感生电场, 求它的电场分布.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+插图
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+答案: 
+\begin_inset Formula $E_{i}=-\frac{S}{2\pi r}\frac{\dd B}{\dd t}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+分析: 选取同心圆环, 有
+\begin_inset Formula 
+\[
+\oint_{L}\vec{E_{i}}\cdot\dd\vec l=\oint_{2\pi r}E_{i}\dd l=E_{i}2\pi r
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+同时由于Faraday的电磁感应定律, 就有
+\begin_inset Formula 
+\[
+\int_{S}-\frac{\partial\vec B}{\partial t}\cdot\dd\vec S=-\frac{\dd\vec B}{\dd t}\int_{S}\dd\vec S=-S\frac{\dd B}{\dd t}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+联立即可得到答案.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(课上演示20(3)-9) 截面半径为R的长直螺线管中的磁场
+\begin_inset Formula $\frac{\dd B}{\dd t}=C.$
+\end_inset
+
+ (1) 求沿半径方向放置的导线
+\begin_inset Formula $oa$
+\end_inset
+
+ 上的感生电动势; (2) 求导线ab上的感生电动势; (3) 求导线cd上的感生电动势.
+ 
+\end_layout
+
+\begin_layout Example
+答案: (1) 0, (2) 
+\begin_inset Formula $-S_{\triangle}\frac{\dd B}{\dd t}$
+\end_inset
+
+, (3)
+\begin_inset Formula $-S_{\text{扇}}\frac{\dd B}{\dd t}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Example
+分析: 由于第一个
+\begin_inset Formula $oa$
+\end_inset
+
+上各处
+\begin_inset Formula $E_{i}$
+\end_inset
+
+方向垂直于
+\begin_inset Formula $oa$
+\end_inset
+
+, 因此是0.
+ 后面两个可以通过构成回路的方法完成这样的操作.
+ 把边界的问题转化为了区域内的问题.
+ 
+\end_layout
+
+\begin_layout Example
+这就和Green公式, Gauss公式有很相似的地方.
+ 
+\end_layout
+
+\end_body
+\end_document
