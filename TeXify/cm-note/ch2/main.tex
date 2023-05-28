@@ -383,6 +383,149 @@ positive and negative parts, that is: $x=x^+-x^-$. Hence, we can come up
 with ideas like converges and converges absolutely and so on. More in the 
 Calculus book. 
 
+\section{The repertoire method}
+
+\mkpt{Introductory Example} We have the fact that
+\[
+    S_n =\sum_{k=0}^{n}a_k
+\]
+that is we have $S_0 = a_0$, $S_n = S_{n-1}+a_n (n>0)$. 
+Now this recurrence gives all the prefix sum in the series. 
+
+Suppose that we have the linear combination form $a_n=\beta + \gamma n$,
+and this will define $a$ as: 
+\begin{align*}
+    R_0 &= \alpha  \\
+    R_n &= R_{n-1}+\beta+\gamma r, \qquad n>0 \\
+\end{align*}
+
+The key idea is that if we can convince ourselves that the final solution
+is like the form of
+\[
+    R_n = A(n)\alpha+B(n)\beta+C(n)\gamma 
+\]
+with independent solutions for three different relations as what 
+$\alpha,\beta,\gamma$ is, then we can claim what our closed forms 
+are! 
+
+\mkpt{Example 1} 
+
+Assume that we have that 
+\begin{align*}
+    R_0 &= \alpha \\
+    R_n &= R_{n-1}+\beta+\gamma n \quad n>0 \\
+\end{align*}
+and has the table that 
+\begin{tabular}{c|l}
+    $n$ & $R_n$ \\
+    0 & $\alpha$ \\
+    1 & $\alpha + \beta + \gamma$ \\
+    2 & $\alpha + 2\beta + 3\gamma$ \\
+    3 & $\alpha + 3\beta + 6\gamma$ \\
+    4 & $\alpha + 4\beta + 10\gamma$ \\
+    5 & $\alpha + 5\beta + 15\gamma$ \\
+\end{tabular}
+
+Then we can start guessing what the solution of the function is
+$A(n)=1, \forall n$, and that $B(n)=n$, and that $C(n)=n(n+1)/2$. 
+If the function is too complicated, we cant guess that out. 
+Hence we need the repertoire method. 
+
+The idea is to take the linear combination of the solutions like 
+follows: 
+
+Basic setting 1: Consider that when $\alpha=1,\beta=\gamma=0$, the equation will be 
+easy to solve -- that's an constant solution. 
+
+Basic setting 2: $\alpha=0,\beta=1,\gamma=0$, this yields $R_n = R_{n-1}+1$
+. This makes a simple sequence. This can be used reversed the finding 
+progress. 
+
+Basic setting 3: $R_n=n^2$, guessing its recurrence relation: 
+\begin{align*}
+    1&=\beta+\gamma\\
+    4 &= 1+\beta+2\gamma \\
+\end{align*}
+and this implies $\alpha=0,\beta=-1,\gamma=2$. Then by induction
+we found it matches the pattern of all $n^2$ s. 
+so setting all these three cases we get 
+\begin{align*}
+    1 &= 1A(n) + 0B (n)+ 0C(n) \\
+    n &= 0A(n) + 1B (n)+ 0C(n) \\
+    1 &= 1A(n) + (-1)B (n)+ 2C(n) \\
+\end{align*}
+
+
+Thus, after guessing the constants, we can solve all the $A(n), B (n) $ 
+and $C(n)$. That is 
+\begin{align*}
+    A(n) &= 1 \\
+    B(n) &= n \\
+    C(n) &= \frac{n^2 +n}{2}\\
+\end{align*}
+
+
+
+
+
+\mkpt{The main idea} This method is to find coefficients for a linear 
+combination. We guess that the solutions can be expressed 
+as a sum of coefficients multiplied by functions of $n$ . 
+
+\mkpt{The recipe of repertoire method} 
+\begin{itemize}
+    \item Relax the recurrence by adding an extra function term.
+    \item Substitute known function into the recurrence to derive 
+        identities similar to the recurrence. 
+    \item Take linear combination of such identities to derive an equation
+        identical to the recurrent. 
+\end{itemize}
+
+That is, firstly check $a_n =a_{n-1}+\text{sth}$, generalize sth to $f(n)$.
+For example, $a_n = a_{n-1}$ will be converted to $a_n=a_{n-1}+f(n)$.
+We easily retrieve $f(n)=a_n-a_{n-1}.$ Next we build a table of indigents
+in which we can construct $f(n)$. Finally, we determine coefficients of 
+each component so that they satisfy the basis of the basis and 
+recurrence. 
+
+\mkpt{Example 1} Find the closed form sum of 
+\[
+   S_n = \sum_{k=0}^{n}k^3.  
+\]
+
+The sum can be seen as $a_0=0$, and $a_n = a_{n-1}+n^3$. Next we build 
+a table of $a_n$ and $a_n - a_{n-1 }$. 
+
+We find some candidates that may be useful.
+
+\begin{table}[htpb]
+    \centering
+    \caption{The table built}
+    \label{tab:rep-fig}
+
+    \begin{tabular}{c|l}
+        $a_n$ & $a_n-a_{n-1}$ \\
+        \hline 
+        1 & 0\\
+        n & 1\\
+        $n^2$ & $2n-1$\\
+        $n^3$ & 3$n^2-3n+1$\\
+        $n^4$ & $4n^3-6n^2+4n-1$
+    \end{tabular}
+\end{table}
+
+How is the coeffs useful? The simplest way we come up is 
+\[
+    n^3=\alpha \left( 4n^3-6n^2+4n-1 \right) \implies \alpha=1/4.
+\]
+We shall also eliminate $n^2$ and so on and we have that
+\[ 
+    \alpha(4n^3-6n+4n-1)+\beta(3n^2-3n+1)+\gamma(2n-1)=n^3
+\]
+
+Solve this will be useful. 
+
+
 \section{Exercises}
 
 \mkpt{W 1} This means $0$. For the lower bound is larger than upper bound.
@@ -472,7 +615,7 @@ and is able to make a bijection, hence there's a permutation on every
 integer. 
 
 
-
+\mkpt{B 13} 
 
 
 
