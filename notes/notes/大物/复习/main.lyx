@@ -3607,6 +3607,22 @@ incfig{prob7-4}
 \end_layout
 
 \begin_layout Example
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+incfig{ex717}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
 答案: 
 \begin_inset Formula $E=\frac{x\sigma_{0}}{2\eqs_{0}\sqrt{x^{2}+R^{2}}},$
 \end_inset
@@ -4507,7 +4523,12 @@ incfigw{prob811}
 \end_inset
 
 的上表面, 这样就与上一题有类似的
-\begin_inset Formula $\sigma_{2}+\sigma_{3}=0\qquad(1);\sigma_{4}+\sigma_{5}=0\qquad(2).$
+\begin_inset Formula 
+\begin{align*}
+\sigma_{2}+\sigma_{3} & =0\qquad(1);.\\
+\sigma_{4}+\sigma_{5} & =0\qquad(2)
+\end{align*}
+
 \end_inset
 
  接下来运用
@@ -4515,12 +4536,22 @@ incfigw{prob811}
 \end_inset
 
 板的内容里面的场强之和为0的信息, 就有
-\begin_inset Formula $\sigma_{1}+\sigma_{2}+\sigma_{3}+\sigma_{4}+\sigma_{5}-\sigma_{6}=0\qquad(3)$
+\begin_inset Formula 
+\[
+\sigma_{1}+\sigma_{2}+\sigma_{3}+\sigma_{4}+\sigma_{5}-\sigma_{6}=0\qquad(3)
+\]
+
 \end_inset
 
 .
  最后用电荷守恒的式子, 就有
-\begin_inset Formula $\sigma_{3}+\sigma_{4}=0\qquad(4);\sigma_{1}+\sigma_{2}=0\qquad(5);\sigma_{5}+\sigma_{6}=0\qquad(6).$
+\begin_inset Formula 
+\begin{align*}
+\sigma_{3}+\sigma_{4} & =0\qquad(4);\\
+\sigma_{1}+\sigma_{2} & =0\qquad(5);\\
+\sigma_{5}+\sigma_{6} & =0\qquad(6).
+\end{align*}
+
 \end_inset
 
 
@@ -4536,7 +4567,11 @@ incfigw{prob811}
 \end_inset
 
 应当改写为
-\begin_inset Formula $\sigma_{1}+\sigma_{2}+\sigma_{5}+\sigma_{6}=0\qquad(7).$
+\begin_inset Formula 
+\[
+\sigma_{1}+\sigma_{2}+\sigma_{5}+\sigma_{6}=0\qquad(7).
+\]
+
 \end_inset
 
  
@@ -4544,7 +4579,11 @@ incfigw{prob811}
 \end_inset
 
 两板因为相连而等势, 选取
-\begin_inset Formula $\frac{\sigma_{3}}{\eqs_{0}}d=\frac{\sigma_{4}}{\eqs_{0}}2d\qquad(8)$
+\begin_inset Formula 
+\[
+\frac{\sigma_{3}}{\eqs_{0}}d=\frac{\sigma_{4}}{\eqs_{0}}2d\qquad(8)
+\]
+
 \end_inset
 
 .
@@ -4553,7 +4592,7 @@ incfigw{prob811}
 \end_layout
 
 \begin_layout Example
-对于
+对于式子
 \begin_inset Formula $(3),$
 \end_inset
 
@@ -4620,7 +4659,14 @@ incfig{prob86}
 
  下面选取合适的Gauss面求场强.
  
-\begin_inset Formula $D_{1}=\sigma_{1},D_{2}=\sigma_{2};E_{1}=\frac{\sigma_{1}}{\eqs_{0}\eqs_{r}},E_{2}=\frac{\sigma_{2}}{\eqs_{0}}.$
+\begin_inset Formula 
+\begin{align*}
+D_{1} & =\sigma_{1};\\
+D_{2} & =\sigma_{2};\\
+E_{1} & =\frac{\sigma_{1}}{\eqs_{0}\eqs_{r}};\\
+E_{2} & =\frac{\sigma_{2}}{\eqs_{0}}.
+\end{align*}
+
 \end_inset
 
  电势差相等, 
@@ -4897,7 +4943,13 @@ C=\frac{\lambda_{2}(H+(\eqs_{r}-1)x)}{\frac{\lambda}{2\pi\eqs_{0}}\ln\frac{R}{r}
 \begin_inset Formula $E,$
 \end_inset
 
-然后因为电势差相等, 就有
+然后因为
+\uwave on
+\color purple
+电势差相等
+\uwave default
+\color inherit
+, 就有
 \begin_inset Formula $\int_{r}^{R}E_{1}\dd r=\int_{r}^{R}E_{2}\dd r$
 \end_inset
 
@@ -6330,11 +6382,14 @@ a.
 \begin_deeper
 \begin_layout Description
 矩形载流线圈: 载流线圈在磁场中的情形
-\begin_inset Note Note
+\begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-插图P15
+
+
+\backslash
+incfigw{figr}
 \end_layout
 
 \end_inset
