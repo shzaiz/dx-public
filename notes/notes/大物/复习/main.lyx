@@ -109,7 +109,7 @@ theorems-bytype
 \end_layout
 
 \begin_layout Author
-AUGPath
+张桄玮
 \end_layout
 
 \begin_layout Standard
@@ -7246,6 +7246,120 @@ status open
 
 \begin_layout Example
 这就和Green公式, Gauss公式有很相似的地方.
+ 
+\end_layout
+
+\begin_layout Section
+Maxwell方程组的常见问题
+\end_layout
+
+\begin_layout Subsection*
+全电流的环路定理
+\end_layout
+
+\begin_layout Description
+1.
+ 对于含有电流和电容器的全电流环路定理.
+ 
+\begin_inset Formula $\oint_{L}\vec H\cdot\dd\vec l=\sum(I_{d}+I_{0})_{\text{内}},\oint_{L}\vec B\cdot\dd\vec l=\mu_{0}\sum(I_{d}+I_{0})_{\text{内}}.$
+\end_inset
+
+ 其中
+\begin_inset Formula $I=I_{0}+I_{d}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+2.
+ 位移电流和传导电流
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+位移电流.
+ 为载流子的定向移动形成, 在导体中具有热效应.
+\end_layout
+
+\begin_layout Description
+传导电流.
+ 都可以在周围产生磁场.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(课上演示1) 半径为
+\begin_inset Formula $R$
+\end_inset
+
+的两块圆板构成平板电容器.
+ 匀速充电, 两板间场强的变化率为
+\begin_inset Formula $\dd E/\dd t,$
+\end_inset
+
+求板间的位移电流, 以及距板中心连线
+\begin_inset Formula $r$
+\end_inset
+
+处的磁感应强度.
+ 
+\end_layout
+
+\begin_layout Example
+首先根据全电流的环路定理, 知道
+\begin_inset Formula $H\cdot2\pi r=I_{d\text{内}}.$
+\end_inset
+
+那么有
+\begin_inset Formula 
+\begin{align*}
+H & =\frac{1}{2\pi r}\frac{\pi r^{2}}{\pi R^{2}}I_{d},r<R\\
+H & =\frac{1}{2\pi r}I_{d},r\geq R
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+根据
+\begin_inset Formula $E$
+\end_inset
+
+的变化率表示
+\begin_inset Formula $I_{d}$
+\end_inset
+
+, 有:
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+I_{d}=\frac{\dd\phi_{D}}{\dd t}=\frac{\dd D}{\dd t}S=\eqs_{0}\frac{\dd D}{\dd t}\pi r^{2}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+根据关系有 
+\begin_inset Formula $B=\mu_{0}H.$
+\end_inset
+
+ 解之即可.
  
 \end_layout
 
