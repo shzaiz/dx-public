@@ -383,6 +383,8 @@ positive and negative parts, that is: $x=x^+-x^-$. Hence, we can come up
 with ideas like converges and converges absolutely and so on. More in the 
 Calculus book. 
 
+
+
 \section{The repertoire method}
 
 \mkpt{Introductory Example} We have the fact that
@@ -615,7 +617,7 @@ and is able to make a bijection, hence there's a permutation on every
 integer. 
 
 
-\mkpt{B 13}
+\mkpt{B 13} We can generate the following list of basic components: 
 \begin{tabular}{c|l}
     $a_n$ & $a_n-a_{n-1}$ \\
     $(-1)^nn^2$ & $(-1)^n(2n^2 -2n+1)$\\
@@ -627,13 +629,49 @@ And we have the idea that
 \[
     S_n = \frac{1}{2}(-1)^n n(n+1). 
 \]
+
 \mkpt{B 14} According to geometric series formula, we have 
 $k=\sum_{1\leq j\leq k}^{}1$, gives that 
 \[
     \sum_{1\leq j\leq n}^{}(2^{n+1} =2^j)=n_2^{n+1}-(2^{n+1}-2).
 \]
 
-\mkpt{B 15} We have $c_n + s_n = \left(\sum_{k=1}^{n}k\right)^2+s_n.$
+\mkpt{B 15} We have $c_n + s_n = \left(\sum_{k=1}^{n}k\right)^2+s_n.$ 
+according to the instruction given. 
 
 \mkpt{B 16} Multiplying for both sides will yield the answer. 
+That is ${\fp{x}{m}}{\fp{(x-m)}{n}}={\fp{x}{n}}{\fp{(x-n)} m}$. And 
+by definition, this two will always equal. 
 
+\mkpt{B 17} Without the loss of the generality, we can prove the 
+equation that 
+\[
+    \rp x m = (-1)^m \fp {(-x)} m = \fp {(x+m-1)} m = 1/\fp{(x-1)}{-m}.
+\]
+
+By induction, the foundation is that 
+\[
+    \rp x 1 = (-1)^1 \fp {(-x)} 1 = x = 1/
+\]
+and this is true obviously. 
+
+Assume $x=k$ is true, then consider $x=k+1$. We can prove that
+\begin{align*}
+    \rp{x}{k+1} = \rp x k (x+k)&=(-1)^k\fp{(-x)} k (x+k)\\
+                               &=(-1)^2k \fp x k (x+k) \\
+                               &= \fp x k (x+k) \\
+                               &= (-1)^{k+1} \fp{(-x)}{k+1}
+\end{align*}
+and $k+1$ is true, and by induction, this theorem is always true for 
+positive integers. 
+
+Other cases can be shown to be correct by the property of 
+rising and falling powers. 
+
+The second equation shown can be simply show by expanding then all. 
+
+The last equation follows immediately by the property of the negative 
+falling numbers. 
+
+
+\mkpt{B 18} 
