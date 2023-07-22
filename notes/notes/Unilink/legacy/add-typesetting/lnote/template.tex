@@ -1,0 +1,304 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+%
+%                    Packages needed:
+%_______________________________________________________________
+\usepackage{tikz, adjustbox}
+\usepackage[most]{tcolorbox}
+\usepackage{xcolor}
+\usepackage{wrapfig}
+%................................................................
+%
+%           Defining colors for sticky notes:
+%_______________________________________________________________
+% Yellow:
+\definecolor{BgYellow}{HTML}{FFF59C}
+\definecolor{FrameYellow}{HTML}{F7A600}
+% Pink:
+\definecolor{BgPink}{HTML}{EF6FA7}
+\definecolor{FramePink}{HTML}{E5446E}
+% Green:
+\definecolor{BgGreen}{HTML}{C7D92D}
+\definecolor{FrameGreen}{HTML}{89B23B}
+% Blue:
+\definecolor{BgBlue}{HTML}{45BEE9}
+\definecolor{FrameBlue}{HTML}{31A8C9}
+% White:
+\definecolor{BgWhite}{HTML}{D8D8D8}
+\definecolor{FrameWhite}{HTML}{7F7F7F}
+% Brown:
+\definecolor{BgBrown}{HTML}{8E7A45}
+\definecolor{FrameBrown}{HTML}{6B5B32}
+%................................................................
+%
+%                   Dummy text package:
+%_______________________________________________________________
+\usepackage{lipsum}
+%................................................................
+%
+%                   NB command:
+%_______________________________________________________________
+\usepackage{contour}
+\newcommand{\NB}{\contour{black}{\textbf{{\large\sffamily\color{red}NB}}}\textbf{\large\sffamily: }}
+%................................................................
+%
+%               Defining Sticky note boxes:
+%_______________________________________________________________
+% Yellow Sticky Note (YStkyNote):
+\newtcolorbox{YStkyNote}[1][]{%
+    enhanced,
+    before skip=2mm,after skip=2mm, 
+    width=0.4\textwidth, % width of the sticky note
+    boxrule=0.2mm,
+    colback=BgYellow, colframe=FrameYellow, % Colors
+    attach boxed title to top left={xshift=0cm,yshift*=0mm-\tcboxedtitleheight},
+    varwidth boxed title*=-3cm,
+    % The titlebox:
+    boxed title style={frame code={%
+        \path[left color=FrameYellow,right color=FrameYellow,
+        middle color=FrameYellow]
+        ([xshift=-0mm]frame.north west) -- ([xshift=0mm]frame.north east)
+        [rounded corners=0mm]-- ([xshift=0mm,yshift=0mm]frame.north east)
+        -- (frame.south east) -- (frame.south west)
+        -- ([xshift=0mm,yshift=0mm]frame.north west)
+        [sharp corners]-- cycle;
+        },interior engine=empty,
+    },
+    sharp corners,rounded corners=southeast,arc is angular,arc=3mm,
+    % The "folded paper" in the bottom right corner:
+    underlay={%
+        \path[fill=BgYellow!80!black] ([yshift=3mm]interior.south east)--++(-0.4,-0.1)--++(0.1,-0.2);
+        \path[draw=FrameYellow,shorten <=-0.05mm,shorten >=-0.05mm,color=FrameYellow] ([yshift=3mm]interior.south east)--++(-0.4,-0.1)--++(0.1,-0.2);
+        },
+    drop fuzzy shadow, % Shadow
+    fonttitle=\bfseries, 
+    title={#1}
+}
+% Pink Sticky Note (PStkyNote):
+\newtcolorbox{PStkyNote}[1][]{%
+    enhanced,
+    before skip=2mm,after skip=2mm, 
+    width=0.4\textwidth, % width of the sticky note
+    boxrule=0.2mm, 
+    colback=BgPink, colframe=FramePink, % Colors
+    attach boxed title to top left={xshift=0cm,yshift*=0mm-\tcboxedtitleheight},
+    varwidth boxed title*=-3cm,
+    % The titlebox:
+    boxed title style={frame code={%
+        \path[left color=FramePink,right color=FramePink,
+        middle color=FramePink]
+        ([xshift=-0mm]frame.north west) -- ([xshift=0mm]frame.north east)
+        [rounded corners=0mm]-- ([xshift=0mm,yshift=0mm]frame.north east)
+        -- (frame.south east) -- (frame.south west)
+        -- ([xshift=0mm,yshift=0mm]frame.north west)
+        [sharp corners]-- cycle;
+        },interior engine=empty,
+    },
+    sharp corners,rounded corners=southeast,arc is angular,arc=3mm,
+    % The "folded paper" in the bottom right corner:
+    underlay={%
+        \path[fill=BgPink!80!black] ([yshift=3mm]interior.south east)--++(-0.4,-0.1)--++(0.1,-0.2);
+        \path[draw=FramePink,shorten <=-0.05mm,shorten >=-0.05mm,color=FramePink] ([yshift=3mm]interior.south east)--++(-0.4,-0.1)--++(0.1,-0.2);
+        },
+    drop fuzzy shadow, % Shadow
+    fonttitle=\bfseries, 
+    title={#1}
+}
+% Green Sticky Note (GStkyNote):
+\newtcolorbox{GStkyNote}[1][]{%
+    enhanced,
+    before skip=2mm,after skip=2mm, 
+    width=0.4\textwidth, % width of the sticky note
+    boxrule=0.2mm,
+    colback=BgGreen, colframe=FrameGreen, % Colors
+    attach boxed title to top left={xshift=0cm,yshift*=0mm-\tcboxedtitleheight},
+    varwidth boxed title*=-3cm,
+    % The titlebox:
+    boxed title style={frame code={%
+        \path[left color=FrameGreen,right color=FrameGreen,
+        middle color=FrameGreen]
+        ([xshift=-0mm]frame.north west) -- ([xshift=0mm]frame.north east)
+        [rounded corners=0mm]-- ([xshift=0mm,yshift=0mm]frame.north east)
+        -- (frame.south east) -- (frame.south west)
+        -- ([xshift=0mm,yshift=0mm]frame.north west)
+        [sharp corners]-- cycle;
+        },interior engine=empty,
+    },
+    sharp corners,rounded corners=southeast,arc is angular,arc=3mm,
+    % The "folded paper" in the bottom right corner:
+    underlay={%
+        \path[fill=BgGreen!80!black] ([yshift=3mm]interior.south east)--++(-0.4,-0.1)--++(0.1,-0.2);
+        \path[draw=FrameGreen,shorten <=-0.05mm,shorten >=-0.05mm,color=FrameGreen] ([yshift=3mm]interior.south east)--++(-0.4,-0.1)--++(0.1,-0.2);
+        },
+    drop fuzzy shadow, % Shadow
+    fonttitle=\bfseries, 
+    title={#1}
+}
+% Blue Sticky Note (BStkyNote):
+\newtcolorbox{BStkyNote}[1][]{%
+    enhanced,
+    before skip=2mm,after skip=2mm, 
+    width=0.4\textwidth, % width of the sticky note
+    boxrule=0.2mm,
+    colback=BgBlue, colframe=FrameBlue, % Colors
+    attach boxed title to top left={xshift=0cm,yshift*=0mm-\tcboxedtitleheight},
+    varwidth boxed title*=-3cm,
+    % The titlebox:
+    boxed title style={frame code={%
+        \path[left color=FrameBlue,right color=FrameBlue,
+        middle color=FrameBlue]
+        ([xshift=-0mm]frame.north west) -- ([xshift=0mm]frame.north east)
+        [rounded corners=0mm]-- ([xshift=0mm,yshift=0mm]frame.north east)
+        -- (frame.south east) -- (frame.south west)
+        -- ([xshift=0mm,yshift=0mm]frame.north west)
+        [sharp corners]-- cycle;
+        },interior engine=empty,
+    },
+    sharp corners,rounded corners=southeast,arc is angular,arc=3mm,
+    % The "folded paper" in the bottom right corner:
+    underlay={%
+        \path[fill=BgBlue!80!black] ([yshift=3mm]interior.south east)--++(-0.4,-0.1)--++(0.1,-0.2);
+        \path[draw=FrameBlue,shorten <=-0.05mm,shorten >=-0.05mm,color=FrameBlue] ([yshift=3mm]interior.south east)--++(-0.4,-0.1)--++(0.1,-0.2);
+        },
+    drop fuzzy shadow, % Shadow
+    fonttitle=\bfseries, 
+    title={#1}
+}
+% White Sticky Note (WStkyNote):
+\newtcolorbox{WStkyNote}[1][]{%
+    enhanced,
+    before skip=2mm,after skip=2mm, 
+    width=0.4\textwidth, % width of the sticky note
+    boxrule=0.2mm,
+    colback=BgWhite, colframe=FrameWhite, % Colors
+    attach boxed title to top left={xshift=0cm,yshift*=0mm-\tcboxedtitleheight},
+    varwidth boxed title*=-3cm,
+    % The titlebox:
+    boxed title style={frame code={%
+        \path[left color=FrameWhite,right color=FrameWhite,
+        middle color=FrameWhite]
+        ([xshift=-0mm]frame.north west) -- ([xshift=0mm]frame.north east)
+        [rounded corners=0mm]-- ([xshift=0mm,yshift=0mm]frame.north east)
+        -- (frame.south east) -- (frame.south west)
+        -- ([xshift=0mm,yshift=0mm]frame.north west)
+        [sharp corners]-- cycle;
+        },interior engine=empty,
+    },
+    sharp corners,rounded corners=southeast,arc is angular,arc=3mm,
+    % The "folded paper" in the bottom right corner:
+    underlay={%
+        \path[fill=BgWhite!80!black] ([yshift=3mm]interior.south east)--++(-0.4,-0.1)--++(0.1,-0.2);
+        \path[draw=FrameWhite,shorten <=-0.05mm,shorten >=-0.05mm,color=FrameWhite] ([yshift=3mm]interior.south east)--++(-0.4,-0.1)--++(0.1,-0.2);
+        },
+    drop fuzzy shadow, % Shadow
+    fonttitle=\bfseries, 
+    title={#1}
+}
+% Brown Sticky Note (BrStkyNote):
+\newtcolorbox{BrStkyNote}[1][]{%
+    enhanced,
+    before skip=2mm,after skip=2mm, 
+    width=0.4\textwidth, % width of the sticky note
+    boxrule=0.2mm,
+    colback=BgBrown, colframe=FrameBrown, % Colors
+    attach boxed title to top left={xshift=0cm,yshift*=0mm-\tcboxedtitleheight},
+    varwidth boxed title*=-3cm,
+    % The titlebox:
+    boxed title style={frame code={%
+        \path[left color=FrameBrown,right color=FrameBrown,
+        middle color=FrameBrown]
+        ([xshift=-0mm]frame.north west) -- ([xshift=0mm]frame.north east)
+        [rounded corners=0mm]-- ([xshift=0mm,yshift=0mm]frame.north east)
+        -- (frame.south east) -- (frame.south west)
+        -- ([xshift=0mm,yshift=0mm]frame.north west)
+        [sharp corners]-- cycle;
+        },interior engine=empty,
+    },
+    sharp corners,rounded corners=southeast,arc is angular,arc=3mm,
+    % The "folded paper" in the bottom right corner:
+    underlay={%
+        \path[fill=BgBrown!80!black] ([yshift=3mm]interior.south east)--++(-0.4,-0.1)--++(0.1,-0.2);
+        \path[draw=FrameBrown,shorten <=-0.05mm,shorten >=-0.05mm,color=FrameBrown] ([yshift=3mm]interior.south east)--++(-0.4,-0.1)--++(0.1,-0.2);
+        },
+    drop fuzzy shadow, % Shadow
+    fonttitle=\bfseries, 
+    title={#1}
+}
+%................................................................
+%
+% \begin{document}
+
+% % Put the sticky note in a wrapfigure to have text wrap around it.
+% \begin{wrapfigure}{L}{0.45\textwidth}
+% \begin{YStkyNote}[Note 1]
+
+% This text is \emph{important}. Here is an useful equation:
+
+% \begin{align}
+%     \sin (x) \approx x
+% \end{align}
+
+% \end{YStkyNote}
+% \end{wrapfigure}
+
+
+
+% \begin{wrapfigure}{R}{0.45\textwidth}
+% \begin{PStkyNote}[Note 2]
+
+% Here is some more text. This is useful information you need to know:
+
+% \begin{itemize}
+%     \item sin approximation valid \textbf{only} for small angles
+%     \item 2 radians is \textit{not} a small angle
+% \end{itemize}
+
+% \end{PStkyNote}
+% \end{wrapfigure}
+
+% \lipsum[1]
+
+% \begin{wrapfigure}{L}{0.45\textwidth}
+% \begin{GStkyNote}[Note 3]
+
+% \NB do not forget this!
+
+% \end{GStkyNote}
+% \end{wrapfigure}
+
+% \lipsum[1]
+
+% \begin{wrapfigure}{R}{0.45\textwidth}
+% \begin{BStkyNote}[Note 4]
+
+% This will be on the final exam!
+% You better \emph{study} hard!
+
+% \end{BStkyNote}
+% \end{wrapfigure}
+
+% \lipsum[1-1]
+
+% \begin{wrapfigure}{L}{0.45\textwidth}
+% \begin{WStkyNote}[Note 5]
+
+% \begin{equation}
+%     pV=Nk_BT
+% \end{equation}
+
+% \end{WStkyNote}
+% \end{wrapfigure}
+
+% \lipsum[1-1]
+
+% \begin{wrapfigure}{R}{0.45\textwidth}
+% \begin{BrStkyNote}[Note 6]
+
+% Type \verb+\NB+ to get the \NB text.
+
+% \end{BrStkyNote}
+% \end{wrapfigure}
+
+% \lipsum[1-1]
+
+% \end{document}

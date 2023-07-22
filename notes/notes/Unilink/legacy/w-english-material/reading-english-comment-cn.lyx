@@ -1,0 +1,449 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass llncs
+\begin_preamble
+\usepackage{ctex}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_title "使用搜索引擎"
+\pdf_author "AUGPath"
+\pdf_subject "去高考化"
+\pdf_keywords "去高考化"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref section
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+关于阅读英语材料
+\end_layout
+
+\begin_layout Author
+AUGPath
+\end_layout
+
+\begin_layout Institute
+Zhengzhou No.
+ 1 Middle School
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+Introductory Notes for 
+\emph on
+degaokaolization discussion group
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+阅读英语材料的评论
+\end_layout
+
+\begin_layout Standard
+随着科学技术的发展, 在国际学术交流中使用英语已经成为常态: 顶尖的论文无一不使用英文来书写, 在国际上公认的计算机领域经典书籍也是使用英文编著.
+ 顶尖的论文没有中文翻译版; 如果需要获取信息, 也应该主动去阅读英文材料, 而不是等翻译版出版.
+ "我是中国人, 我只看中文"这类观点已经不符合时代发展的潮流, 要站在时代的最前沿, 阅读英文材料的能力是不可或缺的.
+\end_layout
+
+\begin_layout Standard
+阅读英文材料, 无非就是"不会的单词查字典, 不懂的句子反复读".
+ 如今网上有各种词霸可解燃眉之急, 但英文阅读能力的提高贵在坚持.
+ "刚开始觉得阅读英文效率低", 是所有中国人都无法避免的经历.
+ 如果你发现身边的大神可以很轻松地阅读英文材料, 那是因为他们早就克服了这些困难.
+ 引用陈道蓄老师的话: 坚持一年, 你就会发现有不同; 坚持两年, 你就会发现大有不同.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+选自南京大学 PA实验手册
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Some Fun Ideas
+\end_layout
+
+\begin_layout Itemize
+试着读一读入门级别的数学书
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+关注: 这个用英文是怎么表达的？ 你能注意到什么样的模式？
+\end_layout
+
+\begin_layout Itemize
+感受：哪种语言更适合叙述和解释事物？ 为什么？
+\end_layout
+
+\begin_layout Itemize
+提示：没有必要理解
+\series bold
+所有的
+\series default
+句子，因为描述通常会非常冗长。 如果觉得没有兴趣了，可以随时停止。
+\end_layout
+
+\begin_layout Itemize
+推荐: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+UD: Ulrich Daepp et al.: Reading, Writing, and Proving - A Closer Look at
+ Mathematics, 2nd ed.
+ Springer-Verlag, 2011 
+\end_layout
+
+\begin_layout Itemize
+别的...? 欢迎提出来 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+观看英语课程
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+留意: 英语口语听起来怎么样？
+\end_layout
+
+\begin_layout Itemize
+如果听力不好的话...
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+可以看一些发音清晰的视频(如3b1b等)
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+推荐: 因人而异
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+请注意，一些基本的想法应该通母语来构建，因为它快速且可靠。 如果你打算看一眼高等数学，那么这一个真的很有帮助！
+\begin_inset CommandInset href
+LatexCommand href
+name "高等数学（上）合集"
+target "https://www.bilibili.com/video/BV1r44y1m7HW/?spm_id_from=333.999.0.0"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+误区1.
+ 
+\strikeout on
+这结论也太水了, 我1岁的时候就知道了.
+
+\strikeout default
+ 但是如何为这些看似显而易见的事情建立公理呢？ 如果你深入研究，你会发现它一点也不简单！ 这是一个凝聚了数学家智慧的复杂的内容！
+\end_layout
+
+\begin_layout Itemize
+误区2.
+ 
+\strikeout on
+只要考到90分以上, 就说明我做的很牛逼了.
+
+\strikeout default
+ 如果你在这个过程中没有得到足够的训练，就会发现后面的课程很难学习，最终你不可避免地会挂科。 无论您目前的分数如何，
+\series bold
+训练都更为重要
+\series default
+。
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+看YouTube上面的游戏视频! 
+\end_layout
+
+\begin_layout Itemize
+还有别的...?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+``真正的'' 教育过程
+\end_layout
+
+\begin_layout Standard
+阅读怀特海的以下论述：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+无论你如何详细灌输给学生知识，他在将来生活中遇到那些细节的机会几乎是微乎其微的；而且如果他确实遇到了，他很可能已经忘记了你教过他有关它的知识。真正有用的训练是培
+养对一些基本原则的理解，并对它们在各种具体细节中的应用有深入的了解。在后续实践中，人们会忘记你具体的细节；但他们会通过一种无意识的常识记住如何将原则应用于即时情
+况。在你丢掉教科书、烧掉讲义笔记，以及忘记你为了考试而死记硬背的细枝末节之前，你的学习对你来说是无用的。作为细节方面的需求会像太阳和月亮这样的明显事实一样牢记在
+你的记忆中；而你偶尔需要的内容可以在任何参考资料中查阅。大学的职能是使你能够放弃细节而专注于原则。当我谈到原则时，我几乎不知道怎么把它说出来。这些原则会彻底渗入
+你内心的原则, 所以这更像是一种心理习惯，而不是一种形式化的表述。它成为心智对于适当刺激以形成具体情况的反应方式。没有人会在头脑中清楚、有意识地运用自己的知识。
+心智培养无非是在被激活时，头脑以令人满意的方式发挥作用的方式。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+思考如下的问题: 
+\end_layout
+
+\begin_layout Itemize
+在过去的教育中，你认为自己得到了真正的教育过程吗？ 如果你认为是的，那么是在什么时候？
+\end_layout
+
+\begin_layout Itemize
+如果没有，为什么很难在你的学校实施该计划？
+\end_layout
+
+\begin_layout Itemize
+你认为这句话有道理吗？
+\end_layout
+
+\begin_layout Standard
+其实，这句话更深层次也展示出了做家长的道理！ 阅读罗素的以下论述——一个曾经撼动了数学基础的人。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+当你想教孩子们思考时，你从小就要认真对待他们，给予他们责任，坦诚地与他们交谈，为他们提供隐私和独处的空间，并从一开始就让他们成为读者和思考者，接触重要的思想。这
+是如果你想教他们思考的话。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+幸运的是，一些中国高校教师已经注意到了这个问题。 以下是他们所说的话：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+我们都是活生生的人, 从小就被不由自主地教导用最小的付出获得最大的得到, 经常会忘记我们究竟要的是什么.
+ 我承认我完美主义, 但我想每个人心中都有那一份求知的渴望和对真理的向往, "大学"的灵魂也就在于超越世俗, 超越时代的纯真和理想 -- 我们不是要讨好企业的毕
+业生, 而是要寻找改变世界的力量.
+ -- Yanyan Jiang
+\end_layout
+
+\begin_layout Plain Layout
+教育除了知识的记忆之外, 更本质的是能力的训练, 即所谓的training.
+ 而但凡training就必须克服一定的难度, 否则你就是在做重复劳动, 能力也不会有改变.
+ 如果遇到难度就选择退缩, 或者让别人来替你克服本该由你自己克服的难度, 等于是自动放弃了获得training的机会, 而这其实是大学专业教育最宝贵的部分.
+ -- Yitong Yin
+\end_layout
+
+\begin_layout Plain Layout
+这种"只要不影响我现在survive, 就不要紧"的想法其实非常的利己和短视: 你在专业上的技不如人, 迟早有一天会找上来, 会影响到你个人职业生涯的长远的发展
+; 更严重的是, 这些以得过且过的态度来对待自己专业的学生, 他们的survive其实是以透支南大教育的信誉为代价的 -- 如果我们一定比例的毕业生都是这种情况
+, 那么过不了多久, 不但那些混到毕业的学生也没那么容易survive了, 而且那些真正自己刻苦努力的学生, 他们的前途也会受到影响.
+ -- Yitong Yin
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Takeaway Message
+\end_layout
+
+\begin_layout Itemize
+要完成任务, 总是有不那么煎熬的方法！
+\end_layout
+
+\begin_layout Itemize
+To educate is to train, to burden, to change for the better.
+ (我不会翻译这句话)
+\end_layout
+
+\begin_layout Section*
+Further Discussion
+\end_layout
+
+\begin_layout Itemize
+QQ Group: 856079423
+\end_layout
+
+\end_body
+\end_document

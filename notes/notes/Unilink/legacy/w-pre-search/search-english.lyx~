@@ -1,0 +1,747 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass llncs
+\begin_preamble
+\usepackage{ctex}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_title "使用搜索引擎"
+\pdf_author "AUGPath"
+\pdf_subject "去高考化"
+\pdf_keywords "去高考化"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref section
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+使用搜索引擎
+\end_layout
+
+\begin_layout Author
+AUGPath
+\end_layout
+
+\begin_layout Institute
+Zhengzhou No.
+ 1 Middle School
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+Lecture Notes for 
+\emph on
+degaokaolization discussion group
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+Following the college entrance examination, we have experienced a significant
+ transformation in the way we acquire information.
+ Instead of passively receiving information from teachers and parents, we
+ have taken the initiative to actively comprehend various pieces of information.
+ Now, let's explore some intriguing methods that enhance the efficiency
+ and simplicity of our information retrieval process.
+\end_layout
+
+\begin_layout Section
+Situation when the Internet was first invented
+\end_layout
+
+\begin_layout Standard
+After people gained access to the Internet, it became necessary to input
+ specific web addresses in order to visit the websites they were familiar
+ with.
+ In their quest for a better browsing experience, people devised the following
+ tricks:
+\end_layout
+
+\begin_layout Itemize
+Certain valuable websites will be placed into bookmark bars, facilitating
+ convenient access for users.
+\end_layout
+
+\begin_layout Itemize
+There are online communities that enable us to share intriguing links with
+ one another.
+\end_layout
+
+\begin_layout Itemize
+Numerous websites have incorporated their own integrated search tools, allowing
+ users to easily search for specific content within their platform.
+\end_layout
+
+\begin_layout Standard
+Users leverage their own proactiveness, personal networks, and meticulously
+ curated resource collections to make the process of information retrieval
+ even more seamless and efficient.
+\end_layout
+
+\begin_layout Standard
+One suggestion is that: Is it feasible to devise a method for aggregating
+ all this content into a single platform?
+\end_layout
+
+\begin_layout Question
+If you were someone aiming to integrate all the available information at
+ that time, how would you go about designing it?
+\end_layout
+
+\begin_layout Standard
+The aspiration at that time was to have a single keyword that could connect
+ all the knowledge together.
+ Therefore, they needed a text-matching method to locate the relevant content
+ from the existing resources.
+ For example, let's assume the document library contains the following text:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Setting breakpoints 
+\end_layout
+
+\begin_layout Plain Layout
+Breakpoints are set with the break command (abbreviated b).
+ The gcc debugger convenience variable `$bpnum' records the number of the
+ breakpoint you've set most recently; see section Convenience variables,
+ for a discussion of what you can do with convenience variables.
+\end_layout
+
+\begin_layout Plain Layout
+You have several ways to say where the breakpoint should go ...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore, when using a search engine, it becomes crucial to differentiate
+ keywords effectively.
+ This way, searching for "gcc set breakpoints" would have a higher probability
+ of being accurately matched.
+ Now, you can understand the importance of properly distinguishing keywords
+ in the context of using a search engine.
+\end_layout
+
+\begin_layout Standard
+Even though our search engines have become remarkably advanced, to the point
+ where some can engage in natural language conversations, we can still achieve
+ relatively satisfactory results by employing basic and straightforward
+ operations.
+\end_layout
+
+\begin_layout Section
+One step Further
+\end_layout
+
+\begin_layout Standard
+Although the aforementioned methods are commendable, there are instances
+ where they may not entirely fulfill our requirements.
+ For instance, when using a tool on Linux, which is considered a relatively
+ niche operating system compared to Windows, performing a keyword search
+ may yield a plethora of results related to how the tool is used on Windows.
+ This is not the desired outcome.
+ Is there a method to address this issue?
+\end_layout
+
+\begin_layout Itemize
+There is a need to specify the inclusion or exclusion of certain keywords
+ when conducting searches.
+\end_layout
+
+\begin_layout Itemize
+It is important to have the ability to restrict searches to a specific domain
+ name.
+\end_layout
+
+\begin_layout Itemize
+...
+\end_layout
+
+\begin_layout Standard
+Indeed, modern search engines today have already incorporated such features
+ and functionalities.
+\end_layout
+
+\begin_layout Remark
+Many reasonable and feasible functionalities have likely already been implemente
+d in search engines.
+ Therefore, the key is to find out where they are and use them straightforwardly
+!
+\end_layout
+
+\begin_layout Standard
+During idle moments, it can be beneficial to explore the links on credible
+ homepages.
+ These links have the potential to pleasantly surprise you with unexpected
+ discoveries.
+\end_layout
+
+\begin_layout Section
+Example 1: Choosing College for the College Entrance Examination
+\end_layout
+
+\begin_layout Standard
+In the month of June, every year, the entire nation gears up for the national
+ college entrance examination.
+ Following this significant milestone, a multitude of students will enter
+ the realm of higher education.
+ Certainly, during this transitional phase, I encourage everyone to reflect
+ upon this everlasting question:
+\end_layout
+
+\begin_layout Question
+Let's take a moment to review the questions you have previously asked.
+ Are there any questions that, from a fresh perspective, could provide new
+ insights or perspectives? For example, questions such as "Why is learning
+ important?" or others alike.
+\end_layout
+
+\begin_layout Standard
+However, choosing a college major for the college entrance examination is
+ perhaps the first significant life decision for many students (excluding
+ those who have already made important choices, such as competitive students).
+ As Mr.
+ Zhu Fuhai once said, "Some argue that China's education system focuses
+ on teaching but lacks cultivation.
+ Schools merely impart tangible knowledge to children's minds rapidly, yet
+ this knowledge fails to internalize as their inner qualities and abilities."
+\end_layout
+
+\begin_layout Standard
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+In the article "
+\begin_inset CommandInset href
+LatexCommand href
+name "Family Education in Primary and Secondary Schools"
+target "https://mp.weixin.qq.com/s/5baq7UxOfpgLQ6fvzmMmFA"
+literal "false"
+
+\end_inset
+
+" featured in the public account "数林广记" , the topic is discussed thoroughly.
+ I recommend giving it a read.
+\end_layout
+
+\end_inset
+
+ Indeed, this aspect is fully demonstrated when it comes to making choices.
+ Now, let's approach this matter as we would solve any ordinary problem.
+\end_layout
+
+\begin_layout Standard
+Here, we assume that everyone already has a clear idea of their desired
+ college major.
+ However, it is worth noting that in the current highly competitive environment,
+ answering this question has become increasingly challenging.
+ Therefore, if one doesn't have a definitive answer, it may require further
+ exploration in the future.
+ Taking the Henan province college entrance examination as an example, it
+ allows candidates to select multiple parallel choices.
+ So, what exactly are parallel choices?
+\end_layout
+
+\begin_layout Standard
+When conducting a search on Baidu using relevant keywords, you will indeed
+ come across various interpretations and explanations regarding parallel
+ choices.
+ However, the question of whether to trust these sources or not requires
+ careful consideration.
+ To enhance credibility, it is advisable to gather more information from
+ reliable sources and consult trusted websites such as the Ministry of Education
+ or the official website of the Chinese government.
+ (One appoarch is to add a word to make the source more authoritative.)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+教育部
+\begin_inset Formula $\ \ \ $
+\end_inset
+
+平行志愿
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Alternatively, you can refine your search by including specific domain names
+ associated with trustworthy sources.
+ This helps filter out less reliable information and prioritize content
+ from reputable websites.
+\end_layout
+
+\begin_layout Standard
+Here, we can refer to this link(
+\begin_inset CommandInset href
+LatexCommand href
+name "@高考生, 你最关心的问题集锦来了"
+target "https://www.gov.cn/lianbo/bumen/202305/content_6875790.htm"
+literal "false"
+
+\end_inset
+
+) followed from the procedure above.
+ 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+The content highlighted in red indicates external links.
+ You can click on the red text using a PDF reader on your computer to access
+ the linked pages.
+ If you use the middle mouse button (pressing the scroll wheel downwards),
+ the linked page will open in a new window, which is quite convenient as
+ you won't have to open the document again.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+However, there is still a lot of information within the document.
+ In such cases, you can use the 
+\series bold
+Find function
+\series default
+ by pressing Ctrl-
+\series bold
+F
+\series default
+.
+ In the pop-up search box, enter ``平行志愿." This way, all instances of ``平行志愿."
+ will be highlighted in yellow, making them easier to locate.
+\end_layout
+
+\begin_layout Remark
+Certainly, the majority of the current resources are sufficiently advanced
+ to allow for ``random reading" , that is focusing on specific points of
+ interest without being constrained by a strict linear progression.
+ In the event that you encounter something unfamiliar, you can easily refer
+ back to previously mentioned concepts or contextual information for further
+ comprehension.
+ This approach not only saves unnecessary trouble but also promotes efficient
+ knowledge acquisition.
+\end_layout
+
+\begin_layout Standard
+After obtaining information from various sources, you now have an understanding
+ of the college admission process.
+ At this point, you may start estimating your scores and determining which
+ school to attend.
+ However, it's important to note that this process, while it may seem discouragi
+ng, won't be of much help beyond satisfying curiosity.
+ Attending university doesn't mean you can slack off and play all day; in
+ fact, the academic workload in university can easily surpass that of three
+ years in high school within a single academic year (or a single semester
+ for some majors).
+\end_layout
+
+\begin_layout Standard
+Therefore, you patiently wait for the provincial rankings to be released.
+ In reality, each university has different admission plans for each region
+ every year.
+ This information is usually available in the publication "招生考试之友" (Admissions
+ Examination Companion).
+ However, as for the specific rankings, it's difficult to determine.
+\end_layout
+
+\begin_layout Standard
+To address this issue, there was a popular app at that time called "Quark
+ Search." It claimed to provide information on the lowest provincial rankings
+ for a specific major in recent years.
+ The data used by the app was sourced from the Ministry of Education.
+ It was like having a search engine specifically for this purpose.
+\end_layout
+
+\begin_layout Standard
+Once we have the lowest scores from the past few years and the enrollment
+ information from "Enrollment and Examination Companion," we can explore
+ the future development trends.
+ Our knowledge of linear regression from high school can be of some assistance
+ here, but we can leverage modern spreadsheet software such as Excel to
+ make predictions and analyze the data more effectively.
+\end_layout
+
+\begin_layout Standard
+Looking back, are there any areas where improvements can be made? This skill
+ is essential and necessary because similar processes may be required in
+ the future when choosing courses in university using the academic management
+ system.
+ To confidently face future challenges, take the time to fully experience
+ and understand this process.
+\end_layout
+
+\begin_layout Standard
+(On a side note: back then, I also referred to the website 
+\begin_inset CommandInset href
+LatexCommand href
+name "大学生生活质量指北"
+target "https://colleges.chat/"
+literal "false"
+
+\end_inset
+
+ for guidance.
+ I hope it can be helpful.
+ But the greater help is in sharing how this idea came about, so that gradually
+ you can come up with new ideas on your own.)
+\end_layout
+
+\begin_layout Section
+Example 2.
+ Save unaccessible Webpages
+\end_layout
+
+\begin_layout Standard
+This story also takes place after the college entrance examination.
+ After completing the exam, AUGPath found themselves with some free time
+ at home and decided to revisit some topics in high school that they had
+ always wanted to understand better.
+ While casually browsing the internet, they stumbled upon the homepage of
+ Professor 
+\begin_inset CommandInset href
+LatexCommand href
+name "Yanyan Jiang"
+target "jyywiki.cn"
+literal "false"
+
+\end_inset
+
+ and clicked on a course titled "Combinatorics" by Professor 
+\begin_inset CommandInset href
+LatexCommand href
+name "Yitong Yin"
+target "http://tcs.nju.edu.cn/yinyt/"
+literal "false"
+
+\end_inset
+
+.
+ However, to their disappointment, the server hosting the course content
+ was no longer functional.
+ Determined to find a solution, they reached out to fellow students at Nanjing
+ University and discovered that the professor had stopped teaching the course,
+ and the server had been taken down.
+ Now, the question was, how should they proceed in such a situation?
+\end_layout
+
+\begin_layout Standard
+Try googling 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Webpage past states
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This demand is reasonable since it allows most people to access the content
+ they wanted to see before.
+ Naturally, we received a clue: the "Internet Wayback Machine." With this
+ tool, we can find lecture notes and materials from around 2015 when the
+ course was taught.
+\end_layout
+
+\begin_layout Standard
+However, the good news is that Professor Yin Yitong will be teaching "Combinator
+ics" again this year! (
+\begin_inset CommandInset href
+LatexCommand href
+name "Course Home"
+target "https://tcs.nju.edu.cn/wiki/index.php?title=%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6_(Spring_2023)"
+literal "false"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+Teacher Yin Yitong has a very profound insight into education issues.
+ This earnest attitude towards work and his professional academic level
+ truly deserve the title of master.
+ Here's a quote: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+我们的作业周五才截止。同 学们还是尽量自己多花时间 想一想，写好了再提交。作 业和考试是两个性质的，作 业的主要任务不是考核，而 是做为一种训练。期末考
+ 试是有时间限制的，需要 在有限时间内检测出一个 人的水平。而这门课不应 该是所有的训练内容，都 是在有限时间内以“力所能 及”的方式就能顺理成章完
+ 成的，不然就成了完成一些 routine tasks了。“问题求 解”能力的提升，势必需要 对思维有一定程度的考验和 挑战，尽量做出一些思维上
+ 的创新，克服一定的非平 凡性 (nontriviality）才可 以。大家还是不要老是觉 得，所有的任务都应该是可 以routinely完成的。这尤其
+ 在AI已经大行其道的今天， 是一种不可取的态度了。 – 尹一通
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Takeaway-message
+\end_layout
+
+\begin_layout Itemize
+Anything that makes people feel uncomfortable, there is always a better
+ process to help us; 
+\end_layout
+
+\begin_layout Itemize
+A part of the previous knowledge is not only for learning, but also for
+ using.
+ Learning more broad things, when facing more extensive decisions, can also
+ be more or less reflected;
+\end_layout
+
+\begin_layout Itemize
+The process of understanding something is gradual, don’t expect to understand
+ it completely at once.
+ It’s better to be patient.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+人生其实有一门课，就是不断地发掘自己，认识自己，看看什么事情可以让自己 愿意花时间和精力去做，做的过程是快乐的，做完后是欣慰满足的。很多时候兴
+ 趣的养成，是命因緣际遇碰到了，你花时间去做发现白己并不排斥，然后一路做 下来，越来越专业，受到越来越多来自他人的正向反馈与自我的肯定，也就越来
+ 越愿意花时间去做，由此进入了正向的福环。但是需要注意的是，这个“因緣际 遇'碰到的事情，不一定是你大学学的专业。很多时候，我们被生活推看走，貌
+ 似18年的努力就是为了能上一个好大学，选择一个好专业。但是什么是好专业？ 大家眼中的好专业，就是好专业吗？现在的人学教育培养更多的是专业技能，缺
+ 失了很乡能够让人自省、自察、白悟的人文关怀，社会的浮躁也乡源于此，我曾 在 《浅谈国内高校编程语言教育》一文中亏到：“这此对兴趣的专注和纯粹本应
+ 该是大学生在白己专业上该有的年轻的、百舸争流的样貌，如今却被年薪、房价 和社会的物化价值观所左右。如果连我们国家顶大大学的教育都撰脱不了物欲横
+ 流的浮躁，又如何完成国家民族集体人格的进一 站塑造？“我真心希望大家最終 都能找到自己心中的“兴趣”，哪阳你现在学看计算机，以后却只想开一家奶茶
+ 店。这也许需要很长的一段时间，但是这一切却又很值得，寻找它的路上，你会 更加了解白己，更加怡然白得，因为你一直在修改看属于自己幸福的定义。
+\end_layout
+
+\begin_layout Plain Layout
+– 李樾 (南京大学程序设计语言方向教师)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Further Discussion
+\end_layout
+
+\begin_layout Itemize
+QQ Group: 856079423
+\end_layout
+
+\end_body
+\end_document

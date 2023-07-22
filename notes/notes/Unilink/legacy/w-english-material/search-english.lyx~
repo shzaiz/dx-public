@@ -1,0 +1,501 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass llncs
+\begin_preamble
+\usepackage{ctex}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_title "使用搜索引擎"
+\pdf_author "AUGPath"
+\pdf_subject "去高考化"
+\pdf_keywords "去高考化"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref section
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Comments on Reading English Materials
+\end_layout
+
+\begin_layout Author
+AUGPath
+\end_layout
+
+\begin_layout Institute
+Zhengzhou No.
+ 1 Middle School
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+Introductory Notes for 
+\emph on
+degaokaolization discussion group
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+The Reading of English Materials
+\end_layout
+
+\begin_layout Standard
+With the development of science and technology, the use of English has become
+ the norm in international academic exchanges.
+ Top-notch papers are exclusively written in English, and internationally
+ recognized classic books in the field of computer science are also authored
+ in English.
+ There are no Chinese translation versions available for these top-notch
+ papers.
+ Therefore, if one wishes to access information, it is essential to actively
+ engage in reading English materials, rather than waiting for translated
+ versions to be published.
+ The mindset of "I am Chinese, I only read Chinese" no longer aligns with
+ the current trends of development.
+ To stay at the forefront of the era, the ability to read English materials
+ is indispensable.
+\end_layout
+
+\begin_layout Standard
+Reading English materials essentially involves "looking up unfamiliar words
+ in the dictionary and repeatedly reading unfamiliar sentences." Nowadays,
+ there are various online resources available to address urgent needs, such
+ as vocabulary reference tools.
+ However, the key to improving English reading skills lies in perseverance.
+ It is common for all Chinese individuals to initially find reading English
+ to be less efficient.
+ If you observe experts around you effortlessly reading English materials,
+ it is because they have long overcome these challenges.
+ Quoting the words of Mr.
+ Chen Daoxu: "Persist for a year, and you will notice a difference; persist
+ for two years, and you will experience a significant transformation."
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+From NJU PA Lab Introduction.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Some Fun Ideas
+\end_layout
+
+\begin_layout Itemize
+Reading beginners' mathematics book in English
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Note that: How is it expressed in English? What kind of pattern can you
+ notice?
+\end_layout
+
+\begin_layout Itemize
+Feel: Which language is better for narrating and explaining things? Why?
+\end_layout
+
+\begin_layout Itemize
+Tips: No need to understand every sentence since it usually comes really
+ verbose.
+ Stop at any time once you feel the interest lost.
+\end_layout
+
+\begin_layout Itemize
+Recommendation: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+UD: Ulrich Daepp et al.: Reading, Writing, and Proving - A Closer Look at
+ Mathematics, 2nd ed.
+ Springer-Verlag, 2011 
+\end_layout
+
+\begin_layout Itemize
+others...? 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+Watching lectures in English
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Note that: What's the spoken English like? 
+\end_layout
+
+\begin_layout Itemize
+If you are not good at listening...
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Some videos with clear pronunciation are here to watch! (e.g.
+ 3Blue1Brown...)
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Recommendation: This may vary.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Note that some basic ideas shall be constructed via your naive language,
+ since it's fast and reliable.
+ If you are about to take a glance at Advanced Mathematics, then this one
+ is really helpful!
+\begin_inset CommandInset href
+LatexCommand href
+name "高等数学（上）合集"
+target "https://www.bilibili.com/video/BV1r44y1m7HW/?spm_id_from=333.999.0.0"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Misunderstanding1.
+ 
+\strikeout on
+This is so simple.
+ I have known for 17 years.
+
+\strikeout default
+ But how do you establish axioms for these seemingly obvious things? If
+ you delve deeper, you will realize that it is not simple at all! It is
+ a complex system that encapsulates the wisdom of mathematicians!
+\end_layout
+
+\begin_layout Itemize
+Misunderstanding2.
+ 
+\strikeout on
+Only solving the problems, getting a score of 90+ can be regarded as excellent.
+
+\strikeout default
+ If you did not receive adequate training during the process, you will find
+ it difficult to learn subsequent courses, and eventually, you may fail.
+ Regardless of your current score, training is 
+\series bold
+significantly more important
+\series default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Watch game videos by YouTubers! 
+\end_layout
+
+\begin_layout Itemize
+And others...
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+The True Educational Process
+\end_layout
+
+\begin_layout Standard
+Read the following quote from Whitehead: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+Whatever be the detail with which you cram your student, the chance of his
+ meeting in after life exactly that detail is almost infinitesimal; and
+ if he does meet it, he will probably have forgotten what you taught him
+ about it.
+ The really useful training yields a comprehension of a few general principles
+ with a thorough grounding in the way they apply to a variety of concrete
+ details.
+ In subsequent practice the men will have forgotten your particular details;
+ but they will remember by an unconscious common sense how to apply principles
+ to immediate circumstances.
+ Your learning is useless to you till you have lost your textbooks, burnt
+ your lecture notes, and forgotten the minutiae which you learned by heart
+ for the examination.
+ What, in the way of detail, you continually require will stick in your
+ memory as obvious facts like the sun and the moon; and what you casually
+ require can be looked up in any work of reference.
+ The function of a University is to enable you to shed details in favor
+ of principles.
+ When I speak of principles I am hardly even thinking of verbal formulations.
+ A principle which has thoroughly soaked into you is rather a mental habit
+ than a formal statement.
+ It becomes the way the mind reacts to the appropriate stimulus in the form
+ of illustrative circumstances.
+ Nobody goes about with his knowledge clearly and consciously before him.
+ Mental cultivation is nothing else than the satisfactory way in which the
+ mind will function when it is poked up into activity.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+In the past education, do you think yourself get the true educational process?
+ If so, when? 
+\end_layout
+
+\begin_layout Itemize
+Do you think the quote make sense? 
+\end_layout
+
+\begin_layout Itemize
+If not, why it is hard to carry out the plan in your school?
+\end_layout
+
+\begin_layout Standard
+In fact, similar saying yields that the truth of parenting! Read the following
+ quote by Russell – a person who gave a hit to the base of mathematics.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+When you want to teach children to think, you begin by treating them seriously
+ when they are little, giving them responsibilities, talking to them candidly,
+ providing privacy and solitude for them, and making them readers and thinkers
+ of significant thoughts from the beginning.
+ That’s if you want to teach them to think.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Fortunately, some teachers in some high schools( like Yanyan Jiang, Yitong
+ Yin, Yue Li, Tian Tan) has noticed this problem.
+ Here are the things they said:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+我们都是活生生的人, 从小就被不由自主地教导用最小的付出获得最大的得到, 经常会忘记我们究竟要的是什么.
+ 我承认我完美主义, 但我想每个人心中都有那一份求知的渴望和对真理的向往, "大学"的灵魂也就在于超越世俗, 超越时代的纯真和理想 -- 我们不是要讨好企业的毕
+业生, 而是要寻找改变世界的力量.
+ -- Yanyan Jiang
+\end_layout
+
+\begin_layout Plain Layout
+教育除了知识的记忆之外, 更本质的是能力的训练, 即所谓的training.
+ 而但凡training就必须克服一定的难度, 否则你就是在做重复劳动, 能力也不会有改变.
+ 如果遇到难度就选择退缩, 或者让别人来替你克服本该由你自己克服的难度, 等于是自动放弃了获得training的机会, 而这其实是大学专业教育最宝贵的部分.
+ -- Yitong Yin 
+\end_layout
+
+\begin_layout Plain Layout
+这种"只要不影响我现在survive, 就不要紧"的想法其实非常的利己和短视: 你在专业上的技不如人, 迟早有一天会找上来, 会影响到你个人职业生涯的长远的发展
+; 更严重的是, 这些以得过且过的态度来对待自己专业的学生, 他们的survive其实是以透支南大教育的信誉为代价的 -- 如果我们一定比例的毕业生都是这种情况
+, 那么过不了多久, 不但那些混到毕业的学生也没那么容易survive了, 而且那些真正自己刻苦努力的学生, 他们的前途也会受到影响.
+ -- Yitong Yin
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Takeaway Message
+\end_layout
+
+\begin_layout Itemize
+There are always enjoyable approaches to tasks!
+\end_layout
+
+\begin_layout Itemize
+To educate is to train, to burden, to change for the better.
+ 
+\end_layout
+
+\begin_layout Section*
+Further Discussion
+\end_layout
+
+\begin_layout Itemize
+QQ Group: 856079423
+\end_layout
+
+\end_body
+\end_document
