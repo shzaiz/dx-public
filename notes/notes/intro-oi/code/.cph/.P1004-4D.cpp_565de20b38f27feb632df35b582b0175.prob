@@ -1,0 +1,1 @@
+{"name":"Local: P1004-4D","url":"/Users/zgw/Documents/dx/notes/intro-oi/code/P1004-4D.cpp","tests":[{"id":1690181286862,"input":"8\n2 3 13\n2 6  6\n3 5  7\n4 4 14\n5 2 21\n5 6  4\n6 3 15\n7 2 14\n0 0  0","output":"67"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/zgw/Documents/dx/notes/intro-oi/code/P1004-4D.cpp","group":"local","local":true}
