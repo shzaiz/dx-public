@@ -16,7 +16,7 @@
 \font_typewriter "default" "default"
 \font_math "auto" "auto"
 \font_default_family default
-\use_non_tex_fonts false
+\use_non_tex_fonts true
 \font_sc false
 \font_osf false
 \font_sf_scale 100 100
@@ -32,7 +32,7 @@
 \spacing single
 \use_hyperref false
 \papersize default
-\use_geometry false
+\use_geometry true
 \use_package amsmath 1
 \use_package amssymb 1
 \use_package cancel 1
@@ -57,6 +57,13 @@
 \shortcut idx
 \color #008000
 \end_index
+\leftmargin 3cm
+\topmargin 3cm
+\rightmargin 3cm
+\bottommargin 3cm
+\headheight 3cm
+\headsep 3cm
+\footskip 3cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
@@ -76,6 +83,14 @@
 \end_header
 
 \begin_body
+
+\begin_layout Title
+时间安排
+\end_layout
+
+\begin_layout Date
+
+\end_layout
 
 \begin_layout Standard
 \begin_inset Tabular
@@ -137,7 +152,8 @@
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+解决问题的策略: 递归问题和分治法.
+ 调试程序.
 \end_layout
 
 \end_inset
@@ -157,7 +173,7 @@
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+自习I
 \end_layout
 
 \end_inset
@@ -177,7 +193,10 @@
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+一些聪明的想法I: 二分法.
+ 前缀和与差分.
+ 贪心.
+ 倍增.
 \end_layout
 
 \end_inset
@@ -197,7 +216,7 @@
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+自习II
 \end_layout
 
 \end_inset
@@ -217,7 +236,10 @@
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+一些聪明的想法II: ST表.
+ KMP算法.
+ 单调栈.
+ 单调队列
 \end_layout
 
 \end_inset
@@ -237,7 +259,7 @@
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+自习III
 \end_layout
 
 \end_inset
@@ -257,7 +279,10 @@
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+用图理理头绪: 表示法.
+ 图的遍历.
+ 最短路.
+ 最小生成树.
 \end_layout
 
 \end_inset
@@ -277,7 +302,7 @@
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+自习IV
 \end_layout
 
 \end_inset
@@ -297,7 +322,9 @@
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+基础计数问题;更聪明地看状态I: 动态规划基础.
+ 线性DP.
+ 
 \end_layout
 
 \end_inset
@@ -317,7 +344,7 @@
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+自习V
 \end_layout
 
 \end_inset
@@ -337,7 +364,9 @@
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+更聪明地看状态II: 背包问题.
+ 区间DP.
+ 树形DP.
 \end_layout
 
 \end_inset
@@ -357,7 +386,7 @@
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+自习VI
 \end_layout
 
 \end_inset
@@ -377,7 +406,7 @@
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+数论问题简介: (ex)gcd与丢番图方程, 同余与模运算
 \end_layout
 
 \end_inset
@@ -397,7 +426,7 @@
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+自习VII
 \end_layout
 
 \end_inset
@@ -417,7 +446,7 @@
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+计数与概率基础: 组合数, 二项式定理;
 \end_layout
 
 \end_inset
@@ -437,7 +466,7 @@
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+自习VIII
 \end_layout
 
 \end_inset
@@ -457,7 +486,7 @@
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+高级数据结构: 从树状数组到线段树
 \end_layout
 
 \end_inset
@@ -477,7 +506,7 @@
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+模拟赛二
 \end_layout
 
 \end_inset
@@ -497,7 +526,7 @@
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+评讲
 \end_layout
 
 \end_inset
@@ -508,6 +537,134 @@
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section*
+内容提要
+\end_layout
+
+\begin_layout Standard
+本系列可能更加注重于对于基本内容的解释.
+ 对于特定的技巧方面的准备并不多(事实上如果有这方面的前置知识学起来这些``技巧''会不那么困难).
+ 事实上, 这些具有特定技巧的内容可能不是很适合在初学者的课堂上阐述.
+ 它们非常的繁杂, 有时候会让大家感到非常困惑.
+ 这系列问题选取的是非常经典的问题阐述 – 当你走向大学, 甚至继续往后从事科学研究, 可能会发现这样的内容也同样是很有用的.
+ 下面我们来简单介绍我们会介绍什么内容:
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+递归问题与分治法
+\series default
+: 递归问题允许将复杂的问题分解成更小、更简单的子问题.
+ 通过不断地将大问题划分为小问题, 并在每个小问题上执行相同的操作, 最终将问题解决.
+ 另外, 某些数据结构本身就是递归定义的.
+ 在处理这些数据结构时，递归是一种自然的方法，使得对整个结构的操作可以通过对子结构的操作来完成.
+ 在这里, 我们首先回顾一些把大事化小的操作, 然后回顾递归调用在计算机里面是如何进行的.
+ 最后, 我们来看一些递归的例子.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+调试程序
+\series default
+: 有时候, 调试程序是我们必不可少的一个环节.
+ 这里我们介绍你写的C程序的``内部状态'', 并且介绍输出调试法向你展示你需要的状态.
+ 并且展示使用gdb等工具展示程序运行中, 你关心的内容.
+ 此外, 我们还介绍如何自动化输入, 对比程序的输出.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+一些聪明的想法
+\series default
+: 这里展示了一系列比较有趣的方法.
+ 有些是根据问题特定类型所说的算法, 另一些是一些数据结构.
+ 值得学习与细细品味.
+ 需要注意的是, 这些内容可能需要反复品味.
+ 因为越是基础的东西可能需要的认识层次越深刻 – 这些都需要在不断的练习, 广泛地联系新知识的过程中得到.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+用图理理头绪
+\series default
+: 这里简单介绍图论.
+ 图论可能是初学者遇到的第一个比较困难的点之一.
+ 其主要原因是一改以往线性的存储方式, 变为了``访问节点靠指代''的情况.
+ 我们发现使用图有时候可以帮助我们理顺复杂的``关系''.
+ 小到课程之间的依赖关系, 大到我们递归的时候函数调用的关系.
+ 此外, 我们还要介绍一些和图有关的算法.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+基础计数问题
+\series default
+: 计数问题是数学中一个很有趣的事情.
+ 但是你会发现, 这样复杂的内容居然构建在我们对于基本问题的简单理解上面! 而且它们构建的基础似乎都像废话一样显然.
+ 从这里开始, 可能你就能够感到在数学中, 有一些看上去是``废话''的定理实际上只是自己没有对它产生足够深刻的理解.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+更聪明地看状态
+\series default
+: 借助我们得到的图论工具, 我们就可以对于记忆化DFS的某些情况做一些改进了.
+ 从此, 你就从几个不同的角度了解到了动态规划的事情.
+ 我们会介绍一些比较基本的内容.
+ 同时我们也会发现: 从DFS的视角和集合的转移的视角来看问题其实有大用处.
+ 这方面的理解需要一个过程.
+ 所以不用着急.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+数论问题简介
+\series default
+: 数论曾经被视作``没有用的数学''.
+ 但是随着计算机的兴起和互联网的发展, 数论在信息加密中占有重要地位.
+ 这里, 我们简单介绍一些数论的概念定义, 并且看一看求解最大公约数以及其衍生的一些知识.
+ 最后, 我们看一个新的代数结构 – 模运算下的一些常见操作.
+ 看看在模运算的意义下, 我们如何进行我们的加减乘除.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+计数与概率基础
+\series default
+: 我们在了解了上面的内容后, 会发现有些计数问题还是需要探究的.
+ 我们这一次看看更多的计数问题, 思考一下会有什么样的有趣的事情发生.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+高级数据结构
+\series default
+: 前面我们已经了解了数组, 链表这样的数据结构.
+ 今天我们来了解更高级的数据结构.
+ 同时我们会窥探当问题变复杂了的时候, 我们应该如何处理多余的细节.
+ 
+\end_layout
+
+\begin_layout Standard
+祝大家顺利, 找到属于自己的一片天地! 
 \end_layout
 
 \end_body

@@ -1,6 +1,6 @@
-#include<iostream>
-#include<vector>
-#include<algorithm>
+#include <iostream>
+#include <vector>
+#include <algorithm>
 
 #define N 1010
 using namespace std;

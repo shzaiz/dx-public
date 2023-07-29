@@ -145,6 +145,7 @@
 
 \declaretheorem[style=theorem]{theorem}
 
+
 \let\proof\relax
 \let\endproof\relax
 
@@ -219,6 +220,20 @@
 }
 \newtheorem{axiom}{Axiom}
 \tcolorboxenvironment{axiom}{
+  boxrule=0pt,
+  boxsep=0pt,
+  colback={White!90!Dandelion},
+  enhanced jigsaw, 
+  borderline west={1pt}{0pt}{Dandelion},
+  sharp corners,
+  before skip=10pt,
+  after skip=10pt,
+  left=5pt,
+  right=5pt,
+  breakable,
+}
+\newtheorem{principle}{Principle}
+\tcolorboxenvironment{principle}{
   boxrule=0pt,
   boxsep=0pt,
   colback={White!90!Dandelion},
@@ -626,7 +641,11 @@
 \usepackage{listings}
 
 \usepackage{xparse}
-\newcommand{\ti}[1]{\textbf{#1.}}
+\usepackage{ marvosym }
+
+
+\newcommand{\ti}[1]{\Faxmachine\textbf{#1.}}
+\newcommand{\ca}[1]{\textbf{#1.}}
 \NewDocumentCommand{\codeword}{v}{%
 \texttt{#1}%
 }
@@ -635,4 +654,6 @@
 
 \lstset{language=C,keywordstyle={\bfseries \color{blue}}}
 
-\newcommand{\incfig}[1]{\includegraphics[width=0.6\textwidth]{#1}}
+\newcommand{\incfig}[1]{{\center{\includegraphics[width=0.6\textwidth]{#1}}\\}}
+
+\newcommand{\centi}[1]{{\center \textbf{#1} \\ }}

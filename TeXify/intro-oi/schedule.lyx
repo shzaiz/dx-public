@@ -196,7 +196,7 @@
 一些聪明的想法I: 二分法.
  前缀和与差分.
  贪心.
- 倍增.
+ 
 \end_layout
 
 \end_inset
@@ -237,9 +237,8 @@
 
 \begin_layout Plain Layout
 一些聪明的想法II: ST表.
- KMP算法.
- 单调栈.
- 单调队列
+ 滑动窗口.
+ 倍增.
 \end_layout
 
 \end_inset

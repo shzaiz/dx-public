@@ -1,6 +1,6 @@
-#include<cstdio> 
-#include<cmath>
-#include<algorithm>
+#include <cstdio> 
+#include <cmath>
+#include <algorithm>
 int f[100001][40],a,x,LC,n,m,p,len,l,r;
 int main(){
     scanf("%d%d",&n,&m);

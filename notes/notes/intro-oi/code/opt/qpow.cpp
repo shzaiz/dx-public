@@ -1,5 +1,5 @@
 #include <iostream>
-#include<cstdio>
+#include <cstdio>
 using namespace std;
 LL B,P,K;
 

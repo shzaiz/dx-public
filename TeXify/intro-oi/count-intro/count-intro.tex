@@ -1,4 +1,198 @@
 \part{简单计数问题}
 
-TBD: 介绍基本的计数方法, 一方面可以用来分析自己程序的答案空间, 
-另一方面为后来的组合问题做铺垫. 
+\section{数学基础} 
+
+在阅读数学相关的文献的时候, 我们可能因为数学的记号没有见到, 而产生恐惧. 现在, 我们就对常见的
+一些符号做一些简单的认识. 
+
+\lec{逻辑符号}{联词与括号} 数学家喜欢使用一些逻辑连接词来使他们描述的数学对象更加清晰. 符号
+$\lnot, \land, \lor,$ $\Rightarrow, \Leftrightarrow$分别表示逻辑上的``非'', ``与'',
+``或'', ``可以推出(蕴含)'', ``等价''. 
+
+\begin{example}
+    $x^2-3x+2=0$成立, 当$x=1$或$x=2$
+    可以用这样的符号表示: $(x^2-3x+2=0) \Leftrightarrow (x=1) \lor (x=2)$. 
+\end{example}
+
+同时我们也需要区分必要性和充分性. 这时候我们可以使用真值表的方法来做事情. 另外, 如果
+把``若$P$则$Q$''的$P$和$Q$调换一下顺序, 再取反, 得到了$若非Q则非P$, 你会发现, 这两种
+说法是等价的. 
+
+并且为了好玩, 我们发现这些内容遵循如下的规律, 为了更清楚地说明, 可以用符号表示. 
+
+\begin{theorem}[最基本的逻辑符号的运算规律]
+    我们发现有如下的最基本的运算规律, 以便于我们操作含字母的命题公式. 
+    \begin{itemize}[noitemsep]
+    
+        \item 交换律:
+      \[
+        (A \land B) \leftrightarrow (B \land A)
+      \]
+      \[
+        (A \lor B) \leftrightarrow (B \lor A)
+      \]
+    \item 结合律:
+      \[
+        ((A \land B) \land C) \leftrightarrow (A \land (B \land C))
+      \]
+      \[
+        ((A \lor B) \lor C) \leftrightarrow (A \lor (B \lor C))
+      \]
+    \item 分配律:
+      \[
+        (A \land (B \lor C)) \leftrightarrow ((A \land B) \lor (A \land C))
+      \]
+      \[
+        (A \lor (B \land C)) \leftrightarrow ((A \lor B) \land (A \lor C))
+      \]
+    \item De Morgan律: 
+      \[
+        \lnot (A \land B) \leftrightarrow (\lnot A \lor \lnot B)
+      \]
+      \[
+        \lnot (A \lor B) \leftrightarrow (\lnot A \land \lnot B)
+      \]
+      \item 双重否定律:
+        \[
+            \lnot \lnot A \leftrightarrow A
+        \]
+        \item 排中律:
+        \[
+            A \lor (\lnot A)
+        \]
+        \item 矛盾律:
+        \[
+            \lnot (A \land \lnot A)
+        \]
+        \item 逆否命题:
+        \[
+            (A \to B) \leftrightarrow (\lnot B \to \lnot A)
+        \]
+    \end{itemize}
+
+\end{theorem}
+
+我们构造的证明, 一般是形如$A\Rightarrow B\Rightarrow C \Rightarrow \cdots \Rightarrow G$.
+其中$G$是我们的结论. 在数学中, 每一个关系要么是公理, 要么是由公理推导出来的命题. 
+
+\lec{集合}{基本概念} 我们总是希望把一堆东西放在一起加以研究. 这种趋势再19世纪末已经被
+明确提出来了. Cantor等人提出了朴素集合论的思想. Cantor说: ``我们把\textbf{集合}理解
+为若干个确定的, 有充分区别的, 具体的或者抽象的对象合并而成的一个整体''. 这种朴素的集合论
+的前提是(1) 集合可以由任何有区别的对象构成; (2) 集合由其组成对象唯一确定, (3) 任何性质都可以
+确定一个具有该性质对象的集合. 
+
+我们发现, 这个想法和我们以往遇到的数学概念不同, 因为集合的给定方法在明确程度上可以由明显的不同. 
+例如``郑州一中的所有学生'', ``集合的集合'', ``Yanyan Jiang中所有a的集合'', ``所有集合的集合''.
+
+甚至最后一个``所有集合的集合'', 干脆就是一个矛盾的概念! 
+
+\begin{proof}
+    对于集合$M$, 设记号$P(M)$表示$M$不是它本身的元素. ...
+\end{proof}
+
+组成一个集合的对象叫做集合的元素, 如$x$是集合$X$的元素, 可以简单记作$x\in X$(或$X\ni x$). 
+如果$x$不是集合$X$的元素, 可以简单记作$x\not \in X$(或$X\not\ni x$). 
+
+\lec{集合}{包含关系} 我们考察集合的交和集合的并, 以及集合的补. 
+
+\begin{definition}
+  两个集合的并的定义如下: $A\cup B=\{x:x\in A \lor x\in B\}$
+\end{definition}
+
+\begin{definition}
+两个集合的交的定义如下: $A\cup B=\{x:x\in A \land x\in B\}$.
+\end{definition}
+
+这些就是集合的基本运算了. 我们可以通过这些内容来构造各种不同的东西. 
+
+\lec{映射}{基本的定义}  
+
+映射可以认为是两个集合之间的对应关系. 这有点像送信: 
+
+\begin{definition}[映射]
+  设$A,B$ 是两个非空的集合, 如果按某一个确定的对应关系$f$ , 
+  使对$A$ 中的任意一个元素$x$ , 在集合$B$ 中都有唯一确定的元素$y$ 与之对应, 
+  那么就称对应$f$ 集合 $A$ 到集合 $B$ 的映射. 映射 $f$ 也可记为为$f:A\to B$.
+\end{definition}
+
+
+\lec{映射}{映射的分类} 
+
+映射有很多种类，根据满足不同的条件，我们可以将映射分为几种不同的类别：
+
+\begin{definition}
+  如果映射$f$的定义域$A$中的每个元素都映射到$B$中的不同元素, 我们就说$f$是"一对一"或"单射"。
+\end{definition}
+
+\begin{definition}
+  如果映射$f$的值域等于集合$B$，也就是说$B$中的每个元素都是$f$的某个元素的映像，那么我们就说$f$是"映满"或"满射"。
+\end{definition}
+
+\begin{definition}
+  如果映射既是单射又是满射，那么我们就说它是"一一对应"或"双射"。
+\end{definition}
+
+\lec{映射}{复合映射} 那么映射能不能像一条链一样呢? 
+
+其实是可以的. 它是通过将两个或更多的映射联结在一起形成的。
+假设我们有两个映射，$f: A \to B$ 和 $g: B \to C$。
+那么复合映射 $g\circ f: A \to C$ 就定义为对$A$中的每个元素$x$，
+首先应用映射$f$找到元素$f(x)$，然后应用映射$g$找到元素$g(f(x))$。
+这样便形成了从$A$到$C$的复合映射。
+
+有时候这个就写作记号$f\circ g$. 注意, 一般来讲$f(g(x))\neq g(f(x))$, 他们是不能交换的, 
+但是, 他们是可以结合的. 也就是以什么样的顺序算都是可以的. 
+
+\section{计数原理}
+
+\lec{基本的计数原理}{加法原理} ``加法原理''是计数原理的一个基本策略。
+如果我们有两个不相交（即互不包含相同元素）的事件，其中第一个事件有$n_1$种方式发生，
+第二个事件有$n_2$种方式发生，那么这两个事件中的任一个发生的方法总数为$n_1 + n_2$。
+也是通常所说的``分步相加''. 局部的之和就是整体的. 下面是形式化的描述. 
+
+\begin{principle}[加法原理]
+如果$S$是一个集合, $S$的一个有$m$个部分的划分
+\mn{也就是不重复, 不遗漏地把这个集合分成若干部分}$S_1, S_2,\cdots, S_m$, 满足
+不遗漏($S=S_1 \cup S_2 \cup S_3 \cup \cdots \cup S_m$); 不重复($\forall 
+i,j. S_i \cup S_j = \emptyset$), 那么$|S|=|S_1|+|S_2|+\cdots+|S_n|$. 
+\end{principle}
+
+\begin{principle}[乘法原理]
+  如果$S$是一个有序对的集合, 里面的元素形如$(a,b )$. 两个有序对$(a_1, b_1), (a_2, b_2)$相等
+  当且仅当$a_1=b_1$且$a_2=b_2$. 这样. 如果$a$是从大小为$p$的
+  集合里面抽出来的元素之一, $b$是从大小为$q$的
+  集合里面抽出来的元素之一, 那么$|S|=p\times q$.
+\end{principle}
+
+下面有一些逆运算. 
+
+\begin{principle}[减法原则]
+  如果$A$是一个集合, $U$是一个包含$A$的更大的集合, 那么令$\complement_U A = U\backslash A
+  =\{x\in U : x \neq A\}$为$A$相对于$U$的补集. 那么$|A| = |U|-|\complement_U A|$
+\end{principle}
+
+\begin{principle}[除法原则]
+  如果$S$是一个有限的集合, 划分成了$k$个部分, 每一个部分都有相同的元素, 那么划分的数量$k$就是
+  $$k=\frac{|S|}{\text{每一部分有多少个}}. $$
+\end{principle}
+
+
+
+\begin{example}[The Twelvefold way]
+  我们来看著名的``The Twelvefold Way''这个问题: 
+  它包括了12种从有$n$个球放入有$k$个盒子里的方法。每种方法具有独特的限制，
+  包括球和盒子是否是区分的及是否允许空盒子等。
+  {\center \begin{tabular}[pos]{|cccc|}
+    \hline
+    \text{$m$个球} & \text{$n$个盒子} & 允许空盒子 & 不允许空盒子   \\
+    \hline
+    不同 & 不同 & $m^n$ & $m(m-1)\cdots(m-n+1)$ \\
+    相同 & 不同 & ${\left({m\choose n}\right)}$ & $m\choose n$ \\
+    不同 & 相同 & $\sum_{k=1}^m \left\{{n\atop k}\right\}$ & $\begin{cases}1 & \text{if }n\le m\\ 0& \text{if }n>m\end{cases}$ \\
+    相同 & 相同 & $\sum_{k=1}^m p_k(n)$ & $\begin{cases}1 & \text{if }n\le m\\ 0& \text{if }n>m\end{cases}$\\
+    \hline
+  \end{tabular}\\}
+\end{example}
+
+
+
