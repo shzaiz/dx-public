@@ -30,7 +30,20 @@
 \index_command default
 \paperfontsize default
 \spacing single
-\use_hyperref false
+\use_hyperref true
+\pdf_title "schedule"
+\pdf_author "gwzhang"
+\pdf_subject "oi-intro"
+\pdf_keywords "oi-intro"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref section
+\pdf_pdfusetitle true
 \papersize default
 \use_geometry true
 \use_package amsmath 1
@@ -173,7 +186,7 @@
 \begin_inset Text
 
 \begin_layout Plain Layout
-自习I
+简单数据结构 - 庞一多专场
 \end_layout
 
 \end_inset
@@ -196,7 +209,7 @@
 一些聪明的想法I: 二分法.
  前缀和与差分.
  贪心.
- 倍增.
+ 
 \end_layout
 
 \end_inset
@@ -216,7 +229,7 @@
 \begin_inset Text
 
 \begin_layout Plain Layout
-自习II
+字符串基础 - 庞一多专场
 \end_layout
 
 \end_inset
@@ -237,9 +250,8 @@
 
 \begin_layout Plain Layout
 一些聪明的想法II: ST表.
- KMP算法.
- 单调栈.
- 单调队列
+ 滑动窗口.
+ 倍增.
 \end_layout
 
 \end_inset
@@ -259,7 +271,7 @@
 \begin_inset Text
 
 \begin_layout Plain Layout
-自习III
+自习I
 \end_layout
 
 \end_inset
@@ -302,7 +314,7 @@
 \begin_inset Text
 
 \begin_layout Plain Layout
-自习IV
+自习II
 \end_layout
 
 \end_inset
@@ -344,7 +356,7 @@
 \begin_inset Text
 
 \begin_layout Plain Layout
-自习V
+自习III
 \end_layout
 
 \end_inset
@@ -386,7 +398,7 @@
 \begin_inset Text
 
 \begin_layout Plain Layout
-自习VI
+自习IV
 \end_layout
 
 \end_inset
@@ -426,7 +438,7 @@
 \begin_inset Text
 
 \begin_layout Plain Layout
-自习VII
+动态规划宣讲 - 方启航专场
 \end_layout
 
 \end_inset
@@ -466,7 +478,7 @@
 \begin_inset Text
 
 \begin_layout Plain Layout
-自习VIII
+思维题选讲 - 方启航专场
 \end_layout
 
 \end_inset
@@ -506,7 +518,7 @@
 \begin_inset Text
 
 \begin_layout Plain Layout
-模拟赛二
+数据结构选讲 - 方启航专场
 \end_layout
 
 \end_inset
@@ -545,11 +557,15 @@
 
 \begin_layout Standard
 本系列可能更加注重于对于基本内容的解释.
- 对于特定的技巧方面的准备并不多(事实上如果有这方面的前置知识学起来这些``技巧''会不那么困难).
+ 对于特定的技巧方面的
+\series bold
+准备并不多
+\series default
+(事实上如果有这方面的前置知识学起来这些``技巧''会不那么困难).
  事实上, 这些具有特定技巧的内容可能不是很适合在初学者的课堂上阐述.
  它们非常的繁杂, 有时候会让大家感到非常困惑.
- 这系列问题选取的是非常经典的问题阐述 – 当你走向大学, 甚至继续往后从事科学研究, 可能会发现这样的内容也同样是很有用的.
- 下面我们来简单介绍我们会介绍什么内容:
+ 这系列问题选取的是非常经典的问题阐述 – 当你走向大学, 甚至继续往后从事科学研究, 可能会发现这一系列的内容也同样是适用的.
+ 下面我们来简单介绍我们会讲述什么内容:
 \end_layout
 
 \begin_layout Standard
@@ -560,7 +576,7 @@
 : 递归问题允许将复杂的问题分解成更小、更简单的子问题.
  通过不断地将大问题划分为小问题, 并在每个小问题上执行相同的操作, 最终将问题解决.
  另外, 某些数据结构本身就是递归定义的.
- 在处理这些数据结构时，递归是一种自然的方法，使得对整个结构的操作可以通过对子结构的操作来完成.
+ 在处理这些数据结构时, 递归是一种自然的方法, 使得对整个结构的操作可以通过对子结构的操作来完成.
  在这里, 我们首先回顾一些把大事化小的操作, 然后回顾递归调用在计算机里面是如何进行的.
  最后, 我们来看一些递归的例子.
  
@@ -665,6 +681,70 @@
 
 \begin_layout Standard
 祝大家顺利, 找到属于自己的一片天地! 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+人生其实有一门课, 就是不断地发掘自己, 认识自己, 看看什么事情可以让自己愿意花时间和精力去做, 做的过程是快乐的, 做完后是欣慰满足的. 很多时候兴趣的养成, 是靠因缘际
+遇碰到了, 你花时间去做发现自己并不排斥, 然后一路做下来, 越来越专业, 受到越来越多来自他人的正向反馈与自我的肯定, 也就越来越愿意花时间去做, 由此进入了正向的循环. 
+但是需要注意的是, 这个“因缘际遇”碰到的事情, 不一定是你大学学的专业. 
+\end_layout
+
+\begin_layout Plain Layout
+很多时候, 我们被生活推着走, 貌似18年的努力就是为了能上一个好大学, 选择一个好专业. 但是什么是好专业？大家眼中的好专业, 就是好专业吗？现在的大学教育培养更多的是
+专业技能, 缺失了很多能够让人自省、自察、自悟的人文关怀, 社会的浮躁也多源于此, 我曾在《浅谈国内高校编程语言教育》一文中写到：“这些对兴趣的专注和纯粹本应该是大学
+生在自己专业上该有的年轻的、百舸争流的样貌, 如今却被年薪、房价和社会的物化价值观所左右. 如果连我们国家顶尖大学的教育都摆脱不了物欲横流的浮躁, 又如何完成国家民族
+集体人格的进一步塑造？”
+\end_layout
+
+\begin_layout Plain Layout
+我真心希望大家最终都能找到自己心中的“兴趣”, 哪怕你现在学着计算机, 以后却只想开一家奶茶店. 这也许需要很长的一段时间, 但是这一切却又很值得, 寻找它的路上, 你会更
+加了解自己, 更加怡然自得, 因为你一直在修改着属于自己幸福的定义. 
+\end_layout
+
+\begin_layout Plain Layout
+— 
+\begin_inset CommandInset href
+LatexCommand href
+name "李樾"
+target "https://space.bilibili.com/2919428"
+literal "false"
+
+\end_inset
+
+, 南京大学
+\begin_inset CommandInset href
+LatexCommand href
+name "程序分析"
+target "https://www.bilibili.com/video/BV1b7411K7P4/?vd_source=92e33b8be0a9fcd124e9c9cb80f446f0"
+literal "false"
+
+\end_inset
+
+方向讲师
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
