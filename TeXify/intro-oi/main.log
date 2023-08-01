@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.1.19)  31 JUL 2023 17:51
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.1.19)  1 AUG 2023 23:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1404,6 +1404,14 @@ Package marginnote Info: xpos seems to be 67.57281pt on input line 1.
 
 
 ]
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `TU/STFangsong(0)/m/it' undefined
+(Font)              using `TU/STFangsong(0)/m/n' instead on input line 63.
+
+
 Overfull \hbox (87.32062pt too wide) in paragraph at lines 75--79
 []\U/mvs/m/n/10 v\TU/lmr/bx/n/10 B3643 \TU/SongtiSCLight(0)/b/n/10 图 的 存 储\TU/lmr/bx/n/10 . \TU/SongtiSCLight(0)/m/sc/10 这 个 是 基 本 的 问 题\TU/lmr/m/n/10 . \TU/SongtiSCLight(0)/m/sc/10 让 我 们 用 不 同 的 方 法 来 进 行 书 写\TU/lmr/m/n/10 . []
  []
@@ -1514,28 +1522,46 @@ Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                 on input line 296.
 
 [22]
-Underfull \hbox (badness 1460) in paragraph at lines 381--383
+Underfull \hbox (badness 1460) in paragraph at lines 382--384
 [][][]  \TU/lmr/m/n/10 (\TU/SongtiSCLight(0)/m/sc/10 分 拆 数\TU/lmr/m/n/10 ) []\TU/SongtiSCLight(0)/m/sc/10 定 义 分 拆 数 $\OML/lmm/m/it/10 p[]\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 n\OT1/lmr/m/n/10 )$ \TU/SongtiSCLight(0)/m/sc/10 表 示 把 一 个 正 整 数 $\OML/lmm/m/it/10 n$ \TU/SongtiSCLight(0)/m/sc/10 分 拆 为 $\OML/lmm/m/it/10 k$ \TU/SongtiSCLight(0)/m/sc/10 部 分\TU/lmr/m/n/10 , \TU/SongtiSCLight(0)/m/sc/10 分 别 记 作
  []
 
 
-Overfull \hbox (66.87013pt too wide) in paragraph at lines 404--413
+Overfull \hbox (66.87013pt too wide) in paragraph at lines 405--414
  [] 
  []
 
 [23]
-Overfull \hbox (76.79759pt too wide) in paragraph at lines 429--438
+Overfull \hbox (76.79759pt too wide) in paragraph at lines 430--439
  [] 
  []
 
-) [24]
+Package marginnote Info: Margin note 28.1 is on absolute page 28 on input line 451.
+Package marginnote Info: right page because not two side mode on input line 451.
+Package marginnote Info: xpos seems to be 67.57281pt on input line 451.
+Package marginnote Info: Margin note 28.2 is on absolute page 28 on input line 453.
+Package marginnote Info: right page because not two side mode on input line 453.
+Package marginnote Info: xpos seems to be 67.57281pt on input line 453.
+[24]
+Package marginnote Info: Margin note 29.1 is on absolute page 29 on input line 467.
+Package marginnote Info: right page because not two side mode on input line 467.
+Package marginnote Info: xpos seems to be 371.70482pt on input line 467.
+
+Overfull \hbox (16.72926pt too wide) in paragraph at lines 465--468
+\TU/SongtiSCLight(0)/m/sc/10 分 一 些 情 况 来 考 虑\TU/lmr/m/n/10 , \TU/SongtiSCLight(0)/m/sc/10 分 别 按 照 最 小 的\TU/lmr/m/n/10 , \TU/SongtiSCLight(0)/m/sc/10 第 二 小 的\TU/lmr/m/n/10 , \TU/SongtiSCLight(0)/m/sc/10 第 三 小 的 的 个 数 分 类$[]$|[][]\TU/lmr/m/n/10 . [] 
+ []
+
+Package marginnote Info: Margin note 29.2 is on absolute page 29 on input line 472.
+Package marginnote Info: right page because not two side mode on input line 472.
+Package marginnote Info: xpos seems to be 309.36882pt on input line 472.
+) [25] [26]
 \openout2 = `dp/dp.aux'.
 
  (./dp/dp.tex
-Package marginnote Info: Margin note 29.1 is on absolute page 29 on input line 1.
+Package marginnote Info: Margin note 31.1 is on absolute page 31 on input line 1.
 Package marginnote Info: right page because not two side mode on input line 1.
 Package marginnote Info: xpos seems to be 67.57281pt on input line 1.
-Package marginnote Info: Margin note 29.2 is on absolute page 29 on input line 8.
+Package marginnote Info: Margin note 31.2 is on absolute page 31 on input line 8.
 Package marginnote Info: right page because not two side mode on input line 8.
 Package marginnote Info: xpos seems to be 67.57281pt on input line 8.
 
@@ -1548,10 +1574,10 @@ Overfull \hbox (17.89417pt too wide) in paragraph at lines 31--34
 \TU/SongtiSCLight(0)/m/sc/10 的 四 类 情 况 \TU/lmr/m/n/10 TBD: \TU/SongtiSCLight(0)/m/sc/10 一 个 集 合 关 系\TU/lmr/m/n/10 , \TU/SongtiSCLight(0)/m/sc/10 下 下\TU/lmr/m/n/10 , \TU/SongtiSCLight(0)/m/sc/10 下 右\TU/lmr/m/n/10 , \TU/SongtiSCLight(0)/m/sc/10 右 下\TU/lmr/m/n/10 , \TU/SongtiSCLight(0)/m/sc/10 右 右 直 接 判 定 即 可\TU/lmr/m/n/10 . [] 
  []
 
-Package marginnote Info: Margin note 29.3 is on absolute page 29 on input line 38.
+Package marginnote Info: Margin note 31.3 is on absolute page 31 on input line 38.
 Package marginnote Info: right page because not two side mode on input line 38.
 Package marginnote Info: xpos seems to be 67.57281pt on input line 38.
-[25
+[27
 
 
 
@@ -1560,27 +1586,27 @@ Overfull \hbox (65.2501pt too wide) in paragraph at lines 56--57
 []\TU/SongtiSCLight(0)/m/sc/10 其 实 也 没 什 么 大 不 了\TU/lmr/m/n/10 , \TU/SongtiSCLight(0)/m/sc/10 只 是 把 刚 刚 的 状 态 浓 缩 到 了 $\OML/lmm/m/it/10 k$ \TU/SongtiSCLight(0)/m/sc/10 里 面\TU/lmr/m/n/10 . \TU/SongtiSCLight(0)/m/sc/10 下 面 我 们 来 看 代 码 [] 
  []
 
-Package marginnote Info: Margin note 30.1 is on absolute page 30 on input line 58.
+Package marginnote Info: Margin note 32.1 is on absolute page 32 on input line 58.
 Package marginnote Info: right page because not two side mode on input line 58.
 Package marginnote Info: xpos seems to be 67.57281pt on input line 58.
-Package marginnote Info: Margin note 30.2 is on absolute page 30 on input line 81.
+Package marginnote Info: Margin note 32.2 is on absolute page 32 on input line 81.
 Package marginnote Info: right page because not two side mode on input line 81.
 Package marginnote Info: xpos seems to be 67.57281pt on input line 81.
-Package marginnote Info: Margin note 30.3 is on absolute page 30 on input line 102.
+Package marginnote Info: Margin note 32.3 is on absolute page 32 on input line 102.
 Package marginnote Info: right page because not two side mode on input line 102.
 Package marginnote Info: xpos seems to be 67.57281pt on input line 102.
-Package marginnote Info: Margin note 30.4 is on absolute page 31 on input line 119.
+Package marginnote Info: Margin note 32.4 is on absolute page 33 on input line 119.
 Package marginnote Info: right page because not two side mode on input line 119.
 Package marginnote Info: xpos seems to be 67.57281pt on input line 119.
-[26]
-Package marginnote Info: Margin note 31.1 is on absolute page 31 on input line 156.
+[28]
+Package marginnote Info: Margin note 33.1 is on absolute page 33 on input line 156.
 Package marginnote Info: right page because not two side mode on input line 156.
 Package marginnote Info: xpos seems to be 67.57281pt on input line 156.
-Package marginnote Info: Margin note 31.2 is on absolute page 31 on input line 160.
+Package marginnote Info: Margin note 33.2 is on absolute page 33 on input line 160.
 Package marginnote Info: right page because not two side mode on input line 160.
 Package marginnote Info: xpos seems to be 67.57281pt on input line 160.
- [27] [28]
-Package marginnote Info: Margin note 33.1 is on absolute page 33 on input line 255.
+ [29] [30]
+Package marginnote Info: Margin note 35.1 is on absolute page 35 on input line 255.
 Package marginnote Info: right page because not two side mode on input line 255.
 Package marginnote Info: xpos seems to be 67.57281pt on input line 255.
 
@@ -1588,7 +1614,7 @@ Overfull \hbox (7.11525pt too wide) in paragraph at lines 270--273
 \OML/lmm/m/it/10 f\OT1/lmr/m/n/10 [\OML/lmm/m/it/10 i \OMS/lmsy/m/n/10 ^^@ \OT1/lmr/m/n/10 1][\OML/lmm/m/it/10 j \OMS/lmsy/m/n/10 ^^@ \OML/lmm/m/it/10 v\OT1/lmr/m/n/10 [\OML/lmm/m/it/10 i\OT1/lmr/m/n/10 ]] + \OML/lmm/m/it/10 w\OT1/lmr/m/n/10 [\OML/lmm/m/it/10 i\OT1/lmr/m/n/10 ]$\TU/lmr/m/n/10 . \TU/SongtiSCLight(0)/m/sc/10 我 们 只 要 找 到 他 们 的 最 大 值 就 好 了\TU/lmr/m/n/10 . \TU/SongtiSCLight(0)/m/sc/10 请 看 代 码[]\TU/lmr/m/n/10 . 
  []
 
-Package marginnote Info: Margin note 33.2 is on absolute page 33 on input line 277.
+Package marginnote Info: Margin note 35.2 is on absolute page 35 on input line 277.
 Package marginnote Info: right page because not two side mode on input line 277.
 Package marginnote Info: xpos seems to be 67.57281pt on input line 277.
 
@@ -1596,8 +1622,8 @@ Overfull \hbox (38.65039pt too wide) detected at line 292
 \OML/lmm/m/it/10 f\OT1/lmr/m/n/10 [\OML/lmm/m/it/10 i\OT1/lmr/m/n/10 ][\OML/lmm/m/it/10 j\OT1/lmr/m/n/10 ] = [](  [] [] []\OML/lmm/m/it/10 f\OT1/lmr/m/n/10 [\OML/lmm/m/it/10 i \OMS/lmsy/m/n/10 ^^@ \OT1/lmr/m/n/10 1][\OML/lmm/m/it/10 j \OMS/lmsy/m/n/10 ^^@ \OML/lmm/m/it/10 v\OT1/lmr/m/n/10 ]\OML/lmm/m/it/10 ; f\OT1/lmr/m/n/10 [\OML/lmm/m/it/10 i \OMS/lmsy/m/n/10 ^^@ \OT1/lmr/m/n/10 1][\OML/lmm/m/it/10 j \OMS/lmsy/m/n/10 ^^@ \OT1/lmr/m/n/10 2\OML/lmm/m/it/10 v\OT1/lmr/m/n/10 ] + \OML/lmm/m/it/10 w; f\OT1/lmr/m/n/10 [\OML/lmm/m/it/10 i \OMS/lmsy/m/n/10 ^^@ \OT1/lmr/m/n/10 1][\OML/lmm/m/it/10 j \OMS/lmsy/m/n/10 ^^@ \OT1/lmr/m/n/10 3\OML/lmm/m/it/10 v\OT1/lmr/m/n/10 ] + 2\OML/lmm/m/it/10 w; []  ; f\OT1/lmr/m/n/10 [\OML/lmm/m/it/10 i \OMS/lmsy/m/n/10 ^^@ \OT1/lmr/m/n/10 1][\OML/lmm/m/it/10 j \OMS/lmsy/m/n/10 ^^@ \OML/lmm/m/it/10 sv\OT1/lmr/m/n/10 ] + (\OML/lmm/m/it/10 s \OMS/lmsy/m/n/10 ^^@ \OT1/lmr/m/n/10 1)\OML/lmm/m/it/10 w\OT1/lmr/m/n/10 )
  []
 
-[29]
-Package marginnote Info: Margin note 34.1 is on absolute page 34 on input line 305.
+[31]
+Package marginnote Info: Margin note 36.1 is on absolute page 36 on input line 305.
 Package marginnote Info: right page because not two side mode on input line 305.
 Package marginnote Info: xpos seems to be 67.57281pt on input line 305.
 
@@ -1610,28 +1636,28 @@ Overfull \hbox (92.75075pt too wide) detected at line 322
 []
  []
 
-Package marginnote Info: Margin note 34.2 is on absolute page 34 on input line 326.
+Package marginnote Info: Margin note 36.2 is on absolute page 36 on input line 326.
 Package marginnote Info: right page because not two side mode on input line 326.
 Package marginnote Info: xpos seems to be 67.57281pt on input line 326.
-Package marginnote Info: Margin note 34.3 is on absolute page 34 on input line 335.
+Package marginnote Info: Margin note 36.3 is on absolute page 36 on input line 335.
 Package marginnote Info: right page because not two side mode on input line 335.
 Package marginnote Info: xpos seems to be 67.57281pt on input line 335.
-[30]
-Package marginnote Info: Margin note 35.1 is on absolute page 35 on input line 352.
+[32]
+Package marginnote Info: Margin note 37.1 is on absolute page 37 on input line 352.
 Package marginnote Info: right page because not two side mode on input line 352.
 Package marginnote Info: xpos seems to be 67.57281pt on input line 352.
-Package marginnote Info: Margin note 35.2 is on absolute page 35 on input line 357.
+Package marginnote Info: Margin note 37.2 is on absolute page 37 on input line 357.
 Package marginnote Info: right page because not two side mode on input line 357.
 Package marginnote Info: xpos seems to be 67.57281pt on input line 357.
-Package marginnote Info: Margin note 35.3 is on absolute page 35 on input line 371.
+Package marginnote Info: Margin note 37.3 is on absolute page 37 on input line 371.
 Package marginnote Info: right page because not two side mode on input line 371.
 Package marginnote Info: xpos seems to be 67.57281pt on input line 371.
- [31]
+ [33]
 Overfull \hbox (26.26338pt too wide) in paragraph at lines 406--407
 []\TU/SongtiSCLight(0)/m/sc/10 接 下 来 我 们 来 看 代 码\TU/lmr/m/n/10 : \TU/SongtiSCLight(0)/b/n/10 请 留 意 循 环 顺 序\TU/lmr/bx/n/10 !  \TU/SongtiSCLight(0)/m/sc/10 按 照 区 间 长 度 从 小 到 大 枚 举\TU/lmr/m/n/10 . [] 
  []
 
-[32]
+[34]
 Overfull \hbox (1.43968pt too wide) in paragraph at lines 474--476
 []\TU/SongtiSCLight(0)/m/sc/10 和 上 面 的 问 题 一 样\TU/lmr/m/n/10 , \TU/SongtiSCLight(0)/m/sc/10 如 果 根 节 点 在 第 $\OML/lmm/m/it/10 k$ \TU/SongtiSCLight(0)/m/sc/10 个 点 的 话\TU/lmr/m/n/10 , \TU/SongtiSCLight(0)/m/sc/10 最 大 值 应 该 如 何 求\TU/lmr/m/n/10 ? \TU/SongtiSCLight(0)/m/sc/10 应 该 是 $\OML/lmm/m/it/10 f\OT1/lmr/m/n/10 [\OML/lmm/m/it/10 l\OT1/lmr/m/n/10 ][\OML/lmm/m/it/10 k \OMS/lmsy/m/n/10 ^^@
  []
@@ -1641,7 +1667,7 @@ Overfull \hbox (29.41927pt too wide) in paragraph at lines 483--485
 \TU/SongtiSCLight(0)/m/sc/10 找 到 最 靠 左 的 一 个 分 界 点\TU/lmr/m/n/10 . \TU/SongtiSCLight(0)/m/sc/10 只 有 在 小 于 当 前 答 案 的 时 候 才 更 新\TU/lmr/m/n/10 , \TU/SongtiSCLight(0)/m/sc/10 并 且 记 录\TU/lmr/m/n/10 . \TU/SongtiSCLight(0)/m/sc/10 如[] 
  []
 
-[33] [34]
+[35] [36]
 Overfull \hbox (102.85927pt too wide) in paragraph at lines 593--595
 \TU/SongtiSCLight(0)/m/sc/10 圈\TU/lmr/m/n/10 ); \TU/SongtiSCLight(0)/m/sc/10 对 于 没 有 走 过 这 个 点 而 言\TU/lmr/m/n/10 , \TU/SongtiSCLight(0)/m/sc/10 那 就 加 上 最 大 值 构 成 这 个 点 的 最 优 情 形\TU/lmr/m/n/10 . \TU/SongtiSCLight(0)/m/sc/10 请 看[]\TU/lmr/m/n/10 . 
  []
@@ -1651,8 +1677,8 @@ Overfull \hbox (20.16426pt too wide) in paragraph at lines 596--597
 []\TU/SongtiSCLight(0)/m/sc/10 对 于 本 问 题\TU/lmr/m/n/10 , \TU/SongtiSCLight(0)/m/sc/10 可 以 对 上 述 代 码 稍 加 改 动 得 到\TU/lmr/m/n/10 : []. 
  []
 
-[35]
-Package marginnote Info: Margin note 40.1 is on absolute page 40 on input line 611.
+[37]
+Package marginnote Info: Margin note 42.1 is on absolute page 42 on input line 611.
 Package marginnote Info: right page because not two side mode on input line 611.
 Package marginnote Info: xpos seems to be 374.57042pt on input line 611.
 
@@ -1665,34 +1691,34 @@ Overfull \hbox (14.23999pt too wide) in paragraph at lines 639--645
 \TU/SongtiSCLight(0)/m/sc/10 哪 一 个 上 面 去 了\TU/lmr/m/n/10 , \TU/SongtiSCLight(0)/m/sc/10 取 最 小 的 出 来\TU/lmr/m/n/10 . \TU/SongtiSCLight(0)/m/sc/10 也 就 是 $\OML/lmm/m/it/10 f\OT1/lmr/m/n/10 [\OML/lmm/m/it/10 i\OT1/lmr/m/n/10 ][1] = [][]\OMS/lmsy/m/n/10 f\OML/lmm/m/it/10 f\OT1/lmr/m/n/10 [\OML/lmm/m/it/10 k\OT1/lmr/m/n/10 ][2] + [][] []\OMS/lmsy/m/n/10 f\OML/lmm/m/it/10 f\OT1/lmr/m/n/10 [\OML/lmm/m/it/10 j\OT1/lmr/m/n/10 ][1]\OML/lmm/m/it/10 ; f\OT1/lmr/m/n/10 [\OML/lmm/m/it/10 j\OT1/lmr/m/n/10 ][2]\OMS/lmsy/m/n/10 gg$\TU/lmr/m/n/10 .
  []
 
-Package marginnote Info: Margin note 40.2 is on absolute page 40 on input line 656.
+Package marginnote Info: Margin note 42.2 is on absolute page 42 on input line 656.
 Package marginnote Info: right page because not two side mode on input line 656.
 Package marginnote Info: xpos seems to be 324.54271pt on input line 656.
-[36]) [37]
+[38]) [39]
 \openout2 = `ntheory/ntheory.aux'.
 
  (./ntheory/ntheory.tex
-Package marginnote Info: Margin note 42.1 is on absolute page 42 on input line 1.
+Package marginnote Info: Margin note 44.1 is on absolute page 44 on input line 1.
 Package marginnote Info: right page because not two side mode on input line 1.
 Package marginnote Info: xpos seems to be 67.57281pt on input line 1.
-Package marginnote Info: Margin note 42.2 is on absolute page 42 on input line 20.
+Package marginnote Info: Margin note 44.2 is on absolute page 44 on input line 20.
 Package marginnote Info: right page because not two side mode on input line 20.
 Package marginnote Info: xpos seems to be 357.58116pt on input line 20.
-Package marginnote Info: Margin note 42.3 is on absolute page 42 on input line 29.
+Package marginnote Info: Margin note 44.3 is on absolute page 44 on input line 29.
 Package marginnote Info: right page because not two side mode on input line 29.
 Package marginnote Info: xpos seems to be 339.91882pt on input line 29.
-Package marginnote Info: Margin note 42.4 is on absolute page 42 on input line 56.
+Package marginnote Info: Margin note 44.4 is on absolute page 44 on input line 56.
 Package marginnote Info: right page because not two side mode on input line 56.
 Package marginnote Info: xpos seems to be 67.57281pt on input line 56.
- [38
+ [40
 
 
 
 ]
-Package marginnote Info: Margin note 43.1 is on absolute page 43 on input line 75.
+Package marginnote Info: Margin note 45.1 is on absolute page 45 on input line 75.
 Package marginnote Info: right page because not two side mode on input line 75.
 Package marginnote Info: xpos seems to be 67.57281pt on input line 75.
-Package marginnote Info: Margin note 43.2 is on absolute page 43 on input line 81.
+Package marginnote Info: Margin note 45.2 is on absolute page 45 on input line 81.
 Package marginnote Info: right page because not two side mode on input line 81.
 Package marginnote Info: xpos seems to be 125.12186pt on input line 81.
 
@@ -1700,61 +1726,141 @@ Underfull \hbox (badness 1292) in paragraph at lines 108--109
 [][][]  \TU/lmr/m/n/10 (\TU/SongtiSCLight(0)/m/sc/10 公 因 数 \TU/lmr/m/n/10 (common divisor) \TU/SongtiSCLight(0)/m/sc/10 和 公 倍 数 \TU/lmr/m/n/10 (common multiple)) []\TU/SongtiSCLight(0)/m/sc/10 设 $\OML/lmm/m/it/10 D; d; M; m$ \TU/SongtiSCLight(0)/m/sc/10 以 及
  []
 
-Package marginnote Info: Margin note 43.3 is on absolute page 43 on input line 114.
+Package marginnote Info: Margin note 45.3 is on absolute page 45 on input line 114.
 Package marginnote Info: right page because not two side mode on input line 114.
 Package marginnote Info: xpos seems to be 126.03882pt on input line 114.
-[39]
-Package marginnote Info: Margin note 44.1 is on absolute page 44 on input line 129.
+[41]
+Package marginnote Info: Margin note 46.1 is on absolute page 46 on input line 129.
 Package marginnote Info: right page because not two side mode on input line 129.
 Package marginnote Info: xpos seems to be 67.57281pt on input line 129.
-Package marginnote Info: Margin note 44.2 is on absolute page 44 on input line 178.
+Package marginnote Info: Margin note 46.2 is on absolute page 46 on input line 178.
 Package marginnote Info: right page because not two side mode on input line 178.
 Package marginnote Info: xpos seems to be 67.57281pt on input line 178.
- [40] [41]
-Package marginnote Info: Margin note 46.1 is on absolute page 46 on input line 275.
+ [42] [43]
+Package marginnote Info: Margin note 48.1 is on absolute page 48 on input line 275.
 Package marginnote Info: right page because not two side mode on input line 275.
 Package marginnote Info: xpos seems to be 67.57281pt on input line 275.
- [42]
+ [44]
 Underfull \hbox (badness 1127) in paragraph at lines 305--308
 []\TU/SongtiSCLight(0)/m/sc/10 则 在 等 式 两 边 同 时 约 去 $\OML/lmm/m/it/10 p[]$\TU/lmr/m/n/10 , \TU/SongtiSCLight(0)/m/sc/10 重 复 上 述 推 理\TU/lmr/m/n/10 . \TU/SongtiSCLight(0)/m/sc/10 得 $\OML/lmm/m/it/10 p[] \OT1/lmr/m/n/10 = \OML/lmm/m/it/10 q[]; p[] \OT1/lmr/m/n/10 = \OML/lmm/m/it/10 q[]; [] $ \TU/SongtiSCLight(0)/m/sc/10 直 到
  []
 
-) [43]
+
+Overfull \hbox (14.60056pt too wide) in paragraph at lines 314--317
+[]\TU/SongtiSCLight(0)/m/sc/10 那 么 有 了 这 个\TU/lmr/m/n/10 , \TU/SongtiSCLight(0)/m/sc/10 我 们 简 单 看 一 看 正 因 数 的 个 数 有 几 个\TU/lmr/m/n/10 . \TU/SongtiSCLight(0)/m/sc/10 假 设 有 一 个 数 $\OML/lmm/m/it/10 n \OT1/lmr/m/n/10 = \OML/lmm/m/it/10 p[]p[] [] p[]$\TU/lmr/m/n/10 ,
+ []
+
+Package marginnote Info: Margin note 49.1 is on absolute page 49 on input line 331.
+Package marginnote Info: right page because not two side mode on input line 331.
+Package marginnote Info: xpos seems to be 67.57281pt on input line 331.
+[45] [46]
+Package marginnote Info: Margin note 51.1 is on absolute page 51 on input line 384.
+Package marginnote Info: right page because not two side mode on input line 384.
+Package marginnote Info: xpos seems to be 166.03882pt on input line 384.
+Package marginnote Info: Margin note 51.2 is on absolute page 51 on input line 391.
+Package marginnote Info: right page because not two side mode on input line 391.
+Package marginnote Info: xpos seems to be 67.57281pt on input line 391.
+ [47]
+Package marginnote Info: Margin note 52.1 is on absolute page 52 on input line 457.
+Package marginnote Info: right page because not two side mode on input line 457.
+Package marginnote Info: xpos seems to be 67.57281pt on input line 457.
+Package marginnote Info: Margin note 52.2 is on absolute page 53 on input line 475.
+Package marginnote Info: right page because not two side mode on input line 475.
+Package marginnote Info: xpos seems to be 103.89696pt on input line 475.
+ [48]
+Package marginnote Info: Margin note 53.1 is on absolute page 53 on input line 510.
+Package marginnote Info: right page because not two side mode on input line 510.
+Package marginnote Info: xpos seems to be 67.57281pt on input line 510.
+ [49]
+Overfull \hbox (109.25749pt too wide) detected at line 555
+[] \OMS/lmsy/m/n/10 ^^@ [] \OT1/lmr/m/n/10 + [] \OMS/lmsy/m/n/10 ^^@ [] \OT1/lmr/m/n/10 + (\OMS/lmsy/m/n/10 ^^@\OT1/lmr/m/n/10 1)[][]\OML/lmm/m/it/10 :
+ []
+
+
+Overfull \hbox (11.06812pt too wide) detected at line 565
+[][]
+ []
+
+Package marginnote Info: Margin note 54.1 is on absolute page 54 on input line 568.
+Package marginnote Info: right page because not two side mode on input line 568.
+Package marginnote Info: xpos seems to be 67.57281pt on input line 568.
+[50]) [51]
 \openout2 = `comb/comb.aux'.
 
  (./comb/comb.tex
-Package marginnote Info: Margin note 48.1 is on absolute page 48 on input line 1.
+Package marginnote Info: Margin note 56.1 is on absolute page 56 on input line 1.
 Package marginnote Info: right page because not two side mode on input line 1.
 Package marginnote Info: xpos seems to be 67.57281pt on input line 1.
-) [44
+Package marginnote Info: Margin note 56.2 is on absolute page 56 on input line 32.
+Package marginnote Info: right page because not two side mode on input line 32.
+Package marginnote Info: xpos seems to be 67.57281pt on input line 32.
+Package marginnote Info: Margin note 56.3 is on absolute page 57 on input line 36.
+Package marginnote Info: right page because not two side mode on input line 36.
+Package marginnote Info: xpos seems to be 67.57281pt on input line 36.
+ [52
+
+
+
+]) [53]
+\openout2 = `seg-tree/seg-tree.aux'.
+
+ (./seg-tree/seg-tree.tex
+Package marginnote Info: Margin note 58.1 is on absolute page 58 on input line 1.
+Package marginnote Info: right page because not two side mode on input line 1.
+Package marginnote Info: xpos seems to be 67.57281pt on input line 1.
+File: seg-tree/init-config.png Graphic file (type bmp)
+<seg-tree/init-config.png>
+ [54
 
 
 
 ]
-\openout2 = `seg-tree/seg-tree.aux'.
+File: seg-tree/seg-struct.png Graphic file (type bmp)
+<seg-tree/seg-struct.png>
+ [55]
+Overfull \hbox (46.3641pt too wide) in paragraph at lines 105--111
+\TU/SongtiSCLight(0)/m/sc/10 就 是 \TU/lmtt/m/n/10 adds(l, x); adds(r+1, -x);\TU/lmr/m/n/10 , \TU/SongtiSCLight(0)/m/sc/10 单 点 查 询 为 \TU/lmtt/m/n/10 query(x)\TU/lmr/m/n/10 , \TU/SongtiSCLight(0)/m/sc/10 区 间 查 询 为 \TU/lmtt/m/n/10 query(r)-query(l-1)\TU/lmr/m/n/10 .
+ []
 
- (./seg-tree/seg-tree.tex
-Package marginnote Info: Margin note 49.1 is on absolute page 49 on input line 1.
-Package marginnote Info: right page because not two side mode on input line 1.
-Package marginnote Info: xpos seems to be 67.57281pt on input line 1.
-) [45
-
-
-
-] (./main.aux (./c-review/c-review.aux) (./recursion/recursion.aux) (./opt-search/opt-search.aux) (./graph/graph.aux) (./count-intro/count-intro.aux) (./dp/dp.aux) (./ntheory/ntheory.aux) (./comb/comb.aux) (./seg-tree/seg-tree.aux))
+Package marginnote Info: Margin note 60.1 is on absolute page 61 on input line 114.
+Package marginnote Info: right page because not two side mode on input line 114.
+Package marginnote Info: xpos seems to be 67.57281pt on input line 114.
+[56]
+File: seg-tree/intro-segtree.png Graphic file (type bmp)
+<seg-tree/intro-segtree.png>
+Package marginnote Info: Margin note 61.1 is on absolute page 61 on input line 122.
+Package marginnote Info: right page because not two side mode on input line 122.
+Package marginnote Info: xpos seems to be 67.57281pt on input line 122.
+ [57]
+Package marginnote Info: Margin note 62.1 is on absolute page 62 on input line 165.
+Package marginnote Info: right page because not two side mode on input line 165.
+Package marginnote Info: xpos seems to be 67.57281pt on input line 165.
+Package marginnote Info: Margin note 62.2 is on absolute page 62 on input line 184.
+Package marginnote Info: right page because not two side mode on input line 184.
+Package marginnote Info: xpos seems to be 67.57281pt on input line 184.
+Package marginnote Info: Margin note 62.3 is on absolute page 62 on input line 198.
+Package marginnote Info: right page because not two side mode on input line 198.
+Package marginnote Info: xpos seems to be 67.57281pt on input line 198.
+ [58]
+File: seg-tree/lazy-intro.png Graphic file (type bmp)
+<seg-tree/lazy-intro.png>
+Package marginnote Info: Margin note 63.1 is on absolute page 63 on input line 215.
+Package marginnote Info: right page because not two side mode on input line 215.
+Package marginnote Info: xpos seems to be 309.36882pt on input line 215.
+) [59] (./main.aux (./c-review/c-review.aux) (./recursion/recursion.aux) (./opt-search/opt-search.aux) (./graph/graph.aux) (./count-intro/count-intro.aux) (./dp/dp.aux) (./ntheory/ntheory.aux) (./comb/comb.aux) (./seg-tree/seg-tree.aux))
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 4DB77DF11641859972C852FB9CB83CD8;2568.
+(rerunfilecheck)             Checksum: 38FA63C90E79CEDB430E2D197DD77133;3015.
  ) 
 Here is how much of TeX's memory you used:
- 38851 strings out of 476776
- 836674 string characters out of 5805932
- 1884991 words of memory out of 5000000
- 58185 multiletter control sequences out of 15000+600000
- 581306 words of font info for 170 fonts, out of 8000000 for 9000
+ 39049 strings out of 476776
+ 842094 string characters out of 5805932
+ 1890991 words of memory out of 5000000
+ 58375 multiletter control sequences out of 15000+600000
+ 581322 words of font info for 172 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 114i,16n,118p,484b,1687s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 114i,16n,118p,484b,1720s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (48 pages, 946480 bytes).
+Output written on main.xdv (62 pages, 1201604 bytes).

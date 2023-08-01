@@ -1768,6 +1768,15 @@ INPUT ./seg-tree/seg-tree.tex
 INPUT seg-tree/seg-tree.tex
 INPUT ./seg-tree/seg-tree.tex
 INPUT seg-tree/seg-tree.tex
+INPUT ./seg-tree/init-config.png
+INPUT seg-tree/init-config.png
+INPUT ./seg-tree/seg-struct.png
+INPUT seg-tree/seg-struct.png
+INPUT ./seg-tree/intro-segtree.png
+INPUT seg-tree/intro-segtree.png
+INPUT ./seg-tree/lazy-intro.png
+INPUT ./seg-tree/lazy-intro.png
+INPUT seg-tree/lazy-intro.png
 INPUT main.aux
 INPUT ./c-review/c-review.aux
 INPUT c-review/c-review.aux

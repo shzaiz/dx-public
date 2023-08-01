@@ -15,12 +15,17 @@
 \contentsline {part}{V\hspace {1em}简单计数问题}{17}{part.5}%
 \contentsline {section}{\numberline {11}数学基础}{17}{section.11}%
 \contentsline {section}{\numberline {12}计数原理}{19}{section.12}%
-\contentsline {part}{VI\hspace {1em}动态规划简介}{25}{part.6}%
-\contentsline {section}{\numberline {13}初步的问题}{25}{section.13}%
-\contentsline {section}{\numberline {14}背包问题}{29}{section.14}%
-\contentsline {section}{\numberline {15}关于区间的问题}{32}{section.15}%
-\contentsline {section}{\numberline {16}树形DP}{34}{section.16}%
-\contentsline {part}{VII\hspace {1em}数论简介}{38}{part.7}%
-\contentsline {section}{\numberline {17}整数, Euclid算法}{38}{section.17}%
-\contentsline {part}{VIII\hspace {1em}组合数学与概率简介}{44}{part.8}%
-\contentsline {part}{IX\hspace {1em}从树状数组到线段树}{45}{part.9}%
+\contentsline {part}{VI\hspace {1em}动态规划简介}{27}{part.6}%
+\contentsline {section}{\numberline {13}初步的问题}{27}{section.13}%
+\contentsline {section}{\numberline {14}背包问题}{31}{section.14}%
+\contentsline {section}{\numberline {15}关于区间的问题}{34}{section.15}%
+\contentsline {section}{\numberline {16}树形DP}{36}{section.16}%
+\contentsline {part}{VII\hspace {1em}数论简介}{40}{part.7}%
+\contentsline {section}{\numberline {17}整数, Euclid算法}{40}{section.17}%
+\contentsline {section}{\numberline {18}同余}{47}{section.18}%
+\contentsline {part}{VIII\hspace {1em}组合数学与概率简介}{52}{part.8}%
+\contentsline {section}{\numberline {19}二项式系数}{52}{section.19}%
+\contentsline {section}{\numberline {20}概率问题简介}{53}{section.20}%
+\contentsline {part}{IX\hspace {1em}从树状数组到线段树}{54}{part.9}%
+\contentsline {section}{\numberline {21}树状数组简介}{54}{section.21}%
+\contentsline {section}{\numberline {22}线段树简介}{57}{section.22}%

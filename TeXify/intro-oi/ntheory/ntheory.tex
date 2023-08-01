@@ -307,5 +307,286 @@ TBD: 一个无穷维的空间
     不成立. 必然$k=m.$ 唯一性得到证明. 
 \end{proof}
 
+我们可以把相同的数合并起来写在指数的位置, 记作$n=p_1^{a_1}p_2^{a_2}\cdots p_n^{a_n}$,
+每一个$a_i\in \mathbb N_+$. 如果$d|n$, 那么就说明$d$可以写作$p_1^{b_1}p_2^{b_2}\cdots 
+p_m^{b_m}$的形式, 每一个$b_i,i\in\{1,2,\cdots,m\}$是$a_1, a_2,\cdots, a_n$的其中一个.
 
-TBD : ddl还有三天把正文写完. 
+那么有了这个, 我们简单看一看正因数的个数有几个. 假设有一个数$n=p_1^{a_1}p_2^{a_2}\cdots p_m^{a_m}$, 它的正因数有几个呢? 根据选法, 第一个$p_1$我们可以选择0个, 1个
+一直到$a_1$个, 共$(a_1+1)$个选法. 第二个$p_2$我们可以选择0个, 1个
+一直到$a_2$个, 共$(a_2+1)$个选法. 如此继续, 做到$p_k$才算是做完了. 我们发现
+一个数的正因数有$$d(n)=(a_1+1)(a_2+1)\cdots(a_m+1)=\prod_{i=1}^m (1+a_i).$$
+
+那么, 一个数$n=p_1^{a_1}p_2^{a_2}\cdots p_m^{a_m}$,的正因数之和为多少呢? 
+我们可以通过素因子把它划分到如下的几个集合里面: 
+$$
+\{1, p_1, p_1^2, \cdots, p_1^{a_1}\}, \{1, p_2, p_2^2, \cdots, p_2^{a_2}\}, 
+\cdots, \{1, p_m, p_m^2, \cdots, p_m^{a_m}\}, 
+$$
+$n$的每一个正因数相当于在这$m$个集合中各自选择一个因数, 把它乘到一起. 那我们把所有的选法
+求和, 就是求出了所有正因数的和. 我们根据多项式的乘法法则, 就可以说明正因数的和$\sigma(n)$是
+$$
+\sigma(n)=\prod_{i=1}^m (1+p_i+p_i^2+\cdots p_i^{a_i}). 
+$$
+
+\lec{公因数与公倍数}{算术基本定理的视角}有了这样的理论, 我们就可以对于公因数和公倍数有一个更加直观的视角了. 因为这个分解是唯一的, 
+\begin{theorem}[最大公因数和最小公倍数与唯一分解定理]
+    设$a_i=\pf {p}{1}{a}{i_1} \pf {p}{2}{a}{i_2} \cdots \pf {p}{k}{a}{i_k}, i=1,2,\cdots,n$. 
+    并且$p_1, p_2, \cdots, p_k$ 是不同的素数, $a_i\in \mathbb N$. 
+    令$t_i=\min_{1\leq i\leq n}a_i, s_i=\max_{1\leq i\leq n}a_i$, 那么 
+    $$(a_1, a_2, \cdots, a_n)=\pf p1t1 \pf p2t2 \cdots, \pf pktk;$$ 
+    $$[a_1, a_2, \cdots, a_n]=\pf p1s1 \pf p2s2 \cdots, \pf pksk. $$
+\end{theorem}
+
+\begin{theorem}
+    (1) 若$d|a_i, i=1,2,3,\cdots, n$, 则$d|(a_1, a_2, \cdots, a_n)$.
+    
+    (2) 若$a_i|A, i=1,2,3,\cdots, n$, 则$[a_1, a_2,\cdots, a_n] | A$. 
+    
+    (3) 若$m\in \mathbb N_+, $那么$$(ma_1, ma_2, \cdots, ma_n) = m(a_1, a_2,
+    \cdots, a_n),$$同样有$$[ma_1, ma_2, \cdots, ma_n] = m[a_1, a_2,
+    \cdots, a_n].$$
+
+    (4) 可以通过化归转化的方法求解一组数的最大公因数: 
+    $$(a_1, a_2,a_3\cdots, a_n)=((a_1, a_2),a_3\cdots, a_n), $$同样有
+    $$[a_1, a_2,a_3\cdots, a_n]=[[a_1, a_2],a_3\cdots, a_n]. $$
+\end{theorem}
+
+\begin{theorem}
+    $$ab=(a,b)[a,b].$$
+\end{theorem}
+
+\begin{proof}
+    我们可以使用两边夹的方法说明这件事. 回忆定理若$a,b\in \mathbb N$, $a|b, b|a\implies 
+    a=b$. 
+
+    我们设$c={ab\over (a,b)}$, 由于$(a,b)|a, (a,b)|b$, 一定存在$k_1, k_2$, 使得
+    $a=k_1(a,b), b=k_2(a, b), k_1,k_2\in \mathbb Z$. 
+    
+    根据前面的设定, $c(a,b)=ab=k_1k_2(a,b)^2$. 约去$(a,b)$. 于是$c=k_1k_2(a,b)$. 
+    运用$a,b$的定义, 有$c=k_1k_2(a,b)=ak_2=bk_1$. 使用整除的定义, $a|c, b|c$. 
+    根据上一个定理(2), $[a,b]|c. (1)$
+
+    根据Bezout定理, 一定存在整数$x,y$, 使得$xa+yb=(a,b)$. 把等式两边同时除以最大公因数
+    得到了$${a\over(a,b)}x+{b\over(a,b)}y=1$$也就是$k_1x+k_2y=1.$ 同时乘以$[a,b]$
+    有: $$k_1[a,b]x+k_2[a,b]y=[a,b].$$ 做替换, 把$k_1$替换为$c/b$, $k_2$替换为 
+    $c/a$, 得到$$\frac cb [a,b]x+\frac ca[a,b]y=[a,b].$$ 提取公因式$c$, 因此有
+    $$c\left(\frac  {[a,b]}{b}x+\frac {[a,b]}{a}y\right)=[a,b].$$ 因此$c|[a,b]. (2)$
+
+    根据(1), (2)可得$c=[a,b]$. 得证. 
+\end{proof}
+
+这个定理可不可以向多个整数推广呢? 这个是不可以的. 因为$$[a,b,c]=[[a,b],c]=\left[\frac{ab}{(a,b)},c\right]=\frac{\frac{abc}{(ab)}}{\left(\frac{ab}{(a,b)},c\right)}=\frac 
+{abc}{ab,c(a,b)}=\frac{abc}{(ab, bc, ca)}. $$
+
+我们取两个正整数, 他们互素的概率多大? 设$p_1, p_2, \cdots$是从小到大的素数. 
+则$a$是$p_i$的概率是$1/p_i$, 同理$b$. 因此$a,b $有公共素因子$p_i$的概率为$1/p_i^2$.
+因此, $a, b$没有任何公共素因子的概率为\mn{这个并不直观. 实际上, 我们还需要定义可数无穷的
+概率的定义. 不过这份资料就不做定义了. 感兴趣可以参考概率相关的参考书. }
+$$
+\prod_{i=1}^{\infty} \left(1-\frac 1 {p_i^2}\right).
+$$
+要计算它可能要一点数学分析的知识, 我们直接给出概率的结果: $6/\pi^2$. 
+
+\section{同余} 
+\lec{同余}{简介}同余启发我们按照余数分类. 我们以前看到过奇偶分析, 这个就是相当于按照模2的余数分类. 另外, 
+同余是一种有趣的语言. 下面我们来看一看什么是同余: 
+
+\begin{definition}
+    若$a,b\in \mathbb Z$除以$M$所得的余数相同, 
+    则称$a,b$对模$M$同余. 记作$a\equiv b (\bmod m)$. 否则, 称为二者不
+    同余. 记作$a\equiv b (\not \bmod m)$. 
+\end{definition}
+
+我们并不关心商是多少, 我们只关心余数是多少. 
+
+下面我们给出$\ty abm$的充要条件: 
+\begin{theorem}
+    $\ty abm \iff m|(a-b).$
+\end{theorem}
+\begin{proof}
+    $$\ty abm \iff\exists k_1, k_2\in \mathbb Z,$$使得$a=k_1m+r$, $b=k_2m+r$,
+    $0\leq r\le m$. 根据同余的定义得到, $a-b=(k_1-k_2)m$, 根据整除的定义, $m|(a-b)$.  
+\end{proof}
+
+那么, 同余有哪些性质? 和整除理论一样, 我们发现: 
+
+(1) $\ty amb, \ty cdm, \implies \ty{a\pm c}{b\pm d}{m}$. 等式的基本性质可以就可以放在这里了. 
+我们可以用同余的定义和同余的充要条件证明之. 
+
+(2) $\ty abm, \ty cdm, \implies \ty{ac}{bd}m$. 和上一个问题如出一辙. 
+
+(3) 这是一个有趣的性质: $\ty abm\implies \ty{a^n}{b^n}m, n\in N_+$. 这个可以通过性质
+(2) 不断作用$n$次得到. 
+
+(4) $\ty {ac}{bc}m \implies \ty ab{m\over (m,c)}$. 
+
+\begin{proof}
+    设$(m,c)=d$, 则$m=dm_1, c=dc_1, $满足$(m_1, c_1)=1.$
+    \begin{align*}
+        \ty {ac}{bc}m &\iff m|c(a-b) \iff dm_1 | dc_1(a-b) \iff m_1|c_1(a-b) \\
+        &\implies m_1|(a-b) \iff \ty abm
+    \end{align*}
+    也即是$\ty ab{m\over (m,c)} $.
+\end{proof}
+
+这个暗示了``约分''这一行为在模算术的做法. 
+
+(5) 如果$\ty abm, n|m, n\in \mathbb N_+\implies \ty abn$. 这个表示了如果有一个数同余, 
+它一定和这个数的因子同余. 
+
+\begin{proof}根据定义, 我们有: 
+    \begin{align*}
+        &n|m \iff m=kn, k\in \mathbb Z \\
+        & \ty abm \iff m|(a-b) \iff kn|(a-b)\\
+        &\implies n|(a-b) \iff \ty abm
+    \end{align*}
+\end{proof}
+
+(6) 与之类似, 我们有$\ty abm, \ty abn \implies \ty ab{[m,n]}$. 
+
+(7) 如果我们用$\mathbb Z[x]$代表整系数多项式, 那么对所有整数$a,b(a\neq b)$, 有
+$(a-b)|f(a)-f(b)$. 也就是说若$\ty abn$,对于某个$n\in \Z$成立, 则$\ty {f(a)}{f(b)}n$. 
+
+\begin{proof}
+    由于因式分解的相关知识, 我们知道$a-b|(a^m-b^m)$, 设$f(x)=\pl ckxk+\pl c{k-1}x{k-1}
+    +\cdots+\pl c1x~+\pl c0~~$, $c_i\in \Z, i=0,1,2,\cdots, k$, 那么$f(a)-f(b)=
+    c_k(a^k-b^k)+\cdots+c_1(a-b)$, 根据之前的结论, 因为$\ty abn$, 我们知道
+    $n|(a-b)\implies n|(a^m-b^m)$, 于是得证. 
+\end{proof}
+
+\lec{同余}{同余类} 我们如果把余数相同的集合放在一起看会怎么样? 如果我们把整数按照这个方面
+划分成若干类会如何? 下面我们来介绍同余类的概念. 
+
+\begin{definition}[同余类]
+    设$m$是大于1的给定的正整数, 则可将整数集划分为$n$个子集, 记作$k_0, k_1, \cdots, k_
+    {m-1}$, 其中, $k_r=\{x|\ty xrm, x\in \Z\}, r=0,1,\cdots, m-1.$ 称$k_0, k_1
+    \cdots, k_{m-1}$为同余类, 简单记作$[0], [1], \cdots, [m-1]$. 
+\end{definition}
+
+我们可以证明这是一个划分, 自然满足划分的两个性质. 根据定义, 两个数同属于同一个同余类, 当且仅当
+他们对$m$同余. 也就是$a,b\in K_r \iff \ty abm \iff m|(a-b)$. 
+
+\begin{definition}[完全剩余系]
+    若整数$a_0, a_1, \cdots, a_{m-1}$中没有任何两个数同属于模$m$的一个同余类, 则称
+    $a_0, a_1, \cdots, a_{m-1}$构成模$m$的一个完全剩余系. 
+\end{definition}
+
+这就相当于$k_0, k_1, \cdots, k_{m-1}$这$m$个同余系中, 每个同余类中取一个代表, 构成的
+数组. \mn{后来如果你学习抽象代数, 你可能发现这就可以引申为商集. } 这是一个整体思想. 虽然
+我们并不知道他们模$m$的结果具体是多少, 但是我们可以``筛选''某些特征, 使得我们可以让这个集合
+是定下来的. 
+
+这里有一些明显的性质, 我们说一下: 
+
+(1) 如果$m$个整数构成的模$m$的完全剩余系$\iff$ 这$m$个数模$m$两两不同余. 
+
+(2) 通过乘常数和加常数构造新的完全剩余系: 如果$a_0, a_1, \cdots, a_m$是
+模$m$的一个完全剩余系, $a,b\in\Z$, 
+且$(a,m)=1$, 那么$aa_0+b, aa_1+b, \cdots, aa_{m-1}+b$也是模$m$的完全剩余系. 
+
+(3)通过两个完全剩余系构造: 若$(m,n)=1$, $a_1, a_2, \cdots, a_m$和$b_1,b_2, \cdots, 
+b_n$是模$m$和模$n$的两个完全剩余系, 那么$\{na_i+mb_j:1\leq i\leq m, 1\leq j\leq n\}$是
+模$mn$的完全剩余系. 要证明这个, 我们需要证明这个数组里面有$mn$个数, 并且模$mn$两两不同余. 
+
+\begin{proof}
+    我们可以把数组列一个$m$行$n$列的表格, 因此一共有$mn$个数. 
+    $$\begin{array}{cccc}
+        na_1+mb_1,&na_1+mb_2&\cdots&na_1+mb_n\\
+        na_2+mb_1,&na_2+mb_2&\cdots&na_2+mb_n\\
+        \cdots&\cdots&\cdots&\cdots\\
+        na_m+mb_1,&na_m+mb_2&\cdots&na_m+mb_n\\
+    \end{array}$$
+    假设存在$a, a'\in \{a_1,
+    a_2,\cdots, a_m\}, b, b'\in \{b_1, b_2,\cdots, b_n\}, $且$(a,b)\neq (a',b')$, 
+    使得$\ty {na+mb}{na'+mb'}{mn}$. 
+    \begin{align*}
+        &\implies mn | n(a-a')+m(b-b')\\
+        & \implies m| n(a-a')+m(b-b') \implies m|n(a-a') \\
+        & \implies m(a-a') \implies \ty a {a'} m, 
+    \end{align*}
+    与$m$来自完全剩余系矛盾. 因此, $a=a'$, 同理,$b=b'$.  
+\end{proof}
+
+\lec{简化剩余系(缩系)}{简介} 既然我们可以按照这样的方式取, 我们还可以用什么样的方式
+取? 一个想法是可以使用取和这个数互素的这些数. 
+
+\begin{definition}
+    设$K_r$是模$m$的一个同余类, 且$(r,m)=1$, 则称$K_r$为与$m$互素的同余类. 从每一个与
+    $m$互素的同余类中各取一个数, 组成的的数组叫做\textbf{模$m$的简化剩余系}. 
+\end{definition}
+
+我们发现, 一个模$m$互素的剩余类中, 每个数都与$m$互素. 因为$a\in K_r, (r,m)=1$, 对$a$做
+带余除法, $a=mq+r, 0\leq r\leq m-1$, 根据Euclid算法, $(a,m)=(m,r)=1$. 更进一步地, 
+每个数都与模$m$互素. 
+
+那么, 这样一个简化剩余系(缩系)里面有多少个数? 这就是大名鼎鼎的欧拉函数的来源了. 
+模$m$的缩系可以看做一个模$m$中的一个完全剩余系中所有与$m$互素的数所构成的数组. 这个数
+有$\varphi (m)$个数. 这就是$m$的欧拉函数.
+
+\begin{definition} 如果记$\#S$表示$S$集合中元素的数量, 那么欧拉函数可以定义为
+    $$\varphi(m) = \#\{k:1\leq k\leq m, (k, m)=1\}.$$
+\end{definition}
+
+那么$\varphi$函数具有怎样的性质呢? 我们应该如何计算呢? 一个直接公式的方法如下: 
+
+\begin{theorem}
+    $$
+    \varphi(n)=n(1-\frac{1}{p_{1}})(1-\frac{1}{p_{2}})\cdots(1-\frac{1}{p_{k}}).
+    $$
+\end{theorem}
+
+\begin{proof}
+    我们可以使用容斥原理来说明这个问题. 设$1\sim n$这$n$个正整数中$p_i$的倍数的集合
+    为$A_i, i=1,2,\cdots, k$, 则$|A_i|=n/p_i$; 同时是$p_i$和$p_j$的倍数的集合记作
+    $|A_iA_j|=n/(p_ip_j)$;同时是$p_i$和$p_j$和$p_k$的倍数的集合记作
+    $|A_iA_jA_k|=n/(p_ip_jp_k)$. 以此类推. 
+
+    那么我们现在考虑与他们不互素的数有多少个. 我们记作$\left|\bigcup A_i\right|$, 根据容斥原理(我们会在下一讲说明这个原理的正确性. ), 有
+    $$\left|\bigcup_{i=1}^k A_i\right|=\bigcup_{i=1}^k|A_i|-\bigcup_{1\leq i\leq j\leq k}|A_iA_j|+\bigcup_{1\leq i<j<m<k}|A_iA_jA_m|-\cdots+(-1)^{k-1}
+    |A_1A_2\cdots A_k|.$$
+    
+
+    也就是
+    $$
+    \left(\frac n{p_1}+\frac n{p_2}+\cdots + \frac n{p_k}\right)-
+    \left(\frac n{p_1p_2}+\frac n{p_3}+\cdots + \frac n{p_{k-1}p_k}\right)+
+    \left(\frac n{p_1p_2p_3}+\cdots + \frac n{p_{k-2}p_{k-1}p_k}\right)-\cdots 
+    +(-1)^k\frac{n}{p_1p_2\cdots p_k}. 
+    $$
+
+    于是与之互素的数是$\varphi(n)=n-\left|\bigcup A_i\right|$.
+
+    化简这个式子, 就有
+    $$\begin{aligned}
+        \varphi(n)=&n-\left|\bigcup_{i=1}^k A_i\right|\\
+        =&n\left(1-(\frac1{p_1}+\cdots+\frac1{p_k})+(\frac1{p_1p_2}+\cdots+\frac1{p_{k-1}p_2})-(\frac1{p_1p_2p_3}+\cdots+\frac1{p_{k-2}p_{k-1}p_k})\right.\\
+        &+\cdots+(-1)^{k}\left.\frac{1}{p_{1}\cdots p_{k}}\right) \\
+        =&n(1-\frac{1}{p_{1}})(1-\frac{1}{p_{2}})\cdots(1-\frac{1}{p_{k}})
+    \end{aligned}$$
+\end{proof}
+
+\lec{数论倒数}{介绍} 我们已经将同余方程里面写成了方程的形式. 我们自然地要问一问: 有没有
+办法解一个方程呢? 我们从最简单的一次同余式子开始看起. 
+
+\begin{definition}
+    设$m,a,b\in \Z$, $a\not \equiv 0 (\bmod m)$, 则$\ty {ax+b}{0}{m}$称为
+    一次同余或者一次同余方程. 我们说如果两个解不同, 是指互不同余的解. 
+\end{definition}
+
+\begin{theorem}
+    设$m\in \mathbb N_+, a,b\in \Z, a\not \equiv (\bmod m), $则$\ty {ax+b}0m$有解
+    $iff (a,m)|b$.  
+\end{theorem}
+
+\begin{proof}
+    $\implies: $设$c\in \Z$满足$\ty {ac+b}0m$, 则$ac+b=kx+m(k\in \Z)$. 设$d=(a,m)$
+    , 则$d|a, d|m \implies d|b. $ 
+    
+    $\impliedby: $ 设$d=(a,m)$且$d$是$b$的因数, 则$b=kd, k\in \Z$. 由Bezout定理, 
+    存在整数$u,v$, 使得$d=ua+vm$, 同时乘上$d$, 得到$kd=kua+kvm$, 即$kua+kvm=b$. 
+
+    令$c=-ku$, 则$-ca+kvm=b$, 移项就有$ac+b=\ty{kvm}0m$. 也就是$c$是$ax+b=0$的
+    一个整数解.
+\end{proof}
+
+但是解由多少个呢? 

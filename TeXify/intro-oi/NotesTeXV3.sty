@@ -652,7 +652,8 @@
 
 \NewDocumentCommand{\file}{v}{\fbox{$\Diamond C^{++}$\texttt{#1.cpp}}}
 
-\lstset{language=C,keywordstyle={\bfseries \color{blue}}}
+\lstset{language=C,keywordstyle={\bfseries \color{blue}},basicstyle=\ttfamily,
+}
 
 \newcommand{\incfig}[1]{{\center{\includegraphics[width=0.6\textwidth]{#1}}\\}}
 
@@ -660,3 +661,8 @@
 
 \newcommand{\stirling}[2]{\left\{{#1 \atop #2}\right\}}
 \newcommand{\binomt}[2]{\left(\left({#1 \atop #2}\right)\right)}
+\newcommand{\pf}[4]{#1_{#2}^{#3_{#4}}}
+\newcommand{\pl}[4]{#1_{#2}{#3^{#4}}}
+\newcommand{\ty}[3]{{#1} \equiv {#2} ~(\bmod {#3})}
+\newcommand{\Z}{{\mathbb Z}}
+

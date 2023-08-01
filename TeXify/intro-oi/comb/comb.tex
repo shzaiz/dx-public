@@ -1,3 +1,58 @@
 \part{组合数学与概率简介}
 
-TBD: 可能需要更多的时间来理解一些问题... 介绍点容斥原理和二项式系数. 
+\section{二项式系数}
+二项式系数由很多有趣的性质. 在计数原理一章中, 我们介绍了它的来历. 今天我们看一下
+它由什么好玩的性质. 
+
+组合恒等式看上去复杂, 但是其实挺有趣的。在学习组合数的时候会遇到一些组合恒等式，
+可能会觉得很难记忆和理解。我们可以用故事的方法记忆组合恒等式. 
+
+\begin{theorem} 对于$n\geq 0$的整数, 有
+    $$\binom nk = \binom {n}{n-k}$$
+\end{theorem}
+
+这个的含义是从$n$个元素中选出$k$个元素的组合数等于从$n$个元素中选出$n-k$个元素的组合数。
+
+\begin{theorem}对于整数$k$, 有
+    $$\binom nk = \binom {n-1}{k} + \binom {n-1}{k-1}$$
+\end{theorem}
+
+\begin{theorem} 对于$k\neq 0$, 有
+    $$\binom nk = \frac nk {\binom {r-1}{k-1}}$$
+\end{theorem}
+
+\begin{theorem} 对于$k\neq 0$, 有
+    $$\binom kk+\binom{k+1}k+\cdots+\binom{k+r}k=\binom{k+r+1}{k+1}$$
+\end{theorem}
+
+\begin{theorem}[Vandermonde卷积] 
+    $$\binom n0 \binom mr+\binom{n}1\binom{m}{r-1}+\cdots+\binom nr\binom m0=\binom{m+n}{r}$$
+\end{theorem}
+
+\lec{多项式乘法与二项式定理}{简介} 
+
+\section{概率问题简介} 
+
+\lec{条件概率}{简介} TBD... 列举几个我们玩过的游戏, 以及其中的概率
+
+\begin{definition}
+    事件是样本空间可能发生内容的子集, 概率是加到了事件上面. 
+\end{definition}
+
+\begin{axiom}
+    概率的可加性: 如果$A\cup B\neq \emptyset$, 那么$P(A\cup B)=P(A)+P(B)$. 
+
+    对于可列无穷的情形: $P(A\cup B\cup C\cup\cdots)=P(A)+P(B)+\cdots$. 
+\end{axiom}
+对于可数无穷的情形, 我们会发现很微妙的一件事情: 假设你有一个正方形, 上面随机选一个点, 那么这个
+点被选中的概率是多少? 一个点的面积是0, 所以我们的概率为0. 这时候你可能会发现, 概率为0的事件
+也有可能发生, 而不可能发生的时间概率为0. 这个到时候学习了测度论相关的内容就会知道数学家
+是如何构造的了. 
+
+我们接收到的信息总是部分的, 因此, 我们应该仔细探讨在给定一个情况下, 一个事情发生的概率. 
+
+假设我们在如下的概率空间里面: 
+
+TBD: A 3/6 AB 2/6 B1/6
+
+我们定义...
