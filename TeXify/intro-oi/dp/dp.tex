@@ -662,6 +662,14 @@ $f[i][1]=\min_k \{f[k][2]+\sum_{j\neq k}\min \{f[j][1], f[j][2]\}\}$. (首先$k$
     \hfill --- 魏恒峰, 在南京大学\href{https://www.bilibili.com/video/BV1K24y1u7eA}{编译原理}课上
 \end{quote}
 
+\begin{quote}
+    状态合并么？你GET dp的本质了。实际上，如果你去看计数问题，相当多的dp都是
+    找到一个好的特征，然后把集合划
+    分成同构/存在某种数量映射关系的子集，然后只算少量几次。特征就是关键
+
+    \hfill --- 蒋炎岩, 在一次聊天中
+\end{quote}
+
 \textbf{Takeaway Messages: }
 \begin{itemize}
     \item (!) 知道了动态规划其实就是对于有\textbf{最优子结构(也就是我们一直在用最优的小问题试图拼最优的大问题)}问题设计的更聪明地枚举(设计好重叠的小情形);

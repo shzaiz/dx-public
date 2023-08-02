@@ -29,11 +29,121 @@
     $$\binom n0 \binom mr+\binom{n}1\binom{m}{r-1}+\cdots+\binom nr\binom m0=\binom{m+n}{r}$$
 \end{theorem}
 
-\lec{多项式乘法与二项式定理}{简介} 
+\lec{多项式乘法与二项式定理}{简介} 我们在中学的时候学习多项式乘法, 比如
+$(x_1+x_2+x_3)(y_1+y_2+y_3)$. 我们可以通过表格的方法了解这一点. 例如下面
+的这个: 
+$$
+\begin{matrix}
+    &x_1  &x_2  &x_3  & \\
+    & \downarrow  & \downarrow & \downarrow & \\
+  y_1\rightarrow   & x_1y_1 &  x_1y_2& x_1y_3 & \\
+  y_2\rightarrow   & x_2y_1 &  x_2y_2& x_2y_3 & \\
+  y_3\rightarrow   & x_3y_1 &  x_3y_2& x_3y_3 &
+\end{matrix}
+$$
+这就不禁让我们想到乘法原理: 我们在每个括号中只能选择一个数, 然后把所有的括号
+都选满. 找到所有这样的内容再相加就好了. 这就天然地启发我们使用排列组合的
+内容.
+
+我们首先考虑比较简单的问题: 当我们遇到形如 $(a + b)^n$ 的表达式时，如何高效地展开
+它们，而不是逐项相乘？二项式定理为你揭示了谜底！这个定理告诉我们，任何实数 $a$ 和 
+$b$，以及正整数 $n$，它们的幂 $(a + b)^n$ 都可以用一种聪明的方式展开。
+
+我们先来看几个实例: 
+\begin{align*}
+&(a + b)^1 = a + b \\
+&(a + b)^2 = a^2 + 2ab + b^2 \\
+&(a + b)^3 = a^3 + 3a^2b + 3ab^2 + b^3 \\
+&(a + b)^4 = a^4 + 4a^3b + 6a^2b^2 + 4ab^3 + b^4
+\end{align*}
+注意到, 每一个之前都是我们之前算过的组合数. 于是我们猜测, $n$次的情形, 就有
+这样的形式: 
+\[
+(a + b)^n = \binom{n}{0} \cdot a^n \cdot b^0 + \binom{n}{1} \cdot a^{n-1} \cdot b^1 + \binom{n}{2} \cdot a^{n-2} \cdot b^2 + \ldots + \binom{n}{n} \cdot a^0 \cdot b^n
+\]
+这就是我们的二项式定理了. 
+
+\begin{theorem}[二项式定理]
+    如果$n$是一个正整数, 那么对于所有的$x,y$, 有
+    \[
+    (a + b)^n = \binom{n}{0} \cdot a^n \cdot b^0 + \binom{n}{1} \cdot a^{n-1} \cdot b^1 + \binom{n}{2} \cdot a^{n-2} \cdot b^2 + \ldots + \binom{n}{n} \cdot a^0 \cdot b^n,
+    \]
+    用求和记号缩写, 就有
+    $$
+    (x+y)^n = \sum_{k=0}^n \binom nk x^{n-k}y^k.
+    $$
+\end{theorem}
+\begin{proof}
+    将$(x+y)^n$写作$(x+y)(x+y)\cdots(x+y)$, 利用分配律将这个乘积完全展开，然
+    后再合并同类项。因为在将$(x+y)^n$乘开时，对于每一个因子$(x+y)$, 我们要么选
+    择$x$, 要么选择$y$, 所以结果有$2^n$项. 并且每一项都可以写成$x^{n-k}y^k$的
+    形式($k=0,1,\cdots,n$). 在$n$个因子中，$y$选择$k$且在剩下的因子自然就选择
+    了$x$, 我们就得到了$x^{n-k}y^k$. 由于这样的选法一共有$\binom nk$种, 自然
+    $$
+    (x+y)^n=\sum_{k=0}^n\binom nkx^{n-k}y^k
+    $$成立. 
+\end{proof}
+
+有了二项式定理, 那么对于多项式的乘法也有类似的结论. 其核心就是现在每个括号里面
+选择一个数, 然后把所有的选择的数乘起来, 最后把我们所有可能的选法加起来.  
+
+\section{容斥原理} 
+
+我们在上一次介绍计数问题的时候介绍了``减法原则''. 它允许我们使用整体减去部分的方式
+来得到我们要得到的问题. 这个有一个形象的名字, ``正难则反''. 下面, 我们来看一下 
+另一个类似的问题: 我们的加法原理只能胜任不相交集合的种类问题. 那我们相交的情况
+会如何呢? 
+
+从两个集合相交的情形开始看: 对于两个集合而言, 有
+$$|S-A \cup B|=|S|-|A|-|B|+|A \cap B|. $$
+这个感觉就像是逐渐地在调整. 减多了就加回来一点, 加多了就减掉一点. 
+对于三个集合而言, 我们就有
+$$
+\begin{aligned}
+|S-A \cup B \cup C| &=|S|-|A|-|B|-|C| \\
+&+|A \cap B|+|A \cap C|+|B \cap C| \\
+&-|A \cap B \cap C| 
+\end{aligned}
+$$
+
+这就启发我们能不能让这个问题推广到一般的情形. 因为许多问题都有 “交比并简单” 的
+性质. 如果我们能够用交求并, 这样很多麻烦的计数问题就可以求解了. 所以, 现在我们的 
+任务就是决定一个系数, 使得我们可以用集合的交表示集合的并. 我们一共有8个集合, 要
+算出他们的系数至少要8个未知数. 
+$$
+(x_0\mathrm{~}x_1\mathrm{~}x_2\mathrm{~}x_3\mathrm{~}x_4\mathrm{~}x_5\mathrm{~}x_6\mathrm{~}x_7)\cdot\left(\begin{array}{c}|\varnothing|=0\\|A|\\|B|\\|C|\\|A\cap B|\\|A\cap C|\\|B\cap C|\\|A\cap B\cap C|\end{array}\right)=|A\cup B\cup C|
+$$
+我们考虑从最简单的开始, 假设有一个元素的集合, 我们可以推出如下的表达式: 
+\begin{align*}
+    &e\in A,e\notin B,e\notin C \Rightarrow\boldsymbol{x}_1=1  \\
+    &e\in A,e\notin B,e\in C \Rightarrow x_1+x_3+x_5=1  \\
+    &e\in A,e\in B,e\in C ^{\prime}\Rightarrow x_1+x_2+x_3+x_4+x_5+x_6+x_7=1 
+\end{align*}
+
+如果推广到$n$个集合, 上述的思路仍然适用. 不过, 我们可以使用计算机的代数求解
+方程的工具: \href{https://jyywiki.cn/OI/counting.slides#/2/5}{比如使用
+Python的z3工具库}. 我们就一定程度上更加确定这个内容是对的了: 
+
+\begin{theorem}[容斥原理]
+    设  $S$  是一个有限集,  $A_{1}, A_{2}, \ldots, A_{n}$  是  $S$  的  $n$  个子集, 则
+
+$$\left|S-\bigcup_{i=1}^{n} A_{i}\right|=\sum_{i=0}^{n}(-1)^{i} \sum_{1 \leq j_{1}<j_{2}<\ldots<j_{i} \leq n}\left|\bigcap_{k=1}^{i} A_{j_{k}}\right| $$
+    
+\end{theorem}
+那么, 什么问题求交容易、求并难? 我们来看\ti{错排问题}: 求所有$1,2,\cdots ,n$排列中，每个数字都不在原位的排列数量.
+
+比如, $n=4$的情形, 记A, B,C,D 表示1,2, 3, 4恰好在第1, 2,3,4个位置的排列. 
+$n!-|A\cup B\cup C\cup D|$就是答案, 但是$|A|=(n-1)!, |A\cap C\cap D|=
+(n-3)!$, 求交很容易, 求并就不那么容易了. 
+
+容斥原理, 加法原理, 乘法原理之所以叫做原理, 当然是因为他们是非常通用的. 与其说做知识点
+我认为更好的内容是叫做它们一种思维. 
+
 
 \section{概率问题简介} 
 
-\lec{条件概率}{简介} TBD... 列举几个我们玩过的游戏, 以及其中的概率
+\lec{条件概率}{简介} 我们在中学时候玩过很多和概率有关的游戏. 我们先对于一些基本的概念做一个简单
+的回顾: 
 
 \begin{definition}
     事件是样本空间可能发生内容的子集, 概率是加到了事件上面. 

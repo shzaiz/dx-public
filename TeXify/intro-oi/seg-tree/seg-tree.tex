@@ -128,6 +128,10 @@ void adds(int x,int y){
         tnode t[MAXN]; 
         int mp[MAXN];
         //... 
+        void update(int o){
+            int ch = o<<1;
+            t[o].sum = t[ch].sum + t[ch+1].sum;
+        }
         void build(int o, int l, int r){
             t[o].l = l, t[o].r = r;
             if(l != r){
@@ -215,4 +219,88 @@ build 方法，构建左子树和右子树。
 如果前期训练不足的话, 后面就会埋下很大的隐患! 当然, 如果有热爱了坚持下去
 可能并不是最大的障碍. 关键是试图探讨更好的方法继续下去. }
 
-我们来
+我们来看一看我们应该在懒标记的情形下, 如何写代码. 在某些问题中, 我们需要首先
+把这个地方的标记往下推, 才可以继续做. 这里我们就不往下推了, 毕竟加法可以交换.
+我们在原来的\cw{TreeNode}结构体里面加上一个\cw{lazy}, 然后可以写如下的
+代码: 
+\begin{lstlisting}
+void change(int o, int l, int r, int delta){
+    pushdown(o);
+    if(t[o].l==l && t[o].r == r){
+        t[o].lazy += lazy;
+        return;
+    }
+    int ch = 2*o, mid = (t[o].l+t[o].r)/2;
+    if(r<=mid) change(ch, l, r, delta);
+    else if(mid<l) change(ch+1,l,r,delta);
+    else{
+        change(ch, l, mid, delta);
+        change(ch+1, mid+1, r, delta);
+        update(o);
+    }
+}
+\end{lstlisting}
+
+那么查询的时候, 我们来看一看懒标记是如何帮助我们还原原来的值的: 
+
+\begin{lstlisting}
+int query(int o, int l, int r){
+    pushdown(o);
+    if(t[o].l==l && t[o].r==r){
+        return t[o].sum +t[o].lazy*(r-l+1);
+    }
+    int ch = 2*o, mid = (t[o].l+t[o].r)/2;
+    if(r<=mid) return query(ch, l, r);
+    else if(mid<l) return query(ch+1,l,r);
+    else{
+        return query(ch, l, mid)
+               +query(ch+1, mid+1, r);
+    }
+}
+\end{lstlisting}
+
+我们之所以要\cw{change}的时候就要\cw{pushdown}, 是因为防止出现这个问题: 
+假设我们有操作(1): 将$l..r$变为一个数; (2): 将$l..r$加上一个数. 这时候 
+对于 $5\sim 8$变为3, 理所当然, 他会打上一个变3的标记. 然后我们 $5\sim 6$再
+加上1, 它会在$5\sim 6$上打上加1的记号. 现在假设我们要查询$5\sim 6$, 我们的 
+加1 的标记就会被上面的覆盖掉了. 得到错误的结果. 
+
+\lec{懒标记}{共性}我们来考察\cw{lazytag}的共性. 具体的, 我们发现懒标记在使用
+的时候有三种操作: 
+\begin{itemize}[noitemsep]
+    \item \cw{pushdown}: 将上面的一个标记清空, 把下面的两个标记传达这个上面的标记的内容;
+    \item \cw{cal_lazy}: 运用当前的现有数据和懒标记得到当前树节点的真实值. 
+    \item \cw{tag_union}: 如何将两个标记合并. 
+\end{itemize}
+
+在刚刚的举的例子中的应用, 我们就可以把上述的\cw{pushdown}写得更抽象一点: 
+\begin{lstlisting}
+void pushdown(int o){
+    cal_lazy(o); // 计算当前节点的懒标记影响下的真实值
+                 // t[o].sum +t[o].lazy*(r-l+1)
+    if(t[o].l == t[o].r){
+        int ch = o*2;
+        union_lazy(o, ch); // 将当前节点和左孩子的懒标记合并
+                           // t[ch].lazy += t[o].lazy
+        union_lazy(o, ch+1); // 将当前节点和右孩子的懒标记合并
+                             // t[ch+1].lazy += t[o].lazy
+    }
+    init_lazy(o); // 将当前节点的标记清空
+                  // t[o].lazy = 0; 
+}
+\end{lstlisting}
+
+这样子, 剩下的代码还是正常书写. 我们就理解了一个最简单的懒标记. 
+
+我们来看一个例子, 这个例子是既有加, 又有乘的标记. 考虑到这两点, 我们
+假设有懒标记$a$和$b$, 他们的任务是对于一个\cw{sum}, 它们的任务是
+$\texttt{sum} \to a\times\texttt{sum}+b$. 我们按照上面的内容考虑: 
+
+\ca{区间标记的合并} 假设第一块上面有现在的和$x_1$, 加法懒标记$a_1$, 
+乘法懒标记$b_1$, 第二块有现在的和$x_2$加法懒标记$a_2$, 乘法懒标记$b_2$. 我们如何取呢? 因为我们的标记是实时往下推的, 位于上面的标记一定是后来的, 在下面的标记
+一定是先来的. 这样子, 我们的结果就是$a_1(a_2x+b_2)+b_1$. 化简有
+$a_1a_2x+a_1b_2+b_1$. 这就是线段树懒标记的合并. 
+
+在考虑这个的时候, 剩下的就顺便考虑到了. 这个想法写这个问题还是很好的. 其实这个
+问题可以同样运用区间的平方. 我们可以看\file{lazy-tag}文件的关注\cw{sum[0]}
+的部分. \cw{sum[1]}维护了区间的平方和. 需要一点求和的技巧. 

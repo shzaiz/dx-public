@@ -1,0 +1,13 @@
+\begin{thebibliography}{}
+
+\bibitem[Erickson, ]{algobook}
+Erickson, J.
+\newblock {\em Algorithms}.
+\newblock Independently published.
+
+\bibitem[Jiang, ]{jyyos-prog}
+Jiang, Y.
+\newblock 应用视角的操作系统.
+\newblock Retrieved from \url{https://jyywiki.cn/OS/2023/build/lect2.ipynb}.
+
+\end{thebibliography}

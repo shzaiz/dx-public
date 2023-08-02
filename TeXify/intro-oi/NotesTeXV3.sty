@@ -638,8 +638,20 @@
 \end{oldthebibliography}%
 }
 
+% Exercise environment
+\usepackage{chngcntr}
+\newcounter{exercise}
+\setcounter{exercise}{0}
+
+\newenvironment{exercise}[1]
+{\refstepcounter{exercise}\par\medskip\noindent\textbf{Exercise \theexercise: #1}\quad\\}
+{\par\medskip}
+
+\counterwithin{exercise}{section}
+
 \usepackage{listings}
 
+% New commands
 \usepackage{xparse}
 \usepackage{ marvosym }
 
@@ -647,6 +659,9 @@
 \newcommand{\ti}[1]{\Faxmachine\textbf{#1.}}
 \newcommand{\ca}[1]{\textbf{#1.}}
 \NewDocumentCommand{\codeword}{v}{%
+\texttt{#1}%
+}
+\NewDocumentCommand{\cw}{v}{%
 \texttt{#1}%
 }
 
