@@ -175,7 +175,7 @@ Euclid发现了这样一个算法并声称:$\gcd(m, n) = \gcd(n\%m, n)$.
     持续地辗转相除, 即可得到. 
 \end{example}
 
-\lec{Bezout定理}{简介} TBD...Bezout定理可以帮助我们解决这样一类整数不定方程的问题: 
+\lec{Bezout定理}{简介} 给定两个整数$a$和$b$, 我们希望找到整数$x$和$y$, 使得满足方程 $ax + by = c$. Bezout定理可以帮助我们解决这样一类整数不定方程的问题: 
 
 \begin{theorem}
     设$d=(a, b)$, 则存在$x,y\in\mathbb Z$, 使得$xa+yb=d$. 
@@ -275,7 +275,7 @@ $\exists k_1, k_2, k_3,\cdots, k_n\in \mathbb Z$, 使得$k_1a_1+k_2a_2+\cdots+k_
 \lec{算术基本定理}{介绍} 算术基本定理, 也被称为质因数分解定理, 是数论中的一个重要结果. 它告诉我们, 每个大于1
 的整数都可以唯一地表示为一系列质数的乘积, 而且这个表示方式是唯一的. 
 
-TBD: 一个无穷维的空间
+\incfig{dp/dimension.png}
 
 \begin{theorem}[算术基本定理]
     设$n$是一个大于1的正整数, 则它可以写成$n=p_1p_2\cdots p_k$, 其中$p_i
@@ -573,13 +573,15 @@ b_n$是模$m$和模$n$的两个完全剩余系, 那么$\{na_i+mb_j:1\leq i\leq m
     一次同余或者一次同余方程. 我们说如果两个解不同, 是指互不同余的解. 
 \end{definition}
 
-\begin{theorem}
-    设$m\in \mathbb N_+, a,b\in \Z, a\not \equiv (\bmod m), $则$\ty {ax+b}0m$有解
+\begin{theorem}\label{thm:have_sol}
+    设$m\in \mathbb N_+, a,b\in \Z, a\not \equiv (\bmod m), 
+    $则$\ty {ax+b}0m$有解
     $\iff (a,m)|b$.  
 \end{theorem}
 
 \begin{proof}
-    $\implies: $设$c\in \Z$满足$\ty {ac+b}0m$, 则$ac+b=kx+m(k\in \Z)$. 设$d=(a,m)$
+    $\implies: $设$c\in \Z$满足$\ty {ac+b}0m$, 则$ac+b=kx+m(k\in \Z)$. 
+    设$d=(a,m)$
     , 则$d|a, d|m \implies d|b. $ 
     
     $\impliedby: $ 设$d=(a,m)$且$d$是$b$的因数, 则$b=kd, k\in \Z$. 由Bezout定理, 
@@ -589,4 +591,124 @@ b_n$是模$m$和模$n$的两个完全剩余系, 那么$\{na_i+mb_j:1\leq i\leq m
     一个整数解.
 \end{proof}
 
-但是解由多少个呢? 
+但是解有多少个呢? 我们可以说明在模$m$的意义下, 如果$(a,m)=1$, 那么解只有一个. 
+\begin{proof}
+    存在性容易证明. 唯一性使用老办法. 假设$\ty{ax_1+b}0m, \ty{ax_2+b}0m, $相减,
+    就有$\ty {a(x_1-x_2)}0m$, 也就是$m|(x_1-x_2)$, 也就是$\ty {x_1}{x_2}m$. 
+    他们其实是同一个解. 它的解是唯一的. 
+\end{proof}
+
+好, 我们就差得到一般性的情况就剩一点了. 刚刚我们得到的定理\ref{thm:have_sol}
+有多少个解呢? 我们可以使用上述说的推论1解决这个问题. 假设$(a,m)=d$, 有$d$个解
+可以通过把它转化为上面的公因数为1的情形(除以$d$). 我们来看下证明: 
+
+\begin{proof}
+    设$d=(a,m)$, 这时候我们两边同时除以一个$d$, 也就是$$\frac ad x + \frac bd 
+    \equiv k\frac md~\left(\bmod \frac md\right),$$由于$(a/d, m/d)=1$, 根据
+    上述的推论, 有唯一解. 于是, $\ty x c {m\over d}$有唯一的$x$成立. 写作等式的
+    形式, 就是$x=c+k\frac km$, 其中$k\in \Z$为其解. 
+
+    下面证明$c+0\times \frac md ,c+1\times \frac md ,c+2\times \frac md 
+    ,\cdots, c+(d-1)\times \frac md $模$m$意义下两两不同余. 对于$x=c+k\frac dm$,
+    $k$是任意整数的情况下, 对$k$做带余除法, $k=qd+r, 0\leq r<d-1$. 则
+    $x=c+(qd+r)\frac md=c+r\frac md+qm$ 这时候它模$r$的余数就是$c+r\frac md$. 
+
+    我们假设$0\leq i<j\leq d-1$, 使得$i\cdot \frac md \equiv j \frac md 
+    (\bmod m)$, 改写作等式, 就有$j\frac md \equiv i \frac md + km, k\in \Z$. 
+    这时候同时约去$m$, 得到$\frac jd - \frac id = k$, 即$(j-i)/d=k$. 也就是
+    $d|(j-i)$. 由于$0\leq j-i \leq d $, 根据整除的性质, 可以知道$j=i$. 矛盾. 
+\end{proof}
+
+这下子, 我们发现模意义下, 有些事情变得不那么好了. 有些一次方程没有解, 有些一次方程有很多
+解. 这就为我们定义``逆''造成了障碍. 但幸好, 当模数和一次项前面的系数互质的时候, 我们
+还是可以像原来那样定义的. 于是我们给出如下的定义: 
+
+\begin{definition}
+    设$m\geq 2, m\in \mathbb N_+$, 若$a\in\Z$且$(a,m)=1$, 则存在唯一的$b:1\leq
+    b\leq m-1, b\in \Z$, 使得$\ty {ab}1m$. 
+
+    我们将$b$称为$a$模$m$的逆, 又叫做$a$模$m$的数论倒数. 记作$a^{-1} (\bmod m)$.
+    在一些熟知的情况下, 后面的模$m$记号可以省略不写. 
+\end{definition}
+
+\lec{乘法逆元}{简介} 正如上面的定义所指出的, $a^{-1}(\bmod m)$表示与$a$相乘模$m$
+余1的整数. 例如$\ty {2^{-1}}47$, 因为$(2\times 4)\bmod 7=1.$ 
+
+为什么叫做数论倒数呢? 在代数里面, $a^{-1}$是$1/a$, 在同余意义下, 我们将这一个概念推广
+进而得到了这样的一个东西. 在后续的学习中, 你将会接触到``单位元, 零元''
+\mn{有可能先在《高等代数》里面见到, 再在《抽象代数》里面见到.}这种从我们常见的
+等式中出发, 但是内涵远远超过了等式本身的内容. 在类比的时候, 我们必须给出合理性的证明. 
+比如, $a^{-1}\equiv \frac{a\cdot a^{-1}}{a}\equiv \frac 1a (\bmod m)$. 
+例如一个想法是$2^{-1}\equiv \frac12 \equiv \equiv 48\equiv 4/1(\bmod 7)$. 
+
+那么有没有什么系统化的算法求解数论倒数(乘法逆元)的问题呢? 在这之前, 我们同样发掘一些
+这方面的性质: 
+
+(1) 设$a\in \Z,(m,a)=1, $则$(a^{-1})^{-1}\equiv a (\bmod m)$. 
+
+下面的两个性质主要考察原来的数和在与之互质的数之间的对应关系. 
+
+(2) 设整数$a_1, a_2\in \Z, (m, a_1), (m, a_2)$, 若${a_1}\not \equiv{a_2} 
+(\bmod m)$, 则$a_1^{-1}\not \equiv a_2^{-1}(\bmod m)$. 我们可以使用反证法. 
+这就说明每一个数和倒数之间是单射. 
+
+\begin{proof}
+    假设$a_1\equiv a_2\equiv r (\bmod m)$, 则
+    \begin{align*}
+        1\equiv a_1\cdot a_1^{-1} & \equiv a_1r (\bmod m)
+        1\equiv a_2\cdot a_2^{-1} & \equiv a_2r (\bmod m)
+    \end{align*}
+    两式相减, 就有$(a_1-a_2)r\equiv 0 (\bmod m)$. 由于$(r,m)=1,$ 
+    $a_1\equiv a_2 (\bmod m)$, 矛盾. 
+\end{proof}
+
+(3) 接下来来说明这个原来的数和倒数是一一对应的. 我们考虑集合$\phi=\{a: 
+1\leq a\leq m, (a,m)=1\}$. 我们在$f$到它自身之间构造一个映射, 也就是映射 
+$f:\phi \to \phi, a\mapsto f(a):=a^{-1} (\bmod m)$. 我们证明$\phi$是双射.
+
+\begin{proof}
+    任意取一个$b\in \phi$, 令$b=a^-1(\bmod m)$. 则$f(b)=b^{-1}$, 那么有 
+    $f(b)=b^{-1}\equiv (a^{-1})^{-1}\equiv a (\bmod m)\in \phi$. 
+    于是$f$是满射. 
+
+    由于单射前面已经证明了, 我们断定$f$是满射. 
+\end{proof}
+
+这就意味着, 如果我们的$m=p$是素数, 当$a$跑遍$1\sim p-1$的时候, 
+$a^{-1}(\bmod p)$也跑遍$1\sim 
+p-1$. 例如$m=7$的时候, $\phi=\{1,2,3,4,5,6\}$, 在映射$f:\phi\to\phi$的情形下, 
+把$\phi$的每一个元素取倒数, 我们就有$\phi=\{1,4,5,2,3,6\}$. 它还是$1\sim 6$的集合. 
+
+\lec{Fermat小定理}{描述}  我们已经见识了数论倒数(乘法逆元)了. 但是我们仍需要一个类似于
+算法的内容求出乘法逆元. 为了方便起见, 我们都假设模数为素数. (也是通常题目中会给的)
+我们给出定理描述: 
+\begin{theorem}
+    设$p$为素数, $a\in\Z$, 则$a^p\equiv a (\bmod p)$. 等价地, 若$(a,p)=1$, 
+    则$a^{p-1}\equiv 1(\bmod p)$. 
+\end{theorem}
+
+\begin{proof}
+    由于两个定理的等价性, 不妨值证明第二个. 
+
+    引理: 当$p$为素数的时候, $a\in \Z,(a,p)=1$的时候, $a,2a,3a,\cdots,(n-1)a$
+    构成$\bmod p$的完全剩余系. 只需要证明他们是两两不同余的. 使用反证法, 假设 
+    $\ty{ia}{jy}p,1\leq i<j\leq p-1$, 就有$p|a(j-i)$. 由于$(a,j)=1$, 只有可能
+    是$p|(j-i)$. 由于$i, j$的范围, 直到$j-i>0, j-i<p-1<p$, 只可能$j-i=0$. 
+    $j=i$, 矛盾. 引理得证. 
+
+    根据引理, 将上述的问题乘起来, $a\cdot 2a\cdot 3a\cdots(p-1)a
+    \equiv 1(\bmod p)$,
+    左边, 有$a^{p-1}(p-1)!\equiv (p-1)! (\bmod p)$, 由于$((p-1)!,p)\equiv 1(\bmod p)$, 因此$a^{p-1}\equiv 1(\bmod p)$. 
+\end{proof}
+
+这个定理的逆定理是``找到$\ty {a^p}ap$''的合数$p$. 这个被称为``伪素数''. 当时人们的
+数学水平还没有办法直接证明这个假说, 也因为没有足够的计算资源没有办法找到反例. 人们只是
+感觉这个定理的逆定理是成立的. 直到在Fermat小定理发现之后一百多年, 一位数学家发现了一个
+合数341, 它满足$2^n\equiv 2(\bmod n)$. 现在看, 我们很容易使用计算机计算这个等式. 
+
+\lec{Euler定理}{简介} 既然有了Femart小定理, 这个定理的一个推广形式是Euler定理:  
+\begin{theorem}
+    $\forall a,m\in \Z_+$, 如果$(a,m)=1$, 则一定满足$a^{\varphi(m)}\equiv 1
+    (\bmod m)$. 
+\end{theorem}
+

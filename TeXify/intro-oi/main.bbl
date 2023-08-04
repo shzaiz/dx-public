@@ -1,13 +1,29 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
 
-\bibitem[Erickson, ]{algobook}
-Erickson, J.
+\bibitem{Brualdi1992IntroductoryC}
+Richard~A. Brualdi.
+\newblock Introductory combinatorics.
+\newblock 1992.
+
+\bibitem{algobook}
+Jeff Erickson.
 \newblock {\em Algorithms}.
 \newblock Independently published.
 
-\bibitem[Jiang, ]{jyyos-prog}
-Jiang, Y.
+\bibitem{knuth1989concrete}
+Ronald~L. Graham, Donald~E. Knuth, and Oren Patashnik.
+\newblock {\em Concrete Mathematics: A Foundation for Computer Science}.
+\newblock Addison-Wesley, Reading, 1989.
+
+\bibitem{jyyos-prog}
+Yanyan Jiang.
 \newblock 应用视角的操作系统.
 \newblock Retrieved from \url{https://jyywiki.cn/OS/2023/build/lect2.ipynb}.
+
+\bibitem{liu2014}
+刘汝佳.
+\newblock {\em 算法竞赛入门经典 (第2版) :
+  算法艺术与信息学竞赛}.
+\newblock 清华大学出版社, 北京, 2014.
 
 \end{thebibliography}
