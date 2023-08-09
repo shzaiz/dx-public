@@ -14,45 +14,45 @@ The style file: plain.bst
 Database file #1: refs.bib
 Warning--empty booktitle in Brualdi1992IntroductoryC
 Warning--empty year in algobook
-You've used 5 entries,
+You've used 8 entries,
             2118 wiz_defined-function locations,
-            531 strings with 4691 characters,
-and the built_in function-call counts, 1173 in all, are:
-= -- 101
-> -- 46
+            549 strings with 4937 characters,
+and the built_in function-call counts, 1847 in all, are:
+= -- 165
+> -- 67
 < -- 0
-+ -- 19
-- -- 14
-* -- 52
-:= -- 208
-add.period$ -- 15
-call.type$ -- 5
-change.case$ -- 19
++ -- 28
+- -- 20
+* -- 82
+:= -- 328
+add.period$ -- 26
+call.type$ -- 8
+change.case$ -- 28
 chr.to.int$ -- 0
-cite$ -- 7
-duplicate$ -- 56
-empty$ -- 115
-format.name$ -- 14
-if$ -- 246
+cite$ -- 10
+duplicate$ -- 92
+empty$ -- 181
+format.name$ -- 20
+if$ -- 391
 int.to.chr$ -- 0
-int.to.str$ -- 5
-missing$ -- 7
-newline$ -- 28
-num.names$ -- 10
-pop$ -- 43
+int.to.str$ -- 8
+missing$ -- 13
+newline$ -- 44
+num.names$ -- 16
+pop$ -- 63
 preamble$ -- 1
-purify$ -- 17
+purify$ -- 26
 quote$ -- 0
-skip$ -- 32
+skip$ -- 50
 stack$ -- 0
-substring$ -- 25
-swap$ -- 5
+substring$ -- 40
+swap$ -- 8
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 14
+type$ -- 20
 warning$ -- 2
-while$ -- 10
-width$ -- 6
-write$ -- 51
+while$ -- 16
+width$ -- 9
+write$ -- 85
 (There were 2 warnings)
