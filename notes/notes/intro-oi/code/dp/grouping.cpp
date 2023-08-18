@@ -11,7 +11,10 @@ int main(){
 	F(i, 1, n){
 		int s; cin>>s;
 		F(j, 1, s)cin>>v[j]>>w[j];
-		Fd(j, m, 0) F(k, 1, s) if(j-v[k]>=0) f[j] = max(f[j], f[j-v[k]]+w[k]);
+		Fd(j, m, 0
+		  F(k, 1, s)
+		    if(j-v[k]>=0)
+		      f[j] = max(f[j], f[j-v[k]]+w[k]);
 	}
 	cout<<f[m]<<endl;
 }
