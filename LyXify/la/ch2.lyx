@@ -643,7 +643,7 @@ x_{1}^{n-1} & x_{2}^{n-1} & \cdots & x_{n}^{n-1}
 \end_layout
 
 \begin_layout Standard
-(与算法竞赛的联系) 这个公式保证了单位根构造多项式是可行的, 因此在FFT中间遇见过很多次.
+
 \end_layout
 
 \begin_layout Section
