@@ -1,0 +1,3213 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-article
+\begin_preamble
+% 如果没有这一句命令，XeTeX会出错，原因参见
+% http://bbs.ctex.org/viewthread.php?tid=60547
+\DeclareRobustCommand\nobreakspace{\leavevmode\nobreak\ }
+\usepackage{tikz}
+\usepackage[pdf]{pstricks}
+\usepackage{circuitikz}
+\end_preamble
+\options UTF8
+\use_default_options true
+\begin_modules
+theorems-bytype
+\end_modules
+\maintain_unincluded_children false
+\language chinese-simplified
+\language_package none
+\inputencoding utf8-plain
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
+\graphics default
+\default_output_format pdf4
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_title "大学物理C1回顾(2023春)"
+\pdf_author "张桄玮"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 3
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref page
+\pdf_pdfusetitle true
+\papersize a4paper
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle headings
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+大学物理C2: 复习与回顾
+\end_layout
+
+\begin_layout Author
+张桄玮
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\dd}{\mathrm{d}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\bs}[1]{\boldsymbol{#1}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\vec}[1]{\overrightarrow{#1}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\w}{\omega}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\bt}{\beta}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\red}[1]{{\color{red}#1}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\eqs}{\epsilon}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\ef}{\frac{1}{4\pi\eqs_{0}}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\pp}{\varphi}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand{
+\backslash
+incfig}[1]{
+\backslash
+begin{center}
+\backslash
+includegraphics[width=.4
+\backslash
+textwidth]{figs/#1.eps}
+\backslash
+end{center}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand{
+\backslash
+incfigw}[1]{
+\backslash
+begin{center}
+\backslash
+includegraphics[width=.8
+\backslash
+textwidth]{figs/#1.eps}
+\backslash
+end{center}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+热力学
+\end_layout
+
+\begin_layout Section
+热力学基础
+\end_layout
+
+\begin_layout Subsection
+温度.
+ 平衡态.
+ 理想气体状态方程
+\end_layout
+
+\begin_layout Standard
+1.
+ 描述气体的3个主要宏观状态参量
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+内容
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+单位
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+公式
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+体积
+\begin_inset Formula $V$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\texttt{m}^{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+压强
+\begin_inset Formula $p$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{Pa}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1Pa=1
+\begin_inset Formula $\text{N}\cdot\text{m}^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+温度
+\begin_inset Formula $T$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+K
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $T=t+273$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 各种气体方程的定义
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+定律
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+描述
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+公式
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Boyle定律
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+温度不变时， 
+\begin_inset Formula $p$
+\end_inset
+
+、
+\begin_inset Formula $V$
+\end_inset
+
+的乘积是常数
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $pV=C(t)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Gay-Lussac定律
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+压强不变时， 
+\begin_inset Formula $V$
+\end_inset
+
+ 随温度线性变化
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{V}{T}=\frac{V_{0}}{T_{0}}$
+\end_inset
+
+(开氏温标)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Charlies定律
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+体积不变时， 
+\begin_inset Formula $p$
+\end_inset
+
+ 随温度线性变化
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{p}{T}=\frac{p_{0}}{T_{0}}$
+\end_inset
+
+(开氏温标)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+阿伏伽德罗定律
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+相同温度和压强下，1mol任何气体体积相等
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+理想气体状态方程: 
+\begin_inset Formula $pV=\nu RT$
+\end_inset
+
+.
+ 其中
+\begin_inset Formula $R=8.31\text{J/(mol·K)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+3.
+ 
+\begin_inset Formula $pV=\nu RT$
+\end_inset
+
+的变形
+\end_layout
+
+\begin_layout Standard
+其中, 玻耳兹曼常数
+\begin_inset Formula $k$
+\end_inset
+
+是
+\begin_inset Formula $R/N_{A}$
+\end_inset
+
+.
+ 分子数密度
+\begin_inset Formula $n$
+\end_inset
+
+为
+\begin_inset Formula $n/V$
+\end_inset
+
+
+\begin_inset Formula $.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+热力学第一定律及其内容
+\end_layout
+
+\begin_layout Standard
+一.
+ 热力学第一定律
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+若干物理量及其性质
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="4cm">
+<column alignment="center" valignment="top" width="5cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+物理量
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+描述
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+规定
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+性质
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+内能
+\begin_inset Formula $E$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+状态量
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+相同的初态到末态, 经历不同的过程,
+\begin_inset Formula $E_{2}-E_{1}$
+\end_inset
+
+总是不变,
+\begin_inset Formula $A,Q$
+\end_inset
+
+随之改变.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+功
+\begin_inset Formula $A$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+过程量
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+热量
+\begin_inset Formula $Q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+过程量
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+正负
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $Q>0$
+\end_inset
+
+是从外界吸收热量;
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+表达
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+定义热容: 
+\begin_inset Formula $C=\frac{\dd Q}{\dd T}(\text{JK}^{-1})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+规定单位量:摩尔热容
+\begin_inset Formula $C_{m},$
+\end_inset
+
+比热容
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+规定过程: 
+\begin_inset Formula $C_{V,m}=\frac{1}{\nu}\left(\frac{\dd Q}{\dd T}\right)_{V},C_{p,m}=\frac{1}{\nu}\left(\frac{\dd Q}{\dd T}\right)_{p}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+体积功
+\emph default
+: 一定质量气体的准静态膨胀体积
+\begin_inset Formula $V_{1}\to V_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $A=\int_{V_{1}}^{V_{2}}p\dd V.$
+\end_inset
+
+ 
+\begin_inset Formula $A$
+\end_inset
+
+的大小是 
+\begin_inset Formula $p-V$
+\end_inset
+
+ 图中曲线下方面积.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+热力学第一定律的不同表达形式
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+形式
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+宏观描述
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+微分形式
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+热一律
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $Q=E_{2}-E_{1}+A$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\dd Q=\dd E+\dd A$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+准静态过程
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $Q=\Delta E+\int_{V_{1}}^{V_{2}}p\dd V$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\dd Q=\dd E+p\dd V$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+热容量恒定的准静态过程
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\nu C_{m}\Delta T=\Delta E+\int_{V_{1}}^{V_{2}}p\dd V$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\nu C_{m}\dd T=\dd E+p\dd V$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+理想气体的定容准静态过程
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $Q=\Delta E=\nu C_{V,m}\Delta T$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\dd Q=\nu C_{V,m}\dd T$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+理想气体的定压准静态过程
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\nu C_{P,m}\Delta T=\nu C_{V,m}\Delta T+\int_{V_{1}}^{V_{2}}p\dd V$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\nu C_{p,m}\dd T=\nu C_{V,m}\dd T+p\dd V$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+理想气体
+\end_layout
+
+\begin_layout Itemize
+内能和热容: 理想气体
+\begin_inset Formula $E$
+\end_inset
+
+仅与
+\begin_inset Formula $T$
+\end_inset
+
+有关.
+ 因此理想气体内能的改变有
+\begin_inset Formula $\dd E=\nu C_{V,m}\dd T,\Delta E=\nu C_{V,m}\Delta T.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+定容、定压摩尔热容
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $C_{V,m}=\frac{i}{2}R,i=\begin{cases}
+3 & \text{单原子分子}\\
+5 & \text{多原子分子}\\
+6 & \text{多原子分子}
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $C_{p,m}=C_{V,m}+R$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+二.
+ 准静态过程
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+基础准静态过程
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+等容过程
+\begin_inset Formula $\dd V=0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+过程方程
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $V=C$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $Q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\nu C_{V,m}(T_{2}-T_{1})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Delta E$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\nu C_{V,m}(T_{2}-T_{1})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+热容
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C_{V,m}=iR/2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+等压过程
+\begin_inset Formula $\dd p=0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+过程方程
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p=C$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p(V_{2}-V_{1})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $Q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\nu C_{p,m}(T_{2}-T_{1})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Delta E$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\nu C_{V,m}(T_{2}-T_{1})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+热容
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C_{p,m}=(i+2)R/2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+等温过程
+\begin_inset Formula $\dd T=0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+过程方程
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $pV=C$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\nu RT\ln\frac{V_{2}}{V_{1}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $Q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Delta E$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+热容
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C_{T,m}=\infty$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Phantom Phantom
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+绝热过程准静态过程
+\end_layout
+
+\begin_layout Itemize
+绝热过程方程: 
+\begin_inset Formula $pV^{\gamma}=C$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+推导过程: 根据热一律
+\begin_inset Formula $\nu C_{V,m}\dd T+p\dd V=0$
+\end_inset
+
+以及状态方程
+\begin_inset Formula $p\dd V+V\dd p=\nu R\dd T,$
+\end_inset
+
+消去
+\begin_inset Formula $\dd T$
+\end_inset
+
+, 得到
+\begin_inset Formula $(C_{V,m}+R)p\dd V+C_{V,m}V\dd p=0.$
+\end_inset
+
+带入比热比为
+\begin_inset Formula $\gamma=\frac{C_{p,m}}{C_{V,m}}$
+\end_inset
+
+得到
+\begin_inset Formula $\frac{\dd p}{p}+\gamma\frac{\dd V}{V}=0$
+\end_inset
+
+, 即可得到.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+绝热线比等温线更陡
+\end_layout
+
+\begin_layout Itemize
+绝热过程的功: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+使用绝热方程 
+\begin_inset Formula $pV^{\gamma}=p_{1}V_{1}^{\gamma}=p_{2}V_{2}^{\gamma}$
+\end_inset
+
+.
+ 意味着
+\begin_inset Formula $A=\int_{V_{1}}^{V_{2}}p\dd V=\int_{V_{1}}^{V_{2}}\frac{p_{1}V_{1}^{\gamma}}{V^{\gamma}}\dd V=\frac{1}{\gamma-1}(p_{1}V_{1}-p_{2}V_{2}).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+使用热一律: 
+\begin_inset Formula $A=-\Delta E=-\nu C_{V,m}(T_{2}-T_{1})$
+\end_inset
+
+, 可以和上面有一样的效果.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+绝热过程的热容: 
+\begin_inset Formula $C_{a,m}=\frac{1}{\nu}\left(\frac{\dd Q}{\dd T}\right)_{a}=0.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+气体动理论
+\end_layout
+
+\begin_layout Subsection
+气体分子热运动与统计规律.
+ 理想气体的压强与温度.
+\end_layout
+
+\begin_layout Standard
+1.
+ 理想气体的压强.
+ 
+\begin_inset Formula $p=\frac{1}{3}nm\overline{v^{2}}=\frac{2}{3}n\overline{\eqs_{t}}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+压强是统计量，大量分子统计平均。
+\end_layout
+
+\begin_layout Itemize
+压强公式建立起宏观量
+\begin_inset Formula $p$
+\end_inset
+
+与微观量
+\begin_inset Formula $\overline{\eqs_{t}}$
+\end_inset
+
+之间的联系
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\overline{\eqs_{t}}$
+\end_inset
+
+是分子无规则热运动的平均平动动能.
+ 不包括系统整体机械运动的动能.
+ 
+\end_layout
+
+\begin_layout Standard
+2.
+ 理想气体的温度.
+ 
+\begin_inset Formula $p=\frac{2}{3}n\overline{\eqs_{t}}=nkT\Rightarrow\red{\overline{\eqs_{t}}=\frac{3}{2}kT}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+温度是统计量
+\end_layout
+
+\begin_layout Itemize
+温度是分子平均平动能的量度
+\end_layout
+
+\begin_layout Itemize
+分子平均平动动能仅与温度有关, 与分子的质量(种类)无关。
+\end_layout
+
+\begin_layout Exercise
+试求 
+\begin_inset Formula $t=0^{\circ}\text{C}$
+\end_inset
+
+ 氮气分子的平均平动动能和方均根速率.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\overline{\eqs_{t}}=\frac{3}{2}kT=\frac{1}{2}m\overline{v^{2}},\sqrt{\overline{v^{2}}}=\sqrt{\frac{3kT}{m}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+容器内盛有一定质量的氧气，压强为1atm, 温度为27°C， 求:分子数密度，密度， 分子间平均距离，分子的平均平动能， 分子的方均根速率？
+\end_layout
+
+\begin_layout Exercise
+考虑使用
+\begin_inset Formula $pV=\nu RT$
+\end_inset
+
+的变形
+\begin_inset Formula $p=nkT$
+\end_inset
+
+以及
+\begin_inset Formula $\overline{\eqs_{t}}=\frac{3}{2}kT=\frac{1}{2}m\overline{v^{2}}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+麦克斯韦速率分布律.
+ 能量按自由度均分理论
+\end_layout
+
+\begin_layout Standard
+一.
+ 麦克斯韦速率分布律
+\end_layout
+
+\begin_layout Standard
+1.
+ 速率分布函数: 总分子数为 
+\begin_inset Formula $N$
+\end_inset
+
+ 的气体，温度为 
+\begin_inset Formula $T$
+\end_inset
+
+ 的平衡态, 
+\begin_inset Formula $f(v)$
+\end_inset
+
+：速率分布在 
+\begin_inset Formula $v$
+\end_inset
+
+ 所在单位速 率区间的概率(概率密度)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{\Delta v\to0}\frac{\Delta N}{N\Delta v}=\frac{\dd N}{N\dd v}=:f(v)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+满足性质: (归一化)
+\begin_inset Formula $\int_{0}^{\infty}f(v)\dd v=1.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+公式
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+区间
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+表达意义
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+特征
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $f(v)\dd v$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $v\sim v+\dd v$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+分子数比率
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\int_{0}^{\infty}f(v)\dd v=1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $Nf(v)\dd v$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+分子数
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\int_{0}^{\infty}Nf(v)\dd v=N$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $nf(v)\dd v$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+单位体积分子数
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\int_{0}^{\infty}nf(v)\dd v=n$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $0\sim v_{0}$
+\end_inset
+
+的平均速率
+\begin_inset Formula 
+\[
+\overline{v}=\frac{\int_{0}^{v_{0}}v\dd N}{\int_{0}^{v_{0}}\dd N}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 三种统计速率
+\end_layout
+
+\begin_layout Itemize
+最概然速率: 
+\begin_inset Formula $v_{p}=\sqrt{\frac{2kT}{m}}$
+\end_inset
+
+由于
+\begin_inset Formula $M=mN_{A},R=N_{A}k$
+\end_inset
+
+得到
+\begin_inset Formula $v_{p}=\sqrt{\frac{2RT}{M}}\approx\red{1.41}\sqrt{RT/M}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+平均速率: (期望) 
+\begin_inset Formula $\int_{0}^{+\infty}vf(v)\dd v=\sqrt{\frac{8}{\pi}\frac{kT}{m}}=\sqrt{\frac{8}{\pi}\frac{RT}{M}}\approx\red{1.60}\sqrt{\frac{RT}{M}}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+方均根速率(二阶矩) 
+\begin_inset Formula $\int_{0}^{\infty}v^{2}f(v)\dd v=\frac{3kT}{m},v_{\text{rms}}=\sqrt{\overline{v^{2}}}=\sqrt{\frac{3kT}{m}}=\sqrt{\frac{3RT}{M}}\approx\red{1.73}\sqrt{\frac{RT}{M}}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $v_{p}<\overline{v}<\sqrt{\overline{v^{2}}}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+二.
+ 能量按自由度均分定理
+\end_layout
+
+\begin_layout Standard
+1.
+ 自由度
+\begin_inset Formula $i$
+\end_inset
+
+: 确定物体空间位置所需要的独立坐标数目.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+类型
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+作用
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+个数
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+单原子分子
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+质点的平动(3)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+双原子分子
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
++键绕质心的转动(2)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+多原子分子
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
++绕定轴的转动(1)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 能量均分定理: 
+\begin_inset Formula $\overline{v_{x}}=\overline{v_{y}}=\overline{v_{z}}=\frac{1}{3}\overline{v^{2}}$
+\end_inset
+
+.
+ 结合温度的统计表达, 得到在温度为 
+\begin_inset Formula $T$
+\end_inset
+
+ 的平衡态下，气体分子
+\series bold
+每个自由度
+\series default
+上的 
+\emph on
+平均动能
+\emph default
+都相等，且等于 
+\begin_inset Formula $kT/2$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Itemize
+一个气体分子的平均动能=平均平动功能+平均转动动能, 
+\begin_inset Formula $\overline{\eqs}=\frac{i}{2}kT$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+3.
+ 理想气体的内能: 只包括分子热运动的动能.
+ 
+\begin_inset Formula $E=N\overline{\eqs}=N\frac{i}{2}kT=\nu\frac{i}{2}RT.$
+\end_inset
+
+ 
+\begin_inset Formula $\Delta E=\nu\frac{i}{2}R\Delta T$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+4.
+ 理想气体的热容: 
+\begin_inset Formula $\nu$
+\end_inset
+
+mol 理想气体在等体过程中吸收的热量
+\begin_inset Formula $\dd Q_{V}=\dd E=\nu\frac{i}{2}R\dd T$
+\end_inset
+
+, 并有迈耶公式
+\begin_inset Formula $C_{p,m}=C_{V,m}+R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+简谐振动
+\end_layout
+
+\begin_layout Standard
+一.
+ 运动学观点
+\end_layout
+
+\begin_layout Standard
+1.
+ 位移
+\begin_inset Formula $x(t)=A\cos(\omega t+\varphi).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+振幅
+\begin_inset Formula $A$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+角频率
+\begin_inset Formula $\omega$
+\end_inset
+
+(rad/s), 
+\begin_inset Formula $T=\frac{2\pi}{\omega}$
+\end_inset
+
+(s), 
+\begin_inset Formula $f=\frac{1}{T}=\frac{\omega}{2\pi}$
+\end_inset
+
+(Hz)
+\end_layout
+
+\begin_layout Itemize
+相位
+\end_layout
+
+\begin_layout Standard
+2.
+ 速度, 加速度 
+\begin_inset Formula 
+\begin{align*}
+v & =-\omega A\sin(\omega t+\varphi) & =\omega A\cos\left(\omega t+\varphi+\frac{\pi}{2}\right) & \text{超前}\frac{\pi}{2}\\
+a & =-\omega^{2}A\cos(\omega t+\pp)=-\omega^{2}x & =\omega^{2}A\cos(\omega t+\varphi+\pi) & \text{超前\ensuremath{\pi}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+3.
+ 位相差: 同频率的谐振动, 相差就是初相差.
+ 
+\begin_inset Formula $0<\Delta\pp<\pi.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+二.
+ 表达方法: 旋转矢量
+\end_layout
+
+\begin_layout Standard
+1.
+ 描述: 长度为
+\begin_inset Formula $A$
+\end_inset
+
+的矢量， 初位置与
+\begin_inset Formula $x$
+\end_inset
+
+轴正向夹角
+\begin_inset Formula $\pp$
+\end_inset
+
+匀角速度
+\begin_inset Formula $\omega$
+\end_inset
+
+逆时针旋转.
+ 
+\end_layout
+
+\begin_layout Standard
+2.
+ 合成.
+\end_layout
+
+\begin_layout Standard
+三.
+ 动力学观点
+\end_layout
+
+\begin_layout Standard
+1.
+ 弹簧振子: 
+\begin_inset Formula $F=-kx=ma=m\frac{\dd^{2}x}{\dd t^{2}},$
+\end_inset
+
+运动学方程
+\begin_inset Formula $\frac{\dd^{2}x}{\dd t^{2}}+\frac{k}{m}x=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+a)特点:
+\end_layout
+
+\begin_layout Itemize
+方程的解就是运动方程
+\end_layout
+
+\begin_layout Itemize
+角频率
+\begin_inset Formula $\omega=\sqrt{k/m}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+根据初始条件
+\begin_inset Formula $x_{0}=A\cos\pp,v_{0}=-A\omega\sin\pp$
+\end_inset
+
+决定
+\begin_inset Formula $A=\sqrt{x_{0}^{2}+\frac{v_{0}^{2}}{\omega^{2}}}$
+\end_inset
+
+和
+\begin_inset Formula $\pp=\arctan\left(-\frac{v_{0}}{\omega x_{0}}\right).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+b) 弹簧的串联和并联: 
+\begin_inset Formula $\omega_{\text{串}}=\sqrt{\frac{k_{1}k_{2}}{(k_{1}+k_{2})m}},\omega_{\text{并}}=\sqrt{\frac{k_{1}+k_{2}}{m}}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 其余情况: 化为
+\begin_inset Formula $\ensuremath{\frac{\mathrm{d}^{2}x}{\mathrm{d}t^{2}}+?x=0}$
+\end_inset
+
+的形式, 那么
+\begin_inset Formula $\sqrt{?}$
+\end_inset
+
+就是角速度.
+ 
+\end_layout
+
+\begin_layout Standard
+四.
+ 简谐运动的能量
+\end_layout
+
+\begin_layout Standard
+1.
+ 弹性势能: 
+\begin_inset Formula $E_{p}=\frac{1}{2}kx^{2}=\frac{1}{2}kA^{2}\cos^{2}(\omega t+\pp)$
+\end_inset
+
+, 
+\end_layout
+
+\begin_layout Standard
+2.
+ 动能
+\begin_inset Formula $\ensuremath{E_{k}=\frac{1}{2}mv^{2}=\frac{1}{2}m\omega^{2}A^{2}\sin^{2}(\omega t+\varphi)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+3.
+ 总能不变: 
+\begin_inset Formula $\ensuremath{\boldsymbol{E}=\boldsymbol{E}_{\boldsymbol{k}}+\boldsymbol{E}_{\boldsymbol{p}}=\frac{1}{2}kA^{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+五.
+ 同方向同频率的简谐振动的合成
+\end_layout
+
+\begin_layout Standard
+设质点在一条直线上同时参与 两个独立的频率相同的简谐振动, 
+\begin_inset Formula 
+\[
+\begin{aligned} & x_{1}=A_{1}\cos\left(\omega t+\varphi_{1}\right)\\
+ & x_{2}=A_{2}\cos\left(\omega t+\varphi_{2}\right)
+\end{aligned}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+合振动: 
+\begin_inset Formula $\ensuremath{A=\sqrt{A_{1}^{2}+A_{2}^{2}+2A_{1}A_{2}\cos\left(\varphi_{2}-\varphi_{1}\right)}}$
+\end_inset
+
+(余弦定理), 
+\begin_inset Formula $\ensuremath{\tan\varphi=\frac{y_{1}+y_{2}}{x_{1}+x_{2}}=\frac{A_{1}\sin\varphi_{1}+A_{2}\sin\varphi_{2}}{A_{1}\cos\varphi_{1}+A_{2}\cos\varphi_{2}}}$
+\end_inset
+
+(旋转矢量)
+\end_layout
+
+\begin_layout Section
+波动学基础
+\end_layout
+
+\begin_layout Standard
+一.
+ 波动三要素
+\end_layout
+
+\begin_layout Enumerate
+波长
+\begin_inset Formula $\lambda.$
+\end_inset
+
+相邻两个同相点之间 的距离
+\end_layout
+
+\begin_layout Enumerate
+周期
+\begin_inset Formula $T.$
+\end_inset
+
+振动的周期, 由波源决定
+\end_layout
+
+\begin_layout Enumerate
+波速
+\begin_inset Formula $u=\lambda/T$
+\end_inset
+
+.
+ 由媒质决定.
+\end_layout
+
+\begin_layout Standard
+二.
+ 平面简谐波的波函数
+\end_layout
+
+\begin_layout Standard
+波函数：
+\begin_inset Formula $y(x,t)$
+\end_inset
+
+表示
+\begin_inset Formula $t$
+\end_inset
+
+时刻、
+\begin_inset Formula $x$
+\end_inset
+
+位置处的质元关于平衡位置的位移.
+ 
+\end_layout
+
+\begin_layout Standard
+1.
+ 基础形式: 关键找到单位长度相差
+\begin_inset Formula $k:=\frac{2\pi}{\lambda}x.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+沿
+\begin_inset Formula $x$
+\end_inset
+
+正方向传播, 沿
+\begin_inset Formula $x$
+\end_inset
+
+方向相位处处落后.
+ 
+\begin_inset Formula $y=A\cos\left(\omega\red{-\frac{2\pi}{\lambda}x}+\pp_{o}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+沿
+\begin_inset Formula $x$
+\end_inset
+
+负方向传播, 沿
+\begin_inset Formula $x$
+\end_inset
+
+方向相位处处超前.
+ 
+\begin_inset Formula $y=A\cos\left(\omega\red{+\frac{2\pi}{\lambda}x}+\pp_{o}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 三种不同的形式
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\ensuremath{y=A\cos\left[\omega\left(t\mp\frac{x}{u}\right)+\varphi_{o}\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\ensuremath{y=A\cos\left[2\pi\left(\frac{t}{T}\mp\frac{x}{\lambda}\right)+\varphi_{o}\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\ensuremath{y=A\cos\left[\frac{2\pi}{\lambda}(ut\mp x)+\varphi_{o}\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+三.
+ 惠更斯原理
+\end_layout
+
+\begin_layout Standard
+1.
+ 折射定律: 
+\begin_inset Formula $\ensuremath{\frac{\sin i}{\sin r}=\frac{n_{2}}{n_{1}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 全反射临界角: 
+\begin_inset Formula $\sin i_{0}=n_{21}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+四.
+ 波的叠加
+\end_layout
+
+\begin_layout Standard
+1.
+ 在某位置
+\begin_inset Formula $P$
+\end_inset
+
+处的合振幅.
+ 
+\begin_inset Formula $\ensuremath{A=\sqrt{A_{1}^{2}+A_{2}^{2}+2A_{1}A_{2}\cos\Delta\varphi}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 相位差: 
+\begin_inset Formula 
+\begin{align*}
+\ensuremath{\Delta\varphi} & =\left(\omega t-kr_{2}+\varphi_{\mathrm{S}2}\right)-\left(\omega t-kr_{1}+\varphi_{\mathrm{S}1}\right)\\
+ & =\ensuremath{\left(\varphi_{\mathrm{S}2}-\varphi_{\mathrm{S}1}\right)-\frac{2\pi}{\lambda}\left(r_{2}-r_{1}\right)}\\
+ & \ensuremath{=\left\{ \begin{array}{r}
+\pm2k\pi\text{ 干涉加强 }A_{\mathrm{m}}\\
+\\
+\pm(2k+1)\pi\text{ 干涉减弱 }
+\end{array}\right.}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+3.
+ 初相相同（同相）
+\begin_inset Formula $\ensuremath{\Delta\varphi=\frac{2\pi}{\lambda}\left(r_{2}-r_{1}\right)=\frac{2\pi}{\lambda}\delta}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\ensuremath{\delta=\left\{ \begin{array}{l}
+\left(r_{2}-r_{1}\right)=\pm k\lambda\text{ 时, 干涉加强 }\\
+\left(r_{2}-r_{1}\right)=\pm\left(k+\frac{1}{2}\right)\lambda\text{ 时, 干涉减弱 }
+\end{array}(k=0,1,2\cdots)\right.}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+四.
+ 反射波波函数
+\end_layout
+
+\begin_layout Standard
+已知入射波沿x轴正方向
+\begin_inset Formula $\ensuremath{y=A\cos\left(\omega t-kx+\varphi_{0}\right)}$
+\end_inset
+
+引起P点的振动
+\begin_inset Formula $\ensuremath{y_{p}=A\cos\left(\omega t-ka+\varphi_{0}\right)}$
+\end_inset
+
+.
+ 设反射波（沿x轴负方向）
+\begin_inset Formula $\ensuremath{y^{\prime}=A\cos\left(\omega t+kx+\varphi_{0}^{\prime}\right)}$
+\end_inset
+
+引起P点的振动
+\begin_inset Formula $\ensuremath{y_{p}^{\prime}=A\cos\left(\omega t+ka+\varphi_{0}^{\prime}\right)}$
+\end_inset
+
+.
+ 无能量损失，故振幅相同； 同一介质中，故波长相同； 需要确定
+\begin_inset Formula $\pp_{0}'$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+波密
+\begin_inset Formula $\to$
+\end_inset
+
+ 波疏, 没有半波损失, 同相, 
+\begin_inset Formula $\ensuremath{\omega t+ka+\varphi^{\prime}=\omega t-ka+\varphi}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+波疏
+\begin_inset Formula $\to$
+\end_inset
+
+ 波密, 有半波损失, 反相, 
+\begin_inset Formula $\ensuremath{\omega t+ka+\varphi^{\prime}=\omega t-ka+\varphi\pm\pi}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+光的干涉
+\end_layout
+
+\begin_layout Standard
+一.
+ 光程, 光程差
+\end_layout
+
+\begin_layout Standard
+1.
+ 定义.
+ 折射率为n的介质中与路程差d对应的光程差
+\begin_inset Formula $\delta=nd$
+\end_inset
+
+.
+ 两点的位相差由光程差决定
+\begin_inset Formula $\Delta\pp=\frac{2\pi}{\lambda}\delta$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+平行光通过透镜汇聚在焦 点，说明同相面上各点到焦点 的路程不一，但是光程一致
+\end_layout
+
+\begin_layout Standard
+二.
+ 双缝干涉实验
+\end_layout
+
+\begin_layout Standard
+1.
+ 光程差: 
+\begin_inset Formula $\ensuremath{\delta=r_{2}-r_{1}\left\{ \begin{array}{l}
+=\pm k\lambda,k=0,1,2\cdots\text{ 明纹中心 }\\
+=\pm(2k-1)\frac{\lambda}{2},k=1,2\cdots\text{ 暗纹中心 }
+\end{array}\right.}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 条纹特点: 条纹级次正比于光程差.
+ 
+\end_layout
+
+\begin_layout Itemize
+条纹间距: 
+\begin_inset Formula $\ensuremath{\Delta x=\frac{D}{d}\lambda}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+各个级别纹路中心: 近轴小角近似:
+\begin_inset Formula $\ensuremath{\delta=d\sin\theta\approx d\tan\theta=d\cdot\frac{x}{D}}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+明纹中心 
+\begin_inset Formula $\delta=\pm\red k\lambda\rightarrow\sin\theta=\pm k\frac{\lambda}{d}$
+\end_inset
+
+, 
+\begin_inset Formula $\ensuremath{k=0,1,2\cdots}$
+\end_inset
+
+, 得到
+\begin_inset Formula $\ensuremath{x=\pm k\frac{D}{d}\lambda}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+暗纹中心 
+\begin_inset Formula $\delta=\pm(2k-1)\frac{\lambda}{2}\rightarrow\sin\theta=\pm(2k-1)\frac{\lambda}{2d}$
+\end_inset
+
+,
+\begin_inset Formula $\ensuremath{k=1,2\cdots}$
+\end_inset
+
+, 得到
+\begin_inset Formula $\ensuremath{x=\pm(k-\frac{1}{2})\frac{D}{d}\lambda}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+3.
+ 光强分布
+\end_layout
+
+\begin_layout Itemize
+合振动的振幅: 
+\begin_inset Formula $\ensuremath{E^{2}=E_{1}{}^{2}+E_{2}{}^{2}+2E_{1}E_{2}\cos\Delta\varphi}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+光强: 
+\begin_inset Formula $\ensuremath{I=I_{1}+I_{2}+2\sqrt{I_{1}I_{2}}\cos\Delta\varphi}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+三.
+ 薄膜干涉
+\end_layout
+
+\begin_layout Standard
+1.
+ 半波损失发生的条件: 
+\begin_inset Formula $n$
+\end_inset
+
+小
+\begin_inset Formula $\to$
+\end_inset
+
+
+\begin_inset Formula $n$
+\end_inset
+
+大.
+\end_layout
+
+\begin_layout Standard
+2.
+ 光程差:
+\begin_inset Formula $\delta(e)=2ne\left(+\frac{\lambda}{2}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+明纹： 
+\begin_inset Formula $\delta(e)=k\lambda,k=1,2,3,\cdots$
+\end_inset
+
+ 
+\begin_inset Formula $\Rightarrow e=\left(k-\frac{1}{2}\right)\frac{\lambda}{2\mathrm{n}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+暗纹: 
+\begin_inset Formula $\ensuremath{\delta(e)=(2k+1)\frac{\lambda}{2},k=0,1,2,\cdots}$
+\end_inset
+
+
+\begin_inset Formula $\ensuremath{\Rightarrow e=\frac{k\lambda}{2n}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+条纹间厚度差: 
+\begin_inset Formula $\ensuremath{\Delta e=\frac{\lambda}{2n}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+条纹间距: 
+\begin_inset Formula $\ensuremath{L=\frac{\Delta e}{\theta}=\frac{\lambda}{2n\theta}}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_body
+\end_document
