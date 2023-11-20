@@ -213,10 +213,6 @@ end{center}}
 
 \end_layout
 
-\begin_layout Part
-热力学
-\end_layout
-
 \begin_layout Section
 热力学基础
 \end_layout
@@ -578,7 +574,7 @@ Charlies定律
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 理想气体状态方程: 
 \begin_inset Formula $pV=\nu RT$
 \end_inset
@@ -597,10 +593,14 @@ Charlies定律
 \begin_inset Formula $pV=\nu RT$
 \end_inset
 
-的变形
+的变形: 
+\begin_inset Formula $p=nkT,p=\frac{\rho}{M}RT$
+\end_inset
+
+
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 其中, 玻耳兹曼常数
 \begin_inset Formula $k$
 \end_inset
@@ -625,6 +625,10 @@ Charlies定律
 
 \end_layout
 
+\begin_layout Itemize
+混合理想气体状态与单个一致.
+\end_layout
+
 \begin_layout Subsection
 热力学第一定律及其内容
 \end_layout
@@ -635,9 +639,7 @@ Charlies定律
 \end_layout
 
 \begin_layout Standard
-
-\emph on
-若干物理量及其性质
+1.若干物理量及其性质
 \end_layout
 
 \begin_layout Standard
@@ -1026,11 +1028,8 @@ Charlies定律
 \end_layout
 
 \begin_layout Standard
-
-\emph on
-体积功
-\emph default
-: 一定质量气体的准静态膨胀体积
+2.
+ 体积功: 一定质量气体的准静态膨胀体积
 \begin_inset Formula $V_{1}\to V_{2}$
 \end_inset
 
@@ -1050,9 +1049,8 @@ Charlies定律
 \end_layout
 
 \begin_layout Standard
-
-\emph on
-热力学第一定律的不同表达形式
+3.
+ 热力学第一定律的不同表达形式
 \end_layout
 
 \begin_layout Standard
@@ -1327,9 +1325,7 @@ Charlies定律
 \end_layout
 
 \begin_layout Standard
-
-\emph on
-基础准静态过程
+1.基础准静态过程
 \end_layout
 
 \begin_layout Standard
@@ -1814,9 +1810,8 @@ status open
 \end_layout
 
 \begin_layout Standard
-
-\emph on
-绝热过程准静态过程
+2.
+ 绝热过程准静态过程
 \end_layout
 
 \begin_layout Itemize
@@ -2055,6 +2050,7 @@ status open
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="4">
 <features tabularvalignment="middle">
@@ -2242,7 +2238,7 @@ status open
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 \begin_inset Formula $0\sim v_{0}$
 \end_inset
 
@@ -2317,6 +2313,7 @@ status open
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="3">
 <features tabularvalignment="middle">
@@ -2482,7 +2479,11 @@ status open
 
 \begin_layout Standard
 3.
- 理想气体的内能: 只包括分子热运动的动能.
+ 理想气体的内能: 
+\end_layout
+
+\begin_layout Itemize
+只包括分子热运动的动能.
  
 \begin_inset Formula $E=N\overline{\eqs}=N\frac{i}{2}kT=\nu\frac{i}{2}RT.$
 \end_inset
@@ -2573,6 +2574,7 @@ a & =-\omega^{2}A\cos(\omega t+\pp)=-\omega^{2}x & =\omega^{2}A\cos(\omega t+\va
 \end_layout
 
 \begin_layout Standard
+\noindent
 3.
  位相差: 同频率的谐振动, 相差就是初相差.
  
@@ -2583,11 +2585,13 @@ a & =-\omega^{2}A\cos(\omega t+\pp)=-\omega^{2}x & =\omega^{2}A\cos(\omega t+\va
 \end_layout
 
 \begin_layout Standard
+\noindent
 二.
  表达方法: 旋转矢量
 \end_layout
 
 \begin_layout Standard
+\noindent
 1.
  描述: 长度为
 \begin_inset Formula $A$
@@ -2610,16 +2614,19 @@ a & =-\omega^{2}A\cos(\omega t+\pp)=-\omega^{2}x & =\omega^{2}A\cos(\omega t+\va
 \end_layout
 
 \begin_layout Standard
+\noindent
 2.
  合成.
 \end_layout
 
 \begin_layout Standard
+\noindent
 三.
  动力学观点
 \end_layout
 
 \begin_layout Standard
+\noindent
 1.
  弹簧振子: 
 \begin_inset Formula $F=-kx=ma=m\frac{\dd^{2}x}{\dd t^{2}},$
@@ -2632,10 +2639,11 @@ a & =-\omega^{2}A\cos(\omega t+\pp)=-\omega^{2}x & =\omega^{2}A\cos(\omega t+\va
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 a)特点:
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
 方程的解就是运动方程
 \end_layout
@@ -2664,7 +2672,8 @@ a)特点:
 
 \end_layout
 
-\begin_layout Standard
+\end_deeper
+\begin_layout Itemize
 b) 弹簧的串联和并联: 
 \begin_inset Formula $\omega_{\text{串}}=\sqrt{\frac{k_{1}k_{2}}{(k_{1}+k_{2})m}},\omega_{\text{并}}=\sqrt{\frac{k_{1}+k_{2}}{m}}.$
 \end_inset
@@ -2687,6 +2696,7 @@ b) 弹簧的串联和并联:
 \end_layout
 
 \begin_layout Standard
+\noindent
 四.
  简谐运动的能量
 \end_layout
@@ -2719,6 +2729,7 @@ b) 弹簧的串联和并联:
 \end_layout
 
 \begin_layout Standard
+\noindent
 五.
  同方向同频率的简谐振动的合成
 \end_layout
@@ -2806,6 +2817,7 @@ b) 弹簧的串联和并联:
 \end_layout
 
 \begin_layout Standard
+\noindent
 1.
  基础形式: 关键找到单位长度相差
 \begin_inset Formula $k:=\frac{2\pi}{\lambda}x.$
@@ -2898,6 +2910,7 @@ b) 弹簧的串联和并联:
 \end_layout
 
 \begin_layout Standard
+\noindent
 四.
  波的叠加
 \end_layout
@@ -2959,6 +2972,7 @@ b) 弹簧的串联和并联:
 \end_layout
 
 \begin_layout Standard
+\noindent
 四.
  反射波波函数
 \end_layout
@@ -3015,6 +3029,10 @@ b) 弹簧的串联和并联:
 \end_layout
 
 \begin_layout Section
+光学
+\end_layout
+
+\begin_layout Subsection
 光的干涉
 \end_layout
 
@@ -3031,6 +3049,7 @@ b) 弹簧的串联和并联:
 \end_layout
 
 \begin_layout Standard
+\noindent
 一.
  光程, 光程差
 \end_layout
@@ -3038,7 +3057,11 @@ b) 弹簧的串联和并联:
 \begin_layout Standard
 1.
  定义.
- 折射率为n的介质中与路程差d对应的光程差
+ 折射率为
+\begin_inset Formula $n$
+\end_inset
+
+的介质中与路程差d对应的光程差
 \begin_inset Formula $\delta=nd$
 \end_inset
 
@@ -3056,11 +3079,13 @@ b) 弹簧的串联和并联:
 \end_layout
 
 \begin_layout Standard
+\noindent
 二.
  双缝干涉实验
 \end_layout
 
 \begin_layout Standard
+\noindent
 1.
  光程差: 
 \begin_inset Formula $\ensuremath{\delta=r_{2}-r_{1}\left\{ \begin{array}{l}
@@ -3073,6 +3098,7 @@ b) 弹簧的串联和并联:
 \end_layout
 
 \begin_layout Standard
+\noindent
 2.
  条纹特点: 条纹级次正比于光程差.
  
@@ -3221,6 +3247,22 @@ b) 弹簧的串联和并联:
  
 \end_layout
 
+\begin_layout Itemize
+判断是否有半波损失: (1) 是否反射 (2) 是不是光疏
+\begin_inset Formula $\to$
+\end_inset
+
+光密(
+\begin_inset Formula $n$
+\end_inset
+
+小到
+\begin_inset Formula $n$
+\end_inset
+
+大).
+\end_layout
+
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -3228,7 +3270,7 @@ b) 弹簧的串联和并联:
 
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 光的衍射
 \end_layout
 
@@ -3243,8 +3285,8 @@ b) 弹簧的串联和并联:
 \begin_inset Formula 
 \[
 \begin{aligned} & \theta=0,\delta=0 & \text{中央明纹}\\
- & a\sin\theta=\pm k\lambda,k=1,2,3\cdots\text{  } & \text{暗纹(偶数个半波带)}\\
- & a\sin\theta=\pm\left(2k^{\prime}+1\right)\frac{\lambda}{2},\quad k^{\prime}=1,2,3\cdots\text{  } & \text{明纹(中心,奇数个半波带)}
+ & a\sin\theta=\pm k\lambda,k=1,2,3\cdots\text{ } & \text{暗纹(偶数个半波带)}\\
+ & a\sin\theta=\pm\left(2k^{\prime}+1\right)\frac{\lambda}{2},\quad k^{\prime}=1,2,3\cdots\text{ } & \text{明纹(中心,奇数个半波带)}
 \end{aligned}
 \]
 
@@ -3264,5 +3306,391 @@ b) 弹簧的串联和并联:
  
 \end_layout
 
+\begin_layout Standard
+\noindent
+二.
+ 光栅衍射
+\end_layout
+
+\begin_layout Standard
+1.
+ 光栅常数: 
+\begin_inset Formula $d=a+b$
+\end_inset
+
+, 
+\begin_inset Formula $a$
+\end_inset
+
+是透光（或反光）部分的宽度, 
+\begin_inset Formula $b$
+\end_inset
+
+是不透光(或不反光)部分的宽度.
+ 
+\end_layout
+
+\begin_layout Standard
+2.
+ 多缝干涉受到单缝衍射的调制
+\end_layout
+
+\begin_layout Itemize
+光栅方程: 干涉主极大条件 
+\begin_inset Formula $d\sin\theta=\pm k\lambda,k=0,1,2,\cdots$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+干涉主级大缺级级次: 
+\begin_inset Formula $k=\frac{d}{a}k',k'=1,2,3,\cdots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+相邻主极大之间有多少暗纹, 
+\begin_inset Formula $N$
+\end_inset
+
+等于它加1.
+ 
+\end_layout
+
+\begin_layout Subsection
+光的偏振
+\end_layout
+
+\begin_layout Standard
+经过偏振片: 
+\end_layout
+
+\begin_layout Itemize
+自然光
+\begin_inset Formula $I=\frac{1}{2}I_{0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+线偏振光
+\begin_inset Formula $I=I_{0}\cos^{2}\alpha.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+布儒斯特定律: 与法线夹角
+\begin_inset Formula 
+\[
+\tan i_{0}=\frac{n_{2}}{n_{1}}=n_{21}
+\]
+
+\end_inset
+
+的时候反射为完全偏振光.
+ 
+\end_layout
+
+\begin_layout Section
+量子论
+\end_layout
+
+\begin_layout Standard
+常见的常数: 
+\begin_inset Formula $h=6.63\times10^{-34}\text{J}\cdot\text{s},1\text{eV}=1.6\times10^{-19}\text{J},1\text{e}=1.6\times10^{-19}\text{C}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+早期量子论
+\end_layout
+
+\begin_layout Standard
+1.
+ 光电效应: 
+\begin_inset Formula $\eqs=h\nu,\frac{1}{2}mv_{m}^{2}=h\nu-A.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+实验规律: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+瞬时发生, 不需要时间积累
+\end_layout
+
+\begin_layout Itemize
+频率不变, 饱和光电流
+\begin_inset Formula $i_{m}$
+\end_inset
+
+入射光的强度成正比
+\end_layout
+
+\begin_layout Itemize
+电子具有一定的初动能.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+光电流=0时的反向电压: 截止电压
+\end_layout
+
+\begin_layout Itemize
+入射光的强度无关
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+不同的金属，都 存在截止（红限）频率
+\begin_inset Formula $\nu_{0}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+2.
+ 玻尔的氢原子理论
+\end_layout
+
+\begin_layout Itemize
+氢原子轨道半径
+\begin_inset Formula $r=0.053\text{nm},$
+\end_inset
+
+基态能量
+\begin_inset Formula $E=-13.6\text{eV}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E_{n}=-\frac{1}{n}|E_{1}|^{2},r_{n}=n^{2}r_{1}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+三个谱系
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Lyman系: 
+\begin_inset Formula $k=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Balmer系: 
+\begin_inset Formula $k=2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Paschen系: 
+\begin_inset Formula $k=3$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+跃迁时: 
+\begin_inset Formula $h\nu=E_{n}-E_{k},n>k.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+3.德布罗意波 
+\end_layout
+
+\begin_layout Itemize
+实物粒子具有波动性: 
+\begin_inset Formula $\eqs=mc^{2}=h\nu,\red{\vec p=m\vec v=\frac{h}{\nu}\vec n}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+求物质波的波长
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+不考虑相对论效应
+\begin_inset Formula $p=m_{0}v$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+考虑相对论效应
+\begin_inset Formula $E=E_{0}+E_{k},E=mc^{2}$
+\end_inset
+
+, 当
+\begin_inset Formula $E_{0}\sim E_{k}$
+\end_inset
+
+的时候.
+ 
+\end_layout
+
+\begin_layout Itemize
+考虑
+\begin_inset Formula $p^{2}c^{2}+E_{0}^{2}=E^{2},p^{2}c^{2}=E^{2}-E_{0}^{2}=(E-E_{0})(E+E_{0})=eU(eU+2m_{0}c^{2}).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+极端相对论: 
+\begin_inset Formula $eU^{2}=p^{2}c^{2},p=\frac{eU}{c},\lambda=\frac{hc}{eU}.$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+4.
+ 不确定性关系
+\end_layout
+
+\begin_layout Itemize
+叙述: 
+\begin_inset Formula $\Delta x\Delta p_{x}\geq\frac{\bar{h}}{2},\Delta x=\frac{\bar{h}}{2\Delta p_{x}}=\frac{h}{4\pi\Delta p_{x}}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+5.
+ 波函数
+\end_layout
+
+\begin_layout Itemize
+波函数模的平方
+\begin_inset Formula $|\Psi(\vec r,t)|^{2}$
+\end_inset
+
+为
+\begin_inset Formula $t$
+\end_inset
+
+时刻, 
+\begin_inset Formula $\vec r$
+\end_inset
+
+处单位体积发现一个粒子的概率.
+\end_layout
+
+\begin_layout Itemize
+满足的性质
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+归一化: 
+\begin_inset Formula $\int_{\Omega}|\Psi(\vec r,t)|^{2}\dd V=1.$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+6.
+ 原子中的电子
+\end_layout
+
+\begin_layout Itemize
+三个量子数
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+主量子数
+\begin_inset Formula $n=1,2,3\cdots,E_{n}=-13.6\frac{1}{n^{2}}\text{eV}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $n$
+\end_inset
+
+ 相同组成壳层
+\end_layout
+
+\begin_layout Itemize
+角量子数
+\begin_inset Formula $l=0,1,\cdots n-1$
+\end_inset
+
+共
+\begin_inset Formula $n-1$
+\end_inset
+
+个.
+ 
+\begin_inset Formula $L=\sqrt{l(l+1)}\bar{h}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $l$
+\end_inset
+
+ 相同组成支壳层.
+\end_layout
+
+\begin_layout Itemize
+角动量空间取向量子化
+\begin_inset Formula $L_{z}=m_{l}h(m_{l}=0,\pm1,\cdots\pm l)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+磁量子数
+\begin_inset Formula $S_{z}=\pm h/2$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
 \end_body
 \end_document

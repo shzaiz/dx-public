@@ -1,0 +1,27 @@
+
+\documentclass{article}
+
+
+\newcounter{paranum}[section]
+\newcommand{\partt}[1]{\vspace{10pt}\noindent\leftskip=0cm \textbf{\refstepcounter{paranum}\Roman{paranum}. } #1~~}
+
+\newcounter{itemnum}[paranum]
+\newcommand{\po}[1]{\vspace{10pt}\noindent \textbf{\refstepcounter{itemnum}\theitemnum. } #1~~}
+
+\newcounter{subitemnum}[itemnum]
+\newcommand{\poo}[1]{\vspace{10pt}\noindent\leftskip=0.6cm \textbf{\refstepcounter{subitemnum}(\theitemnum). } #1~~}
+
+\newcounter{subsubitemnum}[subitemnum]
+\newcommand{\pooo}[1]{\vspace{10pt}\noindent\leftskip=0.9cm \textbf{\refstepcounter{subsubitemnum}\theitemnum. } #1~~}
+
+\newcommand{\clrleft}{leftskip=0cm}
+
+\setlength{\parindent}{0cm}
+\begin{document}
+
+
+
+121242141213
+
+
+\end{document}
