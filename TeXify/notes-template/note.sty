@@ -1,12 +1,11 @@
-
-\documentclass{article}
-
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{NotesList}[2023/11/20 Notes List Styles]
 
 \newcounter{paranum}[section]
-\newcommand{\partt}[1]{\vspace{10pt}\noindent\leftskip=0cm \textbf{\refstepcounter{paranum}\Roman{paranum}. } #1~~}
+\newcommand{\p}[1]{\vspace{10pt}\noindent\leftskip=0cm \textbf{\refstepcounter{paranum}\Roman{paranum}. } #1~~}
 
 \newcounter{itemnum}[paranum]
-\newcommand{\po}[1]{\vspace{10pt}\noindent \textbf{\refstepcounter{itemnum}\theitemnum. } #1~~}
+\newcommand{\po}[1]{\vspace{10pt}\noindent \leftskip=0.1cm\textbf{\refstepcounter{itemnum}\theitemnum. } #1~~}
 
 \newcounter{subitemnum}[itemnum]
 \newcommand{\poo}[1]{\vspace{10pt}\noindent\leftskip=0.6cm \textbf{\refstepcounter{subitemnum}(\theitemnum). } #1~~}
@@ -16,12 +15,4 @@
 
 \newcommand{\clrleft}{leftskip=0cm}
 
-\setlength{\parindent}{0cm}
-\begin{document}
-
-
-
-121242141213
-
-
-\end{document}
+\endinput

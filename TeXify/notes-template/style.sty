@@ -1,0 +1,188 @@
+
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{CustomPackage}[2023/11/20 Custom Package]
+
+\RequirePackage{amsmath, amsthm, amssymb, amsfonts}
+\RequirePackage{thmtools}
+\RequirePackage{graphicx}
+\RequirePackage{setspace}
+\RequirePackage{geometry}
+\RequirePackage{float}
+\RequirePackage{hyperref}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[english]{babel}
+\RequirePackage{framed}
+\RequirePackage[dvipsnames]{xcolor}
+\RequirePackage[skins,breakable]{tcolorbox}
+\RequirePackage{awesomebox}
+\RequirePackage{mathrsfs}  
+\RequirePackage{xcolor}
+\RequirePackage{wrapfig}
+\RequirePackage{algorithm2e}
+\RestyleAlgo{ruled}
+
+\RequirePackage{pstricks-add}
+\RequirePackage{epsfig}
+\RequirePackage{pst-grad} % For gradients
+\RequirePackage{pst-plot} % For axes
+\RequirePackage[space]{grffile} % For spaces in paths
+\RequirePackage{etoolbox} % For spaces in paths
+\makeatletter % For spaces in paths
+\patchcmd\Gread@eps{\@inputcheck#1 }{\@inputcheck"#1"\relax}{}{}
+\makeatother
+
+\colorlet{shadecolor}{blue!10}
+
+\colorlet{LightGray}{White!90!Periwinkle}
+\colorlet{LightOrange}{Orange!15}
+\colorlet{LightGreen}{Green!15}
+
+\newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
+
+\declaretheoremstyle[name=Theorem]{thmsty}
+\declaretheorem[style=thmsty,numberwithin=section]{theorem}
+\tcolorboxenvironment{theorem}{colback=LightGray,breakable}
+
+\declaretheoremstyle[name=Proposition,]{prosty}
+\declaretheorem[style=prosty,numberlike=theorem]{proposition}
+\tcolorboxenvironment{proposition}{colback=LightOrange,breakable}
+
+\declaretheoremstyle[name=Principle,]{prcpsty}
+\declaretheorem[style=prcpsty,numberlike=theorem]{principle}
+\tcolorboxenvironment{principle}{colback=LightGreen,breakable}
+
+\declaretheoremstyle[name=Definition,]{prcpsty}
+\declaretheorem[style=prcpsty,numberlike=theorem]{definition}
+\tcolorboxenvironment{definition}{colback=white,breakable}
+
+\declaretheoremstyle[name=Corollary,]{prcpsty}
+\declaretheorem[style=prcpsty,numberlike=theorem]{corollary}
+\tcolorboxenvironment{corollary}{colback=white,breakable}
+
+\newtheorem{example}{Example}[section]
+
+\usepackage{xsim}
+\DeclareExerciseEnvironmentTemplate{custom}{%
+  \begin{tcolorbox}[boxrule = 0pt]
+  \tcbox[on line,colback=teal,colframe=teal,coltext=white,size=small]{%
+    \faToggleOn\sffamily\bfseries\
+    \XSIMmixedcase{\GetExerciseName}
+    \GetExerciseProperty{counter}%
+  }\quad
+}{\hfill\textbf{$\#$}\end{tcolorbox}}
+
+\xsimsetup{
+  exercise/within = section,
+  exercise/template = custom ,
+  exercise/name = Exercise 
+}
+
+\newenvironment{remark}{%
+  \par\medskip
+  \noindent
+  \textbf{Remark:}
+}{%
+  \par\medskip
+}
+
+\renewenvironment{solution}{%
+  \par\medskip
+  \noindent
+  \textbf{Solution:}
+}{%
+  \par\medskip
+}
+
+\newenvironment{definition*}{%
+  \par\medskip
+  \noindent
+  \textbf{Definition:}
+}{%
+  \par\medskip
+}
+
+\newenvironment{proposition*}{%
+  \par\medskip
+  \noindent
+  \textbf{Proposition: }
+}{%
+  \par\medskip
+}
+
+\newtcolorbox{asidebox}{
+  colback=gray!10,
+  colframe=gray!60,
+  fonttitle=\bfseries,
+  title={Aside},
+  breakable=true
+}
+
+\newtcolorbox{webaside}{
+  colback=cyan!10,
+  colframe=cyan!60,
+  fonttitle=\bfseries,
+  title={Web Demonstrate Aside},
+  breakable=true
+}
+
+\usepackage{enumitem}
+
+\setlist{nosep}
+
+\setstretch{1.2}
+\geometry{
+    textheight=9in,
+    textwidth=5.5in,
+    top=1in,
+    headheight=12pt,
+    headsep=25pt,
+    footskip=30pt
+}
+
+\usepackage{environ}
+\usepackage[tikz]{bclogo}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\NewEnviron{takeaway}
+  {\par\medskip\noindent
+  \begin{tikzpicture}
+    \node[inner sep=0pt] (box) {\parbox[t]{.99\textwidth}{%
+      \begin{minipage}{.3\textwidth}
+      \centering\tikz[scale=5]\node[scale=3,rotate=30]{\bclampe};
+      \end{minipage}%
+      \begin{minipage}{.65\textwidth}
+      \textbf{Takeaway Message}\par\smallskip
+      \BODY
+      \end{minipage}\hfill}%
+    };
+    \draw[red!75!black,line width=3pt] 
+      ( $ (box.north east) + (-5pt,3pt) $ ) -- ( $ (box.north east) + (0,3pt) $ ) -- ( $ (box.south east) + (0,-3pt) $ ) -- + (-5pt,0);
+    \draw[red!75!black,line width=3pt] 
+      ( $ (box.north west) + (5pt,3pt) $ ) -- ( $ (box.north west) + (0,3pt) $ ) -- ( $ (box.south west) + (0,-3pt) $ ) -- + (5pt,0);
+  \end{tikzpicture}\par\medskip%
+}
+
+\usepackage{marginnote}
+\renewcommand*{\marginfont}{\color{gray}\ttfamily\small}
+\usepackage{setspace}
+\newcommand{\lec}[1]{\reversemarginpar\marginnote{{\textbf{#1}}}}
+\newcommand{\mn}[1]{\marginnote{{#1}}}
+
+\newcommand{\stirling}[2]{\left\{{#1 \atop #2}\right\}}
+\newcommand{\binomt}[2]{\left(\left({#1 \atop #2}\right)\right)}
+\newcommand{\pf}[4]{#1_{#2}^{#3_{#4}}}
+\newcommand{\pl}[4]{#1_{#2}{#3^{#4}}}
+\newcommand{\ty}[3]{{#1} \equiv {#2} ~(\bmod {#3})}
+\newcommand{\Z}{{\mathbb Z}}
+\newcommand{\one}{\mathbf{1}}
+\newcommand{\varsub}[2]{\stackrel{#1}{\stackrel{\rule{#2}{0.4pt}}{\rule{#2}{0.4pt}}}}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\Ep}[1]{\mathbb E[#1]}
+
+\renewcommand{\red}[1]{{{\color{red}#1}}}
+\newcommand{\teal}[1]{{{\color{teal}#1}}}
+\renewcommand{\blue}[1]{{{\color{blue}#1}}}
+\newcommand{\purple}[1]{{{\color{purple}#1}}}
+
+\endinput
