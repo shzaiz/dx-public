@@ -1,0 +1,396 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass llncs
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Lec1.
+ The 
+\begin_inset Formula $\lambda-$
+\end_inset
+
+calculus
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\la}{\lambda}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Basic definition
+\end_layout
+
+\begin_layout Standard
+Motivated by 
+\begin_inset Formula $f(x)=x^{2},$
+\end_inset
+
+we use the notation 
+\begin_inset Formula $\la x.x^{2}$
+\end_inset
+
+to be the notation representation of the function.
+ In evaluating, we plug in 
+\begin_inset Formula $(\la x.x^{2})(3)=3^{2}=9.$
+\end_inset
+
+ In multivariable case, for example, 
+\begin_inset Formula $h(x,y)=x-y$
+\end_inset
+
+, we use the form 
+\begin_inset Formula $h^{*}=\la x.(\la y.(x-y))$
+\end_inset
+
+.
+ When evaluating, we use 
+\begin_inset Formula 
+\begin{align*}
+(h^{*}(a))(b) & =(\la y.(a-y))(b)\\
+ & =a-b\\
+ & =h(a,b).
+\end{align*}
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $\la-$
+\end_inset
+
+terms.
+ Assume there are
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+variables: infinite sequence of expressions 
+\begin_inset Formula ${\bf v}_{0},{\bf v}_{00},\cdots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+atomic constants: finite, infinite or empty sequence, different from variables
+\end_layout
+
+\begin_layout Standard
+inductively defined as follows:
+\end_layout
+
+\begin_layout Itemize
+all variables and atomic constants are 
+\begin_inset Formula $\la-$
+\end_inset
+
+terms
+\end_layout
+
+\begin_layout Itemize
+if 
+\begin_inset Formula $M$
+\end_inset
+
+ and 
+\begin_inset Formula $N$
+\end_inset
+
+ are any 
+\begin_inset Formula $\la$
+\end_inset
+
+-terms, then 
+\begin_inset Formula $(MN)$
+\end_inset
+
+ is a 
+\begin_inset Formula $\la$
+\end_inset
+
+-term (application)
+\end_layout
+
+\begin_layout Itemize
+if 
+\begin_inset Formula $M$
+\end_inset
+
+ is any 
+\begin_inset Formula $\la$
+\end_inset
+
+-term and 
+\begin_inset Formula $x$
+\end_inset
+
+ is any variable, then 
+\begin_inset Formula $(\la x.M)$
+\end_inset
+
+ is a 
+\begin_inset Formula $\la$
+\end_inset
+
+-term (abstraction).
+\end_layout
+
+\begin_layout Standard
+When sequence of atomic constants is empty, system called pure, otherwise
+ applied.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In practice, we use 
+\begin_inset Formula $x,y,z$
+\end_inset
+
+to show distinct variables instead of 
+\begin_inset Formula ${\bf v}_{0},{\bf v}_{00}$
+\end_inset
+
+, etc.
+ 
+\end_layout
+
+\begin_layout Example
+Here are examples of terms
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $(x(\la x.(\la x.x)))$
+\end_inset
+
+ is a term, but it's not recommended in practice.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $(\la x.(yz))$
+\end_inset
+
+: 
+\begin_inset Formula $x$
+\end_inset
+
+ did not appear in the latter part, called an vacuous abstraction.
+\end_layout
+
+\begin_layout Itemize
+Things like 
+\begin_inset Formula $\la,\la x$
+\end_inset
+
+ is not a term.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Definition
+Capital letters will denote arbitrary 
+\begin_inset Formula $\la-$
+\end_inset
+
+terms 
+\end_layout
+
+\begin_layout Definition
+Letters 
+\begin_inset Formula $x,y,z,\cdots$
+\end_inset
+
+ denote variables.
+\end_layout
+
+\begin_layout Definition
+Parenthesis will be omitted, we interpret using association to the left.
+\end_layout
+
+\begin_layout Definition
+Syntactic identity.
+ We denote it by 
+\begin_inset Formula $\equiv$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $M\equiv N,$
+\end_inset
+
+then 
+\begin_inset Formula $M$
+\end_inset
+
+ is exactly the same term as 
+\begin_inset Formula $N$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We shall interpret it as follows: 
+\end_layout
+
+\begin_layout Itemize
+if 
+\begin_inset Formula $M$
+\end_inset
+
+ has been interpreted as a function or operator, then 
+\begin_inset Formula $(MN)$
+\end_inset
+
+ is interpreted by applying 
+\begin_inset Formula $M$
+\end_inset
+
+ to argument 
+\begin_inset Formula $N$
+\end_inset
+
+, if the result exist.
+\end_layout
+
+\begin_layout Itemize
+A term 
+\begin_inset Formula $(\la x.M)$
+\end_inset
+
+ represents the operator or function whose value at an argument 
+\begin_inset Formula $N$
+\end_inset
+
+ is calculated by substituting 
+\begin_inset Formula $N$
+\end_inset
+
+ for 
+\begin_inset Formula $x$
+\end_inset
+
+ in 
+\begin_inset Formula $M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Structure and substitution
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\end_body
+\end_document
