@@ -1,0 +1,97 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      2870,         87]
+NotebookOptionsPosition[      2396,         70]
+NotebookOutlinePosition[      2791,         86]
+CellTagsIndexPosition[      2748,         83]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"ClearAll", "[", "f", "]"}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", "[", "n_", "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"numbers", ",", "subsets"}], "}"}], ",", 
+     RowBox[{
+      RowBox[{"numbers", "=", 
+       RowBox[{"Range", "[", "15", "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"subsets", "=", 
+       RowBox[{"Select", "[", 
+        RowBox[{
+         RowBox[{"Subsets", "[", "numbers", "]"}], ",", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Total", "[", "#", "]"}], "\[Equal]", "n"}], "&"}]}], 
+        "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"Length", "[", "subsets", "]"}]}]}], "]"}]}], 
+  "\[IndentingNewLine]", "\n", 
+  RowBox[{"(*", 
+   RowBox[{
+   "Test", " ", "the", " ", "function", " ", "for", " ", "some", " ", 
+    "values", " ", "of", " ", "n"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"f", "[", "n", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"n", ",", "50", ",", "70"}], "}"}]}], "]"}], "\n"}], "Input",
+ CellChangeTimes->{{3.915008843803838*^9, 3.915008876553071*^9}, {
+  3.915008993202655*^9, 3.915008993904664*^9}},
+ CellLabel->"In[13]:=",ExpressionUUID->"2fea3e3a-e091-4fe2-8543-e6564bac538d"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "624", ",", "642", ",", "657", ",", "671", ",", "685", ",", "695", ",", 
+   "704", ",", "712", ",", "716", ",", "719", ",", "722", ",", "719", ",", 
+   "716", ",", "712", ",", "704", ",", "695", ",", "685", ",", "671", ",", 
+   "657", ",", "642", ",", "624"}], "}"}]], "Output",
+ CellChangeTimes->{{3.915008849438402*^9, 3.915008878865039*^9}, 
+   3.915008995876546*^9},
+ CellLabel->"Out[15]=",ExpressionUUID->"8ba7d628-4d65-4046-b2c2-855909c30ce4"]
+}, Open  ]]
+},
+WindowSize->{808, 747},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+FrontEndVersion->"12.2 for Mac OS X x86 (64-bit) (December 12, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"e6a734c6-1d86-4d7d-8f82-71a30478caa0"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 1306, 34, 199, "Input",ExpressionUUID->"2fea3e3a-e091-4fe2-8543-e6564bac538d"],
+Cell[1889, 58, 491, 9, 79, "Output",ExpressionUUID->"8ba7d628-4d65-4046-b2c2-855909c30ce4"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
