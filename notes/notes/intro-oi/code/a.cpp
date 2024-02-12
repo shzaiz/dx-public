@@ -1,9 +1,10 @@
 #include <iostream>
 using namespace std;
-
-void a(int x);
+struct selfptr{
+    selfptr *selfptr;
+};
 
 int main(){
-    a(3);
-
+    selfptr s;
+    s.selfptr = &s;
 }
