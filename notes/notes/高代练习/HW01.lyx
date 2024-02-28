@@ -378,12 +378,17 @@ S_{1}
 \end_layout
 
 \begin_layout Solution
-是基的说明略.
+是基的说明略(可以通过次数的方法进行说明).
  下面寻找过渡矩阵: 
 \end_layout
 
 \begin_layout Solution
-\begin_inset Formula $\transf{S_{1}}{S_{2}}=$
+\begin_inset Formula $\transf{S_{1}}{S_{2}}=\begin{pmatrix}1 & a & {2 \choose 2}a^{2} & \cdots & {n \choose n}a^{n}\\
+0 & 1 & {2 \choose 1}a & \cdots & {n \choose n-1}a^{n-1}\\
+0 & 0 & {2 \choose 2} & \cdots & {n \choose n-2}a^{n-2}\\
+\vdots & \vdots & \vdots & \ddots & \vdots\\
+0 & 0 & 0 & \cdots & 1
+\end{pmatrix}.$
 \end_inset
 
 

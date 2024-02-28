@@ -329,7 +329,63 @@ I_{n}-\transf{\al_{1},\al_{2}\cdots,\al_{n}}{\beta_{1},\beta_{2}\cdots,\beta_{n}
  
 \end_layout
 
+\begin_layout Section
+多项式的坐标转换
+\end_layout
+
 \begin_layout Standard
+证明下面四组多项式: 
+\begin_inset Formula 
+\[
+\begin{aligned}S_{1}: & 1,x,\cdots,x^{n-1};\\
+S_{2}: & 1,x-a,\cdots,(x-a)^{n-1};\\
+S_{3}: & f(x),f^{\prime}(x),\cdots,f^{(n-1)}(x),\\
+ & (\deg f(x)=n-1);\\
+S_{4}: & \prod_{j\neq1}\left(x-a_{j}\right),\prod_{j\neq2}\left(x-a_{j}\right),\cdots,\prod_{j\neq n}\left(x-a_{n}\right),\\
+ & \left(i\neq j\text{ 时, }a_{i}\neq a_{j},1\leqslant i,j\leqslant n\right)
+\end{aligned}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+都是 
+\begin_inset Formula $\boldsymbol{P}[x]_{n}$
+\end_inset
+
+ 的基.
+ 并求从第一组基到第二, 三 组基的过渡矩阵
+\begin_inset Formula $T\left(\begin{array}{c}
+S_{1}\\
+S_{2}
+\end{array}\right),T\left(\begin{array}{c}
+S_{1}\\
+S_{3}
+\end{array}\right)$
+\end_inset
+
+ 及从第四组基到第一组基的过渡矩阵 
+\begin_inset Formula $T\left(\begin{array}{c}
+S_{4}\\
+S_{1}
+\end{array}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution
+是基的说明略.
+ 下面寻找过渡矩阵: 
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\transf{S_{1}}{S_{2}}=$
+\end_inset
+
 
 \end_layout
 
