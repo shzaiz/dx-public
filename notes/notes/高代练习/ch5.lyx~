@@ -82,15 +82,15 @@
 \begin_body
 
 \begin_layout Title
-4.8 坐标与基变换
+4 线性空间
 \end_layout
 
 \begin_layout Author
 Guangwei Zhang 
 \end_layout
 
-\begin_layout Institute
-《高等代数与解析几何》练习题
+\begin_layout Section*
+4.8 坐标与基变换
 \end_layout
 
 \begin_layout Standard
@@ -103,11 +103,7 @@ filename "snippet.lyx"
 
 \end_layout
 
-\begin_layout Section
-做基变换的例子
-\end_layout
-
-\begin_layout Standard
+\begin_layout Problem
 在
 \begin_inset Formula $\P^{1\times4}$
 \end_inset
@@ -257,18 +253,7 @@ x_{4}
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-坐标相等的条件
-\end_layout
-
-\begin_layout Standard
+\begin_layout Problem
 设 
 \begin_inset Formula $\alpha_{1},\alpha_{2},\cdots,\alpha_{n}$
 \end_inset
@@ -329,11 +314,7 @@ I_{n}-\transf{\al_{1},\al_{2}\cdots,\al_{n}}{\beta_{1},\beta_{2}\cdots,\beta_{n}
  
 \end_layout
 
-\begin_layout Section
-多项式的坐标转换
-\end_layout
-
-\begin_layout Standard
+\begin_layout Problem
 证明下面四组多项式: 
 \begin_inset Formula 
 \[

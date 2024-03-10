@@ -1,0 +1,268 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass llncs
+\begin_preamble
+\usepackage{ctex}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\listings_params "showlines=true,showstringspaces=false,basicstyle={\ttfamily}"
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+3 整值函数
+\end_layout
+
+\begin_layout Author
+Guangwei Zhang 
+\end_layout
+
+\begin_layout Institute
+China Univ.
+ of Geosciences (Wuhan)
+\end_layout
+
+\begin_layout Section*
+3.1 下取整和上取整
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "snippet.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+求
+\begin_inset Formula $\flr{\frac{\flr{m\alpha}n}{\alpha}}$
+\end_inset
+
+的值, 
+\begin_inset Formula $m,n$
+\end_inset
+
+是正整数, 
+\begin_inset Formula $\alpha$
+\end_inset
+
+是无理数, 并且
+\begin_inset Formula $\alpha>n$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Solution
+可以变化为
+\begin_inset Formula 
+\begin{align*}
+\flr{(m\alpha-\{m\alpha\})\frac{n}{\alpha}} & =mn-\lceil\underbrace{\{m\alpha\}}_{<1}\underbrace{\frac{n}{\alpha}}_{<1}\rceil\\
+ & =mn-1.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+请问
+\begin_inset Formula $\flr{nx}=n\flr x$
+\end_inset
+
+的充分必要条件是什么? 
+\end_layout
+
+\begin_layout Solution
+由于
+\begin_inset Formula $\flr{n\flr x+n\{x\}}=n\flr x$
+\end_inset
+
+, 也就是
+\begin_inset Formula 
+\begin{align*}
+\flr{n\flr x+n\{x\}} & =n\flr x\\
+n\flr x+\flr{n\{x\}} & =n\flr x\\
+\flr{n\{x\}} & =0
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+为充要条件.
+ 进一步分类显示
+\begin_inset Formula $0\leq n\{x\}<1\iff\{x\}<1/n.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+证明
+\begin_inset Formula 
+\[
+\cil{\frac{2x+1}{2}}-\cil{\frac{2x+1}{4}}+\flr{\frac{2x+1}{4}}
+\]
+
+\end_inset
+
+的值要么是
+\begin_inset Formula $\flr x$
+\end_inset
+
+, 要么是
+\begin_inset Formula $\cil x$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Solution
+根据原式, 
+\begin_inset Formula 
+\begin{align*}
+\cil{\frac{2x+1}{2}}-\underbrace{\left(\cil{\frac{2x+1}{4}}-\flr{\frac{2x+1}{4}}\right)}_{\cil ?-\flr ?=[?\text{不是整数}]} & =\cil{\frac{2x+1}{2}}-1\\
+ & =\cil{x-\frac{1}{2}}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+证明
+\begin_inset Formula $\cil{n/m}=\flr{(n+m-1)/m}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+考虑
+\begin_inset Formula 
+\begin{align*}
+\flr{\frac{n+m-1}{m}} & =\flr{\frac{n-1}{m}}+1
+\end{align*}
+
+\end_inset
+
+那么, 就是证
+\begin_inset Formula $\cil{\frac{n}{m}}=\flr{\frac{n-1}{m}}+1.$
+\end_inset
+
+ 对
+\begin_inset Formula $n,m$
+\end_inset
+
+分类讨论即可.
+ 
+\end_layout
+
+\begin_layout Problem
+如果
+\begin_inset Formula $\alpha$
+\end_inset
+
+和
+\begin_inset Formula $\beta$
+\end_inset
+
+是实数, 请证明
+\begin_inset Formula $\text{Spec}(\alpha)\cup\text{Spec}(\beta)=\mathbb{N}\iff(\alpha,\beta\text{是无理数}\land1/\alpha+1/\beta=1)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_body
+\end_document

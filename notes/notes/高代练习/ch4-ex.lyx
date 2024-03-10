@@ -82,15 +82,15 @@
 \begin_body
 
 \begin_layout Title
-4.8 坐标与基变换
+4 线性空间
 \end_layout
 
 \begin_layout Author
 Guangwei Zhang 
 \end_layout
 
-\begin_layout Institute
-《高等代数与解析几何》练习题
+\begin_layout Section*
+4.8 坐标与基变换
 \end_layout
 
 \begin_layout Standard
@@ -103,11 +103,7 @@ filename "snippet.lyx"
 
 \end_layout
 
-\begin_layout Section
-做基变换的例子
-\end_layout
-
-\begin_layout Standard
+\begin_layout Problem
 在
 \begin_inset Formula $\P^{1\times4}$
 \end_inset
@@ -257,18 +253,7 @@ x_{4}
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-坐标相等的条件
-\end_layout
-
-\begin_layout Standard
+\begin_layout Problem
 设 
 \begin_inset Formula $\alpha_{1},\alpha_{2},\cdots,\alpha_{n}$
 \end_inset
@@ -329,11 +314,7 @@ I_{n}-\transf{\al_{1},\al_{2}\cdots,\al_{n}}{\beta_{1},\beta_{2}\cdots,\beta_{n}
  
 \end_layout
 
-\begin_layout Section
-多项式的坐标转换
-\end_layout
-
-\begin_layout Standard
+\begin_layout Problem
 证明下面四组多项式: 
 \begin_inset Formula 
 \[
@@ -391,6 +372,154 @@ S_{1}
 \end{pmatrix}.$
 \end_inset
 
+
+\end_layout
+
+\begin_layout Solution
+对于
+\begin_inset Formula $S_{3}$
+\end_inset
+
+而言, 由于
+\begin_inset Formula $\deg f(x)=n-1$
+\end_inset
+
+, 可以设
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+f(x)=a_{n-1}x^{n-1}+\cdots+a_{1}x+a_{0}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+如果
+\begin_inset Formula $a_{n-1}\neq0$
+\end_inset
+
+, 那么有
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\begin{align*}
+f'(x) & =(n-1)a_{n-1}x^{n-2}+(n-2)a_{n-2}x^{n-3}+\cdots+a_{1}\\
+f^{(k)}(x) & =(n-1)(n-2)\cdots(n-k)a_{n-1}x^{n-1-k}+(n-2)(n-3)(n-k-1)a_{n-2}x^{n-2-k}+\cdots+k!a_{k}\\
+\cdots & \cdots\\
+f^{(n-1)}(x) & =(n-1)!a_{n-1}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+可以由以往的线性表示, 因此是基.
+ 并且
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\begin{align*}
+\text{col}_{k}\transf{S_{1}}{S_{3}} & =\crd{f^{(k)}(x);1,x,x^{2},\cdots,x^{n-1}}\\
+ & =\left(k!a_{k},(k+1)!a_{k+1},\cdots,\frac{(n-1)!}{(n-k-1)!}a_{n-1},0,0,\cdots0\right).
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+考虑
+\begin_inset Formula $S_{4}.$
+\end_inset
+
+ 令
+\begin_inset Formula $f_{i}(x)=\prod_{j\neq i}(x-a_{j}).$
+\end_inset
+
+ 并且
+\begin_inset Formula $i\neq j$
+\end_inset
+
+的时候, 
+\begin_inset Formula $f_{i}(\al_{j})=0,$
+\end_inset
+
+但是
+\begin_inset Formula $f_{i}(\al_{i})\neq0.$
+\end_inset
+
+ 倘若
+\begin_inset Formula $\sum_{i=1}^{n}k_{i}f_{i}(x)=0$
+\end_inset
+
+, 那么有
+\begin_inset Formula $\sum_{i=1}^{n}k_{i}f_{i}(a_{j})=0,1\leq j\leq n.$
+\end_inset
+
+ 因此
+\begin_inset Formula $k_{1}=k_{2}=\cdots=k_{n}=0.$
+\end_inset
+
+因此
+\begin_inset Formula $S_{4}$
+\end_inset
+
+为基.
+ 
+\end_layout
+
+\begin_layout Solution
+再由
+\begin_inset Formula $f(x)\in P[x]_{n},$
+\end_inset
+
+有
+\begin_inset Formula $f(x)=\sum_{i=1}^{n}\frac{f(a_{i})}{f_{i}(a_{i})}f_{i}(x).$
+\end_inset
+
+因此
+\begin_inset Formula 
+\[
+\text{ent}_{ij}\transf{S_{4}}{S_{1}}=\frac{a_{j}^{j-1}}{f_{i}(a_{1})},1\leq i,j\leq n.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+4.9 子空间
+\end_layout
+
+\begin_layout Problem
+设
+\begin_inset Formula $V_{1},V_{2},V_{3}$
+\end_inset
+
+都是
+\begin_inset Formula $V$
+\end_inset
+
+的子空间, 交对直和、直和对交有没有分配率? 
+\end_layout
+
+\begin_layout Solution
+没有.
+ 
+\end_layout
+
+\begin_layout Solution
 
 \end_layout
 
